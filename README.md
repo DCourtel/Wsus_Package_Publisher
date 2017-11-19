@@ -1,7 +1,9 @@
 ![WPP Logo](/Images/Logo_WPP.png)
 # Wsus Package Publisher
 
-## Publish third party applications into your Wsus.
+Publish third party applications into your Wsus.
+___
+### _Description_
 
 Wsus Package Publisher allows you to publish your own updates as MSI, MSP or EXE files. Hence, you can deploy applications like Adobe Reader, Java, Flash Player or Symantec Endpoint Protection and update them.
 
