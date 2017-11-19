@@ -1,4 +1,4 @@
-![WPP Logo](/images/Logo_WPP.png)
+![WPP Logo](/Images/Logo_WPP.png)
 # Wsus Package Publisher
 
 ## Publish third party applications into your Wsus.
