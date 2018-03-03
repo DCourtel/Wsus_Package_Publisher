@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1226371",
+    "ThreadId": "540054",
+    "Html": "Hi everybody,<br />\n<br />\nI am trying to publish Adobe Acrobat 9 updates. As these are not cumulative I need to start from 9.1.0 up to 9.5.5...<br />\n<br />\nRegardless which of the updates I try to publish, I always get the &quot;Ooops, somthing went wrong&quot; box with the following error after hitting the &quot;Publish&quot; button:<br />\n<pre><code>**** The 'http://www.microsoft.com/msi/patch_applicability.xsd:TargetLanguage' element is invalid - The value '0,1033,1036,1031' is invalid according to its datatype 'http://www.microsoft.com/msi/patch_applicability.xsd:ValidateLanguage' - The string '0,1033,1036,1031' is not a valid Int32 value.\nThe 'http://www.microsoft.com/msi/patch_applicability.xsd:TargetLanguage' element is invalid - The value '0,1033,1030,1035,1044,1053' is invalid according to its datatype 'http://www.microsoft.com/msi/patch_applicability.xsd:ValidateLanguage' - The string '0,1033,1030,1035,1044,1053' is not a valid Int32 value.\nThe 'http://www.microsoft.com/msi/patch_applicability.xsd:TargetLanguage' element is invalid - The value '0,1033,1036,1031' is invalid according to its datatype 'http://www.microsoft.com/msi/patch_applicability.xsd:ValidateLanguage' - The string '0,1033,1036,1031' is not a valid Int32 value.\nThe 'http://www.microsoft.com/msi/patch_applicability.xsd:TargetLanguage' element is invalid - The value '0,1033,1043,1040...</code></pre>\n\nAny ideas would by appreciated.<br />\n<br />\nRegards<br />\nRobert<br />\n",
+    "PostedDate": "2014-03-25T03:02:29.587-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1227447",
+    "ThreadId": "540054",
+    "Html": "The error message seem to show that there is a problem with the MSI/MSP file you try to publish. XML rules in the file cannot be validate by the xsd. \r<br />\nThis error message is provide by the Wsus server, so I can't do anything to avoid that. Try with other files.<br />\n",
+    "PostedDate": "2014-03-27T09:42:16.72-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:44:14.53-07:00"
+  }
+]

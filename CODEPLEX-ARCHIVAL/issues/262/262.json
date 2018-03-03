@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update Detail Viewer",
+      "DisplayName": "Update Detail Viewer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-04-14T13:25:27.553-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When displaying detail for an update, the CreationDate and the ArrivalDate are displayed has UTC time instead of LocalTime",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.3.1504.12",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-04-13T11:53:00.37-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Update Detail Viewer display UTC time instead of LocalTime",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 262
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

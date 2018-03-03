@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "CustomUpdateEngine",
+      "DisplayName": "CustomUpdateEngine"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:07.443-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "On x64 systems, the path \"C:\\Program files\" should be translate into \"C:\\Program files (x86)\", if required by the user.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1311.24",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-11-25T13:02:21.88-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Allow Custom Updates to 'Translate' directory path to x86 on x64 systems",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 2,
+    "Id": 159
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "And please add support for %programfiles(x86)% variable",
+      "PostedDate": "2014-11-06T06:11:16.91-08:00",
+      "Id": 164074
+    }
+  ]
+}

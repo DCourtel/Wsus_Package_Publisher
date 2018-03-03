@@ -1,0 +1,114 @@
+[
+  {
+    "Id": "1351676",
+    "ThreadId": "580542",
+    "Html": "Hey guys,\r<br />\n<br />\ni just started using the WPP to deploy Adobe Flash Player Updates. I imported the catalog to WPP without problems. After that i configured WSUS to make the Adobe Updates visible in WSUS. I approved the Adobe Updates in WSUS to be installed on clients. So until that everything works like it should be. The self signed cert is published correctly to the clients, too. \r<br />\nUnfortunately the Adobe Updates do not show up on the Client when i am searching for updates. Windows Updates from WSUS are working without any problems. Does anyone havve an idea what could be my problem or where i could have made a mistake. \r<br />\n<br />\nRegards,\r<br />\nFlorian<br />\n",
+    "PostedDate": "2015-02-12T01:30:32.713-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1352658",
+    "ThreadId": "580542",
+    "Html": "On the status tab, how computers report this upate ? (Installed, not installed, not applicable) ?<br />\n",
+    "PostedDate": "2015-02-14T12:39:00.103-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1352994",
+    "ThreadId": "580542",
+    "Html": "Status tab shows unknown...<br />\n",
+    "PostedDate": "2015-02-16T00:33:04.583-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353022",
+    "ThreadId": "580542",
+    "Html": "This mean that computers didn't report to this Wsus server for this update<br />\n",
+    "PostedDate": "2015-02-16T03:10:33.597-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353042",
+    "ThreadId": "580542",
+    "Html": "Well i think the reporting is not configured correctly on my server because i dont get a Report/Status for any update :)\r<br />\nBut the Windows Updates are installed without problems so i don't know why the Adobe Flash is not installed or even shown in the Windows Updates from the Client. <br />\n",
+    "PostedDate": "2015-02-16T04:29:17.023-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353096",
+    "ThreadId": "580542",
+    "Html": "Are you sure that computers pull updates from your Wsus and not from Microsoft Update ?<br />\n",
+    "PostedDate": "2015-02-16T07:52:00.823-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353282",
+    "ThreadId": "580542",
+    "Html": "Yep. I am sure. Cause only the updates I approved in WSUS are shown and installed on the client. And i configured the path to the Windows Updates to my WSUS server over GPO. And on the client when i look into Windows Updates it shows me that Windows Updates are managed by System Administrator. So i am really sure that the Updates are pulled from WSUS server<br />\n",
+    "PostedDate": "2015-02-16T23:09:37.677-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353349",
+    "ThreadId": "580542",
+    "Html": "There is an communication problem that needs to be investigated more further.\r<br />\nAlso, check that the GPO to enable 3rd party update installation is active.<br />\n",
+    "PostedDate": "2015-02-17T03:16:31.11-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353411",
+    "ThreadId": "580542",
+    "Html": "how can i find out where exactly is the communication problem?\r<br />\nGPO to enable 3rd party update Installation is active. Both on clients and on WSUS<br />\n",
+    "PostedDate": "2015-02-17T07:10:07.63-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353412",
+    "ThreadId": "580542",
+    "Html": "Have a look in %windir%\\WindowsUpdate.log on the clients. In local Eventviewer can you find some message too.<br />\n",
+    "PostedDate": "2015-02-17T07:12:23.24-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353418",
+    "ThreadId": "580542",
+    "Html": "Puuh... There are a lot of Information in the log file :)\r<br />\nCan you give me a hint what i have to look for?<br />\n",
+    "PostedDate": "2015-02-17T07:30:34.637-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353424",
+    "ThreadId": "580542",
+    "Html": "Start with a admin commandline:\r<br />\n<br />\nnet stop wuauserv\r<br />\nrd /s /q %windir%\\SoftwareDistribution\r<br />\ndel %windir%\\WindowsUpdate.log\r<br />\nnet start wuauserv\r<br />\nwuauclt /detectnow\r<br />\nwuauclt /reportnow\r<br />\nAfter 10 minutes you can look in the log for errormessages.<br />\n",
+    "PostedDate": "2015-02-17T07:45:36.577-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353451",
+    "ThreadId": "580542",
+    "Html": "For me it looks like there are no important errors. Could i sent you the log file within an email so you can have a look at it?<br />\n",
+    "PostedDate": "2015-02-17T08:35:07.487-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353452",
+    "ThreadId": "580542",
+    "Html": "No, but you can upload to a filehoster or to your dropbox account or to your OneDrive Account and post here the link to the file.<br />\n",
+    "PostedDate": "2015-02-17T08:37:05.96-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

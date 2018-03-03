@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-10-18T13:49:08.997-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "The source code published isn't update to date, so I didn't want to make a diff, it would be too confusing. Hopefully the below makes sense.\r\n\r\n\r\n__Resources\\Resources.en.rex__\r\n```\r\nCommandSended\tCommand sent.\t\r\nFailedToConnect\tFailed to Connect.\t\r\nFailedToConnectToServer\tFailed to connect to the server.\t\r\nFinishedPublishing\tSuccessfully Published\t\r\n```\r\n\r\nNormally I wouldn't touch the French area, but the tense of the \"name\" should be changed globally.\r\n\r\n__Resources\\Resources.fr.rex__\r\n```\r\nCommandSent\tCommande envoyée.\t\r\nFailedToConnect\tEchec de connexion.\t\r\nFailedToConnectToServer\tEchec de connexion au serveur.\t\r\n```\r\n\r\n__frmRemoteExecution.cs__\r\n\r\n```\r\nrow.Cells[\"Result\"].Value = resMan.GetString(\"CommandSended\");\r\n--\r\nrow.Cells[\"Result\"].Value = resMan.GetString(\"CommandSent\");\r\n```\r\n\r\n```\r\nif (MessageBox.Show(resMan.GetString(\"CredentialFailed\"), resMan.GetString(\"FailToConnect\"), MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No)\r\n--\r\nif (MessageBox.Show(resMan.GetString(\"CredentialFailed\"), resMan.GetString(\"FailedToConnect\"), MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No)\r\n```\r\n\r\n__frmWsusPackagePublisher.cs__\r\n```\r\nMessageBox.Show(this, resMan.GetString(\"FailToConnectToServer\"));\r\n--\r\nMessageBox.Show(this, resMan.GetString(\"FailedToConnectToServer\"));\r\n```\r\n\r\nThese don't appear to be in resources in the published source code, might be now, but the spelling is wrong on additional and Approval is untranslated\r\n. \r\n__UserControl\\UpdateDetailViewer.cs__\r\n```\r\nlabel1.text -> Additional Information URL : \r\ndgvComputerStatus-> Approbation -> Approval\r\n```\r\n\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1310.12",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-15T14:31:55.03-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Various English Translation Issues.",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 135
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Thanks for these comments.",
+      "PostedDate": "2013-10-18T13:48:28.637-07:00",
+      "Id": 118873
+    }
+  ]
+}

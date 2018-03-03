@@ -1,0 +1,86 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-05-19T18:06:03.737-07:00",
+    "CommentCount": 7,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI just approved the Adobe Reader XI 11.0.3 Patch, but can not make it visible with the context menu. See screenshot.\r\n",
+    "LastUpdatedDate": "2013-05-19T19:29:36.627-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-15T13:59:38.707-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Make visible not working with msp?",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 43
+  },
+  "FileAttachments": [
+    {
+      "FileId": 680663,
+      "FileName": "visible.png",
+      "DownloadUrl": ".\\680663"
+    },
+    {
+      "FileId": 680671,
+      "FileName": "Different of Never2.png",
+      "DownloadUrl": ".\\680671"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "The feature to make an update visible in Wsus is independent of the file type of the update.\r\nPlease check that : \r\n - WPP run on the Wsus Server and not in your admin workstation.\r\n - In settings go to \"Updates\" tab and in the part \"When publishing a new update\" select an option except \"Never make this update visible in Wsus Console. \"\r\nSee the screenshot.",
+      "PostedDate": "2013-05-15T14:43:56.853-07:00",
+      "Id": 100292
+    },
+    {
+      "Message": "Hi,\n\nWPP is running on WSUS Server 2008 R2 (with internal database) and I did test both Settings with restarting the tool between changes. I can not choose \"Show or hide in WSUS console\". None of the updates existing in the wsus now let me choose.",
+      "PostedDate": "2013-05-15T16:06:58.293-07:00",
+      "Id": 100296
+    },
+    {
+      "Message": "And at right of the server name does it write \"(Local)\" or is it the port number ? It must be write \"(Local)\".",
+      "PostedDate": "2013-05-16T02:38:41.347-07:00",
+      "Id": 100328
+    },
+    {
+      "Message": "Ok, I'll check this. I'm certain, that it's showing the servername and not local.",
+      "PostedDate": "2013-05-16T04:19:43.023-07:00",
+      "Id": 100338
+    },
+    {
+      "Message": "Hi,\n\nok, that solved the problem. Maybe setting the checkbox \"connect to local server\" should automatically read and set the hostname.\n\nRegards\nNorbert",
+      "PostedDate": "2013-05-19T14:02:39.787-07:00",
+      "Id": 100580
+    },
+    {
+      "Message": "Glad to heard you have find out the solution.",
+      "PostedDate": "2013-05-19T18:03:25.07-07:00",
+      "Id": 100583
+    },
+    {
+      "Message": "Adding a new feature :\nWhen WPP start, it try to detect if Wsus is installed on the local machine. If so and if the local machine is not already in the Wsus Servers List, it add the local machine to the list (with local connection activate).",
+      "PostedDate": "2013-05-19T19:29:36.627-07:00",
+      "Id": 100585
+    }
+  ]
+}

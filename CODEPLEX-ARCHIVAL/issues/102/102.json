@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Rules Update Wizard",
+      "DisplayName": "Rules Update Wizard"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-09-01T06:34:26.747-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When creating rules based on creation/modification date of file, allow user to enter local time and convert automatically to Universal Time.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1307.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-09-01T06:33:36.047-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "Automatically convert LocalTime to UniversalTime",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 102
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

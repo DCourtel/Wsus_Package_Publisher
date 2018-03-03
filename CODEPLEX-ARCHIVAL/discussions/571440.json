@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1319640",
+    "ThreadId": "571440",
+    "Html": "Hello,\r<br />\nthanks for this great tool first.\r<br />\nI've got a question to the &quot;rename folders&quot;-function in the cutom updates generator of the WPP.\r<br />\nI was trying to use the path variable %programfiles(x86)%\\folder\\folder to rename a folder, but this doesn't seem to work. If i use the absolute path c:\\program files (x86) it worked. I saw a using of variables like this in some WPP-pdf-document for the &quot;execute a file&quot;-function and so i thought they can be used to renam directorys too.<br />\n",
+    "PostedDate": "2014-11-06T05:19:57.833-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1319784",
+    "ThreadId": "571440",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"https://wsuspackagepublisher.codeplex.com/workitem/227\" rel=\"nofollow\">here</a> to go to the work item and continue the discussion.<br />\n",
+    "PostedDate": "2014-11-06T13:35:35.28-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-12-03T13:42:06.647-08:00"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1327060",
+    "ThreadId": "573455",
+    "Html": "I'm wondering if it'd be possible to refresh a single view in WPP instead of reloading everything with the Connect/Reload button, so that it'd be quicker to see changes to tasks that are being worked on. (sometimes using both), and so that after a &quot;refresh&quot;, you end up in the same view you were in before you pressed the &quot;refresh&quot; button, instead of at the top level like what happens now with the Connect/Reload button.<br />\n",
+    "PostedDate": "2014-11-28T07:56:25.023-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1327076",
+    "ThreadId": "573455",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"https://wsuspackagepublisher.codeplex.com/workitem/237\" rel=\"nofollow\">here</a> to go to the work item and continue the discussion.<br />\n",
+    "PostedDate": "2014-11-28T09:03:31.6-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

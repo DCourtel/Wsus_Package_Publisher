@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1478877",
+    "ThreadId": "656366",
+    "Html": "Hello there,\r<br />\n<br />\nworking/ testing with WPP since yesterday, but having an issue.\r<br />\nWe currently have Adobe Reader XI MUI on some clients and Adobe Reader XI (German) on the other ones. Now I want to upgrade all of them to the currently version 11.0.17, but Adobe has different installations for them, so I want to get rid of the MUI Installations in a custom update &quot;Adobe Reader XI (German)&quot;. Here I tried the following the without success:<br />\n<ul>\n<li>Uninstall MSI: Inputfield = GUID of Adobe MUI (AC76BA86-7AD7-FFFF-7B44-AB0000000001)</li>\n<li>\nRun MSI: msiexec.exe with the parameter: &quot;/x {[AdbeRdr11000_MUI.msi | AC76BA86-7AD7-FFFF-7B44-AB0000000001]}\r<br />\nIn both cases it just installs the german version and the MUI stays installed.<br />\n</li>\n</ul>\nIn the update itself I inserted the MSI for the German version and added a few parameters for installed and installing posible (This is working great)\r<br />\n<br />\nIs there anybody having the same issue and has a solution?\r<br />\nGreets<br />\n",
+    "PostedDate": "2016-07-14T04:47:42.1-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1479118",
+    "ThreadId": "656366",
+    "Html": "I think you have to uninstall the MUI first, but i think it is the wrong uninstall GUID. Works the uninstall string alone?<br />\n",
+    "PostedDate": "2016-07-16T04:55:02.48-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1479722",
+    "ThreadId": "656366",
+    "Html": "Hi, found the best way to realize this now.<br />\n<ol>\n<li>\nInstall Adobe Reader German \r<br />\n(Check If MSI ac76ba86-7ad7-1031-7b44-ab0000000001 [German] is installed; Installable if ...ffff...[MUI] is installed AND ..7ad7.. is NOT installed)<br />\n</li>\n<li>\nUninstall Adobe Reader MUI\r<br />\n(Check if MSI ac76ba86-ffff-1031-7b44-ab0000000001 [MUI] is installed; Installable if German &amp; MUI are installed)\r<br />\nUninstalling by userdefined Update with Uninstall MSI &quot;ac76ba86-ffff-1031-7b44-ab0000000001&quot;<br />\n</li>\n<li>\nUpdate by MSP-File.<br />\n</li>\n</ol>\n",
+    "PostedDate": "2016-07-25T00:32:22.323-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

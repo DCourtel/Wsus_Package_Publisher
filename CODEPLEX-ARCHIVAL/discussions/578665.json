@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1346204",
+    "ThreadId": "578665",
+    "Html": "Hello,\r<br />\n<br />\nIs there any software that would test the rules directly on clients before adding them to the wsuspp packages ?\r<br />\n<br />\nTks,<br />\n",
+    "PostedDate": "2015-01-27T02:15:17.62-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1346314",
+    "ThreadId": "578665",
+    "Html": "I would like to find a way for WPP to be able to test such rules directly against client computer. Unfortunately, I didn't found this way.\r<br />\nIf you have a tip, tell me.<br />\n",
+    "PostedDate": "2015-01-27T07:21:20.697-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1346495",
+    "ThreadId": "578665",
+    "Html": "perhaps not directly wsp , but a minitest software.<br />\n<br />\nwith wpp, you can act on client remotly. launch detect &amp; report<br />\n",
+    "PostedDate": "2015-01-27T16:14:28.02-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

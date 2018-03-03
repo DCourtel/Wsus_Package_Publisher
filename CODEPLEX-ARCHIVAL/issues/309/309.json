@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Not an issue, please open a «Discussion» instead.",
+    "ClosedDate": "2015-11-12T21:47:51.677-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "\r\nI'm not sure what the process is for sharing or publicising catalogs. \r\n\r\nI have found a catalog Adobe Reader 2015 MUI updates @ http://armmf.adobe.com/arm-manifests/win/SCUP \r\n\r\nfile name ReaderCatalog-2015.cab\r\n\r\nThis catalog only gives the .msp patch file updates.  So far they have released \r\n15.006.30060 \r\n15.006.30094 and\r\n15.006.30096  \r\n\r\nEach patch was cumulative and superseded the previous updates.\r\n\r\nWPP distribution Adobe Reader 2015 DC MUI process was very similar to the document on AcrobatXI  \r\n\r\n1 Download Reader2015 DC MUI executable\r\n2 Extract with 7Zip\r\n3 Run Acrobat Customization Wizard DC (remove old versions, don't install services etc)\r\n4 Import to WPP\r\n\r\nI needed to add a Windows version rule to prevent it becoming available for a few WinXP clients I still have left\r\n\r\n",
+    "LastUpdatedDate": "2015-11-12T21:47:51.677-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-11-11T03:38:17.233-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Adobe Reader 2015 Updates Catalog",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 309
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

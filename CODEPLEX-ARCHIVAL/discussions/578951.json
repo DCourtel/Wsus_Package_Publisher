@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1347278",
+    "ThreadId": "578951",
+    "Html": "WSUS running on Windows Server 2003 in a Domain environment.  I already had Local Update Publisher installed and working and I wanted to try WPP.  I installed WPP on the WSUS server and reused the same certificate used with Local Update Publisher. While running WPP with a Domain Admin account, I can create a new install package and see all my client computers.  When I click on send Detect now on any client computer, I get the following error.  &quot;Failed to connect with provided credentials.&quot;  <br />\n",
+    "PostedDate": "2015-01-29T12:45:06.527-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1347643",
+    "ThreadId": "578951",
+    "Html": "In the tools &gt; settings window, in the Authentication Settings tab, which option radio button is selected? In there, there's the option to use the current credentials, specify a username and password, or ask each time.<br />\n<br />\nWPP uses WMI to create the remote process. See if you can execute the following command using the same user and same machine (replace [computername] with the name of a remote system that's failing):<br />\n<pre><code>wmic /implevel:impersonate /privileges:enable /node:[computername] process call create &quot;WuAuClt /DetectNow&quot;</code></pre>\n\nIf you have an error there, you should troubleshoot that, since that's essentially what WPP does to force a remote detection, at least from what I can glean from the currently posted source code. If that command works, and WPP still gives you that error, then... something fishy is happening!<br />\n",
+    "PostedDate": "2015-01-30T12:52:59.913-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-01-30T14:03:25.94-08:00"
+  },
+  {
+    "Id": "1347651",
+    "ThreadId": "578951",
+    "Html": "The radio button was set to use current user. I had tried changing the user before posting because that didn't work either.  It is working now though. I ran the WMIDIAG and it pointed me to the problem. The server had DCOM turned off.<br />\n",
+    "PostedDate": "2015-01-30T14:02:54.41-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

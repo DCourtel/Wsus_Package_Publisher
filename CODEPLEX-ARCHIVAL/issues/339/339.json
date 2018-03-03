@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "For this type of question, open a «Discussion» instead of an «Issue».",
+    "ClosedDate": "2017-01-30T21:57:56.46-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello, I have published 2 updates : Java 8u91 and Java 8u91 (64).\r\n\r\nWhen I'm logged on a client as administrator the installation is OK\r\nWhen I'm logged on a client as a simple user, I get a 6BA error code.\r\n\r\nHelp ... !\r\n\r\nThanks\r\n\r\nFip12",
+    "LastUpdatedDate": "2017-01-30T21:57:56.49-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-05-11T02:31:46.89-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Java 8u91 only installs with admin rights",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 339
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

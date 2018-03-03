@@ -1,0 +1,130 @@
+[
+  {
+    "Id": "1240013",
+    "ThreadId": "543915",
+    "Html": "I'm having a similar issue as Susie1703 this this thread:\r<br />\n<a href=\"https://wsuspackagepublisher.codeplex.com/discussions/539004\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/539004</a>\r<br />\n<br />\nThe only thing is I'm fairly certain I don't have any green midgets.\r<br />\n<br />\nWhen Flash Player has already been installed, the update fails with the 6BA error. If it hasn't then the update works fine.\r<br />\n<br />\nI've tried to configure an update the uninstalls using the uninstall_flash_player.exe (both directly with the EXE and using a BAT), but I can't seem to make that work either.\r<br />\n<br />\nAny suggestions?<br />\n",
+    "PostedDate": "2014-04-30T12:55:09.533-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240176",
+    "ThreadId": "543915",
+    "Html": "Hi ITTech, on a computer where Flash Player don't want to install, open the file C:\\Windows\\WindowsUpdate.log and copy/past the last update session into this forum.\r<br />\nWe will look for any error messages.<br />\n",
+    "PostedDate": "2014-05-01T01:32:49.83-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240198",
+    "ThreadId": "543915",
+    "Html": "As DCourtel said, in %windir%\\WindowsUpdate.log you will find errors.\r<br />\n<br />\nOtherwise you can use at this Computer the FlasPlayerUninstaller. You get it from Adobe. They have one for each version from FlashPlayer.<br />\n",
+    "PostedDate": "2014-05-01T03:27:59.19-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240217",
+    "ThreadId": "543915",
+    "Html": "This is the update log for the Flash Player Active X install I believe:\r<br />\n<br />\n2014-04-30\t10:51:04:863\t6148\t16ec\tHandler\t:: START ::  Handler: MSI Install\r<br />\n2014-04-30\t10:51:04:863\t6148\t16ec\tHandler\t:::::::::\r<br />\n2014-04-30\t10:51:04:863\t6148\t16ec\tHandler\t  : Updates to install = 1\r<br />\n2014-04-30\t10:51:04:863\t6148\t16ec\tHandler\tMSI update {00000000-0000-0000-0000-000000000000}.0 using source image from 1 CABs.\r<br />\n2014-04-30\t10:51:05:082\t6148\t16ec\tHandler\t  : Batch installing 1 updates\r<br />\n2014-04-30\t10:51:05:082\t6148\t16ec\tHandler\tList of MSPs in transaction:\r<br />\n2014-04-30\t10:51:05:082\t6148\t16ec\tHandler\tList of Transforms in transaction:\r<br />\n2014-04-30\t10:51:05:082\t6148\t16ec\tHandler\tMSI final command line:   ALLUSERS=1 MSIRESTARTMANAGERCONTROL=Disable REBOOT=REALLYSUPPRESS\r<br />\n2014-04-30\t10:51:08:311\t6148\t16ec\tHandler\tMSP Error List:\r<br />\n2014-04-30\t10:51:08:311\t6148\t16ec\tHandler\t1: 1722 2: NewCustomAction1 3: C:\\Windows\\TEMP\\InstallAX_13_0_0_206.exe 4: -install -msi \r<br />\n2014-04-30\t10:51:08:311\t6148\t16ec\tHandler\t  : MSI transaction completed. MSI: 0x80070643, Handler: 0x8024200b, Source: No, Reboot: 0\r<br />\n2014-04-30\t10:51:08:311\t6148\t16ec\tHandler\t  : WARNING: First failure for update {64E9AB2C-207E-4B2F-A78D-E5EA6BE2B2E5}, transaction error = 0x8024200b, MSI result = 0x80070643, MSI action = NewCustomAction1\r<br />\n2014-04-30\t10:51:08:311\t1232\t1ca8\tAU\t&gt;&gt;##  RESUMED  ## AU: Installing update [UpdateId = {64E9AB2C-207E-4B2F-A78D-E5EA6BE2B2E5}]\r<br />\n2014-04-30\t10:51:08:311\t6148\t16ec\tHandler\t  : WARNING: Operation failed at update 0, Exit code = 0x8024200B\r<br />\n2014-04-30\t10:51:08:311\t1232\t1ca8\tAU\t  # WARNING: Install failed, error = 0x80070643 / 0x000006BA\r<br />\n2014-04-30\t10:51:08:311\t6148\t16ec\tHandler\t:::::::::\r<br />\n2014-04-30\t10:51:08:311\t6148\t16ec\tHandler\t::  END  ::  Handler: MSI Install\r<br />\n2014-04-30\t10:51:08:311\t6148\t16ec\tHandler\t:::::::::::::\r<br />\n2014-04-30\t10:51:08:389\t1232\tdb8\tDnldMgr\tPreparing update for install, updateId = {E71846F3-04C5-4D38-8C37-2CBA2CA7E406}.2.\r<br />\n2014-04-30\t10:51:08:405\t6148\t16ec\tHandler\t:::::::::::::\r<br />\n2014-04-30\t10:51:08:405\t6148\t16ec\tHandler\t:: START ::  Handler: Command Line Install\r<br />\n2014-04-30\t10:51:08:405\t6148\t16ec\tHandler\t:::::::::\r<br />\n2014-04-30\t10:51:08:405\t6148\t16ec\tHandler\t  : Updates to install = 1\r<br />\n2014-04-30\t10:51:13:350\t1232\t1b08\tReport\tREPORT EVENT: {C30441A7-D366-45B8-86CA-7466CA905975}\t2014-04-30 10:51:08:342-0400\t1\t182\t101\t{64E9AB2C-207E-4B2F-A78D-E5EA6BE2B2E5}\t3\t80070643\tAutomaticUpdates\tFailure\tContent Install\tInstallation Failure: Windows failed to install the following update with error 0x80070643: Adobe Flash Player 13 ActiveX.\r<br />\n<br />\nWinfriedSonntag, I was trying to do that en masse since I need to do this to 300+ machines<br />\n<blockquote>\nI've tried to configure an update the uninstalls using the uninstall_flash_player.exe (both directly with the EXE and using a BAT), but I can't seem to make that work either. <br />\n</blockquote>\n",
+    "PostedDate": "2014-05-01T05:12:20.23-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240300",
+    "ThreadId": "543915",
+    "Html": "Sorry, i have no idea.\r<br />\n<br />\nDid you use a MSI or the EXE? You can use the URL to download the MSI <a href=\"http://www.adobe.com/special/products/flashplayer/fp_distribution3.html\" rel=\"nofollow\">http://www.adobe.com/special/products/flashplayer/fp_distribution3.html</a> or you can import the Update with the Catalog in WPP.\r<br />\n<br />\nIs there a IE-Process active if you are try to install the Flash Player?<br />\n",
+    "PostedDate": "2014-05-01T09:49:27.56-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240302",
+    "ThreadId": "543915",
+    "Html": "Did you use any Commandline Parameters? If yes, Flashplayer don't need any Commandline Parameters.<br />\n",
+    "PostedDate": "2014-05-01T09:51:33.017-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240306",
+    "ThreadId": "543915",
+    "Html": "What happen if you are running the MSI file manually on the computer ?<br />\n",
+    "PostedDate": "2014-05-01T10:01:42.32-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240309",
+    "ThreadId": "543915",
+    "Html": "<strong>WinfriedSonntag wrote:</strong><br />\n<blockquote>\n1)  Did you use a MSI or the EXE?<br />\n2) Is there a IE-Process active if you are try to install the Flash Player?<br />\n3) Did you use any Commandline Parameters? If yes, Flashplayer don't need any Commandline Parameters.<br />\n</blockquote>\n1) MSI\r<br />\n2) No\r<br />\n3) No, I did not use any parameters\r<br />\n<br />\n<strong>DCourtel wrote:</strong><br />\n<blockquote>\nWhat happen if you are running the MSI file manually on the computer?<br />\n</blockquote>\nI'll give it a try and let you know. The EXE works fine, but I haven't tried the MSI.<br />\n",
+    "PostedDate": "2014-05-01T10:07:44.51-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1241903",
+    "ThreadId": "543915",
+    "Html": "We have the same problem with Flash Player ActiveX 13.0.0.182 installation.\r<br />\nTry to use Uninstaller of Flash Player: <a href=\"http://helpx.adobe.com/flash-player/kb/uninstall-flash-player-windows.html\" rel=\"nofollow\">http://helpx.adobe.com/flash-player/kb/uninstall-flash-player-windows.html</a>\r<br />\nIt helped us.<br />\n",
+    "PostedDate": "2014-05-06T00:47:38.24-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1241913",
+    "ThreadId": "543915",
+    "Html": "OK, i use LUP/WPP since 3 Years, but never have had problems with publishing a MSI like you. ;)\r<br />\n<br />\nCan you install the MSI manually at this Client? Did you edit the MSI with ORCA and change some settings? Are you using a Proxy for downloading? maybe the Proxy is changing the file.\r<br />\n<br />\n<br />\nBTW: After Installation Flashplayer you will find a lot of things to config:<br />\n<ul>\n<li>Scheduled Task</li>\n<li>Service</li>\n<li>Config File in Filesystem (mms.cfg)\r<br />\nI made a Howto, but only in German, maybe the images can help to see what i want to tell: \r<br />\n<a href=\"http://www.wsus.de/adobe_flash_player_ueber_wsus_bereitstellen\" rel=\"nofollow\">http://www.wsus.de/adobe_flash_player_ueber_wsus_bereitstellen</a></li>\n</ul>\n",
+    "PostedDate": "2014-05-06T01:10:07.8-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1242010",
+    "ThreadId": "543915",
+    "Html": "<strong>pzabortsev wrote:</strong><br />\n<blockquote>\nWe have the same problem with Flash Player ActiveX 13.0.0.182 installation.<br />\nTry to use Uninstaller of Flash Player: <a href=\"http://helpx.adobe.com/flash-player/kb/uninstall-flash-player-windows.html\" rel=\"nofollow\">http://helpx.adobe.com/flash-player/kb/uninstall-flash-player-windows.html</a><br />\nIt helped us.<br />\n</blockquote>\nHave you found a way to push the uninstaller out to PCs? I might as well install the update manually if you manually have to run the uninstaller.\r<br />\n<br />\n<strong>WinfriedSonntag wrote:</strong><br />\n<blockquote>\n<ol>\n<li>Can you install the MSI manually at this Client?</li>\n<li>Did you edit the MSI with ORCA and change some settings?</li>\n<li>\nAre you using a Proxy for downloading? maybe the Proxy is changing the file.<br />\nBTW: After Installation Flashplayer you will find a lot of things to config:<br />\n•Scheduled Task <br />\n•Service <br />\n•Config File in Filesystem (mms.cfg) <br />\nI made a Howto, but only in German, maybe the images can help to see what i want to tell: <br />\n<a href=\"http://www.wsus.de/adobe_flash_player_ueber_wsus_bereitstellen\" rel=\"nofollow\">http://www.wsus.de/adobe_flash_player_ueber_wsus_bereitstellen</a><br />\n</li>\n</ol>\n</blockquote>\n<ol>\n<li>Got bogged down with other projects, but I will definitely try today :)</li>\n<li>Haven't used ORCA on this MSI, just used it straight from Adobe</li>\n<li>\nNo proxies are involved<br />\n</li>\n</ol>\nAlso, thanks for the tips on the services :) I've been reading about the mms.cfg over the past week. Here's a link for your link:\r<br />\n<a href=\"http://translate.google.com/translate?depth=1&amp;hl=en&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com&amp;sl=de&amp;tl=en&amp;u=http://www.wsus.de/adobe_flash_player_ueber_wsus_bereitstellen\" rel=\"nofollow\">http://translate.google.com/translate?depth=1&hl=en&ie=UTF8&prev=_t&rurl=translate.google.com&sl=de&tl=en&u=http://www.wsus.de/adobe_flash_player_ueber_wsus_bereitstellen</a><br />\n",
+    "PostedDate": "2014-05-06T05:22:58.84-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1242030",
+    "ThreadId": "543915",
+    "Html": "<strong>ITTech wrote:</strong><br />\n<blockquote>\nHave you found a way to push the uninstaller out to PCs? I might as well install the update manually if you manually have to run the uninstaller.<br />\n</blockquote>\nThere was only one PC with this problem in our network. Almost all of other had updated successfully.\r<br />\nFlash Player installation ended with error in both mode - via WPP and manually. And was completed via WPP only after manually uninstalling.\r<br />\n<br />\nHave you got this error on all of you 300+ PCs?<br />\n",
+    "PostedDate": "2014-05-06T06:06:24.8-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1242031",
+    "ThreadId": "543915",
+    "Html": "<strong>pzabortsev wrote:</strong><br />\n<blockquote>\nHave you got this error on all of you 300+ PCs?<br />\n</blockquote>\nAbout 80% of them<br />\n",
+    "PostedDate": "2014-05-06T06:08:26.307-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1242048",
+    "ThreadId": "543915",
+    "Html": "<strong>ITTech wrote:</strong><br />\n<blockquote>\nAbout 80% of them<br />\n</blockquote>\nCan you use domain policy to run uninstaller?<br />\n",
+    "PostedDate": "2014-05-06T06:52:35.58-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1242059",
+    "ThreadId": "543915",
+    "Html": "<blockquote>\nlso, thanks for the tips on the services :) I've been reading about the mms.cfg over the past week. Here's a link for your link:<br />\n<a href=\"http://translate.google.com/translate?depth=1&amp;hl=en&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com&amp;sl=de&amp;tl=en&amp;u=http://www.wsus.de\" rel=\"nofollow\">http://translate.google.com/translate?depth=1&hl=en&ie=UTF8&prev=_t&rurl=translate.google.com&sl=de&tl=en&u=http://www.wsus.de</a> &gt;/adobe_flash_player_ueber_wsus_bereitstellen<br />\n</blockquote>\nThanks for the URL. ;)<br />\n",
+    "PostedDate": "2014-05-06T07:20:29.24-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1242060",
+    "ThreadId": "543915",
+    "Html": "<strong>ITTech wrote:</strong><br />\n<blockquote>\n<strong>pzabortsev wrote:</strong><br />\n<blockquote>\nHave you got this error on all of you 300+ PCs?<br />\n</blockquote>\nAbout 80% of them<br />\n</blockquote>\nOh  my god, why so much? If pzabortsev wrote, i think it is the best way to run the uninstaller wihtin a computerstartup script with silent switch for the uninstaller.<br />\n",
+    "PostedDate": "2014-05-06T07:22:24.193-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:37:15.937-07:00"
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2016-09-01T13:31:26.81-07:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "I can't access the Manage Catalog Subscriptions as it appears to be greyed out. I've restarted the application and even rebooted the server with no luck. Any suggestions?\r\n\r\n![Image](http://i.imgur.com/qMl1h5J.png)",
+    "LastUpdatedDate": "2016-09-01T13:31:26.81-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-10-14T05:05:58.693-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Manage Catalog Subscriptions greyed out?",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 300
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Did you select one or more catalogs for subscriptions? If not, select first over Import from Catalog one or more Catalogs.",
+      "PostedDate": "2015-10-14T06:35:48.797-07:00",
+      "Id": 191619
+    },
+    {
+      "Message": "That's not how I selected them the first time. I went to manage catalog subscriptions and just added them there. I did import them as you suggested so I could get the latest flash player, but it is still greyed out. I guess since I only have two, I can live with doing it this way.",
+      "PostedDate": "2015-10-14T07:37:14.503-07:00",
+      "Id": 191624
+    },
+    {
+      "Message": "Afair This happens when wpp is trying to check for updates (catalog and program). Afterwards you should be able to manage the subscriptions.",
+      "PostedDate": "2015-10-14T09:17:13.98-07:00",
+      "Id": 191627
+    },
+    {
+      "Message": "That's right. You can't manage catalog while WPP check for new version of these catalog.",
+      "PostedDate": "2015-11-10T12:44:42.4-08:00",
+      "Id": 193412
+    }
+  ]
+}

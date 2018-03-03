@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1486086",
+    "ThreadId": "658722",
+    "Html": "Hello,\r<br />\nI am trying to figure out a way for WPP to distinguish between reader and acrobat such that if a computer has acrobat installed, reader would not be applicable for installation on that computer. I thought I could just take the MSI of acrobat and put it somewhere but not sure where to place it.\r<br />\nThanks<br />\n",
+    "PostedDate": "2016-10-14T05:59:13.853-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

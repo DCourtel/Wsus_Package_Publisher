@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "1076184",
+    "ThreadId": "452279",
+    "Html": "Hi!\r<br />\n<br />\nMy team is trying to publish updates for FlashPlayer. The clients are detected and shown in WSUS Package Publisher, however when we run Detect Now, it gives a message __&quot;Fail to Connect. Failed to connected with provided credentials. Do you want to continue to use these credentials (may lock the account).&quot; We have tried all possible usernames/password we know but to no avail. We entered the username of the client with the following format:  &lt;client machine name&gt;\\username, &lt;IP Address&gt;\\username, username, server username\\password. \r<br />\n<br />\nCan you kindly assist us with this concern? What is the format and which username and password to put?\r<br />\n<br />\nThank you, \r<br />\n<br />\nCTV<br />\n",
+    "PostedDate": "2013-08-02T15:27:01.713-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1076536",
+    "ThreadId": "452279",
+    "Html": "Hello CTV,\r<br />\n<br />\nAre you in an Active Directory environnement or Workgroup environnement ?\r<br />\nDo you have any firewall between the machine where WPP run and the remote computer ?<br />\n",
+    "PostedDate": "2013-08-04T15:17:37.353-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1076807",
+    "ThreadId": "452279",
+    "Html": "Thanks for replying DCourtel.  Since we are still testing, we are using Workgroup environment. The Firewall has been disabled on clients but not on the server where WPP runs. <br />\n",
+    "PostedDate": "2013-08-05T07:49:30.517-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1076831",
+    "ThreadId": "452279",
+    "Html": "In workgroup environnment it's harder to find good credential. I know that remote features works fine in AD environnment. And I will focus on that because most of WPP's users are enterprises, so they have AD environnment.<br />\nThe only format supported for now is : &lt;Username&gt;<br />\nOther formats like : &lt;Hostname\\Username&gt;,&lt;ip Adress\\Username&gt;, &lt;Username@workgroupName&gt; have little chance to work.<br />\nThis is why some &quot;Right-Click&quot; options are grey out when AD environnment is not detected.<br />\n<br />\nYou can try to create a user on each computer with the same username/password.<br />\nOtherwise, I encourage you to migrate to AD. It will change your life.<br />\n",
+    "PostedDate": "2013-08-05T08:48:29.353-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1076850",
+    "ThreadId": "452279",
+    "Html": "Thanks for the information. \r<br />\n<br />\nIn an AD environment, what will be the username to use? We have local admin and the domain user/exchange account. Or do we need to create one domain username to be added to all the clients?<br />\n",
+    "PostedDate": "2013-08-05T09:32:58.897-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1076854",
+    "ThreadId": "452279",
+    "Html": "In AD environnment, by default, the account &quot;Administrator&quot; is admin of all computers and servers.<br />\n",
+    "PostedDate": "2013-08-05T09:41:01.44-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1076871",
+    "ThreadId": "452279",
+    "Html": "Our AD is not setup with the default &quot;Administrator&quot; (our Exchange Admins must have configured this already). All clients use an image with a local admin &quot;&lt;companyname&gt;admin&quot;. \r<br />\n<br />\nWhen you said &quot;admin&quot; of all computers and servers - is it local or domain?\r<br />\n<br />\nThank you for your answers and patience. We are new to this project and we really appreciate all your efforts on answering our concerns. <br />\n",
+    "PostedDate": "2013-08-05T10:23:58.61-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1077287",
+    "ThreadId": "452279",
+    "Html": "<blockquote>\nOur AD is not setup with the default &quot;Administrator&quot; (our Exchange Admins must have configured this already). <br />\n</blockquote>\nGenerally, the default &quot;Adiministrator&quot; account is copied then deactivated. <br />\n<blockquote>\nAll clients use an image<br />\n</blockquote>\nSo they are in Workgroup. When you will join it to a domain, the &quot;Domain Admins&quot; group will add to the local &quot;Administrators&quot; group. So that, all admin of the domain are admin of the Workstation too.<br />\n",
+    "PostedDate": "2013-08-06T08:13:58.24-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:28:49.22-07:00"
+  },
+  {
+    "Id": "1077401",
+    "ThreadId": "452279",
+    "Html": "Got it.\r<br />\n<br />\nThanks so much! You've been a big help. \r<br />\n<br />\nWe'll finish the testing within this week and hopefully everything will work well. \r<br />\n<br />\nThanks again!<br />\n",
+    "PostedDate": "2013-08-06T12:24:00.573-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1077425",
+    "ThreadId": "452279",
+    "Html": "You're welcome.\r<br />\nIf you decide to use WPP in production, do not hesitate to ask for enhancements or bugs fix.<br />\n",
+    "PostedDate": "2013-08-06T13:34:44.54-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

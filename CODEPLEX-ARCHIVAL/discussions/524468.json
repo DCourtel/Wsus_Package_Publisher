@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "1195445",
+    "ThreadId": "524468",
+    "Html": "bonjour, \r<br />\nj'ai eu un projet de déploiement d'une application sur mon parc, composé de windows 7 et xp. \r<br />\nle déploiement se déroule correctement, mon seul soucis est qu'à chaque extinction d'une machine cliente, la mise à jour est re-téléchargée et ré-installée. \r<br />\nle statut de la mise à jour dans la console d'admin est pourtant bien à &quot;installée&quot;. \r<br />\nmerci pour votre aide.<br />\n",
+    "PostedDate": "2014-01-24T06:22:04.353-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1198257",
+    "ThreadId": "524468",
+    "Html": "Bonjour, est-ce que tu peux réviser la mise à jour et sauvegarder les règles &quot;Est Installé&quot; et &quot;Est Installable&quot; puis les copier/coller ici.\r<br />\nMe dire aussi, s'il s'agit d'une mise à jour basé sur un EXE ou un MSI/MSP.<br />\n",
+    "PostedDate": "2014-01-26T11:56:37.013-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1198796",
+    "ThreadId": "524468",
+    "Html": "\r\n<div>Boujour et merci pour la rapidité de réponse,</div>\r\n<div>Je suis aujourd'hui en recup, dés demain matin je m'en occupe</div>\r\n<div>Cordialement<br>\r\n<br>\r\nEnvoyé de mon iPhone</div>\r\n<div><br>\r\nLe 26 janv. 2014 à 20:57, &quot;DCourtel&quot; &lt;[email removed]&gt; a écrit :<br>\r\n<br>\r\n</div>\r\n<blockquote type=\"cite\">\r\n<div>\r\n<p>From: DCourtel</p>\r\n<div id=\"ThreadNotificationPostBody\">Bonjour, est-ce que tu peux réviser la mise à jour et sauvegarder les règles &quot;Est Installé&quot; et &quot;Est Installable&quot; puis les copier/coller ici.\r\n<br>\r\nMe dire aussi, s'il s'agit d'une mise à jour basé sur un EXE ou un MSI/MSP.<br>\r\n</div>\r\n</div>\r\n</blockquote>\r\n",
+    "PostedDate": "2014-01-27T00:56:45.73-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1199584",
+    "ThreadId": "524468",
+    "Html": "\r\n<div>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Bonjour,</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Je ne sais pas si c’est ce que tu me demandais, mais voilà les règles.</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Règle 1 :</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">&lt;msiar:MsiProductInstalled ProductCode=&quot;{92ed0c62-ffbd-440b-bbed-033fa17e2676}&quot;/&gt;</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Règle 2 :</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">&lt;lar:Not&gt;</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">&lt;msiar:MsiProductInstalled ProductCode=&quot;{92ed0c62-ffbd-440b-bbed-033fa17e2676}&quot;/&gt;</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">&lt;/lar:Not&gt;</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Il s’agit de l’installation d’un outil de chat (Jitsi) et c’est un MSI.</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Cordialement.</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Michaël KELLER</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Direction des Systèmes d’Information</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Poste : 14 00</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">[email removed]</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Tél. DSI : 04 42 11 16 40</span></p>\r\n<div>\r\n<div>\r\n<div>\r\n<div><span style=\"font-size:11.0pt; font-family:\">\r\n<hr size=\"2\" width=\"500\" align=\"left\" style=\"width:375.0pt\">\r\n</span></div>\r\n</div>\r\n</div>\r\n</div>\r\n<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"492\" style=\"width:369.0pt\">\r\n<tbody>\r\n<tr>\r\n<td width=\"200\" valign=\"top\" style=\"width:150.0pt; padding:7.5pt 7.5pt 7.5pt 7.5pt\">\r\n<p style=\"\"><span style=\"font-size:11.0pt; font-family:\"><img border=\"0\" width=\"160\" height=\"51\" id=\"Image_x0020_2\" src=\"cid:image001.jpg@01CF1C09.D0C44200\" alt=\"Description : Description : cid:image001.gif@01CD94C0.6001BA10\"></span><span style=\"font-family:\"></span></p>\r\n</td>\r\n<td width=\"252\" valign=\"top\" style=\"width:189.0pt; padding:7.5pt 7.5pt 7.5pt 7.5pt\">\r\n<p align=\"right\" style=\"text-align:right\"><b><span style=\"font-size:10.0pt; font-family:\">SAN - Ouest Provence<br>\r\n</span></b><span style=\"font-size:10.0pt; font-family:\">Chemin du Rouquier<br>\r\n13800 Istres<br>\r\ntél.: 04 42 11 16 16<br>\r\nfax.: 04 42 11 28 12<br>\r\n<a href=\"http://www.ouestprovence.fr/\">http://www.ouestprovence.fr</a></span><span style=\"font-family:\"></span></p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n</div>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<div style=\"border:none; border-top:solid #B5C4DF 1.0pt; padding:3.0pt 0cm 0cm 0cm\">\r\n<p><b><span style=\"font-size:10.0pt; font-family:\">De :</span></b><span style=\"font-size:10.0pt; font-family:\"> DCourtel [email removed]\r\n<br>\r\n<b>Envoyé :</b> dimanche 26 janvier 2014 20:57<br>\r\n<b>À :</b> Michael Keller<br>\r\n<b>Objet :</b> Re: mise à jour qui revient [WsusPackagePublisher:524468]</span></p>\r\n</div>\r\n</div>\r\n<p></p>\r\n<p><span style=\"font-size:9.0pt; font-family:\">From: DCourtel</span></p>\r\n<div id=\"ThreadNotificationPostBody\" style=\"margin-bottom:24.0pt\">\r\n<p><span style=\"font-size:9.0pt; font-family:\">Bonjour, est-ce que tu peux réviser la mise à jour et sauvegarder les règles &quot;Est Installé&quot; et &quot;Est Installable&quot; puis les copier/coller ici.\r\n<br>\r\nMe dire aussi, s'il s'agit d'une mise à jour basé sur un EXE ou un MSI/MSP.</span></p>\r\n</div>\r\n</div>\r\n",
+    "PostedDate": "2014-01-28T00:45:07.427-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1199704",
+    "ThreadId": "524468",
+    "Html": "Les règles sont ok pour un fichier MSI. Les clients devraient être en mesure de voir que le logiciel est installé. Le plus étrange, c'est que seul les PC en Windows 8 semblent être affectés.\r<br />\nEst-ce que tu peut vérifier que le GUID : 92ed0c62-ffbd-440b-bbed-033fa17e2676\r<br />\napparait bien dans une sous clé de registre dans : HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\Installer\\Products\r<br />\n<br />\nSi elle n'apparait pas, essayer de trouvé une clé qui référence le logiciel installé (par son nom ou le nom de l'éditeur).\r<br />\n<br />\nC'est une version 32 ou 64 bits de l'installeur ? Les postes à problème sont en 32 ou 64 bits ?<br />\n",
+    "PostedDate": "2014-01-28T03:18:11.397-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1199718",
+    "ThreadId": "524468",
+    "Html": "Je viens de télécharger la version 32 et 64 bits de Jitsi (2.4.4997)\r<br />\nVoici les 'Product code' que je vois avec Msi Reader :<br />\n<ul>\n<li>32bit : {B079C7E1-76F1-45A6-89FE-1982001E1401}</li>\n<li>\n64bit : {8D69CE08-8C5F-4428-B159-28AB690AFA27}<br />\n</li>\n</ul>\nD'où viens le 'Product Code' que je vois dans tes règles ?<br />\n",
+    "PostedDate": "2014-01-28T03:31:45.25-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1200331",
+    "ThreadId": "524468",
+    "Html": "\r\n<div>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Bonjour,</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Pour mes tests de déploiement j’utilise jitsi 2.5 x64 et je cible sur 3 machines en seven, je m’attaquerai aux xp plus tard (chaque chose en son temps !!!).</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Effectivement le product code n’était pas le bon, j’ai révisé ma mise à jour et corrigé le product code ( c1b807bf-11d1-f644-db0f-05174e984b0d ) mais le problème reste le même.</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Peut-être que je me trompe à ce niveau, je te détaille ce que je fais : une fois l’installation faite sur un de mes poste, je vais en base de registre et je récupère le « packagecode », je révise alors ma mise\r\n à jour, je crée une « règle au niveau mise à jour » dans laquelle j’y met mon product code, je crée une « règle au niveau package » dans laquelle j’y met le même product code, puis je recrée ces 2 règles en les inversant. J’espère avoir été clair, sinon je\r\n peux essayer de mieux m’exprimer !!!!!</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">En tout cas je te remercies de passer du temps sur mon problème.</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Cordialement</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n</div>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<div style=\"border:none; border-top:solid #B5C4DF 1.0pt; padding:3.0pt 0cm 0cm 0cm\">\r\n<p><b><span style=\"font-size:10.0pt; font-family:\">De :</span></b><span style=\"font-size:10.0pt; font-family:\"> DCourtel [email removed]\r\n<br>\r\n<b>Envoyé :</b> mardi 28 janvier 2014 12:32<br>\r\n<b>À :</b> Michael Keller<br>\r\n<b>Objet :</b> Re: mise à jour qui revient [WsusPackagePublisher:524468]</span></p>\r\n</div>\r\n</div>\r\n<p></p>\r\n<p><span style=\"font-size:9.0pt; font-family:\">From: DCourtel</span></p>\r\n<div id=\"ThreadNotificationPostBody\" style=\"margin-bottom:24.0pt\">\r\n<p><span style=\"font-size:9.0pt; font-family:\">Je viens de télécharger la version 32 et 64 bits de Jitsi (2.4.4997)\r\n<br>\r\nVoici les 'Product code' que je vois avec Msi Reader :</span></p>\r\n<ul type=\"disc\">\r\n<li style=\"\"><span style=\"font-size:9.0pt; font-family:\">32bit : {B079C7E1-76F1-45A6-89FE-1982001E1401}</span></li><li style=\"\"><span style=\"font-size:9.0pt; font-family:\">64bit : {8D69CE08-8C5F-4428-B159-28AB690AFA27}</span></li></ul>\r\n<p><span style=\"font-size:9.0pt; font-family:\">D'où viens le 'Product Code' que je vois dans tes règles ?</span></p>\r\n</div>\r\n</div>\r\n",
+    "PostedDate": "2014-01-29T01:06:15.687-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1200392",
+    "ThreadId": "524468",
+    "Html": "Est-ce que tu peux me dire quel version exactement tu télécharge, j'en vois plusieurs en 2.5 sur le site.\r<br />\nEn général je regarde dans la base de registre, au niveau de HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\r<br />\nlà je cherche le produit puis je regarde la valeur 'UnInstallString'<br />\n",
+    "PostedDate": "2014-01-29T03:33:26.483-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1200452",
+    "ThreadId": "524468",
+    "Html": "\r\n<div>\r\n<p><span style=\"font-size:11.0pt; font-family:\">C’est la jitsi 2.5-nightly.latest-x64 et je rentre le product code :\r\n</span><b><span style=\"font-size:9.0pt; font-family:\">c4e9e2af-f0d7-4bdc-9119-c7eb88d54e85</span></b><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n</div>\r\n<div>\r\n<div style=\"border:none; border-top:solid #B5C4DF 1.0pt; padding:3.0pt 0cm 0cm 0cm\">\r\n<p><b><span style=\"font-size:10.0pt; font-family:\">De :</span></b><span style=\"font-size:10.0pt; font-family:\"> DCourtel [email removed]\r\n<br>\r\n<b>Envoyé :</b> mercredi 29 janvier 2014 12:33<br>\r\n<b>À :</b> Michael Keller<br>\r\n<b>Objet :</b> Re: mise à jour qui revient [WsusPackagePublisher:524468]</span></p>\r\n</div>\r\n</div>\r\n<p></p>\r\n<p><span style=\"font-size:9.0pt; font-family:\">From: DCourtel</span></p>\r\n<div id=\"ThreadNotificationPostBody\" style=\"margin-bottom:24.0pt\">\r\n<p><span style=\"font-size:9.0pt; font-family:\">Est-ce que tu peux me dire quel version exactement tu télécharge, j'en vois plusieurs en 2.5 sur le site.\r\n<br>\r\nEn général je regarde dans la base de registre, au niveau de HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\r\n<br>\r\nlà je cherche le produit puis je regarde la valeur 'UnInstallString'</span></p>\r\n</div>\r\n</div>\r\n",
+    "PostedDate": "2014-01-29T05:54:16.12-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1200511",
+    "ThreadId": "524468",
+    "Html": "\r\n<div>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Je pense avoir résolu mon problème !!!</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Afin de customiser l’utilisation de Jitsi, j’intégrais à la mise à jour une ligne de commande pour faire du provisioning. J’ai donc recréé la mise à jour sans cette ligne de commande et comme par magie, plus de\r\n problème !!!!! Je révise ensuite ma mise à jour pour y rajouter cette ligne de commande et tout fonctionne à merveille… Je dois dire que je ne comprends absolument pas ce qui a pu se passer, mais ça marche !!!!!!</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">En tout cas un grand merci pour votre aide.</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<div style=\"border:none; border-top:solid #B5C4DF 1.0pt; padding:3.0pt 0cm 0cm 0cm\">\r\n<p><b><span style=\"font-size:10.0pt; font-family:\">De :</span></b><span style=\"font-size:10.0pt; font-family:\"> DCourtel [email removed]\r\n<br>\r\n<b>Envoyé :</b> mercredi 29 janvier 2014 12:33<br>\r\n<b>À :</b> Michael Keller<br>\r\n<b>Objet :</b> Re: mise à jour qui revient [WsusPackagePublisher:524468]</span></p>\r\n</div>\r\n</div>\r\n<p></p>\r\n<p><span style=\"font-size:9.0pt; font-family:\">From: DCourtel</span></p>\r\n<div id=\"ThreadNotificationPostBody\" style=\"margin-bottom:24.0pt\">\r\n<p><span style=\"font-size:9.0pt; font-family:\">Est-ce que tu peux me dire quel version exactement tu télécharge, j'en vois plusieurs en 2.5 sur le site.\r\n<br>\r\nEn général je regarde dans la base de registre, au niveau de HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\r\n<br>\r\nlà je cherche le produit puis je regarde la valeur 'UnInstallString'</span></p>\r\n</div>\r\n</div>\r\n",
+    "PostedDate": "2014-01-29T08:01:46.16-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-29T13:17:09.317-08:00"
+  }
+]

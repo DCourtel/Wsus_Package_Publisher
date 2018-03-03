@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Wsus Wrapper",
+      "DisplayName": "Wsus Wrapper"
+    },
+    "ClosedComment": "Add an option to increase the limit of the file size that can be published.",
+    "ClosedDate": "2014-08-23T13:43:14.96-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When trying to publish an update with at least a file bigger than 384MB, an error occurs : \"Verification of signature failed for file...\"\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "release v1.3.1407.29",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-08-18T13:35:31.133-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Unable to publish package bigger than 384MB",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 212
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

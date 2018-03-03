@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1471577",
+    "ThreadId": "654101",
+    "Html": "We have made 3 Packages for all sort of Adobe Flash Player update. This Packages is only approved for the group WPP. For alle other groups the configuration is set to &quot;not approved&quot;.\r<br />\nBut after some time the configuration change from &quot;not approved&quot; to &quot;approved&quot; for all the other groups.\r<br />\n<br />\nI cant find a reason for this change....<br />\n",
+    "PostedDate": "2016-04-28T04:15:52.707-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1473717",
+    "ThreadId": "654101",
+    "Html": "The problem is still there, and i cant find a reason while the package changing the state without any user action. Just now i changed the state again from &quot;approved&quot; to &quot;not approved&quot;, but this time für all groups.\r<br />\n<br />\nIf anyone have a hint for me for this behavior just let me know.<br />\n",
+    "PostedDate": "2016-05-17T04:50:44.473-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1473756",
+    "ThreadId": "654101",
+    "Html": "Never i've that a approval changed in WSUS/WPP. Wahts about your colleague? Did you approved in WPP or in WSUS.MSC?<br />\n",
+    "PostedDate": "2016-05-17T11:21:06.433-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

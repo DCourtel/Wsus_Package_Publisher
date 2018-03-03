@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-11T22:31:17.977-08:00",
+    "CommentCount": 6,
+    "Custom": null,
+    "Description": "Bonjour,\r\n\r\nAvec la v1.3.1411.09, une mise à jour remplaçante remplissais automatiquement les règles d'approbation et d'installation avec la version précédente.\r\nAvec la v1.3.1504.12, les règles ne sont plus copié.\r\n\r\n\r\nPS dans le sous menu : remplaçante prend un c cédille.\r\n",
+    "LastUpdatedDate": "2015-11-11T22:31:17.977-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-04-13T01:18:39.687-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Copie des règles maj remplaçante, Suite",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 255
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Bonjour, dans cette release, la façon de créer les règles a partir des métadonnées MSI a un peu changée.\nWPP ne créer plus de règle dans la partie supérieur, mais tiens compte des règles prédéfinie par l'éditeur.\nNormalement, dans la partie inférieur (règle au niveau package), vous devriez voir :\n<msiar:MsiApplicationInstalled/>\net\n<msiar:MsiApplicationInstallable/>\nCeci fait référence au métadonnées que l'on peut éditer à la fin de l'assistant.\n",
+      "PostedDate": "2015-04-13T11:16:22.163-07:00",
+      "Id": 182105
+    },
+    {
+      "Message": "Bonjour,\n\nOk pour les fichiers MSI et MSP pour les métadonnées de l'éditeur.\nPar contre, quand c'est un exécutable qui remplace un autre exécutable, les anciennes règles ne sont plus recopié.\nNormal ?\n",
+      "PostedDate": "2015-04-15T05:21:34.73-07:00",
+      "Id": 182898
+    },
+    {
+      "Message": "Non, ce n'est pas normal. \nJe viens de publié une version qui corrige ce bug.",
+      "PostedDate": "2015-04-15T09:55:48.4-07:00",
+      "Id": 182908
+    },
+    {
+      "Message": "\n\r\n\r** Closed by DCourtel 04/14/2015 1:29PM",
+      "PostedDate": "2015-04-14T13:29:42.863-07:00",
+      "Id": 182970
+    },
+    {
+      "Message": "Bonjour,\n\nDu coup je ré-ouvre et complète.\nAvec la V1.3.1504.15, quand on fait une mise à jour remplaçante d'un MSI par un autre MSI, l'ancien code devient de trop.\nOn retrouve <msiar:MsiProductInstalled ProductCode=\"{GUID}\"/> dans les règles.\nSeulement là, c'est celui de l'ancien MSI.\nPar contre, la métadonnée de fin est avec le bon GUID.\nStrange ^^\n\nA bientôt",
+      "PostedDate": "2015-04-16T15:41:01.33-07:00",
+      "Id": 182971
+    },
+    {
+      "Message": "C'est parce-que lorsque vous publié un nouveau MSI/MSP, WPP regarde si il y a des règles définies dans le fichier MSI/MSP. Si c'est la cas, les anciennes règles sont égrasées par les nouvelles. Si aucune règles n'est fournies, alors pas de changement, les anciennes règles restent inchangées.",
+      "PostedDate": "2015-04-17T03:18:34.047-07:00",
+      "Id": 182989
+    }
+  ]
+}

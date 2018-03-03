@@ -1,0 +1,114 @@
+[
+  {
+    "Id": "1315960",
+    "ThreadId": "570492",
+    "Html": "I can't get Java to work for updating all my clients, I followed the documention on this website.<br />\nAlso tried the single msi file extracted from the .exe and configured it the same way as I did for Adobe Reader which is working by the way for Adobe Reader, but still no success. I noticed that this version doesn't have a cab file anymore?<br />\n<br />\nCan someone help me with this package so I can populate Java 8 update 25 to all my x86 and x64 clients clients? I don't have other Java versions configured and working, but the clients do have older Java versions running.<br />\n<br />\nThnx!<br />\n",
+    "PostedDate": "2014-10-23T04:20:02.757-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1315980",
+    "ThreadId": "570492",
+    "Html": "I have the same problem.<br />\n<br />\nI have a virtual 32 bit Win7 on a 64 bit Win7 hostsystem.<br />\n<br />\nI created a normal update with jre-8u25-windows-i586.exe<br />\nI changed the command line to <br />\n/s AUTO_UPDATE=0 EULA=0 NOSTARTMENU=1SPONSORS=0 WEB_ANALYTICS=0 WEB_JAVA=1 WEB_JAVA_SECURITY_LEVEL=H. This options should be work.<br />\nMy 32 bit system has installed this update without problems but my 64 bit wont install it.<br />\nI did the same with the jre-8u25-windows-x64.exe file. Now the host installed the update to.<br />\nI tried on the 64 Bit host the installation manually with the options from above. The update was installed.<br />\n<br />\nI tried also to creat a custom update with diffrent configurations.<br />\nOne time no update error code FFF or 653<br />\nOne time update would be fine (in Windows update consol) but under programs i can't find Java 8 update 25.<br />\nNext search for updates Windows shows an available update.<br />\n<br />\nThe WindowsUpdate.log shows no errors and the custom log only that the xml file was called.<br />\n<br />\nDon't know what to do <br />\n<br />\nTo solve the problem with publishing Java 7 Update 72 like here <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/570135\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/570135</a> doesn't solve the problem.<br />\n<br />\nGreetz Andreas<br />\n",
+    "PostedDate": "2014-10-23T05:21:27.54-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1316103",
+    "ThreadId": "570492",
+    "Html": "<blockquote>\nI can't get Java to work for updating all my clients<br />\n</blockquote>\nWhere does it fails ?<br />\n<blockquote>\nAlso tried the single msi file extracted from the .exe and configured it the same way as I did for Adobe Reader<br />\n</blockquote>\nWhich MSI product code do you have used ?<br />\n",
+    "PostedDate": "2014-10-23T13:00:50.353-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1321365",
+    "ThreadId": "570492",
+    "Html": "You should try thecommand line without the /s\r<br />\n<br />\nIs that really your command line backara? There is a missing space after the 1: [...]NOSTARTMENU=1SPONSORS[...]\r<br />\n<br />\nI'am using this command line with the msi-files:\r<br />\nAUTO_UPDATE=0 EULA=0 SPONSORS=0 WEB_ANALYTICS=0 WEB_JAVA=1 WEB_JAVA_SECURITY_LEVEL=H\r<br />\nThis works for me both for 32 and 64 bit<br />\n",
+    "PostedDate": "2014-11-12T10:58:24.437-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1334199",
+    "ThreadId": "570492",
+    "Html": "Hello,<br />\n<br />\nI have the same problem on a 64 bit machine with the 32 bit package.<br />\n<br />\n64 bit package on 64 bit machine works.<br />\n<br />\nI have tried with this command INSTALL_SILENT=1 SPONSORS=0 AUTO_UPDATE=0 WEB_ANALYTICS=0.<br />\n<br />\nHere you have the last rows of jusched.log in the windows\\temp folder:<br />\n<pre><code>Unable to open file C:\\ProgramData\\Oracle\\Java\\java.settings.cfg.\nCheck that the configuration file exists and that the path to the file is correct.\n[2014/12/17 17:02:38.288, jre-8u25-32.exe (PID: 4568, TID: 4636), InstallConfigData.cpp:655 (InstallConfigData::ExportConfigSettings)]\n    ERROR: Fails on writing to the runtime config file.\n[2014/12/17 17:02:38.288, jre-8u25-32.exe (PID: 4568, TID: 4636), AllUtils.cpp:141 (logit)]\n    INFO: Error occurred while exporting configuration settings. Exiting installer.</code></pre>\n\nTrying without the /s and without the INSTALL_SILENT keep the update unresponsive. It seems the update is waiting an answer.<br />\n<br />\nTried to create the java.setting.cfg, not better. The update ended with an error.<br />\n<br />\nCheers,<br />\nMarco<br />\n",
+    "PostedDate": "2014-12-17T08:19:54.687-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1345212",
+    "ThreadId": "570492",
+    "Html": "If you run across this again, please try installing with the MSI. You can get it from the EXE using the following process:\r<br />\nInstall the JRE. The MSI can then be harvested from: C:\\Users\\&lt;username&gt;\\AppData\\LocalLow\\Sun\\Java\\jre1.8.0_xx\r<br />\n<br />\nI'm using the following switches:\r<br />\nINSTALL_SILENT=1 STATIC=0 AUTO_UPDATE=0 WEB_JAVA=1 WEB_JAVA_SECURITY_LEVEL=H WEB_ANALYTICS=0 EULA=0 REBOOT=0<br />\n",
+    "PostedDate": "2015-01-22T13:40:43.517-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1346134",
+    "ThreadId": "570492",
+    "Html": "It works for me when i switched the &quot;1&quot; to enable and the &quot;0&quot; to disable:\r<br />\n<br />\nINSTALL_SILENT=Enable STATIC=Disable AUTO_UPDATE=Disable WEB_JAVA=Enable WEB_JAVA_SECURITY_LEVEL=H WEB_ANALYTICS=Disable EULA=Disable REBOOT=Disable<br />\n",
+    "PostedDate": "2015-01-26T23:54:46.593-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1347432",
+    "ThreadId": "570492",
+    "Html": "Hi,\r<br />\n<br />\ni have another Problem in Java 8 Update 31.\r<br />\n<br />\n I followed the documention Installing Java 7u21 without Java Auto Updater, but change following settings:<br />\n<pre><code>&lt;CustomUpdate&gt;\n&lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.VariableElement&lt;/ElementType&gt;\n&lt;Name&gt;Return Code&lt;/Name&gt;\n&lt;Type&gt;Int&lt;/Type&gt;\n&lt;ID&gt;299d085d-baf8-450f-b180-fc2fe2ad123f&lt;/ID&gt;\n&lt;/Action&gt;\n&lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.ServiceElement&lt;/ElementType&gt;\n&lt;ServiceAction&gt;Stop&lt;/ServiceAction&gt;\n&lt;ServiceName&gt;JavaQuickStarterService&lt;/ServiceName&gt;\n&lt;PathToEXE&gt;&lt;/PathToEXE&gt;\n&lt;StartupMode&gt;Undefined&lt;/StartupMode&gt;\n&lt;StartingAccount&gt;Undefined&lt;/StartingAccount&gt;\n&lt;Login&gt;&lt;/Login&gt;\n&lt;Password&gt;&lt;/Password&gt;\n&lt;/Action&gt;\n&lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;\n&lt;PathToExecutable&gt;jre-8u31-windows-i586.exe&lt;/PathToExecutable&gt;\n&lt;Parameters&gt;INSTALL_SILENT=Enable STATIC=Disable AUTO_UPDATE=Disable WEB_JAVA=Enable WEB_JAVA_SECURITY_LEVEL=H WEB_ANALYTICS=Disable EULA=Disable REBOOT=Disable&lt;/Parameters&gt;\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;\n&lt;Variable&gt;299d085d-baf8-450f-b180-fc2fe2ad123f&lt;/Variable&gt;\n&lt;/Action&gt;\n&lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.WaitElement&lt;/ElementType&gt;\n&lt;Wait&gt;30&lt;/Wait&gt;\n&lt;/Action&gt;\n&lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;\n&lt;PathToExecutable&gt;%windir%\\System32\\msiexec.exe&lt;/PathToExecutable&gt;\n&lt;Parameters&gt;/x {4A03706F-666A-4037-7777-5F2748764D10} /qn /norestart&lt;/Parameters&gt;\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;\n&lt;Variable/&gt;\n&lt;/Action&gt;\n&lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.WaitElement&lt;/ElementType&gt;\n&lt;Wait&gt;30&lt;/Wait&gt;\n&lt;/Action&gt;\n&lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.ServiceElement&lt;/ElementType&gt;\n&lt;ServiceAction&gt;Stop&lt;/ServiceAction&gt;\n&lt;ServiceName&gt;JavaQuickStarterService&lt;/ServiceName&gt;\n&lt;PathToEXE&gt;&lt;/PathToEXE&gt;\n&lt;StartupMode&gt;Undefined&lt;/StartupMode&gt;\n&lt;StartingAccount&gt;Undefined&lt;/StartingAccount&gt;\n&lt;Login&gt;&lt;/Login&gt;\n&lt;Password&gt;&lt;/Password&gt;\n&lt;/Action&gt;\n&lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.ServiceElement&lt;/ElementType&gt;\n&lt;ServiceAction&gt;ChangeStartingMode&lt;/ServiceAction&gt;\n&lt;ServiceName&gt;JavaQuickStarterService&lt;/ServiceName&gt;\n&lt;PathToEXE&gt;&lt;/PathToEXE&gt;\n&lt;StartupMode&gt;Disabled&lt;/StartupMode&gt;\n&lt;StartingAccount&gt;Undefined&lt;/StartingAccount&gt;\n&lt;Login&gt;&lt;/Login&gt;\n&lt;Password&gt;&lt;/Password&gt;\n&lt;/Action&gt;\n&lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.ReturnCodeElement&lt;/ElementType&gt;\n&lt;ReturnCodeMethod&gt;Variable&lt;/ReturnCodeMethod&gt;\n&lt;StaticReturnCode&gt;0&lt;/StaticReturnCode&gt;\n&lt;Variable&gt;299d085d-baf8-450f-b180-fc2fe2ad123f&lt;/Variable&gt;\n&lt;/Action&gt;\n&lt;/CustomUpdate&gt;</code></pre>\n\nTest machine is a Windows 7 x64 with Java 7 Update 55. The windows update shows me one important update.\r<br />\nAfter installing the update i´ve got the response that the update is correct installed, but one second later the same update will be installed again.\r<br />\nPrograms and functions show me Java 7 Update 55 is still install.\r<br />\n<br />\nThe update creation wizard is set Package Type as an Application, normal and canRequestReboot\r<br />\n \r<br />\nWhat´s going wrong?\r<br />\n<br />\nThnx!<br />\n",
+    "PostedDate": "2015-01-30T01:28:58.52-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348427",
+    "ThreadId": "570492",
+    "Html": "I followed the Java 7u21 guide as well. However I found the MSI Product code to be different for Java 8u31.\r<br />\n<br />\nFor Java 7u21 (from the guide)\r<br />\n<br />\nMsi Product code for x86 is: 26A24AE4-039D-4CA4-87B4-2F83217021FF \r<br />\nMsi Product code for x64 is: 26A24AE4-039D-4CA4-87B4-2F86417021FF\r<br />\n<br />\nFor Java 8u31 I found the following uninstall key in the registry.\r<br />\nMsiExec.exe /I{26A24AE4-039D-4CA4-87B4-2F83218031F0}\r<br />\nMsiExec.exe /I{26A24AE4-039D-4CA4-87B4-2F86418031F0}\r<br />\n<br />\nSo I used the following when creating my Java 8u31 package in WPP and followed the 7u21 guide with these edits: \r<br />\n<br />\nMsi Product code for x86 is: 26A24AE4-039D-4CA4-87B4-2F83218031F0 \r<br />\nMsi Product code for x64 is: 26A24AE4-039D-4CA4-87B4-2F86418031F0<br />\n",
+    "PostedDate": "2015-02-02T15:11:32.37-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348541",
+    "ThreadId": "570492",
+    "Html": "I already use the MSI Product code: 26a24ae4-039d-4ca4-87b4-2f83218031f0\r<br />\n<br />\nThx, but an other solution has to be found.\r<br />\n<br />\nIt would be nice if someone use Java 8_31 and write\\make a complet documentation.\r<br />\n<br />\nI only found fragmented and not al hole solution. It is´n clearly if for Java 8_31 the documentation about Java 7_21 is a right solution or if we have to go another way to install Java since version 8.\r<br />\n<br />\nCreate an update or create a custom update?\r<br />\nCan i use the Java.exe file like the documentation or the Java.msi like some users say?\r<br />\n<br />\nThanks!<br />\n",
+    "PostedDate": "2015-02-03T01:23:58.727-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1350643",
+    "ThreadId": "570492",
+    "Html": "This helped me create a MST to deploy java 8 u 31 via SCCM 2012<br />\n<a href=\"https://maddog2050.wordpress.com/2014/10/27/gpo-deploying-java-8-update-25/\" rel=\"nofollow\">https://maddog2050.wordpress.com/2014/10/27/gpo-deploying-java-8-update-25/</a><br />\n<br />\nFixed the link.<br />\n",
+    "PostedDate": "2015-02-10T07:39:05.707-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1350914",
+    "ThreadId": "570492",
+    "Html": "Hi,\r<br />\n<br />\nlink doesn´t work?!\r<br />\n<br />\nThx<br />\n",
+    "PostedDate": "2015-02-11T01:12:50.79-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353895",
+    "ThreadId": "570492",
+    "Html": "<strong>S_G wrote:</strong><br />\n<blockquote>\nlink doesn´t work?!<br />\n</blockquote>\nLink works, you have to copy and paste in your browser, don't click, if you only click you will redirect to example.com.<br />\n",
+    "PostedDate": "2015-02-18T23:50:26.083-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1364751",
+    "ThreadId": "570492",
+    "Html": "For all who speak a little german, i have create a small tool for Uninstall any Java Version and Install any Java Version: \r<br />\n<a href=\"http://www.wsus.de/uninstall2install\" rel=\"nofollow\">http://www.wsus.de/uninstall2install</a><br />\n",
+    "PostedDate": "2015-03-16T13:05:23.6-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1128701",
+    "ThreadId": "471055",
+    "Html": "I've been using this product for several months and love it.  I believe it is one of the most useful tools in existence.  This weekend I stumbled across custom updates.  I see such potential with them.  As I am exploring I presently have these questions:<br />\n<ul>\n<li>Once a custom update is created, how can we go back in and edit/revise the steps/actions of the update?</li>\n<li>In a manner similar to what we find in rules, is there a way to configure the registry actions (key or value) to be 32-bit only?</li>\n<li>\nAs a follow-on to the registry question, is there a way to direct file operations to the x86/SysWOW64 areas of the filesystem?<br />\n</li>\n</ul>\n",
+    "PostedDate": "2013-11-25T06:44:34.41-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1128917",
+    "ThreadId": "471055",
+    "Html": "<strong>patanne wrote:</strong><br />\n<blockquote>\n<ul>\n<li>\nOnce a custom update is created, how can we go back in and edit/revise the steps/actions of the update?<br />\n</li>\n</ul>\n</blockquote>\nFor now, it's not possible. If you need to make change on a custom update, you must delete it and re-create it. This is the big back draw of this feature, I'm aware of that. I need to work on this. And offer the ability to revise such update and by this, to change custom actions.<br />\n<blockquote>\n<ul>\n<li>\nIn a manner similar to what we find in rules, is there a way to configure the registry actions (key or value) to be 32-bit only?<br />\n</li>\n</ul>\n</blockquote>\nOnce again, it's not possible... for now. The work around is to make two updates :<br />\n<ul>\n<li>One for x86 with 'Normal' registry key/Value</li>\n<li>\nOne for x64 where you put explicitly 'Wow6432Node' in the reg key.<br />\n</li>\n</ul>\n<blockquote>\n<ul>\n<li>\nAs a follow-on to the registry question, is there a way to direct file operations to the x86/SysWOW64 areas of the filesystem?<br />\n</li>\n</ul>\n</blockquote>\nI have to answer same thing than above :-(<br />\n",
+    "PostedDate": "2013-11-25T12:53:57.717-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-11-26T18:13:08.93-08:00"
+  }
+]

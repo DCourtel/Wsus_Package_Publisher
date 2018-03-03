@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-04-19T13:21:27.72-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Having the availabilty to \"reportnow\" and \"detectnow\" would be a nice addition to the context menu where already starting and stopping the Windows Updates Service exists.\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-04-17T09:38:41.437-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Add the option for \"reportnow\" and \"detectnow\"",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 22
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I think that it could be pretty much easy to add this feature.",
+      "PostedDate": "2013-04-18T10:50:16.123-07:00",
+      "Id": 97382
+    },
+    {
+      "Message": "Feature added",
+      "PostedDate": "2013-04-19T13:21:15.537-07:00",
+      "Id": 97509
+    }
+  ]
+}

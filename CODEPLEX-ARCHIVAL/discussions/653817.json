@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1470819",
+    "ThreadId": "653817",
+    "Html": "I have 7 catalogs in my WPP installation.  One of them is the PacthMyPC catalog and supplies several hundred product updates.  When I am notified that there are new updates available, I can see the specific products that have updates within the catalog.  When I select to open the catalog, the list goes away.\r<br />\n<br />\nIs there a way to identify new updates from the catalog after that initial window is closed?\r<br />\n<br />\nSince you can't navigate between the main WPP window and the Catalog window, there is no way to identify new updates from ones that are already published without going in and out of the catalog for each of the 100 products in the catalog.  I also cannot open two instances of WPP so one can be on the main window and one on the catalog window.\r<br />\n<br />\nWhat am I missing?<br />\n",
+    "PostedDate": "2016-04-20T08:40:02.217-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

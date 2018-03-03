@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Issue is not related with WPP.",
+    "ClosedDate": "2015-02-14T12:27:36.277-08:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI followed your guide for Adobe Reader Deployment with custom settings... and when i create the update with portuguese language, the client always get the english version...\r\n\r\nFirst of all i configured the WPP with certificates and everything is working... if i have a pc with adobe reader with portuguese language already installed i can put an 11.0.09 Multilanguage update and the client can update to that version in portuguese without problems...\r\n\r\nBut if i wish to deploy the adobe reader to the user is always in english... i followed ur guide like i said, in the ste+ 4 u dont tell to choose an language, indeed the  language dropbox is disabled...\r\nBtw the guide is a bit outdated... there's new fields and options now...\r\n\r\nAnyways i do everything in the guides, and when i install the adobe reader from the update, baam english version, i even tried to delete on setup.ini the version numbers and lines and only left the 1046 Portuguese Version and STILL installing the english version. \r\n\r\nIm using the Adobe Reader XI MUI (multiple languages) btw...\r\n\r\n\r\n\r\n",
+    "LastUpdatedDate": "2015-02-14T12:27:36.277-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-11-14T10:11:12.473-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Cant install Adobe Reader on proper language!!!",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 232
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hello, the guide you followed is for Adobe Reader XI but not for the MUI release. So you need to make some change.\nI never used MUI release, so I can't help much. May be better luck on Adobe forum.",
+      "PostedDate": "2014-11-14T14:26:48.063-08:00",
+      "Id": 164767
+    },
+    {
+      "Message": "So i must download Adobe Reader XI Portuguese only to work?\n\nWell this sucks a bit but i will try to find the setup with PT language... wish me luck -.-",
+      "PostedDate": "2014-11-14T15:18:14.04-08:00",
+      "Id": 164768
+    },
+    {
+      "Message": "You can try to find your language here: ftp://ftp.adobe.com/pub/adobe/reader/win/11.x/11.0.09/",
+      "PostedDate": "2014-11-15T02:55:36.09-08:00",
+      "Id": 164791
+    },
+    {
+      "Message": "Have you tried using the Adobe Reader SCUP catalog? It has updates for the MUI version, and already has all the correct metadata, so less work: http://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/sccm.html\n(Note: you may need to play with the \"Make imported updates, language-independent\" flag in the catalog update wizard, if you have a mixed language environment)",
+      "PostedDate": "2014-11-24T12:33:37.677-08:00",
+      "Id": 166532
+    }
+  ]
+}

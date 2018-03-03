@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1425225",
+    "ThreadId": "637917",
+    "Html": "Hello,\r<br />\n<br />\nLast week I publish an update for Adobe Reader 11.0.0.10. Yesterday Adobe Reader 11.0.0.11 has been released. Do you I have to create a new update in WPP or can I add the new msp to the previous update ?  In the context menu of an update, there is an entry called &quot;create a superseding update&quot;, what does it stand for ? \r<br />\n<br />\nThank you,\r<br />\n<br />\nChris<br />\n",
+    "PostedDate": "2015-05-13T08:43:17.073-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1425229",
+    "ThreadId": "637917",
+    "Html": "<strong>Chrisnet46 wrote:</strong><br />\n<blockquote>\nLast week I publish an update for Adobe Reader 11.0.0.10. Yesterday Adobe Reader 11.0.0.11 has been released. Do you I have to create a new update in WPP or can I add the new msp to the previous update ? <br />\n</blockquote>\nYou have to create a new one.<br />\n<blockquote>\nIn the context menu of an update, there is an entry called &quot;create a superseding update&quot;, what does it stand for ? <br />\n</blockquote>\nFor Example. You have published a full Flashplayer Version 16.xx with a couple of rules. 3 weeks later you want to publish FlashPlayer 17.xx, right click &gt; create superseding update will create a new update with some descriptions from the update before and the rules. <br />\n",
+    "PostedDate": "2015-05-13T09:07:58.923-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1425977",
+    "ThreadId": "637917",
+    "Html": "Why I cannot create a superseding update for a new Adobe Reader update ?<br />\n<br />\nThank you.<br />\n<br />\nChris<br />\n",
+    "PostedDate": "2015-05-18T04:58:01.567-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

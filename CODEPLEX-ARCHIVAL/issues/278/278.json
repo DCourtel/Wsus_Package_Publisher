@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-08-05T08:58:33.18-07:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Bonjour à tous,\r\n\r\nLors de la création d'une mise à jour :\r\n\r\n1° - J’ai sélectionné le jre1.8.0_51.msi que j’ai extrait depuis jre-8u51-windows-i586.exe et modifier depuis Orca.\r\n\r\n2° -  J’ai sélectionné et modifié les paramètres suivant : \r\nType de paquet : Update\r\nClassification : Updates\r\nImpact : Normal\r\n\r\n3° - J’ai ensuite sélectionné la règle « Clé de registre existe »\r\n\r\nEt ajouter cette clé « HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\Installer\\Products\\4EA42A62D9304AC4784BF2381208540F » qui correspond à la version jre1.8.0_45.msi. \r\n\r\nLe but est de réalisé la mise à jour 1.8.0_51 si la 1.8.0_45 est installé. Si Java n’est pas installé on ne procède pas à la mise à jour. J’ai réalisé ce test est dans les deux cas java s’installe :-(.\r\n\r\nCdt,\r\nElminio\r\n",
+    "LastUpdatedDate": "2015-08-05T08:58:33.18-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-08-05T05:18:03.493-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Mettre à jour Java sur les postes de travail ayant déjà Java",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 278
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Bonjour, la règle faite dans le point trois, à bien été faite dans l'écran où l'on définie les règles \"Est Installable\" ? \nEst-ce que la clé de registre existait sur ces deux postes test ?",
+      "PostedDate": "2015-08-05T06:30:41.807-07:00",
+      "Id": 188059
+    },
+    {
+      "Message": "Bonjour,\n\nLa règle est faite dans :\n\nIndiquez içi la/les règles qui permettrons aux clients de déterminer si la mise à jour est déjà installée.\n\nLe poste de travail ayant java possède bien la clé et l'autre poste (sans java) ne possède pas la clé.  ",
+      "PostedDate": "2015-08-05T07:21:54.867-07:00",
+      "Id": 188062
+    },
+    {
+      "Message": "Je viens de réaliser le test en ajoutant la règle dans \" Indiquez içi la/les règles qui permettrons aux clients de déterminer si la mise à jour est installable.\" et ça fonctionne, merci.",
+      "PostedDate": "2015-08-05T07:43:10.167-07:00",
+      "Id": 188064
+    },
+    {
+      "Message": "C'est pour ca que cela ne marche pas comme prévue. Il faut mettre cette règle dans l'écran suivant (\"Déterminer si la mise à jour est installable\")",
+      "PostedDate": "2015-08-05T08:09:46.113-07:00",
+      "Id": 188066
+    }
+  ]
+}

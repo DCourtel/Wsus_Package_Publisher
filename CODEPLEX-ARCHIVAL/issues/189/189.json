@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-07-03T14:28:38.653-07:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nI'm receiving the message \"CreateDirectory failed\" when attempting to publish from a workstation. I have checked that I followed the prerequisite steps.",
+    "LastUpdatedDate": "2014-07-03T14:28:38.653-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-05-06T09:40:59.357-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "CreateDirectory failed",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 189
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Please ensure that %temp% is an environnement variable that can be solve on this computer, and you have read/write permissions in this folder.",
+      "PostedDate": "2014-05-06T12:55:19.413-07:00",
+      "Id": 145724
+    },
+    {
+      "Message": "%temp% is C:\\Users\\<username>\\AppData\\Local\\Temp. I was able to create a new text document and modify it in this location.\n\nFor the record I am able to publish if using WPP locally on the server.",
+      "PostedDate": "2014-05-07T05:21:59.46-07:00",
+      "Id": 145779
+    },
+    {
+      "Message": "Run WPP and try to publish an update, once the errror message appears, go to 'Help', 'Send debug info...' and click on the link at bottom left 'Show informations' then send me this log at package.publisher@free.fr\n",
+      "PostedDate": "2014-05-07T08:10:08.22-07:00",
+      "Id": 145794
+    }
+  ]
+}

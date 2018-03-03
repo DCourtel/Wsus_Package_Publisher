@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Wsus Wrapper",
+      "DisplayName": "Wsus Wrapper"
+    },
+    "ClosedComment": "Since WPP display \"Package Level\" rules, it wrongly cleared 'Is Installed' and 'Is Installable' rules when the user doesn't provide those rules.",
+    "ClosedDate": "2013-11-24T13:59:11.053-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "When publishing an update from a MSP file, if \"Is Installable\" rules is left blank, the update appears as 'Not Applicable' instead of 'Not Installed'. Therefore, clients computers doesn't install it.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1311.02",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-11-24T13:56:47.27-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "MSP updates appears as 'Not Applicable' instead of 'Not Installed'",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 152
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Now WPP doesn't clear anymore 'Is Installed' and 'Is Installable' rules, if user have not been provide those rules.",
+      "PostedDate": "2013-11-24T14:00:24.407-08:00",
+      "Id": 124075
+    },
+    {
+      "Message": "Peoples that have publish MSI or MSP updates using default rules, needs to delete these updates and publish again the update with this fixed release.",
+      "PostedDate": "2013-11-24T14:03:27.097-08:00",
+      "Id": 124076
+    }
+  ]
+}

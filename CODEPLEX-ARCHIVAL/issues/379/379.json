@@ -1,0 +1,61 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "I was trying to install the latest version of Citrix Receiver via through WSUS Package Publisher but the status is showing as in \"Downloaded\" state. Kindly could anyone help me on this.",
+    "LastUpdatedDate": "2017-08-13T05:17:18.973-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-08-11T14:01:31.857-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Citrix Receiver Deployment Issue",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 379
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1673357,
+      "FileName": "Status.JPG",
+      "DownloadUrl": ".\\1673357"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Hi,\n\nI wrote a How To some time ago for LUP, but I guess Citrix didn't change that much. Maybe you can take a look here (with Google translate): https://www.wsus.de/citrix_receiver_ueber_wsus_bereitstellen\n\nHTH\nNorbert",
+      "PostedDate": "2017-08-11T14:35:43.393-07:00",
+      "Id": 208763
+    },
+    {
+      "Message": "Some lines seems to be in different language, it would be helpful of providing me doc completely in English please.",
+      "PostedDate": "2017-08-11T15:44:27.16-07:00",
+      "Id": 208764
+    },
+    {
+      "Message": "Sorry, I don't have the time to translate this for you. Maybe some other user can provide you with an English translation.",
+      "PostedDate": "2017-08-13T05:17:18.973-07:00",
+      "Id": 208768
+    }
+  ]
+}

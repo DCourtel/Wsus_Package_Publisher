@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1433745",
+    "ThreadId": "641150",
+    "Html": "Hey Guys,\r<br />\n<br />\nI've found several topics concerning Java Updates but those aren't updates in my opinion.\r<br />\nI want to deploy Java only to machines who already have Java installed and not to every machine.\r<br />\nAs well I don't want to create a separate group in AD only for those clients who need Java, which would be the only possibility at the moment that I can see.\r<br />\n<br />\nI have tried to use the documentation of &quot;Installing Java 7u21...&quot; from the documentation page and then marked the type as &quot;update&quot; but then all my machines (also the servers) want to install java.\r<br />\n<br />\nSo does any of you guys know how to deploy Java only as an update for clients who already have Java installed?\r<br />\n<br />\nThanks for you efforts and Cheers!<br />\n",
+    "PostedDate": "2015-07-09T08:03:08.71-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1433776",
+    "ThreadId": "641150",
+    "Html": "<strong>m3D wrote:</strong><br />\n<blockquote>\nI want to deploy Java only to machines who already have Java installed and not to every machine.<br />\nAs well I don't want to create a separate group in AD only for those clients who need Java, which would be the only possibility at the moment that I can see.<br />\n</blockquote>\nYou have make a new condition for the Java.exe in %programfiles%\\Java.....<br />\n<blockquote>\nI have tried to use the documentation of &quot;Installing Java 7u21...&quot; from the documentation page and then marked the type as &quot;update&quot; but then all my machines (also the servers) want to install java.<br />\n</blockquote>\nCreate a new condition for only workstations XP and higher.\r<br />\n<br />\nBoth conditions, Java.exe and Workstation condition you can combine in a AND condition.<br />\n",
+    "PostedDate": "2015-07-09T10:31:51.923-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1493551",
+    "ThreadId": "661700",
+    "Html": "The situation is as follows.<br />\n<br />\nWe need to push out a few updates, and they have to be published as separate updates, but installed in a sequence for example - #1-#2.<br />\n<br />\nIf we make #2 dependent on #1 than #2 will ONLY show up the next day when Windows Update checks for updates again. But we need all of these installed at the same time.<br />\n<br />\nI tried giving them numerically-alphabetically sortable names: &quot;Package#1&quot; and &quot;Package#2&quot; and but #2 still gets first, before #1.<br />\n<br />\nSo far I cannot find anything from Microsoft or anywhere else. It looks like this would need to be some sort of a &quot;hack&quot;, but I cannot figure out HOW Windows Update chooses which package to install first.<br />\n<br />\nAnyone can suggest a way to make sure that Windows Update installs Package#1 before Package#2?<br />\n<br />\nThanks.<br />\n",
+    "PostedDate": "2017-03-03T11:44:25.79-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1493583",
+    "ThreadId": "661700",
+    "Html": "Two possibility :<br />\n<ul>\n<li>Set a GPO to tell computers to check against Wsus every hours instead of every 22 hours (default settings)</li>\n<li>Create a custom update that install the first package and then the second</li>\n</ul>\n",
+    "PostedDate": "2017-03-04T07:28:46.623-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1493888",
+    "ThreadId": "661700",
+    "Html": "Thanks for the tips, but &quot;check every hour&quot; does not equal &quot;install every hour&quot;.<br />\n<br />\nSecond option does not work in our case, already tried and tested, we need a way to start the Windows Update install process twice in the span of 2 hours roughly.<br />\n<br />\nI am testing doing this with a shell or WPP-sent command for now..<br />\n",
+    "PostedDate": "2017-03-10T11:56:37.877-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

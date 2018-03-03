@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1328103",
+    "ThreadId": "573827",
+    "Html": "Testing WPP for a few months and proving to be a great tool.  Planning on deploying shortly to our organization. <br />\n<br />\nWanted to clear up 1 assumption before mass deployment. <br />\n<br />\nIf I self-sign a certificate it will expire in 5 years.  After certificate expires assuming steps are as follows.<br />\n<ol>\n<li>Generate a new certificate with WPP</li>\n<li>Configure WPP to use new cert.</li>\n<li>Use the &quot;Resign&quot; option in WPP to sign all existing update with new cert.  \n</li>\n<li>\nDeploy the new certificate to clients and replica server.<br />\n</li>\n</ol>\nIf there is an easier way to skip any of the step or renew the certificate I'm missing?  <br />\n<br />\nThanks,<br />\n",
+    "PostedDate": "2014-12-02T08:47:21.253-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1328545",
+    "ThreadId": "573827",
+    "Html": "You are rights. This is exactly the good steps.\r<br />\nThere is no easier way to do that. But it happens only every 5 years :-)<br />\n",
+    "PostedDate": "2014-12-03T13:05:03.917-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

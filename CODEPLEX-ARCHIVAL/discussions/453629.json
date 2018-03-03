@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1081436",
+    "ThreadId": "453629",
+    "Html": "Hi Guys,\r<br />\ni installed the newst version of WPP on a Windows Server 2008R2 + WSUS 3.0 SP2.\r<br />\n<br />\nFor a test run i decided for adobe reader xi. I created successfully a package. I approved it to a computer group. The windows update services from a server found the package &quot;adobe reader xi&quot; and installed it without problems. A few seconds later the windows update show me the same package for installation again.\r<br />\n<br />\nI take a look in system control -&gt; programs and functions and i see the adobe reader xi entry.\r<br />\nCan someone explain what am I doing wrong?<br />\n",
+    "PostedDate": "2013-08-16T10:54:01.18-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1081467",
+    "ThreadId": "453629",
+    "Html": "Hi badwurzach,<br />\n<blockquote>\nA few seconds later the windows update show me the same package for installation again. <br />\n</blockquote>\nThat mean that the package is not detect as &quot;Installed&quot; and detect as &quot;Installable&quot;.<br />\n<ul>\n<li>First, what type of file do you have publish : EXE, MSI or MSP ?</li>\n<li>Second, what do you have set as &quot;IsInstalled&quot; rule and &quot;IsInstallable&quot; rule ?</li>\n</ul>\n",
+    "PostedDate": "2013-08-16T12:12:18.417-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1081483",
+    "ThreadId": "453629",
+    "Html": "Hi DCourtel,\r<br />\nThank you for your reply.\r<br />\n-&gt; i used the setup.exe from the archive.\r<br />\n-&gt; i used the PDF file that i found under documentation (<a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=684132\" rel=\"nofollow\">https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=684132</a>). I added nö more rules.\r<br />\n<br />\nRegards,\r<br />\nDaniel<br />\n",
+    "PostedDate": "2013-08-16T13:29:44.657-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1081505",
+    "ThreadId": "453629",
+    "Html": "When you have downloaded the EXE file, which langage do you have choose ?\r<br />\nCan you revise the update and take a screenshot of the rule you have set (IsInstalled = Step 15 in the procedure and IsInstallable = Step 17 in the procedure) ?\r<br />\nYou don't have to finish the revising, take the screenshot and press 'Cancel'\r<br />\n<br />\nThanks.<br />\n",
+    "PostedDate": "2013-08-16T14:57:11.967-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1081600",
+    "ThreadId": "453629",
+    "Html": "I choose the german setup file from adobe (AdbeRdr11003_de_DE.exe).\r<br />\n<br />\nHere the two screenshots:\r<br />\n<a href=\"https://ajax.wurzach-it.de/data/public/973096\" rel=\"nofollow\">https://ajax.wurzach-it.de/data/public/973096</a>\r<br />\n<a href=\"https://ajax.wurzach-it.de/data/public/4700fe\" rel=\"nofollow\">https://ajax.wurzach-it.de/data/public/4700fe</a><br />\n",
+    "PostedDate": "2013-08-17T02:23:40.82-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1081603",
+    "ThreadId": "453629",
+    "Html": "As shown on your pictures, you have used the 'Upgrade Code&quot; instead of the &quot;<strong>Product Code</strong>&quot; at step 11.\r<br />\n<br />\nPlease revise your update to change this code, both in the &quot;IsInstalled&quot; rule and &quot;IsInstallable&quot; rule.<br />\n",
+    "PostedDate": "2013-08-17T02:49:08.997-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:22:56.66-07:00"
+  },
+  {
+    "Id": "1081611",
+    "ThreadId": "453629",
+    "Html": "i'm so blind... thank you very much for your support.\r<br />\nCan i anywhere mark this thread as solved?<br />\n",
+    "PostedDate": "2013-08-17T03:44:43.98-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1081621",
+    "ThreadId": "453629",
+    "Html": "<blockquote>\nCan i anywhere mark this thread as solved?<br />\n</blockquote>\nNot in the Discussion Tab. Or may be by editing the Title and adding [Solved] at the starting.<br />\n",
+    "PostedDate": "2013-08-17T05:14:54.17-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

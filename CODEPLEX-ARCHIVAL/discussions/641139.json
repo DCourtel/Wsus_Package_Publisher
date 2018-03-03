@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1433710",
+    "ThreadId": "641139",
+    "Html": "Hello,\r<br />\n<br />\nI  tried to transfer  WSUS 3.2 to a new server ,  the WSUS part of microsoft works .\r<br />\nFor the transfer , I am using the tool backup/restore from WINDOWS 2008 R2 server .\r<br />\nOn the new server, i find the updates from WSUSPP but with the name of the old server .\r<br />\nI tried to revise each update but without result .\r<br />\n<br />\nCould you help me .\r<br />\n<br />\nRegards\r<br />\nALAIN<br />\n",
+    "PostedDate": "2015-07-09T05:30:36.42-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

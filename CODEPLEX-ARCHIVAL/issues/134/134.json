@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-11-01T04:59:30.107-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hi, since the last release i get this message when i try to \"Show pending updates\". Only on Windows XP.\r\nFirewalss on the remotemachines are off by GPO. With Windows 7 no problems.",
+    "LastUpdatedDate": "2013-11-01T04:59:30.107-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-14T06:43:32.2-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "COM Exeption. Verify the firewall settings on the remote machine",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 134
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I don't have this behavior. You say \"since the last release\", can you try with the previous release.\nCheck that nothing have change in your GPO.",
+      "PostedDate": "2013-10-14T07:37:22.603-07:00",
+      "Id": 118324
+    }
+  ]
+}

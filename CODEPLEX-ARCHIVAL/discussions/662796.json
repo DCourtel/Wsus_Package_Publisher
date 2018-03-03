@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1496038",
+    "ThreadId": "662796",
+    "Html": "I created a Update for Foxit Reader Version 8.3 and when I try to install it on a client the update seems to start but then after a few seconds stops with &quot;Update is not requiered&quot;.<br />\n<br />\nMy question is , how can I find out why the update is not requiered?<br />\n<br />\nAs settings for &quot;if the update is installed&quot;, I compare the version of FoxitReader.exe in the installed folder and for &quot;if the update can be installed&quot;, I simply check if the FoxitReader.exe exists at all.<br />\n",
+    "PostedDate": "2017-05-03T02:59:40.72-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1498150",
+    "ThreadId": "662796",
+    "Html": "i see the topic is old and maybe not relevant anymore, but nevertheless:<br />\n<blockquote>\nand for &quot;if the update can be installed&quot;, I simply check if the FoxitReader.exe exists at all.<br />\n</blockquote>\nthis is your mistake - regarding this rule package publisher looks for the FoxitReader.exe on your computer. Can't find the file and decide &quot;Update is not requiered&quot;. Try to delete this rule and run update again.<br />\n",
+    "PostedDate": "2017-09-28T02:05:56.723-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

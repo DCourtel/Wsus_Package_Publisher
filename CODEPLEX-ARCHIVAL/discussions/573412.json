@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1326925",
+    "ThreadId": "573412",
+    "Html": "Is there any way to uninstall all versions of java 7 via wpp?\r<br />\n<br />\nLike you do with a startup script &quot; wmic product where &quot;name like 'Java(TM) 7%%'&quot; call uninstall /nointeractive &quot;? Is there any way to get this wmic request working using wpp?\r<br />\n<br />\nIs there another best way to uninstall old java versions using wpp?\r<br />\nHow do I get wmi querys to work for detection (already installed) / (update is installable).?\r<br />\n<br />\n<br />\n//Matheus<br />\n",
+    "PostedDate": "2014-11-28T01:18:10.88-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1327031",
+    "ThreadId": "573412",
+    "Html": "You can try msiexec /uninstall in a startupscript.\r<br />\n<a href=\"http://www.adminarsenal.com/admin-arsenal-blog/silently-uninstall-java\" rel=\"nofollow\">http://www.adminarsenal.com/admin-arsenal-blog/silently-uninstall-java</a>\r<br />\n<br />\nYou can create a Batch like this: <a href=\"https://docs.oracle.com/cd/E19528-01/819-5699/afcil/index.html\" rel=\"nofollow\">https://docs.oracle.com/cd/E19528-01/819-5699/afcil/index.html</a>\r<br />\n<br />\nAnd you can publish your Java Package for deinstallation.<br />\n",
+    "PostedDate": "2014-11-28T06:11:16.287-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1327087",
+    "ThreadId": "573412",
+    "Html": "If you want to do this with WPP, create a script that runs the uninstaller for all versions of java 7 installed on the computer and have customupdateengine.exe run the script.\r<br />\n<br />\nExample script (NOTE: this script does not check for running IE or java or javaw first.):<br />\n<pre><code>dim objWMIService\n\n'stop the Java Quick Start service if it's running\nset objWMIService = GetObject(&quot;winmgmts:{impersonationLevel=impersonate}!\\\\.\\root\\cimv2&quot;)\nset colServices = objWMIService.ExecQuery(&quot;Select * from win32_Service where Name='JavaQuickStarterService'&quot;)\nfor each objService in colServices\n    objService.StopService()\nnext\n\n'wait for the Java Quick Start service to stop\ndim bJQSRunning\nbJQSRunning = true\nwhile bJQSRunning\n    WScript.Sleep 1000\n    set colServices = objWMIService.ExecQuery(&quot;Select * from win32_Service where Name='JavaQuickStarterService'&quot;)\n    for each objService in colServices\n        bJQSRunning = (StrComp(objService.State, &quot;Stopped&quot;) = 0) 'alternately \n    next\nwend\n\n' Product/GUID pairs\ndim dProducts\nset dProducts = CreateObject(&quot;Scripting.Dictionary&quot;)\ndProducts.add &quot;Java Updater&quot;, &quot;{4a03706f-666a-4037-7777-5f2748764d10}&quot;\ndProducts.add &quot;Java 7 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217000ff}&quot;\ndProducts.add &quot;Java 7 Update 1 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217001ff}&quot;\ndProducts.add &quot;Java 7 Update 2 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217002ff}&quot;\ndProducts.add &quot;Java 7 Update 3 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217003ff}&quot;\ndProducts.add &quot;Java 7 Update 4 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217004ff}&quot;\ndProducts.add &quot;Java 7 Update 5 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217005ff}&quot;\ndProducts.add &quot;Java 7 Update 6 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217006ff}&quot;\ndProducts.add &quot;Java 7 Update 7 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217007ff}&quot;\ndProducts.add &quot;Java 7 Update 9 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217009ff}&quot;\ndProducts.add &quot;Java 7 Update 10 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217010ff}&quot;\ndProducts.add &quot;Java 7 Update 11 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217011ff}&quot;\ndProducts.add &quot;Java 7 Update 13 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217013ff}&quot;\ndProducts.add &quot;Java 7 Update 15 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217015ff}&quot;\ndProducts.add &quot;Java 7 Update 17 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217017ff}&quot;\ndProducts.add &quot;Java 7 Update 21 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217021ff}&quot;\ndProducts.add &quot;Java 7 Update 25 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217025ff}&quot;\ndProducts.add &quot;Java 7 Update 40 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217040ff}&quot;\ndProducts.add &quot;Java 7 Update 45 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217045ff}&quot;\ndProducts.add &quot;Java 7 Update 51 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217051ff}&quot;\ndProducts.add &quot;Java 7 Update 55 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217055ff}&quot;\ndProducts.add &quot;Java 7 Update 60 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f83217060ff}&quot;\ndProducts.add &quot;Java 7 Update 65 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f03217065ff}&quot;\ndProducts.add &quot;Java 7 Update 67 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f03217067ff}&quot;\ndProducts.add &quot;Java 7 Update 71 32-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f03217071ff}&quot;\ndProducts.add &quot;Java 7 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417000ff}&quot;\ndProducts.add &quot;Java 7 Update 1 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417001ff}&quot;\ndProducts.add &quot;Java 7 Update 2 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417002ff}&quot;\ndProducts.add &quot;Java 7 Update 3 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417003ff}&quot;\ndProducts.add &quot;Java 7 Update 4 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417004ff}&quot;\ndProducts.add &quot;Java 7 Update 5 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417005ff}&quot;\ndProducts.add &quot;Java 7 Update 6 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417006ff}&quot;\ndProducts.add &quot;Java 7 Update 7 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417007ff}&quot;\ndProducts.add &quot;Java 7 Update 9 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417009ff}&quot;\ndProducts.add &quot;Java 7 Update 10 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417010ff}&quot;\ndProducts.add &quot;Java 7 Update 11 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417011ff}&quot;\ndProducts.add &quot;Java 7 Update 13 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417013ff}&quot;\ndProducts.add &quot;Java 7 Update 15 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417015ff}&quot;\ndProducts.add &quot;Java 7 Update 17 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417017ff}&quot;\ndProducts.add &quot;Java 7 Update 21 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417021ff}&quot;\ndProducts.add &quot;Java 7 Update 25 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417025ff}&quot;\ndProducts.add &quot;Java 7 Update 40 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417040ff}&quot;\ndProducts.add &quot;Java 7 Update 45 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417045ff}&quot;\ndProducts.add &quot;Java 7 Update 51 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417051ff}&quot;\ndProducts.add &quot;Java 7 Update 55 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417055ff}&quot;\ndProducts.add &quot;Java 7 Update 60 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f86417060ff}&quot;\ndProducts.add &quot;Java 7 Update 65 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f06417065ff}&quot;\ndProducts.add &quot;Java 7 Update 67 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f06417067ff}&quot;\ndProducts.add &quot;Java 7 Update 71 64-bit&quot;, &quot;{26a24ae4-039d-4ca4-87b4-2f06417071ff}&quot;\n\n' run uninstallers\nDim sProduct\nfor each sProduct in dProducts\n    uninstallProduct sProduct, dProducts\nnext\n\nFunction uninstallProduct(sProductName, dProductCodes)\n    ' Uninstall product using msiexec /qn /norestart /x {PRODUCT CODE}\n    oShell.Run &quot;msiexec.exe /qn /norestart /x &quot; + dProductCodes.Item(sProductName), 10, true\nEnd Function</code></pre>\n\n",
+    "PostedDate": "2014-11-28T09:39:09.08-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1327199",
+    "ThreadId": "573412",
+    "Html": "<strong>austinian wrote:</strong><br />\n<blockquote>\nExample script (NOTE: this script does not check for running IE or java or javaw first.):<br />\n</blockquote>\nWow, thank you very much for the Script! :)<br />\n",
+    "PostedDate": "2014-11-29T03:24:34.75-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1327805",
+    "ThreadId": "573412",
+    "Html": "It's pretty flexible, you can modify it to use a file for the products input instead of having them listed in the script, if you want to use it to uninstall a bunch of stuff at once, so long as the stuff supports msi uninstallation.<br />\n",
+    "PostedDate": "2014-12-01T12:32:24.593-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1339771",
+    "ThreadId": "573412",
+    "Html": "Hi austinian and thanks for the script, but i'm to stupid to use this as a base for an own script :( is it possible that you give me your full vbs?\r<br />\n<br />\nthanks in advanced<br />\n",
+    "PostedDate": "2015-01-07T08:30:47.31-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341153",
+    "ThreadId": "573412",
+    "Html": "How is it not working for you? The script will work as long as neither Java nor any web browsers are running. I'm not sure what you're asking for. I make this run when users aren't logged in, and JQS is disabled on all the computers on my network, so I don't have to worry about killing things to get it to run. If you look through this list, you'll see that this only uninstalls old versions of Java 7, not Java 6 or Java 8.<br />\n",
+    "PostedDate": "2015-01-12T09:47:53.773-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341418",
+    "ThreadId": "573412",
+    "Html": "Maybe i'm too stupid, but i copied your complete code and save this as uninstalljre.vbs and then execute this vbs with cscript .vbs or wscript .vbs in a commandline for testing. but nothing happens :(<br />\n<br />\nUpdate --&gt; Or does it only work if i use it with customupdateengine?<br />\n<br />\nAm 12.01.2015 um 18:48 schrieb austinian:   From: austinian How is it not working for you? The script will work as long as neither Java nor any web browsers are running. I'm not sure what you're asking for. I make this run when users aren't logged in, and JQS is disabled on all the computers on my network, so I don't have to worry about killing things to get it to run. If you look through this list, you'll see that this only uninstalls old versions of Java 7, not Java 6 or Java 8.    <br />\n",
+    "PostedDate": "2015-01-13T04:12:22.677-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-07-14T09:27:49.277-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Add ability to display the Event History of a computer by Right-Clicking on it.",
+    "LastUpdatedDate": "2013-07-14T09:27:49.277-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-07-14T09:27:17.11-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Update Event History",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 86
+  },
+  "FileAttachments": [
+    {
+      "FileId": 704513,
+      "FileName": "ShowUpdateEventHistoryOption.png",
+      "DownloadUrl": ".\\704513"
+    },
+    {
+      "FileId": 704514,
+      "FileName": "EventHistory.png",
+      "DownloadUrl": ".\\704514"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Feature Added",
+      "PostedDate": "2013-07-14T09:27:35.97-07:00",
+      "Id": 105994
+    }
+  ]
+}

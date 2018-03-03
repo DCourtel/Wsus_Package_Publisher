@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1334094",
+    "ThreadId": "575621",
+    "Html": "Dear All,\r<br />\n<br />\nIs it possible to add AD DS Group of computer to update/install custom application on WPP? For example I want to deploy Firefox &amp; it's update only to custom group OU=WS-APPS-FIREFOX.<br />\n",
+    "PostedDate": "2014-12-17T00:52:31.97-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1334103",
+    "ThreadId": "575621",
+    "Html": "No, its not.\r<br />\nYou can only publish the update for a Group in WSUS/WPP.<br />\n",
+    "PostedDate": "2014-12-17T01:27:45.753-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1334167",
+    "ThreadId": "575621",
+    "Html": "Winfried is right, updates can only be approved on Wsus Computers Groups.\r<br />\nHowever, there is a work around :-)\r<br />\nMake a GPO (Preference) that create a registry Value (For example: key: HKLM\\Software\\Your Company Name\\FireFox, Value: Install and Data = true)\r<br />\nThen assign the GPO to this OU only.\r<br />\nWhen you create the update, in the IsApplicable Rule, filter on this Registry Value.<br />\n",
+    "PostedDate": "2014-12-17T06:23:58.193-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

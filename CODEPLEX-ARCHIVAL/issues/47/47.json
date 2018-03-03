@@ -1,0 +1,111 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Refactoring the Settings Form to be more 'understandable'",
+    "ClosedDate": "2013-05-21T13:34:52.977-07:00",
+    "CommentCount": 10,
+    "Custom": null,
+    "Description": "1) Create an update: Vendor: \"testve\", Product name: \"testpr\"\r\n2) After publishing revise the update and change the Product name: \"testpr2\"\r\n3) Now in the tree view the old product name \"testpr\" continues displayed but the delete button is disabled.  ",
+    "LastUpdatedDate": "2013-05-28T12:24:00.243-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-21T02:28:14.76-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Couln't delete empty items in tree view",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 47
+  },
+  "FileAttachments": [
+    {
+      "FileId": 682305,
+      "FileName": "Other than Never.png",
+      "DownloadUrl": ".\\682305"
+    },
+    {
+      "FileId": 682306,
+      "FileName": "Connexion local.png",
+      "DownloadUrl": ".\\682306"
+    },
+    {
+      "FileId": 682404,
+      "FileName": "New Settings Form.png",
+      "DownloadUrl": ".\\682404"
+    },
+    {
+      "FileId": 682874,
+      "FileName": "Adobe Reader.PNG",
+      "DownloadUrl": ".\\682874"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Are you running WPP locally on the WSUS Server? Is the Connection marked as local Server Connection in the Settings?\n\nRegards\nNorbert",
+      "PostedDate": "2013-05-21T02:45:10.453-07:00",
+      "Id": 100734
+    },
+    {
+      "Message": "Yes it runs on the local WSUS Server and the connection setting is set. ",
+      "PostedDate": "2013-05-21T03:26:05.95-07:00",
+      "Id": 100736
+    },
+    {
+      "Message": "Hello a_g_w,\r\nThe option for Deleting \"Empty Product\" is available if two conditions are met :\r\n   - You are running WPP on the Wsus Server. (That mean, at right of the Server name in the server list, you can see '(Local)').\r\n   - In Tools -> Settings -> Updates : \"When Publishing a new update : \", you have select an option other than 'Never...'",
+      "PostedDate": "2013-05-21T03:48:03.587-07:00",
+      "Id": 100738
+    },
+    {
+      "Message": "See my screenshot.",
+      "PostedDate": "2013-05-21T03:48:25.037-07:00",
+      "Id": 100739
+    },
+    {
+      "Message": "Ok..after I had changed the \"When Publishing a new update : \" setting it was possible to delete the empty product.\n2. hints:\n1) it's not easy to understand that you first must change an recommended setting to can delete some items.\n2) Press \"Connect/reconnect\" button. Browse to the settings dialog and now the update settings are disabled. To enable the options again you must first reselect the wsus server in the combobox.\n\nThx\nAlex\n ",
+      "PostedDate": "2013-05-21T08:46:29.533-07:00",
+      "Id": 100761
+    },
+    {
+      "Message": "Glad to see that you have solved your problem.\n\n> it's not easy to understand that you first must change an recommended setting to can delete some items.\n\nYou have right. I need to re-think this part. 'Visibility in Wsus Console' should be a Server setting. Therefore, it should be on the 'Servers' page. And I should add some explanations.\n> To enable the options again you must first reselect the wsus server in the combobox.\n\nIf you have more than one server in the combobox, you must select one that have 'Connect to local' set, to change 'Visibility in Wsus Console'. Once I would have move this setting on the server page, this will be more easy to understand. ",
+      "PostedDate": "2013-05-21T13:15:36.703-07:00",
+      "Id": 100786
+    },
+    {
+      "Message": "See the new screenshot to see what have changed.",
+      "PostedDate": "2013-05-21T13:31:18.107-07:00",
+      "Id": 100790
+    },
+    {
+      "Message": "Hi DCourtel.\r\n\r\nthe problem seems not completely solved for me...\r\nDelete one unique product item works fine but if I try to delete one of the double empty \"Acrobat Reader\" products see screen shot, the deleting dialog will be displayed for a few seconds but nothing happens...\r\n\r\nAlex",
+      "PostedDate": "2013-05-21T23:57:47.677-07:00",
+      "Id": 100830
+    },
+    {
+      "Message": "Having two \"Empty Product\" with the same name doesn't matter.\nPlease, use the latest release. Try deleting these \"Empty Products\", then go to \"Help\" Menu and click on \"Send Debug info...\". Follow instructions.\n",
+      "PostedDate": "2013-05-26T11:44:37.623-07:00",
+      "Id": 101249
+    },
+    {
+      "Message": "Hi a_g_w, thank you for having sent me your \"Debug info\". I have studied it, and I have a good news and a bad news for you.\nThe good news is that WPP works as expected.\nThe bad news is that Wsus cannot delete this \"Empty Product\", and I don't know why.\n\nTo make simple, Wsus manages itself \"Products\" and \"Vendors\". It create and deletes it as it need. Wsus delete products in certain conditions. So WPP ensures that these conditions are met, and let Wsus doing his job.\nI think that the tool to delete \"Empty Product\" works in 90% of cases. \n\nSorry for the inconvenience. May be, I will discover all conditions to make deleting possible.",
+      "PostedDate": "2013-05-28T12:24:00.243-07:00",
+      "Id": 101458
+    }
+  ]
+}

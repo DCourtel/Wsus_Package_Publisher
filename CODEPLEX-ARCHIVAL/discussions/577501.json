@@ -1,0 +1,98 @@
+[
+  {
+    "Id": "1341120",
+    "ThreadId": "577501",
+    "Html": "Hello,\r<br />\n<br />\nI have install WPP on a Windows Server 2012 Std R2 with WSUS.\r<br />\nI manage a network with more 400 computers (XP Pro, Win7 Pro 32 and 64 bits, Windows 8 Pro ...)\r<br />\n<br />\nI would like more help to deploy VLC 2.1.5 package, because in your documentation you have only deploy msi file. (<a href=\"http://www.videolan.org/vlc/\" rel=\"nofollow\">http://www.videolan.org/vlc/</a>)\r<br />\n<br />\nBut in my case, I don't know How I must do the rules to deploy correctly.\r<br />\n<br />\nI know that I have 2 possibility x86 and x64. =&gt; 2 packages must be create.\r<br />\nAfter I must check if the software &quot;VLC&quot; is already install.\r<br />\nI must check it but How ???\r<br />\nI must check if it's not an old version to unistall it, and only after deploy the good.\r<br />\n<br />\n<br />\nSorry for my poor English.\r<br />\nCould you help me !!!!\r<br />\nThx,\r<br />\nJonathan<br />\n",
+    "PostedDate": "2015-01-12T08:19:33.14-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341171",
+    "ThreadId": "577501",
+    "Html": "Do you speak French ?<br />\n",
+    "PostedDate": "2015-01-12T10:16:21.287-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341351",
+    "ThreadId": "577501",
+    "Html": "Oui, je parle français.\r<br />\n<br />\nCdt,<br />\n",
+    "PostedDate": "2015-01-13T00:25:30.317-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341454",
+    "ThreadId": "577501",
+    "Html": "Ca sera plus simple !\r<br />\nSi l'EXE existe en deux version : 32 et 64 bit, alors oui, il faudra 2 packages d'installation.\r<br />\n<br />\nPour avoir une installation silencieuse, il faudra utiliser la ligne de commande suivante : <strong>/S /L=1036 /NCRC</strong>\r<br />\n/S pour installation silencieuse\r<br />\n/L=1036 installation en Francais\r<br />\n/NCRC ne pas vérifier le CRC\r<br />\n<br />\nil éxiste peut être d'autre option, a voir avec l'éditeur.\r<br />\n<br />\nPour les règles &quot;<strong>IsInstalled</strong>&quot;, perso j'aime bien utiliser la base de registre lorsque c'est possible. Par exemple : \r<br />\n<br />\nClé : HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\VLC media player\r<br />\nValeur : DisplayVersion\r<br />\nDonnée : 2.1.5\r<br />\n<br />\nPour les règles &quot;<strong>IsInstallable</strong>&quot;, c'est un peu plus compliqué. Parce que ca dépend de ce que tu veux faire. Est-ce que le logiciel doit être installé sur tous les PC qui n'ont pas VLC ?\r<br />\nEn tous cas il faut :<br />\n<ul>\n<li>Une règle pour identifier la plateforme 32 ou 64 bit</li>\n<li>Une règle pour vérifier qu'une version n'est pas déjà installé. Utiliser la même valeur de registre que dans &quot;IsInstalled&quot; avec une donnée inférieur à 2.1.5. Attention, voir avec l'éditeur s'il utilisait toujours cette convention.</li>\n<li>\nEventuellement une règle pour déterminer s'il faut installer VLC suivant la politique d'entreprise.<br />\n</li>\n</ul>\n",
+    "PostedDate": "2015-01-13T06:29:58.247-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341577",
+    "ThreadId": "577501",
+    "Html": "Bonsoir,\r<br />\n<br />\nMerci pour tes indications.\r<br />\nJe pense avoir compris ce que tu essaies de m'expliquer mais je dois vraiment mal m'y prendre, mais rien que la 1ère règle ne marche pas.\r<br />\n<br />\nEtape 1 - Je crée mon package : \r<br />\nEditeur : VideoLAN\r<br />\nNom Produit : VLC 2.1.5\r<br />\nTitre  : VLC 2.1.5 Win32 for x64\r<br />\nLigne de commande : /S /L=1036 /NCRC \r<br />\n<br />\n***Etape 2 - Vérification si la MAJ est dejà installé\r<br />\n******Test 1\r<br />\nArchitecture du Processeur : x64\r<br />\n******Test 2\r<br />\nOS : Supérieur ou égale à Windows 7\r<br />\n******Test 3 : Compare un REG_SZ spécifique du registre avec la chaine de caractères spécifiée.\r<br />\nHKLM\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\VLC media player\r<br />\nValeur : DisplayVersion\r<br />\nComparaison : égale à\r<br />\nDonnée : 2.1.5\r<br />\n<br />\n<br />\n******* en code : \r<br />\n&lt;lar:And&gt;\r<br />\n&lt;bar:Processor Architecture=&quot;9&quot;/&gt;&lt;bar:WindowsVersion Comparison=&quot;GreaterThanOrEqualTo&quot; MajorVersion=&quot;6&quot; MinorVersion=&quot;1&quot; ProductType=&quot;1&quot;/&gt;&lt;bar:RegSz Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\VLC media player&quot; Value=&quot;DisplayVersion&quot; Comparison=&quot;EqualTo&quot; Data=&quot;2.1.5&quot;/&gt;&lt;/lar:And&gt;\r<br />\n<br />\nAu final j'ai &quot;Satut : Non applicable ?????\r<br />\n<br />\nPeux-tu m'aider à corriger mon erreur et m'aider à créer les règles <strong>&quot;IsInstallable&quot;</strong><br />\n",
+    "PostedDate": "2015-01-13T13:41:21.1-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341748",
+    "ThreadId": "577501",
+    "Html": "C'est non applicable parce qu'il n'y a pas de règles dans l'onglet &quot;IsInstallable&quot;.\r<br />\n<br />\nPeux tu exprimer en Français les règles que tu veux mettres pour déterminer si le package est installable ?<br />\n",
+    "PostedDate": "2015-01-14T03:32:48.35-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341799",
+    "ThreadId": "577501",
+    "Html": "Bonjour,\r<br />\n<br />\nAlors j'ai avancé mais j'ai des erreurs.\r<br />\n<br />\nPour les règles <strong>&quot;IsInstalled&quot;</strong>:\r<br />\n******Test 1\r<br />\nArchitecture du Processeur : x64\r<br />\n******Test 2\r<br />\nOS : Supérieur ou égale à Windows 7\r<br />\n******Test 3 : Compare un REG_SZ spécifique du registre avec la chaine de caractères spécifiée.\r<br />\nHKLM\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\VLC media player\r<br />\nValeur : DisplayVersion\r<br />\nComparaison : égale à\r<br />\nDonnée : 2.1.5 \r<br />\n<br />\nPour les règles <strong>&quot;IsInstallable&quot;</strong>\r<br />\n******Test 1\r<br />\nArchitecture du Processeur : x64\r<br />\n******Test 2\r<br />\nOS : Supérieur ou égale à Windows 7\r<br />\n******Test 3 : Valeur Reg_Sz du Registre en tant que version (Compare un REG_SZ spécifique du registre avec la chaine de caractères en quatre parties spécifiée.)\r<br />\n**Je l'installe si la cle de reg_sz en tant que version est inférieure à 2.1.5, car cette option de comparaison n'est disponible que dans ce filtre. J'ignore si je dois bien utiliser ce filtre là ?????\r<br />\nHKLM\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\VLC media player\r<br />\nValeur : DisplayVersion\r<br />\nComparaison : inférieure à\r<br />\nDonnée : 2.1.5 \r<br />\n<br />\n<br />\n&lt;lar:And&gt;\r<br />\n&lt;bar:Processor Architecture=&quot;9&quot;/&gt;&lt;bar:WindowsVersion Comparison=&quot;GreaterThanOrEqualTo&quot; MajorVersion=&quot;6&quot; MinorVersion=&quot;1&quot; ProductType=&quot;1&quot;/&gt;&lt;bar:RegSzToVersion Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\VLC media player &quot; Value=&quot;DisplayVersion &quot; Comparison=&quot;LessThan&quot; Data=&quot;2.1.5.0&quot; RegType32=&quot;true&quot;/&gt;&lt;/lar:And&gt;<br />\n<hr />\n<hr />\nLe package se télécharge correctement sur la machine.\r<br />\nIl est visible dans le WindowsUpdate.\r<br />\nMais lorsque je l'installe à la fin il me sort le code d'erreur 0x80070643 et me dit echec.\r<br />\nOr le logiciel c'est bien installé/mis à jour sur l'ordinateur.\r<br />\n<br />\nEt dans WPP, j'ai une ligne avec un code erreur : -2147023293<br />\n",
+    "PostedDate": "2015-01-14T06:41:48.877-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341837",
+    "ThreadId": "577501",
+    "Html": "Ce code erreur signifie &quot;Error Install Failure&quot;. Cela veux dire qu'a la fin de l'installation, VLC a retourné un code différent de 0. Par défaut, 0 signifie que tout s'est bien passé. Mais certains éditeurs renvoient d'autre code pour dire que tout est ok, par exemple 1. Regarde dans le journal C:\\Windows\\WindowsUpdate.log le code est surement indiqué.<br />\n<blockquote>\n**Je l'installe si la cle de reg_sz en tant que version est inférieure à 2.1.5, car cette option de comparaison n'est disponible que dans ce filtre. J'ignore si je dois bien utiliser ce filtre là ????? <br />\n</blockquote>\nSi un PC n'a pas d'ancienne version de VLC, la valeur de registre n'existe pas et donc la donnée DisplayVersion n'est pas inférieure à 2.1.5, donc pas d'installation. Est-ce que tu veux faire ?<br />\n",
+    "PostedDate": "2015-01-14T08:41:18.35-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341841",
+    "ThreadId": "577501",
+    "Html": "Pour le code d'erreur c'est bon le code est 0. ==&gt; 1 probleme de résolu == <strong>1 Grand Merci</strong>. :)\r<br />\n<br />\nMaintenant pour la condition d'installation, je veux que si la version est inférieur à 2.1.5, le soft s'installe.\r<br />\nsi elle n'existe pas il s'installe aussi.\r<br />\nsi elle existe, il ne doit rien faire.\r<br />\n<br />\nAs-tu une idée de la bonne syntaxe pour cette condition ? ou mieux à proposer ?\r<br />\n<br />\n<br />\nAutre : question es-tu le développeur du produit ?<br />\n",
+    "PostedDate": "2015-01-14T08:54:16.177-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-01-14T11:51:55.543-08:00"
+  },
+  {
+    "Id": "1341908",
+    "ThreadId": "577501",
+    "Html": "<blockquote>\nMaintenant pour la condition d'installation, je veux que si la version est inférieur à 2.1.5, le soft s'installe. <br />\nsi elle n'existe pas il s'installe aussi. <br />\nsi elle existe, il ne doit rien faire. <br />\n</blockquote>\nAlors, il faut laisser comme ca.<br />\n<blockquote>\nAutre : question es-tu le développeur du produit ?<br />\n</blockquote>\nOui.<br />\n",
+    "PostedDate": "2015-01-14T11:49:32.477-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1346813",
+    "ThreadId": "577501",
+    "Html": "Merci pour votre aide et votre réactivité.\r<br />\nMon package se déploiement sur la totalité du PARC.\r<br />\n<br />\nLe sujet peut être clos.<br />\n",
+    "PostedDate": "2015-01-28T09:01:40.67-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1463243",
+    "ThreadId": "577501",
+    "Html": "Dear DCourtel,\r<br />\nmaybe can you write your help in english? I am in front of a Problem, how to install the VLC-Player by Wsus.\r<br />\n<br />\nI´m sorry, i can´t speak French.\r<br />\n<br />\nThanks in advance, best regards\r<br />\npfeifera<br />\n",
+    "PostedDate": "2016-02-15T05:41:31.757-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

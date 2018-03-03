@@ -1,0 +1,76 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-05-02T07:46:45.77-07:00",
+    "CommentCount": 6,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\ntoday i start WPP a couple of times, but no PopUp come up and tell me there is a update for WPP available. I think it was good to make a button to check for Updates. Maybe in the form i attached the screenshot \r\n\r\nThanks and Regards\r\nWinfried",
+    "LastUpdatedDate": "2014-05-02T07:46:45.77-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-01-08T01:46:11.453-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Postponed"
+    },
+    "Summary": "Check for Updates (WPP)",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 166
+  },
+  "FileAttachments": [
+    {
+      "FileId": 776245,
+      "FileName": "CheckForUpdates.png",
+      "DownloadUrl": ".\\776245"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Hi Winfried, WPP checks for update only once a day (when starting).\nThis mean that if you start WPP today at 23h50, it will check for update. If you restart WPP at 23h55, no check will occurs. If you restart WPP at 00h05, a new check will occur as it is not the same day than the previous check.",
+      "PostedDate": "2014-01-08T02:18:53.83-08:00",
+      "Id": 129774
+    },
+    {
+      "Message": "Hi David,\n\n> WPP checks for update only once a day (when starting).\n\nyes, i know. But today, it was the first start in this week, WPP tell me NOT there is a update available. This is the reason for want to have a Update Button.\n\nIs our proxy the reason? I have set the correct settings for the proxy, i can download the catalog and check for updates in the catalogs.\n\n",
+      "PostedDate": "2014-01-08T03:59:08.933-08:00",
+      "Id": 129780
+    },
+    {
+      "Message": "This may be cause by your proxy. To check if a new version is available, WPP download a small XML file on a FTP server.\nWhat happen if you go to Tools -> Settings -> Proxy tab and click on FTP : \"Test Download\" ?\nOnce you have done this test, go to Help -> Send Debug info, click on \"Show informations...\" and send me the file.",
+      "PostedDate": "2014-01-08T04:43:16.94-08:00",
+      "Id": 129786
+    },
+    {
+      "Message": "Now we know, the problem is FTP, our Proxy, our Firewall. ;)",
+      "PostedDate": "2014-01-11T10:50:03.843-08:00",
+      "Id": 130168
+    },
+    {
+      "Message": "In WPP V2, this check  will occur over HTTP.",
+      "PostedDate": "2014-01-11T15:43:22.453-08:00",
+      "Id": 130180
+    },
+    {
+      "Message": "Thanks David! :)\n",
+      "PostedDate": "2014-01-12T01:20:45.797-08:00",
+      "Id": 130209
+    }
+  ]
+}

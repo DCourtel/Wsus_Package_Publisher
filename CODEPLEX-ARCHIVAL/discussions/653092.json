@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1468525",
+    "ThreadId": "653092",
+    "Html": "Hi Folks!<br />\n<br />\nJust want do give my solution free for discussion. What do you think?<br />\n<br />\nFiles needed:<br />\n<pre><code>flash_update.bat\nmms.cfg\ninstall_flash_player_21_active_x.msi</code></pre>\n\n<strong>flash_update.bat</strong><br />\n<pre><code>REM kill all running browsers\n\ntaskkill /IM firefox* /f\ntaskkill /IM iexplore* /f\n\nREM Remove all Flash Version &lt; Version 21\nwmic product where &quot;name like 'Adobe Flash Player %% ActiveX' and version &lt; '21'&quot; call uninstall\n\nREM install new Flash version\ninstall_flash_player_21_active_x.msi /qn\n\nREM copy config file for Flash\ncopy mms.cfg %WINDIR%\\System32\\Macromed\\Flash\\ /Y\ncopy mms.cfg %WINDIR%\\SysWow64\\Macromed\\Flash\\ /Y</code></pre>\n\n<strong>mmc.cfg</strong><br />\n<pre><code>SilentAutoUpdateEnable=0\nAutoUpdateDisable=1</code></pre>\n\n<strong>Wsus Package Publisher</strong><br />\nJust create a Custom Update Package and use &quot;Allow to execute a file&quot;.<br />\n<br />\nPath to the File:<br />\n<pre><code>flash_update.bat</code></pre>\n\nParameters:<br />\n<pre><code>&gt; %WINDIR%\\temp\\flash.log</code></pre>\n\nThis will create a Logfile on c:\\Windows\\temp\\flash.log with the output of the cmd box<br />\n<br />\nIn the next Window just add all these files to the dialogue, add the ProgramID as mentioned in the WSUSPP doku.<br />\n<br />\nYou can add extra lines to the flash_update.bat to remove and install the plugin version for Chrome and FireFox if you want. Or create an additional Package for these.<br />\n<br />\n<br />\nThis works for me on Windows 7 Professional.<br />\n<br />\nAny thoughts?<br />\n",
+    "PostedDate": "2016-03-31T01:08:36.427-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1468541",
+    "ThreadId": "653092",
+    "Html": "For Firefox you need this File: <a href=\"https://fpdownload.macromedia.com/get/flashplayer/current/licensing/win/install_flash_player_21_plugin.msi\" rel=\"nofollow\">https://fpdownload.macromedia.com/get/flashplayer/current/licensing/win/install_flash_player_21_plugin.msi</a>\r<br />\n<br />\nAnd only for Windows 7 you need ActiveX to deploy. Within W8 ActiveXFlash comes with Windows Update.\r<br />\n<br />\nAll other Files you can deploy with Group Policy Preferences at once for all Clients and for ever.<br />\n",
+    "PostedDate": "2016-03-31T03:49:59.877-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471473",
+    "ThreadId": "653092",
+    "Html": "Hi,\r<br />\n<br />\nYou can always install via Adobe's SCUP/SCCM catalog files:\r<br />\n<br />\nCurrent release (21.0.0.213)\r<br />\n<a href=\"https://fpdownload.adobe.com/get/flashplayer/current/licensing/win/AdobeFlashPlayerCatalog_SCUP.cab\" rel=\"nofollow\">https://fpdownload.adobe.com/get/flashplayer/current/licensing/win/AdobeFlashPlayerCatalog_SCUP.cab</a>\r<br />\n<br />\nYou can import the catalog files and choose which one of the bunch you want to install.\r<br />\n<br />\nI used it for the PPAPI, Active-X, and Plugin versions as we have clients with IE, FF and Chrome.\r<br />\n<br />\nHope this bit of info helps someone.\r<br />\n<br />\n--J<br />\n",
+    "PostedDate": "2016-04-27T08:04:24.8-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471553",
+    "ThreadId": "653092",
+    "Html": "And don't forget licensing ( fast and free, no problem ) if you use the .msi's from Adobe for deploying.\r<br />\n<br />\nNot nessasary to create a .bat file if you can use adobes installation files directly, realy.<br />\n",
+    "PostedDate": "2016-04-27T23:40:23.667-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

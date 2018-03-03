@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1494148",
+    "ThreadId": "661971",
+    "Html": "Hi, <br />\n<br />\nI've used WPP for some time now but with version 1.3.1702.10 denial of software installation for a single computer is different as far as i can compare it to earlier versions (edit. same behaviour with fromer version)<br />\n<br />\nMy situation: computer-01 is member of two groups:<br />\n<ul>\n<li>wpp_supportstaff</li>\n<li>\nwpp_NotApproved_Flash<br />\n</li>\n</ul>\nWhen approving e.g. Adobe Flash Player to group wpp_supportstaff and set &quot;Not Approved&quot; for the second group &quot;wpp_NotApproved_Flash&quot;, in the past computer-01 doesn't get this flash update. Now Approval is &quot;Install&quot;.<br />\n<br />\nHow do you make exception for one computer (which should not receive an update), which belongs to group for there is an approval? I have several exceptions for single computers and creating a second group for which Approval is denied does the trick in the past. Or dou i have to reorganize my WSUS groups?<br />\n<br />\nbye<br />\nHannes<br />\n",
+    "PostedDate": "2017-03-16T03:45:08.223-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1494524",
+    "ThreadId": "661971",
+    "Html": "I use a other way.\r<br />\n<br />\nI have a WSUS)-group for every Software. ( Flash, Reader, Firefox  ...)\r<br />\nIf I generate a new Flash player update, I approve the update only to group &quot;Flash&quot;.  If the client isnt part of group &quot;Flash&quot;, he doesnt get it.  Finish. But ofcourse its possibe to be member of group &quot;Reader&quot; or anything else. So it is not nessasary to create exeptions.\r<br />\n<br />\nI dont know why  your update status was &quot;not approved&quot; in the past. In my opinion he must be &quot;approved&quot;, if the client is in one approved group.<br />\n",
+    "PostedDate": "2017-03-23T06:35:14.03-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1482517",
+    "ThreadId": "657571",
+    "Html": "I want  to say that if file1 or file2 do not exit, then the update is installable. So this is what I created\r<br />\n<img src=\"http://drive.google.com/uc?export=view&amp;id=0B6JjnLpXz2_MUUpRcjEyNXJCa0k\" alt=\"Image\" />\r<br />\n<br />\nI'm  not sure if this is right or not, but if I go to revise after it is published, this is what I see.\r<br />\n<img src=\"http://drive.google.com/uc?export=view&amp;id=0B6JjnLpXz2_MSWdsNlRDRkRwMjQ\" alt=\"Image\" />\r<br />\n<br />\nAm I doing this right?<br />\n",
+    "PostedDate": "2016-08-31T09:20:27.433-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1482544",
+    "ThreadId": "657571",
+    "Html": "Hi tmrv, you are doing it wrong.\r<br />\nIn AND / OR group, logical operator apply to INNER rules. So a logical group with only one rule, mean no group at all.\r<br />\nYou should write :\r<br />\n<br />\n<strong>Start AND</strong>\r<br />\nmsiar\r<br />\n<strong>Start OR</strong><br />\n<pre><code>    lar Not\n        FileExists\n    lar Not\n    lar Not\n        FileExists\n    lar Not</code></pre>\n\n<strong>End OR</strong>\r<br />\n<strong>End AND</strong><br />\n",
+    "PostedDate": "2016-08-31T13:41:02.27-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2016-08-31T14:07:54.963-07:00"
+  },
+  {
+    "Id": "1482550",
+    "ThreadId": "657571",
+    "Html": "Ah, ic, thank you!<br />\n",
+    "PostedDate": "2016-08-31T14:08:52.06-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-08-22T12:06:20.497-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "A \"path too long\" exception can be throw if user try to publish folder with nested subfolders. This is due to the temporary path used by WPP preparing the publication, and Windows limitation in the FileSystem.\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1307.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-08-22T10:56:25.003-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Path too long exception",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 101
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Shorten the path to the temporary folder used. Allow WPP to use the %TempWPP% environement Variable (User) if defined.",
+      "PostedDate": "2013-08-22T12:06:10.637-07:00",
+      "Id": 110783
+    }
+  ]
+}

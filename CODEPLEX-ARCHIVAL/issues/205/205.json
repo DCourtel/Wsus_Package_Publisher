@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Custom Update Creator",
+      "DisplayName": "Custom Update Creator"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-07-29T10:34:13.583-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Steps to replicate:\r\n1. Start making a custom update.\r\n2. Add a \"Declare a variable...\" element, but do not define it\r\n3. Add more elements that are neither \"Declare a variable...\" nor \"Allow to define the return code...\" elements\r\n4. Add \"Allow to define the return code...\" element\r\n5. Edit the \"Allow to define the return code...\" element, list will be blank\r\n6. Edit the \"Declare a variable...\" element\r\n7. Edit the \"Allow to define the return code...\" element, list will still be blank\r\n8. Remove the \"Allow to define the return code...\" element\r\n9. Add \"Allow to define the return code...\" element\r\n10. Edit the \"Allow to define the return code...\" element, list will still be blank",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1407.11",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-07-17T11:56:41.023-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Cannot select return code variable if variable is created after return code element is created",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 205
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "> 1.Start making a custom update. \n2.Add a \"Declare a variable...\" element, but do not define it \n3.Add more elements that are neither \"Declare a variable...\" nor \"Allow to define the return code...\" elements \n4.Add \"Allow to define the return code...\" element \n5.Edit the \"Allow to define the return code...\" element, list will be blank \n\nThis is by design. you cannot select a variable that have not be define as Int or String.\n\n\n> 6.Edit the \"Declare a variable...\" element \n7.Edit the \"Allow to define the return code...\" element, list will still be blank \n\nYou have to collapse and then expand again the element to update the list.\n\n> 8.Remove the \"Allow to define the return code...\" element \n9.Add \"Allow to define the return code...\" element \n10.Edit the \"Allow to define the return code...\" element, list will still be blank \n\nI don't have this behaviour. If a variable element is present when you add a \"Define the return code\" element, then the list of variable is updated.\n",
+      "PostedDate": "2014-07-29T05:37:48.433-07:00",
+      "Id": 153813
+    },
+    {
+      "Message": "Agreed, the behavior is now working as intended, I can no longer replicate the issue on my system. Must have been a temporary error.",
+      "PostedDate": "2014-07-29T10:11:14.867-07:00",
+      "Id": 153840
+    }
+  ]
+}

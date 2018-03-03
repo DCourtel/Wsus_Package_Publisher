@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1070065",
+    "ThreadId": "450488",
+    "Html": "OK I'm quite prepared to be told that I'm doing something stupid but this has got me really confused..\r<br />\n<br />\nI'm trying to set up Windows Package Publisher to push out adobe updates in conjunction with WSUS.\r<br />\n<br />\nI've set up a brand new WSUS server on a 2008 R2 machine (also brand new)\r<br />\n<br />\nI've installed Package publisher on this server.\r<br />\n<br />\nNext I've downloaded the 11.0.3 version of Adobe from ftp.adobe.com and then extracted that using 7zip to get to the msi.\r<br />\n<br />\nFollowing the hep guides from the Windows Package Publisher website I've customized the install and approved the install for a test group (containing my PC from which I uninstalled Reader 11.0.3 so that it would pick up as being needed).\r<br />\n<br />\nThe update comes down and installs great, however I am left with Reader version 11.0.0!?!? (as this is the first update I've done there is no 11.0.0 msi loaded on the Package Publisher at all...)\r<br />\n<br />\nI have downloaded the exe again in case I got the wrong one the first time and set it up as a new update and still the same result.\r<br />\n<br />\nHas anyone else run into this? Am I doing something stupid?\r<br />\n<br />\nThanks\r<br />\n<br />\nMatt<br />\n",
+    "PostedDate": "2013-07-18T08:12:32.707-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1070177",
+    "ThreadId": "450488",
+    "Html": "Hi steelite_matt,\r<br />\n<br />\nI think that Adobe publish &quot;AdbeRdr11003_en_US.exe&quot; with both the &quot;Base Install&quot;(Adobe Reader 11.0), AND files to upgrade to 11.0.03. When you launch manually AdbeRdr11003_en_US.exe, the exe extract files then launch the Setup.exe with a commandLine to tell to install the Base version and then to copy files from the CAB to the insallation folder. \r<br />\nIf you try to launch manually the file setup.exe or AcroRead.msi, you end up with Adobe Reader XI. And if you look into the CAB file, you will find a file named AcroRd32.exe which have for File Version 11.0.0.379.\r<br />\n<br />\nThe help guide you have download from the 'Documentation' tab is for Adobe Reader XI (the base install), not Adobe Reader 11.0.03. And the installation process is different. You should follow the guide for Adobe Reader XI and then publish the .msp to upgrade to 11.0.03.\r<br />\n<br />\nI know it is tempting to publish directly the latest version. But without knowing the method used by Adobe to upgrade after installation of the base version, it's not possible.<br />\n",
+    "PostedDate": "2013-07-18T13:17:18.787-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:30:07.58-07:00"
+  },
+  {
+    "Id": "1070423",
+    "ThreadId": "450488",
+    "Html": "Ah I see,\r<br />\n<br />\nYes that's sorted it.\r<br />\n<br />\nThank you very much for your help!\r<br />\n<br />\nMatt<br />\n",
+    "PostedDate": "2013-07-19T04:25:00.44-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

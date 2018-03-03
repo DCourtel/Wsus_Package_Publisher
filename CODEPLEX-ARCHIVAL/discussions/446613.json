@@ -1,0 +1,98 @@
+[
+  {
+    "Id": "1055071",
+    "ThreadId": "446613",
+    "Html": "Hello,\r<br />\n<br />\nFor awhile know we have been receiving the &quot;The certificate is invalid&quot; when used the WSUS Package Publisher tool, but we have been ignoring it because our certificates worked deploying MSI packages through the &quot;WSUS Package Publisher&quot; tool.    We just thought the tool didn't like using our in-house created certificates that we have been using for the past few years.\r<br />\n<br />\nThe new version of the WSUS Package Publisher displays this same error, but now it won't let us publish any new MSIs.   Is there anyway to figure out why the tool doesn't like our in-house certificates even though they work deploying MSI files?\r<br />\n<br />\nNote 1:  The &quot;Certificate Path&quot; information shows that the publishing certificate and the trusted CA are OK.\r<br />\nNote 2:  The CA certificate is installed in the &quot;Trusted Root Certificate Authority&quot; folder.\r<br />\nNote 3:  The publishing certificate is installed the &quot;WSUS&quot; and &quot;Trusted Publishers&quot; folder.<br />\n",
+    "PostedDate": "2013-06-10T13:40:45.773-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1055283",
+    "ThreadId": "446613",
+    "Html": "Are you using WPP on the Wsus Server or on an administrative computer ?<br />\n",
+    "PostedDate": "2013-06-11T03:02:47.077-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1055413",
+    "ThreadId": "446613",
+    "Html": "I have tried it on the WSUS server and on an administrative computer.  Both return the same error.<br />\n",
+    "PostedDate": "2013-06-11T07:35:40.923-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1056423",
+    "ThreadId": "446613",
+    "Html": "Any thoughts on this?\r<br />\n<br />\nCan I bypass the certificate check on the new version of the tool?<br />\n",
+    "PostedDate": "2013-06-13T08:24:18.17-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1056492",
+    "ThreadId": "446613",
+    "Html": "Sorry, I really have no idea on why WPP judge your certificate invalid while it is not. <br />\nI only use the 'Verify()' method of the 'System.Security.Cryptography.X509Certificates.X509Certificate2' class. And this method return 'False' for your certificate while you're using it with success for Wsus. This is a strange behavior.<br />\n<br />\nThe current release do not allow users to publish update with an invalid certificate.<br />\nIn the next release, I will add an option to ignor this error. This is not a good way, but I'm not as expert as I should to solve this strange behavior. May be later...<br />\n",
+    "PostedDate": "2013-06-13T11:00:09.523-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1056503",
+    "ThreadId": "446613",
+    "Html": "Send me an email at <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a> , I will send you a BETA version of the next release. You will be able to test this option.<br />\n",
+    "PostedDate": "2013-06-13T11:43:34.077-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1057741",
+    "ThreadId": "446613",
+    "Html": "The new version addresses this issue.  Thanks.<br />\n",
+    "PostedDate": "2013-06-17T07:00:07.167-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082440",
+    "ThreadId": "446613",
+    "Html": "I have exactly the same problem. Can you as well send me the Beta version. I will send you an email.. thanks..<br />\n",
+    "PostedDate": "2013-08-19T18:29:18.377-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082491",
+    "ThreadId": "446613",
+    "Html": "I Chriserasmo, I have received your mail.\r<br />\nIf you are using the latest release (v1.2.1308.15), the option is already present in the Settings :\r<br />\n<br />\n<img src=\"http://i.imgur.com/oyIM6iN.jpg\" alt=\"Ignore Code-Signing Errors\" />\r<br />\n<br />\nNote that, if your Certificate is REALLY invalid, this option will not make it to work with your Wsus Server !<br />\n",
+    "PostedDate": "2013-08-19T22:33:28.833-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-12T08:40:10.403-07:00"
+  },
+  {
+    "Id": "1082496",
+    "ThreadId": "446613",
+    "Html": "\r\n<div dir=\"ltr\">Hi DCourtel,\r\n<div><br>\r\n</div>\r\n<div>Thanks for your reply. Actually i am using the 1.2.130<b><font color=\"#0000ff\">7</font></b>.15. I cannot find the latest version\r\n<span style=\"font-family:arial,sans-serif; font-size:13px\">(v1.2.130<b><font color=\"#0000ff\">8</font></b>.15). Could you send me the link for the latest version. I cannot find it on the website.</span></div>\r\n<div><span style=\"font-family:arial,sans-serif; font-size:13px\"><br>\r\n</span></div>\r\n<div><span style=\"font-family:arial,sans-serif; font-size:13px\">Regards,</span></div>\r\n<div>Chris</div>\r\n<div><br>\r\n</div>\r\n<div><br>\r\n<div></div>\r\n</div>\r\n</div>\r\n",
+    "PostedDate": "2013-08-19T22:42:55.313-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082562",
+    "ThreadId": "446613",
+    "Html": "Sorry, It's my bad. The current release is actually v1.2.130__7__.15. you should have the option in your version.<br />\n",
+    "PostedDate": "2013-08-20T01:58:12.493-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1315966",
+    "ThreadId": "446613",
+    "Html": "Hello,\r<br />\nI tried to configure a self signed certificate, installed it correctly on the WSUS but, when I try to start a connection comes an error &quot;The certificate is invalid. You will not be able to publish updates.&quot;\r<br />\n<br />\nI'm not able to publish updates without errors.\r<br />\n<br />\nWhat can I do?<br />\n",
+    "PostedDate": "2014-10-23T04:46:54.667-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

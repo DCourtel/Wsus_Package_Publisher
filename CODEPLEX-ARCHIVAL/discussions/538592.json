@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1221301",
+    "ThreadId": "538592",
+    "Html": "Hi David!\r<br />\nI'm exited about WPP 2.0, and maybe you've already added the feature but here it goes:\r<br />\n<br />\nI think that we're missing the feature to 're-use' our custom made XML files.\r<br />\nYesterday, I made a custom Java7u51 update, and I only needed to change the path to the Powershell script. I actually tried to export the update, and edit the XML slightly, but I couldn't figure out how to re-package the .cab file with the new .XML file.\r<br />\n<br />\nIs there any way to make small changes in custom updates now?\r<br />\nIf not, is it possible that you could add a way to do this in WPP 2.0?\r<br />\nIt could be a .XML import feature or it could be a Custom update template.\r<br />\n<br />\nThanks,\r<br />\nNikolaj Pedersen.<br />\n",
+    "PostedDate": "2014-03-11T00:26:15.103-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221354",
+    "ThreadId": "538592",
+    "Html": "You are right. In WPP V2 I should add the abbility to create &quot;Template Custom Update&quot; and to create supersedding update from a custom update. Also, users should be able to import/export XML files when managing custom updates. <br />\n",
+    "PostedDate": "2014-03-11T03:28:50.493-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:52:40.5-07:00"
+  }
+]

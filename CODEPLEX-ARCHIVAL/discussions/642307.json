@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1437158",
+    "ThreadId": "642307",
+    "Html": "This is a first, unresaerched notice about W10 and Optional Updates. <br />\nIm Using WS2012 R2 , and deploy optional software via WPP as &quot;optional Update&quot;. Users can install this Software if they want. It was working under XP - W8.1.<br />\nToday I include a W10 Prof client in our Domain, and all optional updates was install as &quot;normal&quot; updates.<br />\nWindows 10 comes with a lot of different options in the Windows Update area, it will be a good idea to upgrade your GPO with new templates first.<br />\nI think, it is because  in future &quot;optionale updates&quot; are not a part of classic windows (security) updates, it will be a part of the new update rings ( fast / slow/ LTS ).<br />\n",
+    "PostedDate": "2015-08-04T04:33:36.343-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

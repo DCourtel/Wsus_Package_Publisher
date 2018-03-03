@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-12-15T04:42:55.2-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Just started using Wsus Package Publisher and when trying to install the latest Adobe Flash I get this error in Wsus Package Publisher -2147023293 and error 0x80070643 in Windows update. ",
+    "LastUpdatedDate": "2013-12-15T04:42:55.2-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-11-13T11:10:31.373-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Error code -2147023293",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 150
+  },
+  "FileAttachments": [
+    {
+      "FileId": 757630,
+      "FileName": "Error.docx",
+      "DownloadUrl": ".\\757630"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Please, \n- Stop the \"Windows update\" service on the client computer.\n- Delete the \"C:\\Windows\\WindowsUpdate.log\" file.\n- Start the \"Windows update\" service on the client computer.\n- Launch a detection/installation\n- When installation failed, send me the \"C:\\Windows\\WindowsUpdate.log\" file. at package.publisher@free.fr",
+      "PostedDate": "2013-11-13T13:02:01.27-08:00",
+      "Id": 122973
+    }
+  ]
+}

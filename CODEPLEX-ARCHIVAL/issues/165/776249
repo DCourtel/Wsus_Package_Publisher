@@ -1,0 +1,10 @@
+<lar:And>
+<bar:RegValueExists Key="HKEY_LOCAL_MACHINE" Subkey="SOFTWARE\HelpBox\HelpBox Management Framework" Value="Version" Type="REG_SZ" RegType32="true"/><bar:RegSzToVersion Key="HKEY_LOCAL_MACHINE" Subkey="SOFTWARE\HelpBox\HelpBox Management Framework" Value="Version" Comparison="GreaterThanOrEqualTo" Data="2.2.1.0" RegType32="true"/><lar:Or>
+<lar:And>
+<bar:FileExists Path="Google\Chrome\Application\chrome.exe" Csidl="42"/><bar:FileVersion Path="Google\Chrome\Application\chrome.exe" Comparison="LessThan" Version="31.0.0.0" Csidl="42"/></lar:And>
+<lar:And>
+<lar:Not>
+<bar:FileExists Path="Google\Chrome\Application\chrome.exe" Csidl="42"/>
+</lar:Not><bar:RegValueExists Key="HKEY_LOCAL_MACHINE" Subkey="SOFTWARE\HelpBox\userInstalled" Value="Google Chrome" Type="REG_MULTI_SZ"/></lar:And>
+</lar:Or>
+</lar:And>

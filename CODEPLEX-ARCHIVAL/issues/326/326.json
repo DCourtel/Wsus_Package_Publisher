@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "I never test such case. It is possible that Wsus don't support this language. In which languages Wsus display the text on the console ?",
+    "ClosedDate": "2017-01-31T12:40:33.947-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I´m note able to crate a cab wenn i add Folders including files with chinease signs/letters. Please help",
+    "LastUpdatedDate": "2017-01-31T12:40:34.15-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-02-22T04:37:28.887-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Unable to Create CAB when filename include chinease letters(signs)",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 326
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

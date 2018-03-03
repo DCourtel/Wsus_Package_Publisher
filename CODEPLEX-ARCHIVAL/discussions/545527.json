@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1246046",
+    "ThreadId": "545527",
+    "Html": "Hi\r<br />\nI'm new in WSUS Package Publisher.\r<br />\nI'm try to publish Irfanview 3.47. I have only an exe file. I'm getting allways an error after publishing Irfanview to clients. On the clients, Irfanview is installed and works after publishing.\r<br />\nI did the publish like the example &quot;Symantec Endpoint Protection&quot; at the command line I inserted some parameters /silent /desktop=1 /allusers=1.\r<br />\nWhat did I wrong?\r<br />\nThanks Erich\r<br />\n<br />\nI'm getting this error<br />\n<pre><code>2014-05-16  10:36:35:215    1004    1010    Agent   *************\n2014-05-16  10:36:35:215    1004    1010    Agent   ** START **  Agent: Finding updates [CallerId = ]\n2014-05-16  10:36:35:215    1004    1010    Agent   *********\n2014-05-16  10:36:35:216    1004    1010    Agent     * Online = No; Ignore download priority = No\n2014-05-16  10:36:35:216    1004    1010    Agent     * Criteria = &quot;IsInstalled=0 And IsHidden=0 And Type='Software'&quot;\n2014-05-16  10:36:35:216    1004    1010    Agent     * ServiceID = {3DA21691-E39D-4DA6-8A4B-B43877BCB1B7} Managed\n2014-05-16  10:36:35:216    1004    1010    Agent     * Search Scope = {Machine}\n2014-05-16  10:36:36:745    3832    10f4    Handler   : WARNING: Command line install completed. Return code = 0x00000000, Result = Failed, Reboot required = false\n2014-05-16  10:36:36:745    1004    8b4 AU  &gt;&gt;##  RESUMED  ## AU: Installing update [UpdateId = {26D85C25-359E-4EE9-BAC6-0AA2B083656D}]\n2014-05-16  10:36:36:745    1004    8b4 AU    # WARNING: Install failed, error = 0x80070643 / 0x00000000\n2014-05-16  10:36:36:745    3832    10f4    Handler   : WARNING: Exit code = 0x8024200B\n2014-05-16  10:36:36:745    3832    10f4    Handler :::::::::\n2014-05-16  10:36:36:745    3832    10f4    Handler ::  END  ::  Handler: Command Line Install\n2014-05-16  10:36:36:745    3832    10f4    Handler :::::::::::::</code></pre>\n\n",
+    "PostedDate": "2014-05-16T02:21:11.11-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1246053",
+    "ThreadId": "545527",
+    "Html": "Hi,\r<br />\n<br />\ncan you create a logfile while for installation? Which commandline switches you are using?<br />\n",
+    "PostedDate": "2014-05-16T03:02:27.913-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1246063",
+    "ThreadId": "545527",
+    "Html": "Hi,\r<br />\nThere is no option to create a log file. I'm using following switches:\r<br />\n/silent /desktop=1 /allusers=1<br />\n",
+    "PostedDate": "2014-05-16T03:44:41.797-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1246420",
+    "ThreadId": "545527",
+    "Html": "Hi,<br />\n<blockquote>\nI did the publish like the example &quot;Symantec Endpoint Protection&quot;<br />\n</blockquote>\nIn this documentation it's wrote to put &quot;1&quot; as return code for Success + Reboot.<br />\n<blockquote>\nReturn code = 0x00000000, Result = Failed, Reboot required = false<br />\n</blockquote>\nYour Package require return code &quot;0&quot; for success.\r<br />\nPlease, revise your update and change the return code.<br />\n",
+    "PostedDate": "2014-05-17T01:37:47.997-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-19T03:03:46.813-07:00"
+  },
+  {
+    "Id": "1246815",
+    "ThreadId": "545527",
+    "Html": "Hi,\r<br />\nYou was right, changing return code to 0 worked.\r<br />\nThanks<br />\n",
+    "PostedDate": "2014-05-18T23:16:03.26-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

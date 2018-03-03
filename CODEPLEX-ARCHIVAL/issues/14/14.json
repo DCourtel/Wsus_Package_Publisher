@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "AD-Wsus Comparer",
+      "DisplayName": "AD-Wsus Comparer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-04-15T15:07:57.687-07:00",
+    "CommentCount": 0,
+    "Custom": "Feature Enhancement",
+    "Description": "For now, we need to launch WPP with an account that have admin's rights on remote computers where we want to Get Wsus Client ID or Reset Wsus Client ID. \r\n\r\nChange the way that WPP works so that it use credential's information set in the options Form.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1302.27",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-03-02T01:42:57.443-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Allow \"Get WsusClientID\" and \"Reset WsusClientID\" buttons to use Credentials settings",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 14
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1484785",
+    "ThreadId": "658287",
+    "Html": "Because future dont stopped :-), I checked out the MS Business Store. One possibillity ist to download Modern Apps, licensed and packaged for offline deployment.<br />\nYou get a .json file with Metadata, a Appx for x64 and a Appx for x86. And you generate a License file .xml .<br />\n<br />\nNow, we need the Deployment Configuration for WPP. Maybe it will be a good Idea to release a new feature and implement the Modern Apps.<br />\n<br />\nFor actual WPP - what will be the best steps to deploy MApps? Is ist possible?<br />\n",
+    "PostedDate": "2016-09-27T07:26:34.413-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1484797",
+    "ThreadId": "658287",
+    "Html": "The good question is : Does Wsus support Modern Apps ?\r<br />\nYou can only publish EXE, MSI and MSP files on Wsus.<br />\n",
+    "PostedDate": "2016-09-27T09:37:30.617-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1484812",
+    "ThreadId": "658287",
+    "Html": "Yes and No. <br />\nYou can copy files to different client locations with WPP, this can be part one.<br />\n<br />\nOffline deployment based on sideloading ( I think so ). So you only need two Powershell  instructions (import , add ) to install the app. <br />\n<br />\nI think, if it is possible to realize this steps  you can package it in a update. <br />\n<br />\nIm not sure of that, but there possibilities for SCCM (ofcourse), so - why not  looking for a WPP workaround.<br />\n<br />\nOfcourse, it is not a traditional deployment, but there are only two posibillities for MApps. Online Licensing - and with Azure AD. Or offline, using a deployment tool...hmmm...<br />\n<br />\nA second way - W 1607 included a App Installer for easyser App Installation. Maybee it is possible to use it for a deployment.<br />\n",
+    "PostedDate": "2016-09-27T14:40:31.037-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1485392",
+    "ThreadId": "658287",
+    "Html": "Hi, do you have any documentations which I can work with ?<br />\n",
+    "PostedDate": "2016-10-05T22:40:41.25-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1486740",
+    "ThreadId": "658287",
+    "Html": "Not sure what you need.\r<br />\n<br />\nI only read this post,\r<br />\n<a href=\"https://blogs.msdn.microsoft.com/appinstaller/2016/05/27/app-installer/\" rel=\"nofollow\">https://blogs.msdn.microsoft.com/appinstaller/2016/05/27/app-installer/</a>\r<br />\n<br />\nand after business store was open I make the steps manual: Download it from BStore on a Software deployment folder, dobble click  the .ppax and install it on a Client. \r<br />\n<br />\nSame working stepps like installing a .exe, but ofcourse, the background is completly different.\r<br />\n<br />\nA attractive Test-App is the Periodic System, aviable in different Licence Versions for online AND offline deployment.<br />\n\r<br />\nI can assist as beta tester, but not more, sorry :-)<br />\n",
+    "PostedDate": "2016-10-24T01:36:56.32-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,110 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 14,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nI have a Windows Server 2016 with an installed WSUS.\r\nI also use WPP on this Server.\r\nWhen I try to import Updates to WSUS and display it in the WSUS-Console I get error 40.\r\nIn the debug Log I can see it trys to connect to the 2003/2008 WID not the actual WSUS WID np.\r\n\r\nThe WSUS-Console is Version 10.\r\nHow to fix this?\r\n\r\nThanks for your help\r\nMarkus ",
+    "LastUpdatedDate": "2017-06-01T02:31:57.597-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-05-30T03:06:54.737-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Windows Server 2016",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 376
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi,\n\nis WPP installed on WSUS/W2016?\n\nIn the middle of https://www.wsus.de/de/anwendungen_ueber_wsus_bereitstellen_teil_2 you will find a query for making the updates visible in WSUS.MSC. After this, are new Updates visible in WSUS.MSC?",
+      "PostedDate": "2017-05-30T09:32:32.923-07:00",
+      "Id": 208492
+    },
+    {
+      "Message": "Yes it is installed on W2016 on the same machine as the WSUS\n\nThe update is visible but no one can download the Update.\nIt stands on \"Update is downloaded 0%\"\n\n\n",
+      "PostedDate": "2017-05-30T23:43:23.527-07:00",
+      "Id": 208495
+    },
+    {
+      "Message": "Have a look in WSUS.MSC, is the File for the Update available? Look at a Client who can not download the update in %windir%\\WindowsUpdate.log.",
+      "PostedDate": "2017-05-31T00:28:04.547-07:00",
+      "Id": 208496
+    },
+    {
+      "Message": "In WSUS.MSC the File is availabale.\n\nOn the Clients I get error 0x80d02002\nIn WindowsUpdate.log: WU client calls back to download call {A91007C7-312C-4D61-850B-DF37222FECB4} with code Call complete and error 0x80d02002",
+      "PostedDate": "2017-05-31T01:44:38.647-07:00",
+      "Id": 208497
+    },
+    {
+      "Message": "Here you find a solution: https://answers.microsoft.com/en-us/insider/forum/insider_wintp-insider_install/build-10074-error-0x80d02002/8ec7e4e5-1f00-4dc7-b441-9d6ad2c6288d\n\nIn German: https://www.windows-faq.de/2016/08/23/windows-10-update-fehler-0x80d02002-0x80244019-und-0xc1800118/",
+      "PostedDate": "2017-05-31T03:35:37.897-07:00",
+      "Id": 208498
+    },
+    {
+      "Message": "The Error apears on all clients and only for new Updates from WPP\n\nThe Solution doesn't help.\n",
+      "PostedDate": "2017-05-31T04:46:24.267-07:00",
+      "Id": 208502
+    },
+    {
+      "Message": "Did you deploy the new certificate from the new WPP?",
+      "PostedDate": "2017-05-31T05:56:15.567-07:00",
+      "Id": 208505
+    },
+    {
+      "Message": "Did you create a new certificate?",
+      "PostedDate": "2017-05-31T05:58:17.497-07:00",
+      "Id": 208506
+    },
+    {
+      "Message": "I updated the WSUS Server from 2012 to 2016 to try if it works\nI use to old certificate, I used before.\nDo I have to reimport it?",
+      "PostedDate": "2017-05-31T06:24:30.55-07:00",
+      "Id": 208507
+    },
+    {
+      "Message": "Before the Update it works.",
+      "PostedDate": "2017-05-31T06:24:57.927-07:00",
+      "Id": 208508
+    },
+    {
+      "Message": "*worked",
+      "PostedDate": "2017-05-31T06:25:15.12-07:00",
+      "Id": 208509
+    },
+    {
+      "Message": "OK, thanks for the big response. Could you pls tell the whole world, what was the solution? Thanks.",
+      "PostedDate": "2017-05-31T06:57:29.843-07:00",
+      "Id": 208510
+    },
+    {
+      "Message": "No it dosn't work :/\n\nBut I can make a submit what I have done and what I have tried.",
+      "PostedDate": "2017-05-31T22:59:19.4-07:00",
+      "Id": 208514
+    },
+    {
+      "Message": "Sorry for that, but i am out.",
+      "PostedDate": "2017-06-01T02:31:57.597-07:00",
+      "Id": 208515
+    }
+  ]
+}

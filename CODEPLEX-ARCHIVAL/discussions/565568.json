@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1299683",
+    "ThreadId": "565568",
+    "Html": "I do understand that having a CA would help, but I cannot implement it at this point in time.<br />\n<br />\nThe situation is as follows:<br />\n<br />\nWe have two domains, on two networks, with two WSUS/WPP servers. Server A (Network A, Domain A) and Server B (Network B, Domain B)<br />\n<br />\nIn the past I've managed to import the self-signed WPP/WSUS certificate created on Server A into Server B, and use it as a signing certificate, which allowed me to easily import new packages from Server A to Server B to avoid creating each package twice on each server.<br />\n<br />\nRecently I had to reinstall Server B from scratch and I don't remember how I imported the self-signed certificate created on Server A to Server B in the past. I tried using a .CER to .PFX converter found here (<a href=\"https://certopfx.codeplex.com/\" rel=\"nofollow\">https://certopfx.codeplex.com/</a>), but that doesn't seem to work.<br />\n<br />\nAs I said above, I was able to accomplish this somehow before, on the old Server B, but I just don't remember how I did it or for some reason it does not work this time around.<br />\n<br />\nAny input would be appreciated.<br />\n",
+    "PostedDate": "2014-09-05T06:30:28-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1299697",
+    "ThreadId": "565568",
+    "Html": "On server A : <br />\n<ul>\n<li>Run MMC.exe</li>\n<li>Add Certificate Snappin</li>\n<li>Go to Wsus store</li>\n<li>\nExport it as .PFX file (Export the private key)<br />\n</li>\n</ul>\nOn server B : <br />\n<ul>\n<li>Run WPP</li>\n<li>Got to Tools -&gt; Certificate</li>\n<li>Fill the 'Pasword' field and click on 'Import certificate'</li>\n<li>Provide the PFX file.</li>\n</ul>\n",
+    "PostedDate": "2014-09-05T07:10:39.957-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:16:54.223-07:00"
+  }
+]

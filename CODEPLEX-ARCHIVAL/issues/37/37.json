@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update Detail Viewer",
+      "DisplayName": "Update Detail Viewer"
+    },
+    "ClosedComment": "Added a checkbox to filter out computers group with approval.",
+    "ClosedDate": "2013-05-08T01:59:10.35-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "In the Update Detail Viewer, report tab, allow to filter computers group with approval.\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1305.03",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-08T01:57:07.937-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Allow to filter on computer group with approval",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 37
+  },
+  "FileAttachments": [
+    {
+      "FileId": 677317,
+      "FileName": "Filter Approval false.png",
+      "DownloadUrl": ".\\677317"
+    },
+    {
+      "FileId": 677318,
+      "FileName": "Filter Approval true.png",
+      "DownloadUrl": ".\\677318"
+    }
+  ],
+  "Comments": []
+}

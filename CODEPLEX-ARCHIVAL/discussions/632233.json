@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1416745",
+    "ThreadId": "632233",
+    "Html": "Hi all,\r<br />\n<br />\nI'm pretty new to the the topic of managing 3rd party updates.\r<br />\n<br />\nHere's a short description of my environment:<br />\n<ul>\n<li>Windows Server 2008 R2</li>\n<li>SCCM 2012 R2</li>\n<li>WSUS Version 3.2.7600.226</li>\n<li>\napprox. 600 Windows clients and servers (XP, W7 x64, Server 2008 R2)<br />\n</li>\n</ul>\nWe deploy all our software via SCCM to our clients, even Windows Updates (which come out from WSUS into SCCM).\r<br />\nNow I'm looking for a possibility to import 3rd party software updates (especially Adobe Flash Player, Adobe Reader 11, others might follow) into SCCM.\r<br />\nI already read about System Center Updates Publisher (SCUP) for SCCM, WSUS Package Publisher (WPP) and Local Update Publisher (LUP).\r<br />\nThe problem is the decision which tool might be the right for my purpose.\r<br />\nI have seen on the one hand that SCUP supports Adobe update catalogs and import them via WSUS into SCCM. That's nice. But can I create own catalogs with SCUP?\r<br />\nOn the other hand I have seen that with LUP and WPP I can create own Update catalogs based on msi, msp and exe files. This seems good for me. But will they be imported into SCCM after they are imported into WSUS? Or do I have to deploy these updates via Group Policy?\r<br />\n<br />\nAny thoughts and suggestions are welcome.\r<br />\n<br />\nRegards,\r<br />\n<br />\nMichael<br />\n",
+    "PostedDate": "2015-04-22T04:16:45.42-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1416791",
+    "ThreadId": "632233",
+    "Html": "Hi, I don't have SCCM, but as WPP publish package into WSUS, I think SCCM can see these updates. Eventually, I will have to make these update visible into WSUS with the appropriate option.\r<br />\n<br />\nLet us know.<br />\n",
+    "PostedDate": "2015-04-22T06:20:45.183-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1423315",
+    "ThreadId": "632233",
+    "Html": "Hi,\r<br />\n<br />\nafter some time of try-and-error-testing of different tools for 3rd party software updates I came to the conclusion that both SCUP and WPP can create own update packages beside loading ready-to-use update catalogs and these packages will be shown in SCCM.\r<br />\nSo it's your decision which tool to use.\r<br />\n<br />\nRegards,\r<br />\n<br />\nMichael<br />\n",
+    "PostedDate": "2015-05-06T04:13:29.557-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-05-06T04:13:34.797-07:00"
+  }
+]

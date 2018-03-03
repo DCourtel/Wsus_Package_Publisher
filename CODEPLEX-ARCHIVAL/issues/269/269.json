@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-11T22:22:46.487-08:00",
+    "CommentCount": 7,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nif I create an update in WPP, deploy it, close WPP and reopen it, it is in the WSUS but not any more in the WPP what is the Problem with this?",
+    "LastUpdatedDate": "2015-11-11T22:22:46.487-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-05-20T04:00:56.557-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Problem with Updates",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 269
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Using search could have helped. ;)\nhttps://wsuspackagepublisher.codeplex.com/discussions/584596\n\nRegards\nNorbert",
+      "PostedDate": "2015-05-20T04:23:28.437-07:00",
+      "Id": 184579
+    },
+    {
+      "Message": "Thanks for your help, it worked fine",
+      "PostedDate": "2015-05-20T05:21:41.31-07:00",
+      "Id": 184581
+    },
+    {
+      "Message": "But now i have another Problem, I choose Firefox.exe to install, no rules and imported it to the WSUS.\nThe clients can install the update now.\nThey install the update successfull and after reboot the same update apears again and again.\nWhat can I do that the update doesn't apear again after installation?",
+      "PostedDate": "2015-05-20T05:24:09.213-07:00",
+      "Id": 184582
+    },
+    {
+      "Message": "You have to understand the meaning of the rules. If you don't define any, how should your Clients determine if the update is needed or already installed? So the Problem you are seeing isn't a Problem with WPP but with your understanding of the Technology in use. ;)\n\nRegards\nNorbert",
+      "PostedDate": "2015-05-20T07:17:15.153-07:00",
+      "Id": 184586
+    },
+    {
+      "Message": "For more understanding you can read one or all HowTos in German: http://www.wsus.de/wpp\n",
+      "PostedDate": "2015-05-20T08:41:34.257-07:00",
+      "Id": 184593
+    },
+    {
+      "Message": "Hi. I have a similar problem with Firefox 38.0.1. I am using wpp Release v1.3.1504.15.\n\nThe solution was to use an old version of wpp, Release v1.3.1411.09 and the firefox was deployed (I use this because I already have it)\n\nProblably there is some troublem with the exe files, because the msi worked ok.\n",
+      "PostedDate": "2015-05-20T12:01:47.92-07:00",
+      "Id": 184607
+    },
+    {
+      "Message": "Just read this and use the latest version.\nhttp://wsuspackagepublisher.codeplex.com/workitem/267 This is a new feature with the only problem, not removing the \"legacy\" defined .msi rule.\n\nHth\nNorbert",
+      "PostedDate": "2015-05-20T12:28:02.063-07:00",
+      "Id": 184610
+    }
+  ]
+}

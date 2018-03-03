@@ -1,0 +1,122 @@
+[
+  {
+    "Id": "1035813",
+    "ThreadId": "441605",
+    "Html": "Hi there,<br />\n<br />\nHave just gotten the software setup, and have been very happy with how well the documentation was put together. So far step by step install and certificate import went well.<br />\n<br />\nHowever now when following the instructions on distributing flash update get the following error when going to publish: <br />\n<br />\nVerification of file signature failed for file: \\SRV-V-WSUS\\UpdateServicesPackages\\fc13f328-82df-437d-a04d-6a5a15c19120\\001ffc87-053e-449d-ae52-100d73988d18_1.cab<br />\n<br />\nNow, perhaps I'm trying to have my cake and eat it too, but my WSUS server is set not to store updates locally, but on windows update. Could this be the reason? Or am I missing something obvious?<br />\n<br />\nThanks!<br />\n<pre><code>See the end of this message for details on invoking \njust-in-time (JIT) debugging instead of this dialog box.\n\n************** Exception Text **************\nSystem.InvalidOperationException: Verification of file signature failed for file: \\\\SRV-V-WSUS\\UpdateServicesPackages\\fc13f328-82df-437d-a04d-6a5a15c19120\\001ffc87-053e-449d-ae52-100d73988d18_1.cab\n   at Microsoft.UpdateServices.Internal.BaseApi.Publisher.GetLocalFileDetails()\n   at Microsoft.UpdateServices.Internal.BaseApi.Publisher.VerifyAndPublishPackage()\n   at Microsoft.UpdateServices.Internal.BaseApi.Publisher.PublishPackage(String sourcePath, String additionalSourcePath, String packageDirectoryName, Boolean dualSign, String httpTimeStamp)\n   at Microsoft.UpdateServices.Internal.BaseApi.Publisher.PublishPackage(String sourcePath, String additionalSourcePath, String packageDirectoryName)\n   at Wsus_Package_Publisher.WsusWrapper.PublishUpdate(FrmUpdateFilesWizard filesWizard, FrmUpdateInformationsWizard informationsWizard, FrmUpdateRulesWizard isInstalledRulesWizard, FrmUpdateRulesWizard isInstallableRulesWizard)\n   at Wsus_Package_Publisher.FrmUpdatePublisher.Publish()\n   at Wsus_Package_Publisher.FrmUpdateWizard.updateIsInstallableRulesWizard_btnNext_Click(Object sender, EventArgs e)\n   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)\n   at System.Windows.Forms.Control.WmMouseUp(Message&amp; m, MouseButtons button, Int32 clicks)\n   at System.Windows.Forms.Control.WndProc(Message&amp; m)\n   at System.Windows.Forms.ButtonBase.WndProc(Message&amp; m)\n   at System.Windows.Forms.Button.WndProc(Message&amp; m)\n   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)\n\n\n************** Loaded Assemblies **************\nmscorlib\n    Assembly Version: 4.0.0.0\n    Win32 Version: 4.0.30319.18033 built by: FX45RTMGDR\n    CodeBase: file:///C:/Windows/Microsoft.NET/Framework64/v4.0.30319/mscorlib.dll\n----------------------------------------\nWsus Package Publisher\n    Assembly Version: 1.1.1304.12\n    Win32 Version: 1.1.1304.12\n    CodeBase: file:///C:/Users/administrator.VACANADA/Downloads/Release%20v1.1.1304.12%20(x64)/Wsus%20Package%20Publisher.exe\n----------------------------------------\nSystem.Windows.Forms\n    Assembly Version: 4.0.0.0\n    Win32 Version: 4.0.30319.18037 built by: FX45RTMGDR\n    CodeBase: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/System.Windows.Forms/v4.0_4.0.0.0__b77a5c561934e089/System.Windows.Forms.dll\n----------------------------------------\nSystem.Drawing\n    Assembly Version: 4.0.0.0\n    Win32 Version: 4.0.30319.18022 built by: FX45RTMGDR\n    CodeBase: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/System.Drawing/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Drawing.dll\n----------------------------------------\nSystem\n    Assembly Version: 4.0.0.0\n    Win32 Version: 4.0.30319.18033 built by: FX45RTMGDR\n    CodeBase: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/System/v4.0_4.0.0.0__b77a5c561934e089/System.dll\n----------------------------------------\nMicrosoft.UpdateServices.Administration\n    Assembly Version: 4.0.0.0\n    Win32 Version: 6.2.9200.16384\n    CodeBase: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/Microsoft.UpdateServices.Administration/v4.0_4.0.0.0__31bf3856ad364e35/Microsoft.UpdateServices.Administration.dll\n----------------------------------------\nSystem.Configuration\n    Assembly Version: 4.0.0.0\n    Win32 Version: 4.0.30319.17929 built by: FX45RTMREL\n    CodeBase: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/System.Configuration/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Configuration.dll\n----------------------------------------\nSystem.Xml\n    Assembly Version: 4.0.0.0\n    Win32 Version: 4.0.30319.18033 built by: FX45RTMGDR\n    CodeBase: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/System.Xml/v4.0_4.0.0.0__b77a5c561934e089/System.Xml.dll\n----------------------------------------\nWsus Package Publisher.resources\n    Assembly Version: 1.1.1304.12\n    Win32 Version: 1.1.1304.12\n    CodeBase: file:///C:/Users/administrator.VACANADA/Downloads/Release%20v1.1.1304.12%20(x64)/en/Wsus%20Package%20Publisher.resources.DLL\n----------------------------------------\nCheckComboBox\n    Assembly Version: 1.1.1212.22\n    Win32 Version: 1.1.1212.22\n    CodeBase: file:///C:/Users/administrator.VACANADA/Downloads/Release%20v1.1.1304.12%20(x64)/CheckComboBox.DLL\n----------------------------------------\nMicrosoft.UpdateServices.Utils\n    Assembly Version: 4.0.0.0\n    Win32 Version: 6.2.9200.16384\n    CodeBase: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/Microsoft.UpdateServices.Utils/v4.0_4.0.0.0__31bf3856ad364e35/Microsoft.UpdateServices.Utils.dll\n----------------------------------------\nMicrosoft.UpdateServices.BaseApi\n    Assembly Version: 4.0.0.0\n    Win32 Version: 6.2.9200.16384\n    CodeBase: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/Microsoft.UpdateServices.BaseApi/v4.0_4.0.0.0__31bf3856ad364e35/Microsoft.UpdateServices.BaseApi.dll\n----------------------------------------\nSystem.Core\n    Assembly Version: 4.0.0.0\n    Win32 Version: 4.0.30319.17929 built by: FX45RTMREL\n    CodeBase: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/System.Core/v4.0_4.0.0.0__b77a5c561934e089/System.Core.dll\n----------------------------------------\nMicrosoft.UpdateServices.DBlayer\n    Assembly Version: 4.0.0.0\n    Win32 Version: 6.2.9200.16384\n    CodeBase: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/Microsoft.UpdateServices.DBlayer/v4.0_4.0.0.0__31bf3856ad364e35/Microsoft.UpdateServices.DBlayer.dll\n----------------------------------------\nSystem.Data\n    Assembly Version: 4.0.0.0\n    Win32 Version: 4.0.30319.18033 built by: FX45RTMGDR\n    CodeBase: file:///C:/Windows/Microsoft.Net/assembly/GAC_64/System.Data/v4.0_4.0.0.0__b77a5c561934e089/System.Data.dll\n----------------------------------------\nMicrosoft.UpdateServices.StringResources\n    Assembly Version: 4.0.0.0\n    Win32 Version: 6.2.9200.16384\n    CodeBase: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/Microsoft.UpdateServices.StringResources/v4.0_4.0.0.0__31bf3856ad364e35/Microsoft.UpdateServices.StringResources.dll\n----------------------------------------\nMicrosoft.UpdateServices.AdminDataAccessProxy\n    Assembly Version: 4.0.0.0\n    Win32 Version: 6.2.9200.16384\n    CodeBase: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/Microsoft.UpdateServices.AdminDataAccessProxy/v4.0_4.0.0.0__31bf3856ad364e35/Microsoft.UpdateServices.AdminDataAccessProxy.dll\n----------------------------------------\nSystem.Web.Services\n    Assembly Version: 4.0.0.0\n    Win32 Version: 4.0.30319.17929 built by: FX45RTMREL\n    CodeBase: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/System.Web.Services/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Web.Services.dll\n----------------------------------------\nMicrosoft.GeneratedCode\n    Assembly Version: 1.0.0.0\n    Win32 Version: 4.0.30319.18033 built by: FX45RTMGDR\n    CodeBase: file:///C:/Windows/Microsoft.Net/assembly/GAC_MSIL/System.Xml/v4.0_4.0.0.0__b77a5c561934e089/System.Xml.dll\n----------------------------------------\nMsiReader\n    Assembly Version: 1.2.1212.8\n    Win32 Version: 1.2.1212.08\n    CodeBase: file:///C:/Users/administrator.VACANADA/Downloads/Release%20v1.1.1304.12%20(x64)/MsiReader.DLL\n----------------------------------------\n\n************** JIT Debugging **************\nTo enable just-in-time (JIT) debugging, the .config file for this\napplication or computer (machine.config) must have the\njitDebugging value set in the system.windows.forms section.\nThe application must also be compiled with debugging\nenabled.\n\nFor example:\n\n&lt;configuration&gt;\n    &lt;system.windows.forms jitDebugging=&quot;true&quot; /&gt;\n&lt;/configuration&gt;\n\nWhen JIT debugging is enabled, any unhandled exception\nwill be sent to the JIT debugger registered on the computer\nrather than be handled by this dialog box.\n\n\n</code></pre>\n\n",
+    "PostedDate": "2013-04-25T13:34:42.137-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1035933",
+    "ThreadId": "441605",
+    "Html": "Hi jonathonz,\r<br />\n<br />\nI never test with this settings, but I suspect that it is not the cause of the problem.\r<br />\nIf you are publishing the update from the Wsus server itself, check : <br />\n<pre><code> - If you are using a selfsign certificate, it should be present in : \n      * (Local Computer)\\Wsus certificate folder.\n      * (Local Computer)\\Trusted Publisher.\n      * (Local Computer)\\Trusted Root Certification Authority.\n - If you are using your own signing-code certificate, it should be present in : \n      * (Local Computer)\\Wsus certificate folder.\n      * (Local Computer)\\Trusted Publisher.\n      * And the Certificate of the authority who have made this certificate should be in the (Local Computer)\\Trusted Roor Certification Authority.\n</code></pre>\n\nIf you are publishing the update from a computer, check : <br />\n<pre><code> - If you are using a selfsign certificate, it should be present in : \n      * (Local Computer)\\Trusted Publisher.\n      * (Local Computer)\\Trusted Root Certification Authority.\n - If you are using your own signing-code certificate, it should be present in :\n      * (Local Computer)\\Trusted Publisher.\n      * And the Certificate of the authority who have made this certificate should be in the (Local Computer)\\Trusted Roor Certification Authority.\n</code></pre>\n\nIn both case, the machine should be reboot so that this can take effect.\r<br />\n<br />\nIf you have installed the Microsoft kb2661254 read this : <a href=\"http://support.microsoft.com/kb/2661254/en\" rel=\"nofollow\">kb2661254</a><br />\n",
+    "PostedDate": "2013-04-25T23:30:12.147-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-12T08:38:13.637-07:00"
+  },
+  {
+    "Id": "1036028",
+    "ThreadId": "441605",
+    "Html": "You were entirely correct regarding publishing the package. After verifying the certs and rebooting, the package published okay! Now will test whether this &quot;mixed mode&quot; will work.<br />\n<br />\nThanks!<br />\n",
+    "PostedDate": "2013-04-26T04:26:13.74-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1036103",
+    "ThreadId": "441605",
+    "Html": "Happy to see that you have solved your problem.<br />\n",
+    "PostedDate": "2013-04-26T07:27:22.59-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1036112",
+    "ThreadId": "441605",
+    "Html": "I'm pleased to report complete success in the deployment of Adobe Flash and Adobe Reader.\r<br />\n<br />\nWSUS Package Publisher is exactly what we need to make our patching solution complete!\r<br />\n<br />\nThanks very much for putting the time and effort into putting this software together, making it publicly available, and for taking the time to provide clear documentation.\r<br />\n<br />\nVery much appreciated!\r<br />\n<br />\nMerci beaucoup!<br />\n",
+    "PostedDate": "2013-04-26T07:39:17.603-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1078846",
+    "ThreadId": "441605",
+    "Html": "Hi DCourtel and team, \r<br />\n<br />\nWe are back again with another concern. We are getting the same problem posted last April (Thread:  Verification of file signature failed for file) when publishing Adobe Flash and Reader. \r<br />\nOur error: \r<br />\nVerification of file signature failed for file: \\&lt;servername&gt;\\UpdateServicesPackages\\42cc6726-c3fe-464b-b8ac-38ec00766262\\e4fc1757-9445-456c-884b-1d437a9d6b97_1.cab\r<br />\nWe have already followed the instructions you have provided regarding the certificate on the thread but we are still getting the same error. Please take note that following Microsoft kb2661254, our certificate file name is Cert.pfx. \r<br />\n<br />\nAlso, we have replica servers.  Do we need to install the WSUS Package Publisher to the replica servers?\r<br />\n<br />\nThanks!<br />\n",
+    "PostedDate": "2013-08-09T11:49:18.127-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1078858",
+    "ThreadId": "441605",
+    "Html": "Hi CTV, welcome back ;-)<br />\n<blockquote>\nPlease take note that following Microsoft kb2661254, our certificate file name is Cert.pfx.<br />\n</blockquote>\nIf you have installed KB2661254, then your certificate <strong>Must</strong> be 1024 bit length at least. Have you check that ?\r<br />\nAll computers with kb2661254 installed on,  will not trust files that has been signed with a certificate of less 1024 bit length !\r<br />\n<br />\nIf it is not the case, you have to delete the current used certificate (use mmc =&gt; certificate ...) from 'Wsus' store', 'Trusted Publisher' store and 'Root authorities' store.\r<br />\nThen make a new certificate and re-import it in these stores. This is in case of you are using a self-signed certificate (issuing by your Wsus server).\r<br />\n<br />\nIf you have your own certificate authority, make a new code-signing certificate and new root authority certificate. Ensure these both two certificates are 1024 bit length or more.\r<br />\n<br />\nIf you have already publish update with the old certificate, you have to resign them with the new one.\r<br />\nNew certificates must be push to clients.\r<br />\n<br />\nKeep me informed.<br />\n",
+    "PostedDate": "2013-08-09T12:40:00.59-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1078860",
+    "ThreadId": "441605",
+    "Html": "<blockquote>\nAlso, we have replica servers. Do we need to install the WSUS Package Publisher to the replica servers? <br />\n</blockquote>\nNo, it's not necessary. As your second server is a replica, there is very few administrative tasks for manage it. Manage your upstream server and the downstream's server will follow.<br />\nIf you have something to do on the replica, you can even do it with the WPP installed on the upstream server. Just add the replica server to the list of server and connect to the replica.<br />\n",
+    "PostedDate": "2013-08-09T12:43:54.763-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1078863",
+    "ThreadId": "441605",
+    "Html": "Thanks for your prompt reply!\r<br />\n<br />\nWe are unable to check if the KB is already installed. Our WSUS/WPP is on Windows Server 2012. We already have more than 1024 bit length Certificate (ours is 2048). Anything else we need to check?\r<br />\n<br />\nThanks again!<br />\n",
+    "PostedDate": "2013-08-09T12:52:15.413-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1078871",
+    "ThreadId": "441605",
+    "Html": "Does it a self-signed certificate or a &quot;Home-made&quot; certificate ?\r<br />\nIn the post of 26 April, you report that you have successfully publish some updates. What have been changes between that date and now ?<br />\n",
+    "PostedDate": "2013-08-09T13:21:39.15-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1078872",
+    "ThreadId": "441605",
+    "Html": "Sorry for the confusion, our username is CTV and we are a different user from jonathonz who orignally posted last April 26th. We thought of using this thread since it's the same issue. \r<br />\n<br />\nThe certificate (it's showing code-signing) we are trying to use was generated from WPP. \r<br />\n<br />\nThanks for the info on the replica server. We were able to add it to the list of server. <br />\n",
+    "PostedDate": "2013-08-09T13:29:03.92-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1078892",
+    "ThreadId": "441605",
+    "Html": "Oh ok, I would have preferred you open another post, but never mind :-)<br />\n<blockquote>\nThe certificate (it's showing code-signing) we are trying to use was generated from WPP.<br />\nIn fact, it's your Wsus server that have generate it. It's a self-signed certificate.<br />\n</blockquote>\nSo, you are using a Wsus on Server 2012. With a self-sign certificate.\r<br />\nThe certificate has been imported in :<br />\n<pre><code>  * (Local Computer)\\Wsus certificate folder ?\n  * (Local Computer)\\Trusted Publisher ?\n  * (Local Computer)\\Trusted Root Certification Authority ?\n</code></pre>\n\nYou have reboot the server after importing the certificate ?\r<br />\nWPP run directly on the Wsus server.\r<br />\nDoes the Wsus server set up to store updates locally or clients will download it from MS servers ?<br />\n",
+    "PostedDate": "2013-08-09T14:05:59.417-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1078908",
+    "ThreadId": "441605",
+    "Html": "The certificate has been imported in\r<br />\n (Local Computer)\\Wsus certificate folder \r<br />\n (Local Computer)\\Trusted Publisher \r<br />\n (Local Computer)\\Trusted Root Certification Authority \r<br />\n<br />\nThe server was rebooted after importing and WPP runs directly on the WSUS server. \r<br />\n<br />\n<strong>Does the Wsus server set up to store updates locally or clients will download it from MS servers ?</strong> \r<br />\n<br />\nIt stores updates locally. \r<br />\n<br />\nThanks!<br />\n",
+    "PostedDate": "2013-08-09T14:42:49.873-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1078917",
+    "ThreadId": "441605",
+    "Html": "Ok, let's try with another certificate.\r<br />\n<br />\nOpen mmc =&gt; certificate =&gt; local computer.\r<br />\ndelete &quot;WSUS Publishers Self-signed&quot; certificate from &quot;Wsus&quot; store, &quot;Trusted Root Authorithies&quot; store and &quot;Trusted Publisher&quot; store. Reboot your server.\r<br />\nLaunch WPP and generate a new self-signed certificate. Import it in &quot;Trusted Root Authorithies&quot; store and &quot;Trusted Publisher&quot; store. Reboot your server.\r<br />\n<br />\nTry to publish a new update.<br />\n",
+    "PostedDate": "2013-08-09T15:11:36.353-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1310261",
+    "ThreadId": "441605",
+    "Html": "Hi DCourtel,\r<br />\n<br />\nI have followed all the steps you mentioned above and I've managed to publish updates with success.<br />\n<pre><code>  * (Local Computer)\\Wsus certificate folder.\n  * (Local Computer)\\Trusted Publisher.\n  * And the Certificate of the authority who have made this certificate should be in the (Local Computer)\\Trusted Roor Certification Authority.\n</code></pre>\n\nDue to the fact that in the environment which I am maintaining we have our own certificate server, I created a Code Signing Certificate according with the guide that is provided on WPP application folder.\r<br />\n<br />\n I would like to ask if it is possible to avoid installing that certificate to all computers in our network cause the Certification Server is a trusted certification authority to all clients.\r<br />\n<br />\nThanks in advance.<br />\n",
+    "PostedDate": "2014-10-03T08:40:31.313-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1321122",
+    "ThreadId": "571826",
+    "Html": "Hi,\r<br />\n<br />\nWe have been using Wsus Package Publisher now for nearly a year and it's great, however, we are running into an issue pushing out updated versions Adobe Flash Player. \r<br />\n<br />\nFor example\r<br />\n<br />\nWe push out Adobe Flash Player version 14 via Wsus Package Publisher to all users. Then about a week later Adobe push out version 15. Some users manually install version 15 as they receive a notification. When they reboot there machine, Wsus Package Publisher tries to install version 14 because its no longer detected. \r<br />\n<br />\nThis has caused a few issues with us because these machines get stuck with &quot;windows installing update 1 of x&quot; when starting up. \r<br />\n<br />\nIs there a way Wsus Package Publisher that you can say, if there's a newer version installed, do not install?\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2014-11-11T18:14:55.877-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1321155",
+    "ThreadId": "571826",
+    "Html": "WWP works as it designed. Deinstall a Update from a Client, after a reboot WU will install the Update again.\r<br />\n<br />\n<br />\nI wrote a small howto for publishing Adobe Flash Player in a Active Directory Evironment. It is in German, maybe you can translate via Bing or Google.\r<br />\n<br />\nThe important thing is to Deactivate the Messages for the users. Use the Group Policy Preferences in your Active Directory. <a href=\"http://www.wsus.de/adobe_flash_player_ueber_wsus_bereitstellen\" rel=\"nofollow\">http://www.wsus.de/adobe_flash_player_ueber_wsus_bereitstellen</a><br />\n",
+    "PostedDate": "2014-11-11T21:49:13.903-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1321224",
+    "ThreadId": "571826",
+    "Html": "Hi,<br />\n<blockquote>\nWhen they reboot there machine, Wsus Package Publisher tries to install version 14 because its no longer detected. <br />\n</blockquote>\nFirst, you need to know that WPP doesn't push any updates on clients. Computers check periodically on Wsus server if an update is available and install it if necessary.\r<br />\n<br />\nThis problem occurs because :<br />\n<ul>\n<li>You have let the ability, for computers, to get new release of Adobe Flash Player from Adobe web site <strong>AND</strong> Wsus.</li>\n<li>\nThe rule 'IsInstallable' for Flash Player update only check if this version is not installed. It should also check if a newer version is not already installed.<br />\n</li>\n</ul>\nAt work, we have desactivated Adobe Auto-update. You can have a look to <a href=\"http://helpx.adobe.com/flash-player/kb/administration-configure-auto-update-notification.html\" rel=\"nofollow\">This page</a><br />\n",
+    "PostedDate": "2014-11-12T02:53:55.63-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1321499",
+    "ThreadId": "571826",
+    "Html": "Thanks,\r<br />\n<br />\nI think i figured it out. Im using a RegstrySZ Version check on \r<br />\n<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Macromedia\\FlashPlayerActiveX\\Version\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Macromedia\\FlashPlayerPlugin\\Version\r<br />\n<br />\nSo far it looks like its working. <br />\n",
+    "PostedDate": "2014-11-12T16:57:32.373-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-11-12T21:49:27.287-08:00"
+  }
+]

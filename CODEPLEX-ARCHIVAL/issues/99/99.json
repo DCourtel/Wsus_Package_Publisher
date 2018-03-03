@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Problem don't lie in WPP. Wsus configuration need to be reviewed.",
+    "ClosedDate": "2013-08-20T02:52:59.6-07:00",
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "I have running my WSUS in SSL Mode with these workaround:\r\nI have enabled the SSL enforcement on these IIS directories: APIRemoting30, ClientWebService, DSSAuthWebService, ServerSyncWebService und SimpleAuthWebService\r\n\r\nand switched to SSL mode by : WSUSUtil.exe configuressl <Intranet-FQDN des Softwareupdatepunkt-Standortsystems>\r\n\r\nWe use our own CA Web Certificate!\r\n\r\nWenn i create a new Update i get allways the error Cannot CreateDirectory!\r\nIf i switch back it works !\r\n\r\nWPP is running on Windows 2012 WSUS Server !\r\n\r\nIn the log it writes:\r\n2013-08-12 10:59:10.838 UTC\tInfo\tw3wp.16\tThreadEntry\tPipelineRuntime.ProcessRequestNotification\r\n2013-08-12 10:59:10.838 UTC\tWarning\tw3wp.16\tSoapExceptionProcessor.SerializeAndThrow\tDiscarding stack trace for user DOMAIN\\NC, IP Address 192.168.20.243, exception System.Security.SecurityException: Fehler bei der Anforderung für Hauptberechtigung.\r\n   bei System.Security.Permissions.PrincipalPermission.ThrowSecurityException()\r\n   bei System.Security.Permissions.PrincipalPermission.Demand()\r\n   bei System.Security.PermissionSet.DemandNonCAS()\r\n   bei Microsoft.UpdateServices.Internal.DatabaseAccess.AdminDataAccess.GetServerVersion()\r\n   bei Microsoft.UpdateServices.Internal.ApiRemoting.GetServerVersion()\r\nDie Aktion, bei der ein Fehler aufgetreten ist:\r\nDemand\r\nDer Typ der ersten Berechtigung, bei der ein Fehler aufgetreten ist:\r\nSystem.Security.Permissions.PrincipalPermission\r\nDie erste Berechtigung, bei der ein Fehler aufgetreten ist:\r\n<IPermission class=\"System.Security.Permissions.PrincipalPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\"\r\nversion=\"1\">\r\n<Identity Authenticated=\"true\"\r\nRole=\"ViewServerSetting\"/>\r\n</IPermission>\r\n\r\nFolgendes wurde angefordert:\r\n<IPermission class=\"System.Security.Permissions.PrincipalPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\"\r\nversion=\"1\">\r\n<Identity Authenticated=\"true\"\r\nRole=\"ViewServerSetting\"/>\r\n</IPermission>\r\n\r\nDie Assembly oder AppDomain, bei der ein Fehler aufgetreten ist:\r\nmscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\r\n2013-08-12 10:59:28.903 UTC\tInfo\tw3wp.25\tThreadEntry\tPipelineRuntime.ProcessRequestNotification\r\n2013-08-12 10:59:28.918 UTC\tWarning\tw3wp.25\tSoapExceptionProcessor.SerializeAndThrow\tDiscarding stack trace for user DOMAIN\\NC, IP Address 192.168.20.243, exception System.Security.SecurityException: Fehler bei der Anforderung für Hauptberechtigung.\r\n   bei System.Security.Permissions.PrincipalPermission.ThrowSecurityException()\r\n   bei System.Security.Permissions.PrincipalPermission.Demand()\r\n   bei System.Security.PermissionSet.DemandNonCAS()\r\n   bei Microsoft.UpdateServices.Internal.DatabaseAccess.AdminDataAccess.GetServerVersion()\r\n   bei Microsoft.UpdateServices.Internal.ApiRemoting.GetServerVersion()\r\nDie Aktion, bei der ein Fehler aufgetreten ist:\r\nDemand\r\nDer Typ der ersten Berechtigung, bei der ein Fehler aufgetreten ist:\r\nSystem.Security.Permissions.PrincipalPermission\r\nDie erste Berechtigung, bei der ein Fehler aufgetreten ist:\r\n<IPermission class=\"System.Security.Permissions.PrincipalPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\"\r\nversion=\"1\">\r\n<Identity Authenticated=\"true\"\r\nRole=\"ViewServerSetting\"/>\r\n</IPermission>\r\n\r\nFolgendes wurde angefordert:\r\n<IPermission class=\"System.Security.Permissions.PrincipalPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\"\r\nversion=\"1\">\r\n<Identity Authenticated=\"true\"\r\nRole=\"ViewServerSetting\"/>\r\n</IPermission>\r\n\r\nDie Assembly oder AppDomain, bei der ein Fehler aufgetreten ist:\r\nmscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\r\n",
+    "LastUpdatedDate": "2013-08-20T02:52:59.6-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-08-13T08:02:48.963-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Out of scope"
+    },
+    "Summary": "CreateDirectory failed if WSUS running in SSL Mode",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 99
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Did you reboot the Server after enabling SSL-Mode? I WPP and WSUS on the same Machine?",
+      "PostedDate": "2013-08-13T09:27:06.567-07:00",
+      "Id": 109622
+    },
+    {
+      "Message": "Can you reproduce the bug, then go to 'Help', 'Send Debug Info' and sending the log file.\n\nThanks.",
+      "PostedDate": "2013-08-13T11:09:36.26-07:00",
+      "Id": 109646
+    },
+    {
+      "Message": "At work, I run the same configuration (but on Server 2008R2) without any problem.",
+      "PostedDate": "2013-08-14T02:53:29.64-07:00",
+      "Id": 109839
+    },
+    {
+      "Message": "Did you enable the SSL Mode as described in this HowTo? http://www.wsus.de/ssl_kommunikation It is in German, but i see, the Errormessages are in German too. ;)",
+      "PostedDate": "2013-08-14T03:39:07.643-07:00",
+      "Id": 109848
+    },
+    {
+      "Message": "Hi, I have received a crash report at 14.08.2013 10:31:28 from ¤¤¤¤¤¤ @ ictgmbh.¤¤¤\n\nI assume it is yours.\nThe error message was :  _System.ComponentModel.Win32Exception : CreateDirectory failed_\nIt occurs when calling the API method publisher.PublishPackage. This mean that the problem doesn't lie in WPP but most likely in your WSUS configuration.\n\nI have notice that your Windows Server seem to have been installed in English but the error message you post here is in German. May be something to dig.",
+      "PostedDate": "2013-08-14T10:31:59.643-07:00",
+      "Id": 109902
+    }
+  ]
+}

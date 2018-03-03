@@ -1,0 +1,56 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Computer List Viewer",
+      "DisplayName": "Computer List Viewer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-06T11:44:41.817-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nis it possible to alter the size of Computer table according to screenresolution and/or windowssize?\r\nNow there is a large Grey \"nothing\" right of the table. See screenshot.\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.2.1305.26",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-06T05:25:47.533-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Table size in computerview",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 59
+  },
+  "FileAttachments": [
+    {
+      "FileId": 690309,
+      "FileName": "wpp-table-size.png",
+      "DownloadUrl": ".\\690309"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Yes, I have seen that. This happen only in the English version (And I swear, I didn't do that to promote the French language :-))\nIt's already fix in the next release.",
+      "PostedDate": "2013-06-06T11:44:06.06-07:00",
+      "Id": 102294
+    },
+    {
+      "Message": "Great. ;)",
+      "PostedDate": "2013-06-06T12:00:55.92-07:00",
+      "Id": 102301
+    }
+  ]
+}

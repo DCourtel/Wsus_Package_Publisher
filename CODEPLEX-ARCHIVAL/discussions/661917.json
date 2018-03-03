@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1494029",
+    "ThreadId": "661917",
+    "Html": "Hallo Forum,\r<br />\nseit einigen Wochen ist der Menüpunkt &quot;Katalogabonnements verwalten&quot; unter dem Menü &quot;Updates&quot; ausgegraut, die Kataloge unter C:\\Program Files (x86)\\Wsus Package Publisher\\Subscribed Catalogs nicht mehr auf dem aktuellen Stand. Ein manueller Import gelingt.\r<br />\nWie kann ich die Abo-Verwaltung evtl. wieder reanimieren  Bin für jeden Hinweis dankbar .\r<br />\n<br />\nBest \r<br />\nLehmannC<br />\n",
+    "PostedDate": "2017-03-14T02:34:09.287-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1494526",
+    "ThreadId": "661917",
+    "Html": "Hab ich noch nicht gesehen das Phänomen.\r<br />\n<br />\nHast du mehrere Katalog Abbos laufen ? \r<br />\nDer Pfad zu Adobe Flash hat sich ja geändert, nicht das sich da was wegen Nichterreichbarkeit selbstständig lahmgelegt hat.<br />\n",
+    "PostedDate": "2017-03-23T06:46:31.607-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1496747",
+    "ThreadId": "661917",
+    "Html": "I searched some weeks for this.\r<br />\n<br />\ncause:\r<br />\nMeta-Data for subscribed catalog has an error.\r<br />\n<br />\nsolution:\r<br />\nDelete the corrupt/wrong file(s) under \\WSUS Package Publisher\\Subscribed Catalogs\\MetaData\r<br />\n<br />\n<br />\nI had only one file there from a first try to add a custom catalog.<br />\n<hr />\nAuf deutsch: Die kaputte Datei(en) im Verzeichnis \\WSUS Package Publisher\\Subscribed Catalogs\\MetaData löschen.<br />\n",
+    "PostedDate": "2017-05-25T14:15:17.34-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2017-07-25T06:21:53.99-07:00"
+  },
+  {
+    "Id": "1497503",
+    "ThreadId": "661917",
+    "Html": "Hallo Parad0x,\r<br />\n<br />\nviel zu spät, aber trotzdem ein herzliches Dankeschön, das wars (in meinem Fall eine einsame .xml)\r<br />\n<br />\nBest LehmannC<br />\n",
+    "PostedDate": "2017-07-25T06:21:50.037-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

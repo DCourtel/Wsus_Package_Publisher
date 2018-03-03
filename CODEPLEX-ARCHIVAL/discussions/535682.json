@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1215272",
+    "ThreadId": "535682",
+    "Html": "I just generated a openssl certificate (4096 bits) as a password protected pfx file.<br />\nWPP doesn't want to import this certificate.<br />\nI tried to do it directly into the local computer/WSUS storage. Without any problems. Windows imports it. The only difference I see is the intended purposes: it's not &quot;Code Signing&quot; but &quot;&lt;All&gt;&quot;.<br />\nDoes this have an influence?<br />\n<br />\nThanks for your help.<br />\n",
+    "PostedDate": "2014-02-26T11:06:13.12-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1215812",
+    "ThreadId": "535682",
+    "Html": "<blockquote>\nWPP doesn't want to import this certificate.<br />\n</blockquote>\nWhat is the error message ?\r<br />\nWPP doesn't check the purpose of the certificate. \r<br />\nCan you try to do this :<br />\n<ul>\n<li>Go to 'Tools' -&gt; 'Settings' -&gt; 'Server' Tab</li>\n<li>Check the checkbox 'Ignore Code-Signing' certificate validation errors'.</li>\n<li>\nTry to import the certificate again.<br />\n</li>\n</ul>\nI don't know why, but some certificate issued out by OpenSSL brings problems.<br />\n",
+    "PostedDate": "2014-02-27T12:47:54.92-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:54:22.943-07:00"
+  }
+]

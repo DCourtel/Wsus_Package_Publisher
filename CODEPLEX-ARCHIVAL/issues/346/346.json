@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "For this type of question, open a «Discussion» instead of an «Issue».",
+    "ClosedDate": "2017-01-30T21:56:38.097-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Has anyone had any experience/ success with deploying this web content filtering client software called Forcepoint Triton AP Endpoint, formerly known as Websense? The package contains an msi file but the tricky bit is deploying the WSCONTEXT syntax code with it which I believe the code for the websense proxy server.",
+    "LastUpdatedDate": "2017-01-30T21:56:38.253-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-08-11T08:12:45.147-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Forcepoint Triton AP Endpoint deployment",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 346
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

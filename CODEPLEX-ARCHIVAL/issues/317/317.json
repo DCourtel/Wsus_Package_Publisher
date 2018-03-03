@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Please, for this type of question, open a «Discussion» instead of an «Issue». ",
+    "ClosedDate": "2017-01-30T22:08:30.25-08:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "I am having a problem applying Adobe Reader and Flash updates now using the msp files. Can you please advise on how to get these updates installed.  I get a not applicable for the status in WSUS package publisher.\r\n\r\nThanks,",
+    "LastUpdatedDate": "2017-01-30T22:08:30.267-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-01-07T10:33:20.45-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Adode Reader and Flash updates",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 317
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I have figured out to get the updates to show up",
+      "PostedDate": "2016-01-11T07:46:08.443-08:00",
+      "Id": 195272
+    },
+    {
+      "Message": "2 servers 2008R2. On each, wsus + wup (version 1.3.1511.15)\n\nOn the first one, patches run successfully.\nexamples : (Adobe Reader XI update 13, Adobe Reader DC AcroRdrDCUpd1501020056.msp)  \n\nOn the second one, with exactly same patches, Package Publisher says : \"Not Applicable\"\n\nOn stations using second server, manually install is OK\nmsiexec /p AcroRdrDCUpd1501020056.msp /qn \n\nAny idea ?\nRegards",
+      "PostedDate": "2016-01-14T06:09:38.823-08:00",
+      "Id": 195344
+    },
+    {
+      "Message": "HI!\n\nI have the same problem.\n\nRegards\nSabine",
+      "PostedDate": "2016-01-22T08:53:59.953-08:00",
+      "Id": 195698
+    }
+  ]
+}

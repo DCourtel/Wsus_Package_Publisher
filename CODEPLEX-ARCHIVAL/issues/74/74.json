@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-21T13:26:12.663-07:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nis there a possibility to protect the certificate created with the Package Publisher with a password?\r\nBecause if I am not mistaken, every user on a client which gets the certificate via GPO is able to export the certificate and create updates or installation packes as well. And every other client with that certificate would trust such installation packages.\r\nIn my opinion it would be great to be able to make configurations before creating a certificate. For example validity and, if it is not possible right now, password protection and things like that.\r\n\r\nMichael",
+    "LastUpdatedDate": "2013-06-21T13:26:12.663-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-21T05:30:01.437-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Configuring certificate creation",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 74
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "No, the Clients only get the public part without the private key if you use the copy Routine in WPP. So no harm can be done with this.\n\nRegards\nNorbert",
+      "PostedDate": "2013-06-21T06:06:45.903-07:00",
+      "Id": 103770
+    },
+    {
+      "Message": "I didn't know that, glad to hear it :) Thank you!",
+      "PostedDate": "2013-06-21T06:37:41.33-07:00",
+      "Id": 103771
+    },
+    {
+      "Message": "That's right, the only thing you can do is to establish a trust relation between a computer and a signed package.\nYou won't be able to sign your own package.",
+      "PostedDate": "2013-06-21T13:25:51.477-07:00",
+      "Id": 103815
+    }
+  ]
+}

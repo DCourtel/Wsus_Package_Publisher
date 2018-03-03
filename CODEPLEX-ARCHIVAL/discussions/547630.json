@@ -1,0 +1,98 @@
+[
+  {
+    "Id": "1253193",
+    "ThreadId": "547630",
+    "Html": "After creating a custom update, no customupdateengine.exe is pre-filled, and no customupdate xml-file was build.\r<br />\n<br />\nWPP 1.3.1405.17, Server 2003 and WSUS 3.2.7600.226\r<br />\n<br />\nwhat's wrong here ??<br />\n",
+    "PostedDate": "2014-06-05T01:50:12.293-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1253213",
+    "ThreadId": "547630",
+    "Html": "I can't get this issue to happen on my computer (even with the same version of WPP).\r<br />\nIs it the first installation or, do you have a previous installation and then upgrade to 1.3.1405.17 ?\r<br />\nDoes it have already works ?<br />\n",
+    "PostedDate": "2014-06-05T03:02:42.12-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1253217",
+    "ThreadId": "547630",
+    "Html": "Yes, it works the first time with a previous installation.\r<br />\nI think the sixth installation has failed with the previous installation, and also with the upgrade.<br />\n",
+    "PostedDate": "2014-06-05T03:18:02.717-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1253443",
+    "ThreadId": "547630",
+    "Html": "can you try to reproduce the bug and then go to %temp% and search for the file WPP-Guid.log. Send it to me at <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a><br />\n",
+    "PostedDate": "2014-06-05T12:28:01.587-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1253845",
+    "ThreadId": "547630",
+    "Html": "I can concur with Thomas on that, see below at hte bottom of this post. I stopped after getting past adding files. The next screen &quot;Creation window&quot; I see the command line field is filled out with the action file switch and the file but the previous screen is not autofilled out. \r<br />\n<br />\nThomas: I know that I can successfully get the customupdateengine.exe &amp; it's action file filled if I use it from the WSUS server, but not using my workstation. Perhaps we need to purge our %temp% before running this latest version?\r<br />\n<br />\nI sent you the file DCourtel.<br />\n",
+    "PostedDate": "2014-06-06T12:18:10.273-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1253900",
+    "ThreadId": "547630",
+    "Html": "Can you check if 'CustomUpdateEngine.exe' if present in the same directory than 'Wsus Package Publisher.exe'<br />\n",
+    "PostedDate": "2014-06-06T14:50:35.863-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1254380",
+    "ThreadId": "547630",
+    "Html": "It's sitting in the same folder:<br />\n<pre><code>05/23/2014  01:42 PM    &lt;DIR&gt;          .\n05/23/2014  01:42 PM    &lt;DIR&gt;          ..\n08/25/2013  03:29 PM           478,664 Catalogs' subscriptions management.pdf\n11/10/2013  10:52 PM            25,088 CheckComboBox.dll\n10/01/2012  08:35 PM           253,969 Creating a Code Signing Certificate.pdf\n11/02/2013  11:58 AM           793,049 Custom Updates.pdf\n05/17/2014  10:01 PM           142,336 CustomUpdateCreator.exe\n05/17/2014  10:00 PM           374,784 CustomUpdateElements.dll\n05/17/2014  10:01 PM             7,680 CustomUpdateElementViewer.dll\n05/17/2014  10:00 PM            50,176 CustomUpdateEngine.exe\n10/16/2013  10:06 PM    &lt;DIR&gt;          de\n10/16/2013  10:06 PM    &lt;DIR&gt;          en\n11/02/2013  03:45 PM    &lt;DIR&gt;          Exported Packages\n10/18/2013  09:05 PM    &lt;DIR&gt;          fr\n08/25/2013  03:27 PM           368,184 Importing Updates from Vendor's Catalog.pdf\n10/10/2013  08:56 PM           769,629 Installation Guide.pdf\n05/17/2014  10:00 PM            14,336 InstallPendingUpdates.exe\n09/01/2013  08:21 PM            86,016 Interop.WUApiLib.dll\n08/09/2013  02:48 PM            49,152 Microsoft.Deployment.Compression.Cab.dll\n08/09/2013  02:48 PM            36,864 Microsoft.Deployment.Compression.dll\n05/12/2013  05:51 PM            11,776 MsiReader.dll\n12/02/2013  11:58 AM               416 Options.xml\n09/01/2013  08:21 PM            23,040 ProductKiller.exe\n05/23/2014  01:42 PM    &lt;DIR&gt;          ru\n12/05/2013  12:12 AM    &lt;DIR&gt;          Rules\n12/23/2013  12:33 AM    &lt;DIR&gt;          Saved Rules\n08/25/2013  06:38 PM    &lt;DIR&gt;          Shared Catalogs\n05/17/2014  10:01 PM           404,992 ShowPendingUpdates.exe\n12/23/2013  12:34 AM    &lt;DIR&gt;          Subscribed Catalogs\n12/05/2013  12:17 AM               753 Wsus Package Publisher Certificate.cer\n05/17/2014  10:01 PM         4,823,040 Wsus Package Publisher.exe\n12/02/2013  01:28 PM             2,907 Wsus Package Publisher.lnk\n              21 File(s)      8,716,851 bytes\n              11 Dir(s)  89,256,792,064 bytes free\n</code></pre>\n\n",
+    "PostedDate": "2014-06-09T05:58:13.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1254460",
+    "ThreadId": "547630",
+    "Html": "Can you right click on the file and choose &quot;Properties&quot;. Then, in the General Tab, look at the bottom to see if there is a warning such as &quot;This file came from another computer and might be blocked to help protect this computer&quot;.<br />\n",
+    "PostedDate": "2014-06-09T08:19:46.343-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1254486",
+    "ThreadId": "547630",
+    "Html": "Checking out the CustomUpdateCreator.exe has no warning &quot;This file came from another computer and might be blocked to help protect this computer&quot;.<br />\n",
+    "PostedDate": "2014-06-09T09:03:27.667-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1254769",
+    "ThreadId": "547630",
+    "Html": "&quot;This file came from another computer and might be blocked to help protect this computer&quot;\r<br />\nThis was the failure - thank you !<br />\n",
+    "PostedDate": "2014-06-10T05:29:37.523-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-06-11T11:04:32.22-07:00"
+  },
+  {
+    "Id": "1254960",
+    "ThreadId": "547630",
+    "Html": "<blockquote>\nChecking out the CustomUpdateCreator.exe has no warning <br />\n</blockquote>\nPlease, check <strong>CustomUpdateEngine</strong> instead  of CustomUpdateCreator.\r<br />\n<br />\nI have sent you a release of WPP with more logging around this function. \r<br />\nWhat is the full path of 'CustomUpdateEngine.exe'  ?<br />\n",
+    "PostedDate": "2014-06-10T12:59:58.617-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1255316",
+    "ThreadId": "547630",
+    "Html": "Thanks for your feed back.\r<br />\nEffectively, using C:\\Windows\\System32\\hstart.exe  to start WPP as a parameter is a scenario that I didn't expected.\r<br />\n<br />\nGood to know.<br />\n",
+    "PostedDate": "2014-06-11T11:04:19.753-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-06-11T11:04:26.26-07:00"
+  }
+]

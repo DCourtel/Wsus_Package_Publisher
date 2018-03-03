@@ -1,0 +1,1217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DescriptionInformationsWizard" xml:space="preserve">
+    <value>Indiquez içi les informations concernant la mise à jour. Les champs en caractères gras sont obligatoires.
+
+Editeur (Obligatoire) : C'est içi que vous définissez le nom de l'éditeur de la mise à jour. Par exemple : Oracle, Sun, Symantec, Adobe ...
+
+Nom Du Produit (Obligatoire) : Nom du produit mis à jour. Par exemple : Java, Endpoint Protection 12, Flash Player ...
+
+Titre (Obligatoire) : C'est içi que vous définissez le titre de la mise à jour. Par exemple : Java 6 update 31, Symantec Endpoint Protection 12.1 RU1 MP1, Flash Player 11.2.0.233...
+
+Description (Obligatoire) : Vous pouvez préciser içi des informations concernant la mise à jour. Tels que, les améliorations apportées, les bugs corrigés...
+
+URL Plus d'Info (Facultatif) : Précisez içi une URL vers une page web donnant plus d'informations sur la mise à jour.
+
+URL du Support (Facultatif) : Précisez içi une URL vers une page web du support.
+
+Peut nécessiter une action de l'utilisateur : Cochez la case si la mise à jour peut requérire une intervention de l'utilisateur.
+
+Nécessite une connexion réseau : Cochez la case si la mise à jour a besoin du réseau pour s'intaller.
+
+Classification : 
+
+Impact : 
+
+Comportement de redémarrage : Précisez si la mise à jour à besoin ou non de redémarrer le poste pour finaliser son installation.
+
+Id du bulletin de sécurité (Facultatif) : Précisez l'Id du bulletin de sécurité fourni par l'éditeur.
+
+Sévérité Msrc (Facultatif) : Précisez le code Msrc fournis par l'éditeur.
+
+Id CVE (Facultatif) : Précisez le code CVE fournis par l'éditeur.
+
+Id de l'article KB (Facultatif) : Précisez le numéro de KB de l'article.
+
+Ligne de commande (Facultatif) : Indiquez un ou plusieurs paramètres pour le fichier de mise à jour. Par exemple /q, /s ou /silent. Pour les fichiers .msi il n'est pas nécessaire de préciser d'option pour rendre l'installation silencieuse. Wsus le fait automatiquement.
+
+Codes de retour (Facultatif) : Uniquement pour les fichiers .EXE. Signification du code renvoyé à la fin de l'installation.
+
+
+Cliquez sur 'Suivant' pour passer à la prochaine étape.</value>
+  </data>
+  <data name="DescriptionUpdateFileWizard" xml:space="preserve">
+    <value>Indiquez içi le/les fichiers pour créer la mise à jour. Les champs en caractères gras sont obligatoires.
+
+Fichier de mise à jour (Obligatoire) : Sélectionnez un fichier msi, msp ou exe qui correspond au binaire de la mise à jour.
+
+Fichiers additionnels (Facultatif) : Sélectionnez un ou plusieurs fichiers nécessaire à l'application de la mise à jour. Par exemple des fichiers de configuration ou fichier de réponses.
+
+
+
+Cliquez sur 'Suivant' pour passer à la prochaine étape.</value>
+  </data>
+  <data name="openFileDialogueUpdateFile" xml:space="preserve">
+    <value>Tous les fichiers accepté|*.msi;*.msp;*.exe|Fichiers MSI|*.msi|Fichiers MSP|*.msp|Fichiers EXE|*.exe</value>
+  </data>
+  <data name="RuleAnd" xml:space="preserve">
+    <value>ET</value>
+  </data>
+  <data name="GroupEnd" xml:space="preserve">
+    <value>&lt;Terminer </value>
+  </data>
+  <data name="RuleOR" xml:space="preserve">
+    <value>OU</value>
+  </data>
+  <data name="GroupStart" xml:space="preserve">
+    <value>&lt;Commencer </value>
+  </data>
+  <data name="ArrivalDate" xml:space="preserve">
+    <value>Date d'arrivé</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Titre</value>
+  </data>
+  <data name="CreationDate" xml:space="preserve">
+    <value>Date de Création</value>
+  </data>
+  <data name="DescriptionIsInstallableWizard" xml:space="preserve">
+    <value>Indiquez içi la/les règles qui permettrons aux clients de déterminer si la mise à jour est installable.
+
+- Produit Msi installé : Vérifie dans la base de registre si le produit est déjà installé en ce basant sur le code MSI.
+- Architecture du Processeur : Détermine si le processeur est de type x86, x64 ou IA64.
+
+
+
+* Supprimer les règles au niveau Package : Permet de faire en sorte que seul les règles que vous définissez içi s'applique. Recommendé dans le cas de règles personnalisées. Si vous utilisez uniquement les règles prédéfinies par un package MSI ou MSP,  laissez décoché.
+
+Cliquez sur 'Suivant' pour passer à la prochaine étape.</value>
+  </data>
+  <data name="DescriptionIsInstalledWizard" xml:space="preserve">
+    <value>Indiquez içi la/les règles qui permettrons aux clients de déterminer si la mise à jour est déjà installée.
+
+- Produit Msi installé : Vérifie dans la base de registre si le produit est déjà installé en ce basant sur le code MSI.
+- Architecture du Processeur : Détermine si le processeur est de type x86, x64 ou IA64.
+
+
+
+* Supprimer les règles au niveau Package : Permet de faire en sorte que seul les règles que vous définissez içi s'applique. Recommendé dans le cas de règles personnalisées. Si vous utilisez uniquement les règles prédéfinies par un package MSI ou MSP,  laissez décoché.
+
+Cliquez sur 'Suivant' pour passer à la prochaine étape.</value>
+  </data>
+  <data name="DescriptionRuleMsiProductInstalled" xml:space="preserve">
+    <value>Indiquez içi les informations concernant le produit Msi à recherché.  Les champs en caractères gras sont obligatoires.
+
+Code Msi (Obligatoire) : Code du produit Msi au format 12345678-1234-1234-1234-123456789012
+Inverser la règle : Vérifiera que le produit n'est PAS installé.
+Version Max. (Facultatif) : Spécifie un numéro de version maximal pour le produit installé.
+Version Min. (Facultatif) : Spécifie un numéro de version minimal pour le produit installé.
+Language (Facultatif) : Spécifie la langue dans la quelle le produit doit être installé.</value>
+  </data>
+  <data name="DescriptionRuleProcessorArchitecture" xml:space="preserve">
+    <value>Indiquez sur quel architecture le produit peut-être installé.</value>
+  </data>
+  <data name="FileCreated" xml:space="preserve">
+    <value>Date de création du fichier</value>
+  </data>
+  <data name="FileCreatedPrependRegSz" xml:space="preserve">
+    <value>Date de création du fichier préfixé par Registre</value>
+  </data>
+  <data name="FileExists" xml:space="preserve">
+    <value>Fichier existe</value>
+  </data>
+  <data name="FileExistsPrependRegSz" xml:space="preserve">
+    <value>Fichier existe préfixer par Registre</value>
+  </data>
+  <data name="FileModified" xml:space="preserve">
+    <value>Date de modification du fichier</value>
+  </data>
+  <data name="FileModifiedPrependRegSz" xml:space="preserve">
+    <value>Date de modification du fichier préfixé par Registre</value>
+  </data>
+  <data name="FileSize" xml:space="preserve">
+    <value>Taille du fichier</value>
+  </data>
+  <data name="FileSizePrependRegSz" xml:space="preserve">
+    <value>Taille du fichier préfixé par Registre</value>
+  </data>
+  <data name="FileVersion" xml:space="preserve">
+    <value>Version du fichier</value>
+  </data>
+  <data name="FileVersionPrependRegSz" xml:space="preserve">
+    <value>Version du fichier préfixé par Registre</value>
+  </data>
+  <data name="FinishedPublishing" xml:space="preserve">
+    <value>Publication terminée</value>
+  </data>
+  <data name="GetPublisher" xml:space="preserve">
+    <value>Récupération du Publisher</value>
+  </data>
+  <data name="MsiApplicationInstallable" xml:space="preserve">
+    <value>Application Msi installable</value>
+  </data>
+  <data name="MsiApplicationInstalled" xml:space="preserve">
+    <value>Application Msi installé</value>
+  </data>
+  <data name="MsiApplicationSuperseded" xml:space="preserve">
+    <value>Application Msi remplacée</value>
+  </data>
+  <data name="MsiComponentInstalledForProduct" xml:space="preserve">
+    <value>Composant MSi installé pour le produit</value>
+  </data>
+  <data name="MsiFeatureInstalledForProduct" xml:space="preserve">
+    <value>Fonctionnalité Msi installée pour le produit</value>
+  </data>
+  <data name="MsiPatchInstallable" xml:space="preserve">
+    <value>Patch Msp installable</value>
+  </data>
+  <data name="MsiPatchinstalled" xml:space="preserve">
+    <value>Patch Msp installé</value>
+  </data>
+  <data name="MsiPatchInstalledForProduct" xml:space="preserve">
+    <value>Patch Msp installé pour le produit</value>
+  </data>
+  <data name="MsiPatchSuperseded" xml:space="preserve">
+    <value>Patch Msp remplacé</value>
+  </data>
+  <data name="MsiProductInstalled" xml:space="preserve">
+    <value>Produit Msi Installé</value>
+  </data>
+  <data name="NumberOfProcessor" xml:space="preserve">
+    <value>Nombre de processeur</value>
+  </data>
+  <data name="PopulatePackage" xml:space="preserve">
+    <value>Création du package</value>
+  </data>
+  <data name="Processor" xml:space="preserve">
+    <value>Architecture du processeur</value>
+  </data>
+  <data name="RegDword" xml:space="preserve">
+    <value>Valeur Dword du Registre</value>
+  </data>
+  <data name="RegExpandSz" xml:space="preserve">
+    <value>Valeur Reg_Expand_Sz du Registre</value>
+  </data>
+  <data name="RegKeyExists" xml:space="preserve">
+    <value>Clé de Registre existe</value>
+  </data>
+  <data name="RegKeyLoop" xml:space="preserve">
+    <value>Valeur de toutes les sous clés</value>
+  </data>
+  <data name="RegSz" xml:space="preserve">
+    <value>Valeur Reg_Sz du Registre</value>
+  </data>
+  <data name="RegSzToVersion" xml:space="preserve">
+    <value>Valeur Reg_Sz du Registre en tant que version</value>
+  </data>
+  <data name="SavingPackage" xml:space="preserve">
+    <value>Sauvegarde du package</value>
+  </data>
+  <data name="WindowsLanguage" xml:space="preserve">
+    <value>Langue de Windows</value>
+  </data>
+  <data name="WindowsVersion" xml:space="preserve">
+    <value>Version de Windows</value>
+  </data>
+  <data name="WmiQuery" xml:space="preserve">
+    <value>Requete Wmi</value>
+  </data>
+  <data name="ComparisonEqualTo" xml:space="preserve">
+    <value>Egal à</value>
+  </data>
+  <data name="ComparisonGreaterThan" xml:space="preserve">
+    <value>Supérieur à</value>
+  </data>
+  <data name="ComparisonGreaterThanOrEqualTo" xml:space="preserve">
+    <value>Supérieur ou égal à</value>
+  </data>
+  <data name="ComparisonLessThan" xml:space="preserve">
+    <value>Inférieur à</value>
+  </data>
+  <data name="DescriptionRuleWindowsVersion" xml:space="preserve">
+    <value>Indiquez la version de Windows sur laquelle le produit peut-être installé.
+
+Vous devez paramétrer au moins 'Version Majeur' et/ou 'Produit'.
+
+Attention : Un controleur de domaine apparaitra avec un 'Produit' = 'Controleur de domaine' et non pas 'Serveur'
+
+Comparaison : Opérateur logique de comparaison. Par défaut, l'opérateur est 'Egal à'.
+
+Sélection facile : Présélections à votre disposition.
+
+Version Majeur : Version majeur du système d'exploitation.
+
+Version Mineur : Version mineur du système d'exploitation.
+
+Build Number : Build du système d'exploitation.
+
+Produit : Détermine si il s'agit d'une station de travail, d'un serveur ou d'un controleur de domaine.
+
+Service Pack Majeur : Version majeur du service pack.
+
+Service Pack Mineur : Version mineur du service pack.</value>
+  </data>
+  <data name="DescriptionWindowsLanguage" xml:space="preserve">
+    <value>Règle basé sur la langue d'installation de Windows. Sélectionnez la langue dans laquelle Windows doit-être installé.
+
+Attention : Dans le cas d'une version multilangue de Windows, cette règle sera toujours évalué à 'Vrai'.</value>
+  </data>
+  <data name="DescriptionFileExists" xml:space="preserve">
+    <value>Dossier Standard (Optionnel) : Liste de dossier pré-définis dont l'emplacement peut varier d'un OS à l'autre.
+Chemin vers le fichier (Obligatoire) : Chemin complet vers le fichier à rechercher (260 caractères max.).
+Version (Optionnel) : Version du fichier.
+Date de Création (Optionnel) : Date de création du fichier.
+Date de Modification (Optionnel) : Date de modification du fichier.
+Taille (Optionnel) : Taille en octet du fichier.
+Language (Optionnel) : Language du fichier.</value>
+  </data>
+  <data name="DescriptionFileVersion" xml:space="preserve">
+    <value>Indiquez içi les informations concernant le fichier à vérifier et ca version.
+
+Dossier Standard (Optionnel) : Liste de dossier pré-définis dont l'emplacement peut varier d'un OS à l'autre.
+Chemin vers le fichier (Obligatoire) : Chemin complet vers le fichier à rechercher (260 caractères max.).
+Version (Obligatoire) : Version du fichier.</value>
+  </data>
+  <data name="NoDescription" xml:space="preserve">
+    <value>Aucune description disponible.</value>
+  </data>
+  <data name="UpdatePublished" xml:space="preserve">
+    <value>La mise à jour a été publiée.</value>
+  </data>
+  <data name="Decline" xml:space="preserve">
+    <value>Refuser</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="DescriptionFileCreated" xml:space="preserve">
+    <value>Indiquez içi les informations concernant le fichier à vérifier et ca date de création.
+
+Dossier Standard (Optionnel) : Liste de dossier pré-définis dont l'emplacement peut varier d'un OS à l'autre.
+Chemin vers le fichier (Obligatoire) : Chemin complet vers le fichier à rechercher (260 caractères max.).</value>
+  </data>
+  <data name="DescriptionFileVersionPrependRegSz" xml:space="preserve">
+    <value>Indiquez içi les informations concernant le fichier à vérifier et ca version.
+
+Dossier Standard (Optionnel) : Liste de dossier pré-définis dont l'emplacement peut varier d'un OS à l'autre.
+Chemin vers le fichier (Obligatoire) : Chemin complet vers le fichier à rechercher (260 caractères max.).
+Version (Obligatoire) : Version du fichier.</value>
+  </data>
+  <data name="Expire" xml:space="preserve">
+    <value>Expirer</value>
+  </data>
+  <data name="updates" xml:space="preserve">
+    <value>Mises à jour</value>
+  </data>
+  <data name="WsusConnectionException" xml:space="preserve">
+    <value>La connexion au serveur à échoué. Verifiez que le serveur est démarré et que les paramètres de connections sont valide.</value>
+  </data>
+  <data name="Downloaded" xml:space="preserve">
+    <value>Téléchargée</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Echouée</value>
+  </data>
+  <data name="Install" xml:space="preserve">
+    <value>Installation</value>
+  </data>
+  <data name="Installed" xml:space="preserve">
+    <value>Installée</value>
+  </data>
+  <data name="InstalledPendingReboot" xml:space="preserve">
+    <value>Installée, en attente de redémarrage</value>
+  </data>
+  <data name="NotApplicable" xml:space="preserve">
+    <value>Non applicable</value>
+  </data>
+  <data name="NotApproved" xml:space="preserve">
+    <value>Non Approuvé</value>
+  </data>
+  <data name="NotInstalled" xml:space="preserve">
+    <value>Non installée</value>
+  </data>
+  <data name="Uninstall" xml:space="preserve">
+    <value>Désinstallation</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Inconnue</value>
+  </data>
+  <data name="EditGroupTypeAnd" xml:space="preserve">
+    <value>Voulez-vous liez les règles par l'opérateur logique "Et" ?</value>
+  </data>
+  <data name="EditGroupTypeOr" xml:space="preserve">
+    <value>Voulez-vous liez les règles par l'opérateur logique "Ou" ?</value>
+  </data>
+  <data name="Publish" xml:space="preserve">
+    <value>Pu&amp;blier</value>
+  </data>
+  <data name="Revise" xml:space="preserve">
+    <value>Réviser...</value>
+  </data>
+  <data name="UpdateRevised" xml:space="preserve">
+    <value>Mise à jour révisée.</value>
+  </data>
+  <data name="ApproveForUninstallation" xml:space="preserve">
+    <value>Approuvé pour la désinstallation</value>
+  </data>
+  <data name="ApproveForInstallation" xml:space="preserve">
+    <value>Approuvé pour l'installation</value>
+  </data>
+  <data name="ApproveForOptionalInstallation" xml:space="preserve">
+    <value>Approuvé pour l'installation optionnelle</value>
+  </data>
+  <data name="Unchanged" xml:space="preserve">
+    <value>Inchangé</value>
+  </data>
+  <data name="NeedServerSettings" xml:space="preserve">
+    <value>Vous devez fournir des paramètre pour, au moins un, serveur.</value>
+  </data>
+  <data name="CertificateSuccessfullyGenerate" xml:space="preserve">
+    <value>Le certificat a été généré avec succès.
+N'oubliez pas de redémarrer le serveur Wsus !</value>
+  </data>
+  <data name="CertificateSuccessfullyLoaded" xml:space="preserve">
+    <value>Le certificat a été chargé avec succès.
+N'oubliez pas de redémarrer le serveur Wsus.</value>
+  </data>
+  <data name="CertificateSuccessfullySaved" xml:space="preserve">
+    <value>Le certificat a été sauvegardé avec succès.</value>
+  </data>
+  <data name="ConnectToWsusFirst" xml:space="preserve">
+    <value>Connectez vous d'abord au serveur Wsus.</value>
+  </data>
+  <data name="Approve" xml:space="preserve">
+    <value>Approuver...</value>
+  </data>
+  <data name="Approved" xml:space="preserve">
+    <value>Approuvé</value>
+  </data>
+  <data name="Declined" xml:space="preserve">
+    <value>Refusé</value>
+  </data>
+  <data name="Expired" xml:space="preserve">
+    <value>Expiré</value>
+  </data>
+  <data name="Resign" xml:space="preserve">
+    <value>Re-signer</value>
+  </data>
+  <data name="ResignPackageFailed" xml:space="preserve">
+    <value>Erreur lors de la re-signature de la mise à jour. Erreur </value>
+  </data>
+  <data name="SuccessfullyResignPackage" xml:space="preserve">
+    <value>Mise à jour re-signée avec succès.</value>
+  </data>
+  <data name="Superseded" xml:space="preserve">
+    <value>Remplacé</value>
+  </data>
+  <data name="ReplicaServer" xml:space="preserve">
+    <value>Replica</value>
+  </data>
+  <data name="ComparisonLessThanOrEqualTo" xml:space="preserve">
+    <value>Inférieur ou égal à</value>
+  </data>
+  <data name="connecting" xml:space="preserve">
+    <value>Connexion...</value>
+  </data>
+  <data name="FailedToConnectToServer" xml:space="preserve">
+    <value>Echec de connexion au serveur.</value>
+  </data>
+  <data name="CommandSent" xml:space="preserve">
+    <value>Commande envoyée.</value>
+  </data>
+  <data name="Exception" xml:space="preserve">
+    <value>Erreur.</value>
+  </data>
+  <data name="Noping" xml:space="preserve">
+    <value>Pas de Ping.</value>
+  </data>
+  <data name="Pinging" xml:space="preserve">
+    <value>Ping</value>
+  </data>
+  <data name="SendingCommand" xml:space="preserve">
+    <value>Envoi de la commande...</value>
+  </data>
+  <data name="DescriptionFileExistsPrependRegSz" xml:space="preserve">
+    <value>Hkey_Local_Machine (Obligatoire) : Ruche de la base de régistre où se trouve le nom du répertoire.
+Valeur (Obligatoire): Nom de la clé de registre où se trouve le nom du répertoire.
+Nom du fichier (Obligatoire) : Nom du fichier à rechercher (260 caractères max.).
+Version (Optionnel) : Version du fichier.
+Date de Création (Optionnel) : Date de création du fichier.
+Date de Modification (Optionnel) : Date de modification du fichier.
+Taille (Optionnel) : Taille en octet du fichier.
+Language (Optionnel) : Language du fichier.</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="Succeeded" xml:space="preserve">
+    <value>Succès</value>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>Sur</value>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value>Résumé</value>
+  </data>
+  <data name="SendDetectNow" xml:space="preserve">
+    <value>Envoyer "Detect Now"</value>
+  </data>
+  <data name="SendReportNow" xml:space="preserve">
+    <value>Envoyer "Report Now"</value>
+  </data>
+  <data name="NeededButNotInstalled" xml:space="preserve">
+    <value>Nécessaire mais non installé</value>
+  </data>
+  <data name="Groups" xml:space="preserve">
+    <value>Groupes</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Tous</value>
+  </data>
+  <data name="DescriptionRegKeyExists" xml:space="preserve">
+    <value>Vérifie l'éxistence d'une clé de registre spécifique.
+
+Par exemple : Software\Microsoft\Windows dans HKEY_LOCAL_MACHINE
+
+Si vous souhaitez tester l'éxistence d'une valeur tel que :
+SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{23170F69-40C1-2702-0920-000001000000}\DisplayName dans HKEY_LOCAL_MACHINE
+Alors utilisez la règle : "Valeur de Registre Existe".</value>
+  </data>
+  <data name="DescriptionRegValueExists" xml:space="preserve">
+    <value>Vérifie l'existence de la valeur de registre spécifiée.
+Vérifie l'existence de la valeur par défaut pour la sous-clé quand aucune valeur n'est spécifiée.
+Vérifie que la valeur est d'un type spécifique quand un type est spécifié. Le type doit être REG_SZ si une valeur n'est pas spécifiée.</value>
+  </data>
+  <data name="RegValueExists" xml:space="preserve">
+    <value>Valeur de Registre Existe</value>
+  </data>
+  <data name="DescriptionRuleRegDword" xml:space="preserve">
+    <value>Compare un REG_DWORD spécifique de registre avec le nombre spéficié.
+
+SubKey : Une sous clé du registre, telle que "Software\Microsoft\Windows". Doit avoir entre 1 et 255 caractères.
+
+Valeur : Nom d'une valeur du registre, tel que "CurrentBuildNumber". Doit avoir entre 0 et 16383 caractères.
+
+Donnée : Une valeur du registre de type REG_DWORD. Doit être compris entre 0 et uint.Maximum.</value>
+  </data>
+  <data name="ComparisonBeginsWith" xml:space="preserve">
+    <value>Commence par</value>
+  </data>
+  <data name="ComparisonContains" xml:space="preserve">
+    <value>Contient</value>
+  </data>
+  <data name="ComparisonEndsWith" xml:space="preserve">
+    <value>Fini par</value>
+  </data>
+  <data name="DescriptionRuleRegExpandSz" xml:space="preserve">
+    <value>Compare un REG_EXPAND_SZ spécifique du registre avec la chaine de caractères spécifiée.
+
+SubKey : Une sous clé de registre, telle que "Software\Microsoft\Windows". Doit avoir entre 1 et 255 caractères.
+
+Valeur : Nom d'une valeur de registre, tel que "CurrentBuildNumber". Doit avoir entre 0 et 16383 caractères.
+
+Donnée : Une valeur de registre de type REG_EXPAND_SZ . Doit avoir entre 1 et 16383 caractères.</value>
+  </data>
+  <data name="DescriptionRuleRegSz" xml:space="preserve">
+    <value>Compare un REG_SZ spécifique du registre avec la chaine de caractères spécifiée.
+
+SubKey : Une sous clé de registre, telle que "Software\Microsoft\Windows". Doit avoir entre 1 et 255 caractères.
+
+Valeur : Nom d'une valeur de registre, tel que "CurrentBuildNumber". Doit avoir entre 0 et 16383 caractères.
+
+Donnée : Une valeur de registre de type REG_SZ. Doit avoir entre 1 et 16383 caractères.</value>
+  </data>
+  <data name="DescriptionRuleRegSzToVersion" xml:space="preserve">
+    <value>Compare un REG_SZ spécifique du registre avec la chaine de caractères en quatre parties spécifiée.
+
+SubKey : Une sous clé de registre, telle que "Software\Microsoft\Windows". Doit avoir entre 1 et 255 caractères.
+
+Valeur : Nom d'une valeur de registre, tel que "CurrentBuildNumber". Doit avoir entre 0 et 16383 caractères.
+
+Donnée : Une valeur de registre de type REG_SZ. Doit correspondre au motif 0...65535, 0...65535, 0...65535, 0...65535</value>
+  </data>
+  <data name="DescriptionRuleWmiQuery" xml:space="preserve">
+    <value>Exécute la requete WMI spécifiée et renvois vraie si un ou plusieurs résultat sont retournés, sinon faux.
+
+Espace de nom (Optionel) : L'espace de nom de la requete WMI.
+
+Requete WQL (Requis) : La requete WMI WQL.</value>
+  </data>
+  <data name="DescriptionRuleMsiFeatureInstalledForProduct" xml:space="preserve">
+    <value>Checks that the specified feature(s) are installed for one (optionally all) of the specified products.</value>
+  </data>
+  <data name="DescriptionRuleMsiPatchInstalledForProduct" xml:space="preserve">
+    <value>Vérifie qu'un patch spécifique est installé pour le produit spécifié.
+
+Code MSP (Obligatoire) : Code du patch MSP dont le status doit être vérifié. Format 12345678-1234-1234-1234-123456789012
+
+Code Produit (Obligatoire) : Code MSI du produit qui doit être vérifié. Format 12345678-1234-1234-1234-123456789012
+
+Inverser la règle : Si cochée, évalue la règle puis inverse la résultat.
+
+Version Max (Optionnel) : Si présente, spécifie la version Max du produit.
+
+Version Min (Optionnel) : Si présente, spécifie la version Min du produit.
+
+Language (Optionnel) : Si présente, spécifie le language sur lequel filtrer.</value>
+  </data>
+  <data name="SendRebootNow" xml:space="preserve">
+    <value>Redémarrer le/les ordinateur(s) distant(s)...</value>
+  </data>
+  <data name="DescriptionFileCreatedPrependRegSz" xml:space="preserve">
+    <value>Comme 'Date de Création du Fichier' mais le nom du fichier est préfixé par la valeur du clé de registre.
+
+Hkey_Local_Machine (Obligatoire) : Ruche du registre où se trouve la valeur qui contient le préfixe.
+Valeur (Obligatoire) : Valeur du registre où se trouve le préfixe..
+Répertoire (Obligatoire) : Nom du fichier (Max 260 caractères).
+Date de création (Obligatoire) : Date de création du fichier.</value>
+  </data>
+  <data name="DescriptionFileModified" xml:space="preserve">
+    <value>Compare la date de modification du fichier spécifié à la valeur fournie. Si 'Répertoire prédéfini' est spécifié, le client appel Win32 SHGetFolderPath afin de retrouver le nom du répertoire et l'ajouter au début du 'Chemin' fourni.
+
+- Répertoire Prédéfini (Optionnel) : Permet de désigner un répertoire par ca variable d'environnement.
+
+- Chemin (Obligatoire) : Chemin vers le fichier.
+
+- Comparaison (Obligatoire) : L'opérateur de comparaison.
+
+- Date de modification (Obligatoire) : Date de modification.</value>
+  </data>
+  <data name="DescriptionFileSize" xml:space="preserve">
+    <value>Compare la taille du fichier spécifié à la valeur fournie. Si 'Répertoire prédéfini' est spécifié, le client appel Win32 SHGetFolderPath afin de retrouver le nom du répertoire et l'ajouter au début du 'Chemin' fourni.
+
+- Répertoire Prédéfini (Optionnel) : Permet de désigner un répertoire par ca variable d'environnement.
+
+- Chemin (Obligatoire) : Chemin vers le fichier.
+
+- Comparaison (Obligatoire) : L'opérateur de comparaison.
+
+- Taille du Fichier (Obligatoire) : Taille du fichier, en octets, pour la comparaison.</value>
+  </data>
+  <data name="MetaGroup" xml:space="preserve">
+    <value>MetaGroupe</value>
+  </data>
+  <data name="ComputerGroupName" xml:space="preserve">
+    <value>Nom du Groupe d'Ordinateur</value>
+  </data>
+  <data name="CreateMetaGroup" xml:space="preserve">
+    <value>&amp;Créer un MetaGroupe</value>
+  </data>
+  <data name="DeleteMetaGroup" xml:space="preserve">
+    <value>&amp;Supprimer un MetaGroupe</value>
+  </data>
+  <data name="EditMetaGroup" xml:space="preserve">
+    <value>&amp;Modifier un MetaGroupe</value>
+  </data>
+  <data name="MetaGroupName" xml:space="preserve">
+    <value>Nom du MetaGroupe</value>
+  </data>
+  <data name="DeleteThisMetaGroup" xml:space="preserve">
+    <value>Supprimer ce MetaGroupe</value>
+  </data>
+  <data name="ManageMetaGroups" xml:space="preserve">
+    <value>Gérer les MetaGroupes...</value>
+  </data>
+  <data name="ManageThisMetaGroup" xml:space="preserve">
+    <value>Gérer ce MetaGroupe...</value>
+  </data>
+  <data name="CreateUpdate" xml:space="preserve">
+    <value>Créer une mise à jour...</value>
+  </data>
+  <data name="QuickApproval" xml:space="preserve">
+    <value>Approbation Rapide</value>
+  </data>
+  <data name="CredentialFailed" xml:space="preserve">
+    <value>Echec de connexion avec les informations de compte fournis.
+Voulez-vous continuer d'utiliser ces informations de connexion (risque de verrouillage du compte) ?</value>
+  </data>
+  <data name="FailedToConnect" xml:space="preserve">
+    <value>Echec de connexion.</value>
+  </data>
+  <data name="CleanUpdateServicesPackagesFolder" xml:space="preserve">
+    <value>Nettoyer le répertoire UpdateServicesPackages...</value>
+  </data>
+  <data name="InstalledOrNotApplicable" xml:space="preserve">
+    <value>Installée ou non Applicable</value>
+  </data>
+  <data name="Absent" xml:space="preserve">
+    <value>Absent</value>
+  </data>
+  <data name="Invalid" xml:space="preserve">
+    <value>Invalide</value>
+  </data>
+  <data name="NearExpiration" xml:space="preserve">
+    <value>Expire dans moins de 30 jours</value>
+  </data>
+  <data name="NotYetValid" xml:space="preserve">
+    <value>Pas encore valide</value>
+  </data>
+  <data name="Valid" xml:space="preserve">
+    <value>Valide</value>
+  </data>
+  <data name="CertificateAbstent" xml:space="preserve">
+    <value>Vous n'avez pas de certificat. Vous ne pourrez pas publier de mises à jour.</value>
+  </data>
+  <data name="CertificateExpired" xml:space="preserve">
+    <value>Le certificat a expiré. Vous ne pourrez pas publier de mises à jour.</value>
+  </data>
+  <data name="CertificateInvalid" xml:space="preserve">
+    <value>Le certificat n'est pas valide. Vous ne pourrez pas publier de mises à jour.</value>
+  </data>
+  <data name="CertificateNearExpiration" xml:space="preserve">
+    <value>Votre certificat expire dans moins de 30 jours.</value>
+  </data>
+  <data name="CertificateNotYetValid" xml:space="preserve">
+    <value>Le certificat n'est pas encore valide. Vous ne pourrez pas publier de mises à jour.</value>
+  </data>
+  <data name="ComputersFound" xml:space="preserve">
+    <value> Odinateurs trouvés.</value>
+  </data>
+  <data name="SearchingComputerInAD" xml:space="preserve">
+    <value>Recherche des Ordinateurs dans AD.</value>
+  </data>
+  <data name="SearchingComputersInWSUS" xml:space="preserve">
+    <value>Recherche des Ordinateurs dans WSUS.</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Réinitialisé.</value>
+  </data>
+  <data name="Unreachable" xml:space="preserve">
+    <value>Injoignable.</value>
+  </data>
+  <data name="NotRequired" xml:space="preserve">
+    <value>Non Requis.</value>
+  </data>
+  <data name="Approval" xml:space="preserve">
+    <value>Approbation</value>
+  </data>
+  <data name="GetWsusClientID" xml:space="preserve">
+    <value>Lire l'ID du Client Wsus</value>
+  </data>
+  <data name="QueryServiceStatus" xml:space="preserve">
+    <value>Lire le status du Service Windows Update</value>
+  </data>
+  <data name="ResetWsusClientID" xml:space="preserve">
+    <value>Réinitialiser l'ID du Client Wsus</value>
+  </data>
+  <data name="RestartService" xml:space="preserve">
+    <value>Redémarrer le Serivce Windows Update</value>
+  </data>
+  <data name="StartService" xml:space="preserve">
+    <value>Démarrer le Service Windows Update</value>
+  </data>
+  <data name="StopService" xml:space="preserve">
+    <value>Arrêter le Service Windows Update</value>
+  </data>
+  <data name="Running" xml:space="preserve">
+    <value>Démarré</value>
+  </data>
+  <data name="Stopped" xml:space="preserve">
+    <value>Arrêté</value>
+  </data>
+  <data name="CredentialUseSameAsApplication" xml:space="preserve">
+    <value>Les fonctions se connectant aux machines distantes utiliseront les mêmes informations d'identification que l'application.</value>
+  </data>
+  <data name="CredentialUseSpecified" xml:space="preserve">
+    <value>Les fonctions se connectant aux machines distantes utiliseront les informations d'identification spécifiées dans les options.</value>
+  </data>
+  <data name="CredentialWillBeAsk" xml:space="preserve">
+    <value>Les fonctions se connectant aux machines distantes vous demanderont les informations d'identifications.</value>
+  </data>
+  <data name="CredentialWillUse" xml:space="preserve">
+    <value>Les fonctions se connectant aux machines distantes utiliseront le login suivant : </value>
+  </data>
+  <data name="Displayed" xml:space="preserve">
+    <value>affichés.</value>
+  </data>
+  <data name="Connected" xml:space="preserve">
+    <value>Connecté</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="ShowWindowsUpdateLog" xml:space="preserve">
+    <value>Montrer le Journal WindowsUpdate</value>
+  </data>
+  <data name="ComputerUnreachable" xml:space="preserve">
+    <value>L'ordinateur est injoingnable.</value>
+  </data>
+  <data name="ShowPendingUpdates" xml:space="preserve">
+    <value>Montrer les mises à jour en attente</value>
+  </data>
+  <data name="PendingUpdates :" xml:space="preserve">
+    <value>Mises à jour en attentes  : </value>
+  </data>
+  <data name="Searching" xml:space="preserve">
+    <value>Recherche...</value>
+  </data>
+  <data name="ShowInWsusConsole" xml:space="preserve">
+    <value>Rendre visible dans la console Wsus</value>
+  </data>
+  <data name="HideInWsusConsole" xml:space="preserve">
+    <value>Masquer dans la console Wsus</value>
+  </data>
+  <data name="SearchPrerequisite" xml:space="preserve">
+    <value>Voulez-vous rechercher quelles mises à jour ont déclarées cette mise à jour comme prerequis ?</value>
+  </data>
+  <data name="Unsubscribing" xml:space="preserve">
+    <value>Désinscription...</value>
+  </data>
+  <data name="Hidden" xml:space="preserve">
+    <value>Masquée</value>
+  </data>
+  <data name="DeleteProduct" xml:space="preserve">
+    <value>Supprimer le produit</value>
+  </data>
+  <data name="DeletingProduct" xml:space="preserve">
+    <value>Suppression du produit : </value>
+  </data>
+  <data name="ConnectOrReload" xml:space="preserve">
+    <value>(Re)&amp;Connexion</value>
+  </data>
+  <data name="FailToCopyFile" xml:space="preserve">
+    <value>Echec de la copie du fichier</value>
+  </data>
+  <data name="FailedToSendCommand" xml:space="preserve">
+    <value>Echec de l'envoi de la commande</value>
+  </data>
+  <data name="InstallPendingUpdates" xml:space="preserve">
+    <value>Installer les mises à jour en attente...</value>
+  </data>
+  <data name="InstallThisUpdate" xml:space="preserve">
+    <value>Installer cette mise à jour...</value>
+  </data>
+  <data name="ChangingLanguage" xml:space="preserve">
+    <value>Le changement de langue prendra effet après redémarrage de l'application.</value>
+  </data>
+  <data name="FailedToLoad" xml:space="preserve">
+    <value>Echec du chargement du fichier.</value>
+  </data>
+  <data name="FailedToSave" xml:space="preserve">
+    <value>Echec de la sauvegarde du fichier.</value>
+  </data>
+  <data name="OpenSavedRules" xml:space="preserve">
+    <value>Charger des règles sauvegardées...</value>
+  </data>
+  <data name="SaveRules" xml:space="preserve">
+    <value>Sauvegarder les règles...</value>
+  </data>
+  <data name="UnableToFindShowPendingUpdates" xml:space="preserve">
+    <value>Impossible de trouver le fichier 'Show Pending Updates.exe' dans le répertoire de l'application.</value>
+  </data>
+  <data name="AddAutomaticallyThisServer" xml:space="preserve">
+    <value>Un serveur WSUS a été détecté sur cette machine, elle a donc été automatiquement ajouté en haut de la liste des serveurs. Pour ajouter d'autres serveurs allez dans Outils -&gt; Paramètres.</value>
+  </data>
+  <data name="AskForSupport" xml:space="preserve">
+    <value>Vous pouvez envoyer des informations au support pour aider à améliorer cette application.
+
+Ajoutez un commentaire, et cliquez sur le bouton 'Oui' pour envoyer ces informations.
+Pour voir quelles informations seront envoyées, cliquez sur le lien en bas à gauche.
+
+Merci !</value>
+  </data>
+  <data name="InformationsSent" xml:space="preserve">
+    <value>Informations envoyées. Merci !</value>
+  </data>
+  <data name="SendingInformations" xml:space="preserve">
+    <value>Envoi des informations. Veuillez patienter...</value>
+  </data>
+  <data name="WentWrong" xml:space="preserve">
+    <value>Oups, Quelque chose à mal tourné !
+
+S'il-vous-plait, aidez l'auteur à améliorer ce logiciel en envoyant des informations anonyme.
+Pour voir quelles informations seront envoyées, cliquez sur le lien en bas à gauche.
+
+Merci pour votre participation !</value>
+  </data>
+  <data name="CreateCustomUpdate" xml:space="preserve">
+    <value>Créer une mise à jour personnalisée...</value>
+  </data>
+  <data name="CertificateFailedtoBeLoaded" xml:space="preserve">
+    <value>Le certificat n'a pas pu être chargé. Vérifiez le fichier.</value>
+  </data>
+  <data name="SolveCertificateProblemBeforePublishing" xml:space="preserve">
+    <value>Il y a un problème avec le certificat, résolvez le avant de publier une mise à jour.</value>
+  </data>
+  <data name="SelectaServerFirst" xml:space="preserve">
+    <value>Veuillez selectionner un serveur.</value>
+  </data>
+  <data name="ServerAndConsoleVersionMismatch" xml:space="preserve">
+    <value>La version du serveur est différente de celle de la console. Vous ne pourrez pas publier/reviser de mises à jour.</value>
+  </data>
+  <data name="UninstallationAllowed" xml:space="preserve">
+    <value>Toutes les mises à jour sélectionnées supportent la désinstallation.</value>
+  </data>
+  <data name="UninstallationDisallowed" xml:space="preserve">
+    <value>Certaines mises à jour sélectionnées ne supportent pas la désinstallation.</value>
+  </data>
+  <data name="CleanSoftwareDistributionFolder" xml:space="preserve">
+    <value>Supprimer le répertoire SoftwareDistribution...</value>
+  </data>
+  <data name="CantAddUNCPath" xml:space="preserve">
+    <value>Vous ne pouvez pas ajouter de fichiers depuis un chemin UNC (commencent par \\server\partage...)</value>
+  </data>
+  <data name="AdditionnalFileAlreadyExist" xml:space="preserve">
+    <value>Le fichier suivant ne peux pas être ajouté car un fichier porte déjà ce nom : </value>
+  </data>
+  <data name="NotaPFXFile" xml:space="preserve">
+    <value> n'est pas un fichier .PFX.</value>
+  </data>
+  <data name="AutoApprovalRules" xml:space="preserve">
+    <value>Règles d'approbation automatique</value>
+  </data>
+  <data name="AutoApprovalRulesWillApply" xml:space="preserve">
+    <value>Les règles d'approbation automatique s'appliqueront :</value>
+  </data>
+  <data name="NonReplicaDownstreamServers" xml:space="preserve">
+    <value>   - Aux serveurs aval non réplica.</value>
+  </data>
+  <data name="ThisServer" xml:space="preserve">
+    <value>   - A ce server.</value>
+  </data>
+  <data name="Optional" xml:space="preserve">
+    <value>Optionnelle</value>
+  </data>
+  <data name="Contains" xml:space="preserve">
+    <value>Contient</value>
+  </data>
+  <data name="EndsWith" xml:space="preserve">
+    <value>Fini par</value>
+  </data>
+  <data name="IsEqualTo" xml:space="preserve">
+    <value>Est égale à</value>
+  </data>
+  <data name="StartWith" xml:space="preserve">
+    <value>Commence par</value>
+  </data>
+  <data name="CurrentLogonUserIs" xml:space="preserve">
+    <value>L'utilisateur actuellement connecté est</value>
+  </data>
+  <data name="UnableToGetLogonUser" xml:space="preserve">
+    <value>Impossible de déterminer le nom de l'utilisateur actuellement connecté.</value>
+  </data>
+  <data name="ShowCurrentLogonUser" xml:space="preserve">
+    <value>Afficher le nom de l'utilisateur connecté</value>
+  </data>
+  <data name="EventFor" xml:space="preserve">
+    <value>évènement(s) pour</value>
+  </data>
+  <data name="ShowUpdateEventHistory" xml:space="preserve">
+    <value>Montrer L'historique des événements</value>
+  </data>
+  <data name="MustBeWsusAdmin" xml:space="preserve">
+    <value>Vous devez faire partie du groupe 'Administrateur Wsus' pour réaliser cette opération.</value>
+  </data>
+  <data name="MustHaveAdminPrivileges" xml:space="preserve">
+    <value>Vous devez avoir les droits d'administrateur pour pouvoir réaliser cette opération.</value>
+  </data>
+  <data name="AlreadyAnUpdateWithThisID" xml:space="preserve">
+    <value>Il y a déjà une mise à jour avec cet identifiant unique. L'import est abandonné.</value>
+  </data>
+  <data name="CompressingFiles" xml:space="preserve">
+    <value>Compression des fichiers...</value>
+  </data>
+  <data name="CopyingFiles" xml:space="preserve">
+    <value>Copie des fichiers...</value>
+  </data>
+  <data name="ErrorImportingUpdate" xml:space="preserve">
+    <value>Une erreur est survenue lors de l'import.</value>
+  </data>
+  <data name="ExportThisUpdate" xml:space="preserve">
+    <value>Exporter cette mise à jour...</value>
+  </data>
+  <data name="ImportAnUpdate" xml:space="preserve">
+    <value>Importer une mise à jour...</value>
+  </data>
+  <data name="SavingMetaData" xml:space="preserve">
+    <value>Sauvegarde des MetaDonnées...</value>
+  </data>
+  <data name="SelectaCabFile" xml:space="preserve">
+    <value>Selectionnez un fichier .CAB</value>
+  </data>
+  <data name="SelectOneAndOnlyOneUpdate" xml:space="preserve">
+    <value>Selectionnez une et une seule mise à jour...</value>
+  </data>
+  <data name="UpdateSuccessfullyExported" xml:space="preserve">
+    <value>Mise à jour exportée.</value>
+  </data>
+  <data name="UpdateSuccessfullyImported" xml:space="preserve">
+    <value>Mise à jour importée.</value>
+  </data>
+  <data name="WillBeRenameTo" xml:space="preserve">
+    <value>va être renommé en</value>
+  </data>
+  <data name="NoXMLInThisCab" xml:space="preserve">
+    <value>Aucun fichier XML n'a été trouvé.</value>
+  </data>
+  <data name="ParsingXMLFile" xml:space="preserve">
+    <value>Lecture du fichier XML...</value>
+  </data>
+  <data name="UncompressingFile" xml:space="preserve">
+    <value>Décompression du fichier...</value>
+  </data>
+  <data name="Importing" xml:space="preserve">
+    <value>Importation de</value>
+  </data>
+  <data name="Published" xml:space="preserve">
+    <value>Publié</value>
+  </data>
+  <data name="Publishing" xml:space="preserve">
+    <value>Publication de</value>
+  </data>
+  <data name="SelectAtLeastOnePackage" xml:space="preserve">
+    <value>Selectionnez au moins un paquet.</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Aide</value>
+  </data>
+  <data name="AllTasksFinished" xml:space="preserve">
+    <value>Toutes les tâches sont terminées.</value>
+  </data>
+  <data name="Aborted" xml:space="preserve">
+    <value>Abandonné</value>
+  </data>
+  <data name="Aborting" xml:space="preserve">
+    <value>Abandon...</value>
+  </data>
+  <data name="FailedToPublish" xml:space="preserve">
+    <value>La publication à échouée.</value>
+  </data>
+  <data name="DownloadindOf" xml:space="preserve">
+    <value>Téléchargement de </value>
+  </data>
+  <data name="DownloadingWithUnkownTotalSize" xml:space="preserve">
+    <value>Téléchargement (Taille total inconnue) de </value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Jours</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>Mois</value>
+  </data>
+  <data name="Weeks" xml:space="preserve">
+    <value>Semaines</value>
+  </data>
+  <data name="DeletionCannotBeCancel" xml:space="preserve">
+    <value>La suppression ne peux pas être annulée. Est vous sûr de vouloir supprimer ?</value>
+  </data>
+  <data name="NoUpdateAvailable" xml:space="preserve">
+    <value>Aucune mise à jour disponible.</value>
+  </data>
+  <data name="UpdateAvailable" xml:space="preserve">
+    <value>Mise à jour disponible.</value>
+  </data>
+  <data name="UnableToDownloadTheFile" xml:space="preserve">
+    <value>Impossible de télécharger le fichier.</value>
+  </data>
+  <data name="UpdatedCatalogAvailable" xml:space="preserve">
+    <value>Une mise à jour pour un/des catalogue(s) est disponible...
+Voulez-vous voir la différence entre les anciens et les nouveaux catalogues ?</value>
+  </data>
+  <data name="MustRunLocallyToGenerateSelfSignedCertificateOn6.3" xml:space="preserve">
+    <value>Depuis que Microsoft à désactivé la possibilté de générer un certificat auto-signé dans Wsus 6.3 et au delà, vous devez utiliser WPP sur le serveur Wsus pour que WPP puisse générer ce certificat lui même.</value>
+  </data>
+  <data name="CantPublishDetectoids" xml:space="preserve">
+    <value>Les mises à jour de type : Detectoïds, ne peuvent pas être publiées ou importées dans Wsus. Si vous savez comment publier ou importer ces detectoïds dans Wsus, merci de prendre contact avec l'auteur (package.publisher@free.fr).</value>
+  </data>
+  <data name="DontPublishDetectoids" xml:space="preserve">
+    <value>Impossible de publier un detectoïd.</value>
+  </data>
+  <data name="CreateSupersedingUpdate" xml:space="preserve">
+    <value>Créer une mise à jour remplacante...</value>
+  </data>
+  <data name="ConfirmeUpdateDeletion" xml:space="preserve">
+    <value>Est vous sûre de vouloir supprimer ces mises à jour ?</value>
+  </data>
+  <data name="CatalogUpdate" xml:space="preserve">
+    <value>Nouveaux catalogues disponibles...</value>
+  </data>
+  <data name="FailedFTPDownload" xml:space="preserve">
+    <value>Echec de l'opération de téléchargement via FTP.</value>
+  </data>
+  <data name="FailedFTPUpload" xml:space="preserve">
+    <value>Echec de l'opération d'upload via FTP.</value>
+  </data>
+  <data name="FailedHTTPDownload" xml:space="preserve">
+    <value>Echec de l'opération de téléchargement via HTTP.</value>
+  </data>
+  <data name="SuccessfullFTPDownload" xml:space="preserve">
+    <value>Succès de l'opération de téléchargement via FTP.</value>
+  </data>
+  <data name="SuccessfullFTPUpload" xml:space="preserve">
+    <value>Succès de l'opération d'upload via FTP.</value>
+  </data>
+  <data name="SuccessfullHTTPDownload" xml:space="preserve">
+    <value>Succès de l'opération de téléchargement via HTTP.</value>
+  </data>
+  <data name="NoNewVersionAvailable" xml:space="preserve">
+    <value>Aucune mise à jour du logiciel disponible.</value>
+  </data>
+  <data name="XmlSchemaValidationException" xml:space="preserve">
+    <value>Une erreur est survenue en vérifiant les meta données du fichier que vous essayez de publier. Ce problème survient surtout en publiant des fichiers MSI ou MSP non valide.</value>
+  </data>
+  <data name="ErrorGetMetaData" xml:space="preserve">
+    <value>Une erreure est survenue en essayant de retrouvrer les Metadonnées de la mise à jour. Essayez de décliner puis recréer le mise à jour.</value>
+  </data>
+  <data name="DescriptionApplicabilityMetadata" xml:space="preserve">
+    <value>Les utilisateurs expérimentés peuvent éditer les métadonnées définies par l'éditeur.</value>
+  </data>
+  <data name="ErrorsHasBeenFound" xml:space="preserve">
+    <value> erreurs ont été trouvées.</value>
+  </data>
+  <data name="NoErrorFound" xml:space="preserve">
+    <value>Aucune erreur trouvée.</value>
+  </data>
+  <data name="ErrorSettingMaxCabSize" xml:space="preserve">
+    <value>Une erreur est survenue en changeant la valeur de Max Cab Size.</value>
+  </data>
+  <data name="MegaBytes" xml:space="preserve">
+    <value>Mo</value>
+  </data>
+  <data name="ChangeMaxCabSizeForFile" xml:space="preserve">
+    <value>Au moins un fichier est plus grand que le paramètre 'Max Cab Size' définie dans WSUS. 
+Si vous continuez, vous pouvez recevoir un message d'erreur : "Verification of signature failed for file...".
+Vous pouvez modifier ce paramètre içi :</value>
+  </data>
+  <data name="ChangeMaxCabSizeSetting" xml:space="preserve">
+    <value>Si vous recevez le message d'erreur : "Verification of signature failed for file..." lorsque vous essayez de publier un gros fichier, vous pouvez augmenter la limite imposée par WSUS.</value>
+  </data>
+  <data name="AreYouSureToWantToOverwriteCurrentCertificate" xml:space="preserve">
+    <value>Vous avez déjà un certificat valide. Etes-vous sûre de vouloir remplacer ce certificat ?</value>
+  </data>
+  <data name="Computer" xml:space="preserve">
+    <value>Ordinateur</value>
+  </data>
+  <data name="Desktop" xml:space="preserve">
+    <value>Bureau</value>
+  </data>
+  <data name="MyDocuments" xml:space="preserve">
+    <value>Mes Documents</value>
+  </data>
+  <data name="WPPSetting" xml:space="preserve">
+    <value>Parametrage WPP</value>
+  </data>
+  <data name="TheFileIsA0ByteFileSize" xml:space="preserve">
+    <value>Le fichier a une taille de 0 Octet. Le téléchargement peut avoir échoué.</value>
+  </data>
+</root>

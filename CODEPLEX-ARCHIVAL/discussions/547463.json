@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1252573",
+    "ThreadId": "547463",
+    "Html": "I am new here, so I am probably doing something wrong...\r<br />\n<br />\nI just downloaded WPP version Release v1.3.1405.17\r<br />\nI installed it on Windows 2012 R2, all seems to be ok to this point.\r<br />\nI requested &amp; received a Adobe Flash Player distribution license from Adobe.\r<br />\n<br />\nI open WPP, Click Updates - Manage Catalog Subscriptions\r<br />\nI then paste in the adobe URL in the address field, click Test Connectivity button and it works.\r<br />\nI then clicked &quot;Add this Catalog&quot; button, the subscribed catalog appears at the top.\r<br />\nI then click &quot;Check Update Availability Now, it works, at the top under Update Available it says Yes.\r<br />\nI then click &quot;Import updates from this catalog&quot; button, a new window opens..\r<br />\nAt the top I see Import catalog from: \\Release v1.3.1405.17\\Subscribed Catalogs\\AdobeFlashPlayerCatalog_SCUP.cab\r<br />\nI then click Open Catalog\r<br />\nBut, in the left pane I only see Root, no updates are listed?\r<br />\n<br />\nWhat am I doing wrong?\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2014-06-03T12:49:20.883-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1252618",
+    "ThreadId": "547463",
+    "Html": "Please disregard my above question, I did figure it out...\r<br />\nTo help others if they encounter what I did...\r<br />\nMy problem was our security appliance box was &quot;partially&quot; blocking the AdobeFlashPlayerCatalog_SCUP.cab download...\r<br />\nWhat I mean is...\r<br />\nWhen I first downloaded the SCUP.cab file is was 1KB in size.\r<br />\nI set myself as an admin on our security appliance box, then downloaded SCUP.cab a second time, this time the file size was 10KB.\r<br />\n<br />\nWhen I used to 10KB file, and selected Open Catalog, I could now see all 12 of the Flash Player updates in the left pane.\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2014-06-03T15:01:05.66-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-06-03T21:34:00.153-07:00"
+  }
+]

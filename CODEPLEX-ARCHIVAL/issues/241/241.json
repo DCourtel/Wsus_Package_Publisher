@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-02-14T12:21:58.397-08:00",
+    "CommentCount": 7,
+    "Custom": null,
+    "Description": "Bonjour,\r\n\r\nJ'ai deployé deja plusieurs packet avec succes.\r\nMon probleme est qu'avec certaines mise à jours, il faut etre administrateur pour qu'elle s'installe sur les client dans windows update... Lorsque je clique sur \"installer les mises à jour\", je doit entrer un mot de passe administrateur.\r\n\r\nPourtant dans mon paquet la case \"peut necessiter l'intevention de l'utilisateur\" n'est pas cochée!!\r\n\r\nMerci pour votre aide\r\n\r\n",
+    "LastUpdatedDate": "2015-02-14T12:21:58.397-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-01-14T05:15:17.977-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Probleme windows update administrateur",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 241
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Bonjour, quel est cette mise à jour ? Est-ce qu'elle n'a pas besoin d'avoir accès au profil de l'utilisateur (HKCU ou C:\\Users\\....) ?",
+      "PostedDate": "2015-01-14T08:28:56.91-08:00",
+      "Id": 170060
+    },
+    {
+      "Message": "Bonjour,\n\nC'est pour \"flash player\"... pourtant j'importe la mise à jour depuis le catalogue.\n",
+      "PostedDate": "2015-01-15T07:50:23.687-08:00",
+      "Id": 170132
+    },
+    {
+      "Message": "aussi pour Java...",
+      "PostedDate": "2015-01-15T08:01:50.32-08:00",
+      "Id": 170133
+    },
+    {
+      "Message": "Etrange effectivement. Je déploie aussi Adobe Flash Player et Java au boulot, sans aucun problème. Et nos utilisateurs ne sont pas admin de leur poste.\nPour Flash Player, c'est bien un fichier MSI ?\nPour Java, si tu utilise le fichier EXE, vérifie bien que tu as mis le /S pour l'installation silencieuse.\n",
+      "PostedDate": "2015-01-15T08:28:38.647-08:00",
+      "Id": 170136
+    },
+    {
+      "Message": "OK\nPour flash player ca vient du catalogue alors oui je pense que c'est un msi..\nPour java j'ai bien le /s faut'il le /S à la place?\nMerci",
+      "PostedDate": "2015-01-26T07:56:08.423-08:00",
+      "Id": 170798
+    },
+    {
+      "Message": "C'est Java 8 ? Je n'ai pas commencé à déployer Java 8, mais j'ai entendu parler de soucis avec cette version. Oracle aurait changé des choses sur cette version.",
+      "PostedDate": "2015-01-27T07:13:23.437-08:00",
+      "Id": 170906
+    },
+    {
+      "Message": "OUI c'est JAVA 8.. bizarre..",
+      "PostedDate": "2015-01-27T07:20:08.587-08:00",
+      "Id": 170908
+    }
+  ]
+}

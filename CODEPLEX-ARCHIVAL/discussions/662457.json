@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1495285",
+    "ThreadId": "662457",
+    "Html": "Reading about the 100 3rd party patch limit below and discussed in this forum and wondering if could be something at risk for. <br />\n<br />\nUse WPP primarily for Adobe Acrobat, Flash, and Reader updates + few custom software updates.  Considering using PatchMyPC for additional product patching.<br />\n<br />\nUpstream WSUS server with many replica servers.<br />\n<br />\nWith many Adobe patches they tend to supersede previous patches, so right now have 3 Flash updates approved (25.0.0.127 ActiveX, Plugin, PPAPI) and previous Flash updates declined.   Declining will leave the metadata for previous patches on replica server, but the binary data (.cab) associated with declined patches get cleaned up when WSUS Cleanup is run on replicas.<br />\n<br />\nMy point is will having these declined updates still around count toward that 100 patch limit?   I suspect answer = no since have over 100 updates now with declined updates sitting around.  I suspect the limit is 100 3rd party approved patches/categories.<br />\n<br />\n2nd question what is best way to cleanup old patches?   Decline then WSUS Cleanup seems to work well, but if I were to then delete patch from Upstream WSUS concerning that patch metadata is still on replicas.  Downside of decline is painful to re-approve is patch is wanted again later.<br />\n<br />\nPatch Limit:<br />\n<br />\n<a href=\"https://support.microsoft.com/en-us/help/945536/client-computers-can-no-longer-synchronize-with-windows-server-update-services-after-you-import-many-third-party-product-updates\" rel=\"nofollow\">https://support.microsoft.com/en-us/help/945536/client-computers-can-no-longer-synchronize-with-windows-server-update-services-after-you-import-many-third-party-product-updates</a><br />\n",
+    "PostedDate": "2017-04-07T14:27:16.93-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

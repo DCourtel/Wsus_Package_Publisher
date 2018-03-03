@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "The Update Wizard now start at 10 pixel from the top of the screen.",
+    "ClosedDate": "2013-05-10T02:40:54.54-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nthe second Window from Update Creation Wizard is allways too far below.\r\n\r\nWinfried",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1305.03",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-10T01:52:45.683-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "Position second Windows Update Creation Wizard",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 41
+  },
+  "FileAttachments": [
+    {
+      "FileId": 678044,
+      "FileName": "Screenshot3.png",
+      "DownloadUrl": ".\\678044"
+    }
+  ],
+  "Comments": []
+}

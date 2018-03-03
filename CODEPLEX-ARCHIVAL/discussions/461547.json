@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1105113",
+    "ThreadId": "461547",
+    "Html": "Hello, I have the WSUS role added to a Server 2012 box.\r<br />\n<br />\nI'd like to use WPP on a workstation with the WSUS Admin console installed on it but i'm getting a version mismatch error.  Is there a way to still use it or do I have to install WPP on the server?<br />\n",
+    "PostedDate": "2013-10-08T11:43:43.953-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105141",
+    "ThreadId": "461547",
+    "Html": "What box did you install the wsus console on? Windows 8 or windows 7<br />\n",
+    "PostedDate": "2013-10-08T12:27:16.42-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105152",
+    "ThreadId": "461547",
+    "Html": "Windows 7<br />\n",
+    "PostedDate": "2013-10-08T12:40:30.09-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105160",
+    "ThreadId": "461547",
+    "Html": "Hello, \r<br />\nWhat is the Wsus Server version and Console ?\r<br />\nDo you have installed RSAT on your computer ?<br />\n",
+    "PostedDate": "2013-10-08T12:56:59.91-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105170",
+    "ThreadId": "461547",
+    "Html": "The console on the Windows 7 machine is 3.1.7600.226\r<br />\nThe Server 2012 version is 6.2.9200.16384\r<br />\n<br />\nI don't have RSAT installed on the Win7 client, just the WSUS console <br />\n",
+    "PostedDate": "2013-10-08T13:21:55.67-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105188",
+    "ThreadId": "461547",
+    "Html": "The console installed on your Windows 7 computer, can only manage Wsus 3.2.\r<br />\nIt is required that you install RSAT for Windows 7 to manage Wsus 6.2.\r<br />\nWPP will not work until you can connect to your wsus from this computer.<br />\n",
+    "PostedDate": "2013-10-08T14:05:32.943-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105194",
+    "ThreadId": "461547",
+    "Html": "Can RSAT for Windows 7 manage Windows Server 2012 WSUS? I doubt it, but havent't tried.<br />\n",
+    "PostedDate": "2013-10-08T14:13:17.263-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105301",
+    "ThreadId": "461547",
+    "Html": "I never try this settings. My test environnement is Windows 8 + Windows Server 2012.\r<br />\nThe fact is that WPP can only works on a computer that is able to manage the WSUS which you want to connect to.<br />\n",
+    "PostedDate": "2013-10-08T21:42:06.953-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T08:05:46.373-08:00"
+  }
+]

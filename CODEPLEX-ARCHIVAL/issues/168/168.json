@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Certificate Managment",
+      "DisplayName": "Certificate Managment"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-01-16T14:05:42.747-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "I installed WPP.  I sorted out the server/console version issue.  The next step is a set a certificate.  I click \"Generate the certificate\" and it tells me it was successful.  However, the \"Save the certificate\" button is not available.\r\n\r\nI'm running WPP from a 64-bit Windows 7 computer.  WSUS runs on a Server 2003 R2 Standard Edition SP2 computer.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1401.04",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-01-16T08:40:30.6-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "can't save certificate",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 168
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Never mind.  I got out of the WPP console, went back in and this time the button was available.  Moving on to the next step...",
+      "PostedDate": "2014-01-16T08:55:54.947-08:00",
+      "Id": 130579
+    },
+    {
+      "Message": "Yes, effectively, there is a bug in the UI. The Save button does become available after a successfull generation of the certificate.",
+      "PostedDate": "2014-01-16T09:10:22.63-08:00",
+      "Id": 130580
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1450737",
+    "ThreadId": "646933",
+    "Html": "Hallo,\r<br />\n<br />\nich möchte wie im Titel den Package Publisher updaten ohne aber meine bisherigen konfigurierten Updates zu verlieren. Wie gehe ich hier vor? Kann ich einfach alles in den bisherigen Ordner entpacken oder aber gehen mir dann die Einstellungen verloren?\r<br />\n<br />\nDanke!\r<br />\nMfG\r<br />\nS_G<br />\n",
+    "PostedDate": "2015-11-03T07:58:05.49-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1450804",
+    "ThreadId": "646933",
+    "Html": "Hi,\r<br />\n<br />\neinfach nur in das bisher genutzte Verzeichnis entpacken. Irgendwelche Einstellungen werden nicht überschrieben.<br />\n",
+    "PostedDate": "2015-11-03T21:49:36.593-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1450812",
+    "ThreadId": "646933",
+    "Html": "Guten Morgen,\r<br />\n<br />\ndanke für die schnelle Antwort! Konnte es wie beschrieben mit copy &amp; paste (alles ersetzen) durchführen.\r<br />\n<br />\nDanke!<br />\n",
+    "PostedDate": "2015-11-03T22:48:05.967-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

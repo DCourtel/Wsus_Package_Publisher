@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1430276",
+    "ThreadId": "639910",
+    "Html": "Hello All,\r<br />\nI have to push new skype for business package to users, it requires KB2817430 and KB2889923.\r<br />\nI have tried to created the package, but  i am getting error as &quot;verification of signature failed for file&quot; \r<br />\n<br />\nAny suggestions how to push the patches ? <br />\n",
+    "PostedDate": "2015-06-12T10:19:18.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1434219",
+    "ThreadId": "639910",
+    "Html": "Use WSUS<br />\n",
+    "PostedDate": "2015-07-13T18:08:25.993-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-08-11T03:23:12.427-07:00"
+  }
+]

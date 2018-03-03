@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1207235",
+    "ThreadId": "531489",
+    "Html": "Hi there,\r<br />\n<br />\nhow about releasing as MSI file aside ZIP to package that updates with WSUS-PP?\r<br />\nBetter, how about releasing an update catalog to use WSUS-PP to update itself?\r<br />\n<br />\nThanks,\r<br />\n<br />\nAlex<br />\n",
+    "PostedDate": "2014-02-12T03:08:48.617-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1207455",
+    "ThreadId": "531489",
+    "Html": "WPP v2 will have a better way to auto-update.<br />\n",
+    "PostedDate": "2014-02-12T10:52:30.633-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:56:14.033-07:00"
+  },
+  {
+    "Id": "1250642",
+    "ThreadId": "531489",
+    "Html": "Looking forward to v2.  Any idea of an ETA?<br />\n",
+    "PostedDate": "2014-05-28T14:00:27.513-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1250832",
+    "ThreadId": "531489",
+    "Html": "WPP V1 works great, even if it miss some features and enhancements. So i take my time for V2. \r<br />\n Last few weeks I have work on another &quot;Little&quot; project (Pst Backup 2013) , which is on Codeplex too. <br />\n",
+    "PostedDate": "2014-05-29T05:35:03.64-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1255770",
+    "ThreadId": "531489",
+    "Html": "I completely agree that WPP v1 works great and there is no need to rush on v2.  However, it doesn't keep me from wanting the new features...\r<br />\n<br />\nI'm currently digging deeper in to the catalog options to try to find ways to streamline the update creation process and am having some frustration there like figuring out how to create your own catalog or find other &quot;Shared Catalogs&quot; that don't come with the WPP package.  (The option under Catalog Subscriptions to &quot;Share, anonymously, with other WPP's users...&quot; has intrigued me.  Where would we find these &quot;shared&quot; catalogs?)\r<br />\n<br />\nAny way, a PST file backup utility sounds nice but as of right now WPP has my focus.\r<br />\n<br />\nKeep up the great work<br />\n",
+    "PostedDate": "2014-06-12T12:41:46.963-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1255792",
+    "ThreadId": "531489",
+    "Html": "<blockquote>\nfind other &quot;Shared Catalogs&quot; that don't come with the WPP package<br />\n</blockquote>\nHonestly, there is very few available catalogs (Dell, HP, Adobe and Fujitsu). Some company sell some 'home made' catalogs. <br />\n<blockquote>\nThe option under Catalog Subscriptions to &quot;Share, anonymously, with other WPP's users...&quot; has intrigued me. Where would we find these &quot;shared&quot; catalogs?) <br />\n</blockquote>\nThis option was created when I start to handle catalogs in WPP. At this time I was thinking that there was more available catalogs... Now I realize that there is very few company to use it. \r<br />\nFrom WPP's users I received only catalogs from Adobe, Dell et HP. And some commercial catalogs that you normally must paid for.<br />\n",
+    "PostedDate": "2014-06-12T13:24:34.223-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1255878",
+    "ThreadId": "531489",
+    "Html": "<a href=\"http://www.shavlik.com/products/patch/\" rel=\"nofollow\">http://www.shavlik.com/products/patch/</a> looks like you are searching for.\r<br />\n<br />\nDavid, followthatpage.com is working great. Thanks for the tipp. :)<br />\n",
+    "PostedDate": "2014-06-12T22:55:17.593-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

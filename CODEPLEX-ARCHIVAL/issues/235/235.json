@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Computer Detail Viewer",
+      "DisplayName": "Computer Detail Viewer"
+    },
+    "ClosedComment": "Refactor the component to display these updates.",
+    "ClosedDate": "2014-12-03T13:00:45.313-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hi,\r\n> In our setup the \"Last installed\" tab does not reflect the actual status of our servers. \r\n\r\nThis tab doesn't works as I was expected at first. At the beginning I was thinking that the date refers to the installation date. But in fact it is the date of publication of the package. I think this tab will disappear in WPP v2.\r\n\r\n> The report tab is empty...\r\n\r\nEnsure, you have selected at least one computer. At least, one update is approved in the ComputerGroup where the selected computer is.\r\n\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.3.1411.09",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-11-21T08:26:40.15-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Report tab",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 235
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "If an update is approved in \"All Computer\" group, and the user display a report for a computer that is in another group, where the update is not approved, the report doesn't display this update.",
+      "PostedDate": "2014-11-21T08:29:18.583-08:00",
+      "Id": 166324
+    }
+  ]
+}

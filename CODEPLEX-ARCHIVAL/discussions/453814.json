@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1082127",
+    "ThreadId": "453814",
+    "Html": "Hi Guys,\r<br />\nis it possible to deploy a file with filetype &quot;msu&quot; with WPP?\r<br />\nThe assistant from create update package displays only filetype as <em>.msi, </em>.msp, *.exe.\r<br />\n<br />\n<br />\nRegards,\r<br />\nDaniel<br />\n",
+    "PostedDate": "2013-08-19T05:35:05.757-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082173",
+    "ThreadId": "453814",
+    "Html": "No, Wsus only support importing <em>.msi, </em>.msp or *.exe files.<br />\n",
+    "PostedDate": "2013-08-19T06:59:58.76-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1087263",
+    "ThreadId": "453814",
+    "Html": "<a href=\"http://sourceforge.net/apps/mediawiki/localupdatepubl/index.php?title=Distributing_Hotfixes_and_MSUs_with_LUP\" rel=\"nofollow\">http://sourceforge.net/apps/mediawiki/localupdatepubl/index.php?title=Distributing_Hotfixes_and_MSUs_with_LUP</a><br />\n",
+    "PostedDate": "2013-09-02T01:42:45.18-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:16:43.74-07:00"
+  }
+]

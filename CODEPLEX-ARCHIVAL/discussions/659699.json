@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1488770",
+    "ThreadId": "659699",
+    "Html": "Hallo,\r<br />\n<br />\nich hätte eine Frage bzgl. Neuinstallation eines WSUS (wir haben diverse. Problemchen mit Windows 10 und Updateverteilung).\r<br />\n<br />\nKann der komplette Ordner des WPP kopiert und auf dem neuen eingefügt werden um alle vorhandenen und schon konfigurierten WPP Updates\\Applikationen wieder zu nutzen?\r<br />\n<br />\nVielen Dank!<br />\n",
+    "PostedDate": "2016-11-25T01:08:09.2-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1488833",
+    "ThreadId": "659699",
+    "Html": "Der WPP ist eigentlich <em>nur</em> eine Schnittstelle zum WSUS. Wenn ihr den WSUS neu macht, ohne alle alten Daten vom alten WSUS zu übernehmen, ist eh schon alles weg. Grundsätzlich kann man natürlich den Programmordner vom WPP einfach so mitnehmen und auf dem neuen Server wieder per Paste einfügen. Schau dir aber unbedingt die Options.xml an, in der finden sich Informationen zum alten WSUS/WPP.\r<br />\n<br />\nEvtl. wäre es aber sinnvoller die alte Installation vom WSUS zu reparieren, als bei einer neuen Installation ebenfalls wieder Fehler zu machen. Entweder auf wsus.de oder auf mcseboard.de anmelden und dort deine Probleme mit dem WSUS schildern. Dort kann man dir sicherlich helfen.<br />\n",
+    "PostedDate": "2016-11-27T05:40:28.997-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

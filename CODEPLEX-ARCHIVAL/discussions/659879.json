@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1489145",
+    "ThreadId": "659879",
+    "Html": "Hi there,\r<br />\n<br />\nive published Adobe Reader DC Updates and Adobe Flash Updates with the default catalogs wich comming with the installation. But in der WPP console, under Updates, the published updates are not showing.\r<br />\nIn the wsus console i can see them, but not on the wpp console.\r<br />\n<br />\nGreetings...<br />\n",
+    "PostedDate": "2016-12-02T02:22:24.127-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1489149",
+    "ThreadId": "659879",
+    "Html": "Hi,\r<br />\n<br />\ni think this can be closed, found a option under Settings to configure it.<br />\n",
+    "PostedDate": "2016-12-02T04:27:39.68-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

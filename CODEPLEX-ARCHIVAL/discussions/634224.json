@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1419401",
+    "ThreadId": "634224",
+    "Html": "I have a testing computer here that is installing the updates correctly, but then report as 'failed' to the server. any ideas here?<br />\n",
+    "PostedDate": "2015-04-27T14:52:36.66-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1420174",
+    "ThreadId": "634224",
+    "Html": "Most likely, at the end of the installation, the package return a non-standard code (other than 0 = Success no reboot required)\r<br />\nMay be it return a code like xxx = Sucess Reboot Required (where xxx is a specific integer)\r<br />\nTry to find this code in Windows Update Log<br />\n",
+    "PostedDate": "2015-04-28T03:12:15.497-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Rules Update Wizard",
+      "DisplayName": "Rules Update Wizard"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:52.667-08:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "I have a problem when add more than 4 update level rules using Update Creation Wizard. All looks fine when press Next > Revise, but when i open again the same package, five and next update rules are missing.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1508.08",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-09-23T05:40:31.02-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Missing Update level rules when Revise...",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 295
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1489472,
+      "FileName": "missing.update.rules.png",
+      "DownloadUrl": ".\\1489472"
+    },
+    {
+      "FileId": 1489473,
+      "FileName": "5.update.rules.png",
+      "DownloadUrl": ".\\1489473"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "One screenshot missing...",
+      "PostedDate": "2015-09-23T05:41:22.943-07:00",
+      "Id": 190611
+    },
+    {
+      "Message": "The rule «File Exist Prepend Reg SZ» is not displayed when revising an update.",
+      "PostedDate": "2015-11-15T08:20:03.793-08:00",
+      "Id": 193667
+    },
+    {
+      "Message": "Fix a typo that prevent WPP to recognise a «File Exist Prepend Reg SZ» rule when revising an update.",
+      "PostedDate": "2015-11-15T09:16:35.89-08:00",
+      "Id": 193669
+    }
+  ]
+}

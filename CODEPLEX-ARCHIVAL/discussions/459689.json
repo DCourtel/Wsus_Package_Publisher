@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1100848",
+    "ThreadId": "459689",
+    "Html": "Hello\r<br />\nWe made some tests with the &quot;install Java 7.21 without Java Updater&quot; package, but for the 7.40 version. In the &quot;Creation Update Wizard&quot;, we had to change the Root Behavior value,\r<br />\n from &quot;Can request reboot&quot; to &quot;Never reboots.&quot;, as with the former option the machine rebooted without warning while the user was working, which is not acceptable in our environment (users are not administrators).\r<br />\n<br />\nWith this modified package, the installation works without errors if you install the updates through the windows 7 option &quot;install and shutdown&quot;.\r<br />\nBut if the installation takes place when scheduled, and there are Java processes running (our tests were with internet explorer running the Java Plugin, which are the real working conditions for us) then the installation fails (the Java Plugin in the browser gets corrupted).\r<br />\nWe can't kill Java processes nor browsers while users are working, so the inclusion of a step in the package to kill these processes before installation would not be a solution.\r<br />\n<br />\nOn the other hand, WSUS, as far we know, does not offer the option of limiting the updates to the machine shutdown.\r<br />\nCan you think of any way in which WSUS Package Publisher could be used to limit the installation of Java updates to shutdown?\r<br />\nthanks<br />\n",
+    "PostedDate": "2013-09-30T03:36:15.227-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1100998",
+    "ThreadId": "459689",
+    "Html": "Hi,<br />\n<blockquote>\nBut if the installation takes place when scheduled, and there are Java processes running then the installation fails.<br />\n</blockquote>\nI suspect your are using the MSI file instead of the EXE file provide by Oracle.\r<br />\nMSI file doesn't take care of already running Java process or browser. This is why I always use EXE file which do some 'Things' to ensure the installation goes right even if Java is in use.<br />\n<blockquote>\nOn the other hand, WSUS, as far we know, does not offer the option of limiting the updates to the machine shutdown. <br />\n</blockquote>\nI never found any settings for this.<br />\n<blockquote>\nCan you think of any way in which WSUS Package Publisher could be used to limit the installation of Java updates to shutdown?<br />\n</blockquote>\nUnfortunately, WPP is not involves in installation on client computers. It only publish the package onto Wsus. Once this is done, WPP has finished his job.<br />\n",
+    "PostedDate": "2013-09-30T11:08:50.647-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1102691",
+    "ThreadId": "459689",
+    "Html": "Hi\r<br />\nThanks for your prompt reply.\r<br />\n&quot;<em>I suspect your are using the MSI file instead of the EXE file provide by Oracle.</em> &quot;--&gt; No, it's the same package you use in the &quot;install Java 7.21 without Java Updater&quot; document, but with 7.40 version, and changing &quot;Can request reboot&quot; to &quot;Never reboots&quot;. This change has no effect, as the PC reboots anyway without any user interaction, and the Java installation has place, but it gets corrupted.\r<br />\n<br />\nThanks for your time and effort anyway.<br />\n",
+    "PostedDate": "2013-10-02T04:53:42.363-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1102869",
+    "ThreadId": "459689",
+    "Html": "I always use the EXE file, and never observed a corruption of Java installation, nor a computer to reboot despite the fact that the Reboot behavior was set to &quot;Never Reboot&quot;.\r<br />\nDid you see anything usefull in the C:\\Windows\\WindowsUpdate.log ?<br />\n",
+    "PostedDate": "2013-10-02T11:41:45.94-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1103145",
+    "ThreadId": "459689",
+    "Html": "WindowsUpdatelog is a bit confusing, as I made several tests on the same machine. As soon as I can, I will make an update package just with the Java part (without uninstalling Java Updater) so there are less events, and with the /L option so that it writes a log (and always with Java running through the internet explorer plugin, as these are our working conditions). I will let you know the results.\r<br />\nThanks again<br />\n",
+    "PostedDate": "2013-10-03T05:13:55.063-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-12T08:52:02.213-07:00"
+  }
+]

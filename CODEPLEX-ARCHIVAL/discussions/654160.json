@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1471741",
+    "ThreadId": "654160",
+    "Html": "Hello,\r<br />\n<br />\nI want to know how to import home-made packages create into a first wsus server with wsus publisher to a second wsus server ?\r<br />\nI can see is the UpdateServicesPackages folder many folders with my custom packages. But for the updates rules, etc where are stock the informations ? \r<br />\nwsus publisher have it's own database or it use the wsus internal windows database ?\r<br />\n<br />\nHow can I export / import my custom packages ?\r<br />\n<br />\nThanks,\r<br />\nGaëtan<br />\n",
+    "PostedDate": "2016-04-29T03:42:13.11-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471920",
+    "ThreadId": "654160",
+    "Html": "Rightclick on a Update &gt; Export a Update or in the Menu. I don't have now a WPP, i don't know exactly, but i remeber there is point to ex- and import.<br />\n",
+    "PostedDate": "2016-04-30T08:44:38.453-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1472175",
+    "ThreadId": "654160",
+    "Html": "Hello WinfriedSonntag,<br />\n<br />\nYes, non problem to import. The problem is to import it to the new wsus publisher :<br />\nVerification of file signature failed for file ****.cab<br />\nError when importing Update.<br />\n<br />\nI'll try to import the public certificate of old publisher to the new one and try<br />\n<br />\nUpdate : Yes it seems to work when I add the old wsus certificat to the new wsus server in 2 libraries : <br />\n<ol>\n<li>export the old packages</li>\n<li>export the old wsus certificate</li>\n<li>add the self-signed WSUS certificate to the Trusted Publishers Store and the Trusted Root Certification Authorities store on the Update Publisher machine.</li>\n<li>import all the packages</li>\n<li>resign all the packages</li>\n<li>remove the old certificate via mmc &gt; certificates</li>\n</ol>\n",
+    "PostedDate": "2016-05-02T08:03:44.647-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1472179",
+    "ThreadId": "654160",
+    "Html": "<strong>gaetan1105 wrote:</strong><br />\n<blockquote>\nUpdate : Yes it seems to work when I add the old wsus certificat to the new wsus server in 2 libraries : <br />\n<ol>\n<li>export the old packages</li>\n<li>export the old wsus certificate</li>\n<li>add the self-signed WSUS certificate to the Trusted Publishers Store and the Trusted Root Certification Authorities store on the Update Publisher machine.</li>\n<li>import all the packages</li>\n<li>resign all the packages</li>\n<li>\nremove the old certificate via mmc &gt; certificates<br />\n</li>\n</ol>\n</blockquote>\nHi,\r<br />\n<br />\nit is working you are describe? Did you try to publish a update and get installation without any errors?\r<br />\n<br />\nThanks for your reponse.<br />\n",
+    "PostedDate": "2016-05-02T08:44:18.61-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1472180",
+    "ThreadId": "654160",
+    "Html": "I've set an update to a testing group, the answer after this night ;)<br />\n",
+    "PostedDate": "2016-05-02T08:47:02.42-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

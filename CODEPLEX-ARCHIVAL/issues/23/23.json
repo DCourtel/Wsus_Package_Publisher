@@ -1,0 +1,151 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-05-02T12:06:40.853-07:00",
+    "CommentCount": 19,
+    "Custom": null,
+    "Description": "Would be a good thing to have the possibility to delete or modify the product title field.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-04-17T15:08:07.82-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Delete or modify Product Title field",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 23
+  },
+  "FileAttachments": [
+    {
+      "FileId": 665205,
+      "FileName": "Revise product title.png",
+      "DownloadUrl": ".\\665205"
+    },
+    {
+      "FileId": 667492,
+      "FileName": "DeleteUpdateTitle.png",
+      "DownloadUrl": ".\\667492"
+    },
+    {
+      "FileId": 667497,
+      "FileName": "DeleteUpdateWSUS.png",
+      "DownloadUrl": ".\\667497"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "You can already modify \"Vendor Name\", \"Product Name\" and \"Title\" (among of other things).\r\nIt is not possible to delete it, or publish an update with these fiekd as blank.",
+      "PostedDate": "2013-04-17T22:02:40.82-07:00",
+      "Id": 97337
+    },
+    {
+      "Message": "Yes I know, that the productname can be revised. But the first entered and not longer needed productname (Take Java with update number as an example) can not be deletes. Maybe it World help a Little if productname World not be taken Frommherz the msi and Titel World be Usedom instead.",
+      "PostedDate": "2013-04-17T22:09:13.187-07:00",
+      "Id": 97340
+    },
+    {
+      "Message": "Take a look on this Image: https://www.codeplex.com/Download/AttachmentDownload.ashx?ProjectName=wsuspackagepublisher&WorkItemId=19&FileAttachmentId=664526 There are a couple of Updates by the Vendor Adobe. We want to Delete for Example the Product Adobe Flash Player 10 ActiveX Vers. 10..3.183.1 or the Update XPhone UC Client by the Vendor Adobe.",
+      "PostedDate": "2013-04-17T23:46:50.07-07:00",
+      "Id": 97348
+    },
+    {
+      "Message": "I see what you mean. Personally, i never set version number in product name. I set it only in the update title.\nI think that this aspect is fully manage by wsus. I will have a look at what can be done with the API.\n",
+      "PostedDate": "2013-04-18T10:48:13.993-07:00",
+      "Id": 97381
+    },
+    {
+      "Message": "Problem is, that if you Import the Java .msi file, that the Product Name is prepopulated. Maybe it would be better to prepopulate this to the Title field.",
+      "PostedDate": "2013-04-18T12:07:52.303-07:00",
+      "Id": 97398
+    },
+    {
+      "Message": "I have find no way to delete Product or Vendor in the API, even for empty Products.\nThose things seem to be entirely manage by Wsus.\n\nAs suggested by NorbertFe, now, the Product Name is not pre-populated anymore by the ProductName property of the MSI. This property is now use to pre-populate the Title field of the update.",
+      "PostedDate": "2013-04-20T15:38:02.89-07:00",
+      "Id": 97593
+    },
+    {
+      "Message": "WinfriedSonntag, NorbertFe, Do you have a Wsus Server with __Windows Internal DataBase__ ?",
+      "PostedDate": "2013-04-22T11:15:03.917-07:00",
+      "Id": 97697
+    },
+    {
+      "Message": "\n\r\n\r** Closed by DCourtel 04/20/2013 3:38PM",
+      "PostedDate": "2013-04-20T15:38:43.733-07:00",
+      "Id": 97698
+    },
+    {
+      "Message": "WinfriedSonntag, NorbertFe, Do you have a Wsus Server with __Windows Internal DataBase__  with empty products and/or empty Vendors ?",
+      "PostedDate": "2013-04-22T11:30:47.17-07:00",
+      "Id": 97700
+    },
+    {
+      "Message": "Yes, I do have such a configuration.",
+      "PostedDate": "2013-04-22T12:03:57.047-07:00",
+      "Id": 97705
+    },
+    {
+      "Message": "I made a screenshot, after this maybe it is clear what we wont. We had a couple of old Updates we named not so good. Maybe this can happen in future allways again. Is there a way to delete updates who are marked with red crosses in the screenshot?\r\n\r\nI have a WSUS with a Windows Internal Database, but no empty Vendor and no empty products.",
+      "PostedDate": "2013-04-22T13:13:30.873-07:00",
+      "Id": 97713
+    },
+    {
+      "Message": "As I can see in your picture :\n     - Adobe is a Vendor (not empty, as it have Products)\n     - Adobe Flash Player 10 ActiveX Ver 10.3.183.10 is certainly an Empty Product (I suppose you have delete all updates in it)\n\nI have found a way to delete 'Empty Products' and 'Empty Vendors'. I need to make more tests to ensure that this will not break anything. Then I will send you the tool. It works only on Wsus Server with Windows Internal DataBase for now but theorically it can be adapt for External SQL Server.",
+      "PostedDate": "2013-04-22T14:00:49.757-07:00",
+      "Id": 97725
+    },
+    {
+      "Message": "Pls have a look at my second screenshot, DeleteUpdateWSUS.png. After we are publishing Flash Player 12, we don't need to have update or products with Flash Player 11. I hope now its a little bit more clear then before. ;)",
+      "PostedDate": "2013-04-22T14:03:26.007-07:00",
+      "Id": 97726
+    },
+    {
+      "Message": "There a only one or two differences from WID to a 'normal' SQL Server Installation. A WID you can not connect remote in a SQL Server Management Studio or another tool like this. And the SUSDB in a WID you can not modify with a view or a table or a trigger or an Stored Procedure. All these things you can change in SUSDB in a SQL Express or SQL Standard Server. And you can connect with SQL Server Management Studio from remote.",
+      "PostedDate": "2013-04-22T14:34:13.94-07:00",
+      "Id": 97737
+    },
+    {
+      "Message": "WinfriedSonntag, can you send me a procedure to set up the trigger you set on your database ? I would like to test in the same condition.\nNorbertFe, do you have set up this trigger too, or do you make these change 'manually' ?\n\nThanks",
+      "PostedDate": "2013-04-24T10:45:15.08-07:00",
+      "Id": 98341
+    },
+    {
+      "Message": "Hi, I use both. Lately I configured some wsus Servers for use with SQL 2012 Express and the trigger. Before that I manually changed the Status with a SQL Script.\nA German Manual was published by Winfried sone days ago. http://www.wsus.de/wsus_package_publisher Maybe that helps when using google translations. ;) but i guess Winfried can provide an english version here if necessary.\n\n",
+      "PostedDate": "2013-04-24T13:07:46.173-07:00",
+      "Id": 98372
+    },
+    {
+      "Message": "Hi David,\n\ni use this trigger on the Table tbUpdate:\n\n```\nUSE [SUSDB]\nGO\n/****** Object:  Trigger [dbo].[SwitchLocallyPublished]    Script Date: 07.04.2013 15:37:05 ******/\nSET ANSI_NULLS ON\nGO\nSET QUOTED_IDENTIFIER ON\nGO\n\nCREATE TRIGGER [dbo].[SwitchLocallyPublished] ON [dbo].[tbUpdate]\nAFTER INSERT\nNOT FOR REPLICATION\nAS\n\nbegin\nUPDATE [SUSDB].[dbo].[tbUpdate] SET [IsLocallyPublished] = 0 WHERE [IsLocallyPublished] <> 0\nEnd\n```\nIf you want to test in a Windows Internal Database, you can use this Query:\n\n```\n--Update Query to run in Windows Internal Database\nUPDATE [SUSDB].[dbo].[tbUpdate] SET [IsLocallyPublished] = 0 WHERE [IsLocallyPublished] <> 0\n```\n\nIn a Windows Internal Database you can NOT use a Trigger, you have to use the one UPDATE query. The query can be used in SQL Server Management Studio, or save the UPDATE query in a file and run this line in a batch:\n\n```\nsqlcmd -S np:\\\\.\\pipe\\MSSQL$MICROSOFT##SSEE\\sql\\query –i <scriptLocation>\\IsLocallyPuplished.sql \n```\n",
+      "PostedDate": "2013-04-24T23:20:28.817-07:00",
+      "Id": 98417
+    },
+    {
+      "Message": "I have wrote a tool to show and delete these 'Empty Product' and 'Empty Vendor'.\nI will try to add it as a feature for the next release. But there is a lot of work, as WPP don't show empty products.\nThe tool will be publish here soon.",
+      "PostedDate": "2013-05-02T12:03:17.32-07:00",
+      "Id": 99189
+    },
+    {
+      "Message": "I am very happy if you can add this feature directly in WPP. Don't hurry- ;)",
+      "PostedDate": "2013-05-02T13:01:09.087-07:00",
+      "Id": 99195
+    }
+  ]
+}

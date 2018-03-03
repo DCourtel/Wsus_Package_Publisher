@@ -1,0 +1,91 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Show Pending Updates",
+      "DisplayName": "Show Pending Updates"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-05-28T15:05:31.163-07:00",
+    "CommentCount": 8,
+    "Custom": null,
+    "Description": "When I select a computer, right click and select \"Show pending updates\", I get the next error:\r\n\r\nI attach a capture of error.\r\n\r\nThanks!\r\n\r\n```\r\nSee the end of this message for details on invoking \r\njust-in-time (JIT) debugging instead of this dialog box.\r\n\r\n************** Exception Text **************\r\nSystem.ComponentModel.Win32Exception (0x80004005): El sistema no puede hallar el archivo especificado\r\n   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)\r\n   at System.Diagnostics.Process.Start()\r\n   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)\r\n   at Wsus_Package_Publisher.UpdateDetailViewer.ctxMnuStripCommand_ItemClicked(Object sender, ToolStripItemClickedEventArgs e)\r\n   at System.Windows.Forms.ToolStrip.OnItemClicked(ToolStripItemClickedEventArgs e)\r\n   at System.Windows.Forms.ToolStripDropDown.OnItemClicked(ToolStripItemClickedEventArgs e)\r\n   at System.Windows.Forms.ToolStrip.HandleItemClick(ToolStripItem dismissingItem)\r\n   at System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)\r\n   at System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)\r\n   at System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)\r\n   at System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)\r\n   at System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)\r\n   at System.Windows.Forms.ToolStripDropDown.OnMouseUp(MouseEventArgs mea)\r\n   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)\r\n   at System.Windows.Forms.Control.WndProc(Message& m)\r\n   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)\r\n   at System.Windows.Forms.ToolStrip.WndProc(Message& m)\r\n   at System.Windows.Forms.ToolStripDropDown.WndProc(Message& m)\r\n   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)\r\n   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)\r\n   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)\r\n\r\n\r\n************** Loaded Assemblies **************\r\nmscorlib\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.296 (RTMGDR.030319-2900)\r\n    CodeBase: file:///C:/WINDOWS/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll\r\n----------------------------------------\r\nWsus Package Publisher\r\n    Assembly Version: 1.1.1305.15\r\n    Win32 Version: 1.1.1305.15\r\n    CodeBase: file:///C:/Documents%20and%20Settings/pacabvid/Mis%20documentos/Descargas/Wsus%20Package%20Publisher/Wsus%20Package%20Publisher.exe\r\n----------------------------------------\r\nSystem.Windows.Forms\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.1002 built by: RTMGDR\r\n    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Windows.Forms/v4.0_4.0.0.0__b77a5c561934e089/System.Windows.Forms.dll\r\n----------------------------------------\r\nSystem.Drawing\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.1001 built by: RTMGDR\r\n    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Drawing/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Drawing.dll\r\n----------------------------------------\r\nSystem\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.1001 built by: RTMGDR\r\n    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System/v4.0_4.0.0.0__b77a5c561934e089/System.dll\r\n----------------------------------------\r\nMicrosoft.UpdateServices.Administration\r\n    Assembly Version: 3.1.6001.1\r\n    Win32 Version: 3.1.7600.226\r\n    CodeBase: file:///C:/WINDOWS/assembly/GAC_MSIL/Microsoft.UpdateServices.Administration/3.1.6001.1__31bf3856ad364e35/Microsoft.UpdateServices.Administration.dll\r\n----------------------------------------\r\nSystem.Configuration\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.1 (RTMRel.030319-0100)\r\n    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Configuration/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Configuration.dll\r\n----------------------------------------\r\nSystem.Xml\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.233 built by: RTMGDR\r\n    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Xml/v4.0_4.0.0.0__b77a5c561934e089/System.Xml.dll\r\n----------------------------------------\r\nWsus Package Publisher.resources\r\n    Assembly Version: 1.1.1305.14\r\n    Win32 Version: 1.1.1305.14\r\n    CodeBase: file:///C:/Documents%20and%20Settings/pacabvid/Mis%20documentos/Descargas/Wsus%20Package%20Publisher/en/Wsus%20Package%20Publisher.resources.DLL\r\n----------------------------------------\r\nCheckComboBox\r\n    Assembly Version: 1.1.1304.16\r\n    Win32 Version: 1.1.1304.16\r\n    CodeBase: file:///C:/Documents%20and%20Settings/pacabvid/Mis%20documentos/Descargas/Wsus%20Package%20Publisher/CheckComboBox.DLL\r\n----------------------------------------\r\nMicrosoft.UpdateServices.Utils\r\n    Assembly Version: 3.1.6001.1\r\n    Win32 Version: 3.1.7600.251\r\n    CodeBase: file:///C:/WINDOWS/assembly/GAC_MSIL/Microsoft.UpdateServices.Utils/3.1.6001.1__31bf3856ad364e35/Microsoft.UpdateServices.Utils.dll\r\n----------------------------------------\r\nMicrosoft.UpdateServices.StringResources\r\n    Assembly Version: 3.1.6001.1\r\n    Win32 Version: 3.1.7600.226\r\n    CodeBase: file:///C:/WINDOWS/assembly/GAC_MSIL/Microsoft.UpdateServices.StringResources/3.1.6001.1__31bf3856ad364e35/Microsoft.UpdateServices.StringResources.dll\r\n----------------------------------------\r\nMicrosoft.UpdateServices.BaseApi\r\n    Assembly Version: 3.1.6001.1\r\n    Win32 Version: 3.1.7600.251\r\n    CodeBase: file:///C:/WINDOWS/assembly/GAC_MSIL/Microsoft.UpdateServices.BaseApi/3.1.6001.1__31bf3856ad364e35/Microsoft.UpdateServices.BaseApi.dll\r\n----------------------------------------\r\nMicrosoft.UpdateServices.DBlayer\r\n    Assembly Version: 3.1.6001.1\r\n    Win32 Version: 3.1.7600.226\r\n    CodeBase: file:///C:/WINDOWS/assembly/GAC_MSIL/Microsoft.UpdateServices.DBlayer/3.1.6001.1__31bf3856ad364e35/Microsoft.UpdateServices.DBlayer.dll\r\n----------------------------------------\r\nSystem.Data\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.237 (RTMGDR.030319-2300)\r\n    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_32/System.Data/v4.0_4.0.0.0__b77a5c561934e089/System.Data.dll\r\n----------------------------------------\r\nSystem.Core\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.233 built by: RTMGDR\r\n    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Core/v4.0_4.0.0.0__b77a5c561934e089/System.Core.dll\r\n----------------------------------------\r\nMicrosoft.UpdateServices.AdminDataAccessProxy\r\n    Assembly Version: 3.1.6001.1\r\n    Win32 Version: 3.1.7600.226\r\n    CodeBase: file:///C:/WINDOWS/assembly/GAC_MSIL/Microsoft.UpdateServices.AdminDataAccessProxy/3.1.6001.1__31bf3856ad364e35/Microsoft.UpdateServices.AdminDataAccessProxy.dll\r\n----------------------------------------\r\nSystem.Web.Services\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.1 (RTMRel.030319-0100)\r\n    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Web.Services/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Web.Services.dll\r\n----------------------------------------\r\nh3elqdcw\r\n    Assembly Version: 3.1.6001.1\r\n    Win32 Version: 4.0.30319.1001 built by: RTMGDR\r\n    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System/v4.0_4.0.0.0__b77a5c561934e089/System.dll\r\n----------------------------------------\r\nSystem.Data.SqlXml\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.1 built by: RTMRel\r\n    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Data.SqlXml/v4.0_4.0.0.0__b77a5c561934e089/System.Data.SqlXml.dll\r\n----------------------------------------\r\nSystem.Xml.Xsl.CompiledQuery.1\r\n    Assembly Version: 0.0.0.0\r\n    Win32 Version: 4.0.30319.1 built by: RTMRel\r\n    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Data.SqlXml/v4.0_4.0.0.0__b77a5c561934e089/System.Data.SqlXml.dll\r\n----------------------------------------\r\nSystem.Management\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.1 (RTMRel.030319-0100)\r\n    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Management/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Management.dll\r\n----------------------------------------\r\nSystem.Web\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.272 built by: RTMGDR\r\n    CodeBase: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_32/System.Web/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Web.dll\r\n----------------------------------------\r\n\r\n************** JIT Debugging **************\r\nTo enable just-in-time (JIT) debugging, the .config file for this\r\napplication or computer (machine.config) must have the\r\njitDebugging value set in the system.windows.forms section.\r\nThe application must also be compiled with debugging\r\nenabled.\r\n\r\nFor example:\r\n\r\n<configuration>\r\n    <system.windows.forms jitDebugging=\"true\" />\r\n</configuration>\r\n\r\nWhen JIT debugging is enabled, any unhandled exception\r\nwill be sent to the JIT debugger registered on the computer\r\n```",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1305.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-18T17:37:56.04-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "\"Show pending updates\" error",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 46
+  },
+  "FileAttachments": [
+    {
+      "FileId": 681494,
+      "FileName": "Captura.PNG",
+      "DownloadUrl": ".\\681494"
+    },
+    {
+      "FileId": 683353,
+      "FileName": "WPP-show-pending-error.png",
+      "DownloadUrl": ".\\683353"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Hello Paskysky, and thank you for your feedback !\r\n\r\nCan you confirm if the file \"ShowPendingUpdates.exe\" is in the same folder than the application ?\r\nIf yes, what happen if you double-click on it ?\r\nIf no, please download again the application from Codeplex and extract the file from the ZIP.\r\n",
+      "PostedDate": "2013-05-19T01:31:46.653-07:00",
+      "Id": 100551
+    },
+    {
+      "Message": "Hi paskysky, did you have found the time to check the file that I have mentionned ?",
+      "PostedDate": "2013-05-21T13:36:58.9-07:00",
+      "Id": 100791
+    },
+    {
+      "Message": "Hi,\r\n\r\nI'm getting an error too.\r\n\r\n```\r\nProblemsignatur:\r\n  Problemereignisname:\tCLR20r3\r\n  Problemsignatur 01:\tshowpendingupdates.exe\r\n  Problemsignatur 02:\t1.1.1305.12\r\n  Problemsignatur 03:\t518fc54e\r\n  Problemsignatur 04:\tmscorlib\r\n  Problemsignatur 05:\t4.0.0.0\r\n  Problemsignatur 06:\t50483a22\r\n  Problemsignatur 07:\t35a9\r\n  Problemsignatur 08:\t38\r\n  Problemsignatur 09:\tMXYABJ2RSFG4UKNKGMSPJ2KFPMZXHCC5\r\n  Betriebsystemversion:\t6.1.7601.2.1.0.274.10\r\n  Gebietsschema-ID:\t1031\r\n  Zusatzinformation 1:\tdd65\r\n  Zusatzinformation 2:\tdd65a284f62521fc4d5a6b3166b55ddd\r\n  Zusatzinformation 3:\t8e17\r\n  Zusatzinformation 4:\t8e1765ecd1437612ff1aaede2133a5ce\r\n\r\nLesen Sie unsere Datenschutzbestimmungen online:\r\n  http://go.microsoft.com/fwlink/?linkid=104288&clcid=0x0407\r\n\r\nWenn die Onlinedatenschutzbestimmungen nicht verfügbar sind, lesen Sie unsere Datenschutzbestimmungen offline:\r\n  C:\\Windows\\system32\\de-DE\\erofflps.txt\r\n\r\n```\r\nDoubleclicking ShowPendingUpdates.exe Pops up the same error.\r\n",
+      "PostedDate": "2013-05-23T11:19:58.88-07:00",
+      "Id": 101025
+    },
+    {
+      "Message": "Hi Norbert, your problem seem to be totally different from what Paskysky have. \n\nYour error message say there is a problem in the Framework .Net 2.0, but the application is compile in .Net 4.0.\nThe only component in .Net 2.0 is Wuapi.dll which reside on the computer which run the application.\nDo you have this error message on many/all your computers ?\nDo you see the file : C:\\Windows\\system32\\wuapi.dll ?",
+      "PostedDate": "2013-05-23T15:06:22.02-07:00",
+      "Id": 101051
+    },
+    {
+      "Message": "I get an error too.\n```\nProblemsignatur:\n  Problemereignisname:\tCLR20r3\n  Problemsignatur 01:\tshowpendingupdates.exe\n  Problemsignatur 02:\t1.1.1305.26\n  Problemsignatur 03:\t51a25362\n  Problemsignatur 04:\tmscorlib\n  Problemsignatur 05:\t4.0.30319.18047\n  Problemsignatur 06:\t5155314f\n  Problemsignatur 07:\t3665\n  Problemsignatur 08:\tc5\n  Problemsignatur 09:\tMXYABJ2RSFG4UKNKGMSPJ2KFPMZXHCC5\n  Betriebsystemversion:\t6.1.7601.2.1.0.274.10\n  Gebietsschema-ID:\t1031\n  Zusatzinformation 1:\tdd65\n  Zusatzinformation 2:\tdd65a284f62521fc4d5a6b3166b55ddd\n  Zusatzinformation 3:\t5810\n  Zusatzinformation 4:\t5810c534922979aeb7f9db3b95069e23\n\nLesen Sie unsere Datenschutzbestimmungen online:\n  http://go.microsoft.com/fwlink/?linkid=104288&clcid=0x0407\n\nWenn die Onlinedatenschutzbestimmungen nicht verfügbar sind, lesen Sie unsere Datenschutzbestimmungen offline:\n  C:\\Windows\\system32\\de-DE\\erofflps.txt\n\n```",
+      "PostedDate": "2013-05-27T12:30:08.22-07:00",
+      "Id": 101322
+    },
+    {
+      "Message": "Norbert, I had sent you by mail a new version of 'ShowPendigUpdates' tell me what happen if you double-click on it.\n\nThanks.",
+      "PostedDate": "2013-05-27T14:48:30.68-07:00",
+      "Id": 101332
+    },
+    {
+      "Message": "Norbert, I have sent you another version of the EXE. You have reply that it work. Glad to heard that.\nI think that something went wrong in Visual Studio when I make the Form available in other language (including German).\nIn fact I'm pretty much sure that the issue appeare only on computers in German language.\nI will redo from scratch this part and publish in the next release after you have confirm it work well on German computers.",
+      "PostedDate": "2013-05-28T15:05:04.02-07:00",
+      "Id": 101482
+    },
+    {
+      "Message": "Hi,\n\nI tested the provided .exe on another Server (2008 R2) and it does indeed work. ;)\n\nRegards\nNorbert",
+      "PostedDate": "2013-05-29T14:20:51.733-07:00",
+      "Id": 101598
+    }
+  ]
+}

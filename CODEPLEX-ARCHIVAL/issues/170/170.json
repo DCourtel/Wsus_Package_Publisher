@@ -1,0 +1,66 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:07.053-08:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nright now it is not possible to define replacements across vendors or products. Please add the feature.\r\n\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2017-02-03T11:50:07.053-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-01-17T03:08:57.947-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "replacements across vendor or products",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 170
+  },
+  "FileAttachments": [
+    {
+      "FileId": 780351,
+      "FileName": "17-01-2014 12-02-24.jpg",
+      "DownloadUrl": ".\\780351"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "This why it is recommended to NOT put version/release number in the product name.\n\"Flash Player\" is a product, not \"Flash Player 11\" (it's more likely an udpate).",
+      "PostedDate": "2014-01-17T07:25:33.69-08:00",
+      "Id": 130692
+    },
+    {
+      "Message": "Yes, but is this a recommendation or a hard rule/limit? ;)",
+      "PostedDate": "2014-01-17T08:15:23.523-08:00",
+      "Id": 130696
+    },
+    {
+      "Message": "Let's say, it's a best practice :-)\n\nI will look into this in WPP V2",
+      "PostedDate": "2014-01-17T09:08:33.643-08:00",
+      "Id": 130704
+    },
+    {
+      "Message": "OK, would be nice to have this Feature, although I'll try to redesign my products. ;) But nonetheless, I can imagine Scenarios where this Feature would be helpful.\n\nregards\nNorbert",
+      "PostedDate": "2014-01-17T11:09:57.233-08:00",
+      "Id": 130725
+    }
+  ]
+}

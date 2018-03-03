@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update Detail Viewer",
+      "DisplayName": "Update Detail Viewer"
+    },
+    "ClosedComment": "Feature added.",
+    "ClosedDate": "2013-07-10T03:26:35.517-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When right-Clicking on a computer, add an option in the context menu to show the Current Logon User on this remote computer.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.2.1307.01",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-07-09T11:44:50.013-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Show Current Logon User",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 83
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

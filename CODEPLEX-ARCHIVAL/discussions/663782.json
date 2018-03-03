@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1498066",
+    "ThreadId": "663782",
+    "Html": "Hi,\r<br />\ni configured WPP yesterday firs time and wanted to publish some packages to W10Pro machine.\r<br />\nW10 see updates but can't install them. Eventlog says Packages can not be downloaded.\r<br />\n<br />\nAn error is occured but we will try it again.\r<br />\n7-Zip 16.04 (x64 edition) – Fehler 0x80246003\r<br />\nNotepad ++ 7.5 – Fehler 0x80246003\r<br />\nTightVNC Viewer Only – Fehler 0x80246003\r<br />\n<br />\nI tried to delete SftwareDistribution but it did not helped.\r<br />\nWhat can i try yet?\r<br />\n<br />\nPlease feel free to request further informations.<br />\n",
+    "PostedDate": "2017-09-18T23:59:36.783-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

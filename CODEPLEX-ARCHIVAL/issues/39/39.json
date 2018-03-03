@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Change the behavior of the application, so that now it upgrade old settings.",
+    "ClosedDate": "2013-05-09T04:15:49.81-07:00",
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "When using a new release, settings from the previous release are overwritten by those from the new release.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1305.03",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-09T04:15:03.137-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Settings from previous release are not kept",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 39
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Where are the settings saved? Registry or INI Files in the user profile?",
+      "PostedDate": "2013-05-10T05:10:34.273-07:00",
+      "Id": 99896
+    },
+    {
+      "Message": "Servers list is in the \"Options.xml\" file. This file is in the same directory than the EXE file. These options are attached to the Machine profile.\n\nOther options are .Net Settings and are manage by the framework.\n\n* On windows 7 and Server 2008, you will find it at %LocalAppData%\\EasyCompany\n* On Windows XP and Server 2003, you will find it at %USERPROFILE%\\Local Settings\\Application Data\\EasyCompany\n\nHere you will find a User.config xml file. These options are attached to the User Profile.",
+      "PostedDate": "2013-05-10T07:00:38.41-07:00",
+      "Id": 99901
+    },
+    {
+      "Message": "Thanks for posting this Informations.\n\nWhat do you think about saving the Settings in Registry?",
+      "PostedDate": "2013-05-11T09:54:41.403-07:00",
+      "Id": 99989
+    },
+    {
+      "Message": "It took one line to read an information from the settings and two lines of code to save it.\nReading/writting in the registry is mush more complicated.\nIn addition, I seem remember that Microsoft discourages to write application settings in the registry.",
+      "PostedDate": "2013-05-11T11:18:35.217-07:00",
+      "Id": 99995
+    },
+    {
+      "Message": "Microsoft often change the Opinion. ;) I always prefer the Registry for saving Settings. It is easier to provide settings with Group Policy Objects.",
+      "PostedDate": "2013-05-11T14:15:02.237-07:00",
+      "Id": 100003
+    }
+  ]
+}

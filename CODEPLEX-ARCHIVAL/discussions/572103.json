@@ -1,0 +1,106 @@
+[
+  {
+    "Id": "1322237",
+    "ThreadId": "572103",
+    "Html": "I am able to publish updates with WPP, but when my co-worker (admin on server) is opening WPP to publish updates, he received &quot;The certificate is invalid. You will not be able to publish updates.&quot; \r<br />\n<br />\nWhat can be done to resolve this and allow multiple users to publish updates to WSUS?\r<br />\nWe've attempted the following:<br />\n<ul>\n<li>Within WPP , imported the certificate from his logon with cert password. It states &quot;Failed to load the Certificate. Check the file.&quot; This is the same file I used to import the cert initially when installing WPP.</li>\n<li>\nHad Ran the native cert import wizard (pfx file)<br />\n</li>\n</ul>\nNote:  I also created a post in the Issues section:  <a href=\"https://wsuspackagepublisher.codeplex.com/workitem/231\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/workitem/231</a><br />\n",
+    "PostedDate": "2014-11-14T08:16:06.627-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1322245",
+    "ThreadId": "572103",
+    "Html": "The fact that you can publish updates with only one Windows account, ake me think you have put certificates into User Stores instead of Computer Stores.\r<br />\nPlease see documentation : Installation Guide. And check that your certificates are in right places.<br />\n",
+    "PostedDate": "2014-11-14T08:32:26.893-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1322259",
+    "ThreadId": "572103",
+    "Html": "Thanks for your response.\r<br />\n<br />\nI followed the install guide when installed a few months back and installed in Cert Computer Store.\r<br />\n<br />\nI initially thought the same as well, I forgot to mention we checked to ensure the cert is in the computer store.  We verified again and seen the cert exists in the Computer Store when he logs in.<br />\n",
+    "PostedDate": "2014-11-14T08:57:23.683-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1322277",
+    "ThreadId": "572103",
+    "Html": "We also verified when my co-worker opens WPP, selects, Certificate....and choses to SAVE the current cert, it is the correct cert.  If that helps any.<br />\n",
+    "PostedDate": "2014-11-14T09:28:03.27-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1322311",
+    "ThreadId": "572103",
+    "Html": "Can you verify if the Windows account is in the &quot;wsus administrator&quot; group<br />\n",
+    "PostedDate": "2014-11-14T10:56:56.59-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1322333",
+    "ThreadId": "572103",
+    "Html": "My Windows account is part of the &quot;Administrators&quot; and &quot;WSUS Administrators&quot; group.  My co-worker's account (who cant publish updates) is part of the &quot;Administrators&quot; group only.  I added the co-worker Windows account to &quot;WSUS Administrators&quot; group, and the issues still exists.<br />\n",
+    "PostedDate": "2014-11-14T11:47:27.427-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1322463",
+    "ThreadId": "572103",
+    "Html": "Did the co-worker after get member in the group log off from all windows systems and after a couple of seconds log on again?<br />\n",
+    "PostedDate": "2014-11-15T02:52:53.79-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1323392",
+    "ThreadId": "572103",
+    "Html": "My co-worker was offline on all Windows machines and logged back in today, and the cert error still exists.<br />\n",
+    "PostedDate": "2014-11-18T07:02:53.337-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1323393",
+    "ThreadId": "572103",
+    "Html": "I also created a new local account (not part of the domain), made it part of the &quot;Administrators&quot; group and &quot;WSUSAdministrators&quot; group and the same cert error is received when starting WPP.<br />\n",
+    "PostedDate": "2014-11-18T07:05:42.097-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1323411",
+    "ThreadId": "572103",
+    "Html": "The only way I've found around this is checkbox the &quot; Ignore Code-Signing Certificate validation errors. (Not Recommended)&quot; setting in WPP.  Then it will allow my co-worker to publish updates.  I published a new package while this was checked and distributed it to a client. The client successfully installed the package. \r<br />\n<br />\nThis leads me to believe the new package was published with the correct cert and the initial message to check the cert is erroneous.  Is it possible this is bug/new-known-issue in WPP?  Can anyone else verify the issue exists for them?<br />\n",
+    "PostedDate": "2014-11-18T07:41:40.907-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-12-03T13:28:56.35-08:00"
+  },
+  {
+    "Id": "1323550",
+    "ThreadId": "572103",
+    "Html": "WPP uses the System.Security.Cryptography.X509Certificates.X509Certificate2.Verify() method of .Net. Sometime this method returns false negative result. The curious thing here, is that the result depends of the logon user !\r<br />\nCan you send me the .pfx file with the password at <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a> . I would like to look at this certificate.\r<br />\nAdditionally, what is the release of Windows where Wsus is installed ?<br />\n",
+    "PostedDate": "2014-11-18T12:49:11.083-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1323584",
+    "ThreadId": "572103",
+    "Html": "Thanks for the info.<br />\n<br />\nUnfortunately I am unable to provide the cert used due to the company restrictions.  We aren't using a WPP generated cert, we are using a cert generated by our CA.<br />\n",
+    "PostedDate": "2014-11-18T14:11:51.157-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1323642",
+    "ThreadId": "572103",
+    "Html": "OK.\r<br />\nIs it a Microsoft Windows CA ?<br />\n",
+    "PostedDate": "2014-11-18T21:36:52.003-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

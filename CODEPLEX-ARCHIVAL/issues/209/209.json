@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Custom Update Creator",
+      "DisplayName": "Custom Update Creator"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-07-28T09:59:42.383-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Custom updates, once created, cannot be revised or edited. Sometimes mistakes in the custom update are revealed during testing, and it would cut down on work to be able to edit the custom update instead of creating it again from new.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-07-17T12:37:00.183-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Postponed"
+    },
+    "Summary": "Feature request: revise/edit a custom update",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 209
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "After reviewing how custom updates work, I don't see how this would be possible, since it involves changing the files in the package, which isn't possible with any updates using WSUSPackagePublisher.",
+      "PostedDate": "2014-07-17T13:13:48.373-07:00",
+      "Id": 152748
+    },
+    {
+      "Message": "You are right, changing files of an update is impossible with WSUS. Revising an update, only allow you to change metadata, not files.\nIn WPP V2, you will be able to create a supersedes update from a custom update already published.",
+      "PostedDate": "2014-07-28T09:59:19.203-07:00",
+      "Id": 153724
+    }
+  ]
+}

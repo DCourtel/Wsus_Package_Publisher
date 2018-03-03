@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1258389",
+    "ThreadId": "549274",
+    "Html": "I've searched high and low but can't seem to find a direct reference.  I cannot get the 11.0.07 msp to apply to a working WSUS/WPP environment.  Flash/Reader work fine.  I've tried using the MSI product code as a condition for installation and I've tried using nothing.  It never seems to report the way it should.  If I set nothing, it seems to want to download the update on all of my test computers, even those without XI Pro and those with XI Pro, it fails.\r<br />\n<br />\nAny tips?<br />\n",
+    "PostedDate": "2014-06-20T11:52:44.94-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:48:28.483-07:00"
+  }
+]

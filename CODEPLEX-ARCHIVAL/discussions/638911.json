@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1427972",
+    "ThreadId": "638911",
+    "Html": "Hello guys,\r<br />\n<br />\nMostly, I'm happy user with WPP.\r<br />\nI just have a simple question, then maybe you can help.\r<br />\n<br />\nI had no issues to distribute any reqular EXE packages, until, I went for the upgrade to the latest release. That was the straight forward overwrite over the old one (as several post suggested).\r<br />\nThen troubles have started.\r<br />\nDue to any distribution of the executables, I always got &quot;Not approved&quot; status.\r<br />\n<br />\nI had to completely extract the previous release of WPP, we can say, to the fresh folder, to run the app.\r<br />\nThen problem is gone.\r<br />\n<br />\nWhat do I do wrong please?\r<br />\nAny suggestions please?\r<br />\nI run several W2012R2 combined with W8.1.\r<br />\n<br />\nCheers,\r<br />\nMarek<br />\n",
+    "PostedDate": "2015-05-28T15:37:47.313-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1428333",
+    "ThreadId": "638911",
+    "Html": "Bump!!!\r<br />\nAnyone?\r<br />\n<br />\nDue to the fresh extraction of the latest release to the new folder, I have the same issue with EXE. It is not the issue with the upgrade of overwriting of the older WPP package.\r<br />\nIt looks like the problem with Approval, or detection.\r<br />\nEverything works with the older version.\r<br />\n<br />\nAny suggestions to check please?\r<br />\n<br />\nCheers,\r<br />\nMarek<br />\n",
+    "PostedDate": "2015-06-02T02:40:17.523-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

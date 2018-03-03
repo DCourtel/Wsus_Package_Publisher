@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1484868",
+    "ThreadId": "658323",
+    "Html": "I've been using Wsus Package Publisher for the past two years to publish a various application installers as optional updates to allow non-admin users the means of installing approved applications on an as-needed basis. Windows 7 &amp; Windows 8 clients were are able to find these application installers listed in the Windows Update control panel as 'optional updates', and in the 'Install program from the network' control panel.<br />\n<br />\nWindows 10 still has the 'Install program from the network' control panel, however, the concept of the 'optional update' has been done away with. The resulting behavior is that the Windows 10 update client installs ALL updates from the WSUS catalog which have been classified as optional.<br />\n<br />\nHas anyone managed to come up with a way to continue making application installers/updates available to Windows 10 clients WITHOUT requiring that every application be automatically installed?<br />\n",
+    "PostedDate": "2016-09-28T07:53:43.413-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1485646",
+    "ThreadId": "658323",
+    "Html": "Yes I have, it revolves around your GPO settings. I can't remember which one it is but you would need to use RSAT for windows 10 in order to defer updates or tell windows 10 to notify/download updates. My windows 10 test version basically notifies admins for installs and does not install any updates automatically unless I download it first.\r<br />\nI'll check and get back to this when I find it.<br />\n",
+    "PostedDate": "2016-10-09T09:15:56.453-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

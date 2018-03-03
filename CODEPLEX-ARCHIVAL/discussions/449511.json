@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1066358",
+    "ThreadId": "449511",
+    "Html": "Can someone compare and contrast these two products?\r<br />\nA side-by-side chart would be great but I'd settle for a bullet list.\r<br />\n<br />\nWSUS Package Publisher\r<br />\n<a href=\"https://wsuspackagepublisher.codeplex.com/\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/</a>\r<br />\n<br />\nLocal Updates Publisher\r<br />\n<a href=\"http://localupdatepubl.sourceforge.net/\" rel=\"nofollow\">http://localupdatepubl.sourceforge.net/</a><br />\n",
+    "PostedDate": "2013-07-09T17:54:16.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1066701",
+    "ThreadId": "449511",
+    "Html": "I have used both of these products for a number of months, so I can give my two cents on why I ultimately choose WSUS Package Publisher.<br />\n<ul>\n<li>Local Updates Publisher (LUP) does not currently support WSUS hosted on a Windows 2012 server.</li>\n<li>LUP has not been seriously updated since Oct 2011.</li>\n<li>\nLUP tool has crashed on me multiple times while trying to approve updates / revise them.<br />\n</li>\n<li>\nWSUS Package Publisher (WPP) does support  WSUS hosted Windows 2012 server.<br />\n</li>\n<li>The WPP developer is very responsive to issues / requests from users.</li>\n<li>WPP has been updated many times since I have started using it.   Look at the history to see.</li>\n<li>\nWPP adds a lot of &quot;right-click&quot; features on computers to get them to reboot, detect now, report now, etc.<br />\n</li>\n</ul>\nI hope that helps.<br />\n",
+    "PostedDate": "2013-07-10T10:50:16.573-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:31:46.58-07:00"
+  },
+  {
+    "Id": "1331773",
+    "ThreadId": "449511",
+    "Html": "Very helpful.  Might be the most valuable post on here.<br />\n",
+    "PostedDate": "2014-12-14T06:28:25.867-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

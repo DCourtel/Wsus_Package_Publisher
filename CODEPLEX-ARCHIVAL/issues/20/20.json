@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-04-15T15:07:22.087-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nattached you will find a screenshot with English Translation. The Translation is not so good. Pls change it in: Command sent.\r\n\r\nThanks and Regards.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-04-15T11:49:12.827-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Correct Translation",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 20
+  },
+  "FileAttachments": [
+    {
+      "FileId": 664190,
+      "FileName": "uebersetzung.png",
+      "DownloadUrl": ".\\664190"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "I have made the correction.",
+      "PostedDate": "2013-04-15T12:40:52.097-07:00",
+      "Id": 97057
+    }
+  ]
+}

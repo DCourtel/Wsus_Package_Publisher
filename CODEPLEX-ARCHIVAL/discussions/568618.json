@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1309041",
+    "ThreadId": "568618",
+    "Html": "I am trying to push out the msp of the acrobat reader 11.0.09. (not the incremental one).  With version 11.0.08, I got it to work by by using no 'isinstalled' rule, but checking for a registry key for 'isinstallable'.  Unfortunately, it tried to install even when installed, created a lot of false 'failed' notices, so I tried creating an 'isinstalled' rule to bypass if necessary this time around.  Now I cannot get it to install at all - in fact, even though I'm checking for a registry key with a value specific to 11.0.09, it sees this patch as installed on unpatched 11.0.08 clients.  Help?<br />\n",
+    "PostedDate": "2014-09-29T14:25:58.313-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1309046",
+    "ThreadId": "568618",
+    "Html": "I should add, if I create no rules whatsoever and just use the msp file, I get 'not applicable'<br />\n",
+    "PostedDate": "2014-09-29T14:38:30.89-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1309090",
+    "ThreadId": "568618",
+    "Html": "Interesting.  I had greater success by removing all rules for 11.0.9.<br />\n\r<br />\nI used rules for 11.0.8 and earlier with mixed results.\r<br />\n<br />\nYou are using catalogs to synchronize the Reader updates, correct?<br />\n",
+    "PostedDate": "2014-09-29T17:19:48.433-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1313880",
+    "ThreadId": "568618",
+    "Html": "I am also have a problem with update 11.0.09.msp.<br />\n<br />\nI<code>ve published Adobe Reader XI 11.0.0 Polish version and test workstation successfully installed it. Then i</code>ve tried to publish update 11.0.09.msp but first the status for this workstation was Not applicable. Then I<code>ve searched solution and found that need to add a rule for processor architecture. I</code>ve added rule for x86 and x64 processor without any 'AND' or 'OR' in the rules. I<code>ve add this rules on first rules page. The the status of update changed to Not installed for test workstation, but after i</code>ve clicked seach for updates on workstation or Send report in WPP nothing was happend. Workstation don<code>t see this update...<br /><br />manually I can install this update from msp on test workstaton without any problem... Also when I have installed this update manually the status for the update change from Unknown to Installed in WPP. For this update I have not add any rules..<br /><br />Now trying to uninstall 11.0.09 and let</code>s check the status again..<br />\n",
+    "PostedDate": "2014-10-16T01:09:44.193-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

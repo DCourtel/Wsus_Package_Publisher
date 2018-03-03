@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Our parent company recently changed our WSUS server to be a downstream replica of their server. Prior to this I was using WSUS Package Publisher without any issues. After they changed the WSUS configuration, I could no longer revise or create new updates. I've just changed our on site WSUS server back to synchronise directly with Microsoft rather than another update server. I can now revise and create new packages using WSUS Package Publisher. However, I have a problem installing them on the client machines. I've created a superseding update for a piece of software we use and have approved it for installation. When I search for new updates on a client PC, it finds the new update, downloads it, but fails to install. It comes up each time with the following error message: \r\n\r\nSome update files aren't signed correctly.\r\n\r\nError code: (0x800b0109)\r\n\r\nAny ideas how I fix this?\r\n\r\nMany thanks,\r\nMark\r\n",
+    "LastUpdatedDate": "2017-09-21T05:40:51.68-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-09-21T03:27:35.31-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Error: Some update files aren't signed correctly.  Error code: (0x800b0109)",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 382
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Is the Certificate you used on two places on the Clients? You can try to resign in WPP. Maybe this will help.",
+      "PostedDate": "2017-09-21T05:40:51.68-07:00",
+      "Id": 208817
+    }
+  ]
+}

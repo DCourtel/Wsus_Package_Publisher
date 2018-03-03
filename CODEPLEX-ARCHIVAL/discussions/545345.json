@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1245401",
+    "ThreadId": "545345",
+    "Html": "We have some Product names that we typed wrong and got picked up by our replica servers during a scheduled synchronization before we got them cleaned up on the master server. Now we can't delete the invalid Products on the replica servers even though they no longer exist on the master server. On the master server there's a pop-up menu when right-clicking a Product that has an option to &quot;Delete Product&quot;. On the replica servers the Products show no updates under them, but trying to right-click on the Product does not bring up any menu.<br />\n",
+    "PostedDate": "2014-05-14T10:47:10.87-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1245485",
+    "ThreadId": "545345",
+    "Html": "Effectively, «delete product» can only work on non-replica-server. You can try to put your replica-server as non-replica and then run WPP on this server to delete the empty product. Do not forget to put back the server as replica.\r<br />\nI never try this solution, but it should work.<br />\n",
+    "PostedDate": "2014-05-14T13:18:06.167-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1245504",
+    "ThreadId": "545345",
+    "Html": "That's what we thought and tried before starting this thread, but it didn't work. The pop-menu would display and when &quot;Delete Product&quot; was selected a &quot;Deleting Product&quot; pop-up progress bar appeared and went away and no errors were displayed, but the Product remained in Package Publisher.\r<br />\n<br />\nHowever a local publishing cert was not generated since WSUS would only be in non-replica mode for a short while. This time a self-signed cert was generated and the Product was successfully deleted. Kinda surprised a cert is required for an action that does not involve publishing an update.<br />\n",
+    "PostedDate": "2014-05-14T13:49:26.517-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-14T15:40:13.13-07:00"
+  }
+]

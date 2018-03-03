@@ -1,0 +1,91 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-12-15T04:41:39.573-08:00",
+    "CommentCount": 6,
+    "Custom": null,
+    "Description": "Hi all,\r\n\r\ni don't know what is wrong with my Rules. This Package will install after succesfull installation again and again. First Screen is first rule, second the second rule and the third screen is from registry after succesfully installation. Can someone correct me?\r\n\r\nThanks and Regards\r\nWinfried",
+    "LastUpdatedDate": "2013-12-15T04:41:39.68-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-11-25T01:46:53.243-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Package wants to install again",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 153
+  },
+  "FileAttachments": [
+    {
+      "FileId": 761906,
+      "FileName": "XPhone44_1.png",
+      "DownloadUrl": ".\\761906"
+    },
+    {
+      "FileId": 761907,
+      "FileName": "XPhone44_2.png",
+      "DownloadUrl": ".\\761907"
+    },
+    {
+      "FileId": 761908,
+      "FileName": "XPhone44_3.png",
+      "DownloadUrl": ".\\761908"
+    },
+    {
+      "FileId": 761910,
+      "FileName": "XPhone44_1_Correct.png",
+      "DownloadUrl": ".\\761910"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": ".",
+      "PostedDate": "2013-11-25T01:47:22.93-08:00",
+      "Id": 124117
+    },
+    {
+      "Message": ".",
+      "PostedDate": "2013-11-25T01:47:39.81-08:00",
+      "Id": 124118
+    },
+    {
+      "Message": "Sorry, XPhone44_1.png is the wrong one, i added now the correct one. XPhone44_1_Correct.png",
+      "PostedDate": "2013-11-25T01:50:04.563-08:00",
+      "Id": 124119
+    },
+    {
+      "Message": "Does Windows installed in 64 bit edition ?",
+      "PostedDate": "2013-11-25T02:48:27.893-08:00",
+      "Id": 124125
+    },
+    {
+      "Message": "No, this is a 32-Bit Windows 7 SP1.",
+      "PostedDate": "2013-11-25T03:49:00.253-08:00",
+      "Id": 124133
+    },
+    {
+      "Message": "OK, now its working. First Rule:\n\n<bar:RegSzToVersion Key=\"HKEY_LOCAL_MACHINE\" Subkey=\"SOFTWARE\\WSB\\XPhone\" Value=\"Version\" Comparison=\"EqualTo\" Data=\"4.4.0.0\" RegType32=\"true\"/>\n\nSecond Rule:\n<bar:RegSzToVersion Key=\"HKEY_LOCAL_MACHINE\" Subkey=\"SOFTWARE\\WSB\\XPhone\" Value=\"Version\" Comparison=\"LessThan\" Data=\"4.4.0.0\" RegType32=\"true\"/>\n\nThanks and Regards\nWinfried",
+      "PostedDate": "2013-11-25T04:53:52.287-08:00",
+      "Id": 124136
+    }
+  ]
+}

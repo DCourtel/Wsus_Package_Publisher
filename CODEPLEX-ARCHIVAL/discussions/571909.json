@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1321388",
+    "ThreadId": "571909",
+    "Html": "Maybe it's just me, but sometimes I had to click 3 (!) times to open the approval options pulldown menu where to choose on which computer groups the update should be approved. It's a bug or a feature? ;)<br />\n",
+    "PostedDate": "2014-11-12T11:29:31.067-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1321393",
+    "ThreadId": "571909",
+    "Html": "It's a well known bug in .Net Framework. Unfortunately, I never find a way to work around this.<br />\n",
+    "PostedDate": "2014-11-12T11:38:54.763-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-11-12T12:05:19.217-08:00"
+  }
+]

@@ -1,0 +1,80 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-07-03T14:30:58.987-07:00",
+    "CommentCount": 8,
+    "Custom": null,
+    "Description": "Hi\r\n\r\nMy WPP Version: 1.3.1405.17\r\nServer Version: 3.2.7600.262\r\nConsole Version: 3.2.7600.262\r\n\r\nI got the following error when I try to Create a new update of a own-created MSI:\r\n\r\nVerfication of file signature failed for file: \\\\(hostname)\\UpdateServicesPackages\\(character string)_2.cab\r\n\r\nI tried the following:\r\n- MSI on a network share in LAN\r\n- MSI on a local drive C:\\WSUS\r\n\r\nBoth was failed.",
+    "LastUpdatedDate": "2014-07-03T14:30:58.987-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-05-21T05:21:35.803-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Verfication of file signature failed",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 192
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi,\n\nfor German Reader, here is the Thread on MCSEBoard: http://www.mcseboard.de/topic/198159-msi-installation-%C3%BCber-gpo-zieht-nicht/\n\nDid you create a new certifacte after updating WSUS to Vers. .262? If no, do this again und publish the certifcate. Try again. how big is the MSI? How many space is available on WSUS?",
+      "PostedDate": "2014-05-21T06:28:22.983-07:00",
+      "Id": 147330
+    },
+    {
+      "Message": "Hi\n\nNo, i hadn't create a new certificate, I should do this now.\nThe size of the MSI is about 1,1 GB.\n\n",
+      "PostedDate": "2014-05-21T07:27:50.15-07:00",
+      "Id": 147336
+    },
+    {
+      "Message": "Hi, do you have already successfuly publish a package or is it the first one ?",
+      "PostedDate": "2014-05-21T13:15:03.537-07:00",
+      "Id": 147369
+    },
+    {
+      "Message": "Hi\n\nYes I published a package without problems.\nI installed now a new certificate with WSUS version .262 and shared it over GPO in guidelines for open keys in \"trustable publisher\" and \"trusted root certification\" -folder. Made a GPUPDATE and restarted the wsus-server.\n\nBut I always get the error above...\n",
+      "PostedDate": "2014-05-22T01:04:24.97-07:00",
+      "Id": 147403
+    },
+    {
+      "Message": "Informations about the MSI:\n- Some vbs-scripts inside, which check some products on the client and registry-entrys.\n- A lot of DLL- and PNL-files inside (about 4 directories with over 1.000 files)\n- Access of an available registry-key\n\n\nBut:\nI published a MSI-Package with similar VBS-scripts inside without problems.",
+      "PostedDate": "2014-05-22T01:35:43.05-07:00",
+      "Id": 147406
+    },
+    {
+      "Message": "Do you run WPP directly on the Wsus server or on an administrative PC ?",
+      "PostedDate": "2014-05-22T04:24:33.457-07:00",
+      "Id": 147412
+    },
+    {
+      "Message": "Directly on the Wsus server",
+      "PostedDate": "2014-05-22T05:12:17.987-07:00",
+      "Id": 147416
+    },
+    {
+      "Message": "Ensure, the new cert have been imported in the right store on the Wsus server. (Computer profile : Trusted root authorities, trusted publishers, wsus store)",
+      "PostedDate": "2014-05-23T12:04:08.927-07:00",
+      "Id": 147561
+    }
+  ]
+}

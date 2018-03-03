@@ -1,0 +1,114 @@
+[
+  {
+    "Id": "1451010",
+    "ThreadId": "647017",
+    "Html": "Hallo,\r<br />\n<br />\nich richte gerade ein, das Clients mit Java 8 Update 65 ausgestatte werden, wenn mindestens Java 8 installiert ist. Clients die kein Java besitzen oder Version 7 sollen ausgeschlossen sein.\r<br />\nIch bin wie in der Anleitung <a href=\"http://www.wsus.de/uninstall2install\" rel=\"nofollow\">http://www.wsus.de/uninstall2install</a> vorgegangen. Lediglich mit den neuen MSI Produktcodes für Java 8 Update 65 und allen Java 8 Update-ProduktCodes.\r<br />\n<br />\nZusätzlich habe ich natürlich in den Regeln vorgegeben das der Registry-Schlüssel:\r<br />\n<em>HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\JavaSoft\\Java Runtime Environment\\1.8</em>\r<br />\nexistiert.\r<br />\n<br />\nIn meiner Testumgebung mit einem Client auf dem Java 8 Update 60 installiert war wurde Java 8 Update 60 deinstalliert und Java 8 Update 65 installiert. \r<br />\nEin weiterer Client ausgestattet mit Java 7 Update 75 und zusätzlich mit Java 8 Update 5, 11, 51 wurde mit Java 8 Update 65 installiert. Jedoch wurde nur Java 8 Update 51 deinstalliert. Java 7 Update 75 sollte auch drauf bleiben so weit so gut, warum jedoch wurden Java Update 5, 11 nicht deinstalliert?\r<br />\n<br />\nIm Anwendungslog steht:\r<br />\n<strong>Uninstallaufruf efolgreich ausgeführt: 26A24AE4-039D-4CA4-87B4-2F83218005FF</strong>\r<br />\nwas bedeuten würde Java 8 Update 5 wurde deinstalliert.\r<br />\n<br />\nDanke für eure Hilfe.<br />\n",
+    "PostedDate": "2015-11-05T05:44:02.56-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451016",
+    "ThreadId": "647017",
+    "Html": "Hi,\r<br />\n<br />\nDu hast auch für alle Java Versionen, die deinstalliert werden sollen, den richtigen Deinstall-String angegeben? Nur das was in der REG-Datei angegeben ist, wird auch wirklich deinstalliert.<br />\n",
+    "PostedDate": "2015-11-05T06:01:12.65-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451019",
+    "ThreadId": "647017",
+    "Html": "Hallo,\r<br />\n<br />\nja ich habe alle eingefügt, wie auch erwähnt werden die im Anwendungslog genannt, aber ausgeführt wurde nur die Deinstallation von Java 8 Update 51\r<br />\n<br />\nMeine REG-Datei:\r<br />\n<br />\n<em>Windows Registry Editor Version 5.00</em>\r<br />\n<br />\n<em>[HKEY_LOCAL_MACHINE\\SOFTWARE\\Uninstall2Install]</em>\r<br />\n<em>&quot;Uninstallstring&quot;=&quot;26A24AE4-039D-4CA4-87B4-2F83218000FF;26A24AE4-039D-4CA4-87B4-2F83218005FF;26A24AE4-039D-4CA4-87B4-2F83218011F0;26A24AE4-039D</em>-<em>4CA4-87B4-2F83218020F0;26A24AE4-039D-4CA4-87B4-2F83218025F0;26A24AE4-039D-4CA4-87B4-2F83218031F0;26A24AE4-039D-4CA4-87B4-2F83218040F0</em>;<em>26A24AE4-039D-4CA4-87B4-2F83218045F0;26A24AE4-039D-4CA4-87B4-2F83218051F0;26A24AE4-039D-4CA4-87B4-2F83218060F0&quot;</em>\r<br />\n<em>&quot;Installstring&quot;=&quot;jre1.8.0_65.msi&quot;</em>\r<br />\n<br />\nKönnte es evtl. sein das nur eine Deinstallation stattfindet? Da nur eine Deinstallation aktiv sein kann? Schließlich werden quasi alle &quot;gleichzeitig&quot; gestartet?\r<br />\n<br />\nDanke!\r<br />\nMfG<br />\n",
+    "PostedDate": "2015-11-05T06:22:57.777-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451023",
+    "ThreadId": "647017",
+    "Html": "Es wird für jeden String vor oder nach einem Semikolon ein msiexec /x{aasdlk} gestartet.\r<br />\n<br />\nMsiexe.exe /X{Inhalt des Uninstallstring} /qn\r<br />\n<br />\nNimm den Client und führe den Befehl mit dem passenden Uninstallstring in einer administrativen Commandline aus, was passiert? Du hast das Fenster Software auch anschließend mit F5 aktualisiert bzw. neu gestartet? Bist Du auch wirklich sicher das sich diese Uninstallstrings noch in der Registry befinden?\r<br />\n<br />\nDer Eintrag ins Log bedeutet nur das der Aufruf von Msiexe.exe /X{Inhalt des Uninstallstring} /qn ohne Fehler gelaufen ist, d.h. noch lange nicht das auch deinstalliert wurde.<br />\n",
+    "PostedDate": "2015-11-05T06:57:32.967-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451027",
+    "ThreadId": "647017",
+    "Html": "Hallo,\r<br />\n<br />\nok, ich bin nun hingegangen und habe alle Java 8 Versionen von 0 - 60 auf den Client installiert :-)\r<br />\n<br />\nDanach habe ich die Installation gestartet mit dem Ergebnis: Java 8 Update 65 ist installiert \r<br />\n<br />\nJava 8\r<br />\nJava 8 Update 5 und\r<br />\nJava 8 Update 11 wurden nicht deinstalliert. Ergo habe ich mir nochmal genau die Registry Einträge angeschaut und siehe da:\r<br />\n<br />\nJava 8                   26A24AE4-039D-4CA4-87B4-2F83218000FF  falsch, korrekt ist  26A24AE4-039D-4CA4-87B4-2F83218000F0\r<br />\nJava 8 Update 5    26A24AE4-039D-4CA4-87B4-2F83218005FF  falsch, korrekt ist  26A24AE4-039D-4CA4-87B4-2F83218005F0\r<br />\nJava 8 Update 11  26A24AE4-039D-4CA4-87B4-2F83218011F0 falsch, korrekt ist 26A24AE4-039D-4CA4-87B4-2F83218011FF\r<br />\n<br />\nBeim auslesen über den WPP des MSI von Java 8 steht aber im ProductCode FF am Ende?!\r<br />\nWie kann das sein?\r<br />\n<br />\nIch werde abschließend mal das Update im WPP anpassen und testen ob dann Java 8 Upate 5 und 11 auch deinstalliert werden und kurze Rückmeldung geben.\r<br />\n<br />\nDanke!<br />\n",
+    "PostedDate": "2015-11-05T07:24:32.31-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451049",
+    "ThreadId": "647017",
+    "Html": "Hmm,\r<br />\n<br />\nDu hast auch im MSI-Reader an der richtigen Stelle gesucht? Öffne die MSIs doch mal mit ORCA, findest Du dort den richtigen String?\r<br />\nHier ist beschrieben wie man an ORCA kommt: <a href=\"http://www.klaus-hartnegg.de/gpo/orca.html\" rel=\"nofollow\">http://www.klaus-hartnegg.de/gpo/orca.html</a><br />\n",
+    "PostedDate": "2015-11-05T09:33:18.927-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451129",
+    "ThreadId": "647017",
+    "Html": "Guten Morgen,\r<br />\n<br />\nich habe nun mit dem ORCA nochmal geprüft welcher ProductCode angezeigt wird und es ist das selbe wie über den MSI-Reader beim WPP\r<br />\n<br />\nUnter Property beim ProductCode steht eindeutig: {26A24AE4-039D-4CA4-87B4-2F83218000FF}\r<br />\nEine Suche im ORCA nach <strong>F0</strong> am Ende liefert mir auch keinen Treffer.\r<br />\nEine Suche in der Registry auf dem Client nach {26A24AE4-039D-4CA4-87B4-2F83218000FF} findet wiederum hier keine Treffer.\r<br />\n<br />\nSuche ich allerdings nach {26A24AE4-039D-4CA4-87B4-2F83218000F0} finde ich mehrere relevante Einträge und den relevanten Eintrag unter: <em>HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall{26A24AE4-039D-4CA4-87B4-2F83218000F0}</em>\r<br />\n<br />\nHab jetzt leider keinen Upload um Screenshots zu präsentieren, aber ich sehe z.Z. nicht wo ich falsch gesucht haben sollte.\r<br />\n<br />\nZum Anpassen des WPP für Java 8, Java Update 5 und 11 bin ich noch nicht gekommen, werde ich aber vermutlich noch heute im Laufe des Tages kommen.\r<br />\n<br />\nDanke weiterhin für Dein Bemühen. Eine Erklärung für dieses Verhalten bleibt mir aber vorerst unerschlossen.\r<br />\n<br />\nMfG<br />\n",
+    "PostedDate": "2015-11-05T23:28:06.737-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451133",
+    "ThreadId": "647017",
+    "Html": "Ich hab bei mir nochmal nachgesehen, in der von mir verwendeten MSI steht der 'richtige' Productcode drin. Du hast vermutlich das 64-Bit MSI genommen, zeigt übrigens auch der Pfad in der Registry, in dem Du den richtigen String gefunden hast. <br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node ist auf einem 64-Bit System der Zweig für die 32-Bit Software. <br />\n<br />\nUnd es verhält sich genauso wie mit Office, auf einem 64-Bit System musst Du noch lange kein 64-Bit Office installieren. Ganz im Gegenteil, 32-Bit Software reicht IMHO völlig aus. Außer der Hersteller der Software möchte das Du die 64-Bit Version von der SW installieren sollst.<br />\n",
+    "PostedDate": "2015-11-06T00:03:53.93-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451135",
+    "ThreadId": "647017",
+    "Html": "Hallo,\r<br />\n<br />\nnein wir verwenden die 32-bit Version. Diese habe ich auch für die Installation verwendet. Wir installieren kein 64-bit Java, da dann für die Applikationen der 64-bit IE benutzt werden müsste. Dies ist aber kein Standard bei uns.\r<br />\n<br />\nSprich wir verwenden ein Win 7 64-bit System mit 32-bit Java und mein Auslesen von Java 8 Update 5, sei es über ORCA oder über den MSI-Reader von WPP liest mir 100%-ig folgendes aus: \r<br />\n<br />\n<em>{26A24AE4-039D-4CA4-87B4-2F83218005FF}</em> Java 8 Update 5 32-bit Version\r<br />\n<em>{26A24AE4-039D-4CA4-87B4-2F86418005FF}</em> Java 8 Update 5 64-bit Version\r<br />\n<br />\nIch habe nun sowohl die Java 8 Update 5 32-bit und 64-bit auf dem Client installiert und in der Registry werden mir nach der Suche nur Zweige angezeigt mit\r<br />\n<br />\n<em>{26A24AE4-039D-4CA4-87B4-2F86418005F0}</em> , \r<br />\nEs findet sich kein einziger Eintrag mit <strong>FF</strong> am Ende.\r<br />\n<br />\nDas ich ausschließlich mit der 32-bit Version arbeite sieht man am letzten Abschnitt im Code. Hier ist dieser entweder <strong>832</strong> oder <strong>864</strong> in der Bezeichnung.\r<br />\nWie in meinem ersten Post habe ich auch nur die <strong>832</strong> herangezogen.\r<br />\n<br />\nSchade das ich keine Screenshots liefern kann.\r<br />\nEs verhält sich weiterhin so, dass meine verwendeten Java.MSI Dateien für Java 8, Java 8 Update 5 und 11 andere ProductCodes verwenden als letztendlich in der Registry vorhanden sind.\r<br />\n<br />\nIch hoffe wir sprechen nicht aneinander vorbei :-)\r<br />\n<br />\nWenn ich gleich noch zum Anpassen der Uninstall2Install.reg komme und das Update im WPP angepasst habe kann ich berichten ob die Deinstallation dann funktioniert. Falls ich heute nicht mehr dazu kommen sollte, dann vermutlich am Montag nächste Woche ;-)\r<br />\n<br />\nMfG<br />\n",
+    "PostedDate": "2015-11-06T00:59:20.62-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451139",
+    "ThreadId": "647017",
+    "Html": "Hmm, das ist schon sehr dubios.\r<br />\n<br />\nEvtl. kannst Du nochmal ein MSI aus der EXE extrahieren, die EXE einmal per Doppelklick starten und jetzt in %APPDATA%... das MSI holen und im mit dem WPP den Code auslesen. Du vewendest die aktuellste Version vom WPP?<br />\n",
+    "PostedDate": "2015-11-06T01:24:29.027-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451147",
+    "ThreadId": "647017",
+    "Html": "Hallo,\r<br />\n<br />\nes ist und bleibt dubios!\r<br />\n<br />\nso wie Du es beschreibst geh ich doch die ganze Zeit vor. Ich starte die <em>.exe gehe unter mein Userverzeichnis in %APPDATA%... nehme mir nur die </em>.msi und lese diese aus.\r<br />\nDabei wird mir dann am Ende <strong>FF</strong> angezeigt. In der Registry ist nach der Installation über die *.exe <strong>F0</strong> vorhanden. Ich habe mir übrigens alle Java Versionen hier:\r<br />\n<a href=\"http://www.example.com\" rel=\"nofollow\">http://java.techygeekshome.info/downloads</a> geladen.\r<br />\n<br />\nIch benutze die aktuellste Version von WPP siehe hier: <a href=\"http://www.example.com\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/646933</a> \r<br />\n<br />\n:-)\r<br />\n<br />\nAm WPP liegt das ja auch nicht, es sind die ProductCodes die mir den Streich spielen. Es erscheint halt beim auslesen ein anderer als letzten Endes in der Registry existiert.\r<br />\nFür mich ist das Thema eigentlich auch beendet sobald ich meine Uninstall2Install.reg auf die &quot;richtigen&quot; ProductCodes angepasst habe und es in meiner Umgebung funktioniert.\r<br />\nDas eigentliche warum beim Auslesen der ProductCodes etwas anderes angezeigt wird bleibt somit weiterhin offen, aber das soll mir dann auch eigentlich egal sein.\r<br />\n<br />\nIch bin und werde aber vermutlich auch heute nicht mehr dazu kommen meine Konfiguration für den WPP (einschließlich die Uninstall2Install.reg) anzupassen und es zu testen. \r<br />\nIch kann aber wenn Du möchtest Dir meine Erfahrung gerne noch einmal schreiben.\r<br />\n<br />\nDanke! Ich wünsche schon jetzt ein schönes Wochenende!<br />\n",
+    "PostedDate": "2015-11-06T02:44:22.583-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451154",
+    "ThreadId": "647017",
+    "Html": "Hi,\r<br />\n<br />\nalles sehr komisch. Ich mach das schon seti langem so und es hat bisher immer funktioniert.\r<br />\n<br />\nAber gut, zukünftig weißt Du wo Du den Uninstall String auslesen mußt, schon funktioniert es wie gewünscht.\r<br />\n<br />\nSchönes WE.<br />\n",
+    "PostedDate": "2015-11-06T03:43:10.833-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452703",
+    "ThreadId": "647017",
+    "Html": "Guten Morgen,\r<br />\n<br />\nes sind nun ein paar Tage ins Land gegangen und alles funktioniert wie gewünscht. Nachdem ich die ProductCodes für mich angepasst habe werden alle Java 8 Versionen deinstallert und nur die Java 8 Update 65 installiert.\r<br />\n<br />\nIch danke Dir für Deine zur Verfügung gestellte Anleitung!!!\r<br />\n<br />\nDas Auslesen der ProductCodes ist und bleibt ein Mysterium :-) aber solang ich in der Registry den korrekten finde und dieser sich deinstallierten lässt ist alles in &quot;Butter&quot; ;-)\r<br />\n<br />\nEine schöne Restwoche!\r<br />\n<br />\nMfG<br />\n",
+    "PostedDate": "2015-11-17T00:05:41.287-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452794",
+    "ThreadId": "647017",
+    "Html": "Freut mich für dich und Danke für die Rückmeldung. ;)\r<br />\n<br />\nBTW: Es gibt schon wieder ein Java Update, No. 66 steht zur Verfügung. Kannst ja gleich wieder installieren. ;)\r<br />\nDabei sollte man in den Uninstall String auch nur hinzufügen, falls ein Client länger nicht an war kriegst Du die alten Versionen auch dort deinstalliert.<br />\n",
+    "PostedDate": "2015-11-17T09:12:25.297-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

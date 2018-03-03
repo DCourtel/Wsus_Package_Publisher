@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Please, for this type of question, open a «Discussion» instead of an «Issue». ",
+    "ClosedDate": "2017-01-30T22:07:44.533-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello everybody,\r\n\r\nI got the WPP tested in a lab environment and have to say it works great! A great helpful tool. Then I wanted to test in the productive environment, with a Java update. Unfortunately, the PC (especially IT01) i want to update does not show \"Approved\" as status although the update for the whole group has been approved. (see image)\r\nStatus is only \"unavailable\". Unfortunately, that's the PC at each update so, I've already tried the Firefox (there the installation on other computer was successful).\r\nWhat can cause that? For testing reasons, I've turned off the firewall, but that makes no difference. On the computer is Win7 Prof. x64 is installed. The publishing rules are simply \"msiar: MsiApplicationInstalled\" and \"msiar: MsiApplicationInstallable\".\r\nMaybe you have an idea.\r\n\r\nMany Greetings\r\nSnuggle\r\n\r\nps. if the client in 2 groups, the application must be approved in two? Currently this is whats happen to the computer IT01\r\n\r\nHallo :)\r\n\r\nIch hab den WPP in einer Testumgebung getestet und muss sagen es funktioniert super! Ein tolles hilfreiches Werkzeug. Ich hab es dann in der Produktivumgebung testen wollen, mit Java. Leider zeigt er an dem PC den ich Updaten möchte (speziell it01) nicht an, das es auf genehmigt steht obwohl das Update für die gesamte gruppe genehmigt ist.  (siehe Bild)\r\nUnter Status steht auch nur \"nicht verfügbar\". Leider ist das mit dem PC bei jedem Update so, ich hab auch schon den Firefox ausprobiert (da hat das Installieren auf anderen Rechnern hingehauen).\r\nWelche Ursache kann das haben? Testweise hab ich die Firewall ausgeschaltet, das macht aber keinen Unterschied. Auf dem Rechner ist Win7 Prof. x64 installiert. Die Veröffentlichungsregel sind einfach \"msiar:MsiApplicationInstalled\" und \"msiar:MsiApplicationInstallable\".\r\nVielleicht habt Ihr ja eine Idee.\r\nViele Liebe Grüße\r\nSnuggle\r\n\r\nps. Kann es sein, dass wenn der Client in 2 Gruppen ist, die Anwendung in beiden zugelassen werden muss? Aktuell ist es genau so bei dem rechner it01",
+    "LastUpdatedDate": "2017-01-30T22:07:44.547-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-02-01T01:21:06.287-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Not Applicable / Not Approved",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 319
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1543934,
+      "FileName": "NotApproved.png",
+      "DownloadUrl": ".\\1543934"
+    }
+  ],
+  "Comments": []
+}

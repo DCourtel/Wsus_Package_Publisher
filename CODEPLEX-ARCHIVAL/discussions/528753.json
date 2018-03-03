@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1202085",
+    "ThreadId": "528753",
+    "Html": "After starting WSUS Packet Publisher and connecting to Server got the message that console Version and Server Version does not match. \r<br />\n<br />\nLokking at the Server Version is 3.0 SP2 build 3.2.7600.226 running on W2008R2.\r<br />\nLooking at the Client Version is 3.0 SP2 build 3.2.7600.226 running on W7Pro SP1\r<br />\n<br />\nDoes anyone have a idea?\r<br />\n<br />\nTahnks a lot.\r<br />\nSiegfried<br />\n",
+    "PostedDate": "2014-02-03T07:52:46.57-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1202228",
+    "ThreadId": "528753",
+    "Html": "Where did you get the version number ?\r<br />\nIf you run WPP, connect to the Wsus server, go to 'Help' -&gt; 'About', which version number do you read ?<br />\n",
+    "PostedDate": "2014-02-03T13:31:52.443-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1202366",
+    "ThreadId": "528753",
+    "Html": "I got the Version numbers from &quot;ControlPanel/Programs and Functions&quot; on each machine (Server / Client).\r<br />\n<br />\nWhen i open the WPP App and went to Help-&gt;About there i see those Versions:\r<br />\nWPP Release: 1.3.1401.4\r<br />\nServer Version: 3.2.7600.262\r<br />\nConsole Version: 3.2.7600.256<br />\n",
+    "PostedDate": "2014-02-04T00:46:20.057-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1202380",
+    "ThreadId": "528753",
+    "Html": "Hi, You can not rely on 'Programs and Functions', because MMC version shown here are base version (aka 3.2.7600.226). If you click on 'Show Installed Updates' you will see what is the latest patch installed and so the real version.\r<br />\nWPP give you the correct version of Wsus and Console. install <strong>KB2828185</strong> on computers where Wsus console is installed.<br />\n",
+    "PostedDate": "2014-02-04T01:23:13.007-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-02-04T02:59:41.793-08:00"
+  },
+  {
+    "Id": "1202381",
+    "ThreadId": "528753",
+    "Html": "Hi\r<br />\n<br />\nthank you so much for your assistance.\r<br />\n<br />\nJust for a moment before your reply i had a look to the installed updates and i installed 2828185 on my Windows 7 Client and everything works fine. The trick for me was to recognize that i have to look in WPP help/about and to see which Versions are used.\r<br />\n<br />\nThank you.<br />\n",
+    "PostedDate": "2014-02-04T01:33:14.143-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1205630",
+    "ThreadId": "528753",
+    "Html": "Hi,\r<br />\n<br />\nhave a look in <a href=\"http://wsus.de/faq\" rel=\"nofollow\">http://wsus.de/faq</a> No. 44. There you will find a List with WSUS-Version Numbers and all needed Updates.\r<br />\nAnd you will find a Image where you can find the Versionnumbers on you WSUS or W7 Client.<br />\n",
+    "PostedDate": "2014-02-09T05:22:05.493-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

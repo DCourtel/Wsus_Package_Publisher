@@ -1,0 +1,91 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "About form",
+      "DisplayName": "About form"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-05-29T14:42:08.603-07:00",
+    "CommentCount": 9,
+    "Custom": null,
+    "Description": "Add Certificate Expiration Date in the 'About' form.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.2.1305.26",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-28T15:16:47.453-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "Add Certificate Expiration Date",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 2,
+    "Id": 54
+  },
+  "FileAttachments": [
+    {
+      "FileId": 687391,
+      "FileName": "Certifcate Warnings.png",
+      "DownloadUrl": ".\\687391"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Thanks. ;)",
+      "PostedDate": "2013-05-29T00:35:45.44-07:00",
+      "Id": 101520
+    },
+    {
+      "Message": "Added in the 'About' Form.",
+      "PostedDate": "2013-05-29T14:41:53.783-07:00",
+      "Id": 101599
+    },
+    {
+      "Message": "Maybe add a kind of warning \"Popup\" or \"red button\" or something like that if the certificate lifetime is about to expire in 2 weeks (or configurable).",
+      "PostedDate": "2013-05-29T16:05:11.807-07:00",
+      "Id": 101608
+    },
+    {
+      "Message": "Hi Norbert, in the About Form, the field with Expiration date is in Orange when the Certificate expire in less than 30 days, and WPP advices the user at each start.",
+      "PostedDate": "2013-05-29T21:54:53.077-07:00",
+      "Id": 101619
+    },
+    {
+      "Message": "For me its OK, Norbert it is OK for you too? ;)",
+      "PostedDate": "2013-05-30T02:12:21.523-07:00",
+      "Id": 101635
+    },
+    {
+      "Message": "I would prefer a more prominent info about the expiration. But I guess thats not the most important problem at the Moment.  ;)",
+      "PostedDate": "2013-05-30T04:21:15.657-07:00",
+      "Id": 101643
+    },
+    {
+      "Message": "If i remember correct, you will get a Messagebox even WPP is started. DCourtel, is it correct?",
+      "PostedDate": "2013-05-30T07:28:31.057-07:00",
+      "Id": 101665
+    },
+    {
+      "Message": "Must connect to the Wsus server to allow WPP to see if there is a certificate and to get his expiration date.\r\nSo each time WPP connect to a Wsus server, it check if the certificate is OK. If not, a MessageBow appeare saying what king of problem there is. See the screenshot",
+      "PostedDate": "2013-05-30T11:48:03.39-07:00",
+      "Id": 101692
+    },
+    {
+      "Message": "The user won't be able to publish an update until he has solved the certificate probleme.",
+      "PostedDate": "2013-05-30T11:50:28.08-07:00",
+      "Id": 101693
+    }
+  ]
+}

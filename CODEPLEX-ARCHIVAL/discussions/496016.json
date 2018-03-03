@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1164335",
+    "ThreadId": "496016",
+    "Html": "Bonjour, <br />\n<br />\nJ'ai un soucis lors du deploiement de mozilla firefox à partir de WPP <br />\n<br />\nL'ordinateur cible obtiens bien la mise a jour mais lorsque je clique sur installer les mises à jour il me donne le code erreur &quot;800B0109&quot;<br />\n<br />\nJ'ai bien vérifié dans le registre : HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AcceptTrustedPublisherCerts = 1<br />\n<br />\nLe cerficat fournis par WPP se trouve bien sur le serveur et le client dans autorités de certification racine de confiance ==&gt; certificats <br />\n<br />\nIls sont bien identiques <br />\n<br />\nPar contre lorsque je fais DetectNow ou Report Now sur WPP il me dit echec de connexion <br />\n<br />\nSi on peut m'aider :) <br />\n<br />\nMerci<br />\n",
+    "PostedDate": "2014-01-14T01:39:18.497-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1164663",
+    "ThreadId": "496016",
+    "Html": "Bonjour Givent,\r<br />\n<br />\nTu as raison, le code 800B0109 correspond à un problème de certificat.\r<br />\nTu trouvera plein d'info sur la résolution de ce problème <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/450315\" rel=\"nofollow\">ICI</a>\r<br />\n<br />\n<em>Le certificat fournis par WPP se trouve bien sur le serveur et le client dans autorités de certification racine de confiance ==&gt; certificats</em>\r<br />\n<br />\nAssure toi que tu est bien dans le profil &quot;Ordinateur&quot; et non pas le profil &quot;Utilisateur&quot;. Le certificat doit être également présent dans &quot;<strong>Editeurs Approuvés</strong>&quot;.\r<br />\n<br />\n<em>Par contre lorsque je fais DetectNow ou Report Now sur WPP il me dit echec de connexion</em>\r<br />\n<br />\nCa n'a pas d'impact sur ton problème d'installation de mises à jour. Cela signifie que le logiciel n'arrive pas à exécuter des commandes à distance sur les clients. Ca peut provenir d'un problème de pare-feu où de compte de connexion. Regarde ce <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/456981\" rel=\"nofollow\">Post</a> pour plus d'informations sur les ports à ouvrir dans le pare-feu.<br />\n",
+    "PostedDate": "2014-01-14T03:49:12.85-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T07:50:34.583-08:00"
+  },
+  {
+    "Id": "1164851",
+    "ThreadId": "496016",
+    "Html": "Merci de votre réponse, j'ai deja suivit ce post il n'a pas résolu mon probleme malheureusement <br />\n<br />\nen revanche en ce qui concerne le profil ordinateur et le profil utilisateur je ne vois pas où est le différence et comment configurer cela <br />\n",
+    "PostedDate": "2014-01-14T04:55:57.087-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1164879",
+    "ThreadId": "496016",
+    "Html": "super merci c'est bon ça fonctionne mon problème était bien que mon certificat etait  pas sur le profil ordinateur.<br />\n<br />\nMaintenant l'installation reste bloqué tout ua debut de la barre d'installation. J'ai bien mis /s <br />\nmais je vais chercher la cause de cela.<br />\n",
+    "PostedDate": "2014-01-14T05:05:37.05-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1166062",
+    "ThreadId": "496016",
+    "Html": "Si l'installation commence et reste bloqué sans jamais s'arrêter, c'est souvent parce que le programme d'installation essai d'afficher une fenêtre pour interagir avec l'utilisateur (cliquer sur 'Suivant' ou demander des informations), mais qu'il n'y arrive pas vu que l'installation s'exécute avec le compte 'System'. Du coup le programme attend une réaction de l'utilisateur.\r<br />\nDe quel type est le programme d'installation : .exe ou .msi ?\r<br />\nCopie le programme d'installation sur la machine cliente, et lance le avec le switch /s pour voir si l'installation se déroule bien en mode silencieuse.<br />\n",
+    "PostedDate": "2014-01-14T11:57:28.68-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T07:50:36.847-08:00"
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1364111",
+    "ThreadId": "586820",
+    "Html": "you can run a script customization while installing adobe flash player?\r<br />\n<br />\nwhat I would have run these commands:\r<br />\n<br />\n:: These lines delete the Adobe Acrobat Update Service\r<br />\nnet stop AdobeARMservice\r<br />\nsc delete AdobeARMservice\r<br />\n<br />\n:: These lines delete the Adobe Acrobat Update Service (older version)\r<br />\nnet stop armsvc\r<br />\nsc delete armsvc\r<br />\n<br />\n:: These lines delete the Adobe Flash Player Update Service\r<br />\nnet stop AdobeFlashPlayerUpdateSvc\r<br />\nsc delete AdobeFlashPlayerUpdateSvc\r<br />\n<br />\n:: This line deletes the scheduled task Adobe installs (against our wishes)\r<br />\ndel /F /Q &quot;%SystemDrive%\\Windows\\tasks\\Adobe Flash Player Updater.job&quot; 2&gt;NUL<br />\n",
+    "PostedDate": "2015-03-16T05:57:44.42-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1364146",
+    "ThreadId": "586820",
+    "Html": "Sure !\r<br />\nYou want to read the documentation about <a href=\"http://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=752590\" rel=\"nofollow\">Custom Updates</a><br />\n\r<br />\nUse :<br />\n<ul>\n<li>Work with Services\r<br />\nor</li>\n<li>Run Script</li>\n</ul>\n",
+    "PostedDate": "2015-03-16T07:29:05.577-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1367326",
+    "ThreadId": "586820",
+    "Html": "I have big problems with custom updates.<br />\n<br />\nThe update for Adobe Reader and Flash are executed properly. Custom updates not.<br />\n<br />\nWhen I create a custom update the console and the windowsupdate.log report that there are no pending updates.<br />\n<br />\n<br />\nAny idea why? where am I doing wrong?<br />\n<br />\nsee tread:<br />\n<a href=\"https://wsuspackagepublisher.codeplex.com/discussions/584416\" rel=\"nofollow\">Four post</a><br />\n",
+    "PostedDate": "2015-03-19T11:38:48.643-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1367355",
+    "ThreadId": "586820",
+    "Html": "How update are reported in the console : &quot;Not installed&quot;, &quot;Installed&quot; or &quot;Not Applicable&quot; ?<br />\n",
+    "PostedDate": "2015-03-19T14:06:26.81-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1367473",
+    "ThreadId": "586820",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nHow update are reported in the console : &quot;Not installed&quot;, &quot;Installed&quot; or &quot;Not Applicable&quot; ?<br />\n</blockquote>\non almost all clinet reports:\r<br />\n<br />\nstatus = Not Installed\r<br />\nApproval = Install\r<br />\n<br />\non the other, these are much less, reports:\r<br />\nStatus = Unknown\r<br />\nAprroval = Install<br />\n",
+    "PostedDate": "2015-03-20T02:59:01.997-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1367481",
+    "ThreadId": "586820",
+    "Html": "So most of your clients see that they need this update, but didn't download it from your Wsus.\r<br />\nCan you look at C:\\Windows\\WindowsUpdate.log to see if any error appears.\r<br />\n<br />\nTry to launch manually detection, in command window, type : WuAuClt /DetectNow<br />\n",
+    "PostedDate": "2015-03-20T03:41:07.273-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1367488",
+    "ThreadId": "586820",
+    "Html": "I solved by restarting the service &quot;Update Services&quot; on the server.\r<br />\n<br />\nHow to add custom update a bat file?\r<br />\n<br />\nIn the options I only vbscript and powershell.\r<br />\n<br />\nWhen I run the update with a bat file in the log file I get this error:\r<br />\n<br />\nRunning CustomUpdateEngine.ScriptElement\r<br />\nRunning ScriptElement.\r<br />\nRunning: C: \\ Windows \\ system32 \\ Cscript.exe With arguments: &quot;Java_8_40_Install.bat&quot;\r<br />\nExiting process with ExitCode = 1\r<br />\nEnd of ScriptElement.\r<br />\n<br />\nactually the command cscript file.bat will never work.<br />\n",
+    "PostedDate": "2015-03-20T04:42:44.647-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-03-20T23:44:28.72-07:00"
+  },
+  {
+    "Id": "1367506",
+    "ThreadId": "586820",
+    "Html": "Solved!\r<br />\n<br />\nI had to use the &quot;Allow to execute a file&quot; and not &quot;Allow to execute a script&quot;\r<br />\n<br />\nThanks for your help.<br />\n",
+    "PostedDate": "2015-03-20T05:50:04.187-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

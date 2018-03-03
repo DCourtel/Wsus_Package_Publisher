@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1341745",
+    "ThreadId": "577681",
+    "Html": "I have just set up Wsus Package Publisher following the instruction manual.\r<br />\n<br />\nI can see the clients in Wsus package Publisher and can see whether they are online or offline.  However, when I cannot seems to connect to then even when using the domain admins account!\r<br />\n<br />\nIts not a password issue, because when I put the wrong password in, Wsus Package Publisher tells me that the username or password is incorrect.\r<br />\n<br />\nTherefore the issue is a permissions issue as described in another post.  However, I am unable to determine what permissions issue is the cause of this problem!\r<br />\n<br />\nWould somebody be able to advise what the permissions are needed and where that could be the cause of the problem?\r<br />\n<br />\nThank you?<br />\n",
+    "PostedDate": "2015-01-14T03:14:44.967-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341747",
+    "ThreadId": "577681",
+    "Html": "Do you have any firewall between WPP and computers ?\r<br />\nIf yes, read <a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=905459\" rel=\"nofollow\">this document</a><br />\n",
+    "PostedDate": "2015-01-14T03:29:58.173-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341758",
+    "ThreadId": "577681",
+    "Html": "Hi there,\r<br />\n<br />\nSorry I should have mentioned that I disabled the firewall on both the server and the test client with no change!  It is definitely a permissions issue, not a connection issue!\r<br />\n<br />\nIf I try to send detect or send report now, it comes up with the error message.  Failed to connect with provided credentials.\r<br />\n<br />\nIf I try to show pending updates, the error message is &quot;unauthorised access exception.  Ensure that you have admin privileges on the remote machine&quot;\r<br />\n<br />\nIf I try to show windows update log - I am able to view the windowsupdate file on the remote computer!\r<br />\n<br />\nTherefore I must assume that there is some permissions issue somewhere!\r<br />\n<br />\nI don't know if it has anything to do with either of the following two issues!\r<br />\n<br />\nI have Microsoft.net 4.51 installed on both client and server and not version 4.0 installed.\r<br />\n<br />\nThe second query that I have is with regards to the certificate.  I generated a certificate and saved it to a location.  I then imported it on the server and deployed to the clients.  I checked the deployment of the certificate against the green row!  This was in the installs. pdf instruction booklet.  However, I did not do the next pdf Creating a code signing certificate as I believe that this is what I have done in the install.pdf instruction.  Do you need to do this in addition to the creating a certificate in the first instruction?  Secondly, when adding the snapon on the server, do you choose This snapon will always manage certificates for my user account, service account or computer account.  When I created the certificate I chose computer account.\r<br />\n<br />\nThank you<br />\n",
+    "PostedDate": "2015-01-14T04:05:01.06-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341835",
+    "ThreadId": "577681",
+    "Html": "<blockquote>\nI have Microsoft.net 4.51 installed on both client and server and not version 4.0 installed. <br />\n</blockquote>\nI think that Microsoft .Net 4.5.1 can run program targeting .Net 4.0. And .Net is only needs on remote computers for 'InstallPendingUpdates'<br />\n<blockquote>\nIf I try to send detect or send report now, it comes up with the error message. Failed to connect with provided credentials.<br />\n</blockquote>\nThis feature use WMI. Ensure that there is no security Policy that prevent Remote Wmi query<br />\n<blockquote>\nIf I try to show pending updates, the error message is &quot;unauthorised access exception. Ensure that you have admin privileges on the remote machine&quot; <br />\n</blockquote>\nThis feature use WUA Api, and this error message is only display when the remote computer has explicitly denied access<br />\n<blockquote>\nIf I try to show windows update log - I am able to view the windowsupdate file on the remote computer! <br />\n</blockquote>\nThis option is a simple download of the file.\r<br />\n<br />\nWhat is the OS of the remote computer ?\r<br />\n<br />\nFor your certificate, it must be installed on <strong>Computer Stores</strong><br />\n",
+    "PostedDate": "2015-01-14T08:33:54.76-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341878",
+    "ThreadId": "577681",
+    "Html": "Thank you very much for your advice.  I will confirm whether everything is working properly, but after doing some troubleshooting with wmi, it appears that I need to enable dcom for this aspect of wmi to work.  I am still getting wmi errors, but I can now send detect etc, so what I am going to do is test whether I can deploy flash player and if I can, then I will get back to you.  I would recommend that if dcom needs to be enabled that you add that requirement to the documentation.\r<br />\n<br />\nI will update you with my progress.\r<br />\n<br />\nThank you.<br />\n",
+    "PostedDate": "2015-01-14T10:37:36.753-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-01-14T11:51:27.637-08:00"
+  },
+  {
+    "Id": "1342357",
+    "ThreadId": "577681",
+    "Html": "I was successfully able to deploy Flash Player ActiveX.  I then tested that I could deploy Flash Player with the firewall enabled and the exception rules in place.  This worked a treat, so I clearly have everything set up correctly.  The issue was the dcom service was disabled.  This was something I disabled in my scripts years ago as I never required it in the past.  I am now having issues deploying Firefox.  The computer does not even recognise that an update has been sent out.  But I will open up a new topic for Firefox in the publishing section as this is a separate issue.\r<br />\n<br />\nThank you for your help with getting WSUS Package Publisher setup.<br />\n",
+    "PostedDate": "2015-01-15T13:04:47.33-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

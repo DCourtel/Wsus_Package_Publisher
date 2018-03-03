@@ -1,0 +1,56 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hello, new one here :-).\r\n\r\ni try to import an update from Adobe DC 17.x from the Catalog. The Server try it but he said: \"download fail: the remotename could not resolve\". After cupple seconds all lines are green but no dowload was sucsessful. av speed 0.00 KB/s.\r\n\r\nSome with the same problem?\r\n\r\nHallo, neu hier :-).\r\n\r\nIch habe versucht auf unserem WSUS Server ein Adobe Reader Update von einem Katalog runter zu laden. Leider zeigt das Fenster an der der Download fehlgeschlagen ist. Grund: Der Remotename konnte nicht aufgelöst werden. Dann werden alle Balken grüm, durchschnittliche Geschwindigkeit 0.00 KB/s.\r\n\r\nHat jemand das selbe Problem gehabt??\r\n\r\n",
+    "LastUpdatedDate": "2017-09-01T06:56:49.117-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-06-07T05:37:38.66-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "W2012R2 no sucsessful import from catalog files",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 377
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1666124,
+      "FileName": "Dokument.pdf",
+      "DownloadUrl": ".\\1666124"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Hey, back! It´s only the version from Adobe Acrobat Reader DC 17.x",
+      "PostedDate": "2017-06-07T05:41:11.073-07:00",
+      "Id": 208537
+    },
+    {
+      "Message": "Hello, I have exactly the same problem, can not download any Reader update, getting error:\n\n\"download fail: the remotename could not resolve\"\n\nI am able to download other updates (HP and so on) without problems.\nWhat to do?",
+      "PostedDate": "2017-09-01T06:56:49.117-07:00",
+      "Id": 208803
+    }
+  ]
+}

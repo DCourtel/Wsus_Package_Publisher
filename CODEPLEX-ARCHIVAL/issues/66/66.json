@@ -1,0 +1,111 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Settings",
+      "DisplayName": "Settings"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-28T10:23:16.11-07:00",
+    "CommentCount": 12,
+    "Custom": null,
+    "Description": "Add a setting to prevent Wsus server to apply Automatic-Approval rules to new locally published updates.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1306.16",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-18T12:02:55.047-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Add setting to prevent Wsus to apply automatic approval rules to new locally published updates",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 66
+  },
+  "FileAttachments": [
+    {
+      "FileId": 694516,
+      "FileName": "Prevent Auto-Approval.png",
+      "DownloadUrl": ".\\694516"
+    },
+    {
+      "FileId": 695130,
+      "FileName": "Update_Application.png",
+      "DownloadUrl": ".\\695130"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Is this related to https://wsuspackagepublisher.codeplex.com/workitem/65?\nWould it be a problem having the choice at the time of publishing like the wuss visibility?\n\nRegards\nNorbert",
+      "PostedDate": "2013-06-18T15:11:21.33-07:00",
+      "Id": 103342
+    },
+    {
+      "Message": "Hi Norbert,\nYes it is  related to our last conversation (workitem 65).\nNo, it's not a problem to have :\n     * A general option in the settings form to prevent Wsus server to apply auto-approval rules\n     * A checkbox in the last form when publishing a new update, to override the option in the settings form. This checkbox will be checked/unchecked according to the option in the settings form.",
+      "PostedDate": "2013-06-18T22:06:23.747-07:00",
+      "Id": 103363
+    },
+    {
+      "Message": "So the Checkbox actually just differs between update and application?\n\nRegards\nNorbert",
+      "PostedDate": "2013-06-19T00:19:36.383-07:00",
+      "Id": 103378
+    },
+    {
+      "Message": "No, I'm not sure that Update and Application are treat differently by Wsus regarding Automatic approval rules.\nThe new setting will disable automatic approval rules, publish the update and re-enable rules.",
+      "PostedDate": "2013-06-19T04:14:25.53-07:00",
+      "Id": 103402
+    },
+    {
+      "Message": "OK. So whats the difference between update and Application than?",
+      "PostedDate": "2013-06-19T04:27:46.927-07:00",
+      "Id": 103405
+    },
+    {
+      "Message": "I can't remember what is the difference. May be Winfried can help us on this ?",
+      "PostedDate": "2013-06-19T12:01:10.937-07:00",
+      "Id": 103510
+    },
+    {
+      "Message": "The difference is following:\r\nA Update will automatically approved if there is a new update available. A Application is not a Original-Category in WSUS. If we publish a new update as a application, the update will not automatically approved. This is a important point. In LUP we can choose between Applications and Updates. I can only show you a image from choosing in LUP, but it is not possible for me at this time to publish a application in LUP for looking which classification is using.\r\n\r\nIf you want to disable automatic approval for one update, after you enable automatic update and the the next updates are synchronizing, automatic approval will catch all updates, including the old updates.\r\n\r\nFor me it will the better point to let choosing between application and update. In WSUS-Console you need a new update-view to see the updates. Here you can see how to create a new update view: http://www.wsus.de/images/content/lup/26_Updateansicht_Anwendungen.png",
+      "PostedDate": "2013-06-19T23:45:32.86-07:00",
+      "Id": 103573
+    },
+    {
+      "Message": "I have attached a image from LUP: Update_Application.png",
+      "PostedDate": "2013-06-19T23:46:36.07-07:00",
+      "Id": 103574
+    },
+    {
+      "Message": "Winfried, do you have any documentations from Microsoft about this ?",
+      "PostedDate": "2013-06-20T03:16:03.24-07:00",
+      "Id": 103589
+    },
+    {
+      "Message": "> Winfried, do you have any documentations from Microsoft about this ?\n\nWhich Documentation do mean? For the Aproval? If yes, i found it by testing.",
+      "PostedDate": "2013-06-20T03:52:06.68-07:00",
+      "Id": 103592
+    },
+    {
+      "Message": "When Package-Type is set to 'Application', 'Classification' and 'Msrc' fields are not taken into account by Wsus.\n\nMay be I should add a ComboBox to choose between 'Application' and 'Update' for the Package-Type.\nAnd add an option to prevent Auto-Approvals when Package-Type is set to 'Update'.",
+      "PostedDate": "2013-06-20T13:06:03.74-07:00",
+      "Id": 103661
+    },
+    {
+      "Message": "+1 for the Combo-Box. ;)\n\nOK, you can add an option, but think about automatic approval when nightly automatic synchronize updates. ",
+      "PostedDate": "2013-06-20T14:24:19.483-07:00",
+      "Id": 103695
+    }
+  ]
+}

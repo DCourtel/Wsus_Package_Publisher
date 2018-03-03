@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Catalogs",
+      "DisplayName": "Catalogs"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:52.853-08:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Hi, \r\n\r\n I have a problem publishing Dell updates from DellSDPCatalog.cab. \r\n publishing from this catalog works as long as I use version WPP Release v1.3.1411.09 or older. \r\n When I use a newer version, I get an error message \"Error when importing update\" as soon as I hit the [import selected updates] button in the \"import from catalog\" window. \r\n\r\n I have seen this problem for a long time now, so i have been using the old version until now. \r\n I would like to upgrade to the latest version of WPP, but how can i solve this issue? \r\n\r\n Kind Regards, \r\n Tom",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1603.29",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-11-10T06:21:26.987-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Error when importing Update from DellSDPCatalog.cab",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 351
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This happen because these package have detectoid as prerequisite. I will check that.",
+      "PostedDate": "2017-01-27T10:38:01.94-08:00",
+      "Id": 206273
+    },
+    {
+      "Message": "Hi DCourtel,\n\ni still have this same issue, why dit you the issue?\n\nKind regards,\nTom",
+      "PostedDate": "2017-02-06T01:10:27.527-08:00",
+      "Id": 206435
+    },
+    {
+      "Message": "Hi,\n\nbecause there's a new version coming soon which will fix this problem.\n\nregards\nNorbert",
+      "PostedDate": "2017-02-06T02:12:11-08:00",
+      "Id": 206436
+    },
+    {
+      "Message": "ok, Thanx",
+      "PostedDate": "2017-02-06T02:48:49.137-08:00",
+      "Id": 206437
+    }
+  ]
+}

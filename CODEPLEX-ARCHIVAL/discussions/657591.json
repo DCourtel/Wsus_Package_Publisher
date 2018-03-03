@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1482591",
+    "ThreadId": "657591",
+    "Html": "Hi all,\r<br />\n<br />\nI've been working with WPP for quite a while now and successfully published several updates and roll-outs already but still one thing is not really clear to me:\r<br />\n<br />\nCould someone please explain the difference between &quot;Update level rules&quot; and &quot;Package level rules&quot;?! When or for what to use which ones? When do they apply?\r<br />\n<br />\nThanks a lot in advance!\r<br />\nFelix<br />\n",
+    "PostedDate": "2016-09-01T01:30:53.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1482660",
+    "ThreadId": "657591",
+    "Html": "Hi. check the last reply in this <a href=\"http://wsuspackagepublisher.codeplex.com/discussions/571905\" rel=\"nofollow\">post</a><br />\n",
+    "PostedDate": "2016-09-01T13:01:02.56-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

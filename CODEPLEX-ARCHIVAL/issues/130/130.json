@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Catalogs",
+      "DisplayName": "Catalogs"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-10-19T08:35:46.123-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nit would be nice to have some kind of view whats different if a updated subscribed catalog is released.\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1310.12",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-08T08:01:19.73-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Catalog comparison",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 130
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "WPP is now able to show what difference between old and new catalog.",
+      "PostedDate": "2013-10-19T08:35:32.943-07:00",
+      "Id": 118934
+    }
+  ]
+}

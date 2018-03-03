@@ -1,0 +1,56 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-11T22:24:41.563-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hello,\r\ni am using WPP version 1.3.1407.29\r\nI have a valid code signature, but while creating the package i am getting error as \"verification of signature failed for file\"\r\nwsus console version 3.2.7600.256\r\n\r\nActually i am creating the package for ms office 2013 sp1 patch\r\n\r\nI have to push new skype for business package to users, it requires KB2817430 and KB2889923.\r\n\r\nAny suggestions how to push the patches ?\r\n\r\nPlease help me",
+    "LastUpdatedDate": "2015-11-11T22:24:41.563-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-06-12T08:20:18.227-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "verification of signature failed for file",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 271
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1461887,
+      "FileName": "error.PNG",
+      "DownloadUrl": ".\\1461887"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "First i think you have to update both systems, WSUS AND WPP.\n\nIn WUS-FAQ No. 44 you can see how old your WSUS-Installation is. http://wsus.de/faq\n\nYou need 2 Updates more:\nWSUS 3.0 (SP2) + KB2720211: \tBuild 3.2.7600.251\nWSUS 3.0 (SP2) + KB2734608: \tBuild 3.2.7600.256\nWSUS 3.0 (SP2) + KB2828185: \tBuild 3.2.7600.262\nWSUS 3.0 (SP2) + KB2938066: \tBuild 3.2.7600.274\n\nAfter this pls use the actual WPP Version and try again. \n",
+      "PostedDate": "2015-06-12T08:58:12.05-07:00",
+      "Id": 185531
+    },
+    {
+      "Message": "Thanks for your reply..\nI have updates the issue. please go through it again",
+      "PostedDate": "2015-06-12T09:08:05.983-07:00",
+      "Id": 185532
+    }
+  ]
+}

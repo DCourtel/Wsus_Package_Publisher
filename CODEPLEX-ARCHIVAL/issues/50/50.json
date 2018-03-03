@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-05-26T11:40:22.08-07:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "When WPP crash, allow user to send debug info to help fix the App.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1305.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-25T10:49:57.873-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Add ability to send debug info",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 50
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This Tool is a very very good idea! Hope it help solve problems.",
+      "PostedDate": "2013-05-26T12:15:08.737-07:00",
+      "Id": 101252
+    },
+    {
+      "Message": "I hope so. The problem is that unregister people can't open a ticket on this site. So many user don't report bug. And people who report bug put a very short description of what they do to reproduce the bug.\n\nI think it will be easier for me with this tool.",
+      "PostedDate": "2013-05-26T14:27:17.543-07:00",
+      "Id": 101259
+    },
+    {
+      "Message": "With a Microsoft ID (Live ID) everyone can logon here. Maybe you can add a function to 'Send' a report.",
+      "PostedDate": "2013-05-26T22:07:22.183-07:00",
+      "Id": 101266
+    },
+    {
+      "Message": "You can go to 'help' then 'send support data'\n",
+      "PostedDate": "2013-05-27T04:16:30.967-07:00",
+      "Id": 101284
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-11-01T05:00:20.557-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Dear Development,\r\n\r\nafter installing and configuration WPP on one of our servers (Windows 2008R2) we get the attached error message after trying to get started/connected to wpp.\r\n\r\nis this error probably known already and a solution (howto) available?\r\n\r\nIf there are any more informations needed please let me know to assist in that.\r\n\r\nKind regards\r\n\r\nSupportfromSwiss.\r\n\r\n",
+    "LastUpdatedDate": "2013-11-01T05:00:20.557-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-16T22:48:32.333-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Certificate Error",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 141
+  },
+  "FileAttachments": [
+    {
+      "FileId": 744442,
+      "FileName": "certificate.JPG",
+      "DownloadUrl": ".\\744442"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Please review these posts :\n[[Solved] Updates on Client computer fail with Error Code 800B0109 \n](https://wsuspackagepublisher.codeplex.com/discussions/450315)\n\n[[Solved] Error Code 800B0109 When Installing Adobe Reader \n](https://wsuspackagepublisher.codeplex.com/discussions/456258)",
+      "PostedDate": "2013-10-17T03:18:13.133-07:00",
+      "Id": 118692
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1495707",
+    "ThreadId": "662652",
+    "Html": "Hi, Since updating WPP I'm now no longer able to set a return code on The Java updates we get via Patch my PC, normally when we import Java from that catalogue we just add the return code of '0' for Succeeded and thats all we need to do.... I've just had to rollback to get around this issue.\r<br />\n<br />\nI can't find any documentation on the change regarding Return codes, are you able to elaborate on the change and how I could work around this if we updated again?\r<br />\n<br />\nThanks\r<br />\nMark<br />\n",
+    "PostedDate": "2017-04-21T18:34:30.87-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

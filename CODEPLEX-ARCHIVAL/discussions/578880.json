@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1347003",
+    "ThreadId": "578880",
+    "Html": "Hello,\r<br />\n<br />\nI have an WSUS Server 3.0 SP2 + Downstream Server (Modus Autonom)!\r<br />\nOn the Downstream Server the ID field is yellow/orange marked - Why?<br />\n",
+    "PostedDate": "2015-01-28T23:36:33.597-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1347575",
+    "ThreadId": "578880",
+    "Html": "Is the certificate you use for code signing installed on the downstream server?<br />\n<br />\nThere's a similar sounding issue in this thread: <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/459352\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/459352</a><br />\nAlso this one: <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/573448\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/573448</a><br />\n",
+    "PostedDate": "2015-01-30T08:15:11.417-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

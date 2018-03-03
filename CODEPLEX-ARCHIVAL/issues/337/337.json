@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "You can connect a network drive pointing to that network share.\r\nI will look into this in the WPP V2.",
+    "ClosedDate": "2017-01-30T22:03:26.713-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Good afternoon, a question WPP is it possible in future versions supporting network paths? For example I do not possible to store all the software on a single server with WPP and I would like to work with network storage.\r\n\r\n\r\n[Screen](http://imgur.com/qI0zHfB)",
+    "LastUpdatedDate": "2017-01-30T22:03:26.777-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-04-27T06:41:09.227-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "UNC-Path not supported",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 337
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update Detail Viewer",
+      "DisplayName": "Update Detail Viewer"
+    },
+    "ClosedComment": "This is because Wsus store \\n (new line) instead of \\r\\n (carry return + new line) and TextBox only take care of \\r\\n.\r\nI have changed the way WPP handle the update description to replace \\n by \\r\\n when displaying an update description.",
+    "ClosedDate": "2013-10-19T08:52:48.65-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI entered  some text formatting into the update description. It is shown correctly in the wsus console, but not in WPP if the update is opened for revise or in Description window.\r\nSee screenshots.\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1310.12",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-10T14:03:54.95-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Keep formating in revise dialog",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 132
+  },
+  "FileAttachments": [
+    {
+      "FileId": 742299,
+      "FileName": "10-10-2013 22-39-01.jpg",
+      "DownloadUrl": ".\\742299"
+    },
+    {
+      "FileId": 742300,
+      "FileName": "10-10-2013 22-39-39.jpg",
+      "DownloadUrl": ".\\742300"
+    }
+  ],
+  "Comments": []
+}

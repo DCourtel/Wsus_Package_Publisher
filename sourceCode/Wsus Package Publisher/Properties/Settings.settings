@@ -1,0 +1,239 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Wsus_Package_Publisher.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Language" Type="System.String" Scope="User">
+      <Value Profile="(Default)">en</Value>
+    </Setting>
+    <Setting Name="Credential" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SameAsApplication</Value>
+    </Setting>
+    <Setting Name="InstalledColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Lime</Value>
+    </Setting>
+    <Setting Name="InstalledPendingRebootColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">LawnGreen</Value>
+    </Setting>
+    <Setting Name="DownloadedColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">GreenYellow</Value>
+    </Setting>
+    <Setting Name="NotApplicableColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Khaki</Value>
+    </Setting>
+    <Setting Name="NotInstalledColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Orange</Value>
+    </Setting>
+    <Setting Name="UnknownColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">DarkOrange</Value>
+    </Setting>
+    <Setting Name="FailedColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">OrangeRed</Value>
+    </Setting>
+    <Setting Name="ShowNonLocallyPublishedUpdates" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="OpenWindowsUpdateLogWith" Type="System.String" Scope="User">
+      <Value Profile="(Default)">NotePad.exe</Value>
+    </Setting>
+    <Setting Name="UpgradeRequired" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AppID" Type="System.Guid" Scope="User">
+      <Value Profile="(Default)">00000000-0000-0000-0000-000000000000</Value>
+    </Setting>
+    <Setting Name="LastUpdateFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UpdateFilePathSetting" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="AdditionalUpdateFilePathAsMainFile" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="LastUsedServerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ConnectToLastUsedServer" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="PreventAutoApproval" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Setting" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PingStandard" Type="System.String" Scope="User">
+      <Value Profile="(Default)">IPv4</Value>
+    </Setting>
+    <Setting Name="LastVersionCheck" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">1970-01-01</Value>
+    </Setting>
+    <Setting Name="ComputersListViewerDisplayedColumns" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ComputerName;IPAdress;LastReportedStatusTime;LastSyncTime;Make;Model;OSArchitecture;OSDescription</Value>
+    </Setting>
+    <Setting Name="UpdateDefaultAction" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Revise</Value>
+    </Setting>
+    <Setting Name="HTTPProxyPolicy" Type="System.String" Scope="User">
+      <Value Profile="(Default)">NoProxy</Value>
+    </Setting>
+    <Setting Name="HTTPProxyServerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="HTTPProxyLogin" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="HTTPProxyPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="HTTPProxyPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">8080</Value>
+    </Setting>
+    <Setting Name="FTPProxyPolicy" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SameAsAbove</Value>
+    </Setting>
+    <Setting Name="RemoteAdminLogin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Administrator</Value>
+    </Setting>
+    <Setting Name="RemoteAdminPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1;0;0;0;208;140;157;223;1;21;209;17;140;122;0;192;79;194;151;235;1;0;0;0;52;137;108;74;11;85;92;71;189;105;49;64;51;134;88;223;0;0;0;0;2;0;0;0;0;0;16;102;0;0;0;1;0;0;32;0;0;0;14;66;139;132;196;135;226;69;91;159;58;41;163;76;54;249;22;130;64;118;201;44;91;190;250;252;91;194;52;7;88;131;0;0;0;0;14;128;0;0;0;2;0;0;32;0;0;0;146;240;220;122;178;111;252;222;213;218;169;147;64;210;69;116;145;36;229;36;72;244;231;164;190;206;26;43;146;235;121;2;32;0;0;0;167;3;214;235;133;161;177;141;28;163;96;10;37;73;131;82;50;83;83;143;60;77;199;80;74;245;243;238;193;34;29;221;64;0;0;0;196;127;47;215;204;122;137;204;157;224;141;202;42;157;190;227;202;150;29;39;39;52;121;204;74;25;66;15;3;94;34;232;24;72;119;122;35;129;119;219;28;219;28;49;169;172;10;234;251;233;14;57;64;65;251;0;62;113;55;37;44;254;136;106;</Value>
+    </Setting>
+    <Setting Name="XmlSchema" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;xs:schema id="Applicability" targetNamespace="http://www.microsoft.com/msi/patch_applicability.xsd" elementFormDefault="qualified" xmlns="http://www.microsoft.com/msi/patch_applicability.xsd" xmlns:mstns="http://www.microsoft.com/msi/patch_applicability.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+	&lt;xs:element name="MsiPatch"&gt;
+		&lt;xs:complexType&gt;
+			&lt;xs:sequence&gt;
+				&lt;xs:element name="TargetProduct" minOccurs="1" maxOccurs="unbounded"&gt;
+					&lt;xs:complexType&gt;
+						&lt;xs:sequence&gt;
+							&lt;xs:element name="TargetProductCode" type="ValidateGUID" /&gt;
+							&lt;xs:element name="UpdatedProductCode" type="GUID" minOccurs="0" maxOccurs="1" /&gt;
+							&lt;xs:element name="TargetVersion" type="ValidateVersion" /&gt;
+							&lt;xs:element name="UpdatedVersion" type="Version" minOccurs="0" maxOccurs="1" /&gt;
+							&lt;xs:element name="TargetLanguage" type="ValidateLanguage" /&gt;
+							&lt;xs:element name="UpdatedLanguages" type="intList" /&gt;
+							&lt;xs:element name="UpgradeCode" type="ValidateGUID" /&gt;
+						&lt;/xs:sequence&gt;
+						&lt;xs:attribute name="MinMsiVersion" type="xs:int" /&gt;
+					&lt;/xs:complexType&gt;
+				&lt;/xs:element&gt;
+				&lt;xs:element name="TargetProductCode" type="GUID" minOccurs="1" maxOccurs="unbounded" /&gt;
+				&lt;xs:element name="ObsoletedPatch" minOccurs="0" maxOccurs="unbounded" type="GUID" /&gt;
+				&lt;xs:element name="SequenceData" minOccurs="0" maxOccurs="unbounded"&gt;
+					&lt;xs:complexType&gt;
+						&lt;xs:sequence&gt;
+							&lt;xs:element name="PatchFamily" type="xs:string" /&gt;
+							&lt;xs:element name="ProductCode" type="GUID" minOccurs="0" maxOccurs="1" /&gt;
+							&lt;xs:element name="Sequence" type="Version" /&gt;
+							&lt;xs:element name="Attributes" type="xs:int" minOccurs="0" maxOccurs="1" /&gt;
+						&lt;/xs:sequence&gt;
+					&lt;/xs:complexType&gt;
+				&lt;/xs:element&gt;
+			&lt;/xs:sequence&gt;
+			&lt;xs:attribute name="SchemaVersion" type="Version" /&gt;
+			&lt;xs:attribute name="PatchGUID" type="GUID" /&gt;
+			&lt;xs:attribute name="MinMsiVersion" type="xs:int" /&gt;
+                        &lt;xs:attribute name="TargetsRTM" type="xs:boolean" use="optional" /&gt;
+		&lt;/xs:complexType&gt;
+	&lt;/xs:element&gt;
+	&lt;xs:simpleType name="GUID"&gt;
+		&lt;xs:restriction base="xs:string"&gt;
+			&lt;xs:pattern value="\{[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}\}" /&gt;
+		&lt;/xs:restriction&gt;
+	&lt;/xs:simpleType&gt;
+	&lt;xs:simpleType name="Version"&gt;
+		&lt;xs:restriction base="xs:string"&gt;
+			&lt;xs:pattern value="[0-9]{1,5}(\.[0-9]{1,5}){0,3}" /&gt;
+		&lt;/xs:restriction&gt;
+	&lt;/xs:simpleType&gt;
+	&lt;xs:complexType name="ValidateGUID"&gt;
+		&lt;xs:simpleContent&gt;
+			&lt;xs:extension base="GUID"&gt;
+				&lt;xs:attribute name="Validate" type="xs:boolean" /&gt;
+			&lt;/xs:extension&gt;
+		&lt;/xs:simpleContent&gt;
+	&lt;/xs:complexType&gt;
+	&lt;xs:complexType name="ValidateVersion"&gt;
+		&lt;xs:simpleContent&gt;
+			&lt;xs:extension base="Version"&gt;
+				&lt;xs:attribute name="ComparisonType"&gt;
+					&lt;xs:simpleType&gt;
+						&lt;xs:restriction base="xs:string"&gt;
+							&lt;xs:enumeration value="LessThan" /&gt;
+							&lt;xs:enumeration value="LessThanOrEqual" /&gt;
+							&lt;xs:enumeration value="Equal" /&gt;
+							&lt;xs:enumeration value="GreaterThanOrEqual" /&gt;
+							&lt;xs:enumeration value="GreaterThan" /&gt;
+							&lt;xs:enumeration value="None" /&gt;
+						&lt;/xs:restriction&gt;
+					&lt;/xs:simpleType&gt;
+				&lt;/xs:attribute&gt;
+				&lt;xs:attribute name="ComparisonFilter"&gt;
+					&lt;xs:simpleType&gt;
+						&lt;xs:restriction base="xs:string"&gt;
+							&lt;xs:enumeration value="Major" /&gt;
+							&lt;xs:enumeration value="MajorMinor" /&gt;
+							&lt;xs:enumeration value="MajorMinorUpdate" /&gt;
+							&lt;xs:enumeration value="None" /&gt;
+						&lt;/xs:restriction&gt;
+					&lt;/xs:simpleType&gt;
+				&lt;/xs:attribute&gt;
+				&lt;xs:attribute name="Validate" type="xs:boolean" /&gt;
+			&lt;/xs:extension&gt;
+		&lt;/xs:simpleContent&gt;
+	&lt;/xs:complexType&gt;
+	&lt;xs:complexType name="ValidateLanguage"&gt;
+		&lt;xs:simpleContent&gt;
+			&lt;xs:extension base="xs:int"&gt;
+				&lt;xs:attribute name="Validate" type="xs:boolean" /&gt;
+			&lt;/xs:extension&gt;
+		&lt;/xs:simpleContent&gt;
+	&lt;/xs:complexType&gt;
+	&lt;xs:simpleType name="intList"&gt;
+		&lt;xs:list itemType="xs:int" /&gt;
+	&lt;/xs:simpleType&gt;
+
+    &lt;xs:simpleType name="MsiType"&gt;
+        &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;An enumeration defining the target type of an MSI operation. &lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+        &lt;xs:restriction base="xs:token"&gt;
+            &lt;xs:enumeration value="MsiProduct" /&gt;
+            &lt;xs:enumeration value="MsiPatch" /&gt;
+        &lt;/xs:restriction&gt;
+    &lt;/xs:simpleType&gt;
+
+    &lt;xs:complexType name="RepairPath"&gt;
+    	&lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;Representation of a MSI repair path for an arbitrary GUID and type. &lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+            &lt;xs:attribute name="TargetId" type="GUID" use="required"&gt;
+                &lt;xs:annotation&gt;
+                    &lt;xs:documentation&gt;Indicates the target ProductCode or PatchCode of the repair path. &lt;/xs:documentation&gt;
+                &lt;/xs:annotation&gt;
+            &lt;/xs:attribute&gt;
+            &lt;xs:attribute name="TargetType" type="MsiType" use="optional" default="MsiProduct"&gt;
+                &lt;xs:annotation&gt;
+                    &lt;xs:documentation&gt;Indicates whether the GUID referenced by TargetGUID is for a MSI Product or MSP Patch.&lt;/xs:documentation&gt;
+                &lt;/xs:annotation&gt;
+            &lt;/xs:attribute&gt;
+            &lt;xs:attribute name="RelativePathToExe" type="xs:string" use="required"&gt;
+                &lt;xs:annotation&gt;
+                    &lt;xs:documentation&gt;Indicates the relative path with file name of this Msi to its setup exe.&lt;/xs:documentation&gt;
+                &lt;/xs:annotation&gt;
+            &lt;/xs:attribute&gt;
+    &lt;/xs:complexType&gt;
+&lt;/xs:schema&gt;</Value>
+    </Setting>
+    <Setting Name="PersonalizedRebootMessage" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ShowOnlineComputersOnly" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="IgnoreVersionMismatch" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

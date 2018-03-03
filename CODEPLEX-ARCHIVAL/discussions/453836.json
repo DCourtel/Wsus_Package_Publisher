@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1082225",
+    "ThreadId": "453836",
+    "Html": "Is there a way to publish Adobe Reader 11.0.0 msi file, along with the current 11.0.3 msp file in one package? Or must this be done with two different packages, one install and one update?\r<br />\n<br />\nI gather than the Adobe Reader msp files are comprehensive in that I don't need to worry about publishing prior versions of 11.0.1 and 11.0.2.\r<br />\n<br />\nThis is an excellent piece of software and am very excited to have found it, now I'm just trying to learn its use.\r<br />\n<br />\nThank you for your time and efforts.\r<br />\n<br />\nBobby<br />\n",
+    "PostedDate": "2013-08-19T08:29:45.58-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082250",
+    "ThreadId": "453836",
+    "Html": "Hi Rodavis3,<br />\n<blockquote>\nIs there a way to publish Adobe Reader 11.0.0 msi file, along with the current 11.0.3 msp file in one package?<br />\n</blockquote>\nYes it is possible, thanks to 'Custom Update'.<br />\n<blockquote>\nI gather than the Adobe Reader msp files are comprehensive in that I don't need to worry about publishing prior versions of 11.0.1 and 11.0.2. <br />\n</blockquote>\nIn this case, yes. Adobe 11.0.3 can be installed over 11.0.0 without installing 11.0.1 and/or 11.0.2 before. Carefully note that it is not always possbile. For example 11.0.2 <strong>CANNOT</strong> be installed over 11.0.0, but only over 11.0.1.\r<br />\n<br />\nTo do that.<br />\n<ul>\n<li>Make a Custom Update</li>\n<li>Add a Variable Element (type Int)</li>\n<li>Add a Execute file Element pointing to MsiExec and refering to the Adobe MSI file.</li>\n<li>Add a Wait Element ( 30 seconds)</li>\n<li>Add a Execute file Element pointing to MsiExec and refering to the Adobe MSP file, set the return code to the Variable Element.</li>\n<li>Add a Wait Element (30 Seconds)</li>\n<li>\nReturn the Code store in the Variable Element.<br />\n</li>\n</ul>\nSee the documentation for more détails on <a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=684389\" rel=\"nofollow\">Custom Updates</a><br />\n",
+    "PostedDate": "2013-08-19T09:10:14.36-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:20:27.773-07:00"
+  },
+  {
+    "Id": "1082254",
+    "ThreadId": "453836",
+    "Html": "Hi DCourtel,\r<br />\n<br />\nThank you for the prompt reply. I'll explore more with Custom Updates.\r<br />\n<br />\nAs far as msp files (in general) being comprehensive in updating software, is there anyway to tell ahead of time or is it just trial an error for any prerequisites; or just performing a manual install test?\r<br />\n<br />\nThanks again.\r<br />\n<br />\nBobby<br />\n",
+    "PostedDate": "2013-08-19T09:21:36.08-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082283",
+    "ThreadId": "453836",
+    "Html": "Your first source of informations is the Editor Web Site. Check for prerequisites when downloading. Else, make some trials :-)<br />\n",
+    "PostedDate": "2013-08-19T10:35:43.25-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1242692",
+    "ThreadId": "544620",
+    "Html": "I'm encountering an error 0x80070643 / 0x80131700 with a package I've rolled out, which tries to unregister VGX.DLL.  It worked on XP and Win7 (and 2003 and 2008), but not 2012.  I'm not sure if it's some kind of bug or some permissions setting that I'm missing.  Also there was no WPP log file created in C:\\Windows\\Temp.\r<br />\n<br />\nHere's the log from one of our servers:\r<br />\n<br />\n2014-05-07\t04:35:05:364\t 884\tb7c\tAU\t#############\r<br />\n2014-05-07\t04:35:05:364\t 884\tb7c\tAU\t## START ##  AU: Install updates\r<br />\n2014-05-07\t04:35:05:364\t 884\tb7c\tAU\t#########\r<br />\n2014-05-07\t04:35:05:364\t 884\tb7c\tAU\t  # Initiating minor updates install\r<br />\n2014-05-07\t04:35:05:364\t 884\tb7c\tAU\t  # Approved machine updates for 3DA21691-E39D-4DA6-8A4B-B43877BCB1B7 = 1\r<br />\n2014-05-07\t04:35:05:364\t 884\tb7c\tAU\t  # Approved updates for 3DA21691-E39D-4DA6-8A4B-B43877BCB1B7 = 1\r<br />\n2014-05-07\t04:35:05:364\t 884\tb7c\tIdleTmr\tWU operation (CInstallCall::Init ID 3) started; operation # 25; does not use network; is not at background priority\r<br />\n2014-05-07\t04:35:05:364\t 884\tb7c\tIdleTmr\tIncremented PDC RefCount for System to 1\r<br />\n2014-05-07\t04:35:05:364\t 884\tb7c\tIdleTmr\tIncremented idle timer priority operation counter to 1\r<br />\n2014-05-07\t04:35:05:364\t 884\tb7c\tAgent\tBeginning install of conventional work item\r<br />\n2014-05-07\t04:35:05:364\t 884\tb7c\tAU\t&lt;&lt;## SUBMITTED ## AU: Install updates / installing updates [CallId = {B833BFAB-4534-4BCA-A9F8-25CBF0A55D23}, ServerId = {3DA21691-E39D-4DA6-8A4B-B43877BCB1B7}]\r<br />\n2014-05-07\t04:35:05:364\t 884\taa4\tAgent\t*************\r<br />\n2014-05-07\t04:35:05:364\t 884\taa4\tAgent\t** START **  Agent: Installing updates [CallerId = AutomaticUpdates]\r<br />\n2014-05-07\t04:35:05:364\t 884\taa4\tAgent\t*********\r<br />\n2014-05-07\t04:35:05:364\t 884\taa4\tAgent\t  * Updates to install = 1\r<br />\n2014-05-07\t04:35:05:364\t 884\tb7c\tAU\tWARNING: Failed to get Network Cost info from NLM, assuming network is NOT metered, error = 0x80240037\r<br />\n2014-05-07\t04:35:05:364\t 884\tb7c\tAU\tWARNING: Failed to get Network Cost info from NLM, assuming network is NOT metered, error = 0x80240037\r<br />\n2014-05-07\t04:35:05:379\t 884\taa4\tAgent\t  *   Title = VGX.DLL fix (Win8)\r<br />\n2014-05-07\t04:35:05:379\t 884\taa4\tAgent\t  *   UpdateId = {F09C3A72-94A7-46EF-A730-8D0DF9F0048A}.2\r<br />\n2014-05-07\t04:35:05:395\t 884\taa4\tDnldMgr\tPreparing update for install, updateId = {F09C3A72-94A7-46EF-A730-8D0DF9F0048A}.2.\r<br />\n2014-05-07\t04:35:05:395\t4088\t3e0\tMisc\t===========  Logging initialized (build: 7.9.9600.16422, tz: -0500)  ===========\r<br />\n2014-05-07\t04:35:05:395\t4088\t3e0\tMisc\t  = Process: C:\\Windows\\system32\\wuauclt.exe\r<br />\n2014-05-07\t04:35:05:395\t4088\t3e0\tMisc\t  = Module: C:\\Windows\\SYSTEM32\\wuaueng.dll\r<br />\n2014-05-07\t04:35:05:395\t4088\t3e0\tHandler\t:::::::::::::\r<br />\n2014-05-07\t04:35:05:395\t4088\t3e0\tHandler\t:: START ::  Handler: Command Line Install\r<br />\n2014-05-07\t04:35:05:395\t4088\t3e0\tHandler\t:::::::::\r<br />\n2014-05-07\t04:35:05:395\t4088\t3e0\tHandler\t  : Updates to install = 1\r<br />\n2014-05-07\t04:35:05:411\t4088\t3e0\tHandler\t  : WARNING: Command line install completed. Return code = 0x80131700, Result = Failed, Reboot required = false\r<br />\n2014-05-07\t04:35:05:411\t4088\t3e0\tHandler\t  : WARNING: Exit code = 0x8024200B\r<br />\n2014-05-07\t04:35:05:411\t 884\tb7c\tAU\t&gt;&gt;##  RESUMED  ## AU: Installing update [UpdateId = {F09C3A72-94A7-46EF-A730-8D0DF9F0048A}]\r<br />\n2014-05-07\t04:35:05:411\t4088\t3e0\tHandler\t:::::::::\r<br />\n2014-05-07\t04:35:05:411\t 884\tb7c\tAU\t  # WARNING: Install failed, error = 0x80070643 / 0x80131700\r<br />\n2014-05-07\t04:35:05:411\t4088\t3e0\tHandler\t::  END  ::  Handler: Command Line Install\r<br />\n2014-05-07\t04:35:05:411\t4088\t3e0\tHandler\t:::::::::::::\r<br />\n2014-05-07\t04:35:05:411\t 884\taa4\tAgent\t*********\r<br />\n2014-05-07\t04:35:05:411\t 884\taa4\tAgent\t**  END  **  Agent: Installing updates [CallerId = AutomaticUpdates]\r<br />\n2014-05-07\t04:35:05:411\t 884\taa4\tAgent\t*************<br />\n",
+    "PostedDate": "2014-05-07T10:51:47.69-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1242880",
+    "ThreadId": "544620",
+    "Html": "Hi,\r<br />\n<br />\nthe error 0x80240037 is reported in this KB: <a href=\"http://support.microsoft.com/kb/938205/de\" rel=\"nofollow\">http://support.microsoft.com/kb/938205/de</a>\r<br />\n0x80240037 WU_E_NOT_SUPPORTED The functionality for the operation is not supported.\r<br />\n<br />\nCan you do the same manually? Is it working if you try it manually?<br />\n",
+    "PostedDate": "2014-05-07T22:48:24.26-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1242943",
+    "ThreadId": "544620",
+    "Html": "Hi, <br />\n<ul>\n<li>\nDo you have set a 'custom update' or a 'classic update' ?<br />\nIn case of a 'Custom update', please do this :\n<pre><code>Open WPP\nSelect the update\nIn the 'Informations' tab, click on the 'Id' link, this oopen a new window\nIn the new window, open the folder and send me the file 'Guid.xml'</code></pre>\n\n</li>\n<li>Do you have checked the option 'Can require user input' when making the update ?</li>\n</ul>\n",
+    "PostedDate": "2014-05-08T02:07:19.617-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1243135",
+    "ThreadId": "544620",
+    "Html": "I've created a classic update based on a custom update (I've learned to reverse engineer it to avoid the GUI and long GUIDs).  Also, no, the &quot;can require user input&quot; is not enabled.  I've tried the package manually and it does work on Win7/2008R2, which leads me to think it's some new ACL with 2012.  No real clue though.  I've added the cert for the server and clients, enabled the registry key, as I have done for all other servers.\r<br />\n<br />\nHere's what the vgx.xml I've created looks like:\r<br />\n<br />\n&lt;CustomUpdate&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;\r<br />\n&lt;PathToExecutable&gt;regsvr32.exe&lt;/PathToExecutable&gt;\r<br />\n&lt;Parameters&gt;/u /s &quot;C:\\Program Files (x86)\\Common Files\\Microsoft Shared\\VGX\\vgx.dll&quot;&lt;/Parameters&gt;\r<br />\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;\r<br />\n&lt;TimeBeforeKilling&gt;5&lt;/TimeBeforeKilling&gt;\r<br />\n&lt;Variable/&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;\r<br />\n&lt;PathToExecutable&gt;regsvr32.exe&lt;/PathToExecutable&gt;\r<br />\n&lt;Parameters&gt;/u /s &quot;C:\\Program Files\\Common Files\\Microsoft Shared\\VGX\\vgx.dll&quot;&lt;/Parameters&gt;\r<br />\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;\r<br />\n&lt;TimeBeforeKilling&gt;5&lt;/TimeBeforeKilling&gt;\r<br />\n&lt;Variable/&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;/CustomUpdate&gt;\r<br />\n<br />\nI've bundled the 2012 version of regsvr32.exe to make sure that it should work.  Same error whether I bundle the Win7/2008 or the 2012 version.<br />\n",
+    "PostedDate": "2014-05-08T08:37:58.87-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1243158",
+    "ThreadId": "544620",
+    "Html": "<blockquote>\nI've created a classic update based on a custom update (I've learned to reverse engineer it to avoid the GUI and long GUIDs).<br />\n</blockquote>\nWhat do you mean ? How do you have make this package ?\r<br />\nWhen you revise the update, what is set in the command line ?\r<br />\n<br />\nYou should find a C:\\Windows\\Temp\\CustomUpdateEngine.log. Can you copy the content here ?<br />\n",
+    "PostedDate": "2014-05-08T09:28:34.797-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1243197",
+    "ThreadId": "544620",
+    "Html": "I create custom packages by mimicking how it works.  I create a regular package calling C:\\WSUS_PP\\CustomUpdateEngine.exe, include my own action file (e.g. vgx.xml) and any other necessary files, then use the parameter &quot;\\actionfile=vgx.xml&quot;.  I've done all my customizations this way.  I only use the custom package GUI to figure out the necessary parameters for the XML file.  The command line calls the CustomUpdateEngine.exe, as stated above.\r<br />\n<br />\nThat's the strange part.  No customupdateengine.log file is created.  On machines that the package worked on, it's there.  On the Win2012 boxes, the log isn't there.  Firewall port issues perhaps?<br />\n",
+    "PostedDate": "2014-05-08T10:50:54.1-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1243208",
+    "ThreadId": "544620",
+    "Html": "<blockquote>\nThat's the strange part. No customupdateengine.log file is created. On machines that the package worked on, it's there. On the Win2012 boxes, the log isn't there.<br />\n</blockquote>\nThen, customengine.exe don't run. Do you have .Net Framework 2.0 or 3.5 installed on the client machines ?<br />\n",
+    "PostedDate": "2014-05-08T11:10:12.137-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-09T12:14:06.773-07:00"
+  },
+  {
+    "Id": "1243627",
+    "ThreadId": "544620",
+    "Html": "Yes, thank you!  That was the problem.  Win2012 does not install .Net 3.5 by default.  Glad to put this to bed before heading into the weekend.  Cheers!<br />\n",
+    "PostedDate": "2014-05-09T12:11:49.463-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

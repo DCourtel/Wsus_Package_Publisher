@@ -1,0 +1,66 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-11T22:29:59.9-08:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Hello\r\n\r\nAny idea, how i could find out whats wrong. When i try to make custom update, GUI crashes after adding \"action\" to the custom update.\r\n\r\nWsus version 3.2.7600.265\r\n\r\nWsus Packagepublisher Release v1.3.1504.15\r\n\r\nAny help appreciated.",
+    "LastUpdatedDate": "2015-11-11T22:29:59.9-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-04-17T01:54:25.973-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Crash while making custom update",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 264
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1449695,
+      "FileName": "GUI Crash.PNG",
+      "DownloadUrl": ".\\1449695"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Can you send me the debug file at package.publisher@free.fr\n\n\nThanks",
+      "PostedDate": "2015-04-17T03:19:41.347-07:00",
+      "Id": 182990
+    },
+    {
+      "Message": "Btw: Your WSUS isn't up to date. It's missing http://www.microsoft.com/de-de/download/details.aspx?id=43633",
+      "PostedDate": "2015-04-17T05:21:00.137-07:00",
+      "Id": 182991
+    },
+    {
+      "Message": "Yes, i know. \n\nBut we have 2 networks with same wsus version and package publisher works in other setup without errors.",
+      "PostedDate": "2015-04-17T05:46:21.86-07:00",
+      "Id": 182992
+    },
+    {
+      "Message": "Hello\n\nAny updates on this matter, last version you gave me did not solve the problem.\n\n",
+      "PostedDate": "2015-04-24T02:11:14.7-07:00",
+      "Id": 183328
+    }
+  ]
+}

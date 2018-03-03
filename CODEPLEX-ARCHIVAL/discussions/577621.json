@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1341484",
+    "ThreadId": "577621",
+    "Html": "Hello,\r<br />\n<br />\nI have installed the latest release of WPP and version 3.2.7600.226 of WSUS on a Windows Server 2008R2 machine. I have followed the installation guide on this website, but I'm still getting the invalid certificate error. However I can view the certificate in the Trusted Root Certification Authorities, Trusted Publishers and WSUS certificates.\r<br />\n<br />\nWhen enabling the option &quot;Ignored Code-Signing Certificate validation errors&quot; and publishing an Adobe Reader Upgrade file, I get the error &quot;Verification of file signature failed for file: \\SRV-OP-JP02\\UpdateServicesPackages....cab&quot;.\r<br />\n<br />\nI have already restarted the server several times and the KB2661254 is not installed on the server.\r<br />\n<br />\nAny idea?\r<br />\n<br />\nThanks in advance.<br />\n",
+    "PostedDate": "2015-01-13T08:02:07.377-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341515",
+    "ThreadId": "577621",
+    "Html": "Pls check first the Build from your WSUS. In WSUS-FAQ No. 44 you will find more Informations about the place you will find the Build and which Build you have to have:\r<br />\n<a href=\"http://wsus.de/faq\" rel=\"nofollow\">http://wsus.de/faq</a>\r<br />\nAfter you have installed Build .274, pls restart WSUS and try again.<br />\n",
+    "PostedDate": "2015-01-13T09:12:29.857-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341530",
+    "ThreadId": "577621",
+    "Html": "<blockquote>\nHowever I can view the certificate in the Trusted Root Certification Authorities, Trusted Publishers and WSUS certificates. <br />\n</blockquote>\nEnsure that certificate is a code signing certificate and is in COMPUTER store, not USER store.<br />\n",
+    "PostedDate": "2015-01-13T10:01:26.12-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341769",
+    "ThreadId": "577621",
+    "Html": "After following the Signed Certification manual (with CA) it works fine. I'm getting an error on the WSUS client, but has nothing to do with WPP.\r<br />\nI'll test further. Thanks a lot for the quick responses and the clear documentation!<br />\n",
+    "PostedDate": "2015-01-14T04:43:44.983-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-01-14T08:26:36.8-08:00"
+  }
+]

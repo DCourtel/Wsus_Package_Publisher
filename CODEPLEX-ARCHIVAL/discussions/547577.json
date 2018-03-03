@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "1252979",
+    "ThreadId": "547577",
+    "Html": "I have to deploy Firefox and the Flash plugin.  I tried to do this with the MSI version from FrontMotion.  Whatever I tried, the update is not detected on the client.  WPP reports the update as not installed.\r<br />\nCan someone help with the creation of the update.   I'm asked to have Firefox installed by the end of next week and I really don't want to run from PC to PC so I hope you can help me.\r<br />\n<br />\nThanks.<br />\n",
+    "PostedDate": "2014-06-04T12:12:35.347-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1253007",
+    "ThreadId": "547577",
+    "Html": "Hi, \r<br />\n<br />\nFirst, ensure the update is approve to this computers group. Then, verify that computers are allowed to install update from third party editor via Wsus.<br />\n",
+    "PostedDate": "2014-06-04T13:11:49.427-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1253031",
+    "ThreadId": "547577",
+    "Html": "Hi,\r<br />\n<br />\nI already deploy Adobe reader and Flash player (active-x for IE) and Java so the computers are allowed to install the updates, and yes, of course it's approved for the computers group.  I just think I am missing something in the deployment of Firefox but I don't know what.<br />\n",
+    "PostedDate": "2014-06-04T13:57:04.477-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1253455",
+    "ThreadId": "547577",
+    "Html": "On a computer that should download the update, can you look at C:\\Windows\\WindowsUpdate.log and see if you can find any error message.\r<br />\nAlso, can you tell us what do you have set for 'IsInstalled' and 'IsInstallable' rules ?\r<br />\nWhich release of WPP have you used to publish this update ?<br />\n",
+    "PostedDate": "2014-06-05T12:45:54.483-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1253466",
+    "ThreadId": "547577",
+    "Html": "There is nothing in the log.  It just says no updates.  If there was an error I would have something to start with.\r<br />\nI just noticed there is a new release of WPP, I use 1.3.1404.13.  I will update tomorrow.\r<br />\nI have set the MSI Product code for installeble and for IsInstalled (revese).<br />\n",
+    "PostedDate": "2014-06-05T13:25:51.68-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1253504",
+    "ThreadId": "547577",
+    "Html": "The update shouldn't make any difference. Once Firefox has been published in Wsus, WPP doesn't do anything in the detection/installation process.\r<br />\nThe strange think is that computers report the package has &quot;Not Installed&quot;, that mean computers 'need' this update, but didn't download it.\r<br />\n<br />\nOn the 'informations' tab, click on the 'Id' link. This will open a window with a .cab file and a folder. In the folder you should see all files for this update. Is it the case ?<br />\n",
+    "PostedDate": "2014-06-05T14:59:56.02-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1253652",
+    "ThreadId": "547577",
+    "Html": "I used the MSI I downloaded from Frontmotion.  I also created my own MSI with Advancedinstaller.  Unfortunatelly both don't install.\r<br />\nBoth MSI's are in the ID link folder.\r<br />\nIt's quite strange that the report shows not installed but the log shows 0 updates needed.\r<br />\nIs there anything I can try on the IsInstallable page?  Everything else installs fine.  It's just Firefox that's giving me headaches.<br />\n",
+    "PostedDate": "2014-06-06T03:43:06.977-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1253653",
+    "ThreadId": "547577",
+    "Html": "I just thought of something I had not done yet.  I restarted the WSUS server.\r<br />\nNow Firefox and the Flash plugin are detected and installed.\r<br />\nSometimes the simplest solutions do the trick.\r<br />\n<br />\nThanks.<br />\n",
+    "PostedDate": "2014-06-06T03:50:47.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-06-09T08:20:19.15-07:00"
+  },
+  {
+    "Id": "1451047",
+    "ThreadId": "547577",
+    "Html": "I find the guideline for deploy firefox with wpp. I think it can help you. \r<br />\n<a href=\"http://www.sthshare.com/wordpress/wsus-package-publisher-deploy-firefox.html\" rel=\"nofollow\">http://www.sthshare.com/wordpress/wsus-package-publisher-deploy-firefox.html</a><br />\n",
+    "PostedDate": "2015-11-05T09:19:02.963-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

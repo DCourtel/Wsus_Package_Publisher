@@ -1,0 +1,71 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-09-03T12:37:31.74-07:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "I configured Symantec Endpoint for deployment via WSUS Package Publisher, everything worked fine but when I came back a few hours later the update is missing under the programs Updates directory. I see my Adobe packages but not the Symantec. I log into the WSUS console and I see them there. Please advise. \r\n\r\nIt would be hard to manage if the patches keep disappearing like that. \r\n\r\nWSUS - Server 2k12 datacenter. \r\nWSUS Package Publisher installed on local server. \r\nAble to push and successfully install packages. \r\n\r\nThanks, \r\nGary",
+    "LastUpdatedDate": "2015-09-03T12:37:31.74-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-09-03T02:55:30.653-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Configured Symantec Endpoint for Deployment",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 291
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1482229,
+      "FileName": "Untitled2.jpg",
+      "DownloadUrl": ".\\1482229"
+    },
+    {
+      "FileId": 1482230,
+      "FileName": "WSUS_WPP.jpg",
+      "DownloadUrl": ".\\1482230"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Can you please post a screenshot? Where are you not seeing the Symantec update? Within WPP or within WSUS Console?\n\nRegards\nNorbert",
+      "PostedDate": "2015-09-03T05:02:11.897-07:00",
+      "Id": 189868
+    },
+    {
+      "Message": "see attached",
+      "PostedDate": "2015-09-03T08:04:54.453-07:00",
+      "Id": 189874
+    },
+    {
+      "Message": "Issue resolved here: https://wsuspackagepublisher.codeplex.com/discussions/584596",
+      "PostedDate": "2015-09-03T08:11:22.13-07:00",
+      "Id": 189875
+    },
+    {
+      "Message": "Thanks. ;) Thought so.",
+      "PostedDate": "2015-09-03T08:41:05.287-07:00",
+      "Id": 189878
+    }
+  ]
+}

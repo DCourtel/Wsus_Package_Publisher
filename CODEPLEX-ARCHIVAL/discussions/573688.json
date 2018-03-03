@@ -1,0 +1,130 @@
+[
+  {
+    "Id": "1327706",
+    "ThreadId": "573688",
+    "Html": "When trying to connect to my local server, I am unable to do so. I am running WSUS perfectly on 2012 R2 as of right now. I do not believe it's a corrupted installation as I've seen mentioned in another forum post. \r<br />\n<br />\n12/1/2014 7:32:53 AM\tTry connecting to : LOCALSERVERNAME\r<br />\n12/1/2014 7:32:53 AM\tEntering Void StartWaitingForm(System.String)\r<br />\n12/1/2014 7:32:53 AM\tEntering Boolean Connect(Wsus_Package_Publisher.WsusServer, System.String) : LOCALSERVERNAME (Local), en\r<br />\n12/1/2014 7:32:53 AM\t**** The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel.\r<br />\n<br />\nHowever, I am able to connect via the default port 5830. Although, it is showing up as a remote client rather than local. <br />\n",
+    "PostedDate": "2014-12-01T07:55:11.2-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1327713",
+    "ThreadId": "573688",
+    "Html": "What is the Wsus settings ? Connection port ? Use of SSL or not ?\r<br />\nHow is configured WPP for the connection ? <br />\n",
+    "PostedDate": "2014-12-01T08:19:32.997-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1327715",
+    "ThreadId": "573688",
+    "Html": "Port 8530\r<br />\n<br />\nNo SSL\r<br />\n<br />\nI've tried configuring WPP connection as many ways as I could possibly think with the same result. Regardless of how the connection is setup, when the connect to local server is checked it will always error with &quot;The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel. &quot;<br />\n",
+    "PostedDate": "2014-12-01T08:24:23.423-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1327809",
+    "ThreadId": "573688",
+    "Html": "In the folder you extracted WPP, there's a file called Options.xml. Can you post the contents of that file here? Feel free to redact your server names. Here's mine: (I changed my server name to WSUSSERVERNAME, for me, I needed to use the server's name, not 'localhost' to connect correctly. I feel that this may be your issue)<br />\n<pre><code>&lt;WsusPackagePublisher&gt;\n  &lt;Server&gt;\n    &lt;Name&gt;WSUSSERVERNAME&lt;/Name&gt;\n    &lt;IsLocal&gt;True&lt;/IsLocal&gt;\n    &lt;Port&gt;80&lt;/Port&gt;\n    &lt;UseSSL&gt;False&lt;/UseSSL&gt;\n    &lt;IgnoreCertErrors&gt;False&lt;/IgnoreCertErrors&gt;\n    &lt;DeadLineDaysSpan&gt;0&lt;/DeadLineDaysSpan&gt;\n    &lt;DeadLineHour&gt;0&lt;/DeadLineHour&gt;\n    &lt;DeadLineMinute&gt;0&lt;/DeadLineMinute&gt;\n    &lt;VisibleInWsusConsole&gt;LetMeChoose&lt;/VisibleInWsusConsole&gt;\n  &lt;/Server&gt;\n&lt;/WsusPackagePublisher&gt;</code></pre>\n\n",
+    "PostedDate": "2014-12-01T12:41:21.167-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1328073",
+    "ThreadId": "573688",
+    "Html": "Thank you for looking this over! Here is my options.xml as of right now<br />\n<pre><code>&lt;WsusPackagePublisher&gt;\n  &lt;Server&gt;\n    &lt;Name&gt;WSUSSERVERNAME&lt;/Name&gt;\n    &lt;IsLocal&gt;True&lt;/IsLocal&gt;\n    &lt;Port&gt;443&lt;/Port&gt;\n    &lt;UseSSL&gt;True&lt;/UseSSL&gt;\n    &lt;IgnoreCertErrors&gt;False&lt;/IgnoreCertErrors&gt;\n    &lt;DeadLineDaysSpan&gt;0&lt;/DeadLineDaysSpan&gt;\n    &lt;DeadLineHour&gt;0&lt;/DeadLineHour&gt;\n    &lt;DeadLineMinute&gt;0&lt;/DeadLineMinute&gt;\n    &lt;VisibleInWsusConsole&gt;Never&lt;/VisibleInWsusConsole&gt;\n  &lt;/Server&gt;\n  &lt;Server&gt;\n    &lt;Name&gt;WSUSSERVERNAME&lt;/Name&gt;\n    &lt;IsLocal&gt;True&lt;/IsLocal&gt;\n    &lt;Port&gt;8530&lt;/Port&gt;\n    &lt;UseSSL&gt;False&lt;/UseSSL&gt;\n    &lt;IgnoreCertErrors&gt;True&lt;/IgnoreCertErrors&gt;\n    &lt;DeadLineDaysSpan&gt;0&lt;/DeadLineDaysSpan&gt;\n    &lt;DeadLineHour&gt;0&lt;/DeadLineHour&gt;\n    &lt;DeadLineMinute&gt;0&lt;/DeadLineMinute&gt;\n    &lt;VisibleInWsusConsole&gt;Never&lt;/VisibleInWsusConsole&gt;\n  &lt;/Server&gt;\n&lt;/WsusPackagePublisher&gt;</code></pre>\n\nWhen using SSL and trying to connect, on ports 443 and 8531, WSUSPackagePublisher crashes each time. \r<br />\n<br />\nI have been changing these options quite frequently, so it's currently missing port 80 (which does not work anyways).<br />\n",
+    "PostedDate": "2014-12-02T07:43:20.973-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1328547",
+    "ThreadId": "573688",
+    "Html": "Thanks.\r<br />\nEdit the option.xml file by deleting this part :\r<br />\n&lt;Server&gt;<br />\n<pre><code>&lt;Name&gt;WSUSSERVERNAME&lt;/Name&gt;\n&lt;IsLocal&gt;True&lt;/IsLocal&gt;\n&lt;Port&gt;443&lt;/Port&gt;\n&lt;UseSSL&gt;True&lt;/UseSSL&gt;\n&lt;IgnoreCertErrors&gt;False&lt;/IgnoreCertErrors&gt;\n&lt;DeadLineDaysSpan&gt;0&lt;/DeadLineDaysSpan&gt;\n&lt;DeadLineHour&gt;0&lt;/DeadLineHour&gt;\n&lt;DeadLineMinute&gt;0&lt;/DeadLineMinute&gt;\n&lt;VisibleInWsusConsole&gt;Never&lt;/VisibleInWsusConsole&gt;</code></pre>\n\n&lt;/Server&gt;\r<br />\n<br />\nOpen a DOS Window on the computer where WPP run, and type : Ping WSUSSERVERNAME (replace by the real name of your Wsus server). Does the name of the server resolved into an IP Address ?\r<br />\nThen ensure that WPP run on the Wsus server.\r<br />\n<br />\nVery strange that the error message is &quot;Could not establish trust relationship for the SSL/TLS secure channel.&quot;, despite the fact that SSL is not used !<br />\n",
+    "PostedDate": "2014-12-03T13:12:18.687-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1329152",
+    "ThreadId": "573688",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nVery strange that the error message is &quot;Could not establish trust relationship for the SSL/TLS secure channel.&quot;, despite the fact that SSL is not used !<br />\n</blockquote>\nI can easily replicate this mistake in the &quot;Settings...&quot; window by changing the connection port to 443 before checking the &quot;Connect to local server&quot; box. The result is two identical strings in the server picker: &quot;WSUSSERVERNAME (Local)&quot; and &quot;WSUSSERVERNAME (Local)&quot;\r<br />\n<br />\nHere's the options.xml file after making the mistake:<br />\n<pre><code>&lt;WsusPackagePublisher&gt;\n  &lt;Server&gt;\n    &lt;Name&gt;WSUSSERVERNAME&lt;/Name&gt;\n    &lt;IsLocal&gt;True&lt;/IsLocal&gt;\n    &lt;Port&gt;80&lt;/Port&gt;\n    &lt;UseSSL&gt;False&lt;/UseSSL&gt;\n    &lt;IgnoreCertErrors&gt;False&lt;/IgnoreCertErrors&gt;\n    &lt;DeadLineDaysSpan&gt;0&lt;/DeadLineDaysSpan&gt;\n    &lt;DeadLineHour&gt;0&lt;/DeadLineHour&gt;\n    &lt;DeadLineMinute&gt;0&lt;/DeadLineMinute&gt;\n    &lt;VisibleInWsusConsole&gt;LetMeChoose&lt;/VisibleInWsusConsole&gt;\n  &lt;/Server&gt;\n  &lt;Server&gt;\n    &lt;Name&gt;WSUSSERVERNAME&lt;/Name&gt;\n    &lt;IsLocal&gt;True&lt;/IsLocal&gt;\n    &lt;Port&gt;443&lt;/Port&gt;\n    &lt;UseSSL&gt;True&lt;/UseSSL&gt;\n    &lt;IgnoreCertErrors&gt;False&lt;/IgnoreCertErrors&gt;\n    &lt;DeadLineDaysSpan&gt;0&lt;/DeadLineDaysSpan&gt;\n    &lt;DeadLineHour&gt;0&lt;/DeadLineHour&gt;\n    &lt;DeadLineMinute&gt;0&lt;/DeadLineMinute&gt;\n    &lt;VisibleInWsusConsole&gt;Never&lt;/VisibleInWsusConsole&gt;\n  &lt;/Server&gt;\n&lt;/WsusPackagePublisher&gt;</code></pre>\n\nBased on this, I propose that there should be some way to further distinguish between options in the server picker, like including the port number and whether or not the connection will be made using SSL, or adding a field to the XML definition like &lt;Description&gt;Custom Server Connection Description Here&lt;/Description&gt; that is automatically generated by the &quot;Settings...&quot; interface if left blank, but customizable.<br />\n",
+    "PostedDate": "2014-12-05T07:52:49.223-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1329208",
+    "ThreadId": "573688",
+    "Html": "<blockquote>\nI propose that there should be some way to further distinguish between options in the server picker<br />\n</blockquote>\nFrom WPP's point of view, these two connections settings are identical. Because &lt;IsLocal&gt; is set to True, so &lt;Port&gt; and &lt;UseSSL&gt; are ignored in this case. No matters which settings you choose, WPP will try to connect to &quot;WSUSSERVERNAME&quot; directly, assuming that WPP run on the Wsus Server (IsLocal = True) and not on a remote computer.<br />\n",
+    "PostedDate": "2014-12-05T11:01:34.8-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1329251",
+    "ThreadId": "573688",
+    "Html": "DNS is solid. I can ping IP and hostname on the server and from a remote machine on the network. I'm not using a domain controller at the present moment. <br />\n<br />\nThe WSUS server is a virtual machine running Windows Server 2012R2. I'm remote desktop'd into it, but that shouldn't matter. I've tried it on the console just the same, still no luck. <br />\n<br />\nDoes anyone have any other information they would need from me for more troubleshooting, or anything else I should try. This seems like a solid solution to pushing out 3rd party updates via WSUS. I really don't want to find another solution (if there is even one) and our old solution LUP no longer works since we've upgraded to WS2012R2.<br />\n<br />\nAdditionally, I can connect with port 8530, No SSL and Not Local. It just gives me the warning, &quot;You don't have any certificat.&quot; You will not be able to publish updates.&quot; Which, you know, kills the whole reason for me using this product. <br />\n<pre><code>&lt;WsusPackagePublisher&gt;\n  &lt;Server&gt;\n    &lt;Name&gt;WSUSSERVERNAME&lt;/Name&gt;\n    &lt;IsLocal&gt;False&lt;/IsLocal&gt;\n    &lt;Port&gt;8530&lt;/Port&gt;\n    &lt;UseSSL&gt;False&lt;/UseSSL&gt;\n    &lt;IgnoreCertErrors&gt;False&lt;/IgnoreCertErrors&gt;\n    &lt;DeadLineDaysSpan&gt;0&lt;/DeadLineDaysSpan&gt;\n    &lt;DeadLineHour&gt;0&lt;/DeadLineHour&gt;\n    &lt;DeadLineMinute&gt;0&lt;/DeadLineMinute&gt;\n    &lt;VisibleInWsusConsole&gt;Never&lt;/VisibleInWsusConsole&gt;\n  &lt;/Server&gt;\n&lt;/WsusPackagePublisher&gt;</code></pre>\n\n",
+    "PostedDate": "2014-12-05T13:07:30.403-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1329270",
+    "ThreadId": "573688",
+    "Html": "<blockquote>\nAdditionally, I can connect with port 8530, No SSL and Not Local.<br />\n</blockquote>\nI don't understand what you are doing. \r<br />\nYou need to use &quot;Connect to local Server&quot;, only when WPP <strong>run ON the WSUS SERVER</strong>\r<br />\nIf WPP run on a <strong>remote desktop</strong>, don't use this option (port and SSL settings will be used)<br />\n<blockquote>\nIt just gives me the warning, &quot;You don't have any certificate.&quot; You will not be able to publish updates.&quot;<br />\n</blockquote>\nThis will not be a problem for a long time. If you have your own Certificate Authority, issue a Code signing certificate and import it with WPP (Tools -&gt; Certificate -&gt; Load a Certificate). Otherwise, ask WPP to create a Self-signed certificate (Tools -&gt; Certificate -&gt; Generate the Certificate, and then 'Save' this certificate to distribute it to clients computers)<br />\n",
+    "PostedDate": "2014-12-05T14:14:31.997-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1329767",
+    "ThreadId": "573688",
+    "Html": "I am running WPP on the WSUS server. \r<br />\n<br />\nShould I run WPP remotely?\r<br />\n<br />\nAlso, Load a certificate is greyed out so I am unable to load a cert. I am also unable to create my own certificate (that's the reason for my post).\r<br />\n<br />\n<br />\nAs you can see below, I am connected to my WSUS and this IS running on the WSUS server itself.\r<br />\n<br />\nThis is my Manage Certificates\r<br />\n<img src=\"http://i57.tinypic.com/10zbhmr.png\" alt=\"Image\" />\r<br />\n<br />\nThis is what happens when I click on Generate Certificate\r<br />\n<img src=\"http://i62.tinypic.com/2qn9kqt.png\" alt=\"Image\" /><br />\n",
+    "PostedDate": "2014-12-08T05:37:35.167-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1329880",
+    "ThreadId": "573688",
+    "Html": "<blockquote>\nAlso, Load a certificate is greyed out so I am unable to load a cert.<br />\n</blockquote>\nFill the 'Password' textbox and the button will not be greyed out anymore.<br />\n<blockquote>\nI am also unable to create my own certificate . This is what happens when I click on Generate Certificate <br />\n</blockquote>\nThis is because, you didn't have checked the checkbox &quot;Connect to local server&quot;. &quot;Local&quot; needs to be displayed aside of the server name.<br />\n",
+    "PostedDate": "2014-12-08T11:36:21.537-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1329931",
+    "ThreadId": "573688",
+    "Html": "DCourtel,\r<br />\n<br />\nMy whole issue is I cannot check &quot;connect to local server&quot; and connect.  I will try and upload a certificate and see what happens. <br />\n",
+    "PostedDate": "2014-12-08T13:56:09.65-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1330295",
+    "ThreadId": "573688",
+    "Html": "Can I remotely connect to your Wsus server via Teamviewer or other tool ?<br />\n",
+    "PostedDate": "2014-12-09T11:59:54.377-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1332281",
+    "ThreadId": "573688",
+    "Html": "Please check your inbox DCourtel. Thank you.<br />\n",
+    "PostedDate": "2014-12-15T08:55:36.697-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1430723",
+    "ThreadId": "573688",
+    "Html": "Was there a solution to this issue?  I have the same problem.  New WSUS 6 install on Windows server 2012R2.  Using WPP v1.3.1504.15.\r<br />\n<br />\nI can connect by typing the FQDN but cannot connect with &quot;connect to local server&quot; selected.  I do not have SSL enabled.  When I connect with the &quot;Connect to local server&quot; option selected, I receive &quot;Connection failed:  Unable to connect to the remote server&quot; and then &quot;failed to connect to server&quot;.\r<br />\n<br />\nI cannot add a certificate when connected to the FQDN even though I am logged in to the machine via RDP.  The option to import a certificate is greyed out.<br />\n",
+    "PostedDate": "2015-06-17T09:43:50.757-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

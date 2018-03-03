@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1138609",
+    "ThreadId": "475185",
+    "Html": "Hello,\r<br />\n<br />\nIs it possible to configure clients to receive updates using the registry editor as opposed to GPO? Thanks.\r<br />\n<br />\n<br />\n-Zac<br />\n",
+    "PostedDate": "2013-12-19T13:01:09.393-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1140304",
+    "ThreadId": "475185",
+    "Html": "Yes, there is some regkey to set. \r<br />\n<a href=\"http://technet.microsoft.com/fr-fr/library/cc708449(v=ws.10).aspx\" rel=\"nofollow\">Configure Automatic Updates in a Non–Active Directory Environment</a>\r<br />\nYou can even use this program : <a href=\"https://wsusworkgroup.codeplex.com/\" rel=\"nofollow\">https://wsusworkgroup.codeplex.com/</a><br />\n",
+    "PostedDate": "2013-12-20T07:03:54.96-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T07:53:20.303-08:00"
+  },
+  {
+    "Id": "1140369",
+    "ThreadId": "475185",
+    "Html": "Great I will try these out. Thanks for your help.<br />\n",
+    "PostedDate": "2013-12-20T10:05:43.977-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1142219",
+    "ThreadId": "475185",
+    "Html": "You can use Connect2WSUSSpecial Edition: <a href=\"http://www.gruppenrichtlinien.de/uploads/media/Connect2WSUSSE.zip\" rel=\"nofollow\">http://www.gruppenrichtlinien.de/uploads/media/Connect2WSUSSE.zip</a> In this SE you can save the Name of the WSUS in a INI-File. It es easyier to handle. ;)<br />\n",
+    "PostedDate": "2013-12-25T13:13:08.24-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T07:53:21.72-08:00"
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1479386",
+    "ThreadId": "656579",
+    "Html": "Hi Everyone,\r<br />\n<br />\nIn my environment i need to deploy an application to only laptops. Before that i worked very fine with WPP to install software to all devices.<br />\nObviously i miss one o more things. I show below the single step for your help. \r<br />\n<br />\n1.create a new update\r<br />\n<img src=\"http://i.imgsafe.org/f8f2b1e90c.jpg\" alt=\"Image\" /><br />\n<ol>\n<li>\nAdd a <strong>MSI-ProductInstalled</strong> ad update level and a <strong>WMI-query</strong> rule at package level .\r<br />\nwmi: &quot;Select * from Win32_Battery WHERE (BatteryStatus &lt;&gt; 0)&quot;  On the desktops the value is equal to '0' because It haven't a battery.\r<br />\nClick on next button without check &quot;delete rules at package level&quot;\r<br />\n<img src=\"http://i.imgsafe.org/f8f2bf2498.jpg\" alt=\"Image\" /><br />\n</li>\n<li>\nadd a MSI-productInstallled with the flag on &quot;Reverse Rule&quot;\r<br />\n<img src=\"http://i.imgsafe.org/f8f2d30ef8.jpg\" alt=\"Image\" /><br />\n</li>\n<li>\nclick on the button &quot;next&quot; to go on and publish the application.<br />\n</li>\n</ol>\nProblem: the package is available also for the desktops and I don't want it. I ask kindly your help for to understand how to apply the rules inside WPP. \r<br />\n<br />\nThanks so much\r<br />\nRS<br />\n",
+    "PostedDate": "2016-07-20T08:07:37.85-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1479395",
+    "ThreadId": "656579",
+    "Html": "Hi, in your case, the WMI query must be in the «IsInstallable» rule.<br />\n",
+    "PostedDate": "2016-07-20T08:45:48.837-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1479400",
+    "ThreadId": "656579",
+    "Html": "Hi DCourtel,\r<br />\nthanks for your fast reply.  Sorry, but where can i found the «IsInstallable» rule option?? <br />\n\r<br />\n<img src=\"http://i.imgsafe.org/fa3032ab52.jpg\" alt=\"Image\" />\r<br />\n<br />\nthanks again.\r<br />\nRS<br />\n",
+    "PostedDate": "2016-07-20T09:16:28.55-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1479407",
+    "ThreadId": "656579",
+    "Html": "Have a look in first line of this Window: <a href=\"http://i.imgsafe.org/f8f2d30ef8.jpg\" rel=\"nofollow\">http://i.imgsafe.org/f8f2d30ef8.jpg</a><br />\n",
+    "PostedDate": "2016-07-20T10:22:01.163-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1479508",
+    "ThreadId": "656579",
+    "Html": "Sorry WinfriedSonntag but i don't understand. Now, I'm like a cow that looks! :(<br />\nPlease, can you explain me how to create a msi package with  wmi-query?\r<br />\n<br />\nthanks so much<br />\n",
+    "PostedDate": "2016-07-21T08:54:32.52-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1479515",
+    "ThreadId": "656579",
+    "Html": "The Wmi-query must be where you have set the MSI-ProductInstalled, with Reverse-Rule.\r<br />\nAnd please, <strong>READ the DOCUMENTATION</strong><br />\n",
+    "PostedDate": "2016-07-21T09:39:21.127-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1479540",
+    "ThreadId": "656579",
+    "Html": "IsInstallable Rule. Page 6: <a href=\"http://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=663365\" rel=\"nofollow\">http://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=663365</a><br />\n",
+    "PostedDate": "2016-07-21T13:52:36.193-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1479565",
+    "ThreadId": "656579",
+    "Html": "Thanks DCourtel for your tip! It works ! Thanks also to WinfriedSonntag.\r<br />\n<br />\nI'll read again many times the documentation.<br />\n",
+    "PostedDate": "2016-07-22T01:52:55.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

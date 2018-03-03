@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1493150",
+    "ThreadId": "661534",
+    "Html": "Has anyone had any experience/ success with deploying this web content filtering client software called Forcepoint Triton AP Endpoint, formerly known as Websense? The package contains an msi file but the tricky bit is deploying the WSCONTEXT syntax code with it which I believe the code for the websense proxy server.<br />\n",
+    "PostedDate": "2017-02-23T07:57:54.923-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1493186",
+    "ThreadId": "661534",
+    "Html": "Hello,\r<br />\n<br />\nI already deploy ForcePoint EndPoint.\r<br />\n<br />\nI think it's suffisent to add msi, specify WSCONTEXT=xxxxxx in arguments, and that's all.<br />\n",
+    "PostedDate": "2017-02-23T16:45:58.5-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

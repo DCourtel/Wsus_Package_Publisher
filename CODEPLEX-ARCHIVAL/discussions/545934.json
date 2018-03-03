@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1247375",
+    "ThreadId": "545934",
+    "Html": "I wanted to know if it's possible to make an improved editor for the rule sets.\r<br />\n<br />\nI only get a skinny part of a window and each line takes up a lot of space.  No matter what adjustments I make, I cannot get enough screen realestate to get the most out of the editor.  Lately, I find I am trying to manually build rule sets with NotePad++ and then import them into the updates I'm building.\r<br />\n<br />\nThanks!<br />\n",
+    "PostedDate": "2014-05-20T05:58:46.5-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1248127",
+    "ThreadId": "545934",
+    "Html": "Hi, can you take some screen captures and send it to <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a> . I would like to have a look at what you saw.<br />\n",
+    "PostedDate": "2014-05-21T12:53:03.517-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1250597",
+    "ThreadId": "545934",
+    "Html": "Ok, I see what you mean. I agree with you. Rules' tabs are not as good as I would like it be. I need to rebuild it entirely. but not in WPP V1. \r<br />\nIn WPP V2, I will separate &quot;Update Level&quot; rules and &quot;Package Level&quot; rules. I hope to be able to implement drag &amp; drop. And make it clearer.<br />\n",
+    "PostedDate": "2014-05-28T12:17:44.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-01T01:04:16.9-07:00"
+  },
+  {
+    "Id": "1250769",
+    "ThreadId": "545934",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nIn WPP V2, I will separate &quot;Update Level&quot; rules and &quot;Package Level&quot; rules. I hope to be able to implement drag &amp; drop. And make it clearer.<br />\n</blockquote>\n´Sounds good. ;)\r<br />\nThank you for your good work. :)<br />\n",
+    "PostedDate": "2014-05-29T02:08:30.11-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1356430",
+    "ThreadId": "545934",
+    "Html": "I second this request, it is very difficult to get an at a glance view of the rules you are inputting. It needs to be easier to 1.) input rules inside &quot;AND&quot; and &quot;OR&quot; sections; and 2.) have a larger working space so you can see complex nested groups. Currently, as soon as you go one or two levels deep, you lose the ability to see beyond 1 or 2 rules at a time. You have to constantly scroll to find where you are at.\r<br />\n<br />\nLastly, I believe the workflow for many of us, is that we create the rules outside of WPP (in a text editor) and then proceed to import them. If there was a way to import the XML code directly, similar to what LUP offers, that would be huge!! I hate to compare this project to LUP, since I've used both and I see the benefits in this one, but rule creation was one thing LUP did right.\r<br />\n<br />\nThanks for you hard work on this project and keep up the good work!! Looking forward to v2. =]<br />\n",
+    "PostedDate": "2015-02-27T09:18:49.253-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

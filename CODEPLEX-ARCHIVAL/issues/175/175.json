@@ -1,0 +1,81 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-03-04T10:41:46.32-08:00",
+    "CommentCount": 7,
+    "Custom": null,
+    "Description": "I've installed the software, taken care of the certificates, added Adobe catalogs and approved a test using a Flash Player update.  Now I'm waiting for the update to happen on my test computer.\r\n\r\nWhat I really need is a better understanding of the operational side of the update process.  How does it work?  Am I correct that these updates won't show in the WSUS user console?  Does WSUS refer the client to WPP to get the updates?  Do the clients contact WPP directly without any involvement from WSUS?  How does it all work?  Is there a document that explains this process?\r\n\r\nThank you.",
+    "LastUpdatedDate": "2014-03-04T10:41:46.32-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-01-22T13:40:45.303-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "operational overview",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 175
+  },
+  "FileAttachments": [
+    {
+      "FileId": 782436,
+      "FileName": "16_WSUSPackagePublisher.png",
+      "DownloadUrl": ".\\782436"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "You have to understand, that wpp publishes updates into wsus. The client never knows about wpp. You can configure wpp to show updates in wsus console. Take a look into the settings.\n\nRegards\nNorbert",
+      "PostedDate": "2014-01-22T14:11:10.363-08:00",
+      "Id": 131208
+    },
+    {
+      "Message": "I changed the settings to \"always make this update visible in the WSUS console\".  However, I do not see the test updates for Adobe Reader and Flash Player in WSUS.  I even exited the console, and went back and approved the updates again after making the setting change.  I have a custom update view in WSUS for my test computer group that shows approved updates.  Given that I approved the updates for that computer group, shouldn't they show there?  Would they should immediately after approval?  Also, as of yet, my test computer hasn't downloaded the updates although I've done a WUAUCLT /DETECTNOW.\n\nAny suggestions?\n\nThank you.",
+      "PostedDate": "2014-01-23T09:52:24.51-08:00",
+      "Id": 131328
+    },
+    {
+      "Message": "Yes, you can see the Updates in WSUS. I only have a Image in German, but i think you see what you have to do: http://www.wsus.de/images/content/WSUSPackage/16_WSUSPackagePublisher.png\r\n",
+      "PostedDate": "2014-01-23T10:38:48.09-08:00",
+      "Id": 131330
+    },
+    {
+      "Message": "Thank you.  I was able to figure out what you were showing in the image.  However, in my WSUS I only see Microsoft listed under \"All Products\".  Adobe is not listed.  Have I missed a step somewhere?",
+      "PostedDate": "2014-01-23T12:15:42.81-08:00",
+      "Id": 131346
+    },
+    {
+      "Message": "Hi kdk7037,\nWPP publish updates in the Wsus server. Once this is done, clients computers will download it if apply and install it exactly like Microsoft updates.\nBy default, locally published updates are not shown in the Wsus console. Wpp can make them appear in the console by editing the SQL database. This is done when WPP publish or revise the update. If you have already publish an update and forgot to make it visible in the Wsus console, you have to right click on this update and choose 'Make it visible in the Wsus Console'.\n![Show in Wsus console](http://i.imgur.com/PIq4caG.png)\n\nThis option is enable if you have set WPP to \"Always make update visible\" or \"let me choose\", and if WPP run locally on the Wsus server.\n![Image](http://i.imgur.com/0xTr76e.jpg)\n\nIf your test computer has not been download the udpate:\n- Ensure you have set correct applicable rules\n- Ensure you have approve this update for installation on htis computer group\n- Ensure you have deployed the code signing certificate to that clients\n- Look into C:\\Windows\\WindowsUpdate.log to error message",
+      "PostedDate": "2014-01-23T12:51:16.13-08:00",
+      "Id": 131358
+    },
+    {
+      "Message": "Thanks.  This helped a lot.  The updates now show in WSUS as approved.  I'm just waiting for the test computer to process it.  (Should do it tonight.)\n\nI downloaded and used the Adobe catalogs as they're a big part of why I'm using WPP.  Any chance there's one for Java somewhere?\n\nThank you.",
+      "PostedDate": "2014-01-23T15:21:36.687-08:00",
+      "Id": 131379
+    },
+    {
+      "Message": "Asked Oracle for a Catalog for Java. They are the owner.",
+      "PostedDate": "2014-01-23T21:53:18.07-08:00",
+      "Id": 131406
+    }
+  ]
+}

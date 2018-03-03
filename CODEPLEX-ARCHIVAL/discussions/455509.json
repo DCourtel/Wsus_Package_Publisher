@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1088330",
+    "ThreadId": "455509",
+    "Html": "Hi,\r<br />\n<br />\nWe have noticed that you have added the catalog feature to the newly released WPP 1.3.1309.3,\r<br />\n<br />\nWe successfully pushed the updates from Adobe Flash player but when we tried to load the catalog from Adobe Reader 11, it's not showing any updates.\r<br />\n<br />\nWe also tried DELL and it's working perfect.\r<br />\n<br />\nThanks!<br />\n",
+    "PostedDate": "2013-09-04T10:05:24.67-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1088376",
+    "ThreadId": "455509",
+    "Html": "Hi cjp_21,<br />\n<blockquote>\nWe have noticed that you have added the catalog feature to the newly released WPP 1.3.1309.3<br />\n</blockquote>\nYes, this is the big new feature in v1.3.<br />\n<blockquote>\nwhen we tried to load the catalog from Adobe Reader 11, it's not showing any updates. <br />\n</blockquote>\nThat's right. As I explain in the PDF file (page 2) contains in the ZIP you have download, for instance WPP doesn't support prerequisite in catalog update. So update who have prerequisite are not shown in WPP. Adobe Reader 11 and Adobe Acrobat 11 have only updates with prerequisites :-(\r<br />\n<br />\nI will add support for these prerequisites later.<br />\n",
+    "PostedDate": "2013-09-04T11:16:33.06-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1088426",
+    "ThreadId": "455509",
+    "Html": "Hi DCourtel,\r<br />\n<br />\nOk, Thanks for these updates. \r<br />\n<br />\nWe also tried SCUP for Adobe Reader 11 and it's now working fine.<br />\n",
+    "PostedDate": "2013-09-04T13:25:59.02-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1093685",
+    "ThreadId": "455509",
+    "Html": "The new release is able to show updates that have prerequisites. To successfully publish an update that have prerequisites, these prerequisites <strong>MUST</strong> be present in the Wsus server <strong>before</strong> publishing the update. Wsus won't let you publish an update if these prerequisites are not present.\r<br />\nWPP look for prerequisites and if they are present in the same Catalog, then WPP will automatically publish it before the update. If these prerequisites are not present in the same Catalog, then WPP will assume they have already been publish and are present in the Wsus. If it is not the case, an error occure and the update won't be publish into Wsus.<br />\n",
+    "PostedDate": "2013-09-17T11:25:59.207-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:06:52.743-07:00"
+  }
+]

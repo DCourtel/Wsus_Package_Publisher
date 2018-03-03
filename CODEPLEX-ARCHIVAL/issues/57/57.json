@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Show Pending Updates",
+      "DisplayName": "Show Pending Updates"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-08T13:14:24.54-07:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI'm using wpp in an environment, where all Windows Clients (W7) have active firewalls. Which Firewall parts do I need to open on clientside and which Services need to be running?\r\nAt the moment I'm getting \"COM Exception ! Verify the firewall settings on the remote computer.\"\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.2.1305.26",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-05T07:58:40.213-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "Showpendingupdates.exe firewallports?",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 57
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi Norbert, effectively firewall must be configured to let this traffic.\nSee Microsoft documentation : (http://msdn.microsoft.com/en-us/library/windows/desktop/aa387288(v=vs.85).aspx)\n\nException 1 \nLocal port: 135 \nRemote port: ALL \nProtocol number: 6 \nExecutable: %windir%\\system32\\svchost.exe \nService: rpcss \nRemote privilege: Administrator\n\nException 2 \nLocal port: Dynamic RPC \nRemote port: ALL \nProtocol number: 6 \nExecutable: %windir%\\system32\\dllhost.exe \nRemote privilege: Administrator",
+      "PostedDate": "2013-06-05T13:40:33.85-07:00",
+      "Id": 102174
+    },
+    {
+      "Message": "Thanks, I'm going to test and report here.  But it will take some time.",
+      "PostedDate": "2013-06-05T14:36:45.12-07:00",
+      "Id": 102193
+    },
+    {
+      "Message": "BTW, maybe this should be the info in the popup window. ;)",
+      "PostedDate": "2013-06-05T14:44:26.943-07:00",
+      "Id": 102195
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1491414",
+    "ThreadId": "660831",
+    "Html": "Hallo,\r<br />\n<br />\nich habe folgendes Problem: In den Einstellungen des WPP kann ich ja folgende Option einstellen:\r<br />\n&quot;Verbindung zum lokalen Server&quot; \r<br />\n<br />\nWenn ich diesen Haken setze, bekomme ich jedoch beim starten des WPP folgende Fehlermeldung:\r<br />\n<br />\n&quot;Connection failed: Die zugrundeliegende Verbindung wurde geschlossen. Unerwarteter Fehler beim Senden.&quot;\r<br />\n<br />\nWenn ich den Haken entferne, bekomme ich keine Fehlermeldung.\r<br />\n<br />\nKann mir jemand sagen woran das liegt?\r<br />\n<br />\nGruß\r<br />\n<br />\nLiquid<br />\n",
+    "PostedDate": "2017-01-20T08:07:24.463-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1491451",
+    "ThreadId": "660831",
+    "Html": "Bekommst Du ohne Haken setzen ein Verbindung zum WSUS? Funktioniert die Konsole vom WSUS? Startest Du den WPP direkt auf dem WSUS?<br />\n",
+    "PostedDate": "2017-01-21T08:55:12.487-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-09T22:31:22.88-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "I have created a Adobe flash player ActiveX 24.0.0.194 package using msi file. By viewing the log file and system the update got installed successfully but in WSUS package publisher console the status still shows as \"Unknown\" for deployed machines. Kindly could anyone suggest on this please.",
+    "LastUpdatedDate": "2017-02-10T00:05:39.917-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-02-09T11:36:13.933-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Adobe Flash Player ActiveX 24.0.0.194",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 356
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1635483,
+      "FileName": "WSUS Report issue.JPG",
+      "DownloadUrl": ".\\1635483"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "If the status is unknown, that means that computers have never contacted Wsus about this update.\nIt may have a communication problem between clients computers and Wsus.",
+      "PostedDate": "2017-02-09T22:30:32.867-08:00",
+      "Id": 206516
+    },
+    {
+      "Message": "Log in at this computer, start a Commandline with Admin Rights. cmd.exe > rightclick > run as administrator:\n\nwuauclt /detectnow [ENTER]\nwuauclt /reportnow [ENTER]\n\nWait 10 Minutes und refresh WPP and/or WSUS-Console. Is a new report from this client available?",
+      "PostedDate": "2017-02-10T00:05:39.917-08:00",
+      "Id": 206518
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Rules Update Wizard",
+      "DisplayName": "Rules Update Wizard"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-09-28T09:26:28.047-07:00",
+    "CommentCount": 9,
+    "Custom": null,
+    "Description": "When I click on Update Creation Wizard, I get a Send Debug Informations. If I click No or Yes, the application closes.\r\n\r\nI test it on a Windows 2003 Spanish with WSUS 3.2.7600.251 and WPP Release v1.3.1309.15v2.\r\n\r\nThanks!",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1309.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "High",
+      "Severity": 150,
+      "Id": 3
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-09-23T00:09:07.897-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "When I click on Update Creation Wizard, I get a Send Debug Informations",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 121
+  },
+  "FileAttachments": [
+    {
+      "FileId": 733822,
+      "FileName": "WPP.png",
+      "DownloadUrl": ".\\733822"
+    },
+    {
+      "FileId": 733823,
+      "FileName": "WPP-9128cd28-8c78-4da7-b699-90da93f82076.log",
+      "DownloadUrl": ".\\733823"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "First you have to update your WSUS to Version .262.\nWSUS 3.0 (SP2) + KB2720211: \tBuild 3.2.7600.251\nWSUS 3.0 (SP2) + KB2734608: \tBuild 3.2.7600.256\nWSUS 3.0 (SP2) + KB2828185: \tBuild 3.2.7600.262\n\nPls update every client with this updates, if there is the WSUS.MSC installed. After this, reboot the Server and try again. If you have Up- and Downstream WSUS, start on upstream with installing this updates.\n\n\nIt is good to send the Debug Infos. ;)",
+      "PostedDate": "2013-09-23T01:18:48.747-07:00",
+      "Id": 115322
+    },
+    {
+      "Message": "Thanks Winfried Sonntag.\r\n\r\nI have updated to .262 version, but the problem continues.",
+      "PostedDate": "2013-09-23T04:11:12.55-07:00",
+      "Id": 115336
+    },
+    {
+      "Message": "I attach de log.",
+      "PostedDate": "2013-09-23T04:12:43.013-07:00",
+      "Id": 115337
+    },
+    {
+      "Message": "Hi paskysky, I have look the attached log and your 5 other logs that you have sent on 22/09 and 23/09.\n\nI have received other logs from other user of WPP with the same error. This error start appearing just after I modified the way WPP instanciate some class, to speed up the creation of the \"Update Creation Wizard\".\n\nThis error occured only on computers where Windows was installed in a langage other than Fr, En or De.\n\nSend me an email to package.publisher@free.fr, I will reply with a BETA version of WPP where I have added some modification that __can be__ solve this problem. It's just for testing the solution that I provide. If the solution solve the issue, I will add it to the next release of WPP.",
+      "PostedDate": "2013-09-23T13:06:45.503-07:00",
+      "Id": 115400
+    },
+    {
+      "Message": "People that have this issue, can use the Release __v1.2.1307.15__, awaiting the definitive fix.",
+      "PostedDate": "2013-09-23T13:11:16.617-07:00",
+      "Id": 115402
+    },
+    {
+      "Message": "I send you a mail. Thanks.\n\nBy the way... I would like to collaborate with spanish translate, but I don't know how can I help you.",
+      "PostedDate": "2013-09-24T03:26:20.95-07:00",
+      "Id": 115459
+    },
+    {
+      "Message": "To translate WPP into Spanish, it's easy. I can send you an Excel file with English string in one column and you put Spanish translation into the next column.\nOnce this is done, I will send you some *.resx files that you have to open with a tool call \"Windows Resource Localization Editor\", edit the \"Text\" propertie of buttons and labels and other controls. Then send me back these files.",
+      "PostedDate": "2013-09-24T13:01:19.6-07:00",
+      "Id": 115523
+    },
+    {
+      "Message": "I test the version you send me and it seems ok. No errors when click \"Update Creation Wizard\".\n\nThanks.",
+      "PostedDate": "2013-09-26T01:24:28.82-07:00",
+      "Id": 115696
+    },
+    {
+      "Message": "Ok, thanks. This validate changes that I made to fix this bug. Remember that this is a BETA release, I have start to make some modifications, and not finish. It can be unstable.\nUse the release v1.2.1307.15, which doesn't have this bug.",
+      "PostedDate": "2013-09-26T02:54:26.167-07:00",
+      "Id": 115703
+    }
+  ]
+}

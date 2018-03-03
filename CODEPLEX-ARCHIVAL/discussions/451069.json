@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1072300",
+    "ThreadId": "451069",
+    "Html": "Hi,\r<br />\n<br />\nI am able to package and Approve Acrobat Reader. It gets downloaded on the client, but does not install at the scheduled time. All other Microsoft patches get installed except Reader (so no issues with the policies).\r<br />\nIt gets installed when I manually click 'Install Updates' in Windows Update on the client. \r<br />\nI have tried packaging it as both Update and Package.<br />\n<h2>Not sure if I am doing anything wrong?</h2>\n2013-07-24\t09:38:29:107\t1068\t934\tAU\tSetting AU scheduled install time to 2013-07-24 09:00:00\r<br />\n2013-07-24\t09:38:34:119\t1068\t500\tReport\tREPORT EVENT: {A7A15E48-5902-42C7-8A5C-772D4DF7B0F9}\t2013-07-24 09:38:29:107+0100\t1\t147\t101\t{00000000-0000-0000-0000-000000000000}\t0\t0\tAutomaticUpdates\tSuccess\tSoftware Synchronization\tWindows Update Client successfully detected 1 updates.\r<br />\n2013-07-24\t09:38:34:119\t1068\t500\tReport\tREPORT EVENT: {93D0740B-4307-461B-8C72-0F383F1E19CF}\t2013-07-24 09:38:29:107+0100\t1\t156\t101\t{00000000-0000-0000-0000-000000000000}\t0\t0\tAutomaticUpdates\tSuccess\tPre-Deployment Check\tReporting client status.\r<br />\n2013-07-24\t09:38:34:119\t1068\t500\tReport\tCWERReporter finishing event handling. (00000000)\r<br />\n2013-07-24\t09:45:36:316\t1068\td70\tAU\tGetting featured update notifications.  fIncludeDismissed = true\r<br />\n2013-07-24\t09:45:36:316\t1068\td70\tAU\tNo featured updates available.\r<br />\n2013-07-24\t09:45:38:167\t1068\td70\tAU\tGetting featured update notifications.  fIncludeDismissed = true\r<br />\n2013-07-24\t09:45:38:167\t1068\td70\tAU\tNo featured updates available.\r<br />\n2013-07-24\t09:51:12:222\t1068\t500\tPT\tWARNING: Cached cookie has expired or new PID is available\r<br />\n2013-07-24\t09:51:12:222\t1068\t500\tPT\tInitializing simple targeting cookie, clientId = 7a5357d1-4e13-405b-a0ba-15ff23029497, target group = Test Workstations, DNS name = dt-vm2.test.com\r<br />\n2013-07-24\t09:51:12:222\t1068\t500\tPT\t  Server URL = <a href=\"http://wsus/SimpleAuthWebService/SimpleAuth.asmx\" rel=\"nofollow\">http://wsus/SimpleAuthWebService/SimpleAuth.asmx</a>\r<br />\n2013-07-24\t09:51:12:238\t1068\t500\tReport\tUploading 3 events using cached cookie, reporting URL = <a href=\"http://wsus/ReportingWebService/ReportingWebService.asmx\" rel=\"nofollow\">http://wsus/ReportingWebService/ReportingWebService.asmx</a>\r<br />\n2013-07-24\t09:51:12:253\t1068\t500\tReport\tReporter successfully uploaded 3 events.\r<br />\n2013-07-24\t09:53:25:541\t1068\t148\tAU\tAU received handle event\r<br />\n2013-07-24\t09:53:25:541\t1068\t148\tAU\tAU setting pending client directive to 'Install Approval'\r<br />\n2013-07-24\t09:53:40:547\t1068\t148\tAU\tWARNING: AU found no suitable session to launch client in\r<br />\n2013-07-24\t09:54:07:217\t1068\t148\tAU\tLaunched new AU client for directive 'Install Approval', session id = 0x2\r<br />\n2013-07-24\t10:00:10:065\t1068\t148\tAU\tForced install timer expired for scheduled install\r<br />\n2013-07-24\t10:00:10:096\t1068\t148\tAU\tUpdateDownloadProperties: 0 download(s) are still in progress.\r<br />\n2013-07-24\t10:00:10:096\t1068\t148\tAU\tSetting AU scheduled install time to 2013-07-25 09:00:00\r<br />\n2013-07-24\t10:05:49:033\t1068\t148\tAU\tAU setting next sqm report timeout to 2013-07-25 09:05:49\r<br />\n2013-07-24\t10:30:37:412\t1068\t148\tAU\tAU setting pending client directive to 'Install Approval'\r<br />\n2013-07-24\t10:30:37:568\t1068\t148\tAU\tAU received handle event\r<br />\n2013-07-24\t10:30:52:608\t1068\t148\tAU\tWARNING: AU found no suitable session to launch client in\r<br />\n2013-07-24\t10:31:09:467\t1068\t148\tAU\tWARNING: AU found no suitable session to launch client in\r<br />\n2013-07-24\t11:27:23:343\t1068\t148\tAU\t#############\r<br />\n2013-07-24\t11:27:23:343\t1068\t148\tAU\t## START ##  AU: Search for updates\r<br />\n2013-07-24\t11:27:23:343\t1068\t148\tAU\t#########\r<br />\n2013-07-24\t11:27:23:359\t1068\t148\tAU\t&lt;&lt;## SUBMITTED ## AU: Search for updates [CallId = {D6DFE1F0-C0E5-4C01-806C-A3D3D308025E}]\r<br />\n2013-07-24\t11:27:23:374\t1068\t1514\tAgent\t*************\r<br />\n2013-07-24\t11:27:23:374\t1068\t1514\tAgent\t** START **  Agent: Finding updates [CallerId = AutomaticUpdates]\r<br />\n2013-07-24\t11:27:23:374\t1068\t1514\tAgent\t*********\r<br />\n2013-07-24\t11:27:23:374\t1068\t1514\tAgent\t  * Online = Yes; Ignore download priority = No\r<br />\n2013-07-24\t11:27:23:374\t1068\t1514\tAgent\t  * Criteria = &quot;IsInstalled=0 and DeploymentAction='Installation' or IsPresent=1 and DeploymentAction='Uninstallation' or IsInstalled=1 and DeploymentAction='Installation' and RebootRequired=1 or IsInstalled=0 and DeploymentAction='Uninstallation' and RebootRequired=1&quot;\r<br />\n2013-07-24\t11:27:23:374\t1068\t1514\tAgent\t  * ServiceID = {3DA21691-E39D-4DA6-8A4B-B43877BCB1B7} Managed\r<br />\n2013-07-24\t11:27:23:374\t1068\t1514\tAgent\t  * Search Scope = {Machine}\r<br />\n2013-07-24\t11:27:23:577\t1068\t1514\tSetup\tChecking for agent SelfUpdate<br />\n<h2>2013-07-24\t11:27:23:593\t1068\t1514\tSetup\tClient version: Core: 7.6.7600.256  Aux: 7.6.7600.256</h2>\n",
+    "PostedDate": "2013-07-24T07:24:25.1-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1072680",
+    "ThreadId": "451069",
+    "Html": "looks like a bug in Version 1.2.1307.1. Any possibility of a fix?\r<br />\nThanks,\r<br />\nVinod.<br />\n",
+    "PostedDate": "2013-07-25T03:24:33.863-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1076538",
+    "ThreadId": "451069",
+    "Html": "Hello VinodReddy,\r<br />\n<br />\nWhat is the AU agent policy ? Download and install everyday at 09:00:00 ?\r<br />\nWhen you have publish the update, does the checkbox &quot;Can request user input&quot; checked ?<br />\n",
+    "PostedDate": "2013-08-04T15:31:24.27-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1076721",
+    "ThreadId": "451069",
+    "Html": "Hi,\r<br />\n<br />\nI have tried different times as I was testing.\r<br />\nTried &quot;Can request user input&quot; checked and unchecked. The package gets downloaded to the client computer but does not get installed at the scheduled time nor gets the option 'Install updates and shutdown'.\r<br />\nIt works fine when I publish using Local Update Publisher. But I like WSUS-PP interface. Check box remains uncheck when publishing package using LUP.\r<br />\nSo currently publishing using LUP and managing using WSUS-PP.<br />\n",
+    "PostedDate": "2013-08-05T03:56:27.223-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1076732",
+    "ThreadId": "451069",
+    "Html": "I don't think that the problem lie in WPP. WPP doesn't interact with scheduled install or AU Agent Policy.<br />\n<ul>\n<li>Can you try with an oldest release (v1.2.1306.16  for example) ?</li>\n<li>\nDoes this occur on one computer or several ?<br />\n</li>\n</ul>\nThe log show : <br />\n<ul>\n<li>2013-07-24 <strong>09:38:29</strong>:107 1068 934 AU Setting AU scheduled install time to 2013-07-24 <strong>09:00:00</strong> </li>\n<li>2013-07-24 <strong>10:00:10</strong>:065 1068 148 AU Forced install timer expired for scheduled install <br />\nand </li>\n<li>\n2013-07-24 10:00:10:096 1068 148 AU Setting AU scheduled install time to <strong>2013-07-25 09:00:00</strong> <br />\n</li>\n</ul>\nIs it possible that the client detect the update, but take a long time to download it and the installation time is past when finish to download it ? Do you have a BITS policy to restrict the used bandwidth ?<br />\n<br />\nIn the WPP interface, does the status of the update is &quot;Not installed&quot; or &quot;Downloaded&quot; ?<br />\n",
+    "PostedDate": "2013-08-05T04:28:00.727-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1079406",
+    "ThreadId": "451069",
+    "Html": "Hi VinnoReddy, do you have solved this issue ?<br />\n",
+    "PostedDate": "2013-08-11T22:03:39.907-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:39:51.097-07:00"
+  }
+]

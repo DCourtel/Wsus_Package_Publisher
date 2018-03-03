@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "1438147",
+    "ThreadId": "642574",
+    "Html": "Hi guys,\r<br />\n<br />\nWhen deploying a new update, how can I validate this new version on a test group computers since this group have the previous version already approved  ? If the two versions are approved it runs into some kind of conflict. Do I have to unapproved the previous version first ?\r<br />\n<br />\nThanks\r<br />\n<br />\nChris<br />\n",
+    "PostedDate": "2015-08-11T08:00:32.103-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1438160",
+    "ThreadId": "642574",
+    "Html": "You can either :<br />\n<ul>\n<li>Decline the first update</li>\n<li>Declare the old update as superseded by the new one</li>\n<li>Change the &quot;IsInstallable&quot; rules of the old and new update.</li>\n</ul>\n",
+    "PostedDate": "2015-08-11T09:03:59.533-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1438241",
+    "ThreadId": "642574",
+    "Html": "If I declare the old update as superseded by the new one, the new update will be automatically approved for all computers groups, won't it ?<br />\n",
+    "PostedDate": "2015-08-12T00:17:49.767-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1438246",
+    "ThreadId": "642574",
+    "Html": "No, supersede and approvals are two separate things.<br />\n",
+    "PostedDate": "2015-08-12T01:23:29.737-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1438254",
+    "ThreadId": "642574",
+    "Html": "Okay, one more question please : after approving the new update and declaring superseding the previous one, do I have to declare not approve the superseded update ?<br />\n",
+    "PostedDate": "2015-08-12T02:31:05.457-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1438268",
+    "ThreadId": "642574",
+    "Html": "That depends, if the old update is superseded by the new one in all computers group, then the old update is useless, and you can decline it.<br />\n",
+    "PostedDate": "2015-08-12T03:22:33.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1438270",
+    "ThreadId": "642574",
+    "Html": "But if I leave the old one approved there won't be any conflict between the new one and the old one approved on the same computer group ? Some kind of flapping, installing the old one then the new one then the old one ...<br />\n",
+    "PostedDate": "2015-08-12T03:26:41.467-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1438319",
+    "ThreadId": "642574",
+    "Html": "Why don't you test this in a test group ? Put your computer in this test group, approve boh superseding and superseded update into this group and see what happen<br />\n",
+    "PostedDate": "2015-08-12T10:08:25.823-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1440844",
+    "ThreadId": "642574",
+    "Html": "If I leave the new and previous version approved, the latter one is declared &quot;not applicable&quot;. \r<br />\n<br />\nNow, I don't know if this will be the same for all news updates of any packages I will deploy.<br />\n",
+    "PostedDate": "2015-08-17T07:14:15.657-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1440890",
+    "ThreadId": "642574",
+    "Html": "Hi,\r<br />\n<br />\nwhy should there be a difference for any other packages? If the new updates supersedes any previous updates, the previous updates are always not applicable, <strong>because</strong> they are superseded by the new update. Makes sense? ;)\r<br />\nYou can keep them as history or for fallback cases, but you can also delete them to get free space.\r<br />\n<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2015-08-17T16:33:52.73-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

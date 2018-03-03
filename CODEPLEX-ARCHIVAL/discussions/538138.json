@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1219832",
+    "ThreadId": "538138",
+    "Html": "Hello\r<br />\nI am doing a package of Flash Player Active X and I don't want that that update appears in clients with Windows 8. When I create the update in WPP, in rules I add a new rule - windows version - less than 8. I publish the update and IT STILL APPEARS in clients with Windows 8. What am i doing wrong? Should I active &quot;reverse rule&quot; or &quot;delete rule from package level&quot; in one case?\r<br />\n<br />\nThanks in advanced<br />\n",
+    "PostedDate": "2014-03-06T04:27:21.58-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1220056",
+    "ThreadId": "538138",
+    "Html": "If you publish AdobeFlashPlayer.MSI, you need to know that these files came with their own rules. So if you want to make your own rules, you need to active the option &quot;Delete rule at package level&quot;.<br />\n",
+    "PostedDate": "2014-03-06T13:11:27.697-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221871",
+    "ThreadId": "538138",
+    "Html": "Its working! The problem is solved! Thanks<br />\n",
+    "PostedDate": "2014-03-12T07:21:16.237-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-03-12T08:28:10.043-07:00"
+  }
+]

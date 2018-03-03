@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1079315",
+    "ThreadId": "453096",
+    "Html": "Hello,\r<br />\n<br />\ngot some trouble:\r<br />\n<br />\nhave domain, GPO, limited rights for user. The trouble is: original updates by MS are installing properly in time and rules set by GPO; updates created by WPP loaded properly, but they not installing automatically in background when users working, and they even do not try to install, according to logs. Only when admin is logged, these updates install.\r<br />\n<br />\nWhat i'm missing?<br />\n",
+    "PostedDate": "2013-08-11T13:23:33.913-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1079321",
+    "ThreadId": "453096",
+    "Html": "Hi ffs2201, <br />\n<ul>\n<li>What happen if you try to install at shutdown ?</li>\n<li>Have you check the checkBox &quot;Can Request User Input&quot; ? If yes, try without.</li>\n</ul>\n",
+    "PostedDate": "2013-08-11T14:12:00.49-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1079407",
+    "ThreadId": "453096",
+    "Html": "What is the status of the update on the server : 'Not Installed' or 'Downloaded' ?<br />\n",
+    "PostedDate": "2013-08-11T22:04:59.577-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1079432",
+    "ThreadId": "453096",
+    "Html": "Yes, right, there was some problem with one of msi's, without &quot;Can Request User Input&quot; it was not installing.\r<br />\nI'll test it and write.\r<br />\n<br />\nThank you for fast answer!<br />\n",
+    "PostedDate": "2013-08-12T00:23:40.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1080003",
+    "ThreadId": "453096",
+    "Html": "Can you tell me the name the application you try to deploy ?\r<br />\n<br />\nThanks.<br />\n",
+    "PostedDate": "2013-08-13T03:10:39.543-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1080009",
+    "ThreadId": "453096",
+    "Html": "Looks like it's OK now with all packages (i'm deploying now both Flash players, Adobe Reader, Firefox, 7zip), except Java 7.25 that i haven't tested yet.\r<br />\nAnd now i think i remember that Java was actually distributive that doesn't install without &quot;can request user input&quot; checkbox.\r<br />\nThen i found somewhere advise to use this checkbox, and looks like checked it everywhere without thinking )\r<br />\n<br />\nAnyway, i'll test Java again and then write here.\r<br />\n<br />\nThanks for this soft, really great job!<br />\n",
+    "PostedDate": "2013-08-13T03:26:54.06-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1080032",
+    "ThreadId": "453096",
+    "Html": "Java is istalling now, but:<br />\n<ol>\n<li>First time it was another computer</li>\n<li>\nJava installs properly but Java.cpl is not working (unhandled exception)<br />\n</li>\n</ol>\nLooks like problem is in Java's previous versions and types of installations on local computer.<br />\nMaybe it'll be better to remove all Java installations on all mashines before starting deploying Java.<br />\n<br />\nThanks for help!<br />\n",
+    "PostedDate": "2013-08-13T04:27:33.103-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:26:19.197-07:00"
+  }
+]

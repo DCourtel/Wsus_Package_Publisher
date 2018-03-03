@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Approval Form",
+      "DisplayName": "Approval Form"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:52.963-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "On smaller screen sizes (such as an RDP session from within another RDP session) the bottom portion of the Update Approval box is off the screen. There's an extra step then of maximizing or carefully resizing its window. The window initially should fit the screen size.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1603.29",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-06-13T08:14:25.083-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Update Approval box initially appears too big",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 3,
+    "Id": 342
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "__To the developer(s):__\nThis can be easily done by adding the following code to the form's \"Load\" event:\n```\nSystem.Drawing.Rectangle screenWorkingArea = Screen.FromControl(this).WorkingArea;\n\nif (screenWorkingArea.Height < this.Height)\n     this.Height = screenWorkingArea.Height;\nif (screenWorkingArea.Width < this.Width)\n    this.Width = screenWorkingArea.Width;\n```\nIt gets the working area of the screen (basically screen dimensions minus the taskbar/docked applications) that the form is displayed in (useful for multiple displays).\nIf the form's width or height are larger than the screen's on load, it'll resize to fit.",
+      "PostedDate": "2016-06-21T21:33:29.96-07:00",
+      "Id": 200219
+    },
+    {
+      "Message": "The form now resize itself accordingly to the content.",
+      "PostedDate": "2017-01-27T12:31:15.037-08:00",
+      "Id": 206274
+    }
+  ]
+}

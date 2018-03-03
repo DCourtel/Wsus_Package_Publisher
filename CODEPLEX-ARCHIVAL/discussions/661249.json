@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1492440",
+    "ThreadId": "661249",
+    "Html": "How Do i Run a Batch File Using WPP?<br />\n<br />\nSeems in custom updates there are only two options:  powershell and vbs.  I'd rather not reinvent the wheel.   I have a current batch script that customized a java install adding exception sites and adjusting security.  Is there a way to use the existing batch file?<br />\n<br />\nThanks!<br />\n",
+    "PostedDate": "2017-02-09T09:49:33.383-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1492544",
+    "ThreadId": "661249",
+    "Html": "Last time i try to create a custom update, i can create a custom update with a batch. \r<br />\n<br />\nYou can write the exception sites in a file and publish the file with Group Policy Preferences to the clients. It is easier for me then creating a custom update.<br />\n",
+    "PostedDate": "2017-02-12T07:24:26.207-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1492739",
+    "ThreadId": "661249",
+    "Html": "You should be able to use the &quot;able to execute a file...&quot; option for a custom update. Refer to this post: <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/584416\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/584416</a>. I used this method to push our Java 8 updates to a few of our client machines and the batch script runs fine.<br />\n",
+    "PostedDate": "2017-02-15T13:10:04.307-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

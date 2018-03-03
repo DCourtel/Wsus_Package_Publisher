@@ -1,0 +1,105 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-08-04T07:20:49.89-07:00",
+    "CommentCount": 13,
+    "Custom": null,
+    "Description": "Source Code is a year old and not up to date with current releases.  Please update.\r\n\r\nI saw a discussion about this, and your mention of GIT not being easy. However GIT is fairly easy to use, especially if you are using Visual Studio 2012 with the Microsoft GIT extension or Visual Studio 2013 with GIT built in. No command line required any more there are tons of GUI clients.  \r\n\r\nIf you are not a fan of GIT see if you can convert your project to TFS or Mercurial, GIT is not a requirement for using CodePlex, as a mater of fact GIT on CodePlex is kind of crappy, if you want to use GIT with an opensource project I would recommend GitHub.  TFS is the best source control for CodePlex if you are going to use Visual Studio as your development environment, as it will just work.\r\n\r\nAnyway, in order to be an open source hosted project on CodePlex you really need to keep the source in sync with what is being released. ",
+    "LastUpdatedDate": "2015-08-04T15:29:42.19-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-12-04T10:09:43.063-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "Source Code Out of Date",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 19,
+    "Id": 162
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I'm using Visual Studio 2010, and I don't have plan to move on Visual Studio 2012 or 2013.\nI'm not sure that TFS work with VS 2010.",
+      "PostedDate": "2013-12-04T12:01:02.64-08:00",
+      "Id": 126128
+    },
+    {
+      "Message": "That doesn't really address getting the source up to date in your project.\n\nHowever, VS 2010 has GIT Extensions, and it supports TFS out of the box. All VS going back to 2005 have supported TFS with an provider added and 2010 it was built in.\n\nI don't understand why you are not checking in the code, I assume you are using source control for development and you have this repository to use, why not just make this your main and only source repository.  If you are not using source control on a regular basis I highly recommend it, and you have one for free right here to use.",
+      "PostedDate": "2013-12-04T12:49:19.123-08:00",
+      "Id": 126134
+    },
+    {
+      "Message": "Here is a good working GIT Extension for VS 2010 that I have used in the past prior to using the Microsoft one that started with 2012 and higher.\n\nhttp://visualstudiogallery.msdn.microsoft.com/63a7e40d-4d71-4fbb-a23b-d262124b8f4c\n",
+      "PostedDate": "2013-12-04T12:56:56.483-08:00",
+      "Id": 126137
+    },
+    {
+      "Message": "Also if you don't like GIT and don't want to use the source control provided by CodePlex you could just attach the source for each release as a download within the download release.",
+      "PostedDate": "2013-12-04T12:59:30.363-08:00",
+      "Id": 126138
+    },
+    {
+      "Message": "@DCourtel Any progress on this issue?",
+      "PostedDate": "2013-12-10T12:22:17.787-08:00",
+      "Id": 126874
+    },
+    {
+      "Message": "Here's a step by step blog post on how to use Codeplex source control with Visual Studio 2010:\nhttp://lajak.wordpress.com/2011/02/10/how-to-use-team-explorer-with-codeplex/",
+      "PostedDate": "2014-02-13T10:23:56.39-08:00",
+      "Id": 133507
+    },
+    {
+      "Message": "Would love for the source code to be updated so I can help fix a bug or two when I've got a minute. \nSuch as the multiple vendors in a single catalog bug.\nI really need to get this fixed as I've just spent $250 on a catalog I can't use for our company which has over 150 machines and I bet the fix is rather simple if I could just access the code.",
+      "PostedDate": "2014-03-20T01:48:32.703-07:00",
+      "Id": 137416
+    },
+    {
+      "Message": "I'd love taking a stab making it easier to apply catalog updates. As it stands, the process is painful if you just want to synchronize what's new, or what applies to your network.",
+      "PostedDate": "2014-06-06T08:06:42.913-07:00",
+      "Id": 149058
+    },
+    {
+      "Message": "Can this issue please get resolved soon so that I can more easily troubleshoot issues?",
+      "PostedDate": "2015-01-30T13:07:08.617-08:00",
+      "Id": 171232
+    },
+    {
+      "Message": "Another user that would really appreciate the source being released.   Making the source available and allowing other users to contribute could certainly help the project.\n\nIf nothing else, when you make a release, zip the source up and upload it to codeplex as well.   At least then users can view/modify the source of the version they are running.\n\nThanks",
+      "PostedDate": "2015-04-01T13:08:28.437-07:00",
+      "Id": 180704
+    },
+    {
+      "Message": "@DCourtel you closed without any comment, does this mean you have updated the source to latest and plan to keep it up to dated? or Are you just closing it hoping to put an end to the issue?  \n\nIts always nice to add comments as to why an issue is being closed, especially one that has been open a while with lots of comments. :)",
+      "PostedDate": "2015-08-04T08:53:06.99-07:00",
+      "Id": 188027
+    },
+    {
+      "Message": "I'd say he updated the source code\nhttp://wsuspackagepublisher.codeplex.com/SourceControl/list/changesets\n\nBye\nNorbert",
+      "PostedDate": "2015-08-04T10:36:28.037-07:00",
+      "Id": 188033
+    },
+    {
+      "Message": "@NorbertFe I saw that, but its the principle of proper issue tracking, you don't just close out an issue without stating why its closed.  It was just closed as Task Completed. Task Completed could mean the task was to end the conversation.  I would hope you could associate a commit with an issue so they are linked as well, if not placing the commit or link to the commit in the comment when closing would be appreciated.",
+      "PostedDate": "2015-08-04T15:29:42.19-07:00",
+      "Id": 188041
+    }
+  ]
+}

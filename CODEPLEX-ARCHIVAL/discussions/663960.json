@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1498398",
+    "ThreadId": "663960",
+    "Html": "Bonjour,\r<br />\n<br />\nJe rencontre un problème avec la création d'un package.\r<br />\n<br />\nJ'avais préparer deux packages d'installation pour MS Office 2010 Pro avec des configurations spéciales.\r<br />\n<br />\nNe trouvant plus ces packages dans la liste, j'ai voulu les créer une nouvelle fois. Une fois créé, il apparaissait bien dans WPP et en voulant corriger le product name comme pour les anciens package, il a disparu de WPP.\r<br />\n<br />\nEn analysant un peu, je trouve dans la console WSUS un des deux packages que j'avais créé au tout début. \r<br />\nJe pense que suite à une mauvaise manipulation, j'ai dû rendre obsolète le premier package par le second, ce qui fait que je les vois dans la console mais celui qui est rendu obsolète je ne peux plus le réactiver.\r<br />\n<br />\nJe ne sais pas si j'ai réussi à me faire comprendre :-)\r<br />\n<br />\nEn vous remerciant d'avance pour votre aide.\r<br />\n<br />\nDavide<br />\n",
+    "PostedDate": "2017-11-14T01:11:43.627-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

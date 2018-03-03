@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:08.16-08:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Hello guys,\r\n\r\nI just set up a new WSUS Server (2008R2 Datacenter) and now I am testing the WSUS Package Publisher. During first tests with Windows 7 Prof x64 clients there where nearly no problems. The only problem that occurred was while trying to use the package publisher for a windows 10 client (which isn't that astonishing as windows 10 isn't supported until now ;) ). \r\nThen I tried to test the same on a windows 8.1 (x64) client. At first there were no updates found (got some error message). After a while (maybe the error occurred in terms of the wsus switching so the database had to be \"rebuild\"?) the client found the published packages (Chrome, Java, 7zip, Flash Player, Adobe Reader). It was possible to install Chrome but all other packages failed. If I now search for updates and restart to install them, the process is hanging up at 99% and doesn't do anything...\r\n\r\nIs there anyone who had the same problem or has an idea to fix it?\r\n\r\nWhat I tried until now: \r\n1) Several reboots\r\n2) Waiting 2 days\r\n3) Deleting whole software Distribution folder / rebuilding Windows Update database\r\n",
+    "LastUpdatedDate": "2017-02-03T11:50:08.16-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-11-06T02:33:04.717-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Windows 8.1 - Update stops at 99%",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 307
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi,\n\nsame here.\nWindows Server 2008 r2, Wsus distibutes normal updates to Win8.1, but when I publish my own Packet it stops at 99%.\nThe same packets are working for win7 client since a year. I hope someone has a solution.\n\nkeep up the great work\n\n\nRelease: 1.3.1508.8\nServerversion: 3.2.7600.274",
+      "PostedDate": "2015-11-06T05:45:43.747-08:00",
+      "Id": 193312
+    },
+    {
+      "Message": "Does these package are «Custom updates» or «Normal updates» ?",
+      "PostedDate": "2015-11-10T12:10:18.383-08:00",
+      "Id": 193406
+    },
+    {
+      "Message": "most are normal updates, but i also have one new custom update for java.\nshould i delete it?",
+      "PostedDate": "2015-11-11T02:10:41.937-08:00",
+      "Id": 193428
+    },
+    {
+      "Message": "in my case all of them are \"normal updates\".",
+      "PostedDate": "2015-11-11T22:08:06.247-08:00",
+      "Id": 193506
+    }
+  ]
+}

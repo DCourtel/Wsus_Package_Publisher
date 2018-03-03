@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:07.94-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "I am having an issue where i cannot delete updates from the WPP console, once they have been approved or revised. When I remove the approval for all groups and then attempt to delete the update, I am receiving an \"spDeleteRevision: cannot delete revisionid: ##### because it is still deployed to a Non DSS target group\" error message.\r\n\r\nAny help would be appreciated.",
+    "LastUpdatedDate": "2017-02-03T11:50:07.94-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-08-25T08:36:19.863-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Cannot Delete Updates after Revise or Approval",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 289
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1480604,
+      "FileName": "WPP_delete_update_issue.png",
+      "DownloadUrl": ".\\1480604"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Try to expire or decline the update before deleting it.",
+      "PostedDate": "2015-08-25T10:19:45.083-07:00",
+      "Id": 189562
+    }
+  ]
+}

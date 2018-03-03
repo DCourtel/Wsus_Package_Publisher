@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1493537",
+    "ThreadId": "661696",
+    "Html": "Hi there,\r<br />\n<br />\nI'm testing your solution. Currently i'm working with GPO ans MSI + MST.\r<br />\nI would like to upgrade Firefox, Acrobat, LibreOffice with my Wsus.\r<br />\nI have some questions with the Wsus removal.\r<br />\n<br />\nWith Firefox (Frontmotion version) for example. I create a package its okay. Sometimes frontmotion leak msi package. How can i delete it with Wsus ? I have tested with the last version 51.0.1 (All is okay in), install is just perfect. But if i tag it for removal + deadline, i haven't anything on my client; It's just saying that the computer is up to date.\r<br />\n<br />\nHow can i setup this ? \r<br />\n<br />\nAnother question, acrobat reader msi are completly broken with the last version. What is the best pratice to push the last msp for existing install, and a complete installation for new computer ?\r<br />\n<br />\nThanks for your help<br />\n",
+    "PostedDate": "2017-03-03T07:21:12.98-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1493582",
+    "ThreadId": "661696",
+    "Html": "Hi, for the first question : <br />\n<ul>\n<li>\nBe aware that approve for removals are broken on Windows 10 computers. Microsoft is aware of that. Expect a bug fix.<br />\n</li>\n</ul>\nFor the second question :<br />\n<ul>\n<li>MSP files have these own applicable rules. So they should apply only on computers where they are needed. So you can approve them on all computers</li>\n<li>To install a software on computer where the soft is not installed, simply set a rule to detect where the soft is not installed and approve for installation on that computers</li>\n</ul>\n",
+    "PostedDate": "2017-03-04T07:26:02.527-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2017-03-08T06:39:12.863-08:00"
+  },
+  {
+    "Id": "1493709",
+    "ThreadId": "661696",
+    "Html": "Hi DCourtel,<br />\n<br />\nThanks for your answer.<br />\n<br />\nFor the first question, you're right my test was on a windows 10. I will trying this with a seven too.<br />\n<br />\nFor the second, so the msp can undo mst patch applied before. Hmm okay.<br />\n<br />\nThanks for your help !<br />\n",
+    "PostedDate": "2017-03-07T05:48:04.453-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

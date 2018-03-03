@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1445942",
+    "ThreadId": "645477",
+    "Html": "Has anyone been successful installing .NET Framework 4.6?\r<br />\n<br />\nNo matter what I do I can't seem to get it to install properly.  (Use normal updates,  custom updates, etc. )<br />\n",
+    "PostedDate": "2015-09-25T11:53:43.703-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1449031",
+    "ThreadId": "645477",
+    "Html": ".NET. Hm. Interesting question. Never test it before.\r<br />\n<br />\nbecause WPP need and use WSUS, why not deploy directly  with WSUS?\r<br />\n<br />\nWe need more information, error codes and so on.<br />\n",
+    "PostedDate": "2015-10-19T07:04:35.687-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

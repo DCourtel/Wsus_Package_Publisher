@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-11T22:27:54.163-08:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nthis software looks so good an i would like to use it. But it does not work. I have a new fresh test environment with a Windows 2012 Server with WSUS as an DC an two Clients (Windows 7 and Windows 8). Everything is up to date an WSUS itself works. All systems are x64. I use WPP an the server and published Acrobat Reader with updates to the Win7-Client. \r\n \r\nAfter tha, i tried to use Custom Updates to distribute Java, but this does not work at all. I had so much trouble to create the customer update, because everytime the wizard hang with no response. I have to logout, to start the customer update wizard again. Once i was able to configure an distribute a customer update, but the installation was not possbile on the clients (Win7 and Win8). The updateclients recognized the update and can download ist, but after that i get an error with code 643 or 0x80070643. .NET 3.5 shoud be active on both clients. \r\n\r\nHow can i find out, what is missing or wrong? Is there a possibility to execute customerupdateengine.exe on the client to install the update without the use of windows update?\r\n\r\nWhen i have so much trouble to get this solution to work, is there anybody using it in a productiv environment with WSUS on Windows 2012 an Win7 and Win8-Clients (x64)?\r\n\r\n\r\nMaybe somebody can help me, thank you.\r\n\r\nBy",
+    "LastUpdatedDate": "2015-11-11T22:27:54.163-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-01-24T22:32:44.497-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Customer Updates not working",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 246
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Yes, you can test updates before making the package all the way. There's an XML file created in a folder in %temp%\\WPP when you create a custom update using the wizard. You use this file with CustomUpdateEngine.exe from the WPP directory where you unzipped WPP, use the command line \"customupdateengine.exe \\actionfile=[filename].xml\", along with all the files that are to be included in the update.\n\nYou can edit the XML file using your favorite XML editor (there's not yet a way to save for later/open/edit existing custom updates within WPP, but editing the XML is good for correcting minor mistakes in a nearly correct file) and package the update as a normal update with CustomUpdateEngine.exe as the executable file and the XML file and update files as additional files, with \"\\actionfile=[filename].xml\" as the installation command line parameter in the update metadata.\n\nI tend to sidestep the custom update engine almost entirely and just use it to launch a vbscript to install the updates, as you'll have much more flexibility with a script. I've saved an XML file that executes install.vbs and returns the exit code as the return code. The reason this must be done is because an executable or MSI must be included in the patch, as that's how Windows Update works. Using customupdateengine allows us to include an executable that can be customized with an XML file to accomplish customizations without having to compile our own executables for distribution.",
+      "PostedDate": "2015-01-26T06:35:20.98-08:00",
+      "Id": 170794
+    },
+    {
+      "Message": "Oh, and make sure you run customupdateengine from an elevated command prompt. The log file for customupdateengine.exe is stored in %windir%\\temp",
+      "PostedDate": "2015-01-26T06:53:53.503-08:00",
+      "Id": 170797
+    },
+    {
+      "Message": "Thank you, austianian, very much.\n\nI tested a paket by copying the cap-File to the client, extracted it with 7-zip to a folder, started an cmd, went into the folder an started the execution with \"customupdateengine.exe \\actionfile=[filename].xml\", thats speeds up testing.\n\nI started the execution as an Domain-Administrator on an Windows 7-Domainclient an found the logfile in the %temp%-Folder of the user (Domain\\Administrator)\n\nMaybe somebody can help me with the execution of the program customerupdateengine.exe. It still hangs so often. I have to kill the process. When i start it again, i have the same trouble. After a while it works again. Does anybody have the same experiences? ",
+      "PostedDate": "2015-02-10T13:29:12.103-08:00",
+      "Id": 174364
+    },
+    {
+      "Message": "When CustomUpdateEngine hangs, look into the debug file inthe %temp% folder. \nYou will see what going wrong.",
+      "PostedDate": "2015-02-14T11:52:59.563-08:00",
+      "Id": 174602
+    }
+  ]
+}

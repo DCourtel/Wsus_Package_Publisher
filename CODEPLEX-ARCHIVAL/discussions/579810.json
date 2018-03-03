@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1350293",
+    "ThreadId": "579810",
+    "Html": "Hi,<br />\n<br />\nI have pushed some updates via WPP but most of the clients are not installing them and the computer receives a Windows Update error code 800B0004.<br />\n<br />\nFor example.. I have pushed an msi file of Adobe Reader on my WSUS server with WPP and the client receives the update. After downloading, the file wont be installed. However, there are some clients that are installing these updates with no problem. <br />\n<ul>\n<li>.Net framework 4.0 is installed.</li>\n<li>\nClient has received the WSUS self-signed certifcate threw GPO<br />\n</li>\n</ul>\nI checked in event viewer but I don't see alot of details about the error. Does anyone know where I can find more information about this error and how I can solve this?<br />\n",
+    "PostedDate": "2015-02-09T07:46:41.057-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1350412",
+    "ThreadId": "579810",
+    "Html": "hi,<br />\n<blockquote>\nthe computer receives a Windows Update error code 800B0004.<br />\n</blockquote>\nThis code mean : &quot;The subject is not trusted for the specified action.&quot;\r<br />\n<br />\nYou certainly have a problem with your certificate.<br />\n<blockquote>\nI checked in event viewer but I don't see alot of details about the error. Does anyone know where I can find more information about this error<br />\n</blockquote>\nYou should look at C:\\Windows\\WindowsUpdate.log<br />\n",
+    "PostedDate": "2015-02-09T14:36:41.67-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1350555",
+    "ThreadId": "579810",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nhi,<br />\n<blockquote>\nthe computer receives a Windows Update error code 800B0004.<br />\n</blockquote>\nThis code mean : &quot;The subject is not trusted for the specified action.&quot;<br />\n<br />\nYou certainly have a problem with your certificate.<br />\n<blockquote>\nI checked in event viewer but I don't see alot of details about the error. Does anyone know where I can find more information about this error<br />\n</blockquote>\nYou should look at C:\\Windows\\WindowsUpdate.log<br />\n</blockquote>\n015-02-10\t11:43:09:067\t 764\t968\tAgent\t**  END  **  Agent: Downloading updates [CallerId = AutomaticUpdatesWuApp]\r<br />\n2015-02-10\t11:43:09:067\t 764\t968\tAgent\t*************\r<br />\n2015-02-10\t11:43:13:866\t 764\t968\tReport\tCWERReporter finishing event handling. (00000000)\r<br />\n2015-02-10\t11:43:21:922\t 764\tc90\tDnldMgr\tBITS job {59DBEAF3-F977-408B-BC57-41D8A3E98AE4} completed successfully\r<br />\n2015-02-10\t11:43:22:031\t 764\tc90\tMisc\tValidating signature for C:\\windows\\SoftwareDistribution\\Download\\f4ce6d7617e96602e3737727eb5864f6\\9adff049-8616-4d5a-9775-9546baafe678_1.cab with dwProvFlags 0x00000080:\r<br />\n2015-02-10\t11:43:22:124\t 764\tc90\tMisc\t Microsoft signed: No\r<br />\n2015-02-10\t11:43:22:124\t 764\tc90\tMisc\tTrusted Publisher: No\r<br />\n2015-02-10\t11:43:22:124\t 764\tc90\tMisc\tWARNING: Digital Signatures on file C:\\windows\\SoftwareDistribution\\Download\\f4ce6d7617e96602e3737727eb5864f6\\9adff049-8616-4d5a-9775-9546baafe678_1.cab are not trusted: Error 0x800b0004\r<br />\n2015-02-10\t11:43:22:124\t 764\tc90\tDnldMgr\tWARNING: VerifyFileTrust on file C:\\windows\\SoftwareDistribution\\Download\\f4ce6d7617e96602e3737727eb5864f6\\9adff049-8616-4d5a-9775-9546baafe678_1.cab failed with hr = 800b0004.\r<br />\n2015-02-10\t11:43:22:124\t 764\tc90\tDnldMgr\tWARNING: File failed postprocessing, error = 800b0004\r<br />\n2015-02-10\t11:43:22:124\t 764\tc90\tDnldMgr\tFailed file: URL = '<a href=\"http://wsus.qi.lan/Content/F9/A7A706B6CAF01FAC9E8F8254E97596EFDD29A3F9.cab\" rel=\"nofollow\">http://wsus.qi.lan/Content/F9/A7A706B6CAF01FAC9E8F8254E97596EFDD29A3F9.cab</a>', Local path = 'C:\\windows\\SoftwareDistribution\\Download\\f4ce6d7617e96602e3737727eb5864f6\\9adff049-8616-4d5a-9775-9546baafe678_1.cab'\r<br />\n2015-02-10\t11:43:22:124\t 764\tc90\tDnldMgr\tError 0x800b0004 occurred while downloading update; notifying dependent calls.\r<br />\n2015-02-10\t11:43:22:171\t 764\teb0\tAU\t&gt;&gt;##  RESUMED  ## AU: Download update [UpdateId = {9660E38B-F374-4AE9-BD5C-66095EEC7758}]\r<br />\n2015-02-10\t11:43:22:171\t 764\teb0\tAU\t  # WARNING: Download failed, error = 0x800B0004\r<br />\n2015-02-10\t11:43:22:171\t 764\teb0\tAU\t#########\r<br />\n2015-02-10\t11:43:22:171\t 764\teb0\tAU\t##  END  ##  AU: Download updates<br />\n",
+    "PostedDate": "2015-02-10T02:49:20.847-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1350557",
+    "ThreadId": "579810",
+    "Html": "It looks like a certificate problem indeed. Could you tell me what went wrong because the certificate is pushed to every client and I have checked this. And why is it working on some clients?<br />\n",
+    "PostedDate": "2015-02-10T02:51:38.78-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1352666",
+    "ThreadId": "579810",
+    "Html": "Check that the certificate is on right store (computer store).\r<br />\nIf you use a self-signed cert, the same cert must be in &quot;trusted Publisher&quot; and &quot;trusted root cert authorities&quot;\r<br />\nif you use your own cert, the code-signing cert must be in the &quot;trusted Publisher&quot; and the cert of your authority must be in the &quot;trusted root cert auth&quot;.<br />\n",
+    "PostedDate": "2015-02-14T12:46:41.787-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

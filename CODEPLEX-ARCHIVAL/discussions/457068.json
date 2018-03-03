@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1093167",
+    "ThreadId": "457068",
+    "Html": "I keep getting the following error when trying to connect to the local server - It was working, and now... it is not!\r<br />\n<br />\n&quot;Connection failed :\r<br />\nThe underlying connection was closed: An unexpected error occurred on a send.&quot;\r<br />\n<br />\nServer is set-up as a local server, port 8530, no SSL... clients can connect to get updates using these settings, so not sure what I am doing wrong, or what has changed.  I followed the steps to create a code signing certificate, then copied the WPP files to the server (Windows 2012, WSUS 6.2), ran the app and now all I get are these errors... I have tried to 'fix' .NET using the downloadable troubleshooter from MS as the only thing I can think that has changed is that I installed .NET 3.5 (as 2.0 was required for another function) but I can;t be sure whether it was working after this or not.\r<br />\n<br />\nAny ideas?? All suggestions gratefully received...<br />\n",
+    "PostedDate": "2013-09-16T08:50:32.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1093294",
+    "ThreadId": "457068",
+    "Html": "When does this happen ? When you click on &quot;Connect&quot; or after ?\r<br />\nTry to connect, after the error message, go to 'Help' -&gt; 'Send debug info' and click on 'Yes'\r<br />\n<br />\nWhat happen if you try to launch the Wsus Admin Console (wsus.msc)\r<br />\nAny usefull informations in Windows Log ?<br />\n",
+    "PostedDate": "2013-09-16T13:13:29.247-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1093431",
+    "ThreadId": "457068",
+    "Html": "Thanks for the reply, I have sent the debug info as requested and added this discussion number in the comments.  The problem occurs when trying to connect, but only when ticking the 'connect to local server' box in the settings.  If I leave that unticked I can connect to the server, and can also connect remotely from a system running RSAT, my concern is whether the generated certificate will work if as the documentation states that this must be done on the server running WSUS, so I assume I need that box ticked (?). \r<br />\n<br />\nWSUS Admin console loads without any issues, locally and remotely.\r<br />\n<br />\nWindows event log is actually showing that most of the major WSUS services are not working around every time I try to do a connection from WPP with the 'local server' checked in the connection profile, but no issues with updating or connecting to WSUS Admin Console, or indeed using WPP when just connecting via name and port number: here is one of the recurring errors that contains the same text as the WPP error...\r<br />\n<br />\nThe WSUS content directory is not accessible.\r<br />\nSystem.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send. ---&gt; System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---&gt; System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host\r<br />\n   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)\r<br />\n   --- End of inner exception stack trace ---\r<br />\n   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)\r<br />\n   at System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)\r<br />\n   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)\r<br />\n   at System.Net.Security.SslState.StartSendBlob(Byte[] incoming, Int32 count, AsyncProtocolRequest asyncRequest)\r<br />\n   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)\r<br />\n   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)\r<br />\n   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)\r<br />\n   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)\r<br />\n   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)\r<br />\n   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)\r<br />\n   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)\r<br />\n   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)\r<br />\n   at System.Net.ConnectStream.WriteHeaders(Boolean async)\r<br />\n   --- End of inner exception stack trace ---\r<br />\n   at System.Net.HttpWebRequest.GetResponse()\r<br />\n   at Microsoft.UpdateServices.Internal.HealthMonitoring.HmtWebServices.CheckContentDirWebAccess(EventLoggingType type, HealthEventLogger logger)\r<br />\n<br />\nWindows logs also includes errors stating Self-update, Reporting, API Remoting, Server Synchronization, Client Web Service, SimpleAuth Web Service &amp; DSS Authentication Web Services are not working... which I think is pretty much everything needed for the service as a whole! Very strange that none of these errors seem to occur with connecting 'remotely' or just using the management console... this is a brand new build with this single purpose, so am wondering whether to wipe and reinstall... as all was working smoothly before the introduction of .NET 3.5 I think, and now of course I cannot remove it!!<br />\n",
+    "PostedDate": "2013-09-17T02:36:39.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1093488",
+    "ThreadId": "457068",
+    "Html": "I have received you debug file, nothing special in it.\r<br />\nAccording to your Windows Log, it seem you have something broken in your Wsus installation. The &quot;CheckContentDirWebAccess&quot; error can be the root cause.<br />\n<blockquote>\nWSUS Admin console loads without any issues, locally and remotely. <br />\n</blockquote>\nThat's very strange !<br />\n<blockquote>\nthe generated certificate will work if as the documentation states that this must be done on the server running WSUS, so I assume I need that box ticked (?). <br />\n</blockquote>\nA Self-signed certificate can be generate when WPP run locally or remotely.<br />\n<blockquote>\nI installed .NET 3.5 (as 2.0 was required for another function)<br />\n</blockquote>\nWPP doesn't need .Net 2.0 for working on the Wsus Server. Only some functionnalities running on Client needs it ('InstallPendingUpdates', 'InstallThisUpdate', 'CustomUpdates')<br />\n",
+    "PostedDate": "2013-09-17T04:32:41.313-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1094035",
+    "ThreadId": "457068",
+    "Html": "I reinstalled Windows 2012 and WSUS (et al) in the end - and then WPP and all worked fine, so I think it must be something to do with a configuration I made somewhere along the line - not sure what it was, but thanks for the input!!  everything is working fine now and I am happily pushing out Java and Adobe updates across the network through WSUS.  Much obliged.<br />\n",
+    "PostedDate": "2013-09-18T07:20:50.923-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:05:28.567-07:00"
+  }
+]

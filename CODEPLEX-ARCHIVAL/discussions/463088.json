@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1110412",
+    "ThreadId": "463088",
+    "Html": "Hi Guys,<br />\nwe try to deploy java 7u25 (32Bit) to our windows 7 64Bit. <br />\nI recieve follow error on the client without administration right: Code 653 Unbekannter Fehler bei Windows Update.<br />\n<br />\nHere the windowsupdate.log:<br />\n<a href=\"https://cloud.wurzach-it.de/owncloud/public.php?service=files&amp;t=5c6f8e8d1b2c7e6fb18655cf6a5d1313\" rel=\"nofollow\">https://cloud.wurzach-it.de/owncloud/public.php?service=files&t=5c6f8e8d1b2c7e6fb18655cf6a5d1313</a><br />\n<br />\nPacket configuration:<br />\n<a href=\"https://cloud.wurzach-it.de/owncloud/public.php?service=files&amp;t=e5efa52e6285af3e54d1d3aa92b80404\" rel=\"nofollow\">https://cloud.wurzach-it.de/owncloud/public.php?service=files&t=e5efa52e6285af3e54d1d3aa92b80404</a><br />\n<br />\nAfter that i configure additional in the packet &quot;Can request User Input&quot;.<br />\nIf i try to install the update, it prompt the UAC.<br />\n<br />\n<br />\nRegards,<br />\nDaniel<br />\n",
+    "PostedDate": "2013-10-22T01:17:58.03-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1110462",
+    "ThreadId": "463088",
+    "Html": "Hi, \r<br />\n<br />\nI can't read your Windows Update log.\r<br />\n<br />\nIf you check the option &quot;Can request User Input&quot;, then the installation will run with the user credential. And, as your user doesn't have admin privileges... :-(<br />\n",
+    "PostedDate": "2013-10-22T03:19:50.387-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1110485",
+    "ThreadId": "463088",
+    "Html": "You have to click upper right Corner &quot;download&quot;. ;)\r<br />\nThe log says: Installation Failure: Windows failed to install the following update with error 0x80070643: Java 7 Update 25 EXE.\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-10-22T04:19:08.477-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1110548",
+    "ThreadId": "463088",
+    "Html": "I use now the msi files from 7u45 and this work's.\r<br />\nI close the thread.<br />\n",
+    "PostedDate": "2013-10-22T06:44:02.523-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-22T10:33:25.143-07:00"
+  }
+]

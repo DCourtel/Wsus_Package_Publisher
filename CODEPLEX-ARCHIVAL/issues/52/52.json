@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-09T09:19:55.247-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "I have receive a 'Debug ibfo' file from an anonymous user, trying to delete an \"non empty product\".\r\nA default in the UI allow to do that. In fact, only Product with no updates in it can be deleted.\r\n\r\nChange the logic which determine if the option \"Delete Product\" is available; So that now, this option is only available if the product contains no updates.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.2.1305.26",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-28T14:12:34.547-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Delete non-empty products",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 52
+  },
+  "FileAttachments": [
+    {
+      "FileId": 689508,
+      "FileName": "Delete empty product.png",
+      "DownloadUrl": ".\\689508"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "See screenshot for more explaination.",
+      "PostedDate": "2013-06-04T14:07:20.36-07:00",
+      "Id": 102071
+    }
+  ]
+}

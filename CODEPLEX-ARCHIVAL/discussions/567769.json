@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1305868",
+    "ThreadId": "567769",
+    "Html": "Hello Friends,\r<br />\n<br />\nI have gone through step by step procedure for the installation and creation of package as given in the guide.. still its not working.\r<br />\nAny help will be appreciable.\r<br />\n<br />\nThanks,\r<br />\nNaresh <br />\n",
+    "PostedDate": "2014-09-18T03:30:47.15-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306084",
+    "ThreadId": "567769",
+    "Html": "Can you be more specific on your issue ?\r<br />\nWhich update do you try to distribute ?\r<br />\nWhat is the type of the main file ? Exe, Msi or Msp ?\r<br />\nWhat do you have set as &quot;IsInstalled&quot; rule, &quot;IsInstallable&quot; rule ?\r<br />\nWhich status, computers report for this update ? Unknown, Not Installed, Installed or Not Applicable ?<br />\n",
+    "PostedDate": "2014-09-18T12:46:16.15-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306088",
+    "ThreadId": "567769",
+    "Html": "Hi Dcourtel,\r<br />\n<br />\nNow i am able to detect the clients.\r<br />\ni have installed the msi (adobe flash player). this is for testing  followed same steps which given in the doc.\r<br />\nNow package status showing as not installed.i have cross domain setup.\r<br />\n<br />\nsame as  <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/459352#editor\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/459352#editor</a>\r<br />\n<br />\ncurrently discussion is going on there... can you please comment there<br />\n",
+    "PostedDate": "2014-09-18T12:54:36.363-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-22T13:50:47.177-07:00"
+  }
+]

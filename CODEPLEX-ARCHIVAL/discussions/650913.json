@@ -1,0 +1,106 @@
+[
+  {
+    "Id": "1461952",
+    "ThreadId": "650913",
+    "Html": "Hello, \r<br />\n<br />\nI am working for a company where there is no Enterprise CA. \r<br />\nSo far we have been using WPP on the WSUS Server running Windows Server 2003 using the WPP self-signed certificate. \r<br />\n<br />\nNew downstream servers running Windows Server 2012 R2 are implemented and despite that the certificate has been imported, the new updates are not downloaded on those downstream servers. \r<br />\n<br />\nI wonder if there is anything linked with the certificate.... \r<br />\n<br />\nAny help will be much appreciated. \r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2016-02-04T07:20:43.897-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1461972",
+    "ThreadId": "650913",
+    "Html": "Are there any error messages in Windows Eventlog? SoftwareDistribution.log on downstreamservers in %programfiles%\\Update Services\\Logs?<br />\n",
+    "PostedDate": "2016-02-04T09:03:47.237-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1461991",
+    "ThreadId": "650913",
+    "Html": "Hello and thank you for your reply.\r<br />\n<br />\nUnfortunately I have not found anything to troubleshoot.\r<br />\n<br />\nHowever, I have read on TechNet that self-signed certificates are not usable anymore in WSUS under Windows Server 2012.\r<br />\n<br />\nCould someone please confirm?\r<br />\nIf it is the case, does someone use WPP with a code signing certificate from Symantec or GoDaddy ?<br />\n",
+    "PostedDate": "2016-02-04T10:30:17.077-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1462002",
+    "ThreadId": "650913",
+    "Html": "Self signing certificate is working in W2012.\r<br />\n<br />\nCreate a DWORD EnableSelfSignedCertificates=1 unter  HKLM\\Software\\Microsoft\\Update Services\\Server\\Setup\\\r<br />\n<br />\nThe blog post from WSUS Product Team Blog: <a href=\"http://blogs.technet.com/b/wsus/archive/2013/08/15/wsus-no-longer-issues-self-signed-certificates.aspx\" rel=\"nofollow\">http://blogs.technet.com/b/wsus/archive/2013/08/15/wsus-no-longer-issues-self-signed-certificates.aspx</a><br />\n",
+    "PostedDate": "2016-02-04T11:33:23.12-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1462011",
+    "ThreadId": "650913",
+    "Html": "Thank you WinfriedSonntag.\r<br />\n<br />\nI saw that today and applied it.\r<br />\nSo far, the updates did not transfer from the upstream server running Windows Server 2003 to the downstream running 2012.\r<br />\n<br />\nShould I build a new upstream server running Windows Server 2012 and issue a new certificate ?\r<br />\n<br />\nI'm a bit scared about that because there are about 20 downstream servers and about 6400 workstations.\r<br />\nBut if it's the way to proceed.... Then I will try.\r<br />\n<br />\nIs that your recommendation ?<br />\n",
+    "PostedDate": "2016-02-04T12:26:25.41-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1462013",
+    "ThreadId": "650913",
+    "Html": "You have 6400 Clients and works with WPP?\r<br />\n<br />\nYou don't see the updates on your downstream-WSUS? They are there or your client don't picked up the Software from the downstream WSUS?<br />\n",
+    "PostedDate": "2016-02-04T12:38:10.297-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1462035",
+    "ThreadId": "650913",
+    "Html": "Trust me, it works perfectly well for 2003 downstream servers but not with 2012 downstream servers...\r<br />\n<br />\nSo far we had no issues using WPP in production with so many clients spread worldwide, until we started to migrate few servers from 2003 to 2012.\r<br />\n<br />\nI confirm the updates are not present on 2012 which made me believe in a cert issue.\r<br />\nNow, thanks to you,  it is confirmed and the important question now is to know if the reg modification on the 2012 downstream servers is sufficient or if I have to migrate the 2003 upstream server to 2012, apply the reg and reissue a cert.<br />\n",
+    "PostedDate": "2016-02-04T15:35:54.377-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1462078",
+    "ThreadId": "650913",
+    "Html": "Pls check the Build from your Upstream WSUS. Here you will see where you see the correct build: \r<br />\n<a href=\"http://www.wsus.de/images/wsus-version.png\" rel=\"nofollow\">http://www.wsus.de/images/wsus-version.png</a>\r<br />\n<br />\nIn WSUS-FAQ No. 44 you see the KB-Numbers and the Build Numbers: <a href=\"http://wsus.de/faq\" rel=\"nofollow\">http://wsus.de/faq</a>\r<br />\n<br />\nWSUS 3.0 (SP2): \tBuild 3.2.7600.226\r<br />\nWSUS 3.0 (SP2) + KB2720211: \tBuild 3.2.7600.251\r<br />\nWSUS 3.0 (SP2) + KB2734608: \tBuild 3.2.7600.256\r<br />\nWSUS 3.0 (SP2) + KB2828185: \tBuild 3.2.7600.262\r<br />\nWSUS 3.0 (SP2) + KB2938066: \tBuild 3.2.7600.274\r<br />\n<br />\nOn a WSUS which is installed on W2008R2 or lower, your WSUS have to had Build .274.<br />\n",
+    "PostedDate": "2016-02-04T21:47:25.64-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1462102",
+    "ThreadId": "650913",
+    "Html": "We were at version .251 so I am performing the updates and will let you now the outcome.<br />\n",
+    "PostedDate": "2016-02-05T00:47:18.787-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1462105",
+    "ThreadId": "650913",
+    "Html": "Wow, .251 is very old. After the WSUS is on .274, you have restart the whole server. Synchronize with MS and now you can synchronize the downstream WSUS with your upstream. Best way is the Upstream WSUS is the newest available System.\r<br />\n<br />\nIf the WSUS.MSC is installed on a Client/Server with W2008R2 or lower, install on this Clients/Servers the patches too.<br />\n",
+    "PostedDate": "2016-02-05T01:34:14.213-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1462109",
+    "ThreadId": "650913",
+    "Html": "Good news !\r<br />\n<br />\nI installed the updates on the upstream server and after the reboots, the downstream servers received the WPP updates.\r<br />\nSo from an infrastructure perspective, it seems ot be all fine now.\r<br />\n<br />\nNext step is to approve the flash updates on an OU and see if the clients get it.\r<br />\n<br />\nTo be continued.....<br />\n",
+    "PostedDate": "2016-02-05T02:00:26.99-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1462165",
+    "ThreadId": "650913",
+    "Html": "It all works like a charm !\r<br />\n<br />\nThank you very much WinfriedSonntag for great help ! Danke vielmals ;-)<br />\n",
+    "PostedDate": "2016-02-05T08:02:48.743-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1462166",
+    "ThreadId": "650913",
+    "Html": "Thanks for response. ;)<br />\n",
+    "PostedDate": "2016-02-05T08:05:39.25-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

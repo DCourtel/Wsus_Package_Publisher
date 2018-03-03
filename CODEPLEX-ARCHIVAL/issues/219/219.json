@@ -1,0 +1,66 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-10-17T12:41:29.993-07:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nVery new to WSUS PP, and have installed updates in the past without issue.  I just attempted to install the MSI's for Adobe Flash player 15.0.0.152 (AcitveX and Plugin Separately), however even systems without a previous version currently installed are attempting to install it, then failing.  I'm not completely understanding the rules, but in the past I never had to change any of the rules included with Adobe's MSI packages.  Here's what it includes: \r\n\r\nCheck for is already installed:\r\n\r\n<Start AND>\r\n<msiar:MsiProductInstalled ProductCode=\"{047904ba-c065-40d5-969a-c7d91ca93d62}\"/>\r\n<End AND>\r\n\r\nCheck for is installable:\r\n<Start AND>\r\n<lar:Not>\r\n<msiar:MsiProductInstalled ProductCode=\"{047904ba-c065-40d5-969a-c7d91ca93d62}\"/>\r\n</lar:Not>\r\n<End AND>\r\n\r\n\r\nCurious as to whats making it attempt to install even though it's not on some of the client systems.  Secondly, the second \"isInstallable\" rule must be working if it's failing every time.  I just don't want it to appear in the updates at all.\r\n\r\nHopefully someone could help.",
+    "LastUpdatedDate": "2014-10-17T12:41:29.993-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-09-17T12:40:49.943-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Flash Update installs despite Rules not to",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 219
+  },
+  "FileAttachments": [
+    {
+      "FileId": 909559,
+      "FileName": "IsInstalled.png",
+      "DownloadUrl": ".\\909559"
+    },
+    {
+      "FileId": 909560,
+      "FileName": "IsInstallable.png",
+      "DownloadUrl": ".\\909560"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "> however even systems without a previous version currently installed are attempting to install it\n\nThis is normal because your \"IsInstallable\" rule say : Install Adobe Flash Player 15.0.0.152 if it is not already installed.\n\n> then failing\n\nLook into C:\\Windows\\WindowsUpdate.log and search for an error code.\n\n> in the past I never had to change any of the rules included with Adobe's MSI packages\n\nSo these packages had installed on all computers because Adobe doesn't include any rule to detect previous installation. ",
+      "PostedDate": "2014-09-18T03:21:26.81-07:00",
+      "Id": 160062
+    },
+    {
+      "Message": "I highly recommend you use the adobe SCUP catalogs with WPP to update your flash player installations, as it's less maintenance. Just a few clicks and you've got the latest update complete with metadata including applicability. See this page for info on obtaining the SCUP catalog for flash: http://www.adobe.com/devnet/flashplayer/enterprise_deployment.html",
+      "PostedDate": "2014-09-24T15:04:13.283-07:00",
+      "Id": 160548
+    },
+    {
+      "Message": "Oh, and once you obtain the catalog information, you can save it as a subscribed catalog in WPP by selecting menu item Updates ->Manage Catalog Subscriptions...",
+      "PostedDate": "2014-09-24T15:07:38.207-07:00",
+      "Id": 160550
+    }
+  ]
+}

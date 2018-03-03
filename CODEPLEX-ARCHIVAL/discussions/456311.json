@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1090457",
+    "ThreadId": "456311",
+    "Html": "Hi, I would like to try out WPP and the easiest way would be if WPP could coexist with LUP on my WSUSserver to start testing.<br />\n<br />\nCan I just install WPP on the same WSUSserver that I have LUP on?<br />\n<br />\nI guess WSUS knows nothing about LUP or WPP, it just publishes the updates thrown upon it through the API?<br />\n<br />\nThis is a production server BTW.<br />\n",
+    "PostedDate": "2013-09-09T23:23:09.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1090534",
+    "ThreadId": "456311",
+    "Html": "Hi Jerre,\r<br />\nI don't know how LUP work in detail, but theorically, yes it's possible.\r<br />\nLet me know if you have any problem.<br />\n",
+    "PostedDate": "2013-09-10T02:22:14.56-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-12T08:48:49.96-07:00"
+  },
+  {
+    "Id": "1098743",
+    "ThreadId": "456311",
+    "Html": "Hi Jerre,\r<br />\n<br />\nYes they can. As Long as you don't use Windows Server 2012 or newer because LUP doesn't run on those. And if you like and have the license, you can install SCUP too. Just imagine you would be asked if you can have two mailprograms installed. Nobody would say no. ;)\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-09-24T13:28:56.93-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1099527",
+    "ThreadId": "456311",
+    "Html": "Ok, great!\r<br />\n<br />\nJust tried to start WPP on my LUP/WSUSserver and all my LUP updates(flashplayer, Java, Reader) automagically show up in the WPP GUI! \r<br />\n<br />\nI guess this is good and makes it supersmooth to move to this new platform for 3rd party updates.\r<br />\n<br />\nInitial impressions are really good, so much more functions and a night and day difference in speed, we have 10000+ clients and that made LUP extremely slow and unresponsive(like waiting minutes when switching beteween updates).\r<br />\n<br />\nThank you guys for your efforts!<br />\n",
+    "PostedDate": "2013-09-26T01:05:48.257-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

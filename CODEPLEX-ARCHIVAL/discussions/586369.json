@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1363552",
+    "ThreadId": "586369",
+    "Html": "Salut,\r<br />\navant avec les version de java 7, lorsqu'on ajoutait une mise à jour, cela désinstallait (ou installait par dessus) la/les anciennes versions automatiquement. (comme avec flash par exemple)\r<br />\nDepuis les java 8, les mises à jour s'installent à part, ce qui fait que je me retrouve avec plusieurs versions de java 8. Je sélectionne bien &quot;remplace&quot; dans la création de la mise à jour.\r<br />\nJe pense que cela n'est pas lié à WPP car même sans passer WPP, ce problème apparait.\r<br />\n<br />\nEst-ce que quelqu'un aurait une piste pour éviter d'ajouter la tache supplémenaire de désinstallation des anciennes version de java 8?<br />\n",
+    "PostedDate": "2015-03-15T13:39:18.843-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1364076",
+    "ThreadId": "586369",
+    "Html": "Salut,<br />\n<blockquote>\nJe sélectionne bien &quot;remplace&quot; dans la création de la mise à jour. <br />\n</blockquote>\nC'est totalement différent. Cette fonction signifie que seul la mise à jour remplacante sera proposé aux clients.\r<br />\nPar exemple, soit 2 mises à jour, Update A et Update B. Update B étant remplacante pour Update A. Si A et B sont approuvé pour installation dans un groupe. Les clients de ce groupe ne se verront proposer que la mise à jour B.<br />\n",
+    "PostedDate": "2015-03-16T03:57:36.22-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

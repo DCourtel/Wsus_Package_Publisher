@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1321382",
+    "ThreadId": "571906",
+    "Html": "Can you please decrease the height of the dialog boxes? On smaller resolutions for example the update creation wizzards window is often too high to fit on the screen, so i can't reach the buttons on the buttom of the window. If I manually decrease the height of the window, its contents will be messed up in some strange kind of behaviour.\r<br />\nMaybe it would be a nice solution also to &quot;outsource&quot; some of the generally not so often used buttons and fields of the wizzard to an extra window reachable through an &quot;Extended options&quot; button  or something like that, to decrease the needed space on the dialog box.<br />\n",
+    "PostedDate": "2014-11-12T11:20:41.723-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1321394",
+    "ThreadId": "571906",
+    "Html": "I know that the UI need to be refactored. WPP V2 will have a better UI.<br />\n",
+    "PostedDate": "2014-11-12T11:39:47.49-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-11-12T12:04:49.92-08:00"
+  },
+  {
+    "Id": "1356429",
+    "ThreadId": "571906",
+    "Html": "Do you have an ETA for v2?<br />\n",
+    "PostedDate": "2015-02-27T09:07:19.813-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

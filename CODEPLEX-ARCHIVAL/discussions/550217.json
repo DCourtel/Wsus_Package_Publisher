@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "1261517",
+    "ThreadId": "550217",
+    "Html": "Hi,\r<br />\nI have a strange behavior. I enabled with the GPO the remote administration as also mentioned in this <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/456981\" rel=\"nofollow\">thread</a> , but still Show Pending Updates doesn't work. In the client Firewall I can see the DCOM exceptions. So Report Now, Dectect Now, Show Current Logon User and Restart PC is working only Show Pending Updates and Install Pending Updates are not working.\r<br />\nWhat I made wrong?\r<br />\nTHX for your help<br />\n",
+    "PostedDate": "2014-07-01T04:30:11.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1261718",
+    "ThreadId": "550217",
+    "Html": "Hi, try the feature and once it has failed, go to %temp% and send me the file WPP-GUID.log to <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a><br />\n",
+    "PostedDate": "2014-07-01T13:14:19.517-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1298541",
+    "ThreadId": "550217",
+    "Html": "Hi together,\r<br />\nDid you resolve the problem? I have the same issue.<br />\n",
+    "PostedDate": "2014-09-03T05:37:44.49-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1298720",
+    "ThreadId": "550217",
+    "Html": "Did you try with disabled firewall to see if it's really a security Policy issue ?<br />\n",
+    "PostedDate": "2014-09-03T11:51:59.88-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1298865",
+    "ThreadId": "550217",
+    "Html": "Hi,\r<br />\n<br />\nwhen firewall ist disabled, show pending and install pending work.<br />\n",
+    "PostedDate": "2014-09-04T00:22:43.613-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1299862",
+    "ThreadId": "550217",
+    "Html": "Please see this doc : <a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=905459\" rel=\"nofollow\">Firewall Rules for Remote Administration</a><br />\n",
+    "PostedDate": "2014-09-05T14:00:07.71-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:03:03.77-07:00"
+  },
+  {
+    "Id": "1302319",
+    "ThreadId": "550217",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nPlease see this doc : <a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=905459\" rel=\"nofollow\">Firewall Rules for Remote Administration</a><br />\n</blockquote>\nThank you so much! Works fine now!\r<br />\n<br />\nWas this the missing document which you couldn't upload at codeplex?\r<br />\n<br />\nYou do a great job here!<br />\n",
+    "PostedDate": "2014-09-08T00:38:08.893-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1309734",
+    "ThreadId": "550217",
+    "Html": "Hello everyone,<br />\n<br />\naccording to all previous posts of this thread my issue is nearly the same BUT only with Windows XP SP3!<br />\n<br />\nWhen choosing Show Pending Updates the firewall error message occurs. Turning XP-Client firewall off it works.<br />\n<br />\nThe deployed GPO based on that discussion <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/456981\" rel=\"nofollow\">Which ports to open in firewall</a> and of course that PDF: <a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=905459\" rel=\"nofollow\">Firewall Rules for Remote Administration</a>.<br />\n<br />\nCould it be that both port-rules within the GPO shown in the PDF are only valid for Windows 7? If not what other mistakes could it be?<br />\n<br />\n<br />\nThanks for Your help and keep on with this marvellous programme!<br />\n<br />\nBest regards<br />\nPetapico.<br />\n",
+    "PostedDate": "2014-10-01T14:30:47.52-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353171",
+    "ThreadId": "550217",
+    "Html": "I don't think that OS on client computer make a difference.\r<br />\nMay be, check if DCom is enable these clients.<br />\n",
+    "PostedDate": "2015-02-16T12:28:42.997-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353963",
+    "ThreadId": "550217",
+    "Html": "Hello DCourtel,\r<br />\n<br />\nthanks for Your quick reply.\r<br />\n<br />\nWe will test Your suggestion and post the results here.\r<br />\n<br />\nBest regards\r<br />\nPetapico.<br />\n",
+    "PostedDate": "2015-02-19T05:00:13.55-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1354040",
+    "ThreadId": "550217",
+    "Html": "After testing we found this:<br />\n<br />\nWe used the GPO of 2008 R2 with the entry <br />\n<pre><code>Windows Firewall with Advanced Security </code></pre>\n\nwhich Windows XP does not accept.<br />\n<br />\nWe replaced that 2008 R2 GPO and added this GPO:<br />\n<pre><code>Computer - Admin. Templates - Network Connections - Windows Firewall: Define inbound program exceptions\n%WinDir%\\System32\\dllhost.exe:NNN.NN.NNN.NNN:enabled:DLLHost\n</code></pre>\n\nThanks to all supporter!<br />\n<br />\nBest regards<br />\nPetapico.<br />\n",
+    "PostedDate": "2015-02-19T08:31:10.017-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

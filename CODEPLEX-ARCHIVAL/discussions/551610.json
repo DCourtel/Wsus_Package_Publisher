@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1265917",
+    "ThreadId": "551610",
+    "Html": "I've made a custom update to install FreePDF, and mod the reg key for the ghostscript version, but it gives me the FFFC error when installing on the client.\r<br />\n<br />\nA regular update built the same way, minus the reg mod, works.\r<br />\n<br />\nHere is the .xml from the custom update, could anyone spot what I'm doing wrong?\r<br />\n<br />\n&lt;CustomUpdate&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;\r<br />\n&lt;PathToExecutable&gt;C:\\trans\\FreePDF4.14\\fpsetup.exe&lt;/PathToExecutable&gt;\r<br />\n&lt;Parameters&gt;/q&lt;/Parameters&gt;\r<br />\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;\r<br />\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;\r<br />\n&lt;Variable/&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.RegistryElement&lt;/ElementType&gt;\r<br />\n&lt;RegAction&gt;Modify&lt;/RegAction&gt;\r<br />\n&lt;RegHive&gt;HKEY_LOCAL_MACHINE&lt;/RegHive&gt;\r<br />\n&lt;RegKey&gt;SOFTWARE\\Wow6432Node\\shbox\\FreePdfXP&lt;/RegKey&gt;\r<br />\n&lt;RegValue&gt;gswin32c&lt;/RegValue&gt;\r<br />\n&lt;RegType&gt;REG_SZ&lt;/RegType&gt;\r<br />\n&lt;RegData&gt;C:\\Program Files\\gs\\gs9.07\\bin\\gswin64c.exe&lt;/RegData&gt;\r<br />\n&lt;RegVariable/&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;/CustomUpdate&gt;<br />\n",
+    "PostedDate": "2014-07-15T08:24:08.09-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1273550",
+    "ThreadId": "551610",
+    "Html": "Well, after a bit more RTFM,D I was making an error. :)<br />\n<br />\nEverything is working properly now.<br />\n<br />\nAlso, in case anyone is interested I added a step to kill the fpassist.exe process prior to the install, and then triggered a reboot at the end so that fpassist.exe is running.<br />\n<br />\nXML<br />\n&lt;CustomUpdate&gt;<br />\n&lt;Action&gt;<br />\n&lt;ElementType&gt;CustomUpdateElements.KillProcessElement&lt;/ElementType&gt;<br />\n&lt;ProcessName&gt;fpassist.exe&lt;/ProcessName&gt;<br />\n&lt;/Action&gt;<br />\n&lt;Action&gt;<br />\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;<br />\n&lt;PathToExecutable&gt;fpsetup.exe&lt;/PathToExecutable&gt;<br />\n&lt;Parameters&gt;/q&lt;/Parameters&gt;<br />\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;<br />\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;<br />\n&lt;Variable/&gt;<br />\n&lt;/Action&gt;<br />\n&lt;Action&gt; <br />\n&lt;ElementType&gt;CustomUpdateElements.RegistryElement&lt;/ElementType&gt; <br />\n&lt;RegAction&gt;Modify&lt;/RegAction&gt; <br />\n&lt;RegHive&gt;HKEY_LOCAL_MACHINE&lt;/RegHive&gt; <br />\n&lt;RegKey&gt;SOFTWARE\\Wow6432Node\\shbox\\FreePdfXP&lt;/RegKey&gt; <br />\n&lt;RegValue&gt;gswin32c&lt;/RegValue&gt; <br />\n&lt;RegType&gt;REG_SZ&lt;/RegType&gt; <br />\n&lt;RegData&gt;C:\\Program Files\\gs\\gs9.07\\bin\\gswin64c.exe&lt;/RegData&gt; <br />\n&lt;RegVariable/&gt; <br />\n&lt;/Action&gt; <br />\n&lt;Action&gt;<br />\n&lt;ElementType&gt;CustomUpdateElements.PowerManagementElement&lt;/ElementType&gt;<br />\n&lt;PowerAction&gt;Reboot&lt;/PowerAction&gt;<br />\n&lt;/Action&gt;<br />\n&lt;/CustomUpdate&gt;<br />\n",
+    "PostedDate": "2014-07-17T07:19:23.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-07-17T07:19:26.6-07:00"
+  }
+]

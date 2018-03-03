@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Documentation have been updated. Codeplex web site seem to have a problem when trying to upload files. Will try again tomorrow.",
+    "ClosedDate": "2014-07-29T11:30:37.913-07:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Oracle changed the command line arguments for the installer, command line arguments should be\r\n/s WEB_JAVA=1\r\ninstead of\r\n/s IExplorer=1",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1407.11",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-07-17T11:48:20.137-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "Creating Java Installation Custom Update documentation is out of date",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 204
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Can you share a link to Oracle documentation page ?",
+      "PostedDate": "2014-07-29T05:16:12.92-07:00",
+      "Id": 153811
+    },
+    {
+      "Message": "http://docs.oracle.com/javase/7/docs/webnotes/install/windows/jre-installer-options.html",
+      "PostedDate": "2014-07-29T10:04:49.233-07:00",
+      "Id": 153837
+    },
+    {
+      "Message": "The documentation with the old switches (the way the documentation currently is written) is still published, and doesn't specify which versions it applies to, but the documentation references jre 6, so it's pretty old:\nhttp://www.oracle.com/technetwork/java/javase/silent-136552.html",
+      "PostedDate": "2014-07-29T10:06:56-07:00",
+      "Id": 153839
+    }
+  ]
+}

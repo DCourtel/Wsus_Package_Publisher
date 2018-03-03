@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Added two button to the UpdateRuleWizard to Save/Load a set of rules.",
+    "ClosedDate": "2013-05-16T14:04:25.72-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When publishing a new update or revising an update, user should have been the ability to save rules to disk for later use.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1305.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-16T14:03:23.647-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Allow to Save/Load set of rules",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 45
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

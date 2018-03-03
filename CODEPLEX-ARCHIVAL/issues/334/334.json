@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Computer List Viewer",
+      "DisplayName": "Computer List Viewer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:53.027-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Allow to launch Remote MSI Manager after selecting computers and right click on these computers.\r\nAutomatically add these computers to the search pane.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1603.29",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-03-29T13:19:29.987-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Allow to launch Remote MSI Manager by right click on computers",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 334
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Great! :)",
+      "PostedDate": "2016-03-29T13:37:18.873-07:00",
+      "Id": 198262
+    }
+  ]
+}

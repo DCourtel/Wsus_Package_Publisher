@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "I am facing \"Install failed, error = 0x80070643 / 0x00000643\" while pushing Java 7 Update 131, kindly could anyone suggest me please.\r\n\r\n\r\n2017-03-21\t05:42:34:189\t2840\t968\tAgent\t  *   Title = Java 7 Update 131\r\n2017-03-21\t05:42:34:189\t2840\t968\tAgent\t  *   UpdateId = {FB40C13C-107C-4392-8865-B7510ADDA8DE}.3\r\n2017-03-21\t05:42:34:205\t2840\t968\tDnldMgr\t***********  DnldMgr: New download job [UpdateId = {FB40C13C-107C-4392-8865-B7510ADDA8DE}.2]  ***********\r\n2017-03-21\t05:42:34:298\t2840\t968\tDnldMgr\t  * All files for update were already downloaded and are valid.\r\n2017-03-21\t05:42:34:314\t2840\t968\tAgent\t*********\r\n2017-03-21\t05:42:34:314\t2840\t968\tAgent\t**  END  **  Agent: Downloading updates [CallerId = AutomaticUpdates]\r\n2017-03-21\t05:42:34:314\t2840\t968\tAgent\t*************\r\n2017-03-21\t05:42:34:314\t2840\t9b0\tAU\tSuccessfully wrote event for AU health state:0\r\n2017-03-21\t05:42:34:314\t2840\t9b0\tAU\t  # Pending download calls = 1\r\n2017-03-21\t05:42:34:314\t2840\t9b0\tAU\t<<## SUBMITTED ## AU: Download updates\r\n2017-03-21\t05:42:34:314\t2840\t9b0\tAU\tSuccessfully wrote event for AU health state:0\r\n2017-03-21\t05:42:34:314\t2840\t9b0\tAU\t>>##  RESUMED  ## AU: Download update [UpdateId = {FB40C13C-107C-4392-8865-B7510ADDA8DE}, succeeded]\r\n2017-03-21\t05:42:34:314\t2840\t9b0\tAU\t#########\r\n2017-03-21\t05:42:34:314\t2840\t9b0\tAU\t##  END  ##  AU: Download updates\r\n2017-03-21\t05:42:34:314\t2840\t9b0\tAU\t#############\r\n2017-03-21\t05:42:34:314\t2840\t9b0\tAU\tSuccessfully wrote event for AU health state:0\r\n2017-03-21\t05:42:34:314\t2840\t9b0\tAU\tAU setting pending client directive to 'Install Approval'\r\n2017-03-21\t05:42:34:314\t2840\t9b0\tAU\tSuccessfully wrote event for AU health state:0\r\n2017-03-21\t05:42:34:314\t2840\tb2c\tAU\tForced install timer expired for AUInstallType = 5\r\n2017-03-21\t05:42:34:314\t2840\tb2c\tAU\tUpdateDownloadProperties: 0 download(s) are still in progress.\r\n2017-03-21\t05:42:34:314\t2840\tb2c\tAU\t#############\r\n2017-03-21\t05:42:34:314\t2840\tb2c\tAU\t## START ##  AU: Install updates\r\n2017-03-21\t05:42:34:314\t2840\tb2c\tAU\t#########\r\n2017-03-21\t05:42:34:314\t2840\tb2c\tAU\t  # Initiating deadline install\r\n2017-03-21\t05:42:34:314\t2840\tb2c\tAU\t  # Approved updates = 1\r\n2017-03-21\t05:42:34:314\t2840\tb2c\tAU\t<<## SUBMITTED ## AU: Install updates / installing updates [CallId = {0D0CCBFB-1C07-4710-97F3-3E6F55E35520}]\r\n2017-03-21\t05:42:34:314\t2840\t410\tAgent\t*************\r\n2017-03-21\t05:42:34:314\t2840\t410\tAgent\t** START **  Agent: Installing updates [CallerId = AutomaticUpdates]\r\n2017-03-21\t05:42:34:314\t2840\t410\tAgent\t*********\r\n2017-03-21\t05:42:34:314\t2840\t410\tAgent\t  * Updates to install = 1\r\n2017-03-21\t05:42:34:314\t2840\t968\tReport\tREPORT EVENT: {B6F7E6D5-23F7-4402-B7CD-200024094F2F}\t2017-03-21 05:42:34:173-0600\t1\t147\t101\t{00000000-0000-0000-0000-000000000000}\t0\t0\tAutomaticUpdates\tSuccess\tSoftware Synchronization\tWindows Update Client successfully detected 1 updates.\r\n2017-03-21\t05:42:34:314\t2840\t968\tReport\tREPORT EVENT: {3F32A157-13AE-404F-BB2D-E4DE0BB6185D}\t2017-03-21 05:42:34:173-0600\t1\t156\t101\t{00000000-0000-0000-0000-000000000000}\t0\t0\tAutomaticUpdates\tSuccess\tPre-Deployment Check\tReporting client status.\r\n2017-03-21\t05:42:34:314\t2840\t968\tReport\tREPORT EVENT: {1F9574D4-1975-4FAF-A849-B847FD512625}\t2017-03-21 05:42:34:314-0600\t1\t188\t102\t{00000000-0000-0000-0000-000000000000}\t0\t0\tAutomaticUpdates\tSuccess\tContent Install\tInstallation Ready: The following updates are downloaded and ready for installation. This computer is currently scheduled to install these updates on ‎Tuesday, ‎March ‎21, ‎2017 at 5:42 AM:  - Java 7 Update 131\r\n2017-03-21\t05:42:34:314\t2840\t410\tAgent\t  *   Title = Java 7 Update 131\r\n2017-03-21\t05:42:34:314\t2840\t410\tAgent\t  *   UpdateId = {FB40C13C-107C-4392-8865-B7510ADDA8DE}.3\r\n2017-03-21\t05:42:34:314\t2840\t410\tAgent\tWARNING: failed to calculate prior restore point time with error 0x80070002; setting restore point\r\n2017-03-21\t05:42:34:345\t2840\t410\tDnldMgr\tWARNING: Preparing update for install, updateId = {FB40C13C-107C-4392-8865-B7510ADDA8DE}.3 (using payload from revision 2).\r\n2017-03-21\t05:42:34:657\t2840\t410\tDnldMgr\tExtractUpdateFiles: 0x00000000\r\n2017-03-21\t05:42:34:657\t2452\tde8\tMisc\t===========  Logging initialized (build: 7.6.7601.19161, tz: -0600)  ===========\r\n2017-03-21\t05:42:34:657\t2452\tde8\tMisc\t  = Process: C:\\Windows\\system32\\wuauclt.exe\r\n2017-03-21\t05:42:34:657\t2452\tde8\tMisc\t  = Module: C:\\Windows\\system32\\wuaueng.dll\r\n2017-03-21\t05:42:34:657\t2452\tde8\tHandler\t:::::::::::::\r\n2017-03-21\t05:42:34:657\t2452\tde8\tHandler\t:: START ::  Handler: Command Line Install\r\n2017-03-21\t05:42:34:657\t2452\tde8\tHandler\t:::::::::\r\n2017-03-21\t05:42:34:657\t2452\tde8\tHandler\t  : Updates to install = 1\r\n2017-03-21\t05:42:39:321\t2840\t968\tReport\tREPORT EVENT: {5431FFA0-CEBA-4ABF-BD0C-3D39E634B534}\t2017-03-21 05:42:34:314-0600\t1\t181\t101\t{FB40C13C-107C-4392-8865-B7510ADDA8DE}\t3\t0\tAutomaticUpdates\tSuccess\tContent Install\tInstallation Started: Windows successfully started the following update: Java 7 Update 131\r\n2017-03-21\t05:42:49:727\t2452\tde8\tHandler\t  : WARNING: Command line install completed. Return code = 0x00000643, Result = Failed, Reboot required = false\r\n2017-03-21\t05:42:49:727\t2452\tde8\tHandler\t  : WARNING: Exit code = 0x8024200B\r\n2017-03-21\t05:42:49:727\t2840\t9b0\tAU\t>>##  RESUMED  ## AU: Installing update [UpdateId = {FB40C13C-107C-4392-8865-B7510ADDA8DE}]\r\n2017-03-21\t05:42:49:727\t2452\tde8\tHandler\t:::::::::\r\n2017-03-21\t05:42:49:727\t2840\t9b0\tAU\t  # WARNING: Install failed, error = 0x80070643 / 0x00000643",
+    "LastUpdatedDate": "2017-03-22T08:48:59.51-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-03-21T05:47:46.5-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Java 7 Update 131 Install error",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 367
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Java 7 Update 131 is very old. You are using a MSI or a EXE for Installation?",
+      "PostedDate": "2017-03-21T14:51:49.063-07:00",
+      "Id": 207864
+    },
+    {
+      "Message": "EXE for Installation",
+      "PostedDate": "2017-03-22T03:18:15.33-07:00",
+      "Id": 207870
+    },
+    {
+      "Message": "Hi, error code 643 is a generic code for \"Install Failed\".\nDo you have tryed to launch the EXE manually on the computer to see if any error message show up ?",
+      "PostedDate": "2017-03-22T03:42:43.463-07:00",
+      "Id": 207871
+    },
+    {
+      "Message": "Hi,\n\nI could see the the Java is got installed on the machines, but in the WSUS Package Publisher console it shows as failed..",
+      "PostedDate": "2017-03-22T05:34:21.29-07:00",
+      "Id": 207873
+    },
+    {
+      "Message": "Your WindowsUpdate.log shows an error. Try the MSI to install.  Read http://www.klaus-hartnegg.de/gpo/msi_java7.html from Extract the MSI-file and extract the MSI File. Create a new Update with the MSI.",
+      "PostedDate": "2017-03-22T08:48:59.51-07:00",
+      "Id": 207876
+    }
+  ]
+}

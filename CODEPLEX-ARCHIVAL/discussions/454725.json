@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1085655",
+    "ThreadId": "454725",
+    "Html": "Hello folks,<br />\n<br />\nI'm starting to do my 1st steps with the PackagePublisher, and up to now I only can say: Very good work, thumbs up!<br />\n<br />\nThe only thing (up to now ;) ) I don't get is: How can I delete a folder in the updates-tree?<br />\nI.e.: I had published several stuff (Adobe Reader X, Flash Player, java, a.s.o.), and in the left pane of Package Publisher now I have an Update-folder-tree. How can I delete some of this (empty) folders if not needed anymore? <br />\nFor example: After releasing &quot;Adobe Reader XI&quot; i don't need the folder &quot;Adobe Reader X&quot; anymore. Also a few misstyped folders I want to delete (that did not affect anything, but the design... :) ).<br />\n<br />\nIs there a way &quot;out of the box&quot;, or have i to do this in SUSDB?<br />\n<br />\nThanks in advance<br />\n<br />\nKurt<br />\n",
+    "PostedDate": "2013-08-27T23:25:32.623-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1085732",
+    "ThreadId": "454725",
+    "Html": "Hi Kurt, WPP is able to help you to delete 'Empty Products' (Folder that don't have updates in it anymore).\r<br />\n<br />\nFirst of all, ensure you have the good settings :\r<br />\n<img src=\"http://i.imgur.com/0xTr76e.jpg\" alt=\"Setting for Deleting Empty Product\" /> <br />\n<ul>\n<li>You need to run WPP locally on the Wsus server. Check the checkbox : Connect to the local server.</li>\n<li>\nIn the &quot;When Publishing a new Update&quot; option, you need to choose one of these two options : &quot;Let me choose&quot; or &quot;Always...&quot;<br />\n</li>\n<li>\nEnsure there is no updates in this folder. If there is some, decline it, then delete it. You can delete only product where there is no updates in it<br />\n</li>\n<li>Select the empty folder and right-click on it.\r<br />\n<img src=\"http://i.imgur.com/xxUQO7C.jpg\" alt=\"Select the empty folder\" /></li>\n<li>Choose &quot;Delete Product&quot;.</li>\n<li>Wait a moment...\r<br />\n<img src=\"http://i.imgur.com/FQGewb7.jpg\" alt=\"Wait\" /></li>\n</ul>\n",
+    "PostedDate": "2013-08-28T05:05:50.553-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1085742",
+    "ThreadId": "454725",
+    "Html": "Hi DCourtel,\r<br />\n<br />\nthanks for your fast reply.\r<br />\n<br />\nAfter checking &quot;Connect to local Server&quot; the &quot;Delete product isn't greyed anymore.\r<br />\nBut unfortunately all products are still listed after the progress bar done (also if I reconnect to the server)\r<br />\nAnd 'cause there is no &quot;delete&quot; entry to delete the vendor-folder (i.e. &quot;Symantec Corporation&quot; in your screenshot), is that folder deleted automatically if it's empty (means no product-folders therein)?\r<br />\n<br />\nThanks in advance \r<br />\n<br />\nKurt<br />\n",
+    "PostedDate": "2013-08-28T05:45:59.353-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1085749",
+    "ThreadId": "454725",
+    "Html": "I know this feature doesn't work every time. It still working at 99%\r<br />\nIf you delete all empty product for a Vendor, the vendor should be deleted automatically.<br />\n",
+    "PostedDate": "2013-08-28T05:51:47.773-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1085752",
+    "ThreadId": "454725",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nI know this feature doesn't work every time. It still working at 99%<br />\n</blockquote>\nOk, so I try again during next days.<br />\n<blockquote>\nIf you delete all empty product for a Vendor, the vendor should be deleted automatically.<br />\n</blockquote>\nGood to know.\r<br />\n<br />\nThanks and have a nice day.<br />\n",
+    "PostedDate": "2013-08-28T06:02:48.367-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1087531",
+    "ThreadId": "454725",
+    "Html": "Well, til now I can't delete the unused and empty folders.<br />\nThe only way for me is to alter the WSUS database.<br />\n<br />\nBecause I'm not very familiar creating complex SQL-scripts, I have performed 3 steps to delete the unneeded entries in SQL-Manager:<br />\n<br />\n1st step:<br />\n<pre><code> SELECT [LocalizedPropertyID]\n      ,[Title]\n  FROM [SUSDB].[dbo].[tbLocalizedProperty]\n  where [Title] = '&lt;insertnameofurproduct&gt;'</code></pre>\n\nAt least one row is displayed. Note the string in [LocalizedPropertyID]<br />\n<br />\n2nd step:<br />\n<pre><code>DELETE FROM [SUSDB].[dbo].[tbLocalizedPropertyForRevision]\n      WHERE [LocalizedPropertyID] = '&lt;NotedStringFromStepOne&gt;'</code></pre>\n\n3rd step:<br />\n<pre><code>DELETE FROM [SUSDB].[dbo].[tbLocalizedProperty]\n      where [LocalizedPropertyID] = '&lt;NotedStringFromStepOne&gt;</code></pre>\n\nThat steps I need do to delete the product and the vendor folders. <br />\n",
+    "PostedDate": "2013-09-02T23:33:52.763-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:16:16.783-07:00"
+  }
+]

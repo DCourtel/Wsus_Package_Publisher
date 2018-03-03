@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "As wsus doesn't kept the remote server port, WPP can't guest which port to use.",
+    "ClosedDate": "2013-11-01T05:38:24.613-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Once connected to a non-replica server, when right-clicking on the server, display an option to synchronize with downstream servers.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1307.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-08-13T07:38:15.313-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Postponed"
+    },
+    "Summary": "Synchronize with Downstream Servers",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 2,
+    "Id": 97
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

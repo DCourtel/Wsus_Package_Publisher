@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1355151",
+    "ThreadId": "581682",
+    "Html": "Hello!\r<br />\nI just install my first WSUS package Publisher on a Win2012R2 Server mit local WSUS. I followed the instruction and now i've got the problem, that i don't see the Updates in the WSUS Update View.\r<br />\nFirst, I tought, that there was something wrong with the Update-Publishing or the connection to the WSUS, but then i saw, that the Update (Adobe Flashplayer and Reader) are listed in the availble Updates on the client. \r<br />\nWhy are they there but not in the WSUS-Update-List?\r<br />\n<br />\ni tried to create e new customzied View in te WSUS, but i didn't get the Adobe selection, just all the MS-Stuff in the list.\r<br />\n<br />\nWhat could be my mistake?\r<br />\n<br />\nbest regards \r<br />\nAndreas<br />\n",
+    "PostedDate": "2015-02-24T02:32:14.983-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1355160",
+    "ThreadId": "581682",
+    "Html": "In Tools &gt; Settings &gt; Servers you have select 'Allways make this update visible in the WSUS Console'?\r<br />\nIn Tools &gt; Updates you can select another one.\r<br />\n<br />\nDid you import the Updates from the update-catalog? If yes, did you select 'Show Updates in WSUS-Console' if you import the updates?<br />\n",
+    "PostedDate": "2015-02-24T03:12:55.993-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-02-24T03:22:02.287-08:00"
+  },
+  {
+    "Id": "1355161",
+    "ThreadId": "581682",
+    "Html": "This is the default behavior. By default, Wsus doesn't show you, locally-published updates. With WPP, you can cheat, by telling Wsus that these updates are not Locally-published and therefore, to force him to display as normal updates.<br />\n",
+    "PostedDate": "2015-02-24T03:15:16.22-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1355164",
+    "ThreadId": "581682",
+    "Html": "Yes, i have the option selected, to make my updates visible in the WSUS-Console.\r<br />\n<br />\nand i have imrotet the update from the catalog. but i didn't select the option to show the update in the WSUS from the context-menu.\r<br />\nThat was the trick :-)\r<br />\nThank you Winfried.<br />\n",
+    "PostedDate": "2015-02-24T03:21:45.923-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

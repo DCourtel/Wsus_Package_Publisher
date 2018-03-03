@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "1258918",
+    "ThreadId": "549416",
+    "Html": "Bonjour,\r<br />\n<br />\nJe souhaite déployer Symantec Endpoint Protection version 12.1.4100.4126 par WPP (j'avais déployer la version 11 sans problème) mais à la création de la mise à jour j'ai une erreur Verification of file signature failed.\r<br />\n<br />\nJ'ai la version 3.2.7600.262 de WSUS, un nouveau certificat a été généré, le serveur redémarré.\r<br />\n<br />\nSi je crée un autre package avec un autre produit la publication se fait sans problème et l'installe se fait sur le poste (bien sur après un redémarrage des poste pour prise en compte du nouveau certificat).\r<br />\n<br />\nCe pourrait il qu'il y ai un problème suivant la taille de la mise à jour ?\r<br />\n<br />\nCordialement<br />\n",
+    "PostedDate": "2014-06-23T07:55:20.947-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1259164",
+    "ThreadId": "549416",
+    "Html": "Très étrange que cela échoue uniquement avec ce package là. Est-ce que vous publiez depuis le serveur Wsus lui même ou depuis un PC d'administration ? \r<br />\nEssayez en faisant tourner WPP directement sur le Serveur Wsus.<br />\n",
+    "PostedDate": "2014-06-24T02:31:28.283-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1259225",
+    "ThreadId": "549416",
+    "Html": "WPP est directement installé sur le serveur, et j'ai fait d'autres test cela ne marche pas qu'avec ce package. Le .cab de la version 11 fait déjà 350 Mo celui de la 12 doit être encore plus gros.<br />\n",
+    "PostedDate": "2014-06-24T06:37:14.43-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1259308",
+    "ThreadId": "549416",
+    "Html": "Quelle est la longueur de la clé privé du certificat (Aide -&gt; A Propos) ?<br />\n",
+    "PostedDate": "2014-06-24T10:07:52.707-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1259504",
+    "ThreadId": "549416",
+    "Html": "La longueur de la clé est de 2048.<br />\n<br />\nMais je pense vraiment que le problème est du à la taille du package car j'ai créé un exe en installation de base de symantec ce qui donne un exe à 60 Mo au lieu de 463 Mo et dans c'est condition la publication se fait bien par contre avec l'exe contenant l'installation complète la publication échoue.<br />\n<br />\nJe peux vous mettre à disposition l'exe si vous le voulez.<br />\n<br />\nCordialement<br />\n",
+    "PostedDate": "2014-06-25T00:11:38.83-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1259808",
+    "ThreadId": "549416",
+    "Html": "Je veux bien faire le test de mon coté, avec votre EXE.<br />\n",
+    "PostedDate": "2014-06-25T12:27:31.93-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1259961",
+    "ThreadId": "549416",
+    "Html": "je vous ai envoyé par message le lien pour télécharger le fichier avec le mot de passe\r<br />\n<br />\nCordialement<br />\n",
+    "PostedDate": "2014-06-26T02:12:34.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1261716",
+    "ThreadId": "549416",
+    "Html": "Bonjour, j'ai le même soucis chez moi avec votre fichier. Le problème ne semble pas venir de WPP, mais plutôt de Wsus qui semble ne pas pouvoir signer le fichier. Même comportement avec d'autres fichiers volumineux.<br />\n",
+    "PostedDate": "2014-07-01T13:08:25.22-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1262507",
+    "ThreadId": "549416",
+    "Html": "Bonjour,\r<br />\n<br />\nMerci de votre réponse.\r<br />\n<br />\nnous avons contourné le problème en faisant du ménage dans notre setup et là ça marche.\r<br />\n<br />\nVous pouvez clôturer le sujet<br />\n",
+    "PostedDate": "2014-07-03T11:49:16.76-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-07-03T14:07:38.143-07:00"
+  },
+  {
+    "Id": "1262564",
+    "ThreadId": "549416",
+    "Html": "Effectivement, chez nous le setup.exe pour Symantec est plus petit d'environ 100Mo.\r<br />\nCa reste quand même étonnant que la mise à jour ne passe pas.<br />\n",
+    "PostedDate": "2014-07-03T14:07:32.11-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

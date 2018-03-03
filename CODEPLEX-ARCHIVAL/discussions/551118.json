@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1264324",
+    "ThreadId": "551118",
+    "Html": "Hello\r<br />\n<br />\nI'm new to WsusPP.\r<br />\nSome of my Wsus-Clients (Win7 x64, Win Server 2008R2, Win Server 2012R2) are always marked as offline, which is definitly not true. \r<br />\nFrom console on Wsus-Server I can ping the clients, but if I try to send an &quot;Detect now&quot; it fails with &quot;no ping&quot;.\r<br />\nWindows Firewall is off at server and client.\r<br />\nWsus is a Windows Server 2012R2.\r<br />\n<br />\nAny ideas why? How to bring my clients &quot;online&quot;?\r<br />\n<br />\nThanks.<br />\n",
+    "PostedDate": "2014-07-10T03:27:18.53-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264498",
+    "ThreadId": "551118",
+    "Html": "Hi, most likely, it is a problem of IPV4/IPV6 address. \r<br />\nWhen you ping a remote machine by its name, does the name resolved into an IPV4 address or an IPV6 address ?\r<br />\nHave a look into Options -&gt; Settings -&gt; Misc.<br />\n",
+    "PostedDate": "2014-07-10T09:44:51.227-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-07-10T14:13:56.58-07:00"
+  },
+  {
+    "Id": "1264601",
+    "ThreadId": "551118",
+    "Html": "Hello\r<br />\n<br />\nThe name is always resolved in an IPv4-Address. IPv6 is disabled in our complete network, cause of an issue in another application. Options --&gt; Settings --&gt; Misc is set to Always IPv4.\r<br />\nI think I found the solution. Windows sets on some clients the registry entrys &quot;Domain&quot; and &quot;NV Domain&quot; in HKLM\\SYSTEM\\CurrentControlSet\\services\\Tcpip\\Prameters. Empty the value of these keys, flush DNS cache und start a &quot;Report now&quot; on the client solved it.\r<br />\n<br />\nThank you pushing me in the right direction. :-)<br />\n",
+    "PostedDate": "2014-07-10T14:13:41.493-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1265125",
+    "ThreadId": "551118",
+    "Html": "<strong>rkauskh wrote:</strong><br />\n<blockquote>\nI think I found the solution. Windows sets on some clients the registry entrys &quot;Domain&quot; and &quot;NV Domain&quot; in HKLM\\SYSTEM\\CurrentControlSet\\services\\Tcpip\\Prameters. Empty the value of these keys, flush DNS cache und start a &quot;Report now&quot; on the client solved it.<br />\n</blockquote>\nThanks for posting your solution. Could you pls post again what you EXACT delete?\r<br />\n<br />\nThanks. ;)<br />\n",
+    "PostedDate": "2014-07-12T08:14:35.26-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1265228",
+    "ThreadId": "551118",
+    "Html": "Hello\r<br />\n<br />\nOf Course I can. :-)\r<br />\nSome words to how this situation is possible.\r<br />\nIn our company the windows domain (NT4 domain with samba3 as primary domain controller) is named &quot;XYZ&quot;. But our DNS (bind9) extends a hostname &quot;ABC&quot; to the FQDN &quot;ABC.companyname.com&quot; and resolves to his IP-Address. In a situation I cannot reproduce a client sets the primary domain entry to &quot;XYZ&quot; while joining our domain &quot;XYZ&quot;. The resulting FQDN of this client is &quot;ABC.XYZ&quot;. If I ping this client from console with &quot;ping ABC&quot; everything is ok. If I try &quot;ping ABC.XYZ&quot; it fails, cause our DNS do not have an entry for this. We have around 70 Windows7 x64 Clients and all are joined to domain the same way.\r<br />\nRemoving the primary DNS suffix in Windows GUI fails. So I have deleted the values (not the key itself !) of the two keys &quot;Domain&quot; and &quot;NV Domain&quot; in &quot;HKLM\\SYSTEM\\CurrentControlSet\\services\\Tcpip\\Parameters&quot;. Now the hostname is &quot;ABC&quot; without primary DNS suffix &quot;XYZ&quot;. Our DNS extends to &quot;ABC.companyname.com&quot; and delivers a correct IP-address.\r<br />\n<br />\nIf WSUS-PP would strip a hostname down to the part before the first point, it would work without editing the registry. But this would cause problems if there is a multi-domain environment with the same hostname in two different domains.\r<br />\n<br />\nI'm only testing with 2 clients for now. If my &quot;solution&quot; is the wrong way and would cause more problems in future, please let me know. Any advice is appreciated. Thanks.<br />\n",
+    "PostedDate": "2014-07-13T04:54:44.783-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

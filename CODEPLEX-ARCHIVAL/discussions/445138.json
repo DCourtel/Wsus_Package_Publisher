@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1049331",
+    "ThreadId": "445138",
+    "Html": "Hi,\r<br />\n<br />\nI'd like to publish a .msp to update Adobe Reader from 11.0.00X to 11.0.03. \r<br />\n<br />\nI'd also like to apply a new set of customizations created with Adobe Customization Wizard to PCs that allready have Adobe Reader 11.0.x installed.\r<br />\n<br />\nI understand how to apply the .msp file, but sure if it is possible to apply new .mst.\r<br />\n<br />\n I tried a full reinstall package of 11.0.003 that was set to silent install itself, but as the test PC already has 11.0.003, and some of my destination PCs may as well, the installer prompts user with choice to remove or repair install.\r<br />\n<br />\nShould I just apply .MSP to v 11.0.003 (as per your published instructions) and use GPO registry entries  to change settings on clients or is there a way to for the reapplying of .mst settings that you might know of?\r<br />\n<br />\nThanks,\r<br />\n<br />\nJonathon.<br />\n",
+    "PostedDate": "2013-05-27T16:56:00.857-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1049768",
+    "ThreadId": "445138",
+    "Html": "<strong>jonathonz wrote:</strong><br />\n<blockquote>\nI'd like to publish a .msp to update Adobe Reader from 11.0.00X to 11.0.03. <br />\n</blockquote>\nYou can only patch a MSI with a MSP.<br />\n<blockquote>\nI'd also like to apply a new set of customizations created with Adobe Customization Wizard to PCs that allready have Adobe Reader 11.0.x installed.<br />\n<br />\nI understand how to apply the .msp file, but sure if it is possible to apply new .mst.<br />\n</blockquote>\nYou don't must publish a new MST.<br />\n<blockquote>\nI tried a full reinstall package of 11.0.003 that was set to silent install itself, but as the test PC already has 11.0.003, and some of my destination PCs may as well, <br />\n the installer prompts user with choice to remove or repair install.<br />\n<br />\nShould I just apply .MSP to v 11.0.003 (as per your published instructions) and use GPO registry entries  to change settings on clients or is there a way to for the reapplying of .mst settings that you might know of?<br />\n</blockquote>\nIt is a good way, for me the better way, to deploy Registry Settings with GPO.\r<br />\n<br />\nWinfried<br />\n",
+    "PostedDate": "2013-05-28T12:14:40.59-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1049830",
+    "ThreadId": "445138",
+    "Html": "I'm not at ease with .MST file. But I'm pretty much sure that MST file apply only on MSI file.\r<br />\nIf you have some time to test you can make a 'Custom Update' (this feature is available in the latest release) and modify Registry settings as Adobe say :\r<br />\n<a href=\"http://www.adobe.com/devnet-docs/acrobatetk/index.html\" rel=\"nofollow\">ETKHome</a>\r<br />\n<a href=\"http://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/index.html\" rel=\"nofollow\">Preference Reference</a><br />\n",
+    "PostedDate": "2013-05-28T15:11:46.373-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:35:37.29-07:00"
+  },
+  {
+    "Id": "1061106",
+    "ThreadId": "445138",
+    "Html": "You  can set the now deployed Version of Adobe Reader 11.0.0 to uninstall and than deploy the Adobe Reader 11.0.0 with your newly created .mst File. It should get installed after the uninstallation of the first package.\r<br />\nBut as Winfried already said, it could be much easier to push out the new customizations with GPO/GPP.\r<br />\n<br />\nHTH\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-06-25T14:26:53.95-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

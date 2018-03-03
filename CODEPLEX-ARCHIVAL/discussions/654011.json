@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1471378",
+    "ThreadId": "654011",
+    "Html": "Colleagues Good afternoon, tell me whether it is possible to set up WPP so he took the program from the network, and not from the server on which it is installed.\r<br />\n<br />\nThank you!\r<br />\n<br />\n<a href=\"http://imgur.com/qI0zHfB\" rel=\"nofollow\">Photo</a><br />\n",
+    "PostedDate": "2016-04-26T06:23:21.513-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471385",
+    "ThreadId": "654011",
+    "Html": "Which Version of WPP you are using?<br />\n",
+    "PostedDate": "2016-04-26T09:20:06.223-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471419",
+    "ThreadId": "654011",
+    "Html": "Good morning, I use last release v1.3.1603.29.<br />\n",
+    "PostedDate": "2016-04-26T22:52:29.807-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471444",
+    "ThreadId": "654011",
+    "Html": "Wow, i never use at this place UNC-Path, ok, pls create a issue. I hope the Developer, David, will bring the feature in the next release. ;)<br />\n",
+    "PostedDate": "2016-04-27T03:48:39.633-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471459",
+    "ThreadId": "654011",
+    "Html": "Oh ok. thanks! I create issue.<br />\n",
+    "PostedDate": "2016-04-27T06:29:14.153-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

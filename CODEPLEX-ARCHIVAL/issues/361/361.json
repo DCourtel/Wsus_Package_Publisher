@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-03-13T12:20:58.677-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hi there,\r\n\r\nFor my testing i created some packages (FrontMotion, Acrobat DC). And i created it with same name for each (example \"Acrobat DC\") For some reason packages won't appear in WPP (???), but still in WSUS (I push it as rejected).\r\n\r\nThere is a way to clean my crappy entries ? How to check fine/crap entry in WPP ?\r\n\r\nAnother issue is that if i'm creating package, if i reload WPP, existing packages vanishing and the update section is empty... How can i do ?\r\n\r\nThanks a lot",
+    "LastUpdatedDate": "2017-03-13T12:20:58.677-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-03-08T06:56:57.593-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Update not listed",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 361
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Auto update, i just checking in Settings > Updates.\nThere is a option \"Show Locally-Published Updates that are also visible in Wsus Console\"\n\nSo all is fine, you can close the issue ;-)",
+      "PostedDate": "2017-03-08T07:09:01.003-08:00",
+      "Id": 207682
+    }
+  ]
+}

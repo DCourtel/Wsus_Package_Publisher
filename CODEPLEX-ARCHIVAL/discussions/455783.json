@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1089316",
+    "ThreadId": "455783",
+    "Html": "Hi,\r<br />\n<br />\nDo we also need to import the certificate that was created in WSUS primary server to our Replica servers?\r<br />\n<br />\nWe are able to see and publish MS updates in replica servers but not with the non-MS updates.\r<br />\n<br />\nIf we need to, how can we add the WSUS folder in certificate ?<br />\n\r<br />\nThanks!<br />\n",
+    "PostedDate": "2013-09-06T11:34:28.533-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1089343",
+    "ThreadId": "455783",
+    "Html": "Hi cjp_21,\r<br />\n<br />\nthe replica server will download locally published updates from your upstream server, so it needs to trusted these files.\r<br />\n<br />\nYou have to import the certificate into the &quot;Trusted Publushers&quot; store.<br />\n<ul>\n<li>If you use a self-signed certificate, import it into the &quot;Trusted Root authorities&quot; too.</li>\n<li>If you use a home-made certificate, import the certificate of the Root Authority into the  &quot;Trusted Root authorities&quot;.</li>\n</ul>\n",
+    "PostedDate": "2013-09-06T13:02:55.43-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-12T08:45:24.68-07:00"
+  }
+]

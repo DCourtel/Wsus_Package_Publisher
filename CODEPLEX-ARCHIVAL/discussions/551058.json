@@ -1,0 +1,226 @@
+[
+  {
+    "Id": "1264086",
+    "ThreadId": "551058",
+    "Html": "I currently set up packages for Adobe Flash Player 14 and Java 7u60. The packages are installing properly but if you check for updates again it wants to install them both again.\r<br />\n<br />\nI have verified that both programs are installed properly on the multiple machines but cannot figure out what setting I'm missing that recognizes a package is already installed.\r<br />\n<br />\nI also restarted the computers after applying an update.<br />\n",
+    "PostedDate": "2014-07-09T11:05:49.28-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264108",
+    "ThreadId": "551058",
+    "Html": "What do you have set as &quot;IsInstallable&quot; and &quot;Isinstalled&quot; Rules ?<br />\n",
+    "PostedDate": "2014-07-09T12:12:20.22-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264135",
+    "ThreadId": "551058",
+    "Html": "Where would that be located? \r<br />\n<br />\nI used the Installing Java 7u21 without Java Auto Updater .pdf on the documentation tab to reference how I create my updates.<br />\n",
+    "PostedDate": "2014-07-09T13:34:02.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264156",
+    "ThreadId": "551058",
+    "Html": "Page 7,8 for &quot;IsInstalled&quot; rule.\r<br />\nPage 10 for &quot;IsInstallable&quot; rule.<br />\n",
+    "PostedDate": "2014-07-09T14:18:51.113-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264159",
+    "ThreadId": "551058",
+    "Html": "I am confused as to where this is. When I look under the Rule Type drop down I do not see windows with those titles. Per the instructions I add the MSI Product Installed product code on the steps of 7,8 and Delete Rules at Package Level and add it again for the steps of 10 and check reverse rule and Delete Rules at Package Level.<br />\n",
+    "PostedDate": "2014-07-09T14:25:16.897-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264228",
+    "ThreadId": "551058",
+    "Html": "This mean, you are using the MSI product code for Java 7U21. You need to use the code for Java 7U60.<br />\n",
+    "PostedDate": "2014-07-09T21:35:14.537-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264384",
+    "ThreadId": "551058",
+    "Html": "I extracted the MSI product code from the 7u60 install. I'm using the documentation to remind me what steps I need to do to create the update. Things requiring changing being the MSI product code and path to file. Correct me if I'm wrong.<br />\n",
+    "PostedDate": "2014-07-10T05:39:31.413-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264491",
+    "ThreadId": "551058",
+    "Html": "So, what do you have set as &quot;IsInstallable&quot; and &quot;Isinstalled&quot; Rules ?<br />\n",
+    "PostedDate": "2014-07-10T09:30:50.083-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264511",
+    "ThreadId": "551058",
+    "Html": "Like I said before, I do not know where this is. You referred me to pages 7,8 and 10 and I see no text that says &quot;isinstallable&quot; or &quot;isinstalled&quot; on the page or the dropdowns. Do you have any more specifics as to where this information is located other than update creation wizard pages from the documentation?<br />\n",
+    "PostedDate": "2014-07-10T10:03:39.597-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264530",
+    "ThreadId": "551058",
+    "Html": "When you create an update, on top of the window, there is a text that explain what this window is for.\r<br />\nWhen you see :<br />\n<blockquote>\nIndicate here the rule or rules that allow clients computer to determine if the update <strong>is already installed</strong>.<br />\n</blockquote>\nYou are in the window where you can define &quot;IsInstalled&quot; rules.\r<br />\n<br />\nWhen you see :<br />\n<blockquote>\nIndicate here the rule or rules that allow clients computer to determine if the update <strong>is installable</strong>.<br />\n</blockquote>\nYou are in the window where you can define &quot;IsInstallable&quot; rules.\r<br />\n<br />\nTell me what you have define as rules.<br />\n",
+    "PostedDate": "2014-07-10T11:07:55.507-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264563",
+    "ThreadId": "551058",
+    "Html": "isinstalled:\r<br />\n<br />\n&lt;msiar:MsiProductInstalled ProductCode=&quot;{57bda5c6-443c-4d65-b233-2823932170ff}&quot;/&gt;\r<br />\n<br />\nisinstallable:\r<br />\n<br />\n&lt;lar:Not&gt;\r<br />\n&lt;msiar:MsiProductInstalled ProductCode=&quot;{57bda5c6-443c-4d65-b233-2823932170ff}&quot;/&gt;\r<br />\n&lt;/lar:Not&gt;<br />\n",
+    "PostedDate": "2014-07-10T12:16:28.223-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264595",
+    "ThreadId": "551058",
+    "Html": "You have used the UpgradeCode instead of the product code.\r<br />\nThe productCode for Java 7 update 60 is : {26A24AE4-039D-4CA4-87B4-2F03217060FF} for 32bit and {26A24AE4-039D-4CA4-87B4-2F06417060FF} for 64bit<br />\n",
+    "PostedDate": "2014-07-10T13:39:53.423-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264599",
+    "ThreadId": "551058",
+    "Html": "I have made the change and will try the install again. I am also having this issue with my Adobe Flash package. I double checked my product code to verify I wasn't using the update code and it has the product code.<br />\n",
+    "PostedDate": "2014-07-10T13:58:34.23-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264672",
+    "ThreadId": "551058",
+    "Html": "You don't need to install again. Clients computer will detect the change into metadata of the udpate and therefore, re-evaluate these package based on the new rules.\r<br />\n<br />\nWhat rules do you have include into Adobe package ?<br />\n",
+    "PostedDate": "2014-07-10T22:24:52.383-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264787",
+    "ThreadId": "551058",
+    "Html": "isinstalled:\r<br />\n<br />\n&lt;msiar:MsiProductInstalled ProductCode=&quot;{1f5e5f2e-5e61-431d-b796-58ccc6b68e28}&quot;/&gt;\r<br />\n<br />\nisinstallable:\r<br />\n<br />\n&lt;lar:Not&gt;\r<br />\n&lt;msiar:MsiProductInstalled ProductCode=&quot;{1f5e5f2e-5e61-431d-b796-58ccc6b68e28}&quot;/&gt;\r<br />\n&lt;/lar:Not&gt;<br />\n",
+    "PostedDate": "2014-07-11T05:40:06.463-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264904",
+    "ThreadId": "551058",
+    "Html": "what is the exact version of Flash player (14.0.0.xxx) and, is it the ActiveX or the Plugin ?<br />\n",
+    "PostedDate": "2014-07-11T10:31:26.72-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264911",
+    "ThreadId": "551058",
+    "Html": "14.0.0.125 ActiveX<br />\n",
+    "PostedDate": "2014-07-11T10:41:11.553-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264935",
+    "ThreadId": "551058",
+    "Html": "Rules looks ok. Most likely, something went wrong during the installation of the activeX of Flash player 14.0.0.125. On a computer, uninstall flash player, and let WU-Agent to install again Flash. Then see if the problem occur again.<br />\n",
+    "PostedDate": "2014-07-11T11:50:13.627-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264948",
+    "ThreadId": "551058",
+    "Html": "I now receive Error Code 6BA. Am I right in assuming this has to do with the isintalled and isinstallable rules? Is there a way to make the update package recognize if the machine has the application the package is trying to install already and not install, but also install on computers that may not have adobe flash installed yet?<br />\n",
+    "PostedDate": "2014-07-11T12:38:22.543-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1265131",
+    "ThreadId": "551058",
+    "Html": "<strong>Psolberg wrote:</strong><br />\n<blockquote>\nI now receive Error Code 6BA. Am I right in assuming this has to do with the isintalled and isinstallable rules? Is there a way to make the update package recognize if the machine has the application the package is trying to install already and not install, but also install on computers that may not have adobe flash installed yet?<br />\n</blockquote>\nAre you trying on a W8.x Client? If yes, W8.x will get Flash Player from Windows Update (Microsoft) directly.<br />\n",
+    "PostedDate": "2014-07-12T08:28:39.7-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1265134",
+    "ThreadId": "551058",
+    "Html": "IsInstalled and IsInstallable rules are ok, assuming you are trying to install Flash Player 14.0.0.125 ActiveX.\r<br />\nI think the installation of Adobe Flash Player has been tampered with.\r<br />\nTry to use Uninstaller of Flash Player:  <a href=\"http://helpx.adobe.com/flash-player/kb/uninstall-flash-player-windows.html\" rel=\"nofollow\">http://helpx.adobe.com/flash-player/kb/uninstall-flash-player-windows.html</a> \r<br />\nAnd then reinstall with WU-Agent.<br />\n",
+    "PostedDate": "2014-07-12T08:39:18.593-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1265493",
+    "ThreadId": "551058",
+    "Html": "They are Windows 7 machines. I will recreate the package with Adobe Flash 14.0.0.145 ActiveX.<br />\n",
+    "PostedDate": "2014-07-14T06:25:46.683-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1265539",
+    "ThreadId": "551058",
+    "Html": "For Adobe Flash Player 14.0.0.145, you will need to use another MSI Product-Code.<br />\n",
+    "PostedDate": "2014-07-14T08:15:18.27-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1287105",
+    "ThreadId": "551058",
+    "Html": "For Flashplayer  I added a program to be executed first the uninstaller.   the command line is:   &quot;uninstall_flash_player.exe -uninstall&quot;   without quotation marks, then  the installation was done successffully on all the previous was failed.<br />\n",
+    "PostedDate": "2014-08-06T09:14:11.117-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-13T03:15:55.587-07:00"
+  },
+  {
+    "Id": "1313722",
+    "ThreadId": "551058",
+    "Html": "Is this the proper Is Installed rule to check that the version of this package has already been installed and to NOT install again (adobe flash player):\r<br />\n<br />\n&lt;bar:FileExists Path=&quot;C:\\Windows\\SysWOW64\\Macromed\\Flash&quot;/&gt;<br />\n",
+    "PostedDate": "2014-10-15T12:32:16.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1313727",
+    "ThreadId": "551058",
+    "Html": "You are using a &quot;File Exists&quot; rule but the path refers to a folder !\r<br />\nDoes &quot;C:\\Windows\\SysWOW64\\Macromed\\Flash&quot; will exists on 32 bit computers ?\r<br />\n<br />\nYou should use the MSI product code for this release.<br />\n",
+    "PostedDate": "2014-10-15T12:47:33.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1313729",
+    "ThreadId": "551058",
+    "Html": "I am using the product code. But noticed on some machines the flash package would try and install upon a restart (when the package was already installed) and users were waiting upwards of 30 minutes for the install (which had to be canceled so they could get on their machines to work).<br />\n<br />\nThis was using the MSI product code. We're running 64-bit machines.<br />\n",
+    "PostedDate": "2014-10-15T12:54:27.893-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1314360",
+    "ThreadId": "551058",
+    "Html": "Has anyone else run into an issue with their Adobe Flash player package taking an unreasonable amount of time to install on shutdown?<br />\n<br />\nI recreated my Adobe Flash Player ActiveX 15.0.0.189 package like every other one that's gone through successfully and the computer took 15 hours to go from &quot;installing package 1 of 1&quot; to saying shutting down. This process I left for another 4 hours before having to do a hard shutdown.<br />\n<br />\nAny suggestions are appreciated.<br />\n",
+    "PostedDate": "2014-10-17T07:33:40.233-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1211312",
+    "ThreadId": "533186",
+    "Html": "Hello guys,\r<br />\n<br />\nI have a couple of questions about the return codes...\r<br />\n<br />\nCan you please give me more information about return code and how they work and how I make them some use of them ?\r<br />\n<br />\nLet say this scenario:\r<br />\n<br />\nI create a custom upgrade with following structure:<br />\n<ol>\n<li>Create a variable - int var1</li>\n<li>Create a variable - int var2</li>\n<li>Run PowerShell scripts - Store Retrun Code to: var1</li>\n<li>\nDefire the return code for this Custom Upgrade - Return Code to var2<br />\n</li>\n</ol>\nAt the final page of the wizzard I have Vendor Name, Product name ... etc ... and Return Codes what are they about and what they have to do with the variables of Return Code I set in custom upgrade block.\r<br />\n<br />\nAnd my second question os:\r<br />\n<br />\nHow can I put in use the Return Code from the PowerShell script and the Return Code variable from the whole Custom Upgrade where are they stored, how can i see them ?\r<br />\n<br />\n<br />\n<br />\nThanks guys,\r<br />\nBest Regards,\r<br />\nMartin<br />\n",
+    "PostedDate": "2014-02-20T10:51:08.807-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1211668",
+    "ThreadId": "533186",
+    "Html": "Hi mnikolaev,\r<br />\n<br />\nFirst, a custom update can return only one 'Return Code', so you don't have to declare two variables.\r<br />\n<br />\nIn the update Wizard, the return code section allow you to define the meaning of the return code. For example, let's say your powershell script return -1 if success, 255 if success but a reboot is required and 254 if failed. Then you can create these return codes here.<br />\n",
+    "PostedDate": "2014-02-21T03:02:50.34-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-02-26T03:54:24-08:00"
+  }
+]

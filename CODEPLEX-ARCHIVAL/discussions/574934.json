@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1331850",
+    "ThreadId": "574934",
+    "Html": "Reading the documentation and it says the following:\r<br />\n<br />\n&quot;Once the certificate have been generate, click on the « Save the certificate » button\r<br />\nto record the file onto the disk. (You will need it in the next step).&quot;\r<br />\n<br />\nOnce I generate the certificate I can't click the &quot;Save the certificate&quot; button.  It's grayed out.<br />\n",
+    "PostedDate": "2014-12-14T13:55:10.937-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1332168",
+    "ThreadId": "574934",
+    "Html": "Is the option still greyed out after you press the Connect/Reload button, or reconnect to the server by closing and opening WPP again?<br />\n",
+    "PostedDate": "2014-12-15T07:51:08.79-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-12-15T12:35:19.093-08:00"
+  },
+  {
+    "Id": "1332332",
+    "ThreadId": "574934",
+    "Html": "Actually yes that helped.  Thanks.<br />\n",
+    "PostedDate": "2014-12-15T09:25:56.35-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

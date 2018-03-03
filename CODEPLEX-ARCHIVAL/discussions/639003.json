@@ -1,0 +1,98 @@
+[
+  {
+    "Id": "1428210",
+    "ThreadId": "639003",
+    "Html": "Hi all,\r<br />\n<br />\nI have installed WPP on my Windows Server 2012 R2 server. There is also my WSUS installed.\r<br />\n<br />\nI can't create any package with WPP as I always get the error message &quot;CreateDirectory failed&quot;.\r<br />\nI made a standard installation, didn't changed a path. I first thought, that it is a problem with the access rights for the path. But I already checked this. I can manually create folders. \r<br />\nHas anybody an idea how to fix it or where it comes from? Do I have to check some registry paths? All ideas are welcome as I really couldn't find a solution so far in the internet.\r<br />\n<br />\nOr: If there is no easy solution: Is there a proper way to uninstall wpp, so that I can start from the beginning?\r<br />\n<br />\nThanks a lot<br />\n",
+    "PostedDate": "2015-06-01T05:32:24.867-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1428319",
+    "ThreadId": "639003",
+    "Html": "<strong>Froschkoenig wrote:</strong><br />\n<blockquote>\nOr: If there is no easy solution: Is there a proper way to uninstall wpp, so that I can start from the beginning?<br />\n</blockquote>\nJust delete the program Directory. There are afaik no other files or registry settings<br />\n",
+    "PostedDate": "2015-06-02T00:56:03.487-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1428339",
+    "ThreadId": "639003",
+    "Html": "Hi, Usually this happen when ACL are wrong on the folder where Wsus store its packages.\r<br />\nLook NTFS permission on this folder : x:\\WSUS\\UpdateServicesPackages\r<br />\nIf the folder doesn't exists, create it.<br />\n",
+    "PostedDate": "2015-06-02T03:21:21.37-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1428371",
+    "ThreadId": "639003",
+    "Html": "<strong>NorbertFe wrote:</strong><br />\n<blockquote>\nJust delete the program Directory. There are afaik no other files or registry settings<br />\n</blockquote>\nIt's not possible to delete the folder. When I do this, I get the message, that a file ist still in use. I can't see an open file or folder. I also can't find a running service for wpp.\r<br />\n<br />\n<strong>DCourtel wrote:</strong><br />\n<blockquote>\nLook NTFS permission on this folder : x:\\WSUS\\UpdateServicesPackages<br />\nIf the folder doesn't exists, create it.<br />\n</blockquote>\nI already checked this. The folder exists and I have full access to this. <br />\n",
+    "PostedDate": "2015-06-02T05:39:10.867-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1428791",
+    "ThreadId": "639003",
+    "Html": "Has anybody else an idea how to fix my problem? It’s a bit urgent and I it seems that I’m not able to fix this small issue..Thanks again<br />\n",
+    "PostedDate": "2015-06-04T07:09:55.267-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1428817",
+    "ThreadId": "639003",
+    "Html": "Check permissions from this KB: technet.microsoft.com/de-de/library/dd939790(WS.10).aspx\r<br />\nDeinstall Antivirus from your WSUS.<br />\n",
+    "PostedDate": "2015-06-04T08:53:41.743-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1431846",
+    "ThreadId": "639003",
+    "Html": "We have the same Error here.\r<br />\n<br />\nEvery permission I checkt so far where right, according to the Guide.\r<br />\nI can create Folders in the \\WSUS\\UpdateServicesPackages Folder.\r<br />\nUnloading the Antivirus Programm also did not change a thing.\r<br />\n<br />\nWhere can i find a LOG-File for the process?\r<br />\nWhen we startet with this tool we had a few errors while downloading packages, there we get a detailed LOG-File and we could figure out what the problem was.\r<br />\nBut here we only get a short Error, and after that the Programm closes itself.<br />\n",
+    "PostedDate": "2015-06-25T06:59:35.833-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1431854",
+    "ThreadId": "639003",
+    "Html": "Hi, such errors are thrown by Wsus itself. You may find some informations in the Windows Event log or the Wsus log.<br />\n",
+    "PostedDate": "2015-06-25T07:51:04.973-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1431856",
+    "ThreadId": "639003",
+    "Html": "There is nothing in the WindowsUpdate.log and in the Windows Event Log.\r<br />\n<br />\nMaybe the connection to WSUS itself is not working correctly?\r<br />\nI am not able to see Local / Windows Updates either. (The Option under Settings is checked)<br />\n",
+    "PostedDate": "2015-06-25T08:02:41.213-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1431977",
+    "ThreadId": "639003",
+    "Html": "Please, check into this folder : C:\\Program Files\\Update Services\\LogFiles<br />\nOn the Wsus Server<br />\n",
+    "PostedDate": "2015-06-26T03:16:37.737-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1431998",
+    "ThreadId": "639003",
+    "Html": "2015-06-26 11:42:19.815 UTC\tWarning\tw3wp.11\tSoapExceptionProcessor.SerializeAndThrow\tDiscarding stack trace for user X, IP Address X.X.X.X, exception Microsoft.UpdateServices.Administration.WsusObjectNotFoundException: Das angegebene Element wurde in der Datenbank nicht gefunden.\r<br />\n   bei Microsoft.UpdateServices.Internal.DatabaseAccess.AdminDataAccess.ExecuteSPGetUpdateById(String preferredCulture, UpdateRevisionId id)\r<br />\n   bei Microsoft.UpdateServices.Internal.ApiRemoting.ExecuteSPGetUpdateById(String preferredCulture, UpdateRevisionId id)\r<br />\n2015-06-26 11:42:20.316 UTC\tInfo\tWsus Package Publisher.19\tThreadEntry\t_ThreadPoolWaitCallback.PerformWaitCallback\r<br />\n2015-06-26 11:42:20.327 UTC\tError\tWsus Package Publisher.19\tPublisher.PublishPackage\tPublishPackage(): Operation Failed with Error: CreateDirectory failed\r<br />\n   at Microsoft.UpdateServices.Internal.BaseApi.Publisher.PublishPackage(String sourcePath, String additionalSourcePath, String packageDirectoryName)\r<br />\n   at Wsus_Package_Publisher.WsusWrapper.PublishUpdate(SoftwareDistributionPackage sdp, String folder)\r<br />\n   at Wsus_Package_Publisher.CatalogUpdateImporter.PublishSDP()\r<br />\n   at Wsus_Package_Publisher.CatalogUpdateImporter.DownloadFileCompleted(Object sender, AsyncCompletedEventArgs e)\r<br />\n   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean ignoreSyncCtx)\r<br />\n   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()\r<br />\n   at System.Threading.ThreadPoolWorkQueue.Dispatch()\r<br />\n   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()\r<br />\n<br />\n<br />\nCan you spot the Error? \r<br />\n(I cleared the Username and the IP Address)<br />\n",
+    "PostedDate": "2015-06-26T04:52:47.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1432295",
+    "ThreadId": "639003",
+    "Html": "It seams that the WSUSContent / UpdateServicesPackages had to be shared. \r<br />\nThis must have been forgotten during the last enlargment of the Content Drive...\r<br />\n<br />\nI just published my first Update to a Client.\r<br />\n<br />\nThank you!<br />\n",
+    "PostedDate": "2015-06-29T05:29:02.057-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-06-30T12:59:32.953-07:00"
+  }
+]

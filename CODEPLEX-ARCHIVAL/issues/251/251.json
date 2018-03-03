@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:07.91-08:00",
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "I have a product name that has 0 updates within its container... Delete product is grayed out.\r\n\r\nDo I have to run a cleanup or something to clear this?",
+    "LastUpdatedDate": "2017-02-03T11:50:07.91-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-02-11T07:59:54.307-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Cannot delete package group",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 251
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This appears to happen if I 'revise' an update and change the category it is in.  Even if I create a 'new' update in the category i want edleted and delete it, it does not get removed.",
+      "PostedDate": "2015-02-11T10:53:50.643-08:00",
+      "Id": 174422
+    },
+    {
+      "Message": "Tu ne peux supprimer un groupe seulement si tu supprime le paquet dedans.\nQuand je veux réviser un paquet et supprimer l'ancien groupe :\n- Je révise avec les nouveaux attributs,\n- J'exporte la nouvelle configuration\n- Je révise avec les anciens attributs,\n- Je supprime le paquet qui supprime l'ancien groupe,\n- J'importe le nouveau paquet.\n\n\nYou can delete a group only if you remove the inside package.\nWhen I want to review a package and delete the old Group:\n- I review with new attributes,\n- I export the new configuration\n- I review with the old attributes,\n- I removes the package that removes the old group ,\n- I import the new package.",
+      "PostedDate": "2015-02-13T02:09:18.957-08:00",
+      "Id": 174519
+    },
+    {
+      "Message": "> Delete product is grayed out\n\nThis option is available if :\n - WPP run locally on the Wsus server (\"local\" is display at the right of the server name)\n - There is no update in the product\n - The option \"Visible in the Wsus console\" is NOT set to \"Never\"\n\nYou can not delete a product from Microsoft or the \"Locally Published\" product.",
+      "PostedDate": "2015-02-14T11:34:46.953-08:00",
+      "Id": 174601
+    },
+    {
+      "Message": "I have run across this bug many times when moving updates to different groups.\n\nThe easiest solution/workaround I have found is to create a custom update that does nothing (create a variable and have it return a 1) and add it to that container. Then delete the new update and you should then be able to delete the empty container.",
+      "PostedDate": "2015-04-16T08:09:23.827-07:00",
+      "Id": 182949
+    },
+    {
+      "Message": "Sorry for thread hijacking, but I am having this same issue with an empty group that cannot be removed, the \"Delete Product\" is grayed out even when connected locally. The Package group is empty and I am unable to remove it. I attempted WWWolf's suggestion about creating an update that does nothing, but the group survived even after deleting the empty update. Does any one else have any suggestions?",
+      "PostedDate": "2015-08-20T14:42:31.583-07:00",
+      "Id": 189418
+    }
+  ]
+}

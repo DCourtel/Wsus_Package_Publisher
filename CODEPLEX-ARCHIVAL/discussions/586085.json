@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1362601",
+    "ThreadId": "586085",
+    "Html": "I am installing Java 8 with a custom update, and it works fine.  But included in that update is a powershell script to uninstall old Java installs; and it doesn't appear to be working. I can run the script from a powershell prompt - running as admin - and it works fine.  Do the powershell scripts through custom updates get ran as admin? Is there anywhere I can look for a log of the custom update other than the windows update log?  Below is my powershell script.<br />\n<pre><code>Param ([string]$iArch=&quot;&quot;)\n#$ErrorActionPreference = &quot;SilentlyContinue&quot;\n$cArch = Get-WMIObject win32_processor -Property addresswidth | Select-Object -Property addresswidth\nIf ($cArch.addresswidth -eq &quot;32&quot;)\n{\n    If ($iArch -eq 32)\n    {\n        $uninst = Get-ChildItem HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall | ForEach-Object {Get-ItemProperty $_.pspath} | Where {$_.DisplayName -like &quot;Java ?* Update *&quot;}\n    }\n    else\n    {\n        exit\n    }\n    ForEach($i in $uninst)\n    {\n        #write-host $i.PSChildName\n        $n = $i.PSChildName\n        $cmd = &quot;msiexec.exe&quot;\n        $args = @(&quot;/x&quot;,&quot;$n&quot;,&quot;/quiet&quot;)\n        &amp; $cmd $args\n    }\n}\nIf ($cArch.addresswidth -eq &quot;64&quot;)\n{\n    If ($iArch -eq 32)\n    {\n        $uninst = Get-ChildItem HKLM:\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall | ForEach-Object {Get-ItemProperty $_.pspath} | Where {$_.DisplayName -like &quot;Java ?* Update *&quot;}\n    }\n    elseif ($iArch -eq 64)\n    {\n        $uninst = Get-ChildItem HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall | ForEach-Object {Get-ItemProperty $_.pspath} | Where {$_.DisplayName -like &quot;Java ?* Update *&quot;}\n    }\n    ForEach($i in $uninst)\n    {\n        #write-host $i.PSChildName\n        $n = $i.PSChildName\n        $cmd = &quot;msiexec.exe&quot;\n        $args = @(&quot;/x&quot;,&quot;$n&quot;,&quot;/quiet&quot;)\n        &amp; $cmd $args\n    }\n}</code></pre>\n\n",
+    "PostedDate": "2015-03-11T13:05:20.463-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362609",
+    "ThreadId": "586085",
+    "Html": "Hi, you can find the log here : C:\\Windows\\Temp\\CustomUpdateEngine.log\r<br />\nCustomUpdate runs with 'System' account if the option 'Can request user  input' is NOT tick, otherwise, it runs with the same account than the logged user.<br />\n",
+    "PostedDate": "2015-03-11T13:40:34.013-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362644",
+    "ThreadId": "586085",
+    "Html": "I look like very close to the tool i wrote for uninstall2install Java. Maybe in a couple of days the Tool is online, then you can try to uninstall all existing java versions and install one java version.<br />\n",
+    "PostedDate": "2015-03-11T15:44:05.337-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362791",
+    "ThreadId": "586085",
+    "Html": "OK, so I looked at the log and it claimed to have ran the powershell script but nothing was done on the PC.  I modified my script so that it doesn't require an argument and created a simple custom update to just run the uninstall script.  No CustomUpdateEngine.log was created and nothing was uninstalled yet it reported successfully installed in Windows Update.  Below is the powershell and then the xml for the update.  Also, I added logging to the script and a log file was not created.  How does wpp work with the powershell execution policy?  Does the PC think it's running the script locally or off a network share?  Or does it just ignore the execution policy? That could be the issue since I haven't ran any powershell scripts on the test PC before.<br />\n<pre><code>Param ([string]$iArch=&quot;32&quot;)\n$log    = &quot;C:\\Windows\\Temp\\jUI32.log&quot; \n$date = Get-Date \n$ErrorActionPreference = &quot;SilentlyContinue&quot;\n&quot;******Import users script ran on &quot; + $date + &quot; by: &quot;+$env:USERNAME+&quot;: &quot; | Out-File $log -append \n&quot;---------------------------------------------------&quot; | Out-File $log -append\n$cArch = Get-WMIObject win32_processor -Property addresswidth | Select-Object -Property addresswidth\nIf ($cArch.addresswidth -eq &quot;32&quot;)\n{\n    $uninst = Get-ChildItem HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall | ForEach-Object {Get-ItemProperty $_.pspath} | Where {$_.DisplayName -like &quot;Java ?* Update *&quot;}\n    ForEach($i in $uninst)\n    {\n        #write-host $i.PSChildName\n        $n = $i.PSChildName\n        $cmd = &quot;msiexec.exe&quot;\n        $args = @(&quot;/x&quot;,&quot;$n&quot;,&quot;/quiet&quot;)\n        &amp; $cmd $args\n    }\n}\nIf ($cArch.addresswidth -eq &quot;64&quot;)\n{\n    $uninst = Get-ChildItem HKLM:\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall | ForEach-Object {Get-ItemProperty $_.pspath} | Where {$_.DisplayName -like &quot;Java ?* Update *&quot;}\n    ForEach($i in $uninst)\n    {\n        #write-host $i.PSChildName\n        $n = $i.PSChildName\n        $cmd = &quot;msiexec.exe&quot;\n        $args = @(&quot;/x&quot;,&quot;$n&quot;,&quot;/quiet&quot;)\n        &amp; $cmd $args | Out-File $log -append \n        $n+&quot; - uninstalled&quot; | Out-File $log -append \n    }\n}\n&quot;---------------------------------------------------&quot; | Out-File $log -append\n</code></pre>\n\n<pre><code>&lt;CustomUpdate&gt;\n&lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.VariableElement&lt;/ElementType&gt;\n&lt;Name&gt;return&lt;/Name&gt;\n&lt;Type&gt;Int&lt;/Type&gt;\n&lt;ID&gt;2ebd075c-0b44-438d-b781-89fcd3f94689&lt;/ID&gt;\n&lt;/Action&gt;\n&lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.ScriptElement&lt;/ElementType&gt;\n&lt;ScriptType&gt;Powershell&lt;/ScriptType&gt;\n&lt;Filename&gt;jUI32.ps1&lt;/Filename&gt;\n&lt;Arguments&gt;&lt;/Arguments&gt;\n&lt;KillProcess&gt;False&lt;/KillProcess&gt;\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;\n&lt;Variable&gt;2ebd075c-0b44-438d-b781-89fcd3f94689&lt;/Variable&gt;\n&lt;/Action&gt;\n&lt;/CustomUpdate&gt;</code></pre>\n\n",
+    "PostedDate": "2015-03-12T06:00:21.383-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1363093",
+    "ThreadId": "586085",
+    "Html": "After some trial and error I was able to make it work. My custom update xml is below.  What's odd though is that the update ran just fine, but there was still no CustomUpdateEngine.log at C:\\Windows\\Temp.  \r<br />\n<pre><code>&lt;CustomUpdate&gt;\n&lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.VariableElement&lt;/ElementType&gt;\n&lt;Name&gt;ret&lt;/Name&gt;\n&lt;Type&gt;Int&lt;/Type&gt;\n&lt;ID&gt;9dc0ecf3-6d10-489a-ade4-185dbd850217&lt;/ID&gt;\n&lt;/Action&gt;\n&lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;\n&lt;PathToExecutable&gt;%windir%\\System32\\WindowsPowershell\\v1.0\\powershell.exe&lt;/PathToExecutable&gt;\n&lt;Parameters&gt;-ExecutionPolicy Bypass -WindowStyle Hidden -NonInteractive -NoProfile -File jUI32.ps1&lt;/Parameters&gt;\n&lt;KillProcess&gt;False&lt;/KillProcess&gt;\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;\n&lt;Variable&gt;9dc0ecf3-6d10-489a-ade4-185dbd850217&lt;/Variable&gt;\n&lt;/Action&gt;\n&lt;/CustomUpdate&gt;</code></pre>\n\n",
+    "PostedDate": "2015-03-13T05:05:01.113-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-03-13T05:05:08.243-07:00"
+  }
+]

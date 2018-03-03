@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1347415",
+    "ThreadId": "578977",
+    "Html": "Good morning,\r<br />\n<br />\nsince a few day i testing with WPP Release v1.3.1411.09 on a Server 2012R2 with several downstreamservers. The installation and configuration of WPP were without any problems.\r<br />\nTesting with deployment of Flashplayer and Firefox were also without any problems.\r<br />\nThx for that great piece of software!\r<br />\n<br />\nNow my issue:\r<br />\nI tried to deploy Adobe Reader. I used the import via catalogue and imported the updates (non MUI) for Adobe Reader 11.0.01 -&gt; 11.0.10. Everything fine till here.\r<br />\nI approved all the updates for my Testgroup. In that testgroup are 2 Clients installed from our WDS and after install they got Adobe Reader 11.0.00 via Distribution from GPO. Addional they got updates from GPO-Distribution till version 11.0.07.\r<br />\nNow in the 1st test from WPP they got the Update for Version 11.0.08 ... everything fine.\r<br />\nBut for the two following updates (11.0.09 and 11.0.10) i got the info &quot;Not Applicable&quot;.\r<br />\nI tested a little bit arround and also approved all the 10 updates ... now the weird thing is:\r<br />\nWindowsupdate offering these testclients the updates 11.0.02 and 11.0.05 (in one step).\r<br />\n... Confusing ... just for fun i tried to install them ... that failed ... OK.\r<br />\n<br />\nThen i tried also to download and publish them manual (not from catalog) without luck.\r<br />\nSo i am now out of ideas ... \r<br />\nHow can i check whats wrong  ... ? How can i deploy these update to my 500 Clients which\r<br />\ninstalled in the same way like described with installed AR 11.0.07? \r<br />\n<br />\nMy Target is to use only WPP in the Future. No more GPO-Distribution.\r<br />\n<br />\nbest regards \r<br />\nmoe<br />\n",
+    "PostedDate": "2015-01-30T00:37:01.997-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348234",
+    "ThreadId": "578977",
+    "Html": "no Idea?\r<br />\n<br />\nmoe<br />\n",
+    "PostedDate": "2015-02-02T05:54:51.713-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348402",
+    "ThreadId": "578977",
+    "Html": "Two things :<br />\n<ul>\n<li>Don't mix deployment methods.</li>\n<li>\nApplicability status are evaluate by Windows Update Agent by looking at &quot;IsInstalled&quot; rules and &quot;IsInstallable&quot; rules. In case of update from Catalog, these rules are authored by the editor of the MSI/MSP file.<br />\n</li>\n</ul>\nWhen you publish an update from a catalog, you can revise the update to see what applicability rule is Embedded.<br />\n",
+    "PostedDate": "2015-02-02T13:22:38.71-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348619",
+    "ThreadId": "578977",
+    "Html": "Thanks for your post!\r<br />\n<br />\nFor the previous installations via GPO every time i downloaded the EXE \r<br />\nuncompressed it and patched the msi with the msp file with the command:\r<br />\nmsiexec /qb /a F:\\AR\\AIP\\AcroRead.msi /p F:\\AR\\ARFiles\\AdbeRdrUpd1100X.msp\r<br />\n<br />\nNow our clients have these update in version 11.0.07 installed via GPO.\r<br />\n<br />\nWhat would be the right way to create updates for the WPP which can be installed \r<br />\non the clients with the above described installed Version 11.0.07?\r<br />\n<br />\n moe<br />\n",
+    "PostedDate": "2015-02-03T06:17:56.81-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348907",
+    "ThreadId": "578977",
+    "Html": "I made a new try:\r<br />\n<br />\ni  build an package like the previous packages...\r<br />\nfirst made an administrative Installation of the msi 11.0.0 and then:\r<br />\nmsiexec.exe /a AdbeRdr11000_de_DE.msi /p AdbeRdrUpd11010.msp\r<br />\n<br />\nThe directories of the administrative installtion and msi + mst files i added to the new update for publishing.\r<br />\nAt the last step before publishing i got an error message about the pathlength but the update will published\r<br />\nanyway.... \r<br />\nWhen i check the status my clients say &quot;Installed&quot; without installing the update. so it will also not displayed \r<br />\nfor installation ....\r<br />\n<br />\nI am really out of ideas atm .... anyone can help?\r<br />\n<br />\nmoe<br />\n",
+    "PostedDate": "2015-02-04T05:26:29.737-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

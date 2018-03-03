@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1455854",
+    "ThreadId": "648737",
+    "Html": "Hi Guys,\r<br />\ni try to Import a code signing certificate in to wpp. I enter the Password for the pfx file and chosose the right file. After that i received follow error message: Faild to load the certificate. Check the file.\r<br />\n<br />\nI used follow howto's:\r<br />\n<a href=\"http://www.theitcave.com/post/194\" rel=\"nofollow\">http://www.theitcave.com/post/194</a>\r<br />\n<a href=\"https://wsuspackagepublisher.codeplex.com/discussions/579215\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/579215</a>\r<br />\n<br />\nWPP Version: 1.3.1511.15<br />\n",
+    "PostedDate": "2015-12-14T05:41:00.32-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

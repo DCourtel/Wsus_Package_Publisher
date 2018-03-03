@@ -1,0 +1,66 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-11T22:25:24.137-08:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Dear WPP-Team,\r\n\r\nwe get a message on one of our WSUS maschines with WPP installed, which says the \"Certificate is invalid\" and we will not be able to publish updates. The certifcate indeed is valid (till 2016/1/2) since we use the same on 2 other WSUS maschines with WPP. If we try to load the certificate again, we get the message \"Failed to load the certificate\". Check the file. The load and import on another WPP and into Windows was successfully, so it seems not to be the certificate itself. Any thoughts or ideas?\r\n\r\nEnvironment is:\r\n\r\nOS = Windows Server 2012 R2 Standard\r\nWSUS = 6.3.9600.16384\r\nWPP = 1.3.1504.15\r\nWSUS and WPP on same maschine.\r\n\r\nI've attached the version screenshot for you.\r\n\r\nThanks in advance\r\n-Andreas-\r\n\r\n",
+    "LastUpdatedDate": "2015-11-11T22:25:24.137-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-05-21T07:00:01.023-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Certificate is invalid, although it is not",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 270
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1458168,
+      "FileName": "WPP-Version.jpg",
+      "DownloadUrl": ".\\1458168"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Hi, this can happen with some certificate.\nGo to Tools -> Settings and on the \"Server\" tab, tick the option \"Ignore Code-Signing certificate validation errors\".\n",
+      "PostedDate": "2015-05-21T12:15:03.987-07:00",
+      "Id": 184655
+    },
+    {
+      "Message": "Hello,\n\nthanks for the quick response.\n\nIn the meanwhile we've generated and provided a WPP certificate. After that we tried to load our own certificate again, we get the same error \"Failed to load the certificate\". Check the file\". \nNow we've checked on your advice the \"Ignore Code-Signing\" option and we were able to load our own certificate again. Could you provide any background information on which circumstances a WPP certificate validation fails and how to fix this, since checking the option is not the safest configuration?\n\nBest regards\n-Andreas-\n",
+      "PostedDate": "2015-05-21T22:39:31.143-07:00",
+      "Id": 184672
+    },
+    {
+      "Message": "Hi Andreas, \n\nI had the same problem just right now. \nFor short, the certificate revocation list was out of date. So I had to refresh the crl and the certificate error was solved. \n\nBackground to this error:\nI tried first the advice to ignore certificate issues, too. And my error was gone. But this makes no sense, if you use certificates. I created a new certificate and I could not import this certificate, too. Even though I activate the setting \"Ignore Code-Signing certificate validation errors\". \nWhat does WPP? WPP checks the certificate with the integrated .NET function of the X509Certificate2 Object, (Verify).\nThis function does a few checks:\n- datetime\n- chain trust\n- crl check\n\nFor the first two checks you can easily use the microsoft mmc \"Certificate\" or you double click on your certificate. For the third check, you can manually open your certficate revocation list and check the validity.\n\n\nHope this helps somebody.\n\nGreetings MovSiv",
+      "PostedDate": "2015-09-19T03:59:51.41-07:00",
+      "Id": 190443
+    },
+    {
+      "Message": "Hi MovSiv,\n\nthanks for your comments.\n\nWe are using a Microsoft CA for the code singning of our WPP packages.\n\nDo you know where I can find the crls, since I've never seen it in a Windows domain environment,\nonly in internet browsers.\n\nThanks in advanced\n-Andreas-\n\n",
+      "PostedDate": "2015-10-21T06:55:35.063-07:00",
+      "Id": 191804
+    }
+  ]
+}

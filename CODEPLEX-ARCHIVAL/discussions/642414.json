@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1437556",
+    "ThreadId": "642414",
+    "Html": "Hi,\r<br />\n<br />\nHow do i know if the update in WSUS is updated after i revise it in WPP?\r<br />\n<br />\nthanks<br />\n",
+    "PostedDate": "2015-08-06T07:11:14.797-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1437600",
+    "ThreadId": "642414",
+    "Html": "Double-click on the update, as if you want to revise it, and look if you see changes you have made.<br />\n",
+    "PostedDate": "2015-08-06T11:35:51.283-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1437624",
+    "ThreadId": "642414",
+    "Html": "For example I have make Patch A visible in wsus console. Then I revise Patch A in WPP. How will I know Patch A in wsus console is the latest patch that I have revise? Do I need to restart the sever again?<br />\n",
+    "PostedDate": "2015-08-06T13:32:51.09-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1437661",
+    "ThreadId": "642414",
+    "Html": "<strong>flarestar wrote:</strong><br />\n<blockquote>\nFor example I have make Patch A visible in wsus console. Then I revise Patch A in WPP. How will I know Patch A in wsus console is the latest patch that I have revise? &gt;Do I need to restart the sever again?<br />\n</blockquote>\nIn WSUS-Console you can get more details, right click on pane and select more Columns.  Release Date and other columns. There you can see what the latest is.<br />\n",
+    "PostedDate": "2015-08-06T21:50:11.637-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1437666",
+    "ThreadId": "642414",
+    "Html": "No need to restart the server. It can take 10~20 seconds for the Wsus server to update his database. But the update is up to date nearly immediately. Clients can need more time to see the change.<br />\n",
+    "PostedDate": "2015-08-06T23:35:53.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-08-11T03:08:41.687-07:00"
+  }
+]

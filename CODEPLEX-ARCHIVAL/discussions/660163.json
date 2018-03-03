@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1489923",
+    "ThreadId": "660163",
+    "Html": "I've searched the board and can't find anything that's similar to my issue other than a few posts saying WPP supports pushing updates to windows 10 client machines.\r<br />\n<br />\nI'm running a test adobe reader v11.0.0 installed on a win7 and a win10 Pro machine. Im currently have a different issue on the win7 machine but at least I am able to see the update in the windows update panel. In windows 10 that panel no longer exists but both machines are in the same OU with same GPOs applied.\r<br />\n<br />\nI can confirm via my WSUS console that the package is reporting as a needed update and is approved for install however running wuauclt.exe /detectnow on my windows 10 machine or clicking the check for updates box shows the system is already up to date and the program never installs.\r<br />\n<br />\nIn a post I came across someone seemed to suggest clients must be retrieving their updates from the WSUS server itself for things to work? Im not sure if this is correct or a requirement but we have different offices around the world and although our windows environment isn't huge, I've configured our WSUS server to be the update approver but client machines will retrieve the actual update files from MS update servers. Im not sure if this is what's causing the issue but seems unlinkely since my windows7 machine can see the update... Anyone have any suggestions?<br />\n",
+    "PostedDate": "2016-12-15T08:24:28.817-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1489925",
+    "ThreadId": "660163",
+    "Html": "okay, i spoke too soon. It seems windows update that just takes a while. The update now appears on my win10 client under update and security. But I am still having the same issue as on the win7 client. Download will complete just fine but when it attempts to do the install it automatically errors out right away with a 0x80070643 error. Checking the windowsupdate.log file doesn't provide much insight just another generic error code which google shows &quot;installation failure&quot; as the description for the error code...<br />\n",
+    "PostedDate": "2016-12-15T08:28:06.857-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1489940",
+    "ThreadId": "660163",
+    "Html": "This is the weirdest issue.....It looks like when you create the custom deployment if you list it as an application it fails to install....i redid the package and set the package type to update and it seems to have installed properly on my win7 box. If anyone's interested...the issue i was getting on the win10 box was adobe acrobat reader or something was loaded on the box....windows update log didnt point me anywhere so i checked the application event viewer and saw that it failed to install because a newer product existed already.... removed acrobat and rebooted and now I am able to install on the win10 box as well.<br />\n",
+    "PostedDate": "2016-12-15T12:50:36.1-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2016-12-15T12:54:55.807-08:00"
+  }
+]

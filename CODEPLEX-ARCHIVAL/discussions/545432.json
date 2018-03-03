@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1245711",
+    "ThreadId": "545432",
+    "Html": "I have published Adobe Flash Plugin using Package Publisher as per the documentation. All went well and all machines downloaded and installed the MSI. However, I have recently noticed that 2 machines that have previously successfully installed the packages are now reporting as failed.\r<br />\n<br />\nIt looks as though the packages have downloaded a second time and are trying to install again but are failing as the software is already installed.\r<br />\nI would be grateful for any assistance.<br />\n",
+    "PostedDate": "2014-05-15T06:04:32.287-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1245860",
+    "ThreadId": "545432",
+    "Html": "Try in a administrative Commandline on a client with this problems:\r<br />\n<br />\nnet stop wuauserv\r<br />\nrd /s /q %windir%\\SoftwareDistribution\r<br />\nnet start wuauserv\r<br />\nwuauclt /detectnow\r<br />\nwuauclt /reportnow\r<br />\nWait 10 Minutes, the client want to download and install FlashPlayer again?<br />\n",
+    "PostedDate": "2014-05-15T12:14:21.337-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1245886",
+    "ThreadId": "545432",
+    "Html": "As many computers install the update without any problem, I will assume you have made correct &quot;IsInstalled&quot; and &quot;IsInstalable&quot; Rules.\r<br />\nOn these 2 computers, try to uninstall completly Adobe Flash Player (use the tool from Adobe if necessary). And re-launch a detection<br />\n",
+    "PostedDate": "2014-05-15T13:04:38.893-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1247295",
+    "ThreadId": "545432",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nAs many computers install the update without any problem, I will assume you have made correct &quot;IsInstalled&quot; and &quot;IsInstalable&quot; Rules.<br />\nOn these 2 computers, try to uninstall completly Adobe Flash Player (use the tool from Adobe if necessary). And re-launch a detection<br />\n</blockquote>\nThanks for the feed back. I can confirm that &quot;IsInstalled&quot; and &quot;IsInstalable&quot; Rules were configured as per the documentation.\r<br />\n<br />\nAs I had problems on two machines I followed WinfriedSonntag advice for one and DCourtel advice for the other.\r<br />\n<br />\nPC1 - DCourtel:\r<br />\nI uninstalled Adobe Flash Play (I had to use the Adobe Flash Player uninstall tool to remove it completely). \r<br />\nAfter relaunching a detection the problem was no longer apparent. Flash was re-applied and a failure was no longer reported.\r<br />\n<br />\nPC2 - WinifriedSonntag:\r<br />\nAfter issuing the suggested commands the same problem was still apparent. Failure still reported.\r<br />\n<br />\nAny ideas what may have caused the initial failure?\r<br />\n<br />\nThanks again<br />\n",
+    "PostedDate": "2014-05-20T01:55:47.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-21T12:46:47.75-07:00"
+  },
+  {
+    "Id": "1247328",
+    "ThreadId": "545432",
+    "Html": "Try for PC2 the same like on PC1. Maybe the installation from Flash Player is on both clients not ok.<br />\n",
+    "PostedDate": "2014-05-20T03:46:49.737-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1248448",
+    "ThreadId": "545432",
+    "Html": "As suggested I followed the same process on PC2 as I did on PC1. \r<br />\nAll issues are now resolved.\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2014-05-22T08:32:29.2-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

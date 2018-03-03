@@ -1,0 +1,171 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "I have noticed the problem, but it seems to be a bug (or an «unwanted functionality» :-) ) in Windows 10. Microsoft has really tampered with wua in Windows 10.",
+    "ClosedDate": "2017-01-27T23:26:57.93-08:00",
+    "CommentCount": 25,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI set the 'Approval' of an update (Java 8 MSI Update) to 'Approval For Uninstallation', which was installed with WSUS before.\r\nOn Win7 workstations the uninstallation do work, but on Win10 workstations the update does not appear at all.\r\n\r\nAny idea?",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-10-23T01:51:46.307-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Windows 10 - Approval For Uninstallation does not work",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 305
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1655819,
+      "FileName": "2017-04-11_142516.png",
+      "DownloadUrl": ".\\1655819"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Same Problem here; Windows 7 and Windows 8.1 uninstall works, Windows 10 does not even Show the Update to uninstall....",
+      "PostedDate": "2015-11-09T22:45:08.53-08:00",
+      "Id": 193387
+    },
+    {
+      "Message": "Does these Windows 10 clients installs other locally-published updates ?\nDo you see any usefull informations in Windows Event log ?",
+      "PostedDate": "2015-11-10T12:14:00.793-08:00",
+      "Id": 193407
+    },
+    {
+      "Message": "Installation of all other updates (WPP or WSUS) works. There are only 2 Windows 10 Machines at now, so i uninstalled the update (Java 8 update 60) manually.\n\nI will test uninstallation with a test machine in the next days and see if there will be any hints in Windows log.",
+      "PostedDate": "2015-11-10T23:55:40.687-08:00",
+      "Id": 193420
+    },
+    {
+      "Message": "Yes, the Windows 10 clients installs other locally-published updates",
+      "PostedDate": "2015-11-13T05:07:42.95-08:00",
+      "Id": 193576
+    },
+    {
+      "Message": "I checked the Report of the computer in Wsus Package Publisher and it shows the uninstall update as \"Not Installed\", but it is.\n",
+      "PostedDate": "2015-11-20T07:31:34.39-08:00",
+      "Id": 193888
+    },
+    {
+      "Message": "Same here. Is there any workaround or bugfix for that?",
+      "PostedDate": "2015-12-02T05:05:27.3-08:00",
+      "Id": 194124
+    },
+    {
+      "Message": "Same Problem here too. Windows 10 is not working with de-installations.",
+      "PostedDate": "2016-01-22T08:54:51.183-08:00",
+      "Id": 195699
+    },
+    {
+      "Message": "Same problem here too. Windows 10 is not working with unistallations.\nI hava also tried a to apply custom update to uninstall Java but I get a 0x80070005 (access denied) Windows Update Error.",
+      "PostedDate": "2016-04-04T03:28:32.117-07:00",
+      "Id": 198337
+    },
+    {
+      "Message": "Any news on this issue?",
+      "PostedDate": "2016-05-31T08:52:19.32-07:00",
+      "Id": 199830
+    },
+    {
+      "Message": "I have created a Custom update to uninstall all old version of java and then install the new version.\nI test for both 32 & 64 bit OS's\n\nThe first text file I need is \"Version 8u91.txt\"  and is as follows\n```\nVersion=8.0.910.14\nName=Java 8 Update 91\nFName=jre-8u91-windows\n```\n\nThe next 2 files needed are  \"Install-x64.bat\" and \"install-x86.bat\"\n\nInstall-x64 is as follows:\n```\n@echo off\nsetlocal ENABLEDELAYEDEXPANSION\nrem -------------------------------------------------------\nrem Here we get the version of the program being installed \nrem -------------------------------------------------------\nset Version=\nSet Name=\nSet FName=\nset Version.File=\nfor /f \"skip=5 tokens=4* delims= \" %%u in ('dir Version*.txt') do if not defined Version.File set Version.File=%%v\nfor /f \"usebackq tokens=1-2 delims==\" %%a in (\"%Version.File%\") Do (\n\tSet %%a=%%b\n)\nrem -------------------------------------------------------\nrem Uninstall any old version 1st\nrem -------------------------------------------------------\nfor /f \"skip=3 tokens=1-2*\" %%a in ('powershell \"get-wmiobject -class win32_product -filter \\\"Name like ^'Java _ Update %%^'\\\" | Where {$_.Version -NotMatch \\\"%Version%\\\"} | Select IdentifyingNumber, Version, Name | Format-Table -auto\"') do (\n\tMsiExec.exe /X%%a /passive /norestart\n)\nrem ----------------------------------------\nrem  Program installation process goes here \nrem ----------------------------------------\n%FName%-x64.exe /s\n\n```\nInstall-x86 is as follows:\n```\n@echo off\nsetlocal ENABLEDELAYEDEXPANSION\nrem -------------------------------------------------------\nrem Here we get the version of the program being installed \nrem -------------------------------------------------------\nset Version=\nSet Name=\nSet FName=\nset Version.File=\nfor /f \"skip=5 tokens=4* delims= \" %%u in ('dir Version*.txt') do if not defined Version.File set Version.File=%%v\nfor /f \"usebackq tokens=1-2 delims==\" %%a in (\"%Version.File%\") Do (\n\tSet %%a=%%b\n)\nrem -------------------------------------------------------\nrem Uninstall any old version 1st\nrem -------------------------------------------------------\nfor /f \"skip=3 tokens=1-2*\" %%a in ('powershell \"get-wmiobject -class win32_product -filter \\\"Name like ^'Java _ Update %%^'\\\" | Where {$_.Version -NotMatch \\\"%Version%\\\"} | Select IdentifyingNumber, Version, Name | Format-Table -auto\"') do (\n\tMsiExec.exe /X%%a /passive /norestart\n)\nrem ----------------------------------------\nrem  Program installation process goes here \nrem ----------------------------------------\n%FName%-i586.exe /s\n\n```\nJust create a custom update for each x64 and x86 version and include:\nfor x64\n     Install-x64.bat\n     jre-8u91-windows-x64.exe\n     Version 8u91.txt\n\nfor x86\n     Install-x86.bat\n     jre-8u91-windows-i586.exe\n     Version 8u91.txt\n",
+      "PostedDate": "2016-05-31T12:33:20.9-07:00",
+      "Id": 199838
+    },
+    {
+      "Message": "Thanks for your input sjutter, but the issue is not about uninstalling an update. \nThe issue is about that updates with 'Approval For Uninstallation' does not appear at all in Win10.\n\nIs it maybe an issue with WSUS3 and WSUS4 or Server2008 and Server2012?\nWe are running Server 2008R2 with WSUS 3.2.",
+      "PostedDate": "2016-06-01T00:47:28.01-07:00",
+      "Id": 199845
+    },
+    {
+      "Message": "... and it happens with every update not just with JAVA.",
+      "PostedDate": "2016-06-01T00:59:42.753-07:00",
+      "Id": 199847
+    },
+    {
+      "Message": "I think it happen with your WSUS. For W10 the best is to have a WSUS on W2012 or higher. \n\nWhat is the Build from your WSUS? http://www.wsus.de/de/FAQ > No. 44: http://www.wsus.de/images/wsus-version.png Here find the place where you can read the Build from your WSUS. If you are lower then .274 you have to update to .274.",
+      "PostedDate": "2016-06-01T02:19:07.073-07:00",
+      "Id": 199849
+    },
+    {
+      "Message": "I update Java with Custom Update and Uninstall2Install, this way works. But Uninstall of Updates in WSUS is broken for Windows10.\nOur WSUS runs on W2012, so i don't think the problem is the WSUS... Windows10 is a bucket of Problems in Business use, and this just seems to be another problem...",
+      "PostedDate": "2016-06-01T02:46:07.443-07:00",
+      "Id": 199851
+    },
+    {
+      "Message": "My WSUS is on .274",
+      "PostedDate": "2016-06-01T04:17:28.733-07:00",
+      "Id": 199853
+    },
+    {
+      "Message": "I also run WSUS 6.3.9600.174477 on Server 2012 R2.\n\nI understand that the uninstall function is not working for Windows 10, that is why I wrote the script to uninstall JAVA as it will not automatically uninstall old version)",
+      "PostedDate": "2016-06-01T06:31:25.723-07:00",
+      "Id": 199858
+    },
+    {
+      "Message": "So, is it a general Win10 problem or a WPP problem?",
+      "PostedDate": "2016-06-01T08:25:53.227-07:00",
+      "Id": 199860
+    },
+    {
+      "Message": "IMHO it is a W10 Problem. Did you try to approve for untinstall a legal Microsoft Update in WSUS? Will this work?",
+      "PostedDate": "2016-06-01T08:41:22.48-07:00",
+      "Id": 199861
+    },
+    {
+      "Message": "No, it does not.\nIt seems that Win10 does not support uninstall anymore, but I could not find any information about it in the web.\n\nCould somone try this with the new WSUS version and server 2012 R2?",
+      "PostedDate": "2016-06-10T06:50:28.49-07:00",
+      "Id": 200033
+    },
+    {
+      "Message": "especially with WSUS Version 4",
+      "PostedDate": "2016-06-10T06:54:01.71-07:00",
+      "Id": 200034
+    },
+    {
+      "Message": "We upgraded in the meantime to Server 2012 R2 with the latest WSUS.\nThe issue is still present, but it seems not a problem with WPP, because MS updates from the WSUS console will be also not uninstalled.\nIt seems to be a Win10 problem.\n\nI found a discussion about that here \nhttps://social.technet.microsoft.com/Forums/windowsserver/en-US/a27f69f2-870b-46ec-8b57-27604697497f/monthly-windows-10-cumulative-update-approved-for-removal-does-not-uninstall-update-nothing?forum=winserverwsus",
+      "PostedDate": "2016-08-30T23:52:59.47-07:00",
+      "Id": 203815
+    },
+    {
+      "Message": "Hi,\n\nIs there any update regarding this issue since last input here? I'm facing now the same problem with Windows 10 and WPP \"Approved for uninstallation\" which is not working.\n\nWSUS server runs on WIndows 2012.\n\nI know that there are some workarounds but its not the issue.\n\n",
+      "PostedDate": "2017-01-19T07:07:13.077-08:00",
+      "Id": 206094
+    },
+    {
+      "Message": "Not from my side. It is curious that this problem is not more known.\n",
+      "PostedDate": "2017-01-24T22:44:58.64-08:00",
+      "Id": 206232
+    },
+    {
+      "Message": "Hi, the issue was confirmed by a Microsoft affilied people. See this link : [Technet Forum](https://social.technet.microsoft.com/Forums/windows/en-US/624afa85-3712-48fc-8eb6-3f1296219e33/windows-10-doesnt-uninstall-update-approved-for-uninstallation-in-wsus?forum=win10itprogeneral)",
+      "PostedDate": "2017-02-20T02:40:40.307-08:00",
+      "Id": 206692
+    },
+    {
+      "Message": "Hi, \r\nI tested it with Win10 Creators Update and the uninstallation does work again!\r\nBut the status while uninstalling says \"installing...\" and in the \"Update History\" the update is mentioned as installed instead of uninstalled.",
+      "PostedDate": "2017-04-11T05:39:59.86-07:00",
+      "Id": 208116
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+[
+  {
+    "Id": "1361022",
+    "ThreadId": "585048",
+    "Html": "Hi!\r<br />\n<br />\nI will deploy Software, lets say in this example Java. I want to install it on all Workstations, but I only want tp update on Servers if it is already installed.\r<br />\n<br />\nI tried to Google it and I tried a lot of rules with Windows Version etc. but everytime I tried to do what I want, also my Servers want to install. Only if I said AND Windows 7 this worked. If I tried Windows 7 AND Windows 8 my Servers want to install.\r<br />\n<br />\nCould someone please help me with this?\r<br />\n<br />\nThanx,\r<br />\nMartin<br />\n",
+    "PostedDate": "2015-03-09T03:58:13.5-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1361114",
+    "ThreadId": "585048",
+    "Html": "You have to work with files in filesystem. if you find Java.exe in %programfiles%.... you can install Java. Work with two rules for Files in Filesystem.<br />\n",
+    "PostedDate": "2015-03-09T04:47:17.81-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1361154",
+    "ThreadId": "585048",
+    "Html": "I tried already with regkey:\r<br />\nAND Workstation OR Server and regkey exists /OR /AND\r<br />\n<br />\nbut my Server wants to install, without having that regkey.\r<br />\n<br />\nthanks, Martin<br />\n",
+    "PostedDate": "2015-03-09T05:12:07.653-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1361323",
+    "ThreadId": "585048",
+    "Html": "OK, what you want? You want to install Java on Servers only there is Java installed, right?\r<br />\n<br />\nI think you have to work with one OR Rule\r<br />\n<br />\nWorkstation OR Server\r<br />\nIn Server you have to create a AND Rule and check if file in filesytem you can update. If not the file in the filesystem, you can not update.<br />\n",
+    "PostedDate": "2015-03-09T07:21:47.663-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1361396",
+    "ThreadId": "585048",
+    "Html": "<strong>WinfriedSonntag wrote:</strong><br />\n<blockquote>\nI think you have to work with one OR Rule<br />\n</blockquote>\nHi Winfried,\r<br />\nthx, bu did you read my post before?<br />\n<blockquote>\nWorkstation OR Server<br />\nIn Server you have to create a AND Rule and check if file in filesytem you can update. If not the file in the filesystem, you can not update.<br />\n</blockquote>\nI repeat: I tried already the rule: \r<br />\nWorkstation OR Server AND regkey exists\r<br />\n<br />\nIs here a way I can Show my rule in here? An Export or something? \r<br />\n<br />\nthx, Martin<br />\n",
+    "PostedDate": "2015-03-09T08:01:36.007-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1361402",
+    "ThreadId": "585048",
+    "Html": "Hi, \r<br />\n<br />\nrevise the package and in the rule tab, select the most outter group, then click on export. This will export a text file that you will be able to copy here.\r<br />\nTell us what 'IsInstalled' and 'IsInstallable' rules do you have set.<br />\n",
+    "PostedDate": "2015-03-09T08:12:18.207-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1361404",
+    "ThreadId": "585048",
+    "Html": "You have to use FILE EXIST in filesystem.<br />\n",
+    "PostedDate": "2015-03-09T08:14:38.6-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1361457",
+    "ThreadId": "585048",
+    "Html": "<strong>WinfriedSonntag wrote:</strong><br />\n<blockquote>\nYou have to use FILE EXIST in filesystem.<br />\n</blockquote>\nThe Path to Java.exe differs with every Version. So how can this be done?<br />\n<br />\n<strong>DCourtel wrote:</strong><br />\n<blockquote>\nrevise the package and in the rule tab, select the most outter group, then click on export. This will export a text file that you will be able to copy here.<br />\nTell us what 'IsInstalled' and 'IsInstallable' rules do you have set.<br />\n</blockquote>\nThanks. My IsInstalled-Rule:<br />\n<pre><code>&lt;msiar:MsiProductInstalled ProductCode=&quot;{26a24ae4-039d-4ca4-87b4-2f86418040f0}&quot;/&gt;</code></pre>\n\nMy IsInstallable-Rule:<br />\n<pre><code>&lt;lar:And&gt;\n  &lt;lar:Not&gt;\n    &lt;msiar:MsiProductInstalled ProductCode=&quot;{26a24ae4-039d-4ca4-87b4-2f86418040f0}&quot;/&gt;\n  &lt;/lar:Not&gt;\n  &lt;bar:Processor Architecture=&quot;9&quot;/&gt;\n  &lt;lar:And&gt;\n    &lt;bar:WindowsVersion Comparison=&quot;EqualTo&quot; ProductType=&quot;1&quot;/&gt;\n    &lt;lar:Or&gt;\n      &lt;bar:WindowsVersion Comparison=&quot;EqualTo&quot; ProductType=&quot;3&quot;/&gt;\n      &lt;bar:RegKeyExists Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\JavaSoft&quot;/&gt;\n    &lt;/lar:Or&gt;\n  &lt;/lar:And&gt;\n&lt;/lar:And&gt;</code></pre>\n\n",
+    "PostedDate": "2015-03-09T08:46:30.17-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1361610",
+    "ThreadId": "585048",
+    "Html": "&lt; The Path to Java.exe differs with every Version. So how can this be done?\r<br />\n<br />\nHow many Java-Version are installed? One Solution is to write one rule for each version.<br />\n",
+    "PostedDate": "2015-03-09T10:34:56.633-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1361928",
+    "ThreadId": "585048",
+    "Html": "<strong>WinfriedSonntag wrote:</strong><br />\n<blockquote>\n<blockquote>\nThe Path to Java.exe differs with every Version. So how can this be done?<br />\n</blockquote>\nHow many Java-Version are installed? One Solution is to write one rule for each version.<br />\n</blockquote>\nHmm there is a Network with about 30 different Versions, the oldest is Java 5.\r<br />\n<br />\nSo Why shouldnt work the regkey think instead of the file thing? What is wrong on my rule? If I delete the OR, no server wants to install. If I put this in, all Servers want to install.\r<br />\n<br />\nThanks, Rothy<br />\n",
+    "PostedDate": "2015-03-09T14:25:45.497-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1361971",
+    "ThreadId": "585048",
+    "Html": "<strong>Rothy wrote:</strong><br />\n<blockquote>\n<strong>WinfriedSonntag wrote:</strong><br />\n<blockquote>\n<blockquote>\nThe Path to Java.exe differs with every Version. So how can this be done?<br />\n</blockquote>\nHow many Java-Version are installed? One Solution is to write one rule for each version.<br />\n</blockquote>\nHmm there is a Network with about 30 different Versions, the oldest is Java 5.<br />\n</blockquote>\nWow, a great project. ;)<br />\n<blockquote>\nSo Why shouldnt work the regkey think instead of the file thing? What is wrong on my rule? If I delete the OR, no server wants to install. If I put this in, all Servers want &gt;to install.<br />\n</blockquote>\nI don't know if the rule is working or not. I would build a rule with filesystem.<br />\n",
+    "PostedDate": "2015-03-09T15:16:25.117-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362050",
+    "ThreadId": "585048",
+    "Html": "<strong>WinfriedSonntag wrote:</strong><br />\n<blockquote>\nI don't know if the rule is working or not. I would build a rule with filesystem.<br />\n</blockquote>\nOk, just to make you happy:<br />\n<pre><code>&lt;lar:And&gt;\n&lt;lar:Not&gt;\n&lt;msiar:MsiProductInstalled ProductCode=&quot;{26a24ae4-039d-4ca4-87b4-2f86418040f0}&quot;/&gt;\n&lt;/lar:Not&gt;&lt;bar:Processor Architecture=&quot;9&quot;/&gt;&lt;lar:And&gt;\n&lt;bar:WindowsVersion Comparison=&quot;EqualTo&quot; ProductType=&quot;1&quot;/&gt;&lt;lar:Or&gt;\n&lt;bar:FileExists Path=&quot;C:\\ProgramData\\Oracle\\Java\\javapath\\java.exe&quot;/&gt;&lt;bar:WindowsVersion ProductType=&quot;3&quot;/&gt;&lt;/lar:Or&gt;\n&lt;/lar:And&gt;\n&lt;/lar:And&gt;</code></pre>\n\nI just thought it would be a bit better, just to use one filepath wich is same for all Versions...<br />\n<br />\nThis doesnt work, too<br />\n<br />\nDoesnt anyone have a rule like this? Do you all install Java on all Servers?<br />\n<br />\nThanx, Rothy<br />\n",
+    "PostedDate": "2015-03-10T00:53:01.133-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362079",
+    "ThreadId": "585048",
+    "Html": "Hi, \r<br />\nLogic for And/Or groups apply <strong>IN</strong> the group itself.\r<br />\n \r<br />\n<strong>For Registry rule you should set</strong> :<br />\n<pre><code>&lt;lar:And&gt;\n    &lt;lar:Not&gt;\n        &lt;msiar:MsiProductInstalled ProductCode=&quot;{26a24ae4-039d-4ca4-87b4-2f86418040f0}&quot;/&gt;\n    &lt;/lar:Not&gt;\n    &lt;bar:Processor Architecture=&quot;9&quot;/&gt;\n    &lt;lar:Or&gt;\n        &lt;bar:WindowsVersion ProductType=&quot;1&quot;/&gt;\n        &lt;lar:And&gt;\n            &lt;bar:WindowsVersion ProductType=&quot;3&quot;/&gt;\n            &lt;bar:RegKeyExists Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\JavaSoft&quot;/&gt;\n        &lt;/lar:And&gt;\n    &lt;/lar:Or&gt;\n&lt;/lar:And&gt;</code></pre>\n\n<strong>For File Sytem Rule, you should set</strong> :<br />\n<pre><code>&lt;lar:And&gt;\n    &lt;lar:Not&gt;\n        &lt;msiar:MsiProductInstalled ProductCode=&quot;{26a24ae4-039d-4ca4-87b4-2f86418040f0}&quot;/&gt;\n    &lt;/lar:Not&gt;\n    &lt;bar:Processor Architecture=&quot;9&quot;/&gt;\n    &lt;lar:Or&gt;\n        &lt;bar:WindowsVersion Comparison=&quot;EqualTo&quot; ProductType=&quot;1&quot;/&gt;\n        &lt;lar:And&gt;\n            &lt;bar:FileExists Path=&quot;C:\\ProgramData\\Oracle\\Java\\javapath\\java.exe&quot;/&gt;\n            &lt;bar:WindowsVersion ProductType=&quot;3&quot;/&gt;\n        &lt;/lar:And&gt;\n    &lt;/lar:Or&gt;\n&lt;/lar:And&gt;</code></pre>\n\n",
+    "PostedDate": "2015-03-10T03:06:33.1-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362113",
+    "ThreadId": "585048",
+    "Html": "Hi,<br />\n<br />\n<strong>DCourtel wrote:</strong><br />\n<blockquote>\nHi, <br />\nLogic for And/Or groups apply <strong>IN</strong> the group itself.<br />\n</blockquote>\nthanks, but that also doesnt work.<br />\n<br />\nSo, what so I want to do?<br />\n<br />\nIs it installabe?<br />\n<pre><code>Only if ist not in the newest Version installed \nand the Computer is 64Bit \nand (its Workstation OR (Server and Java exists)\n\n(not 26a24ae4-039d-4ca4-87b4-2f86418040f0 AND Processor Architecture=&quot;9&quot;) \nAND (WindowsVersion ProductType=&quot;1&quot; OR (WindowsVersion ProductType=&quot;1&quot; AND FileExists Path=&quot;C:\\ProgramData\\Oracle\\Java\\javapath\\java.exe))</code></pre>\n\nIn between I also tried:<br />\n<pre><code>&lt;lar:And&gt;\n&lt;lar:Not&gt;\n  &lt;msiar:MsiProductInstalled ProductCode=&quot;{26a24ae4-039d-4ca4-87b4-2f86418040f0}&quot;/&gt;\n&lt;/lar:Not&gt;\n&lt;bar:Processor Architecture=&quot;9&quot;/&gt;\n&lt;bar:WindowsVersion ProductType=&quot;1&quot;/&gt;\n&lt;lar:Or&gt;\n  &lt;lar:Not&gt;\n    &lt;msiar:MsiProductInstalled ProductCode=&quot;{26a24ae4-039d-4ca4-87b4-2f86418040f0}&quot;/&gt;\n  &lt;/lar:Not&gt;\n  &lt;bar:Processor Architecture=&quot;9&quot;/&gt;\n  &lt;bar:WindowsVersion ProductType=&quot;3&quot;/&gt;\n  &lt;bar:RegKeyExists Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\JavaSoft&quot;/&gt;\n&lt;/lar:Or&gt;\n&lt;/lar:And&gt;</code></pre>\n\nI dont find my failure....<br />\n",
+    "PostedDate": "2015-03-10T05:42:35.827-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362157",
+    "ThreadId": "585048",
+    "Html": "Maybe Im on the complete wrong way. If I look at the Adobe updates out of the catalogue, there arent any rules and it installs only updates on Systems with previous Versions on it. How can I do this with a custom msi install?<br />\n",
+    "PostedDate": "2015-03-10T07:02:38.443-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362166",
+    "ThreadId": "585048",
+    "Html": "<blockquote>\nDCourtel wrote:<br />\n<br />\nHi, <br />\nLogic for And/Or groups apply IN the group itself.<br />\n<br />\nthanks, but that also doesnt work.<br />\n</blockquote>\nIt work, but you don't apply it ! For example, in your last post, your rules said :\r<br />\n<br />\nIt's installable IF <strong>(</strong> MSIProduct is not installed <strong>AND</strong> Processor is 64bit <strong>AND</strong> ProductType=Desktop <strong>AND</strong> <strong>(</strong> MSIProduct is not installed <strong>OR</strong> Processor is 64bit <strong>OR</strong> ProductType=Server <strong>OR</strong> RegKeyExist <strong>)</strong> <strong>)</strong>\r<br />\n<br />\nEach () map to a And/Or Group.\r<br />\nThis is exactly the <strong>opposite</strong> of what you should do !<br />\n",
+    "PostedDate": "2015-03-10T07:13:54.597-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362174",
+    "ThreadId": "585048",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\n<blockquote>\nthanks, but that also doesnt work.<br />\nIt work, but you don't apply it ! For example, in your last post, your rules said :<br />\n</blockquote>\n</blockquote>\nMaybe I just dont get it...\r<br />\n<br />\nI imported your rules and they both didnt work.\r<br />\n<br />\nAnd I actually dont understand what is ment with &quot;Logic for And/Or groups apply IN the group itself.&quot;. Maybe ist because Im not a native Speaker? ;-(\r<br />\n<br />\nCould you please be so kind and give me a logic example for: Install if not installed and 64 Bit, on all Clients and on all Servers where the file exist?\r<br />\n<br />\nIm working on this now since days and I dont get it ;-).\r<br />\n<br />\nThanks, Rothy<br />\n",
+    "PostedDate": "2015-03-10T07:24:18.797-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362718",
+    "ThreadId": "585048",
+    "Html": "I think I know now what you ment with &quot;In the Groups&quot;. <br />\n<br />\nSo here is my next try, still not working:<br />\n<pre><code>&lt;lar:And&gt;\n  &lt;lar:Not&gt;&lt;msiar:MsiProductInstalled ProductCode=&quot;{26a24ae4-039d-4ca4-87b4-2f86418040f0}&quot;/&gt;&lt;/lar:Not&gt;\n  &lt;bar:Processor Architecture=&quot;9&quot;/&gt;\n  &lt;lar:Or&gt;\n    &lt;bar:WindowsVersion ProductType=&quot;1&quot;/&gt;\n    &lt;lar:And&gt;\n      &lt;bar:WindowsVersion ProductType=&quot;3&quot;/&gt;\n      &lt;bar:RegKeyExists Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\JavaSoft&quot;/&gt;\n    &lt;/lar:And&gt;\n  &lt;/lar:Or&gt;\n&lt;/lar:And&gt;</code></pre>\n\nAnd this try also wont work:<br />\n<pre><code>&lt;lar:Or&gt;\n  &lt;lar:And&gt;\n    &lt;lar:Not&gt;\n&lt;msiar:MsiProductInstalled ProductCode=&quot;{26a24ae4-039d-4ca4-87b4-2f86418040f0}&quot;/&gt;\n&lt;/lar:Not&gt;\n    &lt;bar:Processor Architecture=&quot;9&quot;/&gt;\n    &lt;bar:WindowsVersion ProductType=&quot;1&quot;/&gt;\n  &lt;/lar:And&gt;\n  &lt;lar:And&gt;\n    &lt;lar:Not&gt;\n&lt;msiar:MsiProductInstalled ProductCode=&quot;{26a24ae4-039d-4ca4-87b4-2f86418040f0}&quot;/&gt;\n&lt;/lar:Not&gt;\n    &lt;bar:Processor Architecture=&quot;9&quot;/&gt;\n    &lt;bar:WindowsVersion ProductType=&quot;3&quot;/&gt;\n    &lt;bar:RegKeyExists Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\JavaSoft&quot;/&gt;\n  &lt;/lar:And&gt;\n&lt;/lar:Or&gt;</code></pre>\n\nAny Ideas?<br />\n<br />\nThanks, Martin<br />\n",
+    "PostedDate": "2015-03-12T00:53:30.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362787",
+    "ThreadId": "585048",
+    "Html": "So what happens with Davids examples? Servers get this installed even if they do not have Java installed? Do you know the exact Version of Java which is currently installed on your Servers? Than you could go with &quot;MSI product installed&quot; rule instead of RegKey or File exists. Can you please post an actual product which you want to deploy this way? Maybe we can test it.\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2015-03-12T05:50:52.977-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362817",
+    "ThreadId": "585048",
+    "Html": "Yes, with Davids examples the Servers still try to install it, without having it installed.\r<br />\n<br />\nThe Point with the exact Version:\r<br />\nYes I know, but we have:\r<br />\n13 Different Versions of Java 6\r<br />\n18 Different Versions of Java 7\r<br />\n4 Different Versions of Java 8\r<br />\n<br />\nIs my last Syntax correct and matches now: &quot;Logic for And/Or groups apply IN the group itself.&quot;?\r<br />\n<br />\nThanks, Martin<br />\n",
+    "PostedDate": "2015-03-12T07:12:46.477-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362847",
+    "ThreadId": "585048",
+    "Html": "No it's not correct. If it was, than you wouldn't ask here. ;) You have to Combine (Windows Server AND some rule to determine if JAVA is already installed) and put this in OR together with Windows Workstation and the MSI Not installed.<br />\nIs there any reason why are you trying to deploy the x64 Version of Java? Usually you should go with the x86 Version.<br />\n<br />\nI'll try later something. But Davids rule Looks pretty much the same way, I would've configured it.<br />\n<br />\n<br />\nRegards<br />\nNorbert<br />\n",
+    "PostedDate": "2015-03-12T08:33:18.38-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1364066",
+    "ThreadId": "585048",
+    "Html": "Hi All,\r<br />\n<br />\nafter a lot of testing I figuerd out, that not the rules are the Problem, ist my way of revising the updates. Im still not sure what the best way ist, but when I changed an Update WSUS always told, that there is a newer one. To get rid of this, anytime I changed an update I declined and deleted it and imported it again. But it seems the Client still has this in mind and still wants to install it, even it has a new rule now.\r<br />\n<br />\nThe rules work now, I just do now for each Change create a new update.\r<br />\n<br />\nThats much more work - is there an easier way? \r<br />\n<br />\nThank you all for your help and Patience,\r<br />\nMartin<br />\n",
+    "PostedDate": "2015-03-16T03:43:58.5-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-03-16T03:57:55.33-07:00"
+  }
+]

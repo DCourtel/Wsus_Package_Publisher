@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1144811",
+    "ThreadId": "479365",
+    "Html": "Is there a way to use a command line or API to programatically upload custom packages to WSUS and publish them? Please point to any documentation regarding the same.<br />\n",
+    "PostedDate": "2014-01-02T13:28:02.663-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1144944",
+    "ThreadId": "479365",
+    "Html": "If your question is : Does WPP expose any command line or API to publish to Wsus. Then the answer is no.\r<br />\nif it's : Does Wsus expose API to publish. Then the answer is yes. That is the API that WPP use to publish these updates.\r<br />\n<br />\nSee : <a href=\"http://msdn.microsoft.com/en-us/library/ms744624(v=vs.85).aspx\" rel=\"nofollow\">Local Publishing</a>\r<br />\nand : <a href=\"http://msdn.microsoft.com/en-us/library/microsoft.updateservices.administration(v=vs.85).aspx\" rel=\"nofollow\">Wsus 3.0 Class Library Reference</a><br />\n",
+    "PostedDate": "2014-01-03T02:09:37.543-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T07:52:08.01-08:00"
+  },
+  {
+    "Id": "1146192",
+    "ThreadId": "479365",
+    "Html": "Where is the source code for customupdateengine.exe and customupdatecreator.exe? Can I get access to it?<br />\n",
+    "PostedDate": "2014-01-03T15:47:20.963-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

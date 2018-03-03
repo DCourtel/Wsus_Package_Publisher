@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1275077",
+    "ThreadId": "552418",
+    "Html": "Unfortunately Custom Updates don't work in new Release v1.3.1407.11 - application crashes after choosing appropriate menu. This happens on Windows Server 2012 Standard.\r<br />\nHad to go back to the previous version...<br />\n",
+    "PostedDate": "2014-07-22T05:04:45.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1278459",
+    "ThreadId": "552418",
+    "Html": "Hi, effectively, I have forgot two DLL files in the latest release. People that have upgrade by overwriting the previous files don't have this behaviour.<br />\n",
+    "PostedDate": "2014-07-28T10:38:17.72-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-07-29T07:55:52.94-07:00"
+  }
+]

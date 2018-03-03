@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-02-14T12:33:32.877-08:00",
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "Bonjour,\r\nJe suis confronté à un problème concernant le status dans le rapport WPP, certaines stations sont en status inconnu.\r\nLorsque je viens constaté la mise à jour, la plupart sont installées d'autre non. \r\nNiveau configuration : elles dépendent d'un serveur WSUS réplica 3.0 SP2 sous windows 2008 R2.\r\nJ'ai réinstallé le serveur WSUS,, j'ai réinitialisé tous les paramètres Windows update (clés de registre, GPO, services, et j'en passe) rien ne change.\r\nJe précise que j'ai d'autres serveurs WSUS réplica configurés de la même façon et qui ne posent aucun problème.\r\n\r\nJe pense que cela vient d'un problème de communication, j'ai vérifié aussi IIS, il fonctionne correctement, le port de communcation est 8530.\r\n\r\nJe demande donc un peu d'aide ou une autre piste de réflexion.\r\nMerci par avance.",
+    "LastUpdatedDate": "2015-02-14T12:33:32.877-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-10-15T22:50:21.483-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "status inconnu dans rapport WPP",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 222
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Salut, Est-ce que WPP se connecte au serveur replica ou au serveur amont ?\nEst-ce que le statut des mises à jour Microsoft est correct ?\nEst-ce que tu vois des messages d'erreur dans le journal C:\\Windows\\WindowsUpdate.log",
+      "PostedDate": "2014-10-16T13:05:22.877-07:00",
+      "Id": 162466
+    },
+    {
+      "Message": "Bonsoir,\nWPP se connecte sur mon serveur amont qui distribue aux serveurs wsus aval.\nLe status concernant les clients en question semble correct, les mises à jour s'effectuent correctement et les rapports remontent régulièrement ce qui me laisse penser que cela n'est pas un problème de communication du moins pour les mises à jour propre à windows.\nPour les messages d'erreurs, effectivement j'ai des erreurs dont certains que je ne sais pas résoudre, je pencherais peut être sur un problème de certificat mais je ne devrais pas avoir d'installation.\nJe joins un extrait de log du journal d'un client localisant le souci.\n \n2014-10-17\t10:18:55:324\t 880\tce4\tAU\tLaunched new AU client for directive 'Install Approval', session id = 0x2\n2014-10-17\t10:18:55:340\t3268\t32c\tMisc\t===========  Logging initialized (build: 7.6.7600.256, tz: +0200)  ===========\n2014-10-17\t10:18:55:340\t3268\t32c\tMisc\t  = Process: C:\\Windows\\system32\\wuauclt.exe\n2014-10-17\t10:18:55:340\t3268\t32c\tAUClnt\tLaunched Client UI process\n2014-10-17\t10:18:55:371\t3268\t32c\tMisc\t===========  Logging initialized (build: 7.6.7600.256, tz: +0200)  ===========\n2014-10-17\t10:18:55:371\t3268\t32c\tMisc\t  = Process: C:\\Windows\\system32\\wuauclt.exe\n2014-10-17\t10:18:55:371\t3268\t32c\tMisc\t  = Module: C:\\Windows\\system32\\wucltux.dll\n2014-10-17\t10:18:55:371\t3268\t32c\tCltUI\tAU client got new directive = 'Install Approval', serviceId = {3DA21691-E39D-4DA6-8A4B-B43877BCB1B7}, return = 0\n2014-10-17\t10:18:55:371\t3268\t32c\tAUClnt\tWARNING: Shell_NotifyIcon failed (dwMessage=0x0, uFlags=0x7, hr=0x800705B4)\n2014-10-17\t10:18:55:371\t3268\t32c\tAUClnt\tWARNING: Shell_NotifyIcon failed (dwMessage=0x0, uFlags=0x7, hr=0x800705B4)\n2014-10-17\t10:18:55:371\t3268\t32c\tAUClnt\tWARNING: Shell_NotifyIcon failed (dwMessage=0x0, uFlags=0x7, hr=0x800705B4)\n2014-10-17\t10:18:55:371\t3268\t32c\tAUClnt\tWARNING: Shell_NotifyIcon failed (dwMessage=0x0, uFlags=0x7, hr=0x800705B4)\n2014-10-17\t10:18:55:371\t 880\tce4\tAU\tAU received handle event\n2014-10-17\t10:18:55:371\t 880\tce4\tAU\tAU setting pending client directive to 'Install Approval'\n\nMerci pour l'intêret porté. \nJ'espère que cela pourra faire avancer le schmilblic.\nAs tu une idée d'où peut venir ce problème de communication ?",
+      "PostedDate": "2014-10-18T13:23:34.067-07:00",
+      "Id": 162634
+    },
+    {
+      "Message": "Bonjour, ce qui me parait bizarre, c'est que les mises à jour Microsoft remontent correctement dans la console et pas les mises à jour publié localement.\nLe certificat n'a rien a voir là dedans. Le serveur communique sur le port 8530, donc en HTTP et non pas HTTPS. \nL'extrais du journal d'événement est trop court pour pouvoir en tirer quelque chose.\n\nSur un poste à problème :\n- Arrêter le service Windows Update\n- Supprimer le fichier C:\\Windows\\WindowsUpdate.log\n- Démarrer le service Windows Update\n- Attendre 1 minute\n- Lancer la commande DOS : Wuauclt /DetectNow \n- Attendre 1 minute\n- Lancer la commande DOS : Wuauclt /ReportNow\n\nM'envoyer le fichier journal à l'adresse mail : package.publisher@free.fr en faisant référence à ce post.",
+      "PostedDate": "2014-10-20T08:05:44.943-07:00",
+      "Id": 162709
+    },
+    {
+      "Message": "En fait, j'ai déjà exécuté les commandes suivantes:\n- arrêt des services wuauserv et bits.\n- réinitialisation des dlls liées à WU\n- suppression de la clé registre susclientid \n- suppression du répertoire softwaredistribution\n- démarrage des 2 services \n- vérification du service bits en automatique \n- exécution des commandes \nWuauclt /resetauthorization /detectnow \nWuauclt /reportnow\nWuauclt /forceupdate\nGpupdate /force\nEt rien n'y fait\nJ'ai testé le port 8530 en téléchargeant un fichier cab\nJ'ai desintallé un logiciel ocs en question et relancé la mise à jour qui s'est effectuée avec succès.\nEt rien n'y fait.\nJe vais tenté une nouvelle desintallation avec une mise à jour depuis mon serveur amont pour voir si le problème ne vient pas de mon serveur réplica mais si cela fonctionne je ne serai pas plus avancé. J'ai déjà effectué une réinstallation de ce serveur. \nPeut être que le problème vient de la base de données, ....\nOu pas.\nC'est bizarre car j'ai un site où le problème est généralisé Mais j'ai aussi des problèmes venant de quelques autres stations de serveurs replia différents.\nJe vais épuré le journal de logs et refaire l'ensemble des manipulations.\nPeut être que le problème est plutôt côté serveur.\n",
+      "PostedDate": "2014-10-20T12:01:01.893-07:00",
+      "Id": 162740
+    },
+    {
+      "Message": "Je souhaite avoir le journal complet de l'agent Windows Update.\nMerci de faire les commandes ci-dessus et de m'envoyer le journal par mail.",
+      "PostedDate": "2014-10-20T13:45:45.683-07:00",
+      "Id": 162755
+    }
+  ]
+}

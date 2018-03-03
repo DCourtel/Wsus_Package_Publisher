@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-01-11T12:17:34.35-08:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "I's me again ;)\r\n\r\nI am just trying to publish a custom WPP update which blows away the Java Runtime Environment auto updater. For this reason I want to delete the auto updater file jusched.exe with this WPP update and delete the registry values in the Run registry key.\r\n\r\nNow I want to kill the jusched process first to make it possible to delete the file than. I tried the following action but it doesn't work. The task is not killed and could not be deleted than. Maybe I'm doing something wrong? I saw that the process runs in a user context (Administrator) and tried to enable \"Run the update in a user context\" in the WPP update but with no effect.\r\n\r\nThe target OS is Windows 7 32 Bit and .NET 3.5 is installed. Other Custom Updates were working fine so far.\r\n\r\n![Image](http://i57.tinypic.com/2v0nxhi.jpg)",
+    "LastUpdatedDate": "2015-01-11T12:17:34.35-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-12-27T15:29:00.963-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Custom Updates: Kill a process",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 239
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "\nThe better way for you ist to use Group Policy Preferences. With GPP you can delete Registry Keys, stop and deactivate Services.\n\nhttp://blogs.technet.com/b/grouppolicy/archive/2010/10/01/tales-from-the-community-deleting-a-registry-value.aspx\nhttp://technet.microsoft.com/en-us/library/cc753092.aspx\nIn my environment i use for this only GPP, its working fine. ;)",
+      "PostedDate": "2014-12-28T02:38:05.073-08:00",
+      "Id": 168954
+    },
+    {
+      "Message": "My next try will be using the windows command taskkill.exe in the custom update. ",
+      "PostedDate": "2014-12-28T09:01:48.697-08:00",
+      "Id": 168962
+    },
+    {
+      "Message": "```\n%systemroot%\\System32\\taskkill.exe /F /IM \"jusched.exe\"\n```\nworks very well in a custom update.",
+      "PostedDate": "2014-12-28T11:21:42.847-08:00",
+      "Id": 168967
+    }
+  ]
+}

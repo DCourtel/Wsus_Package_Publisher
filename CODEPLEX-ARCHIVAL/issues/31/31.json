@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-05-02T12:00:38.45-07:00",
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "There seems to be a problem with referenced updates.\r\n\r\n```\r\n************** Exception Text **************\r\nSystem.InvalidOperationException: Das angegebene Update kann nicht gelöscht werden. ---> __System.Data.SqlClient.SqlException: The update cannot be deleted as it is still referenced by other update(s).\r\n__   --- End of inner exception stack trace ---\r\n   at Microsoft.UpdateServices.Internal.BaseApi.SoapExceptionProcessor.DeserializeAndThrow(SoapException soapException)\r\n   at Microsoft.UpdateServices.Internal.DatabaseAccess.AdminDataAccessProxy.ExecuteSPDeleteUpdateByUpdateID(Guid updateID)\r\n   at Microsoft.UpdateServices.Internal.BaseApi.UpdateServer.DeleteUpdate(Guid updateId)\r\n   at Wsus_Package_Publisher.WsusWrapper.DeleteUpdate(IUpdate updateToDelete)\r\n   at Wsus_Package_Publisher.UpdateControl.updateDetailViewer1_DeleteUpdate(UpdateCollection updatesToDelete)\r\n   at Wsus_Package_Publisher.UpdateListViewer.mnuStripUpdateListViewer_ItemClicked(Object sender, ToolStripItemClickedEventArgs e)\r\n   at System.Windows.Forms.ToolStripDropDown.OnItemClicked(ToolStripItemClickedEventArgs e)\r\n   at System.Windows.Forms.ToolStrip.HandleItemClick(ToolStripItem dismissingItem)\r\n   at System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)\r\n   at System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)\r\n   at System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)\r\n   at System.Windows.Forms.ToolStripDropDown.OnMouseUp(MouseEventArgs mea)\r\n   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)\r\n   at System.Windows.Forms.Control.WndProc(Message& m)\r\n   at System.Windows.Forms.ToolStrip.WndProc(Message& m)\r\n   at System.Windows.Forms.ToolStripDropDown.WndProc(Message& m)\r\n   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)\r\n\r\n\r\n************** Loaded Assemblies **************\r\nmscorlib\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.296 (RTMGDR.030319-2900)\r\n    CodeBase: file:///C:/Windows/Microsoft.NET/Framework64/v4.0.30319/mscorlib.dll\r\n----------------------------------------\r\nWsus Package Publisher\r\n    Assembly Version: 1.1.1304.21\r\n```\r\n\r\nTrying to delete such a package causes WPP to crash.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-04-29T05:28:40.333-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "WPP crashes when deleting update",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 31
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "A popup window would be enough I guess. Or a message where I can choose to delete the referenced update too.\n",
+      "PostedDate": "2013-04-29T05:30:31.297-07:00",
+      "Id": 98777
+    },
+    {
+      "Message": "Can you tell me how to reproduce the bug. Provide me a step by step procedure.\n\nThanks",
+      "PostedDate": "2013-04-29T09:29:13.097-07:00",
+      "Id": 98797
+    },
+    {
+      "Message": "Hi,\n\ndefine any package as a prerequisite to one other package and try deleting the first.",
+      "PostedDate": "2013-04-29T09:57:41.17-07:00",
+      "Id": 98799
+    },
+    {
+      "Message": "Ok, I have successfully reproduce the bug. IFor now, I catch the Exception and show a message. I will add a feature to search for Prerequisites.",
+      "PostedDate": "2013-04-29T14:12:46.27-07:00",
+      "Id": 98837
+    },
+    {
+      "Message": "I have change the way WPP handle this error. Now, it will show you updates that declare the first update as a prerequisite and will propose to unregister the first update from prerequisite so you can safely delete the first update.",
+      "PostedDate": "2013-05-02T12:00:21.867-07:00",
+      "Id": 99187
+    }
+  ]
+}

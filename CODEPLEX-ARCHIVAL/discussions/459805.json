@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1101264",
+    "ThreadId": "459805",
+    "Html": "Hello,\r<br />\n<br />\nthat's me again, got another trouble, \r<br />\nmaybe someone can help.\r<br />\n<br />\nNew versions of Flash and Java are not installing, \r<br />\nPrevious versions of them with same settings had no problems.\r<br />\nNow there is in log:\r<br />\n<br />\nThe following updates are downloaded and ready for installation. To install the updates, an administrator should log on to this computer and Windows will prompt with further instructions:  - Java 7 Update 40 - Adobe Flash Player 11.8.800.175 ActiveX\r<br />\n<br />\nTherefore, Java is installing under admin account and thru &quot;install updates and shutdown&quot; procedure; Flash keeps saying &quot;error&quot; during sus install with error code 0x80070667 (but I'm using same parameters as before, tried another, no result). Manual Flash install from this same packet goes ok without errors.<br />\n",
+    "PostedDate": "2013-10-01T04:25:01.633-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1101267",
+    "ThreadId": "459805",
+    "Html": "Looks like problem with Flash is in this:\r<br />\n<br />\n2013-10-01\t15:25:26:330\t 852\t3a4\tHandler\tMSI final command line: /qn ALLUSERS=1 REBOOT=REALLYSUPPRESS\r<br />\n<br />\nI haven't added &quot;ALLUSERS=1 REBOOT=REALLYSUPPRESS&quot;\r<br />\nHow can they be removed?\r<br />\n<br />\nStill do not get about users and admin rights.<br />\n",
+    "PostedDate": "2013-10-01T04:32:02.07-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1102457",
+    "ThreadId": "459805",
+    "Html": "Hi,<br />\n<blockquote>\nThe following updates are downloaded and ready for installation. To install the updates, an administrator should log on to this computer and Windows will prompt with further instructions: - Java 7 Update 40 - Adobe Flash Player 11.8.800.175 ActiveX <br />\n</blockquote>\nPlease check that this GPO is active :\r<br />\n<br />\n<img src=\"http://i.imgur.com/jCsPuFS.png\" alt=\"Image\" /><br />\n<blockquote>\nI haven't added &quot;ALLUSERS=1 REBOOT=REALLYSUPPRESS&quot; <br />\n</blockquote>\nWsus have automatically add these settings to ensure the installation run silently.<br />\n<blockquote>\nHow can they be removed? <br />\n</blockquote>\nThis is not possible. \r<br />\n<br />\nError code 0x80070667 mean there is a problem with the MSI command line. What do you have set as command line ?<br />\n",
+    "PostedDate": "2013-10-01T13:35:05.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1102633",
+    "ThreadId": "459805",
+    "Html": "Hmm.\r<br />\n<br />\nRecieving update notification for users is disabled, this is company policy. I'm really not sure why updates may need this and why previous versions have installed properly without enabling this option. \r<br />\n<br />\nAbout msi command-line, i have tried /q, /qn (this is official command line from Adobe guide), /quiet and nothing, same effect.<br />\n",
+    "PostedDate": "2013-10-02T01:33:10.267-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1102645",
+    "ThreadId": "459805",
+    "Html": "<blockquote>\nAbout msi command-line, i have tried /q, /qn (this is official command line from Adobe guide), /quiet and nothing, same effect.<br />\n</blockquote>\nAs Wsus will add automatically the '/qn' Command Line, you don't have to add it. Otherwise it will have twice this parameters and generate an error.<br />\n",
+    "PostedDate": "2013-10-02T02:16:23.337-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1104913",
+    "ThreadId": "459805",
+    "Html": "Oh. Got it, it's really my bad. Testing computers were in another NT group.\r<br />\n<br />\nThanks a lot for wasting your time to miserable me ((<br />\n",
+    "PostedDate": "2013-10-08T02:12:26.317-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-08T03:41:29.193-07:00"
+  }
+]

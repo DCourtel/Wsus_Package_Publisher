@@ -1,0 +1,122 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wsus Package Publisher", "Wsus Package Publisher\Wsus Package Publisher.csproj", "{187DE5B0-710A-4CC7-88CA-CCE67D8D3D2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomUpdateCreator", "CustomUpdateCreator\CustomUpdateCreator.csproj", "{CE8B78E5-66B1-4F11-81AF-29F43802F8F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomUpdateElementViewer", "CustomUpdateElementViewer\CustomUpdateElementViewer.csproj", "{6369E8B5-FA9D-4716-8146-021C4FAD5741}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomUpdateElements", "CustomUpdateElements\CustomUpdateElements.csproj", "{336A4BC1-DB98-4F93-A1EB-16270BEAE8F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomUpdateEngine", "CustomUpdateEngine\CustomUpdateEngine.csproj", "{9354F55C-CB3E-4FD8-8503-423A34AB78AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowPendingUpdates", "ShowPendingUpdates\ShowPendingUpdates.csproj", "{84E4092D-4655-46D0-86D1-563E0AA7802E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstallPendingUpdates", "InstallPendingUpdates\InstallPendingUpdates.csproj", "{FA4F5575-32A4-4B07-AC9F-9CCA9DA0830B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductKiller", "ProductKiller\ProductKiller.csproj", "{ADA4EE9E-277A-40A6-A30C-EACDBE32030B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{82813873-747E-4048-B674-1E738F54EAF9}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+		Wsus Package Publisher.vsmdi = Wsus Package Publisher.vsmdi
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{187DE5B0-710A-4CC7-88CA-CCE67D8D3D2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{187DE5B0-710A-4CC7-88CA-CCE67D8D3D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{187DE5B0-710A-4CC7-88CA-CCE67D8D3D2D}.Debug|x64.ActiveCfg = Debug|x64
+		{187DE5B0-710A-4CC7-88CA-CCE67D8D3D2D}.Debug|x86.ActiveCfg = Debug|x86
+		{187DE5B0-710A-4CC7-88CA-CCE67D8D3D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{187DE5B0-710A-4CC7-88CA-CCE67D8D3D2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{187DE5B0-710A-4CC7-88CA-CCE67D8D3D2D}.Release|x64.ActiveCfg = Release|x64
+		{187DE5B0-710A-4CC7-88CA-CCE67D8D3D2D}.Release|x64.Build.0 = Release|x64
+		{187DE5B0-710A-4CC7-88CA-CCE67D8D3D2D}.Release|x86.ActiveCfg = Release|x86
+		{CE8B78E5-66B1-4F11-81AF-29F43802F8F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE8B78E5-66B1-4F11-81AF-29F43802F8F0}.Debug|x64.ActiveCfg = Debug|x64
+		{CE8B78E5-66B1-4F11-81AF-29F43802F8F0}.Debug|x86.ActiveCfg = Debug|x86
+		{CE8B78E5-66B1-4F11-81AF-29F43802F8F0}.Debug|x86.Build.0 = Debug|x86
+		{CE8B78E5-66B1-4F11-81AF-29F43802F8F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE8B78E5-66B1-4F11-81AF-29F43802F8F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE8B78E5-66B1-4F11-81AF-29F43802F8F0}.Release|x64.ActiveCfg = Release|x64
+		{CE8B78E5-66B1-4F11-81AF-29F43802F8F0}.Release|x86.ActiveCfg = Release|x86
+		{CE8B78E5-66B1-4F11-81AF-29F43802F8F0}.Release|x86.Build.0 = Release|x86
+		{6369E8B5-FA9D-4716-8146-021C4FAD5741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6369E8B5-FA9D-4716-8146-021C4FAD5741}.Debug|x64.ActiveCfg = Debug|x64
+		{6369E8B5-FA9D-4716-8146-021C4FAD5741}.Debug|x86.ActiveCfg = Debug|x86
+		{6369E8B5-FA9D-4716-8146-021C4FAD5741}.Debug|x86.Build.0 = Debug|x86
+		{6369E8B5-FA9D-4716-8146-021C4FAD5741}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6369E8B5-FA9D-4716-8146-021C4FAD5741}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6369E8B5-FA9D-4716-8146-021C4FAD5741}.Release|x64.ActiveCfg = Release|x64
+		{6369E8B5-FA9D-4716-8146-021C4FAD5741}.Release|x86.ActiveCfg = Release|x86
+		{6369E8B5-FA9D-4716-8146-021C4FAD5741}.Release|x86.Build.0 = Release|x86
+		{336A4BC1-DB98-4F93-A1EB-16270BEAE8F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{336A4BC1-DB98-4F93-A1EB-16270BEAE8F4}.Debug|x64.ActiveCfg = Debug|x64
+		{336A4BC1-DB98-4F93-A1EB-16270BEAE8F4}.Debug|x86.ActiveCfg = Debug|x86
+		{336A4BC1-DB98-4F93-A1EB-16270BEAE8F4}.Debug|x86.Build.0 = Debug|x86
+		{336A4BC1-DB98-4F93-A1EB-16270BEAE8F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{336A4BC1-DB98-4F93-A1EB-16270BEAE8F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{336A4BC1-DB98-4F93-A1EB-16270BEAE8F4}.Release|x64.ActiveCfg = Release|x64
+		{336A4BC1-DB98-4F93-A1EB-16270BEAE8F4}.Release|x86.ActiveCfg = Release|x86
+		{336A4BC1-DB98-4F93-A1EB-16270BEAE8F4}.Release|x86.Build.0 = Release|x86
+		{9354F55C-CB3E-4FD8-8503-423A34AB78AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9354F55C-CB3E-4FD8-8503-423A34AB78AC}.Debug|x64.ActiveCfg = Debug|x64
+		{9354F55C-CB3E-4FD8-8503-423A34AB78AC}.Debug|x86.ActiveCfg = Debug|x86
+		{9354F55C-CB3E-4FD8-8503-423A34AB78AC}.Debug|x86.Build.0 = Debug|x86
+		{9354F55C-CB3E-4FD8-8503-423A34AB78AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9354F55C-CB3E-4FD8-8503-423A34AB78AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9354F55C-CB3E-4FD8-8503-423A34AB78AC}.Release|x64.ActiveCfg = Release|x86
+		{9354F55C-CB3E-4FD8-8503-423A34AB78AC}.Release|x86.ActiveCfg = Release|x86
+		{9354F55C-CB3E-4FD8-8503-423A34AB78AC}.Release|x86.Build.0 = Release|x86
+		{84E4092D-4655-46D0-86D1-563E0AA7802E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84E4092D-4655-46D0-86D1-563E0AA7802E}.Debug|x64.ActiveCfg = Debug|x64
+		{84E4092D-4655-46D0-86D1-563E0AA7802E}.Debug|x86.ActiveCfg = Debug|x86
+		{84E4092D-4655-46D0-86D1-563E0AA7802E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84E4092D-4655-46D0-86D1-563E0AA7802E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84E4092D-4655-46D0-86D1-563E0AA7802E}.Release|x64.ActiveCfg = Release|x64
+		{84E4092D-4655-46D0-86D1-563E0AA7802E}.Release|x86.ActiveCfg = Release|x86
+		{FA4F5575-32A4-4B07-AC9F-9CCA9DA0830B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA4F5575-32A4-4B07-AC9F-9CCA9DA0830B}.Debug|x64.ActiveCfg = Debug|x86
+		{FA4F5575-32A4-4B07-AC9F-9CCA9DA0830B}.Debug|x64.Build.0 = Debug|x86
+		{FA4F5575-32A4-4B07-AC9F-9CCA9DA0830B}.Debug|x86.ActiveCfg = Debug|x86
+		{FA4F5575-32A4-4B07-AC9F-9CCA9DA0830B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA4F5575-32A4-4B07-AC9F-9CCA9DA0830B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA4F5575-32A4-4B07-AC9F-9CCA9DA0830B}.Release|x64.ActiveCfg = Release|x86
+		{FA4F5575-32A4-4B07-AC9F-9CCA9DA0830B}.Release|x86.ActiveCfg = Release|x86
+		{ADA4EE9E-277A-40A6-A30C-EACDBE32030B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADA4EE9E-277A-40A6-A30C-EACDBE32030B}.Debug|x64.ActiveCfg = Debug|x86
+		{ADA4EE9E-277A-40A6-A30C-EACDBE32030B}.Debug|x86.ActiveCfg = Debug|x86
+		{ADA4EE9E-277A-40A6-A30C-EACDBE32030B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADA4EE9E-277A-40A6-A30C-EACDBE32030B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADA4EE9E-277A-40A6-A30C-EACDBE32030B}.Release|x64.ActiveCfg = Release|x86
+		{ADA4EE9E-277A-40A6-A30C-EACDBE32030B}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		BuildVersion_ConfigurationName = Any
+		BuildVersion_UpdateFileVersion = True
+		BuildVersion_UpdateAssemblyVersion = True
+		BuildVersion_BuildVersioningStyle = None.None.YearDecadeAndMonthStamp.DayStamp
+		BuildVersion_IncrementBeforeBuild = False
+		BuildVersion_AssemblyInfoFilename = Properties\AssemblyInfo.cs
+		BuildVersion_UseGlobalSettings = True
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Wsus Package Publisher.vsmdi
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1491494",
+    "ThreadId": "660871",
+    "Html": "hi there\r<br />\nam new using WPP. i want to install it upon a wsus server up and running (same machine) and i get the error message &quot; connection failed unable to connect to the remote server&quot;. though i can connect to my WSUS when the option &quot;connect to local server&quot; is not checked it seemed impossible to connect when the latest option is checked.\r<br />\n<br />\ni read some discussions on the wpp forum but i couldn't discern how to troubleshout thie issue.\r<br />\n<br />\n<br />\nany guidances are more than welcome\r<br />\n<br />\nps: am running a wsus on 2012R2 with an sql express edition installed instead of using the embedded natif database of wsus.\r<br />\nmy option.xml file setting are as follow:\r<br />\n<br />\n&lt;WsusPackagePublisher&gt;\r<br />\n  &lt;Server&gt;<br />\n<pre><code>&lt;Name&gt;P-MSWSUSEX&lt;/Name&gt;\n&lt;IsLocal&gt;True&lt;/IsLocal&gt;\n&lt;Port&gt;80&lt;/Port&gt;\n&lt;UseSSL&gt;False&lt;/UseSSL&gt;\n&lt;IgnoreCertErrors&gt;False&lt;/IgnoreCertErrors&gt;\n&lt;DeadLineDaysSpan&gt;0&lt;/DeadLineDaysSpan&gt;\n&lt;DeadLineHour&gt;0&lt;/DeadLineHour&gt;\n&lt;DeadLineMinute&gt;0&lt;/DeadLineMinute&gt;\n&lt;VisibleInWsusConsole&gt;Never&lt;/VisibleInWsusConsole&gt;</code></pre>\n\n&lt;/Server&gt;\r<br />\n&lt;/WsusPackagePublisher&gt;<br />\n",
+    "PostedDate": "2017-01-23T01:44:40.92-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1494515",
+    "ThreadId": "660871",
+    "Html": "Hi\r<br />\n<br />\nI have a similar issue. have you found a solution?\r<br />\n<br />\nBest Regards<br />\n",
+    "PostedDate": "2017-03-23T03:14:42.487-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

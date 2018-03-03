@@ -1,0 +1,138 @@
+[
+  {
+    "Id": "1117770",
+    "ThreadId": "465488",
+    "Html": "I am not sure what the problem is, but the WSUS Package Publisher will not allow me to load my openssl generated certificate in the certificate store.    It keeps telling me &quot;Failed to load the certificate. Check the file.)  This certificate has been used in previous WSUS installations, so I am not sure why I can't load it.\r<br />\n<br />\nI have tried loading the necessary certificates under &quot;Trusted Root Certificate Authority&quot;, &quot;Trusted Publishers&quot; and &quot;WSUS&quot;.   However, when I start WSUS it says &quot;You don't have any certifcat. You will not be able to publish updates.&quot;\r<br />\n<br />\nWhat am I doing wrong here?    (I can email the certificates that I have been using if you want.)<br />\n",
+    "PostedDate": "2013-11-05T08:54:14.627-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1117986",
+    "ThreadId": "465488",
+    "Html": "FYI - Here are the openSSL commands I used a while back to generate this certificate:\r<br />\n<br />\n&lt;-- Cert Authority --&gt;\r<br />\nopenssl genrsa -out ca.key 2048\r<br />\nopenssl req -new -key ca.key -out ca.csr\r<br />\nopenssl x509 -req -days 3650 -in ca.csr -signkey ca.key -out ca.crt\r<br />\n<br />\n&lt;--Publishing Cert --&gt;\r<br />\nopenssl genrsa -out client.key 2048\r<br />\nopenssl req -new -key client.key -out client.csr\r<br />\nopenssl x509 -req -days 3650 -CA ca.crt -CAkey ca.key -CAcreateserial -in client.csr -out client.crt\r<br />\n<br />\nopenssl pkcs12 -export -clcerts -in client.crt -inkey client.key -out client.p12<br />\n",
+    "PostedDate": "2013-11-05T11:21:36.643-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1118269",
+    "ThreadId": "465488",
+    "Html": "Can you :<br />\n<ul>\n<li>Start WPP</li>\n<li>try to load the certificate.</li>\n<li>Once the error message is displayed, go to Help -&gt; 'Send debug info'</li>\n<li>Click on the link 'Show informations'</li>\n<li>\nSend me the text file to <a href=\"mailto:package@publisher@free.fr\" rel=\"nofollow\">package@publisher@free.fr</a><br />\n</li>\n</ul>\nThanks.<br />\n",
+    "PostedDate": "2013-11-05T14:14:41.33-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1118325",
+    "ThreadId": "465488",
+    "Html": "The requested information has been sent.<br />\n",
+    "PostedDate": "2013-11-05T14:54:08.78-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1119215",
+    "ThreadId": "465488",
+    "Html": "Thanks.\r<br />\nJust few questions :<br />\n<ul>\n<li>You are running WPP locally on the Wsus server ?</li>\n<li>Wsus is installed on Windows Server 2012 (not R2) ?</li>\n</ul>\n",
+    "PostedDate": "2013-11-06T11:44:58.903-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1119312",
+    "ThreadId": "465488",
+    "Html": "<ul>\n<li>WPP is running locally on the WSUS server, connected as a &quot;local&quot; server.</li>\n<li>WSUS is running on Windows Server 2012 R2.     (OS Ver.  6.3.9600)</li>\n</ul>\n",
+    "PostedDate": "2013-11-06T12:57:21.267-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1119988",
+    "ThreadId": "465488",
+    "Html": "I have sent you by mail a new version of WPP. In Tools -&gt; settings -&gt; Server Tab, check the option &quot;Ignore Certificate Validation Errors&quot;. Restart WPP and load again the Certificate.\r<br />\n<br />\nLet me know if that works or not.<br />\n",
+    "PostedDate": "2013-11-07T11:55:11.36-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:32:15.9-07:00"
+  },
+  {
+    "Id": "1120506",
+    "ThreadId": "465488",
+    "Html": "Unfortunately, I did not receive an email from you with any attachments.    I checked my spam filter, and I did see anything either.<br />\n<br />\nCan you send it?  or can I get it from you using an alternate method?<br />\n",
+    "PostedDate": "2013-11-08T07:51:40.78-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1120576",
+    "ThreadId": "465488",
+    "Html": "I have sent it the 6 Nov. @ 21h15 (France)\r<br />\nI have sent it again.<br />\n",
+    "PostedDate": "2013-11-08T09:58:44.787-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1120598",
+    "ThreadId": "465488",
+    "Html": "This new version works!   Thanks for working so hard on it.<br />\n",
+    "PostedDate": "2013-11-08T10:41:09.66-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1124375",
+    "ThreadId": "465488",
+    "Html": "I have the same problem as DDSkier.<br />\nCan we get this version also?<br />\n<br />\nThe debug info is on the way to you (email).<br />\n",
+    "PostedDate": "2013-11-16T04:26:47.5-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1124411",
+    "ThreadId": "465488",
+    "Html": "I installed the new version. But i can't load a certificate from our CA. The button in WPP isn't active.\r<br />\nI used Windows Server 2012R2, 64Bit.<br />\n",
+    "PostedDate": "2013-11-16T08:41:53.29-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1124417",
+    "ThreadId": "465488",
+    "Html": "The button is gray out until you enter the password of the cert file.<br />\n",
+    "PostedDate": "2013-11-16T08:49:24.37-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1124426",
+    "ThreadId": "465488",
+    "Html": "Hmpf... Thank you! That i dont' tested. \r<br />\nNow it work's. :-)<br />\n",
+    "PostedDate": "2013-11-16T09:01:17.68-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1238553",
+    "ThreadId": "465488",
+    "Html": "I have also get the same message  &quot;Failed to load the certificate. Check the file.&quot; when problem importing a selfsigned OpenSSL generated Cert from an internal RootCa. OS is Windows Server 2012 R2 with the WSUS role installed together with WPP.  I was checking all cert connected and it looks ok. The screenshot shows WPPs own created cert and the other one that cant be loaded.<br />\n <br />\n<img src=\"http://i60.tinypic.com/2d8nuqb.jpg\" alt=\"Image\" /><br />\n",
+    "PostedDate": "2014-04-27T11:10:35.653-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1238578",
+    "ThreadId": "465488",
+    "Html": "Please, go to 'Tools' -&gt; 'Settings' and check the checkbox 'Ignore Code-Signing Certificate validation errors' on the 'Servers' Tab.<br />\n",
+    "PostedDate": "2014-04-27T13:53:41.097-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1238587",
+    "ThreadId": "465488",
+    "Html": "The setting did not stick for the first time and the cert load worked after the 3rd try, then all was fine. Is there a way to check what cert WPP/WSUS are using at the moment? I found one in the \\wsus tree in the cert mmc. Thanks for your help.<br />\n",
+    "PostedDate": "2014-04-27T14:51:55.563-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

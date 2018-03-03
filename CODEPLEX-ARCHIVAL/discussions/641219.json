@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1433990",
+    "ThreadId": "641219",
+    "Html": "For 11 days everything works well. I published FrontMotion Firefox CE successfully.\r<br />\nToday i want published a Adobe Flash Player update and get error above.\r<br />\n<br />\nThe certificate is stil valid till 2018. Here some screenshots:\r<br />\n<img src=\"http://fs1.directupload.net/images/150711/ozm5odzh.png\" alt=\"Image\" />\r<br />\n<img src=\"http://fs1.directupload.net/images/150711/drxgh7ip.png\" alt=\"Image\" />\r<br />\n<img src=\"http://fs1.directupload.net/images/150711/s5bk6kp6.png\" alt=\"Image\" />\r<br />\n<br />\nHas anyone a idea whats wrong now? I don'T found a logfile for detailed informations.<br />\n",
+    "PostedDate": "2015-07-11T03:47:30.98-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1434014",
+    "ThreadId": "641219",
+    "Html": "Hi, what happen if you try to publish an EXE or MSI without using a catalog ?<br />\n",
+    "PostedDate": "2015-07-11T12:17:59.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1434105",
+    "ThreadId": "641219",
+    "Html": "Hi!\r<br />\ni try it with LibreOffice_4.4.4_Win_x86.msi and with a autoit-setup.exe - have the same issue.<br />\n",
+    "PostedDate": "2015-07-13T01:19:27.93-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1434217",
+    "ThreadId": "641219",
+    "Html": "I think this error is relate to your certificate.<br />\n",
+    "PostedDate": "2015-07-13T18:05:36.29-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1434594",
+    "ThreadId": "641219",
+    "Html": "If that were the problem, the installation on the clients should stop working also.<br />\n",
+    "PostedDate": "2015-07-16T03:03:54.657-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1434769",
+    "ThreadId": "641219",
+    "Html": "I found a Workaround/solution for my issue.\r<br />\nI remported the <strong>valid</strong> code signing certifiacte in WPP again, restart the hole Server and now i can publish any application as before.<br />\n",
+    "PostedDate": "2015-07-17T05:54:12.227-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-07-17T05:54:40.477-07:00"
+  },
+  {
+    "Id": "1446303",
+    "ThreadId": "641219",
+    "Html": "Heya,<br />\n<br />\nafter a successful migration from Server 2003 R2 to Server 2008 R2 with WSUS I wasn't able to sign packages anymore and got error number 2148081670 with WPP and LUP!<br />\n<br />\nOn the new WSUS server I just checked if the certificate is in the correct places and not if the private key is present.<br />\n<br />\nWent to the old server, exported the WSUS cert with the private key, deleted the one without the private key on the new server, imported the cert with private key, went to WPP and voila, I'm able to sign packages again. :)<br />\n",
+    "PostedDate": "2015-09-29T03:31:50.597-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

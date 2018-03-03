@@ -1,0 +1,66 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "NTFS permissions issue",
+    "ClosedDate": "2015-02-14T12:19:55.983-08:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Hello,\r\n   I have currently started having an issue with WPP.  I go to create a Package and when I click on Publish I get \"CreateDirectory failed\"  I have attached the information to this, but I am not sure what is going on.  I have looked up online and do not see anything related to this issue except permissions to the temp folder which I have.  It was working last week, but believe maybe some folders were deleted.  WSUS is working fine.  Any help would be appreciated.\r\n\r\nWPP Release: 1.3.1411.9\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-01-20T13:16:57.43-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "CreateDirectory failed",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 243
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1421998,
+      "FileName": "Error - CreateDirectory failed.txt",
+      "DownloadUrl": ".\\1421998"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "It sounds like you have issues writing to the WSUS\\UpdateServicesPackages folder.\nThat's where the files get put before they're rolled up into a cab and put in the WSUS\\WsusContent folder. If the issue occurs as soon as you push the Publish button, that's where I'd look first.",
+      "PostedDate": "2015-01-26T14:15:29.81-08:00",
+      "Id": 170834
+    },
+    {
+      "Message": "Yes.  This was the case.  The permissions were not correct on a folder which was fixed.  Thank you for your help and suggestion",
+      "PostedDate": "2015-01-27T04:52:00.377-08:00",
+      "Id": 170894
+    },
+    {
+      "Message": "Any ideas on why NTFS permissions has changed on this folder ?",
+      "PostedDate": "2015-01-27T07:14:42.967-08:00",
+      "Id": 170907
+    },
+    {
+      "Message": "This was previously install but another user, however it looks they had changed permissions and folders.  I have been able to fix this piece by piece.... The big key was not having users added to security",
+      "PostedDate": "2015-01-27T07:36:58.023-08:00",
+      "Id": 170913
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-10-06T12:16:40.91-07:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "A Filter for the Updatelist like in the WSUS-Console would be nice.\r\n\r\nFor example just display Updates which have Approval \"Not Approved\" and Status \"Needed\".",
+    "LastUpdatedDate": "2013-10-06T12:16:40.91-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-09-08T23:52:25.43-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Postponed"
+    },
+    "Summary": "Filter for Updatelist",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 110
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi, you can already achieve this by filter on \"Not installed\" and sort the column 'Status':\n\n![FilterDisplay](http://i.imgur.com/ljaWO4v.jpg)",
+      "PostedDate": "2013-09-09T02:32:33.973-07:00",
+      "Id": 112836
+    },
+    {
+      "Message": "Yes, but i can not filter the complete Update-liste (above the status Tab).\n\nExamble usage: \n\n- Just want to see the Updates which are needed (currently you have to look at every single Update to see which are needed)\n- Do not want to see Declined Updates.",
+      "PostedDate": "2013-09-09T04:29:58.417-07:00",
+      "Id": 112841
+    },
+    {
+      "Message": "I'll keep this request for release V2.",
+      "PostedDate": "2013-10-06T12:16:32.343-07:00",
+      "Id": 117596
+    }
+  ]
+}

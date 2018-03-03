@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Behavior is conform to Microsoft design",
+    "ClosedDate": "2014-05-02T07:40:10.887-07:00",
+    "CommentCount": 6,
+    "Custom": null,
+    "Description": "I have a custom update package which includes running a VB script to display a popup message at beginning and end of installation.\r\n\r\nThat have stopped working - The installation of the published software works fine and succeeds, but the message never displays. \r\n\r\nI tried to create a new custom update with just the VB script popup and it never shows up and windows updates writes successful.\r\n\r\nIt works fine when I DoubleClick on the script. \r\n\r\nAny ideas ?",
+    "LastUpdatedDate": "2014-05-07T08:04:39.757-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-05-01T00:06:50.167-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "VB script popup not displaying anymore",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 188
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi Joex, can you revise the update and ensure that the option \"Can request user input\" is active.",
+      "PostedDate": "2014-05-01T01:27:15.633-07:00",
+      "Id": 145308
+    },
+    {
+      "Message": "Thank you - That did the trick :)",
+      "PostedDate": "2014-05-01T02:48:36.057-07:00",
+      "Id": 145314
+    },
+    {
+      "Message": "But, you get UAC prompted ?",
+      "PostedDate": "2014-05-01T03:45:18.657-07:00",
+      "Id": 145319
+    },
+    {
+      "Message": "If the option \"Can Request user input\" is off, the update installs with 'System' account. this account can't interact with the user nor the desktop. \nIf the option is on, the update installs with the logged user account. The update can interact with the user and the desktop but if UAC is enable and the user isn't admin and the update need admin right, then the UAC will prompt.\nThis is how Microsoft Update Client works.",
+      "PostedDate": "2014-05-01T05:35:58.933-07:00",
+      "Id": 145325
+    },
+    {
+      "Message": "Ok, i'm not sure what has changed as it worked before.\nThe users aren’t admins, but the \"Allow Users to Install Updates\" GPO is effective.\nIs there any other way to show a popup message before installing ?\n",
+      "PostedDate": "2014-05-07T01:09:00.083-07:00",
+      "Id": 145761
+    },
+    {
+      "Message": "Not to my knowledge.",
+      "PostedDate": "2014-05-07T08:04:39.757-07:00",
+      "Id": 145793
+    }
+  ]
+}

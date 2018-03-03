@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1498234",
+    "ThreadId": "663873",
+    "Html": "Hi there,\r<br />\n<br />\nSome questions about new update of flash.\r<br />\nWhat is the best pratice ? I already seen this : <a href=\"http://wsuspackagepublisher.codeplex.com/discussions/661072\" rel=\"nofollow\">http://wsuspackagepublisher.codeplex.com/discussions/661072</a>\r<br />\nBut it don't work for me.\r<br />\n<br />\nTo describe my process :\r<br />\nCheck catalog, import new flash from catalog, it appear on the list.\r<br />\nI give an &quot;Expire&quot; option for the previous versions. And push new version with approve for all computer. But i dont have anything new on computers. I must delete software info to have a new update.\r<br />\n<br />\nI need help ! ;-)\r<br />\n<br />\nThanks a lot<br />\n",
+    "PostedDate": "2017-10-12T06:59:41.8-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1498260",
+    "ThreadId": "663873",
+    "Html": "It can be marked as solved.\r<br />\nFor flash from catalog if we want to have &quot;update&quot;, we must have flash installed on the client.... Definitely simple when we know about it.<br />\n",
+    "PostedDate": "2017-10-16T03:06:02.963-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2017-10-16T03:06:06.323-07:00"
+  }
+]

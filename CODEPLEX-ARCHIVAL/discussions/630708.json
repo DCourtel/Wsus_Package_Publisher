@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1414234",
+    "ThreadId": "630708",
+    "Html": "Would be great ;)<br />\n",
+    "PostedDate": "2015-04-15T03:45:24.413-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1414321",
+    "ThreadId": "630708",
+    "Html": "it would be in WPP V2<br />\n",
+    "PostedDate": "2015-04-15T09:56:39.963-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1414819",
+    "ThreadId": "630708",
+    "Html": "Is it possible to just edit the associated .xml file or would that cause problems?<br />\n",
+    "PostedDate": "2015-04-16T08:14:24.787-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1414840",
+    "ThreadId": "630708",
+    "Html": "Yes, you can start creating a new Custom update, just set a return code &quot;static = 0&quot;, &quot;Ok&quot;. And when the custom update wizard close, edit the xml file. You can see where it is, in the Update Creation Wizard (Files window). Generally it's :\r<br />\nc:\\Users\\userName\\AppData\\Local\\Temp\\Wpp\\RandomFolderName\\Guid.xml\r<br />\nEdit this file before publishing<br />\n",
+    "PostedDate": "2015-04-16T08:49:49.803-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

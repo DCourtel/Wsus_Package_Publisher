@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1246095",
+    "ThreadId": "545547",
+    "Html": "Hello,\r<br />\nI am developing a package of Firefox 29.0. When a send it to the clients for downloading, there was some clients with the newest version 29.0.1 installed, and the WSUS installed the 29.0 (older that before). \r<br />\nIs there a possible rule, that says: only install the package when there isnt a newst version already installed? \r<br />\nI have tried with the rule installable when I developed 29.0.1 : &lt;bar:FileVersion Path=&quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; Comparison=&quot;LessThan&quot; Version=&quot;29.0.1.5239&quot;/&gt;, like: install only if the version already installed is less than the code of version 29.0.1, but it doesnt work.\r<br />\nDoes somebody have an idea?\r<br />\nThanks in advance<br />\n",
+    "PostedDate": "2014-05-16T05:25:48.23-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1246283",
+    "ThreadId": "545547",
+    "Html": "Unfortunately FireFox doesn't make this easy as best I can tell.  I will be doing this as well very soon and have been pondering a few ideas...\r<br />\n<br />\nWhat seems to be the biggest pain for me at the moment is how Mozilla puts the version in the key itself\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Mozilla Firefox 28.0 (x86 en-US)\r<br />\nAnd the &quot;DisplayVersion&quot; key doesn't quite fit the format described in the &quot;Reg Sz To Version Registry Key&quot; rule type in Package Publisher which allows you to do less than &amp; greater than comparisons.\r<br />\nYou might try this rule with the &quot;MozillaMaintenanceService&quot; key which appears to share a DisplayVersion\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\MozillaMaintenanceService\r<br />\n<br />\nI haven't had a chance to test this theory that it will work yet but it might do the trick for you.<br />\n",
+    "PostedDate": "2014-05-16T11:44:12.513-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1246421",
+    "ThreadId": "545547",
+    "Html": "Hi,<br />\n<blockquote>\nI have tried with the rule installable when I developed 29.0.1 : &lt;bar:FileVersion Path=&quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; Comparison=&quot;LessThan&quot; Version=&quot;29.0.1.5239&quot;/&gt;, like: install only if the version already installed is less than the code of version 29.0.1, but it doesnt work. <br />\n</blockquote>\nThis should work. Ensure the file version is really 29.0.1.5239 (right click on the file -&gt; property -&gt; Détails\r<br />\nAlso, ensure the file path (especially for cmoputers where Windows is in 64 bit)<br />\n",
+    "PostedDate": "2014-05-17T01:44:57.183-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1246921",
+    "ThreadId": "545547",
+    "Html": "Hi, thanks for the feed back.\r<br />\nIn Windows 32 bits the rule is working, but in W64 bits not: the old versions of Firefox appear and apperar for downloading. The path is ok: \r<br />\n&lt;bar:FileVersion Path=&quot;Mozilla Firefox\\firefox.exe&quot; Comparison=&quot;LessThan&quot; Version=&quot;29.0.0.5224&quot; Csidl=&quot;38&quot;/&gt;\r<br />\n&lt;bar:FileVersion Path=&quot;Mozilla Firefox\\firefox.exe&quot; Comparison=&quot;LessThan&quot; Version=&quot;29.0.0.5224&quot; Csidl=&quot;42&quot;/&gt;\r<br />\none for 32 bits and the other for 64 bits. Its strange....\r<br />\nWhat can happen?\r<br />\nWWWolf, I cant try the rule you said: HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\MozillaMaintenanceService . because in W64 I dont have that folder &quot;MozillaMaintenanceService&quot; , only in W32 bits. But thanks for your recommendation. <br />\n",
+    "PostedDate": "2014-05-19T06:36:32.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1247357",
+    "ThreadId": "545547",
+    "Html": "you could try an OR...\r<br />\n<br />\nRegistry Key Exists:\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\MozillaMaintenanceService\r<br />\n&lt;AND&gt;\r<br />\nReg Sz To Version Registry Key:\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\MozillaMaintenanceService\r<br />\nDisplayVersion Less Than 29.0.0.522\r<br />\n<br />\n&lt;OR&gt;\r<br />\n<br />\nRegistry Key Exists:\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\MozillaMaintenanceService\r<br />\n&lt;AND&gt;\r<br />\nReg Sz To Version Registry Key:\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\MozillaMaintenanceService\r<br />\nDisplayVersion Less Than 29.0.0.522<br />\n",
+    "PostedDate": "2014-05-20T05:25:50.62-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:33:00.197-07:00"
+  }
+]

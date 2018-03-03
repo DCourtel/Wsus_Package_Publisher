@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1431498",
+    "ThreadId": "640330",
+    "Html": "Hello Wsus Package Publish-Chief´s, <br />\n<br />\ni used Wsus Package Publisher a long time ago and now god the first error.<br />\nI think there is an error during the download from Adobe Flash Player 18.0.0.160.<br />\nError Message: &quot;The path has an invalid format&quot;<br />\n<br />\nHere are the Steps i did:<br />\n<ul>\n<li>Import from Catalog</li>\n<li>Open Catalog Adobe Flash Player</li>\n<li>Select Flash Player 18.0.0.160</li>\n<li>Import Selected Updates</li>\n<li>Import From Catalog.. in process</li>\n<li>\nPop-Up-Error: &quot;The path has an invalid format&quot;<br />\n</li>\n</ul>\nAfter the message pops up i choose the &quot;OK&quot;-Button for sending Error-Informations and afterwards Wsus package Publisher closed automaticaly.<br />\n<br />\nSo far, the update with older Adobe Flash Player versions has always worked.<br />\n<br />\nI tried to download Wsus package Publisher again and import the catalog again but same problem again.<br />\n<br />\nCould you help me?<br />\n<br />\n<a href=\"http://www.bilder-upload.eu/show.php?file=660e91-1435057039.jpg\" rel=\"nofollow\">http://www.bilder-upload.eu/show.php?file=660e91-1435057039.jpg</a><br />\n<br />\nBest Regards<br />\n",
+    "PostedDate": "2015-06-23T03:45:20.577-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

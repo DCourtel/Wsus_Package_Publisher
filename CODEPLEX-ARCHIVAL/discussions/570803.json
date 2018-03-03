@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1317276",
+    "ThreadId": "570803",
+    "Html": "Here's a really stupid question I'd like to ask, simply because searching for &quot;Update WSUS Package Publisher&quot; is going to be a losing battle:\r<br />\n<br />\nI have an older version of WPP running, and overall it's been very good for updating third-party software, etc.  I see there's a newer version currently available and I'm curious to know: is there any difference between installing a new version of WPP and upgrading the existing one?  Anything I should know?  I'm just worried that I'm going to try to upgrade this installation and suddenly lose any packaged updates I already have, or who knows what else.\r<br />\n<br />\nLike I said, it's something I think should be pretty straightforward, but I'd like some confirmation on my base assumptions (running the standard installation won't overwrite my existing configuration, etc.) before I charge on ahead.\r<br />\n<br />\nAny help is greatly appreciated.  Thanks!\r<br />\n<br />\n--LC<br />\n",
+    "PostedDate": "2014-10-29T02:17:39.34-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1317299",
+    "ThreadId": "570803",
+    "Html": "Hello,\r<br />\nWPP simply push package into Wsus. So, once this is done, upgrading WPP or even deleting WPP will not affect what have been already published or approved.\r<br />\n<br />\nto upgrade WPP, just download the latest release and unzip it into the folder where the oldest release of WPP is.<br />\n",
+    "PostedDate": "2014-10-29T04:11:58.797-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-12-03T13:43:27.737-08:00"
+  }
+]

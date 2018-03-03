@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Max cab size, now can not be set over 2047MB",
+    "ClosedDate": "2017-01-27T10:41:11.337-08:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Hi there,\r\n\r\nfirst a \"Thank you\" for this great software :)\r\n\r\nRecently tried to create an update to deploy a custom install.wim / install.esd to auto upgrade our windows 10 clients from 1511 to 1607. Since the files are pretty big (3,4GB) I discovered that WPP as well as \"makecab\" (directly executed from cmd) seems to limit .cab files to 2GB.\r\n\r\nSince I had set the max cab file size to 4096 MB, I thought it would be great to limit this to maybe 2048 MB or 2000 MB, so others who try to create such huge updates don't run into the same issue... ;)\r\n\r\nCheers,\r\nMichael\r\n\r\nPS: Meanwhile discovered another method how to upgrade by using a custom install.wim / install.esd with WPP :)",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1603.29",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-10-21T00:31:25.22-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Maximum Cab File Size",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 350
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Why you don't want use WSUS only for upgrade from 1511 to 1607?",
+      "PostedDate": "2016-10-21T00:58:15.35-07:00",
+      "Id": 204780
+    },
+    {
+      "Message": "Pretty easy to explain - Btw. sorry for the long text, but I thought it's better to tell the whole story at the time ;)\n\nOur environment looks like:\n> Default system UI language : en-US\n> System locale : __de-DE__\n> User locale : __de-DE__\n> Input locale : __de-DE__\n> Default time zone : __W. Europe Standard Time__\n> Active keyboard(s) : __0407:00000407__\n> Keyboard layered driver : PC/AT Enhanced Keyboard (101/102-Key)\n\n> Installed language(s): en-US\n>  Type : Fully localized language.\n\nAfter an upgrade with the default package from Microsoft, in our case \"Feature update to Windows 10 Enterprise, version 1607, en-us\", any system would look like:\n> Default system UI language : en-US\n> System locale : __en-US__\n> User locale : __en-US__\n> Input locale : __en-US__\n> Default time zone : __Pacific Standard Time__\n> Active keyboard(s) : __0409:00000409__\n> Keyboard layered driver : PC/AT Enhanced Keyboard (101/102-Key)\n\n> Installed language(s): en-US\n>  Type : Fully localized language.\n\nTherefore we needed to find another way to upgrade our clients. Our first attempt was based on a script which we deployed via GPP and let it run before the upgrade to save and after the upgrade to restore the settings (as scheduled task). The powershell script did already work to 95%, but while researching to get around with the last 5% I had an idea: Let's deploy a custom install.wim / install.esd with our regional settings which would be easier and even more failsafe :)\n\nSo I took the standard iso for 1607 Enterprise, mounted the install.wim, used dism to set international settings to de-DE and placed the content of the iso with the modified install.wim onto the ServicePackages network share / folder on the wsus server. Finally I created a little .vbs script to call the setup.exe on the network share with switches \"/auto upgrade /quiet\". To deploy the script I used \"iexpress\" (Windows -> Run -> \"iexpress\"), so I could create a normal update from an .exe in WPP and not a custom update from the .vbs :D\n\nIdeas for the solution are based on these sites / articles:\n> http://www.gruppenrichtlinien.de/artikel/windows-10-inplace-update-per-wsus-verteilen/\n> https://social.technet.microsoft.com/Forums/scriptcenter/en-US/c0e7575a-6983-453b-8959-c6d889ccc01f/stepbystep-to-wrap-a-vbs-into-an-exe\n> https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/desktop/windows-setup-command-line-options?f=255&MSPPError=-2147217396\n\nThe solution works pretty good so far - only thing that I'd like to improve is to add a check that aborts my .vbs script when the wsus network share is not reachable anymore since setup.exe first copies the files to the local folder C:\\$Windows.~BT and until this is done there needs to be a network connection, which is mostly the case, but you never know, so will look into that and then the update can be deployed :)\n\nRegards,\nMichael",
+      "PostedDate": "2016-10-21T02:44:00.693-07:00",
+      "Id": 204781
+    },
+    {
+      "Message": "Also looking for a way to deploy the Win10 Feature Upgrades with a custom Image (with removed app stuff, no store etc) via WSUS on Server 2016.\n\n",
+      "PostedDate": "2016-10-23T23:51:59.5-07:00",
+      "Id": 204810
+    }
+  ]
+}

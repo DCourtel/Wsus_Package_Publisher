@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1460329",
+    "ThreadId": "650395",
+    "Html": "I have recently been able to deploy Adobe Reader XI MSI Patches with WSUS Package Publisher to clients. The normal 32bit and 64bit clients will be installed after deploying. During this period, It work perfectly in my company. This tutorial contains Step by Step deployment Guide with Screenshots. I will show you how to deploy the Adode Reader XI in msi  format or msp format to clients silently. In the tutorial, I choose Adobe Reader XI MSI format for deploying. If you want to deploy the upgrade patches such as Adobe Reader 11.0.14 update, you should install the Full Version of Adobe Reader XI first. <br />\n<br />\nYou can try to follow this step by step guide with screenshots: <a href=\"http://www.sthshare.com/wordpress/how-to-deploy-adobe-reader-xi-to-clients-silently-using-third-party-tools-wsus-package-publisher.html\" rel=\"nofollow\">How to deploy Adobe Reader XI to clients silently</a><br />\n",
+    "PostedDate": "2016-01-23T06:57:54.473-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1493385",
+    "ThreadId": "661628",
+    "Html": "I reinstalled WSUS und Package Publisher, afterwards I created a new Certificate and rolled it out via GPO and restarted the services. I double-checked if the cert was in the correct cert folders but I still get this error message everytime I start PP and it tries to connect to my WSUS.\r<br />\n<br />\nAny suggestions?<br />\n",
+    "PostedDate": "2017-02-28T03:43:29.42-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1493422",
+    "ThreadId": "661628",
+    "Html": "Hi, could you tick the option «Ignore code signing certificate errors» in the options. Then try to publish an update.<br />\n",
+    "PostedDate": "2017-02-28T22:18:16.16-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

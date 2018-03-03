@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1026263",
+    "ThreadId": "439285",
+    "Html": "I had one question after looking at the documentation. We currently have two WSUS servers, one at our main location and one at a satellite office. The satellite office WSUS server is setup as a replica server, though it pulls Microsoft update files from Microsoft rather than over our WAN connection. If I publish a 3rd party update using your tool to the main WSUS server, will the replica server recognize that, or do I need to publish the update to both servers? \r<br />\n<br />\nThanks for any help you have. This tool looks quite interesting to me.<br />\n",
+    "PostedDate": "2013-04-05T11:22:05.763-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1027394",
+    "ThreadId": "439285",
+    "Html": "Hi jerquiaga, and thanks for your interest into WPP.<br />\nYou ask an interesting question. In my Wsus infrastructure, I have one upstream server and 4 downstreams servers as replica. This is simple to manage.<br />\n<br />\nYour downstream server pulls files from Microsoft's servers, so the question is to know if the downstream server is smart enough to see this is a localy publish update. And so, to download the file from the upstream server rather than Microsoft's servers.<br />\n<br />\nThe only thing I can say for now, is that you won't be able to publish directly to a replica server. WSUS doesn't allow that. And WPP will not let you do.<br />\n<br />\nLet me do some tests. And I come back with, I hope, some good news.<br />\n",
+    "PostedDate": "2013-04-08T11:24:53.8-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1027396",
+    "ThreadId": "439285",
+    "Html": "Great, thanks for looking into this!<br />\n",
+    "PostedDate": "2013-04-08T11:26:36.567-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1027517",
+    "ThreadId": "439285",
+    "Html": "Looks like WSUS is smart.\r<br />\n<br />\nLocally publish an update on the upstream server and doing a sync, publish that update on the downstream server too.<br />\n",
+    "PostedDate": "2013-04-08T14:20:10.253-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-08T11:28:26.913-07:00"
+  },
+  {
+    "Id": "1027534",
+    "ThreadId": "439285",
+    "Html": "Excellent! Hopefully I'll get this setup in the next week or so. Thanks for the research!<br />\n",
+    "PostedDate": "2013-04-08T14:59:48.19-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1027646",
+    "ThreadId": "439285",
+    "Html": "You're welcome.\r<br />\nDon't hesitate to contact me if you need some help to get WPP working with your Wsus infrastructure.\r<br />\n<br />\nAny suggestions, bugs reports or features requests are welcome.\r<br />\nKeep me inform of your progession please.<br />\n",
+    "PostedDate": "2013-04-08T21:45:25.53-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

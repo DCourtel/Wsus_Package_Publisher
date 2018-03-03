@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "1218916",
+    "ThreadId": "537887",
+    "Html": "Hi,\r<br />\n<br />\nI have created a new package for Flash 12 and I have declined my &quot;Flash 11&quot; package.\r<br />\n<br />\nActually, my WSUS client on workstation still ask me to install Flash 11 at every reboot.\r<br />\n<br />\nWhat is the best practice to do when we have a major update for a package please ? \r<br />\n<br />\nThank you<br />\n",
+    "PostedDate": "2014-03-04T02:13:36.757-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1219001",
+    "ThreadId": "537887",
+    "Html": "Personally, I declare the new update as superseding the old one.<br />\n",
+    "PostedDate": "2014-03-04T06:41:43.03-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1219002",
+    "ThreadId": "537887",
+    "Html": "Thank you David,\r<br />\n<br />\nas it is too late for me; do you think that I can just <strong>delete</strong> the old updates from your application ? <br />\n",
+    "PostedDate": "2014-03-04T06:44:20.14-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1219016",
+    "ThreadId": "537887",
+    "Html": "It's not too late, you can revise the new update and set supersedence.<br />\n",
+    "PostedDate": "2014-03-04T06:58:50.327-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1219020",
+    "ThreadId": "537887",
+    "Html": "Thank you, I did that but basic question.\r<br />\n<br />\nI have 2 &quot;folders&quot; on my WSUS\r<br />\n&quot;Pilot&quot;\r<br />\nand \r<br />\n&quot;Production&quot;.\r<br />\n<br />\nFlash11 (the old package so) has been configured as &quot;superseded&quot; like you said but Flash12, is only approved for &quot;Pilot&quot; computers.\r<br />\n<br />\nWhat will happens for the &quot;Production&quot; computers ? <br />\n",
+    "PostedDate": "2014-03-04T07:07:29.41-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1219030",
+    "ThreadId": "537887",
+    "Html": "If Flash11 is approve in 'Pilot' and 'Production' folders, and Flash12 is approve in 'Production' folder only, then computers in 'Pilot' folder will install Flash11 if they need it, and computers in 'Production' folder will install Flash12 if they need it.<br />\n",
+    "PostedDate": "2014-03-04T07:25:49.01-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1219042",
+    "ThreadId": "537887",
+    "Html": "No actually : \r<br />\n<br />\nFlash11 is superseeded &quot;everywhere&quot;.\r<br />\nFlash12 is approved only in &quot;Pilot&quot;\r<br />\n<br />\nWhat will happen for &quot;Production&quot; computers ?<br />\n",
+    "PostedDate": "2014-03-04T07:41:44.097-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1219099",
+    "ThreadId": "537887",
+    "Html": "In this situation, computers in &quot;Production&quot; group will see that Flash player 11 is superseded but as Flash player12 is not approve for this group, they will install Flash Player11 if need.<br />\n",
+    "PostedDate": "2014-03-04T09:55:12.673-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-03-05T03:49:13.483-08:00"
+  },
+  {
+    "Id": "1219393",
+    "ThreadId": "537887",
+    "Html": "Ok perfect ! \r<br />\nMerci beaucoup David!<br />\n",
+    "PostedDate": "2014-03-05T03:28:36.967-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

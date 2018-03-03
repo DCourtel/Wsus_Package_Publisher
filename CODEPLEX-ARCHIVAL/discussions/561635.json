@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1291538",
+    "ThreadId": "561635",
+    "Html": "I have install the WPP 1.3.1407.11, i can connected to the WSUS server. but i can not connected to the client. In the wpp it showing the client is not install , when i it detectnow. it show that the client connected failure and Reset &quot;No Ping&quot;. i have already check in the Cert that export from \r<br />\nthe server. and i also add the dword &quot;AcceptTrustedPublisherCerts=1 in client Regedit HKLM.\r<br />\nAny body help me to fix this issues?<br />\n",
+    "PostedDate": "2014-08-19T19:41:40.863-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1291553",
+    "ThreadId": "561635",
+    "Html": "<strong>CHANKALOK888 wrote:</strong><br />\n<blockquote>\nI have install the WPP 1.3.1407.11, i can connected to the WSUS server. but i can not connected to the client. In the wpp it showing the client is not install , when i it detectnow. it show that the client connected failure and Reset &quot;No Ping&quot;. i have already check in the Cert that export from <br />\nthe server. and i also add the dword &quot;AcceptTrustedPublisherCerts=1 in client Regedit HKLM.<br />\nAny body help me to fix this issues?<br />\n</blockquote>\nFor me it is a problem on the client. Check Firewall and Antivirus Software on the Client.<br />\n",
+    "PostedDate": "2014-08-19T21:44:57.77-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1291586",
+    "ThreadId": "561635",
+    "Html": "Sorry, i Have already checked that the client PC can show in the WPP with &quot;unkown&quot; not for &quot;Not Install&quot;  status\r<br />\n<br />\ni have drop down part of the log as below where the client PC is &quot;news350.newsdept.local&quot; running in Win XP sp 3 \r<br />\nany help?\r<br />\n<br />\n20/8/2014 14:30:10\tEntering Void Display(System.Windows.Forms.DataGridViewSelectedRowCollection)\r<br />\n20/8/2014 14:30:10\tEntering Void DisplayInstalledUpdates()\r<br />\n20/8/2014 14:30:10\tEntering Microsoft.UpdateServices.Administration.UpdateInstallationInfoCollection GetUpdateInstallationInfo(System.String, System.DateTime, System.DateTime) : news350.newsdept.local\r<br />\n20/8/2014 14:30:11\tEntering Void ctxMnuComputer_ItemClicked(System.Object, System.Windows.Forms.ToolStripItemClickedEventArgs) : DetectNow\r<br />\n20/8/2014 14:30:11\tEntering Void .ctor() : FrmRemoteExecution\r<br />\n20/8/2014 14:30:11\tEntering Wsus_Package_Publisher.Credentials GetInstance()\r<br />\n20/8/2014 14:30:11\tlblCredentialNotice has for Text value : Features connecting to remote computers will use the same credentials than the application.\r<br />\n20/8/2014 14:30:11\tEntering Void SendDetectNow(System.Collections.Generic.List<code>1[Wsus_Package_Publisher.ADComputer], System.String, System.String) : On 1 computers. With Login : \r<br />20/8/2014 14:30:11\tEntering Void SendCommand(System.Object)\r<br />20/8/2014 14:30:11\tnews350.newsdept.local\r<br />20/8/2014 14:30:11\tEntering System.Net.IPAddress GetIPv4Address()\r<br />20/8/2014 14:30:11\t**** 無法識別這台主機。\r<br />20/8/2014 14:30:11\tWill return null\r<br />20/8/2014 14:30:11\tEntering Boolean Ping(Int32, System.Net.IPAddress)\r<br />20/8/2014 14:30:11\tWill return false\r<br />20/8/2014 14:30:11\tnews350.newsdept.local don't Ping\r<br />20/8/2014 14:34:38\tEntering Void btnClose_Click(System.Object, System.EventArgs)\r<br />20/8/2014 14:34:46\tEntering Void ctxMnuComputer_ItemClicked(System.Object, System.Windows.Forms.ToolStripItemClickedEventArgs) : DetectNow\r<br />20/8/2014 14:34:46\tEntering Void .ctor() : FrmRemoteExecution\r<br />20/8/2014 14:34:46\tEntering Wsus_Package_Publisher.Credentials GetInstance()\r<br />20/8/2014 14:34:46\tlblCredentialNotice has for Text value : Features connecting to remote computers will use the same credentials than the application.\r<br />20/8/2014 14:34:46\tEntering Void SendDetectNow(System.Collections.Generic.List</code>1[Wsus_Package_Publisher.ADComputer], System.String, System.String) : On 1 computers. With Login : \r<br />\n20/8/2014 14:34:46\tEntering Void SendCommand(System.Object)\r<br />\n20/8/2014 14:34:46\tnews350.newsdept.local\r<br />\n20/8/2014 14:34:46\tEntering System.Net.IPAddress GetIPv4Address()\r<br />\n20/8/2014 14:34:46\t**** 無法識別這台主機。\r<br />\n20/8/2014 14:34:46\tWill return null\r<br />\n20/8/2014 14:34:46\tEntering Boolean Ping(Int32, System.Net.IPAddress)\r<br />\n20/8/2014 14:34:46\tWill return false\r<br />\n20/8/2014 14:34:46\tnews350.newsdept.local don't Ping\r<br />\n20/8/2014 14:34:51\tEntering Void btnClose_Click(System.Object, System.EventArgs)\r<br />\n20/8/2014 14:34:55\tEntering Void .ctor() : FrmSendDebugInfo\r<br />\n20/8/2014 14:34:57\tEntering Void lnkLblShowInformations_LinkClicked(System.Object, System.Windows.Forms.LinkLabelLinkClickedEventArgs)<br />\n",
+    "PostedDate": "2014-08-19T23:43:58.293-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1291628",
+    "ThreadId": "561635",
+    "Html": "Hi, can you translate this into English : 無法識別這台主機。 <br />\n<blockquote>\n20/8/2014 14:34:46 Entering System.Net.IPAddress GetIPv4Address() <br />\n20/8/2014 14:34:46 **** 無法識別這台主機。 <br />\n20/8/2014 14:34:46 Will return null <br />\n</blockquote>\nFrom the computer where WPP runs, can you ping news350.newsdept.local ?\r<br />\nI think that your computer can't resolve the name : news350.newsdept.local <br />\n",
+    "PostedDate": "2014-08-20T03:12:45.797-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1291887",
+    "ThreadId": "561635",
+    "Html": "Hi, You are correct . now i can detectnow sucessfully.\r<br />\n<br />\nthanks<br />\n",
+    "PostedDate": "2014-08-20T21:49:02.443-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-20T21:49:12.287-07:00"
+  },
+  {
+    "Id": "1305872",
+    "ThreadId": "561635",
+    "Html": "Hello,\r<br />\n<br />\nI have same issue...\r<br />\n<br />\nAny help will be appreciable.\r<br />\n<br />\nThanks <br />\n",
+    "PostedDate": "2014-09-18T03:45:51.467-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

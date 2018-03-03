@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1314452",
+    "ThreadId": "570089",
+    "Html": "I have extracted the files, created the MST file, created the update, approved the update, started the install and I get the Failed: 1 Update - Code 66A<br />\n",
+    "PostedDate": "2014-10-17T11:38:14.653-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1314562",
+    "ThreadId": "570089",
+    "Html": "Hi, the error code 0x8007066A mean :\r<br />\n<em>The program to be upgraded may be missing or the patch may upgrade a different version of the program</em><br />\n",
+    "PostedDate": "2014-10-18T01:09:37.737-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1314588",
+    "ThreadId": "570089",
+    "Html": "<strong>jmaguire wrote:</strong><br />\n<blockquote>\nI have extracted the files, created the MST file, created the update, approved the update, started the install and I get the Failed: 1 Update - Code 66A<br />\n</blockquote>\nWhere did you downlaod the full version of 11.0.09?  <br />\n",
+    "PostedDate": "2014-10-18T03:03:50.953-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

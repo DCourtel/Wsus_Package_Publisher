@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1222416",
+    "ThreadId": "538920",
+    "Html": "All,\r<br />\n<br />\n I have utilized the Adobe Flash WSUS template for SCCM etc..\r<br />\n<br />\nI then selected only Adobe Flash Activex and Plugin latest version .77 for importing.\r<br />\n<br />\nI approved it for deployment and a lot of machines downloaded and installed, however on a small number of machine indicate not applicable.\r<br />\n<br />\nWhen I go and look at those machines in particular they still have the old version of flash activex. Plugin installed fine, but it appears that it doesn't pull the update for activex.\r<br />\n<br />\nAny suggestions?<br />\n",
+    "PostedDate": "2014-03-13T09:15:26.44-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1222886",
+    "ThreadId": "538920",
+    "Html": "Hi, computers will not download this update because they think it's not appicable. So they will not install it.\r<br />\nIsApplicable rules for Adobe Flash Player 12.0.0.77 are :\r<br />\n<br />\n&lt;bar:RegKeyExists Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;Software\\Classes\\CLSID{D27CDB6E-AE6D-11cf-96B8-444553540000}&quot; RegType32=&quot;true&quot;/&gt;\r<br />\n<strong>And</strong>\r<br />\n&lt;lar:Not&gt;\r<br />\n&lt;bar:RegDword Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;Software\\Macromedia\\FlashPlayer\\SafeVersions&quot; Value=&quot;12.0&quot; Comparison=&quot;GreaterThanOrEqualTo&quot; Data=&quot;77&quot; RegType32=&quot;true&quot;/&gt;\r<br />\n&lt;/lar:Not&gt;\r<br />\n<strong>And</strong>\r<br />\n&lt;bar:WindowsVersion Comparison=&quot;GreaterThanOrEqualTo&quot; MajorVersion=&quot;5&quot; MinorVersion=&quot;0&quot; ServicePackMajor=&quot;0&quot; ServicePackMinor=&quot;0&quot;/&gt;   &lt;= Min Win 2000\r<br />\n<br />\nSo, ensure these registry key are ok on client computers. \r<br />\nAlso, you can try to launch manually the MSI file to see if any error appear.<br />\n",
+    "PostedDate": "2014-03-14T12:21:22.07-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1222920",
+    "ThreadId": "538920",
+    "Html": "Thanks for the reply....\r<br />\n<br />\nI looked over this as well...\r<br />\n<br />\nThe classes registry key listed does not exist, the safeversions key exists but 12.0 is not listed. I'm not 100% where the 3rd check (Windows version) is confirming in the registry. \r<br />\n<br />\nThanks for your help though. \r<br />\n<br />\nAll machines are identical in terms of them being windows 7, sp1 etc...<br />\n",
+    "PostedDate": "2014-03-14T13:52:10.723-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1224139",
+    "ThreadId": "538920",
+    "Html": "Ok appears I have it resolved:\r<br />\n<br />\n1: Basically I deleted all package level rules and used update level rules only.\r<br />\n<br />\n2: I created update level rule to look for MSI product id and the OS version.  (works both for Flash activex and plugin)\r<br />\n<br />\nOnce those changes were made, I ran a redetection and it appears to work. I also ran detections on machines that currently have the package and it recognizes that no updates are needed.<br />\n",
+    "PostedDate": "2014-03-18T13:43:18.213-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-03-19T01:19:51.17-07:00"
+  }
+]

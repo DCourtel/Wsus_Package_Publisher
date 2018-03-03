@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Computer Detail Viewer",
+      "DisplayName": "Computer Detail Viewer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-07-07T11:14:02.893-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "In the computer detail viewer, the report showing updates installed for computers betwen two dates crash if these dates are equals.\r\n\r\nAdded some code to handle this situation.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.2.1307.01",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-07-07T11:13:33.973-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Crash when ArrivalDateAfter = ArrivalDateBefore",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 81
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1416070",
+    "ThreadId": "631826",
+    "Html": "When I attempt to clean the folder on some PCs it fails with this error:<br />\n<br />\n**** Unable to Mount the folder<br />\n<br />\nI verified the PCs are configured properly. <br />\n<br />\nIt successfully stops the services and I am able to connect remotely.<br />\n<br />\nHow is it trying to mount\\enumerate the folder prior to deleting it?  This may be the key.<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2015-04-20T14:28:48.53-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

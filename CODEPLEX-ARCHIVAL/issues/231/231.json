@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-02-14T12:30:01.42-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "I am able to publish updates with WPP, but when my co-worker (admin on server) is opening WPP to publish updates, he received \"The certificate is invalid. You will not be able to publish updates.\"\r\n\r\nWhat can be done to resolve this and allow multiple users to publish updates to WSUS?  \r\nWe've attempted the following:\r\n* Within WPP , imported the certificate from his logon with cert password.  It states \"Failed to load the Certificate. Check the file.\"  This is the same file I used to import the cert initially when installing WPP.\r\n* Ran the native cert import wizard (pfx file)",
+    "LastUpdatedDate": "2015-02-14T12:30:01.42-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-11-14T07:58:28.447-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Unable to Publish Updates from Multiple User/Admin Accounts",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 231
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Are you and your co-admin using the same Logon-Account? Or are you both using your own account?\n\nMaybe you can use the administrator account on the server, you can start RDP-Connection via:\n\nmstsc /admin [ENTER] > Servername.",
+      "PostedDate": "2014-11-14T08:20:14.71-08:00",
+      "Id": 164737
+    },
+    {
+      "Message": "We are both using our own accounts that are part of the local admin group on the server.  Neither of us connect to the console session.",
+      "PostedDate": "2014-11-14T08:55:28.773-08:00",
+      "Id": 164744
+    }
+  ]
+}

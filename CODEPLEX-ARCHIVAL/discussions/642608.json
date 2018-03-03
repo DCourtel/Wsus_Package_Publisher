@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1438284",
+    "ThreadId": "642608",
+    "Html": "Have a central WSUS site and about eight remote locations with a WSUS replica server. \r<br />\n<br />\nDue to the increasing disk space requirements of the Microsoft Updates (WSUS Content Directory) we have to configure the Replica WSUS Server in the remote locations so that clients download the Updates directly from Microsoft and not from the WSUS Server (WSUS option &quot;Do not store update files locally; computer install from Microsoft Update&quot;). The Replica WSUS Servers just get the approvals from the parent WSUS server.\r<br />\n<br />\nWith this WSUS architecture, Is there any possibility to distribute WPP Updates to the remote locations?\r<br />\n<br />\nThank you in advance for any help!\r<br />\nFranz<br />\n",
+    "PostedDate": "2015-08-12T04:49:45.37-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1438318",
+    "ThreadId": "642608",
+    "Html": "Hi, this question have been already asked. See here : <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/439285\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/439285</a><br />\n",
+    "PostedDate": "2015-08-12T09:59:35.82-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-08-12T09:59:51.14-07:00"
+  },
+  {
+    "Id": "1440541",
+    "ThreadId": "642608",
+    "Html": "Hi, thank you for the hint. This is the best outcome for our design that we could expect :-)\r<br />\n<br />\nKind regards, Franz<br />\n",
+    "PostedDate": "2015-08-14T02:02:13.887-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

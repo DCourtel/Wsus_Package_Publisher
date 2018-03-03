@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-07-03T14:32:40.41-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "The \"Make it visible in Wsus Console\" checkbox is grayed out and not available when importing updates from catalogs.  I noticed this when importing the latest 14.0.0.125 today. \r\n\r\nI am using version 1.3.1405.17, in Windows Server 2012 (6.2.9200.16384). In the previous version this option worked fine.\r\n\r\nThank you.",
+    "LastUpdatedDate": "2014-07-03T14:32:40.41-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-06-12T11:48:07.75-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Can see published updates in WSUS Console",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 198
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Two conditions needs to be met for this option to be available :\nIn 'Tools' -> 'Settings' -> 'Server' tab :\n\n * The option 'Connect to local Server' need to be checked. (Wpp run on the Wsus server)\n * In 'When publishing a new update' part, the option 'Never make this update visible' must be NOT selected\n",
+      "PostedDate": "2014-06-12T13:13:16.753-07:00",
+      "Id": 149571
+    }
+  ]
+}

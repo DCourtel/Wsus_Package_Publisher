@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Settings",
+      "DisplayName": "Settings"
+    },
+    "ClosedComment": "WPP is able to subscribe to catalogs on Internet and to check periodically if a new catalog is available.",
+    "ClosedDate": "2013-09-01T10:57:28.133-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Allow users to subscribe to URLs where they usually download their catalogs, so that WPP can check periodically if a new version of the catalog is available.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1307.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-08-15T07:31:42.173-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Check automatically if newest version of Catalog is available",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 3,
+    "Id": 100
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

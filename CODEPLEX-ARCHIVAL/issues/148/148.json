@@ -1,0 +1,96 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-12-15T04:46:09-08:00",
+    "CommentCount": 9,
+    "Custom": null,
+    "Description": "Hi Guys,\r\n\r\nI'm using WPP for some weeks and I am still really pleased aboud it's functionality, works great.\r\nExcept one thing:\r\n\r\nToday I tried to create an update for PSR (http://www.passwordsafe.de/en/home.html) wich works fine on my first view with their distributed msi file (http://www.passwordsafe.de/nc/support/download-center/download/password-safe-v7-alle-editionen-msi-2.html). I did not change anything.\r\n\r\nSo what now happends is thas my test systems (win7, win7, win vista) install it correctly but after a quick search prevously installed update is back in the to-be-installed list. I already checked out the Id and product ID (same code?) and tried to change the rules wether it might be installed or not. But nothing changes. Also I tried to use an older version of WPP without any further changes to my problem.\r\n\r\nIdeas? Suggestions?\r\nThanks in advance!\r\n\r\nBent",
+    "LastUpdatedDate": "2013-12-15T04:46:09.08-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-31T10:19:37.797-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Package wants to reinstall again and again....",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 148
+  },
+  "FileAttachments": [
+    {
+      "FileId": 754936,
+      "FileName": "sceens.png",
+      "DownloadUrl": ".\\754936"
+    },
+    {
+      "FileId": 754978,
+      "FileName": "Unbenannt.png",
+      "DownloadUrl": ".\\754978"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Try on the Client to open a Admin Commandline:\nnet stop WUAUSERV\nrd /s /q %windir%\\SoftwareDistribution\nnet start wuauserv\nwuauclt /detectnow\nwuauclt /reportnow\nWait 10 Minutes, run Windows Update again. Comes the Update again?",
+      "PostedDate": "2013-10-31T11:30:43.023-07:00",
+      "Id": 120325
+    },
+    {
+      "Message": "Hi Bent, can you revise this update and take a screenshot of each window and then include these screen capture here.\n\nThanks.",
+      "PostedDate": "2013-10-31T12:16:59.793-07:00",
+      "Id": 120331
+    },
+    {
+      "Message": "Hi Guys,\r\n\r\n@WinfriedSonntag:\r\nYes, after this my last update appears again and older (already installed) ones, too. I'm questioning myself if there is a problem on my clients because it never shows this behavior till this update last week. So I think it must be located somewhare in the WPP process or whatever on our WSUS Server. Not?\r\n\r\n@DCourtel:\r\nPlease find the attachment\r\n\r\nRegards,\r\nBent",
+      "PostedDate": "2013-11-05T04:23:47.103-08:00",
+      "Id": 121823
+    },
+    {
+      "Message": "Well, \nOn the screens I can see a diffecence betrween ID in the overview and that product ID in in exclusive list. This shouldn't be, right? I am absolutely sure of tested that one, to coby the ID to this two lists. Also I copied the ID from the *.msi file without success",
+      "PostedDate": "2013-11-05T04:26:52.697-08:00",
+      "Id": 121824
+    },
+    {
+      "Message": "> So I think it must be located somewhare in the WPP process or whatever on our WSUS Server. Not? \n\nNo, WSUS is only a Presenter for an Update. The local Windows Update will install the Update again and again.\n\nPls decline the update and delete it. After this create the update pls again. On the Client you have to run the instructions in commandline i posted.",
+      "PostedDate": "2013-11-05T05:25:34.957-08:00",
+      "Id": 121828
+    },
+    {
+      "Message": "Hi again,\r\n\r\nTried it out but did not help. This update wants still to install itself again and again..\r\n\r\nFurther ideas?\r\n\r\nRegards,\r\nBent",
+      "PostedDate": "2013-11-05T07:23:09.767-08:00",
+      "Id": 121838
+    },
+    {
+      "Message": "I think that the MSI file you have download is in fact a \"Fake\" MSI file. I have install it on my computer, and I can't find any trace of the software in the \nHKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\Installer\nAnd in the \nHKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{7B6F4DF3-57DA-49AD-8A6B-5639E9D66E8B}\nI can see this : UninstallString = C:\\PROGRA~2\\INSTAL~1\\{7B6F4~1\\Setup.exe /remove /q0\n??? So you can't rely on MSI rule for this package.\nTry do to some rule bases on RegKeys (for example \"DisplayVersion\")",
+      "PostedDate": "2013-11-05T08:39:17.03-08:00",
+      "Id": 121843
+    },
+    {
+      "Message": "Yeah I thought about it but thought of it as a bit dump.. So thanks for your answer, I'm trying to \"professionalise\" this MSI via some registry entries.\n\nThank you very much!\n\nBent",
+      "PostedDate": "2013-11-05T09:34:06.84-08:00",
+      "Id": 121847
+    },
+    {
+      "Message": "Btw:\nI just love this tool. It gives us such a huge range of simplifying many updates or new installations.\nThanks for your work!",
+      "PostedDate": "2013-11-07T09:46:04.743-08:00",
+      "Id": 122147
+    }
+  ]
+}

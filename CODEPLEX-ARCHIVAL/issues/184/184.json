@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-04-01T10:06:03.033-07:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "I have not been able to import my code signing certificate, keep getting \"Check the file\" message. It imports fine when I use the MMC Certificate process so the file is ok. Where is the program looking to find the certificate and what is it checking for to validate the import?",
+    "LastUpdatedDate": "2014-04-01T10:06:03.033-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-03-26T06:02:51.393-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Not able to import certificate - solved",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 184
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "try this :\n - Start WPP\n - Go to Tools -> Settings -> Server tab\n - Check the option \"Ignore Code-Siging Certificate validation errors\"\n - Try to import the certificate once again\n",
+      "PostedDate": "2014-03-27T09:32:28.33-07:00",
+      "Id": 139012
+    },
+    {
+      "Message": "That worked, it now imports the certificate and signing is working. I know you can't diagnose the issue with the information you have, but any idea what it was objecting to? I would like to know if my PKI has a problem. Thanks",
+      "PostedDate": "2014-03-28T07:24:39.387-07:00",
+      "Id": 139888
+    },
+    {
+      "Message": "Your Certifacate must imported in Trusted Publisher and Trusted certification authority.\n",
+      "PostedDate": "2014-03-28T07:58:51.13-07:00",
+      "Id": 139890
+    },
+    {
+      "Message": "Some certificate are declare as invalide by the .Net Framework but work well in Wsus. I really don't know why. Generally this happen with certificates issued out by OpenSSL.\nYou should not worry about that.",
+      "PostedDate": "2014-03-28T10:05:10.17-07:00",
+      "Id": 139903
+    }
+  ]
+}

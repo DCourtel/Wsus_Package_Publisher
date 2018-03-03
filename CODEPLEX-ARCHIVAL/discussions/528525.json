@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1201337",
+    "ThreadId": "528525",
+    "Html": "I've got the Adobe updates working fine using the supplied catalogs.  I haven't been able to find one for Java, so I thought I'd try building a custom update using <a href=\"http://wsuspackagepublisher.codeplex.com/discussions/462519\" rel=\"nofollow\">http://wsuspackagepublisher.codeplex.com/discussions/462519</a> and <strong>Installing Java 7u21 Without Java Auto Updater.pdf</strong>.  I fumbled through it, but when I click &quot;Publish&quot;, I get the following message:<br />\n\r<br />\n&quot;<strong>Could not load type 'XPathOperatorGroup' from assembly 'System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublickKeyToken=b77a5c561934e089' due to value type mismatch.</strong>&quot;\r<br />\n<br />\nI looked for something related online, but didn't find anything.  Can you help me, please?  It's probably something very simple that I'm doing wrong.\r<br />\n<br />\nOne other question.  If you specify the jre1.7.0_51.msi as the <em>update file</em>, I'm not clear what goes in the <em>additional files</em> field.<br />\n",
+    "PostedDate": "2014-01-31T07:00:04.783-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1201636",
+    "ThreadId": "528525",
+    "Html": "<blockquote>\nI haven't been able to find one for Java<br />\n</blockquote>\nOracle didn't provide any catalog for Java. You can buy catalogs from <a href=\"http://patchmypc.net/scup\" rel=\"nofollow\">PatchMyPC</a> . i have never try these catalogs with WPP.<br />\n<blockquote>\nCould not load type 'XPathOperatorGroup' from assembly 'System.Data.SqlXml<br />\n</blockquote>\nI have never seen this error message before. It suggest that your computer can't load an assembly or load an old version.<br />\n<blockquote>\nIf you specify the jre1.7.0_51.msi as the update file, I'm not clear what goes in the additional files field<br />\n</blockquote>\n'Additional files' field is used to publish more than one file. If the main file didn't require any other file, you don't have to put anything here. It is essentially used by custom updates, when the custom update refer to other files (for example, the custom update need to run a vbscript...). it is also used when the main file need a config file or anything else.<br />\n",
+    "PostedDate": "2014-02-01T08:45:38.173-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:58:28.473-07:00"
+  },
+  {
+    "Id": "1434888",
+    "ThreadId": "528525",
+    "Html": "You can pull Java MSI's from the \\windows\\installer folder once you install it somewhere. Add the 'Subject' column or sort by modified date.<br />\n",
+    "PostedDate": "2015-07-18T07:43:09.72-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

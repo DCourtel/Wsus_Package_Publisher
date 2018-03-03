@@ -1,0 +1,86 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-08-07T01:53:01.697-07:00",
+    "CommentCount": 7,
+    "Custom": null,
+    "Description": "\r\nSoftware packages created with WSUS Package Publisher (newest release) will not deploy on Windows 10 workstations. Microsoft Updates are working fine. \r\n\r\nThe download works, when starting to install we get this error.\r\n0x80246003\t-2145099773\tWU_E_DM_UNKNOWNALGORITHM\tThe file metadata requested an unknown hash algorithm\r\n\r\nWindows 7 no problem\r\n\r\nThis or similar issue was discussed with LUP before:\r\nhttp://sourceforge.net/p/localupdatepubl/discussion/1076879/thread/8552b7cf/?limit=25#c441\r\n\r\nWSUS Certificates are installed and valid. Any idea?\r\n",
+    "LastUpdatedDate": "2015-08-07T01:53:01.697-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-08-06T06:31:50.333-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "WSUS Update Publisher packages will not install under Windows 10",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 281
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1477918,
+      "FileName": "error.JPG",
+      "DownloadUrl": ".\\1477918"
+    },
+    {
+      "FileId": 1477919,
+      "FileName": "pp.JPG",
+      "DownloadUrl": ".\\1477919"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Package Publisher Version attached",
+      "PostedDate": "2015-08-06T06:40:55.987-07:00",
+      "Id": 188102
+    },
+    {
+      "Message": "Hi, Can you tell me if these updates are Classic updates or Custom Updates ?\nI have a Windows 10 in our test environnement and classic updates install fine. Custom updates doesn't install because they rely on .Net Framework 2.0, which is not installed by default on Windows 10.",
+      "PostedDate": "2015-08-06T06:56:55.823-07:00",
+      "Id": 188104
+    },
+    {
+      "Message": "The updates are classic updates, no custom updates made by the \"Custom Update Creator\".",
+      "PostedDate": "2015-08-06T07:11:48.077-07:00",
+      "Id": 188105
+    },
+    {
+      "Message": "additional info: Our WSUS server is running on Server 2008 R2.",
+      "PostedDate": "2015-08-06T07:16:07.05-07:00",
+      "Id": 188106
+    },
+    {
+      "Message": "Your WSUS-Build is not the latest, pls update your WSUS. In WSUS-FAQ No. 44 you will find Details for patching: http://www.wsus.de/faq\n\nWSUS 3.0 (SP2) + KB2720211: \tBuild 3.2.7600.251\nWSUS 3.0 (SP2) + KB2734608: \tBuild 3.2.7600.256\nWSUS 3.0 (SP2) + KB2828185: \tBuild 3.2.7600.262\nWSUS 3.0 (SP2) + KB2938066: \tBuild 3.2.7600.274\n\nAfter your Build is .274, restart the whole WSUS, delete %windir%\\SoftwareDistribution on the client, revise the update again and search on the client again for updates. Is the installation running now?",
+      "PostedDate": "2015-08-06T08:04:13.977-07:00",
+      "Id": 188108
+    },
+    {
+      "Message": "Yes, after following the steps you described the installation runs fine.\n\nBut I don't know why WSUS didn't install the KBs by itself. I had to download and install them manually.",
+      "PostedDate": "2015-08-06T09:06:39.09-07:00",
+      "Id": 188111
+    },
+    {
+      "Message": "This are 'Hotfixes', not Updates on Windows Update.\n\nThanks for Response and happy patching. ;)",
+      "PostedDate": "2015-08-06T09:46:38.497-07:00",
+      "Id": 188113
+    }
+  ]
+}

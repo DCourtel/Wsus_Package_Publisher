@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1244206",
+    "ThreadId": "545040",
+    "Html": "Hello!\r<br />\nI set up wpp, distributed certificates through GPO. \r<br />\nPublished software. \r<br />\nAnd on some computers (many works.) get the following error:\r<br />\nWARNING: Error: 0x80096004 when verifying trust for C:\\Windows\\SoftwareDistribution\\Download\\2a040ef7e85203f363c615e65da3ae1c\\136a0f7d-2a9b-4f97-ad89-6f57115a586e_1.cab \r<br />\n2014-05-12\t01:02:29:964\t 580\t830\tMisc\tWARNING: Digital Signatures on file C:\\Windows\\SoftwareDistribution\\Download\\2a040ef7e85203f363c615e65da3ae1c\\136a0f7d-2a9b-4f97-ad89-6f57115a586e_1.cab are not trusted: Error 0x80096004 \r<br />\nI noticed: on the computers with problem installed windows 7 64 bit . \r<br />\nInfo from the Internet: Microsoft  prohibits  RSA keys less than 1024 bit. A self-signed certificate -512 bits. \r<br />\nWhat to do? \r<br />\nthank you.\r<br />\nP.S. Sorry for my bad English.<br />\n",
+    "PostedDate": "2014-05-11T23:36:37.453-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1244286",
+    "ThreadId": "545040",
+    "Html": "That right : Microsoft KB2661254 prohibits RSA keys less than 1024 bits.\r<br />\nCan you check if this KB is installed on computers ?\r<br />\nHow did you get the certificat ?\r<br />\nWhat is the exact version of your Wsus server ?\r<br />\n<br />\n<img src=\"http://i.imgur.com/zBe6YHy.png\" alt=\"Wsus Version\" /><br />\n",
+    "PostedDate": "2014-05-12T03:32:18.607-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1244309",
+    "ThreadId": "545040",
+    "Html": "<blockquote>\nCan you check if this KB is installed on computers ? <br />\nNot installed. may be part of another update<br />\n<br />\nHow did you get the certificat ? <br />\nBy WPP. as written in the installation guide for<br />\n<br />\nWhat is the exact version of your Wsus server ? <br />\nversion: 3.2.7600.256<br />\nWin2008R2 Std.<br />\n</blockquote>\nwhether WPP to issue a self-signed certificate more than 1024?<br />\n",
+    "PostedDate": "2014-05-12T04:39:40.567-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1244510",
+    "ThreadId": "545040",
+    "Html": "Hi,\r<br />\n<br />\nyou need one more Update on your WSUS:\r<br />\n<br />\nWSUS 3.0 (SP2) + KB2720211: \tBuild 3.2.7600.251\r<br />\nWSUS 3.0 (SP2) + KB2734608: \tBuild 3.2.7600.256\r<br />\nWSUS 3.0 (SP2) + KB2828185: \tBuild 3.2.7600.262\r<br />\n<br />\nAfter this, reboot the WSUS and export a new Certifacte. Put in the GPO for publishing to the clients, edit one Update in WPP, publish again and try to install on a W7 Client.<br />\n",
+    "PostedDate": "2014-05-12T11:39:30.78-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1244542",
+    "ThreadId": "545040",
+    "Html": "Your Wsus server is at level 256, so KB2720211 and KB2734608 are installed. Since KB2720211, Wsus server issued out 2048 bits Self-signed certificates.\r<br />\n<br />\nWPP doesn't create any certificate by its own for Wsus 3.0 SP2 (Server 2003R2, 2008, 2008R2) nor 6.2 (Server 2012). But only for Wsus 6.3 (Server 2012 <strong>R2</strong> )\r<br />\nTo check the bit length of the private key of the certificate :<br />\n<ul>\n<li>Open WPP.</li>\n<li>Connect to the server.</li>\n<li>\nGo to &quot;Help&quot; -&gt; &quot;About&quot;<br />\n</li>\n</ul>\nIf you need to generate another certificate, go to &quot;Tools&quot; -&gt; &quot;Certificate&quot; and click on the buton &quot;Generate the certificate&quot;.\r<br />\nYou may want to delete the previous certificate before (use certmgr.msc)\r<br />\nOnce the new certificate is created, do not forget to distribute it to clients computers. Also, you will need to re-sign all already published packages.<br />\n<blockquote>\nAnd on some computers (many works.) get the following error: WARNING: Error: 0x80096004 when verifying trust <br />\n</blockquote>\nThis let me think that the problem is on clients computers instead of on the server. Can you check that clients computers have the correct certificate in correct store (&quot;Trusted root authority&quot; and &quot;Trusted Publisher&quot;). Also, you may want to check that the registry key :\r<br />\n<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AcceptTrustedPublisherCerts is set to 1<br />\n",
+    "PostedDate": "2014-05-12T13:11:35.363-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1244669",
+    "ThreadId": "545040",
+    "Html": "Despite the fact that the version 3.2.7600.256, i can install update KB2720211 and KB2734608.\r<br />\nThen setup  KB2828185.\r<br />\nNow version 3.2.7600.262 - it is OK ^)\r<br />\n<br />\nThen generate new certificate - 2048 bit -&gt; re-sign published packages -&gt; distribute new certificate to clients computers -&gt; ALL WORKS.. :)\r<br />\n<br />\nP.S.<br />\n<blockquote>\nAnd on some computers (many works.) get the following error: WARNING: Error: 0x80096004 when verifying trust __<br />\n</blockquote>\nmany works - old computers with winXP and Win7 x86\r<br />\nunworked comps (NOW works!) - new computers with Win7 x64.. (probably they already inbuilt update that does not take the keys less 1024bit)\r<br />\n<br />\n<br />\nThank you very much WinfriedSonntag and DCourtel!!!!<br />\n",
+    "PostedDate": "2014-05-12T23:06:40.323-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-13T02:38:49.73-07:00"
+  }
+]

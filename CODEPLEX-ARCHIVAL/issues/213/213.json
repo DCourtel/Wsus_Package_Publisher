@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-08-23T13:43:44.447-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hello\r\n\r\nThe already very useful WPP client actions would be even better if It would be possible to start and stop the Windows Update client service. The client action \"clean SoftwareDistribution directory\" fails most of the time. But this action succeeds when the Windows update client service is stopped before.\r\n\r\nKind regards,\r\nFranz",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "release v1.3.1407.29",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-08-19T12:52:12.733-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "Enhance the feature \"Clean SoftwareDistribution Directory\"",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 213
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Need to make this method more efficient.",
+      "PostedDate": "2014-08-19T12:53:09.283-07:00",
+      "Id": 155769
+    }
+  ]
+}

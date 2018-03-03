@@ -1,0 +1,71 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-08T13:02:14.123-07:00",
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nwould be much easier to have WPP remember the last path from which an update was added. Now it starts every new update with \"Computer\". See screenshot.\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.2.1305.26",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-06T05:22:17.467-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Remember last used path",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 2,
+    "Id": 58
+  },
+  "FileAttachments": [
+    {
+      "FileId": 690307,
+      "FileName": "WPP-add.png",
+      "DownloadUrl": ".\\690307"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "And i wish to remember the last path, if i choose a MSI, and now i want to select a couple of files or a Folder, it starts on the Computer.\n\nRegards\nWinfried",
+      "PostedDate": "2013-06-06T06:32:49.173-07:00",
+      "Id": 102261
+    },
+    {
+      "Message": "Good idea.\nI will add that.",
+      "PostedDate": "2013-06-06T11:46:44.837-07:00",
+      "Id": 102295
+    },
+    {
+      "Message": "Thank you. ;)",
+      "PostedDate": "2013-06-06T12:32:28.047-07:00",
+      "Id": 102308
+    },
+    {
+      "Message": "Hi,\n\nthanks for implementing this in the latest release. I thought about making this configurable for setting a default path or remember last past used. What do you think?\n\nRegards\nNorbert",
+      "PostedDate": "2013-06-09T13:13:47.397-07:00",
+      "Id": 102584
+    },
+    {
+      "Message": "> making this configurable for setting a default path or remember last past used\n\n \nEffectively, I have considered this feature this way. But as I wanted to publish a new release today, I went straight.\nI will modify the behavior in this way for the next release. ",
+      "PostedDate": "2013-06-09T14:20:20.06-07:00",
+      "Id": 102587
+    }
+  ]
+}

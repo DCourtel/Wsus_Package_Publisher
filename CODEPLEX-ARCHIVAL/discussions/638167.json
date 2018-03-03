@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1426183",
+    "ThreadId": "638167",
+    "Html": "Hello,<br />\n<br />\nwhen I try to connect to my local wsus-server, I get an error Message:<br />\n<pre><code>Connection failed:\nInvalid URI: The hostname could not be parsed.</code></pre>\n\nWhen I try to connect not local I can connect but i have a Version mismatch.<br />\n<br />\nMy Options.xml:<br />\n<pre><code>&lt;WsusPackagePublisher&gt;\n  &lt;Server&gt;\n    &lt;Name&gt;SRV-WSUS&lt;/Name&gt;\n    &lt;IsLocal&gt;True&lt;/IsLocal&gt;\n    &lt;Port&gt;8530&lt;/Port&gt;\n    &lt;UseSSL&gt;False&lt;/UseSSL&gt;\n    &lt;IgnoreCertErrors&gt;False&lt;/IgnoreCertErrors&gt;\n    &lt;DeadLineDaysSpan&gt;0&lt;/DeadLineDaysSpan&gt;\n    &lt;DeadLineHour&gt;0&lt;/DeadLineHour&gt;\n    &lt;DeadLineMinute&gt;0&lt;/DeadLineMinute&gt;\n    &lt;VisibleInWsusConsole&gt;Never&lt;/VisibleInWsusConsole&gt;\n  &lt;/Server&gt;\n&lt;/WsusPackagePublisher&gt;</code></pre>\n\nThanks for your help.<br />\n<br />\nP.S.<br />\nSorry for my English, I'm from Germany<br />\n",
+    "PostedDate": "2015-05-19T02:25:07.953-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1426380",
+    "ThreadId": "638167",
+    "Html": "Hi, from the computer where you run WPP, try to ping SRV-Wsus to see if the name is resolve by your DNS server. Also, you can try with the FQDN name (Srv-Wsus.domain)<br />\nAnd give a try with the IP address instead of the name.<br />\n",
+    "PostedDate": "2015-05-19T07:23:06.01-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1426516",
+    "ThreadId": "638167",
+    "Html": "Hi, \r<br />\nthanks for your help, I solved it myself.\r<br />\nIt was a mistake in ssl configuration, I tried ssl and removed it.\r<br />\nIn every configuration was ssl off but in the registry it stood on on.\r<br />\nI changed it to off and it worked.<br />\n",
+    "PostedDate": "2015-05-20T01:41:35.893-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-05-20T03:16:13.763-07:00"
+  }
+]

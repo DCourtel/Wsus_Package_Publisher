@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-11T22:26:06.227-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Need to be able to configure WSUS Package Publisher to reference the Folder URL via an FDQN due to a multi domain / DNS environment.\r\n\r\n",
+    "LastUpdatedDate": "2015-11-11T22:26:06.227-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-07-02T08:34:11.263-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Need to modify Folder path for update.",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 272
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

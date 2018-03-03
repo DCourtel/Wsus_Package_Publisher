@@ -1,0 +1,81 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:07.88-08:00",
+    "CommentCount": 7,
+    "Custom": null,
+    "Description": "Hello All,\r\nI have created the package on WSUS server and published it listed on replica..\r\nIt has installed on all the clients, now i have deleted the package..it deleted in Upstream server but not on the replica server... Any idea why replica is not updating?\r\n",
+    "LastUpdatedDate": "2017-02-03T11:50:07.88-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-07-23T11:09:16.93-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Deleted packages not updating on replica server",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 274
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1475079,
+      "FileName": "wpp.JPG",
+      "DownloadUrl": ".\\1475079"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Hi,\nDeletion is not a replicate activity. you have to delete old package by your self. Connect to your replica Wsus, right cick on an update and choose \"Delete\" (The update must NOT be approved)",
+      "PostedDate": "2015-07-23T12:40:36.057-07:00",
+      "Id": 187644
+    },
+    {
+      "Message": "Thanks Courtel, It worked :)\nBut how about the approved ones? As i have deleted from upstream server i am unable to change the status to \"not approved\".\nAnd one more thing, i am try to push the skype update (Skype 7.7.0.102), package listing on replica server but i am not get at client machines, i think nothing wrong with the wpp or with the clients because along with skype i have pushed google chrome. i can see google chrome but not skype.. Please help me..",
+      "PostedDate": "2015-07-23T22:43:50.427-07:00",
+      "Id": 187652
+    },
+    {
+      "Message": "\n> But how about the approved ones? As i have deleted from upstream server i am unable to change the status to \"not approved\".\n\nInteresting question. Even after synchronising with upstream server, the package is still approved ?\n\n> package listing on replica server but i am not get at client machines\n\nHow this package is reported on the WPP console : Unknown, Installed, Not installed, Not applicable ?\nWhat do you have set as IsInstalled/IsInstallable Rules ?",
+      "PostedDate": "2015-07-24T07:08:23.65-07:00",
+      "Id": 187671
+    },
+    {
+      "Message": "Even after synchronising with upstream server, the package is still approved ?\nYes, still the same :(\n\nHow this package is reported on the WPP console : Unknown, Installed, Not installed, Not applicable ?\nWhat do you have set as IsInstalled/IsInstallable Rules ?\nStatus \"unknown\"..\nI havnt changed any rules, i used the same doc as published in this site for adobe flash player..\nIt worked for previous version of Skype, i dont know whats wrong with this ",
+      "PostedDate": "2015-07-24T11:54:57.777-07:00",
+      "Id": 187685
+    },
+    {
+      "Message": "\"unknown\" status mean that Workstations haven't reported yet for this package. They might have some difficulties to communicate with your Wsus server or to evaluate logical rules.\nYou can try to turn on Wuauclt debug log and see if you can find more informations.",
+      "PostedDate": "2015-07-24T13:23:18.533-07:00",
+      "Id": 187690
+    },
+    {
+      "Message": "I have pushed this package to more than 100 machines, it didnt hit non of the machine.. the google chrome package which i pushed next to this has hit all the machines.. Where can i enable the debug log ?",
+      "PostedDate": "2015-07-25T00:14:12.853-07:00",
+      "Id": 187699
+    },
+    {
+      "Message": "Any update on this ?",
+      "PostedDate": "2015-08-10T07:06:55.023-07:00",
+      "Id": 188196
+    }
+  ]
+}

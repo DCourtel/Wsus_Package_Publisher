@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1471341",
+    "ThreadId": "653998",
+    "Html": "Hello everyone,\r<br />\nsince February this year we use WPP to install some small applications like Java, Flash etc. at our new Workstations. first, we will install a &quot;Master-Image&quot; at our Workstation which includes some Standardapplications like Office, CAD-Software and so on. In the last weeks we installed some new Workstations and Notebooks with CADimage and everything is working fine. now i created a new &quot;Masterimage&quot; for our technical department, but if i want to install the applications from WPP, the download starts but at beginning of the Installation &quot;Code 800B0109&quot; will come and the Installation aborts.\r<br />\nIn AD the Groups are the same and all the GPs were succesfully accepted. I also can´t find any informations that will help me. maybe someone has an idea to fix my Problem?\r<br />\n<br />\nHallo,\r<br />\nseit Februar nutzen wir WPP um kleinere Applikationen wie Java oder Flash zentral auf unsere neuen Clients zu installieren. Soweit läuft die Installation so ab, daß wir ein &quot;Master-Image&quot; z.B. für unsere CAD-Abteilung im Vorfeld erstellen und auf die neuen Rechner per Acronis installieren. Danach weisen wir die übrigen Apps per WSUS zu und installieren diese. Aktuell haben wir neue REchner für unsere technische Abteilung. Diese werden wieder mit einem separaten &quot;Master-Image&quot; vorinstalliert und die restlichen Apps per WSUS zugewiesen, allerdings erscheint jedesmal nach dem Download des Updates der Fehler &quot;Code 800B0109&quot;. Die OU als auch die GPs werden gezogen und sind identisch. Leider kann ich bis jetzt keine helfenden Informationen finden. \r<br />\n<br />\nVielleicht hat ja hier jemand eine Idee, wie ich diesen Fehler beheben kann.\r<br />\n<br />\nVielen Dank im Voraus und Viele Grüße\r<br />\npfeifera<br />\n",
+    "PostedDate": "2016-04-26T00:40:43.427-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471345",
+    "ThreadId": "653998",
+    "Html": "Diese deine Fehlermeldung deutet immer auf ein Zertifikatsproblem hin. <a href=\"http://blog.schnettker.com/2011/05/13/wsus-und-fehler-0x800b0109/\" rel=\"nofollow\">http://blog.schnettker.com/2011/05/13/wsus-und-fehler-0x800b0109/</a>\r<br />\nHabt ihr denn auch die nötige GPO-Einstellung auf den Clients verteilt?\r<br />\n<br />\nSignierte Updates aus einem Intranetspeicherort für Microsoft-Updatedienste zulassen  &gt; Aktiviert\r<br />\n<br />\nBTW: In deinem englischen Text schreibst Du von AD-Gruppen, auf Deutsch dann etwas von OUs. Das ist nicht das gleiche! \r<br />\nGroup = Gruppe. OU = Organization Unit/Organisationseinheit.<br />\n",
+    "PostedDate": "2016-04-26T01:07:51.973-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471348",
+    "ThreadId": "653998",
+    "Html": "Hallo,\r<br />\n<br />\nvielen Dank für die schnelle Rückmeldung, hm, das Zertifikat wurde über die Gruppenrichtlinie erfolgreich verteilt - ich teste es mal, wenn ich das Cert lösche und manuell hinzufüge. Über den Lösungweg bin ich schon ein paar mal gestolpert, allerdings kam es bei mir nicht in Frage, da die Richtlinie angewendet und das Cert vorhanden ist.\r<br />\n<br />\nDer Punkt mit OU/Group ist unglücklich ausgedrückt, da die GPs (Grouppolicy) bei uns in den OUs verknüpft sind - d.h. beide PCs sind in der gleichen OU und bekommen die gleichen Policies erfolgreich zugewiesen.\r<br />\n<br />\nWie gesagt, ich teste mal das manuelle hinzufügen der Zertifikats und geb nochmal Rückmeldung.<br />\n",
+    "PostedDate": "2016-04-26T01:20:37.963-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471356",
+    "ThreadId": "653998",
+    "Html": "Hallo,\r<br />\nich habe das Zertifikat von dem Client gelöscht und über die Policy verteilen lassen, leider weiterhin ohne daß die Updates installiert wurden. Ich habe danach nochmal per gpresult die Einstellungen zwischen dem Client, der die Updates installiert und dem Client der die Updates nicht installiert verglichen und keine Unterschiede festgestellt.\r<br />\n<br />\nDanach habe ich den Punkt &quot;Signierte Updates aus einem Intranetspeicherort für Microsoft-Updatedienste zulassen&quot; auf aktiviert umgestellt, da dieser Punkt bisher unternehmensweit auf deaktiviert stand.... und siehe da, die Updates wurden ohne weitere Fehler installiert.\r<br />\n<br />\nVielen Dank für die Unterstützung. Was ich allerdings nicht verstehe, daß trotz der Einstellung auf &quot;deaktiviert&quot; ein Teil der Clients die Updates installieren konnte...\r<br />\n<br />\nViele Grüße\r<br />\npfeifera<br />\n",
+    "PostedDate": "2016-04-26T02:34:35.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471357",
+    "ThreadId": "653998",
+    "Html": "Na wunderbar, Hauptsache es funktioniert jetzt. ;)\r<br />\n<br />\nNormalerweise installiert ein Client 3rd Party Produkte vom WSUS nur, wenn auch diese Einstellung gesetzt ist. Evtl. habt ihr die Einstellung auf den Clients ja im Image mit GPEDIT.MSC manuell gesetzt.<br />\n",
+    "PostedDate": "2016-04-26T02:37:20.183-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

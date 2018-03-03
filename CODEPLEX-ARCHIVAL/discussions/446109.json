@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1053205",
+    "ThreadId": "446109",
+    "Html": "I am trying to deploy a Start Menu Button application from <a href=\"http://www.classicshell.net\" rel=\"nofollow\">http://www.classicshell.net</a>.<br />\n<br />\nTheir documentation says that by using the following command line options with the MSI the application will install one portion of the overall application.  It this case it is <strong>&quot;/qn ADDLOCAL=ClassicStartMenu&quot;</strong>.    Note I have confirmed the application will install using those command line options when I type them by hand.<br />\n<br />\nHowever, when I try to deploy the MSI via WSUS Package Publisher using that command line option, I get a 80070667 error on my client computers.   Researching this error suggests that their is a problem with the command line options.<br />\n<br />\nAny ideas on what I am doing wrong?<br />\n",
+    "PostedDate": "2013-06-05T10:44:46.523-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1053222",
+    "ThreadId": "446109",
+    "Html": "Can you try without using /qn? I guess this will be used by default.<br />\n",
+    "PostedDate": "2013-06-05T11:13:15.22-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1053229",
+    "ThreadId": "446109",
+    "Html": "<strong>NorbertFe wrote:</strong><br />\n<blockquote>\nCan you try without using /qn? I guess this will be used by default.<br />\n</blockquote>\nUnfortunately, the /qn isn't that important.  All it says is quiet install   I need the ADDLOCAL option to work to determine what options should be installed.\r<br />\n<br />\nI just can't figure out why the option works then typed by hand, but fails though WSUS.<br />\n",
+    "PostedDate": "2013-06-05T11:35:55.633-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1053238",
+    "ThreadId": "446109",
+    "Html": "Can you post a screenshot of the parameter in wpp package? Try using only addlocal=classicstartmenu without / or anything else.<br />\n",
+    "PostedDate": "2013-06-05T11:43:34.367-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1053279",
+    "ThreadId": "446109",
+    "Html": "NorbertFe have right. Do not put /qn in your CommandLine, Wsus will add it itself.\r<br />\nDo not use quotes.\r<br />\nTry with only : ADDLOCAL=ClassicStartMenu\r<br />\nIf it's doesn't work, Revise the update and check the &quot;Can Request User Input&quot; Checkbox.<br />\n",
+    "PostedDate": "2013-06-05T13:24:21.377-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1053718",
+    "ThreadId": "446109",
+    "Html": "Turns out that the &quot;Can Request User Input&quot; Checkbox fixed the problem.\r<br />\n<br />\nThanks!<br />\n",
+    "PostedDate": "2013-06-06T11:37:11.963-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-08T11:22:55.13-07:00"
+  },
+  {
+    "Id": "1053723",
+    "ThreadId": "446109",
+    "Html": "Glad to see that have you solved your problem.<br />\n",
+    "PostedDate": "2013-06-06T11:56:41.92-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

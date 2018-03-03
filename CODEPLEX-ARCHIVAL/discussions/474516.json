@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1137556",
+    "ThreadId": "474516",
+    "Html": "I have an upstream server with WPP installed. I have been successful with applying updates using WPP to the upstream server and can view the updates in WSUS. I have 5 replica WSUS servers, each with the generated cert installed in both trusted root pub and trusted publishers. When connected to the replica servers, I cannot see the updates applied by WPP in the WSUS console like I can in the upstream server. Should I see these updates in the WSUS console of a replica server?<br />\n",
+    "PostedDate": "2013-12-18T07:34:33.777-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1137721",
+    "ThreadId": "474516",
+    "Html": "Yes, if you have used the option to make these updates visible in the wsus console, and if you can see it in the Wsus Console of the upstream server, so you should be able to saw it on downstream servers.\r<br />\nIf you use WPP to connect to downstream servers, do you see your updates ?\r<br />\nDo you have any synchronization errors between upstream and downstream servers ?<br />\n",
+    "PostedDate": "2013-12-18T11:25:57.153-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1138236",
+    "ThreadId": "474516",
+    "Html": "Upstream server: I can see local updates in WSUS, not WPP.\r<br />\nDownstream servers: I can see local updates in WPP, not WSUS. \r<br />\nWhen adding the updates I did select to see the updates in WSUS. \r<br />\nIs this normal? \r<br />\nIn the eventviewer of a downstream server, I see: Content file download failed. Reason: File cert verification failure. Source: Windows Server Update Services Event ID: 364. I used a cert generated in WPP.\r<br />\nThanks for your help. <br />\n",
+    "PostedDate": "2013-12-19T07:02:57.583-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1138425",
+    "ThreadId": "474516",
+    "Html": "<strong>cbaranec wrote:</strong><br />\n<blockquote>\nUpstream server: I can see local updates in WSUS, not WPP.<br />\nDownstream servers: I can see local updates in WPP, not WSUS. <br />\nWhen adding the updates I did select to see the updates in WSUS. <br />\nIs this normal? <br />\n</blockquote>\nPlease, Ensure you have selected this option :\r<br />\n<img src=\"http://i.imgur.com/cQyXfiL.png\" alt=\"Settings-ShowUpdatesVisibleInWsus\" /><br />\n<blockquote>\nIn the eventviewer of a downstream server, I see: Content file download failed. Reason: File cert verification failure. Source: Windows Server Update Services Event ID: 364. I used a cert generated in WPP.<br />\nThanks for your help.<br />\n</blockquote>\nYou have a certificate issue. Ensure you have correctly imported the cert in right stores : \r<br />\n<img src=\"http://i.imgur.com/9Zhpt70.png\" alt=\"CheckCert\" />\r<br />\n<br />\nDownstream servers act as client when synchronizing Locally-Published updates.<br />\n",
+    "PostedDate": "2013-12-19T11:00:59.643-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T07:54:01.283-08:00"
+  },
+  {
+    "Id": "1138646",
+    "ThreadId": "474516",
+    "Html": "Thanks, this was helpful. I checked the box within settings and can see the updates. I am still unable to download from the upstream server. I had previously come across your table and the cert is in both locations, valid and correct. Would you advise to create a new cert?\r<br />\nThanks<br />\n",
+    "PostedDate": "2013-12-19T13:27:24.45-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1140234",
+    "ThreadId": "474516",
+    "Html": "Is it a self-signed cert or a cert from your own cert authority ?<br />\n",
+    "PostedDate": "2013-12-20T02:57:05.957-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1140293",
+    "ThreadId": "474516",
+    "Html": "It was a self-signed cert created within WPP. I then used a GPO to provide the cert to both the trusted pub store and trusted root pub store. I opened the cert on both the upstream and downstream wsus servers and verified the serials are the same, the cert is the same. <br />\n",
+    "PostedDate": "2013-12-20T06:44:20.74-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1140414",
+    "ThreadId": "474516",
+    "Html": "Delete the Cert on the downstream server. Export the Cert from the upstream server and re-import it on the downstream server. Reboot the downstream server and try to synchronize again.<br />\n",
+    "PostedDate": "2013-12-20T12:33:32.05-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

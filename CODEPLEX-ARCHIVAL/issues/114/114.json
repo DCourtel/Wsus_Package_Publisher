@@ -1,0 +1,90 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-09-29T12:15:14.173-07:00",
+    "CommentCount": 10,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nwould it be possible to implement a reboot Feature where the Administrator is able to define a time. F.I. reboot in 2 Minutes. Like shutdown /t 120.\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1309.28",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-09-16T00:58:19.05-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Reboot Feature with timer",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 2,
+    "Id": 114
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "WPP uses the the \"Shutdown\" dos command, so theorically, yes it is possible. In fact, all option of this command could be send.",
+      "PostedDate": "2013-09-16T07:55:19.387-07:00",
+      "Id": 113669
+    },
+    {
+      "Message": "OK, that would be great. Maybe add a new Option on context menu (reboot with timer...) and an Input window, or make it configurable within the Settings.\nBtw. it would be nice, to have the Option to customize the context menu. Actually I imagine activating only my most used Options and have a configurable Default Action on doubleclick in the computer-grid.\n\nWhat do you think?\n\nRegards\nNorbert",
+      "PostedDate": "2013-09-16T12:36:05.39-07:00",
+      "Id": 113720
+    },
+    {
+      "Message": "Hi,\n\nWould be great, if logged on users will get a warning about the reboot happening in xx minutes.\n\nRegards\nNorbert",
+      "PostedDate": "2013-09-29T06:02:11.567-07:00",
+      "Id": 115940
+    },
+    {
+      "Message": "I have add the feature.\n\nYou can set a timer (from 0 to 600 seconds) to let user some times to save his documents and close Applications.\nThere is also the ability to display a message.\n\n![Image](http://i.imgur.com/qQMlRWg.png)\n\n",
+      "PostedDate": "2013-09-29T12:15:00.587-07:00",
+      "Id": 115946
+    },
+    {
+      "Message": "Wow, looks very good. ;)",
+      "PostedDate": "2013-09-29T13:08:31.357-07:00",
+      "Id": 115949
+    },
+    {
+      "Message": "Hi,\n\ncan you add some Kind of templates to choose from for the message? So you can add some predefined Messages.\n\nRegards\nNorbert",
+      "PostedDate": "2013-09-30T09:48:49.577-07:00",
+      "Id": 116005
+    },
+    {
+      "Message": "Why not. Can you propose some templates ?",
+      "PostedDate": "2013-09-30T10:52:41.403-07:00",
+      "Id": 116016
+    },
+    {
+      "Message": "Something like:\nYour computer is going to reboot in xx seconds, because of a mandantory update cycle. Please do not powerdown the computer.\n\nDon't know, if you want to deliver some Standard templates, or leave it completly to the user to specify their own.\n\nRegards\nNorbert",
+      "PostedDate": "2013-09-30T12:56:00.473-07:00",
+      "Id": 116033
+    },
+    {
+      "Message": "In 'Tools' -> 'Settings' -> 'Misc' Tab you can set the Default Reboot Message :\n![Default Reboot Message](http://i.imgur.com/lq38hrr.png)\n\nUse [TIMER] to insert, dynamically, the value of the timer.",
+      "PostedDate": "2013-10-05T14:02:55.753-07:00",
+      "Id": 117562
+    },
+    {
+      "Message": "Wow, you add many great features in a very short time. thank you very much for your hard work. :)\n\nDon't vergot to send us the file for translation. ;)",
+      "PostedDate": "2013-10-05T14:24:55.553-07:00",
+      "Id": 117564
+    }
+  ]
+}

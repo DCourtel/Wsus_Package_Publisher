@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1093716",
+    "ThreadId": "457221",
+    "Html": "Java 7 Update 40 Install Notes:\r<br />\nFirst install the standard Java x86 &amp; x64 packages from Sun.\r<br />\n<a href=\"http://www.java.com/en/download/manual.jsp\" rel=\"nofollow\">http://www.java.com/en/download/manual.jsp</a>\r<br />\n<br />\nObtain Cab and MSI from C:\\Users\\&lt;yourusername&gt;\\AppData\\LocalLow\\Sun\\Java (Vista/7 Directory; I forget where it is for XP, should be a quick Google search.\r<br />\n<br />\nThe jre folders therein contain the uncompressed installers; your results may be undesirable if you attempt to uncompress the jre executable installer with 7zip or winRAR and then try to use those installers to create a package; just something I ran into a while back, FYI.\r<br />\n<br />\nI use the .cab / .msi because of various errors and problems with using the I've EXEs encountered; Sun recommends using the MSI and cab like I do. Save yourself the headache and skip the EXEs; I encounter new issues with each release.\r<br />\n<a href=\"http://www.java.com/en/download/help/msi_install.xml\" rel=\"nofollow\">http://www.java.com/en/download/help/msi_install.xml</a>\r<br />\n<br />\nNext, get the install strings for the java release you're deploying; I have listed them for convenience, but you can see how I found them below.\r<br />\n<br />\n7u40 string:\r<br />\n{26A24AE4-039D-4CA4-87B4-2F83217040FF}\r<br />\n<br />\n7u40x64 string:\r<br />\n{26A24AE4-039D-4CA4-87B4-2F86417040FF}\r<br />\n<br />\n7u40 updater string: (Unchanged since 7u21)\r<br />\n{4A03706F-666A-4037-7777-5F2748764D10}\r<br />\n<br />\nYou can find these by using the WSUS Package Publisher and going to tools &gt; MSI Reader, loading the MSI, and going to the property table. The install string is labeled &quot;ProductCode&quot;.\r<br />\n<br />\nAlternately, if you'd rather verify strings in the registry:\r<br />\n<br />\n32-bit Install Strings Located: HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall[ProductCode] \r<br />\n<br />\n64-bit Install Strings Located: HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall[ProductCode] \r<br />\nBrowse through the strings until you see Java and updater codes.\r<br />\n<br />\nNow to create the package!\r<br />\nI used the guide as a template, (<a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=691788\" rel=\"nofollow\">https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=691788</a>) so you may need to read that to fill in some gaps, but in summary here's how I built my x86 update:\r<br />\nA. Start Custom Update from WPP<br />\n<ol>\n<li>Define Return Code as in guide</li>\n<li>Stop Service JavaQuickStarterService</li>\n<li>Allow to execute a file with following strings:\r<br />\nPath to file:\r<br />\n%windir%\\System32\\msiexec.exe\r<br />\nParameters:\r<br />\n/i jre1.7.0_40.msi /quiet /norestart AUTOUPDATECHECK=0 IEXPLORER=1 JAVAUPDATE=0 JU=0\r<br />\nKill process after 15 minutes, link to &quot;Return Code&quot;\r<br />\nAdd Exit code, link to &quot;Return Code.&quot;</li>\n<li>\nYou are now done with custom update XML generator, continue on.\r<br />\nB. Add .CAB and .MSI files to the package; Mark it as an update - Critical update.\r<br />\nI mostly followed the guide from this point on, except for my install rules; for “already installed”, I used the guide, but for “installable”, I set the x86 java package to install on x86 &amp; x64 machines (since most browsers are 32-bit.) I used the not equal to Itanium CPU type rule to allow for x86 and x64 installation.\r<br />\nAlso, the x64 installer doesn't have an updater package anymore; for more information in what command line options java's MSI accepts, see the slightly outdated article from Sun:\r<br />\n<a href=\"http://www.oracle.com/technetwork/java/javase/silent-136552.html\" rel=\"nofollow\">http://www.oracle.com/technetwork/java/javase/silent-136552.html</a><br />\n</li>\n</ol>\nTo test, approve for WSUS test group. If retrying a package, or flushing a deleted test package on a test machine, you can stop the Windows Update service, delete “datastore” and “download” folder contents from local cache in C:\\Windows\\SoftwareDistribution, then check for Windows Updates. (Leave the folders, just delete the contents.)\r<br />\nI hope you find these tips helpful; your mileage may vary. Credit: The people at WSUS Package Publisher who wrote that excellent documentation. I never would have gotten this package working right without the Documentation section.<br />\n",
+    "PostedDate": "2013-09-17T12:43:20.613-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-12T08:49:30.817-07:00"
+  },
+  {
+    "Id": "1252348",
+    "ThreadId": "457221",
+    "Html": "Hi thanks for this nice tutorial,<br />\n<br />\nthe problem for me is that the update install a second Java version on the client computer (like if I used the STATIC parameter, and I can't find how to force the patch-in-place method).<br />\n<br />\nDo you have an idea ? I'm trying to update from java 6 update 23 (patch-in-place was the method since 6u10) to 7 update 55 (in XP environment).<br />\n<br />\nRegards, Nicolas<br />\n",
+    "PostedDate": "2014-06-03T04:58:57.827-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1252566",
+    "ThreadId": "457221",
+    "Html": "Read this Thread: <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/462043\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/462043</a> At bottom you will find a solution.<br />\n",
+    "PostedDate": "2014-06-03T12:23:46.49-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1252764",
+    "ThreadId": "457221",
+    "Html": "Hi,<br />\n<br />\nI tried several times, my Powershell script works locally, I put it before the step to run msiexec in my Custom Update, but the problem is still there.<br />\n<br />\nWhere did you place the script step ?<br />\n<br />\nNicolas<br />\n",
+    "PostedDate": "2014-06-04T01:42:18.003-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1252844",
+    "ThreadId": "457221",
+    "Html": "Well I'm sorry,\r<br />\n<br />\nmy script did not work as expected, but I found another that works perfectly there : \r<br />\n<a href=\"http://ivan.dretvic.com/2011/02/who-hates-java-how-to-remove-all-java-installations-on-your-network/\" rel=\"nofollow\">http://ivan.dretvic.com/2011/02/who-hates-java-how-to-remove-all-java-installations-on-your-network/</a>\r<br />\n<br />\nThanks for help, Nicolas<br />\n",
+    "PostedDate": "2014-06-04T06:36:57.163-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1296977",
+    "ThreadId": "457221",
+    "Html": "nice post shame that guides you step by step to deploy java has been removed.\r<br />\n<br />\nbecause the link to the guide has been removed? <br />\n",
+    "PostedDate": "2014-08-31T01:07:38.673-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1296980",
+    "ThreadId": "457221",
+    "Html": "A bug in the codeplex site prevents uploading any document into the 'documentation' tab.\r<br />\nI hope they fix this as soon as possible.<br />\n",
+    "PostedDate": "2014-08-31T01:58:53.587-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

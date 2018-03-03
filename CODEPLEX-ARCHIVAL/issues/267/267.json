@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-11T22:26:54.85-08:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "The latest version do not read and enter or update the msi product #. I have gone back to version 1.3.1407.29 and when I create a new update the program will read the msi and enter default rules for if it is installed and can it be installed using MSI product installed and the product # from the msi file. When I create a superseding update it will take forward the rules and update with the new msi product #. The new version 1.3.1504.15 does not do either of these. When creating a new update both is installed and can be installed are blank and when creating a superseding update the old msi product # is still in the rules not the new number.",
+    "LastUpdatedDate": "2015-11-11T22:26:54.85-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-04-27T12:23:49.493-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Version 1.3.1504.15 not reading the MSI Product number",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 267
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "https://wsuspackagepublisher.codeplex.com/workitem/259\n\nShould explain the new handling.\n\nRegards\nNorbert",
+      "PostedDate": "2015-04-27T13:31:51.193-07:00",
+      "Id": 183466
+    },
+    {
+      "Message": "Thanks Norbert - I have even wondered about that. BUT when you create an \"superseding Update\" the MSI Code of the old Update/File is still placed in the update rules pane. That should be fixed imho.",
+      "PostedDate": "2015-05-13T08:02:44.437-07:00",
+      "Id": 184277
+    },
+    {
+      "Message": "As you can see, I send the same Input in the above item. ;)\n> Maybe you can add \"removing\" existing msi rules at update level? But that would require some checking if there are multiple msi rules in one update in a later version.\n\nMaybe we should open a new Feature Request...\n\nRegards\nNorbert",
+      "PostedDate": "2015-05-13T14:08:04.447-07:00",
+      "Id": 184299
+    },
+    {
+      "Message": "OK, I opened a issue on this:\nhttps://wsuspackagepublisher.codeplex.com/workitem/268\n\nRegards\nNorbert",
+      "PostedDate": "2015-05-13T14:12:36.61-07:00",
+      "Id": 184300
+    }
+  ]
+}

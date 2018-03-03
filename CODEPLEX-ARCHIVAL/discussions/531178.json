@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1206387",
+    "ThreadId": "531178",
+    "Html": "Any help would be greatly appreciated.\r<br />\nNo matter what updates i publish (have used all the publications/guides, to create update packages)\r<br />\nAll my updates from WPP show on the client but when trying to update (after creating restore point) I get an update failed error 80244019\r<br />\n<br />\nHave looked for solutions online but all seem to be with WSUS directly and none of them make any difference to my updates.\r<br />\n<br />\nOnly thing i can think of thats causing it so far is that I store all my update content on a seperate server than my WSUS one so using a UNC path to get the updates. Could this be the cause and if so, how to i go about changing the path to where my update content is stored?\r<br />\n<br />\nthanks in advance.<br />\n",
+    "PostedDate": "2014-02-10T07:57:59.233-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1242971",
+    "ThreadId": "531178",
+    "Html": "Should ask this on a Wsus Forum.<br />\n",
+    "PostedDate": "2014-05-08T02:57:26.853-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:57:29.677-07:00"
+  }
+]

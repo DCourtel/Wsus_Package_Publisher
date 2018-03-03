@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1207750",
+    "ThreadId": "531665",
+    "Html": "Hi there,\r<br />\n<br />\nI have the following WSUS Architecture:\r<br />\nWSUS-Main -&gt; Contains all the CAB files (works together with WSUS-SQL).\r<br />\nWSUS-SQL  -&gt; The database needed by WSUS-Main.\r<br />\nWSUS-Servant -&gt; Gets patches from WSUS-Main/SQL so that it can deploy patches to Client Workstation\r<br />\nClient Workstation -&gt; Gets patches from WSUS-Servant because of security reasons.\r<br />\n<br />\nI am trying to install an Adobe Reader 9.3.3 installer, AdbeRdr 933_en_US.exe, from the WSUS-Servant (which imports the installer from WSUS-Main which has WPP installed already) to a Client Workstation which does not have any Adobe Reader installed. However, I realised that when I run a detectnow after successfully reporting back to the WPP Console, the Client Workstation did not detect anything for me to install. Is there something that I am missing or WPP does not support the deployment of older installers?<br />\n",
+    "PostedDate": "2014-02-13T01:00:09.05-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1208109",
+    "ThreadId": "531665",
+    "Html": "WPP don't care about version of installers you try to deploy.\r<br />\nDo you have set the certificate into the Wsus Downstream server ?\r<br />\nDoes client workstations report the update as &quot;Not Installed&quot; ?\r<br />\nDo you see anything useful in the C:\\Windows\\WindowsUpdate.log of the client Workstation ?<br />\n",
+    "PostedDate": "2014-02-13T13:31:32.457-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-02-16T23:00:23.047-08:00"
+  },
+  {
+    "Id": "1209237",
+    "ThreadId": "531665",
+    "Html": "Hi there,\r<br />\n<br />\nThanks for your help. I realise that there was an 0x800b0109 error in the C:\\Windows\\WindowsUpdate.log on the client workstation.  Then I added the <strong>HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AcceptTrustedPublisherCerts = 1</strong> key into the registry and it works fine.<br />\n",
+    "PostedDate": "2014-02-16T23:00:38.29-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1209250",
+    "ThreadId": "531665",
+    "Html": "Hi there,\r<br />\n<br />\nI would like to know the command to silent install Adobe Reader 9.3.3, <strong>AdbeRdr 933_en_US.exe</strong>, and to a specific path (different drive), inside the <strong>Command Line</strong> field of the <strong>Update Creation Wizard</strong>. Thanks!<br />\n",
+    "PostedDate": "2014-02-16T23:44:15.66-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

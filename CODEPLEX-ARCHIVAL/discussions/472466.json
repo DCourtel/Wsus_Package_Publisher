@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1133655",
+    "ThreadId": "472466",
+    "Html": "Does Processor Architecture checks for Operating System x86 or x64 bit or it relates to processors, as these days most of the processors are 64bit in market.\r<br />\n<br />\nI am looking for rule which identifies whether Operating System is 32 bit or 64 bit<br />\n",
+    "PostedDate": "2013-12-10T08:53:55.003-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1133667",
+    "ThreadId": "472466",
+    "Html": "Despite the name of the rule, it's looking at the operating system.<br />\n",
+    "PostedDate": "2013-12-10T09:11:11.323-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T08:10:07.047-08:00"
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-09-21T06:30:20.057-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hi!\r\nsince my attempt to distribute the new Microsoft Fix it 51001 for CVE-2013-3893 failed because the clients didn't \"realize\" after the installation, that the fix already has been installed (though they should have via the MSI product code), I considered using the latest version of Package Publisher (I am using 1.2.1306.16).\r\nI tried it in a test environment with the result that the updates and information about the updates in the  package publisher won't appear in the new version, though I'm connecting to the same WSUS.\r\nAny ideas how I can use new versions withour loosing these information?",
+    "LastUpdatedDate": "2013-09-21T06:30:20.057-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-09-18T22:58:46.113-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Upgrade to new version of WPP without loosing updates",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 119
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Take a look under Settings/Updates if the Checkbox \"Show locally published updates...\" is checked. You have to restart WPP after activating that.\n\nRegards\nNorbert",
+      "PostedDate": "2013-09-19T00:52:52.453-07:00",
+      "Id": 115008
+    },
+    {
+      "Message": "Oh, I didn't realize that, sorry, thank you very much for your help!\n",
+      "PostedDate": "2013-09-19T03:14:59.757-07:00",
+      "Id": 115016
+    }
+  ]
+}

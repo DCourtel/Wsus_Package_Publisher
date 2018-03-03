@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1126574",
+    "ThreadId": "470461",
+    "Html": "i imported a certificate from our internal CA (Windows Server 2012R2)  to WPP.\r<br />\nThan i resign the 7Zip package successfully. After that i can installed the package on a server.\r<br />\n<br />\nThan i will resign Adobe Acrobat Reader, but i get follow error:\r<br />\nResign a package failed with this error: Failed to sign package, error was 2148081670.\r<br />\n<br />\n<br />\nRegards,\r<br />\nDaniel<br />\n",
+    "PostedDate": "2013-11-19T08:04:26.007-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1126686",
+    "ThreadId": "470461",
+    "Html": "This sound bad. \r<br />\n&quot;Failed to sign package, error was 2148081670&quot; is an error from Wsus itself. Looks like your Wsus server doesn't like your cert.\r<br />\n<br />\nHow do you have done to import the cert into the &quot;Wsus&quot; store ?<br />\n",
+    "PostedDate": "2013-11-19T11:21:13.217-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1126917",
+    "ThreadId": "470461",
+    "Html": "Good morning,\r<br />\ni have deleted all certificates in the wsus folder and installed it again. After a reboot it work's again. Strange...<br />\n",
+    "PostedDate": "2013-11-19T23:28:58.61-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-12T13:48:04.853-07:00"
+  }
+]

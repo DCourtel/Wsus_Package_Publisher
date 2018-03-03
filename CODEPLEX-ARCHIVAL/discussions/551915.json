@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1273799",
+    "ThreadId": "551915",
+    "Html": "Dear Team,\r<br />\n<br />\nWSUS Package Publisher is crashing on opening Custom Update window for version: Release v1.3.1407.11 and its previous one.\r<br />\n<br />\nWhereas for version: Release v1.3.1404.13 I have not experienced any such crashes or issues.\r<br />\n<br />\nIs there something I am missing in using latest version of releases.<br />\n",
+    "PostedDate": "2014-07-17T21:54:26.583-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1278456",
+    "ThreadId": "551915",
+    "Html": "Hi, effectively, I have forgot two DLL files in the latest release. People that have upgrade by overwriting the previous files don't have this behaviour.<br />\n",
+    "PostedDate": "2014-07-28T10:28:20.443-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-07-30T13:27:50.067-07:00"
+  }
+]

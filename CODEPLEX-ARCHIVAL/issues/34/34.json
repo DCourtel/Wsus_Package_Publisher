@@ -1,0 +1,71 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Computer List Viewer",
+      "DisplayName": "Computer List Viewer"
+    },
+    "ClosedComment": "Add a setting to choose the tool to open the log file.",
+    "ClosedDate": "2013-05-09T04:24:36.013-07:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "I'd like the feature to display the updatelogfile from the client. Something with a liveview (like baretail or System Center Configuration Manager Trace tool). Adding this to the context menu would be nice.\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1305.03",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-07T03:09:38.283-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Show Updatelog",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 34
+  },
+  "FileAttachments": [
+    {
+      "FileId": 675610,
+      "FileName": "Show-Update-Log.png",
+      "DownloadUrl": ".\\675610"
+    },
+    {
+      "FileId": 675611,
+      "FileName": "Show WindowsUpdate log.png",
+      "DownloadUrl": ".\\675611"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Are you talking of the feature in the \"AD/Wsus Comparer\" (see screenshot) ?\r\n\r\nBy liveview, you mean the display actualize each time the remote computer write in the file ? ",
+      "PostedDate": "2013-05-07T03:23:03.633-07:00",
+      "Id": 99564
+    },
+    {
+      "Message": "I never recognized this feature until now. :) Yes thats what I wanted to have. It seems that WPP open the file in Notepad by default. Would be nice to have the choice for using another viewer at least. :) Yes by liveview I mean show each change as it happens. Take a look at the two mentioned tools.",
+      "PostedDate": "2013-05-07T03:41:50.357-07:00",
+      "Id": 99565
+    },
+    {
+      "Message": "I have add a setting to change the tool used to open the WindowsUpdateLog File.\n\nConcerning the 'LiveWiew', it can be very hard to code. WPP is not aware of modifications on the client side. So I should download the file each x seconds to see if there is any change. The 'modification date' of the file is not often updated by Windows.\n\nI will let this request aside for the moment.",
+      "PostedDate": "2013-05-09T04:24:01.507-07:00",
+      "Id": 99780
+    },
+    {
+      "Message": "Thanks for the Option. Regarding the live view, not a problem.:)",
+      "PostedDate": "2013-05-09T07:01:50.55-07:00",
+      "Id": 99797
+    }
+  ]
+}

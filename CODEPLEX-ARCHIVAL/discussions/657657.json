@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1482830",
+    "ThreadId": "657657",
+    "Html": "Hello,<br />\n<br />\nI had installed my 1st Windows 10 in my domain.<br />\nThe update settings (servername, certificate, ...) ist assigned by GPO to that machine, same GPO i use for all the other clients (Win 7), and the Win10 installs the Microsoft updates.<br />\n<br />\nOnly the own packages created by WPP always fail with error 0x80246003.<br />\nMy win7 machines installes same applications without any errors.<br />\n<br />\nIs the WPP not able to handle Win10?<br />\n<br />\nBTW: Forgive my lousy english<br />\n<br />\nEdit: Both clients are x64, DC and WSUS Server is 2008R2, WSUS 3 SP2<br />\n<br />\nRegards<br />\n<br />\neggat<br />\n",
+    "PostedDate": "2016-09-03T08:20:24.82-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1484316",
+    "ThreadId": "657657",
+    "Html": "There are no problem with WPP handle W10.\r<br />\n<br />\nIt looks like a configuration pbroblem. Or maybee this troubleshooting will help you:\r<br />\n<a href=\"http://blogs.itacs.de/HS/Lists/Beitraege/Post.aspx?ID=79\" rel=\"nofollow\">http://blogs.itacs.de/HS/Lists/Beitraege/Post.aspx?ID=79</a><br />\n",
+    "PostedDate": "2016-09-21T04:48:37.447-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

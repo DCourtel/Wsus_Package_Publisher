@@ -1,0 +1,178 @@
+[
+  {
+    "Id": "1122430",
+    "ThreadId": "468279",
+    "Html": "Tried to push updates 11.0.04 and 11.0.05 on two testing Win7 pro machines without luck :(\r<br />\n<br />\nWPP says as status  for booth 'not applicable'.\r<br />\n<br />\nOne machine has installed 11.0.0, the other one 11.0.03. I tried it already with updates from catalog subscription and also tried to make my own updates from msp-file.<br />\n",
+    "PostedDate": "2013-11-12T09:10:31.757-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1122813",
+    "ThreadId": "468279",
+    "Html": "Hi,\r<br />\n<br />\ndid you deploy Reader as MUI Version by any chance? Are the msp files matching for the deployed reader version (MUI or not)? Did you put any rules into the msp packages?\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-11-13T01:47:14.69-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1122823",
+    "ThreadId": "468279",
+    "Html": "Hi Norbert,<br />\n<br />\nReader should not be MUI-version, but Im not shure (where I can see this?). But I think the DE in filename indicates, that they are not MUI-versions.<br />\n<br />\nThe following msi and exe are installed on this booth testing machines :<br />\n<ul>\n<li>AdbeRdr11000_de_DE.msi (48.322KB)</li>\n<li>\nAdbeRdr11003_de_DE.exe (49.379KB)<br />\n</li>\n</ul>\nThe following msp I use (I can manually update with this two msp booth machines)<br />\n<ul>\n<li>AdbeRdrUpd11004.msp (18.828KB)</li>\n<li>\nAdbeRdrUpd11005.msp (2.620KB)<br />\n</li>\n</ul>\nI use the same msp files in WPP without any rules defined. But both machines say 'No updates available'.<br />\n<br />\nGreetings<br />\nHelmut<br />\n",
+    "PostedDate": "2013-11-13T02:20:28.103-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1122826",
+    "ThreadId": "468279",
+    "Html": "Hi,\r<br />\n<br />\nacutally I got exactly the same Problem lately. How long did you wait? can you try publishing via adobe reader catalog?<br />\n",
+    "PostedDate": "2013-11-13T02:32:19.883-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1122830",
+    "ThreadId": "468279",
+    "Html": "My first try was to publish this updates from subscribed catalog -&gt; without luck ('not applicable'). I also tried with MUI-msp -&gt; same result.<br />\nI waited about 2 days. So I decided yesterday evening to try my own packages with this both msp-files I mentioned above, but same result :(<br />\n<br />\nHave I to define any rules in msp packages?<br />\n<br />\nI tried before with flash-updates on booth machines -&gt; everything worked fine. After a detect and report I could install this packages in Windows Update.<br />\nOn an other Xp-machine I could also deploy Reader10.1.8 without any problems.<br />\n<br />\nI'll now test, if Adobe Acrobat 10 Pro will update (I hope ;)<br />\n",
+    "PostedDate": "2013-11-13T02:44:03.583-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1122834",
+    "ThreadId": "468279",
+    "Html": "<strong>ht104 wrote:</strong><br />\n<blockquote>\nHave I to define any rules in msp packages?<br />\n</blockquote>\nNo, but you can define dependencies. Try selecting requirement 11.0.0 for the 11.0.04 update and requirement 11.0.04 for the 11.0.05 update. Maybe this helps.\r<br />\n<br />\nBye\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-11-13T02:47:56.15-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1122842",
+    "ThreadId": "468279",
+    "Html": "Hi Norbert,<br />\n<br />\ncan you explain plz where I can define this dependencies in the packages? I'm an absolutly newbie in WPP.<br />\n",
+    "PostedDate": "2013-11-13T03:09:26.94-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1122854",
+    "ThreadId": "468279",
+    "Html": "Open the update package in WPP for revising (überarbeiten) and tick Prerequisites (Voraussetzungen) ;)<br />\n",
+    "PostedDate": "2013-11-13T03:53:18.493-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1122904",
+    "ThreadId": "468279",
+    "Html": "Ahhh... Danke! <br />\n<br />\nSo I have to check in first the 11.0.0 msi in WPP, right? <br />\n",
+    "PostedDate": "2013-11-13T05:47:52.26-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1122911",
+    "ThreadId": "468279",
+    "Html": "That shouldn't be necessary, but I would do it. ;)<br />\n",
+    "PostedDate": "2013-11-13T06:02:44.793-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1123096",
+    "ThreadId": "468279",
+    "Html": "After publishing 11.0.0.msi and with adviced prerequisites both machines still on status 'not applicable' on updates 11.0.04 and 11.0.05. But both on status 'installed' for 11.0.0.msi.\r<br />\nSo I tested further and checked in 11.0.01, 02, and 03 msp.\r<br />\nThe machine with installed 11.0.0.0,msi starts to install patch by patch. The machine with installed 11.0.03.exe does nothing - for all updates status 'not applicable'.\r<br />\n<br />\nSo I rolled back installation for the first machine to 11.0.0.msi and testest with 11.0.04.msp with superseeded 03, 02 and 01.msp -&gt; status now here too 'not applicable'.\r<br />\n<br />\nSo I think, there is no chance to get machines updated with WPP where the 11.0.03.exe is installed?<br />\n",
+    "PostedDate": "2013-11-13T12:16:56.127-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1123146",
+    "ThreadId": "468279",
+    "Html": "As per Adobe said, Adobe Reader 11.0.05 only apply on machines with 11.0.04 installed. <a href=\"http://www.adobe.com/support/downloads/detail.jsp?ftpID=5674\" rel=\"nofollow\">Adobe Web Site</a>\r<br />\nAdobe Reader 11.0.04 can be applied on machines with Reader 11.0.0 and later.\r<br />\n<br />\nAs you are using .msp files to perform your updates, you should update only computers which have received MSI file to install Adobe Reader.\r<br />\nMeta-data embeded into .msp files can prevent installation on computers that have received Adobe Reader with an EXE file.\r<br />\n<br />\nIf you have successfuly upgraded manually a computer from Reader 11.0.03 to 11.0.04 with a MSP file, then you can try to revise the update, and in the &quot;IsInstallable Rules&quot; tab check the option &quot;Delete Rules at package level&quot;, and make your own rules, based on file version.<br />\n",
+    "PostedDate": "2013-11-13T13:25:37.92-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1123378",
+    "ThreadId": "468279",
+    "Html": "Hi,\r<br />\n<br />\ntried it today: once manually installed 11.0.04 over 11.0.03.exe installation, it works now also updating that machine to 11.0.05 via WPP.\r<br />\n<br />\nGreetings Helmut<br />\n",
+    "PostedDate": "2013-11-14T03:18:44.63-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1126563",
+    "ThreadId": "468279",
+    "Html": "Hello,\r<br />\n<br />\nI have exactly the same problem.\r<br />\nClean systems or systems with previous Adobe Reader version-&gt; install or upgrade to Adobe Reader XI - Polish using MSI via WPP - works great.\r<br />\n<br />\nWhen try to distribute 11.0.04 MSP via WPP to Adobe Reader 11.0.00 - always &quot;NOT APPLICABLE&quot;.\r<br />\n<br />\nI tried Helmut's workaround and installed 11.0.04 manually. But, when after trying to distribute 11.0.05 MSP via WPP - still &quot;NOT APPLICABLE&quot;.\r<br />\n<br />\nSomething is wrong with Adobe MSP.\r<br />\nThe problem with &quot;not applicable&quot; 11.0.0x MSP is mention on other forums (e.g. forums.adobe.com or Local Update Publisher) without clear solution.\r<br />\n<br />\nAny idea?\r<br />\n<br />\nRegards,\r<br />\nJacek<br />\n",
+    "PostedDate": "2013-11-19T07:39:54.803-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1126569",
+    "ThreadId": "468279",
+    "Html": "What worked for me, was, to publish and approve all msp-files in WPP (11.0.01, 11.0.02, 11.0.03 and so on). \r<br />\nSome clients with 11.0.0 installed 'grabbed' first 11.0.01.msp and updated so step by step up to 11.0.05. Others 'grabbed' first 11.0.04.msp (without going the steps 01, 02, 03). \r<br />\nI dont know, why... but works now ;)<br />\n",
+    "PostedDate": "2013-11-19T07:54:35.553-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1126999",
+    "ThreadId": "468279",
+    "Html": "I have tested both paths.\r<br />\nMy clients don't grab MSP in any path:<br />\n<ul>\n<li>nor 11.0.00 MSI -&gt; 11.0.01 MSP,</li>\n<li>\nnor 11.0.00 MSI -&gt; 11.0.04 MSP.\r<br />\nIt's very strange when all clients with different history and configuration report &quot;not applicable&quot;.\r<br />\nIt seems more probably that there is something wrong with MSP package configuration.<br />\n</li>\n</ul>\nWhen configure first MSP (11.0.00 or 11.0.04), do you set any supercedes / prerequirements / or anything in page &quot;already installed&quot; / &quot;installable&quot;?\r<br />\n<br />\nYou wrote &quot;once manually installed 11.0.04 over 11.0.03.exe installation, it works now also updating that machine to 11.0.05 via WPP&quot;. \r<br />\nWhat do you mean in &quot;11.0.03 exe installation&quot;?\r<br />\n<br />\nRegards,\r<br />\nJacek<br />\n",
+    "PostedDate": "2013-11-20T02:57:32.673-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1127191",
+    "ThreadId": "468279",
+    "Html": "I too am experiencing this problem. My clients are running Win 7 Pro x64, with Adobe Reader 11.0.03 installed. It's my understanding that 11.0.05 will only upgrade 11.0.04. I've published the 11.0.04 msp, and all of my client computers have reported &quot;Not Applicable.&quot; For the fun of it, I've also tried publishing the 11.0.05 msp as well. I get the same result. I have no supersedes, or rules/requirements defined. I basically just created the update, added the msp, input the title and other info, and published. If required, I will be happy to attach logs or whatever. Thanks! <br />\n<br />\nedit : more info... I've tried this process with both the MUI and regular MSP<br />\n",
+    "PostedDate": "2013-11-20T11:17:09.79-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1127422",
+    "ThreadId": "468279",
+    "Html": "Hi Tata2anka,<br />\n<br />\nlet me explain: I had two different kinds of installation in our environment: some of it had installaed Adobe Reader 11 with the major release 11.0.0.msi file, the others had the first installation with 11.0.03.exe file.<br />\n<br />\nSo, that I knew, that 11.0.04.msi is installable over both versions, I only published 11.0.04.msp and 11.0.05.msp.<br />\nBut not one client picked up the 11.0.04.msp - all with status 'not applicable'.<br />\n<br />\nSo I published too 11.0.03, 11.0.02 and 11.0.01.msp and approved it in WPP. I also published the major release 11.0.0.msi but NOT approved it.<br />\n<br />\nFor all clients (whatever was the stock installation was 11.0.0.msi or 11.0.03.exe) now status for 11.0.0.msi was 'installed', but for some clients (not for all) with 11.0.03.exe all other updates 01,02,03,04,05 was 'not applicable'. For those I had to manually install the 11.0.04.msp - after that was done, they installed automatically 11.0.05.msp via WPP.<br />\nThe clients that had installed the 11.0.0.msi now installed two different ways (I dont know why): Some of them installed step by step from 11.0.01 to 11.0.05, others only installed 11.0.04 and 11.0.05. <br />\n<br />\nAll packages are NOT superseeded! (I tried it too with superseeding 01, 02, 03 in 11.0.04 - but worked not for me!<br />\n",
+    "PostedDate": "2013-11-21T00:06:42.647-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1128459",
+    "ThreadId": "468279",
+    "Html": "Please, delete udpates that appears as 'Not applicable'. Download the latest release of WPP and publish again those updates.<br />\n",
+    "PostedDate": "2013-11-24T14:23:33.983-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-11-25T03:15:26.643-08:00"
+  },
+  {
+    "Id": "1128593",
+    "ThreadId": "468279",
+    "Html": "Question to new release: If I copy the new version, do I need a new certificate or can I use the one from previous version?<br />\n",
+    "PostedDate": "2013-11-25T01:37:17.433-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1128611",
+    "ThreadId": "468279",
+    "Html": "New releases doesn't change anything to certificate. Keep the old one.\r<br />\nThere is very few reasons to change certificate : <br />\n<ul>\n<li>Certificate expiration</li>\n<li>Root Authority certificate expiration</li>\n<li>Root Authority modifications</li>\n<li>Compromised certificate</li>\n</ul>\n",
+    "PostedDate": "2013-11-25T02:51:54.437-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1128623",
+    "ThreadId": "468279",
+    "Html": "Thanks for information!<br />\n",
+    "PostedDate": "2013-11-25T03:14:55.053-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

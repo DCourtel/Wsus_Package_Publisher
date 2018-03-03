@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1264689",
+    "ThreadId": "551219",
+    "Html": "Hi,<br />\nat first thanks a lot for this cool program. I've installed the WPP on a memberserver (Server 2012 not R2). <br />\n<br />\nAfter connecting to my WSUS Server (we have got only one), which is installed on one of the DC (also Server 2012 not R2) the WPP tells me that there is a cert missing. (as told in the documentation). So I created one with the WPP. After that I got no option to save this self signed certificate. The save-button is greyed out.<br />\n<br />\nSo I closed the WPP and restarted it and connected to the server again.  Now WPP is telling me, that the certificate is invalid + that I am not able to publish packages. <br />\n<br />\nIf I look at the certificate store on my Server 2012 DC there is a self signed certificate in the WSUS/certificate folder (the one which WPP created itself).<br />\n<br />\nCan you tell me how I can solve the certificate problem. I don't want to use the option &quot;ignore certificate errors&quot;.<br />\n<br />\nDo I have to install the WPP directly at the WSUS Server? (I thought this only has to be done if I use Server 2012 R2).<br />\n<br />\nThanks in advance.<br />\n<br />\n<strong>concerning the WSUS Restart I am told by WPP:</strong> Is a net stop WSUSService and net start WSUSService enough to restart the WSUS for WPP or will I have to restart the whole server?<br />\n<br />\n<strong>SOLVED:</strong> I removed  the certificate from the store and installed the WPP at the DC which is also the WSUS Server. No errors anymore.<br />\n<br />\nDaniel<br />\n",
+    "PostedDate": "2014-07-11T00:03:56.71-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-07-11T10:34:01.21-07:00"
+  }
+]

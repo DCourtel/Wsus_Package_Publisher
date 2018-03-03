@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Please, for this type of question, open a «Discussion» instead of an «Issue». ",
+    "ClosedDate": "2017-01-30T22:10:48.99-08:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Hello All,\r\nI have created the package and it got installed on the clients. But its still pop-ups saying new updates are available. Is there any way to resolve this.\r\nWhile creating the package i just selected the msi package options->next->next and publish.\r\nI didnt make any changes in the rules, do i need to select any option to ride this issue.. Please help me.. Thanks in advance ",
+    "LastUpdatedDate": "2017-01-30T22:10:49.02-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-09-04T10:30:09.317-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Package still listing even after installation",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 292
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "How the package is repoted after installation (installed, not installed, not applicable) ?\nCan you revise the package and look what do you have as \"IsInstallable\" rule ?",
+      "PostedDate": "2015-09-06T09:20:53.503-07:00",
+      "Id": 189934
+    },
+    {
+      "Message": "Hi DCourtel,\nI have used MSI product installed rule and i dont see \"IsInstallable\" rule.\nAnd coming to package status, as its creating problem from me i have moved the machines to different WSUS group.. I will test on new client and let you the status.\nI am using WPP release 1.3.1407.29",
+      "PostedDate": "2015-09-06T11:25:44.733-07:00",
+      "Id": 189938
+    },
+    {
+      "Message": "Hi.. current package(Symantec endpoint protection client) status listing as failed even after installation.",
+      "PostedDate": "2015-09-08T21:35:00.37-07:00",
+      "Id": 189998
+    }
+  ]
+}

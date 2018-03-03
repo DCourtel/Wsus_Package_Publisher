@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1346389",
+    "ThreadId": "578708",
+    "Html": "I've posted about this before in a closed thread titled &quot;[Solved] &quot;Not applicable&quot; issue.&quot;<br />\n<br />\nI cannot publish Flash and Shockwave succesfully, and all my clients show up as &quot;Not applicable&quot; but was able to publish Java 7 71 before that without issues, also was able to publish Flash 14 before that.<br />\n<br />\nFor example Flash Player for IE(ActiveX) 16.0.0.257<br />\n<br />\nTagged as Update, Critical Update.<br />\n<br />\n&quot;IsInstalled&quot; had the product code for Flash for ActiveX 16.0.0.257 in it &lt;msiar:MsiProductInstalled ProductCode=&quot;{70f97130-dbf6-4885-854c-cc7a80fc65e1}&quot;/&gt;<br />\n<br />\n&quot;IsInstallable&quot; was &lt;bar:Processor Architecture=&quot;9&quot;/&gt; 'OR' &lt;bar:Processor Architecture=&quot;0&quot;/&gt;. Also when I choose to add the 'OR' clauseto add the x64 it just puts the rules one by one inside the main AND tag like this: <br />\n&lt;bar:Processor Architecture=&quot;9&quot;/&gt;<br />\n&lt;bar:Processor Architecture=&quot;0&quot;/&gt;<br />\n<br />\nNext try was with version 16.0.0.287. This time I did not put any rules in the &quot;IsInstallable&quot; section and got the same &quot;Not applicable&quot; message 3 days after approving it for all clients.<br />\n<br />\nAny thoughts?<br />\n",
+    "PostedDate": "2015-01-27T11:03:40.263-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

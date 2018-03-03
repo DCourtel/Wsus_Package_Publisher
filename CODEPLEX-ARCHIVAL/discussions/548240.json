@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1255021",
+    "ThreadId": "548240",
+    "Html": "We don't have certificate to import it in WPP tool. But instead of that one of our package team will help us to create a package and inject the certificate then we can import that package to WSUS server through WPP tool. Is this way work ?<br />\n",
+    "PostedDate": "2014-06-10T19:12:55.183-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1258411",
+    "ThreadId": "548240",
+    "Html": "The certificate must have &quot;Code-Signing&quot; ability. the file must be a .pfx file (certificate with password to protect the private key), the private key must be Embedded into the certificate, you must import the certificate with WPP.<br />\n",
+    "PostedDate": "2014-06-20T13:26:02.113-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-01T00:59:56.753-07:00"
+  }
+]

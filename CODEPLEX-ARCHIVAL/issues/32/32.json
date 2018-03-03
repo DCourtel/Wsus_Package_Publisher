@@ -1,0 +1,61 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Postponed to future release.",
+    "ClosedDate": "2013-05-09T04:28:04.773-07:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nit would be a nice feature if it were possible to drag and drop the rules to move them into a new \"and\" or \"or\" group after the rules are instated.\r\nSee screenshot.\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1305.03",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-07T02:51:28.687-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Postponed"
+    },
+    "Summary": "Drag and drop of rules",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 32
+  },
+  "FileAttachments": [
+    {
+      "FileId": 675609,
+      "FileName": "WPP-Rules-Dragn-Drop.png",
+      "DownloadUrl": ".\\675609"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "It could be hard to do. I will take a look, but it won't be in the top of my list.",
+      "PostedDate": "2013-05-07T03:04:16.473-07:00",
+      "Id": 99558
+    },
+    {
+      "Message": "Maybe it would be easier to group and ungroup existing rules by marking them and the add or remove the group.",
+      "PostedDate": "2013-05-07T03:12:28.84-07:00",
+      "Id": 99560
+    },
+    {
+      "Message": "I like the idea of drag and drop rules.\nI will keep this request in my mind for future change.",
+      "PostedDate": "2013-05-09T04:26:14.777-07:00",
+      "Id": 99781
+    }
+  ]
+}

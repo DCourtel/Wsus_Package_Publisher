@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Guten Tag,\r\nich hätte eine Frage bezüglich der Deinstallation von veröffentlichten Updates. Wir haben z.B. eine Flash-Paket erstellt und über eine Wsus-Gruppe verteilt. Funktioniert auch soweit ohne Probleme. Wie bekomme ich allerdings dieses Paket wieder von einem Client/Gruppe deinstalliert? Muss hierfür über \"Uninstall2Install\" ein Deinstallationspaket erstellt werden?\r\nÜber eine kurze Rückmeldung würde ich mich sehr freuen.\r\n\r\nViele Grüße\r\npfeifera\r\n\r\n_____________________________________________________________________\r\nDear at all,\r\ni´m having a question about the uninstallation of a published update. For example we´re having a flash-update-package which is published and installed through a wsus Group-Membership. Everything is working fine. But how can i uninstall this package at one Client/Group? Do i need to create an uninstall package with \"Uninstall2install\"?\r\nthanks in advance for some help\r\n\r\nbest regards\r\npfeifera",
+    "LastUpdatedDate": "2016-02-12T02:56:04.043-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-02-11T23:04:23.54-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Deinstallieren von veröffentlichten Update / uninstallation of published updates",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 324
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Du kannst es mit Uninstall2Install machen, Du kannst das Update aber auch zum Deinstallieren genehmigen. Rechtsklick > Genehmigen > Deinstallieren.\n\nYou can deinstall with Uninstall2Install, you can aprove the update for deinstall. Rightclick > aprove > deinstall.",
+      "PostedDate": "2016-02-12T00:33:45.417-08:00",
+      "Id": 196507
+    },
+    {
+      "Message": "Ah, super. Vielen Dank, ich werde es mal testen.\n\nViele Grüße\npfeifera",
+      "PostedDate": "2016-02-12T02:56:04.043-08:00",
+      "Id": 196512
+    }
+  ]
+}

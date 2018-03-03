@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update Detail Viewer",
+      "DisplayName": "Update Detail Viewer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-04-15T15:07:57.747-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "The 'Show Pending Updates' feature doesn't use provided credentials and lead to an 'Unauthorized access Exception' error when used from a account that have not admin privilege on the remote computer.\r\nThe feature need to be execute from an account that have admin privilege on the remote computer to work.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1304.12",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-04-13T23:53:35.743-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "'Show Pending Updates' doesn't use Credentials",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 18
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Changing the way of 'FrmShowPendingUPdates' is launch so that it can be run with other credentials.\n(1.1.1304.14)",
+      "PostedDate": "2013-04-14T04:14:31.933-07:00",
+      "Id": 96944
+    }
+  ]
+}

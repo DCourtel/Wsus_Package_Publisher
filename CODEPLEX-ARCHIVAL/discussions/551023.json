@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "1263942",
+    "ThreadId": "551023",
+    "Html": "I have created  an update package for Java 7 Update 60\r<br />\n<br />\nI have approved this to a test group containing 3 computers.\r<br />\n<br />\nTwo computer state Not Installed. When I run windows update from these machines they don't pick up the update.\r<br />\n<br />\nAny ideas?\r<br />\n<br />\nThanks\r<br />\n<br />\nMatthew<br />\n",
+    "PostedDate": "2014-07-09T04:47:38.213-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1263944",
+    "ThreadId": "551023",
+    "Html": "After 30 minutes they all downloaded the update and installed.\r<br />\n<br />\nIs there any reason for the delay?<br />\n",
+    "PostedDate": "2014-07-09T04:49:37.833-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1263980",
+    "ThreadId": "551023",
+    "Html": "<strong>MatthewTandy wrote:</strong><br />\n<blockquote>\nAfter 30 minutes they all downloaded the update and installed.<br />\n<br />\nIs there any reason for the delay?<br />\n</blockquote>\nYes, the next time you can force in a command line:\r<br />\n<br />\nwuauclt /detectnow\r<br />\nwuauclt /reportnow\r<br />\n<br />\nAfter this, the client <em>must</em> ASAP start with downloading.<br />\n",
+    "PostedDate": "2014-07-09T06:16:23.057-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264111",
+    "ThreadId": "551023",
+    "Html": "Once the update has been published, WPP has finish his job. There is no interaction with clients computers. If your clients computers wait before downloading the update, you need to review Windows Update Agent's settings. How often they check for new update availability ?<br />\n",
+    "PostedDate": "2014-07-09T12:16:59.953-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264260",
+    "ThreadId": "551023",
+    "Html": "Thank you both very much for your reply's.\r<br />\n<br />\nI will check how often the Windows Update Agent checks for updates.<br />\n",
+    "PostedDate": "2014-07-09T23:48:26.733-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264292",
+    "ThreadId": "551023",
+    "Html": "<strong>MatthewTandy wrote:</strong><br />\n<blockquote>\nI will check how often the Windows Update Agent checks for updates.<br />\n</blockquote>\nIf you are using a GPO and nothing changed in this setting, WU-Agent will check every 23 hours for new updates. There is one setting you can change to 4 hours, it is enough.<br />\n",
+    "PostedDate": "2014-07-10T02:09:06.67-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264374",
+    "ThreadId": "551023",
+    "Html": "I am getting an code FFFC error on install.\r<br />\n<br />\nHere is the output from the xml file.  I cant see anything that is wrong.\r<br />\n<br />\n&lt;CustomUpdate&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.VariableElement&lt;/ElementType&gt;\r<br />\n&lt;Name&gt;Return Code&lt;/Name&gt;\r<br />\n&lt;Type&gt;Int&lt;/Type&gt;\r<br />\n&lt;ID&gt;9680026d-40aa-40e4-b05f-b9a4b6ee9548&lt;/ID&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ServiceElement&lt;/ElementType&gt;\r<br />\n&lt;ServiceAction&gt;Stop&lt;/ServiceAction&gt;\r<br />\n&lt;ServiceName&gt;JavaQuickStarterService&lt;/ServiceName&gt;\r<br />\n&lt;PathToEXE&gt;&lt;/PathToEXE&gt;\r<br />\n&lt;StartupMode&gt;Undefined&lt;/StartupMode&gt;\r<br />\n&lt;StartingAccount&gt;Undefined&lt;/StartingAccount&gt;\r<br />\n&lt;Login&gt;&lt;/Login&gt;\r<br />\n&lt;Password&gt;&lt;/Password&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;\r<br />\n&lt;PathToExecutable&gt;C:\\WSUS Package Publisher\\Updates\\One Package does all JAVA 32bit\\jre-7u60-windows-i586&lt;/PathToExecutable&gt;\r<br />\n&lt;Parameters&gt;/s IExplorer=1&lt;/Parameters&gt;\r<br />\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;\r<br />\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;\r<br />\n&lt;Variable&gt;9680026d-40aa-40e4-b05f-b9a4b6ee9548&lt;/Variable&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.WaitElement&lt;/ElementType&gt;\r<br />\n&lt;Wait&gt;30&lt;/Wait&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;\r<br />\n&lt;PathToExecutable&gt;%windir%\\System32\\msiexec.exe&lt;/PathToExecutable&gt;\r<br />\n&lt;Parameters&gt;/x {4a03706f-666a-4037-7777-5f2748764d10} /qn /norestart&lt;/Parameters&gt;\r<br />\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;\r<br />\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;\r<br />\n&lt;Variable/&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.WaitElement&lt;/ElementType&gt;\r<br />\n&lt;Wait&gt;30&lt;/Wait&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ServiceElement&lt;/ElementType&gt;\r<br />\n&lt;ServiceAction&gt;Stop&lt;/ServiceAction&gt;\r<br />\n&lt;ServiceName&gt;JavaQuickStarterService&lt;/ServiceName&gt;\r<br />\n&lt;PathToEXE&gt;&lt;/PathToEXE&gt;\r<br />\n&lt;StartupMode&gt;Undefined&lt;/StartupMode&gt;\r<br />\n&lt;StartingAccount&gt;Undefined&lt;/StartingAccount&gt;\r<br />\n&lt;Login&gt;&lt;/Login&gt;\r<br />\n&lt;Password&gt;&lt;/Password&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ServiceElement&lt;/ElementType&gt;\r<br />\n&lt;ServiceAction&gt;ChangeStartingMode&lt;/ServiceAction&gt;\r<br />\n&lt;ServiceName&gt;JavaQuickStarterService&lt;/ServiceName&gt;\r<br />\n&lt;PathToEXE&gt;&lt;/PathToEXE&gt;\r<br />\n&lt;StartupMode&gt;Disabled&lt;/StartupMode&gt;\r<br />\n&lt;StartingAccount&gt;Undefined&lt;/StartingAccount&gt;\r<br />\n&lt;Login&gt;&lt;/Login&gt;\r<br />\n&lt;Password&gt;&lt;/Password&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ReturnCodeElement&lt;/ElementType&gt;\r<br />\n&lt;ReturnCodeMethod&gt;Variable&lt;/ReturnCodeMethod&gt;\r<br />\n&lt;StaticReturnCode&gt;0&lt;/StaticReturnCode&gt;\r<br />\n&lt;Variable&gt;9680026d-40aa-40e4-b05f-b9a4b6ee9548&lt;/Variable&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;/CustomUpdate&gt;\r<br />\n<br />\nAny help would be greatly welcome. I have checked and the file is in the path to exectuble.\r<br />\n<br />\nRegards\r<br />\n<br />\nMatthew<br />\n",
+    "PostedDate": "2014-07-10T05:18:29.933-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264494",
+    "ThreadId": "551023",
+    "Html": "Custom Update runs locally on clients computers. So when the client read :<br />\n<blockquote>\n&lt;PathToExecutable&gt;C:\\WSUS Package Publisher\\Updates\\One Package does all JAVA 32bit\\jre-7u60-windows-i586&lt;/PathToExecutable&gt;<br />\n</blockquote>\nThe client try to find this file on the <strong>local hard drive</strong> . Do you really think this file is present on the hard drive of the client ? I don't think so.\r<br />\nYou need to add the file as an additionnal file. And, in the custom update wizard, just put the name of the file.\r<br />\nTake a look to this how-to : <a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=691788\" rel=\"nofollow\">https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=691788</a><br />\n",
+    "PostedDate": "2014-07-10T09:41:24.66-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264692",
+    "ThreadId": "551023",
+    "Html": "I first got the FFFC error when the PathtoExecutable was pointing to this location\r<br />\n<br />\n&lt;PathToExecutable&gt;jre-7u60-windows-i586&lt;/PathToExecutable&gt;\r<br />\n<br />\nThis is the default that the wizard puts in. I have changed it back to this now. See below XML but am still getting the error.\r<br />\n<br />\n<br />\n&lt;CustomUpdate&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.VariableElement&lt;/ElementType&gt;\r<br />\n&lt;Name&gt;Return Code&lt;/Name&gt;\r<br />\n&lt;Type&gt;Int&lt;/Type&gt;\r<br />\n&lt;ID&gt;9680026d-40aa-40e4-b05f-b9a4b6ee9548&lt;/ID&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ServiceElement&lt;/ElementType&gt;\r<br />\n&lt;ServiceAction&gt;Stop&lt;/ServiceAction&gt;\r<br />\n&lt;ServiceName&gt;JavaQuickStarterService&lt;/ServiceName&gt;\r<br />\n&lt;PathToEXE&gt;&lt;/PathToEXE&gt;\r<br />\n&lt;StartupMode&gt;Undefined&lt;/StartupMode&gt;\r<br />\n&lt;StartingAccount&gt;Undefined&lt;/StartingAccount&gt;\r<br />\n&lt;Login&gt;&lt;/Login&gt;\r<br />\n&lt;Password&gt;&lt;/Password&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;\r<br />\n&lt;PathToExecutable&gt;jre-7u60-windows-i586&lt;/PathToExecutable&gt;\r<br />\n&lt;Parameters&gt;/s IExplorer=1&lt;/Parameters&gt;\r<br />\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;\r<br />\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;\r<br />\n&lt;Variable&gt;9680026d-40aa-40e4-b05f-b9a4b6ee9548&lt;/Variable&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.WaitElement&lt;/ElementType&gt;\r<br />\n&lt;Wait&gt;30&lt;/Wait&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;\r<br />\n&lt;PathToExecutable&gt;%windir%\\System32\\msiexec.exe&lt;/PathToExecutable&gt;\r<br />\n&lt;Parameters&gt;/x {4a03706f-666a-4037-7777-5f2748764d10} /qn /norestart&lt;/Parameters&gt;\r<br />\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;\r<br />\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;\r<br />\n&lt;Variable/&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.WaitElement&lt;/ElementType&gt;\r<br />\n&lt;Wait&gt;30&lt;/Wait&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ServiceElement&lt;/ElementType&gt;\r<br />\n&lt;ServiceAction&gt;Stop&lt;/ServiceAction&gt;\r<br />\n&lt;ServiceName&gt;JavaQuickStarterService&lt;/ServiceName&gt;\r<br />\n&lt;PathToEXE&gt;&lt;/PathToEXE&gt;\r<br />\n&lt;StartupMode&gt;Undefined&lt;/StartupMode&gt;\r<br />\n&lt;StartingAccount&gt;Undefined&lt;/StartingAccount&gt;\r<br />\n&lt;Login&gt;&lt;/Login&gt;\r<br />\n&lt;Password&gt;&lt;/Password&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ServiceElement&lt;/ElementType&gt;\r<br />\n&lt;ServiceAction&gt;ChangeStartingMode&lt;/ServiceAction&gt;\r<br />\n&lt;ServiceName&gt;JavaQuickStarterService&lt;/ServiceName&gt;\r<br />\n&lt;PathToEXE&gt;&lt;/PathToEXE&gt;\r<br />\n&lt;StartupMode&gt;Disabled&lt;/StartupMode&gt;\r<br />\n&lt;StartingAccount&gt;Undefined&lt;/StartingAccount&gt;\r<br />\n&lt;Login&gt;&lt;/Login&gt;\r<br />\n&lt;Password&gt;&lt;/Password&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ReturnCodeElement&lt;/ElementType&gt;\r<br />\n&lt;ReturnCodeMethod&gt;Variable&lt;/ReturnCodeMethod&gt;\r<br />\n&lt;StaticReturnCode&gt;0&lt;/StaticReturnCode&gt;\r<br />\n&lt;Variable&gt;9680026d-40aa-40e4-b05f-b9a4b6ee9548&lt;/Variable&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;/CustomUpdate&gt;<br />\n",
+    "PostedDate": "2014-07-11T00:19:41.533-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264730",
+    "ThreadId": "551023",
+    "Html": "Hi, an error FFFC, mean &quot;File Not Found&quot;.\r<br />\nEnsure, you have correctly incorporate &quot;jre-7u60-windows-i586&quot; into the package as an additionnal file. Eventually, add &quot;.exe&quot; at the end of the file.<br />\n",
+    "PostedDate": "2014-07-11T02:08:31.127-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:27:19.113-07:00"
+  },
+  {
+    "Id": "1265124",
+    "ThreadId": "551023",
+    "Html": "Pls extract the MSI and all files are needed from EXE: <a href=\"https://www.java.com/en/download/help/msi_install.xml\" rel=\"nofollow\">https://www.java.com/en/download/help/msi_install.xml</a>\r<br />\nAfter this, import the MSI and all other files are needed. You have only go through the wizard with ENTER, ENTER, Finish.<br />\n",
+    "PostedDate": "2014-07-12T08:12:31.467-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,100 @@
+015-03-09	14:40:55:492	1516	794	AU	Triggering AU detection through DetectNow API
+2015-03-09	14:40:55:492	1516	794	AU	Triggering Online detection (non-interactive)
+2015-03-09	14:40:55:492	1516	c50	AU	#############
+2015-03-09	14:40:55:492	1516	c50	AU	## START ##  AU: Search for updates
+2015-03-09	14:40:55:492	1516	c50	AU	#########
+2015-03-09	14:40:55:492	1516	c50	AU	<<## SUBMITTED ## AU: Search for updates [CallId = {DFDD3419-576B-43E1-961C-6D0B868DBBAD}]
+2015-03-09	14:40:55:508	1516	c24	Agent	*************
+2015-03-09	14:40:55:508	1516	c24	Agent	** START **  Agent: Finding updates [CallerId = AutomaticUpdates]
+2015-03-09	14:40:55:508	1516	c24	Agent	*********
+2015-03-09	14:40:55:508	1516	c24	Agent	  * Online = Yes; Ignore download priority = No
+2015-03-09	14:40:55:508	1516	c24	Agent	  * Criteria = "IsHidden=0 and IsInstalled=0 and DeploymentAction='Installation' and IsAssigned=1 or IsHidden=0 and IsPresent=1 and DeploymentAction='Uninstallation' and IsAssigned=1 or IsHidden=0 and IsInstalled=1 and DeploymentAction='Installation' and IsAssigned=1 and RebootRequired=1 or IsHidden=0 and IsInstalled=0 and DeploymentAction='Uninstallation' and IsAssigned=1 and RebootRequired=1"
+2015-03-09	14:40:55:508	1516	c24	Agent	  * ServiceID = {3DA21691-E39D-4DA6-8A4B-B43877BCB1B7} Managed
+2015-03-09	14:40:55:508	1516	c24	Agent	  * Search Scope = {Machine}
+2015-03-09	14:40:56:054	1516	c24	Misc	Validating signature for C:\WINDOWS\SoftwareDistribution\SelfUpdate\Default\wuident.cab:
+2015-03-09	14:40:56:054	1516	c24	Misc	 Microsoft signed: Yes
+2015-03-09	14:40:58:336	1516	c24	Misc	Validating signature for C:\WINDOWS\SoftwareDistribution\SelfUpdate\Default\wuident.cab:
+2015-03-09	14:40:58:351	1516	c24	Misc	 Microsoft signed: Yes
+2015-03-09	14:40:58:430	1516	c24	Misc	Validating signature for C:\WINDOWS\SoftwareDistribution\SelfUpdate\Default\wsus3setup.cab:
+2015-03-09	14:40:58:461	1516	c24	Misc	 Microsoft signed: Yes
+2015-03-09	14:40:58:461	1516	c24	Setup	***********  Setup: Checking whether self-update is required  ***********
+2015-03-09	14:40:58:461	1516	c24	Setup	  * Inf file: C:\WINDOWS\SoftwareDistribution\SelfUpdate\Default\wsus3setup.inf
+2015-03-09	14:40:58:461	1516	c24	Setup	Update NOT required for C:\WINDOWS\system32\cdm.dll: target version = 7.6.7600.256, required version = 7.6.7600.256
+2015-03-09	14:40:58:476	1516	c24	Setup	Update NOT required for C:\WINDOWS\system32\wuapi.dll: target version = 7.6.7600.256, required version = 7.6.7600.256
+2015-03-09	14:40:58:476	1516	c24	Setup	Update NOT required for C:\WINDOWS\system32\wuapi.dll.mui: target version = 7.6.7600.256, required version = 7.6.7600.256
+2015-03-09	14:40:58:476	1516	c24	Setup	Update NOT required for C:\WINDOWS\system32\wuauclt.exe: target version = 7.6.7600.256, required version = 7.6.7600.256
+2015-03-09	14:40:58:476	1516	c24	Setup	Update NOT required for C:\WINDOWS\system32\wuaucpl.cpl: target version = 7.6.7600.256, required version = 7.6.7600.256
+2015-03-09	14:40:58:476	1516	c24	Setup	Update NOT required for C:\WINDOWS\system32\wuaucpl.cpl.mui: target version = 7.6.7600.256, required version = 7.6.7600.256
+2015-03-09	14:40:58:476	1516	c24	Setup	Update NOT required for C:\WINDOWS\system32\wuaueng.dll: target version = 7.6.7600.256, required version = 7.6.7600.256
+2015-03-09	14:40:58:476	1516	c24	Setup	Update NOT required for C:\WINDOWS\system32\wuaueng.dll.mui: target version = 7.6.7600.256, required version = 7.6.7600.256
+2015-03-09	14:40:58:476	1516	c24	Setup	Update NOT required for C:\WINDOWS\system32\wucltui.dll: target version = 7.6.7600.256, required version = 7.6.7600.256
+2015-03-09	14:40:58:476	1516	c24	Setup	Update NOT required for C:\WINDOWS\system32\wucltui.dll.mui: target version = 7.6.7600.256, required version = 7.6.7600.256
+2015-03-09	14:40:58:476	1516	c24	Setup	Update NOT required for C:\WINDOWS\system32\wups.dll: target version = 7.6.7600.256, required version = 7.6.7600.256
+2015-03-09	14:40:58:476	1516	c24	Setup	Update NOT required for C:\WINDOWS\system32\wups2.dll: target version = 7.6.7600.256, required version = 7.6.7600.256
+2015-03-09	14:40:58:476	1516	c24	Setup	Update NOT required for C:\WINDOWS\system32\wuweb.dll: target version = 7.6.7600.256, required version = 7.6.7600.256
+2015-03-09	14:40:58:476	1516	c24	Setup	  * IsUpdateRequired = No
+2015-03-09	14:41:01:336	1516	c24	PT	+++++++++++  PT: Synchronizing server updates  +++++++++++
+2015-03-09	14:41:01:336	1516	c24	PT	  + ServiceId = {3DA21691-E39D-4DA6-8A4B-B43877BCB1B7}, Server URL = http://192.168.53.56/ClientWebService/client.asmx
+2015-03-09	14:41:01:367	1516	c24	PT	WARNING: Cached cookie has expired or new PID is available
+2015-03-09	14:41:01:367	1516	c24	PT	Initializing simple targeting cookie, clientId = c9692a05-4198-4e4a-b7ab-9fd0fee09bd4, target group = , DNS name = pc270.agir.net
+2015-03-09	14:41:01:367	1516	c24	PT	  Server URL = http://192.168.53.56/SimpleAuthWebService/SimpleAuth.asmx
+2015-03-09	14:41:55:008	1516	c24	PT	+++++++++++  PT: Synchronizing extended update info  +++++++++++
+2015-03-09	14:41:55:008	1516	c24	PT	  + ServiceId = {3DA21691-E39D-4DA6-8A4B-B43877BCB1B7}, Server URL = http://192.168.53.56/ClientWebService/client.asmx
+2015-03-09	14:42:00:852	1516	c24	Agent	  * Added update {2C2A3099-9C8A-40A4-BA55-0FF7002CCBAA}.1 to search result
+2015-03-09	14:42:00:852	1516	c24	Agent	  * Found 1 updates and 82 categories in search; evaluated appl. rules of 1720 out of 2741 deployed entities
+2015-03-09	14:42:00:852	1516	c24	Agent	*********
+2015-03-09	14:42:00:852	1516	c24	Agent	**  END  **  Agent: Finding updates [CallerId = AutomaticUpdates]
+2015-03-09	14:42:00:852	1516	c24	Agent	*************
+2015-03-09	14:42:00:868	1516	c24	Report	REPORT EVENT: {45C7EEA6-3DCD-41FD-A051-8FDD4B2F04D5}	2015-03-09 14:42:00:852+0100	1	147	101	{00000000-0000-0000-0000-000000000000}	0	0	AutomaticUpdates	Success	Software Synchronization	Windows Update Client successfully detected 1 updates.
+2015-03-09	14:42:00:868	1516	c24	Report	REPORT EVENT: {CB9203B3-E153-4C24-A322-50BED4DA0148}	2015-03-09 14:42:00:852+0100	1	156	101	{00000000-0000-0000-0000-000000000000}	0	0	AutomaticUpdates	Success	Pre-Deployment Check	Reporting client status.
+2015-03-09	14:42:00:868	1516	f74	AU	>>##  RESUMED  ## AU: Search for updates [CallId = {DFDD3419-576B-43E1-961C-6D0B868DBBAD}]
+2015-03-09	14:42:00:868	1516	f74	AU	  # 1 updates detected
+2015-03-09	14:42:00:868	1516	f74	AU	#########
+2015-03-09	14:42:00:868	1516	f74	AU	##  END  ##  AU: Search for updates [CallId = {DFDD3419-576B-43E1-961C-6D0B868DBBAD}]
+2015-03-09	14:42:00:868	1516	f74	AU	#############
+2015-03-09	14:42:00:868	1516	f74	AU	Featured notifications is disabled.
+2015-03-09	14:42:00:868	1516	f74	AU	AU setting next detection timeout to 2015-03-10 00:16:35
+2015-03-09	14:42:00:868	1516	f74	AU	Setting AU scheduled install time to 2015-03-10 12:00:00
+2015-03-09	14:42:00:868	1516	f74	AU	Auto-approving update for download, updateId = {2C2A3099-9C8A-40A4-BA55-0FF7002CCBAA}.1, ForUx=0, IsOwnerUx=0, HasDeadline=0, IsMinor=0
+2015-03-09	14:42:00:868	1516	f74	AU	Auto-approved 1 update(s) for download (NOT for Ux)
+2015-03-09	14:42:00:868	1516	f74	AU	#############
+2015-03-09	14:42:00:868	1516	f74	AU	## START ##  AU: Download updates
+2015-03-09	14:42:00:868	1516	f74	AU	#########
+2015-03-09	14:42:00:868	1516	f74	AU	  # Approved updates = 1
+2015-03-09	14:42:00:883	1516	f74	AU	AU initiated download, updateId = {2C2A3099-9C8A-40A4-BA55-0FF7002CCBAA}.1, callId = {CE77E918-12C6-4DDA-9A5E-FAA1F2CAD931}
+2015-03-09	14:42:00:883	1516	f74	AU	Setting AU scheduled install time to 2015-03-10 12:00:00
+2015-03-09	14:42:00:883	1516	f74	AU	AU setting pending client directive to 'Download Progress'
+2015-03-09	14:42:00:883	1516	f74	AU	  # Pending download calls = 1
+2015-03-09	14:42:00:883	1516	f74	AU	<<## SUBMITTED ## AU: Download updates
+2015-03-09	14:42:00:899	1516	c24	Report	WARNING: Reporter failed to upload events with hr = 8024000c.
+2015-03-09	14:42:00:930	1516	c24	DnldMgr	*************
+2015-03-09	14:42:00:930	1516	c24	DnldMgr	** START **  DnldMgr: Downloading updates [CallerId = AutomaticUpdates]
+2015-03-09	14:42:00:930	1516	c24	DnldMgr	*********
+2015-03-09	14:42:00:930	1516	c24	DnldMgr	  * Call ID = {CE77E918-12C6-4DDA-9A5E-FAA1F2CAD931}
+2015-03-09	14:42:00:930	1516	c24	DnldMgr	  * Priority = 2, Interactive = 0, Owner is system = 1, Explicit proxy = 0, Proxy session id = -1, ServiceId = {3DA21691-E39D-4DA6-8A4B-B43877BCB1B7}
+2015-03-09	14:42:00:930	1516	c24	DnldMgr	  * Updates to download = 1
+2015-03-09	14:42:00:930	1516	c24	Agent	  *   Title = Adobe Flash Player 16 ActiveX
+2015-03-09	14:42:00:930	1516	c24	Agent	  *   UpdateId = {2C2A3099-9C8A-40A4-BA55-0FF7002CCBAA}.1
+2015-03-09	14:42:00:930	1516	c24	DnldMgr	***********  DnldMgr: New download job [UpdateId = {2C2A3099-9C8A-40A4-BA55-0FF7002CCBAA}.1]  ***********
+2015-03-09	14:42:00:930	1516	c24	DnldMgr	  * Queueing update for download handler request generation.
+2015-03-09	14:42:00:930	1516	c24	DnldMgr	Generating download request for update {2C2A3099-9C8A-40A4-BA55-0FF7002CCBAA}.1
+2015-03-09	14:42:01:383	1516	c24	DnldMgr	***********  DnldMgr: New download job [UpdateId = {2C2A3099-9C8A-40A4-BA55-0FF7002CCBAA}.1]  ***********
+2015-03-09	14:42:01:649	1516	c24	DnldMgr	  * BITS job initialized, JobId = {83EED83B-5904-46E6-817A-090AE1E55E9C}
+2015-03-09	14:42:01:696	1516	c24	DnldMgr	  * Downloading from http://192.168.53.56/Content/AD/F89ADD8FE3C18B0FC2F87BAFBF73532BF4C673AD.cab to C:\WINDOWS\SoftwareDistribution\Download\3c0f78be6e0db567a8649e248efb87a9\8aaeb7f5-4e4e-47e3-bd2a-34445193874a_1.cab (full file).
+2015-03-09	14:42:01:743	1516	c24	Agent	*********
+2015-03-09	14:42:01:743	1516	c24	Agent	**  END  **  Agent: Downloading updates [CallerId = AutomaticUpdates]
+2015-03-09	14:42:01:743	1516	c24	Agent	*************
+2015-03-09	14:42:02:790	1516	de4	DnldMgr	BITS job {83EED83B-5904-46E6-817A-090AE1E55E9C} completed successfully
+2015-03-09	14:42:03:024	1516	de4	DnldMgr	WARNING: File failed postprocessing, error = 80246002
+2015-03-09	14:42:03:024	1516	de4	DnldMgr	Failed file: URL = 'http://192.168.53.56/Content/AD/F89ADD8FE3C18B0FC2F87BAFBF73532BF4C673AD.cab', Local path = 'C:\WINDOWS\SoftwareDistribution\Download\3c0f78be6e0db567a8649e248efb87a9\8aaeb7f5-4e4e-47e3-bd2a-34445193874a_1.cab'
+2015-03-09	14:42:03:024	1516	de4	DnldMgr	Error 0x80246002 occurred while downloading update; notifying dependent calls.
+2015-03-09	14:42:03:040	1516	f74	AU	>>##  RESUMED  ## AU: Download update [UpdateId = {2C2A3099-9C8A-40A4-BA55-0FF7002CCBAA}]
+2015-03-09	14:42:03:040	1516	f74	AU	  # WARNING: Download failed, error = 0x80246002
+2015-03-09	14:42:03:040	1516	f74	AU	#########
+2015-03-09	14:42:03:040	1516	f74	AU	##  END  ##  AU: Download updates
+2015-03-09	14:42:03:040	1516	f74	AU	#############
+2015-03-09	14:42:03:040	1516	f74	AU	Setting AU scheduled install time to 2015-03-10 12:00:00
+2015-03-09	14:42:08:040	1516	c24	Report	REPORT EVENT: {5D0EE8BE-FAC9-4664-8425-2D3909EDBEB4}	2015-03-09 14:42:03:040+0100	1	161	101	{2C2A3099-9C8A-40A4-BA55-0FF7002CCBAA}	1	80246002	AutomaticUpdates	Failure	Content Download	Error: Download failed.
+2015-03-09	14:42:08:259	1516	c24	Report	Uploading 2 events using cached cookie, reporting URL = http://192.168.53.56/ReportingWebService/ReportingWebService.asmx
+2015-03-09	14:42:08:274	1516	c24	Report	Reporter successfully uploaded 2 events.
+2015-03-09	14:42:15:884	1516	c50	AU	No pending client directive

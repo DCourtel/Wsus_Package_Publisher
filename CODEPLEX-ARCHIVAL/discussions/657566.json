@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1482498",
+    "ThreadId": "657566",
+    "Html": "Is it possible to somehow configure the URL that the WSUS server reports to the client to download self-published packages?<br />\n<br />\nWe have our WSUS server behind a firewall, reverse-proxied through the firewall.  So the communication url we specify for client communications is the firewall side URL, NOT the URL for the WSUS server itself.  then we have the workstations download the actual packages for regular Microsoft updates directly from Microsoft.  This all works fine for the normal Microsoft published updates.<br />\n<br />\nBut for self-published updates using Package Publisher, according to the WindowsUpdate.log on the clients, when they try to download a self-published package they always try to download it through the URL directly to the WSUS server itself, which is not exposed outside the firewall.<br />\n<br />\nI need somehow to be able to tell the clients to use the same firewalled URL that they use for the WSUS server communication path, to download self-published packages from.<br />\n<br />\nThank you!<br />\n",
+    "PostedDate": "2016-08-31T07:30:51.323-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1482510",
+    "ThreadId": "657566",
+    "Html": "Hi, is it possible to make a DNS record so that the Wsus name is resolve to the Firewall IP ?<br />\n",
+    "PostedDate": "2016-08-31T09:01:52.877-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1482513",
+    "ThreadId": "657566",
+    "Html": "I'm pursuing that option, but I'm not sure it's going to be possible.  The FQDN that the WSUS server reports is a different DNS domain than the firewall DNS domain.  The WSUS server domain is not currently exposed to outside the firewall.  I'm not sure it's possible to create a DNS entry for the WSUS server domain outside of the firewall.<br />\n",
+    "PostedDate": "2016-08-31T09:07:04.08-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

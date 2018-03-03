@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-01-29T03:13:54.953-08:00",
+    "CommentCount": 7,
+    "Custom": null,
+    "Description": "Is it possible to manage updates published in wsus console through WPP tool.?",
+    "LastUpdatedDate": "2014-01-29T03:13:55.153-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-01-23T06:50:46.35-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Out of scope"
+    },
+    "Summary": "Is it possible to manage updates published in wsus console through WPP tool.",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 178
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "No. You can't manage Microsoft's Updates with WPP. Only locally published updates are available in WPP.",
+      "PostedDate": "2014-01-23T08:06:08.883-08:00",
+      "Id": 131314
+    },
+    {
+      "Message": "Hi GaneshD,\nNorbert is right. WPP focused on locally published updates. You should manage Microsoft updates with the Wsus Console.",
+      "PostedDate": "2014-01-23T12:27:50.537-08:00",
+      "Id": 131348
+    },
+    {
+      "Message": "Detect now and install now options in WPP is applicable for both windows update and locally published packages rite?",
+      "PostedDate": "2014-01-27T01:47:48.413-08:00",
+      "Id": 131669
+    },
+    {
+      "Message": "Detectnow is a option for the local Windows Update, the WU Agent don't know nothing about WPP, he will install all Software. ;)",
+      "PostedDate": "2014-01-27T02:25:28.627-08:00",
+      "Id": 131673
+    },
+    {
+      "Message": "\"detect now\" does the same, as if you put it into an cmd locally on a client. It triggers the local update agent of a computer. It does not distinguish between Microsoft or local published updates.\n\nHTH\nNorbert",
+      "PostedDate": "2014-01-27T11:52:04.63-08:00",
+      "Id": 131770
+    },
+    {
+      "Message": "Norbert and Winfried are right. Sending 'DetectNow' from WPP have the same result than opening a CommnandLine Window on the client and typing 'WuAuClt /DetectNow'\nidem for 'ReportNow'.",
+      "PostedDate": "2014-01-27T13:00:39.777-08:00",
+      "Id": 131786
+    },
+    {
+      "Message": "Thanks for your clarifications :)",
+      "PostedDate": "2014-01-29T00:23:10.573-08:00",
+      "Id": 131986
+    }
+  ]
+}

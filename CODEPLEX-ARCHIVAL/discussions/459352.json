@@ -1,0 +1,402 @@
+[
+  {
+    "Id": "1099666",
+    "ThreadId": "459352",
+    "Html": "First off, great project and thanks for the hard work in adding features and addressing problems.  Here's the scenario:<br />\n<br />\nWe have our main server 2k8 R2 WSUS server that downloads MS patches and stores them locally.  We can publish MS and third party patches to our Win 7 clients with no problems from that server.  We proceeded to set up a replica 2k8 R2 server and it does synchronize and show both MS and the third party patches published from the upstream server, however, all third party patches show the path in the Folder field red and the string in the Id field orange.  WSUS clients directed to that server are unable to detect the third party update packages but if pointed to the upstream server they have no problem detecting/installing them.  We noticed that this is caused because the cab files are not being replicated, if we copy the cab files manually from the upstream server then the field clears the red status but once a WSUS synchronization is performed the files are deleted.  MS patching works fine from the replica server.  Both servers and clients are using the same 2048 bit self signed certificate that was generated on the main upstream server.  Any input on what the problem may be?<br />\n",
+    "PostedDate": "2013-09-26T07:09:17.66-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1099721",
+    "ThreadId": "459352",
+    "Html": "Ok, so I made headway when I was triple checking things and noticed the certificate on the replica server missing from Trusted Publishers (facepalm).  Added certificate and this appears to have resolved my problem.  I am guessing that WSUS was rejecting the packages because they weren't signed by a trusted publisher (yes, thank you ahead of time for the captain obvious award).   I will post back with any further issues.  Interesting thing is that the Id field still shows up orange...<br />\n",
+    "PostedDate": "2013-09-26T08:46:30.593-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:04:27.133-07:00"
+  },
+  {
+    "Id": "1099791",
+    "ThreadId": "459352",
+    "Html": "<blockquote>\nI am guessing that WSUS was rejecting the packages because they weren't signed by a trusted Publisher<br />\n</blockquote>\nThat's right. The wsus doesn't trust the file, even if it came from his upstream server, so it reject it.<br />\n<blockquote>\nInteresting thing is that the Id field still shows up orange...<br />\n</blockquote>\nThis is a normal situation. Replica servers doesn't fill the &quot;UpdateServicesPackages&quot; folder. Only Upstream servers does it. This is why the field is in Orange and not Red. The situation can be normal.<br />\n",
+    "PostedDate": "2013-09-26T11:51:08.547-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1099803",
+    "ThreadId": "459352",
+    "Html": "That makes sense, thanks for the clarification.  We are deploying 13 remote branch replica servers so this should be interesting.  <br />\n",
+    "PostedDate": "2013-09-26T12:07:58.413-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1305953",
+    "ThreadId": "459352",
+    "Html": "Hello,\r<br />\n<br />\ni have the same kind of setup..\r<br />\nMy upstream server will download the patches from MS ad i will push it to the downstream servers.. its working fine.\r<br />\nI have one upstream and two down stream servers. Three are cross domain servers.\r<br />\nI have installed the WPP on upstream and open install the certificate on one of the downstream server.\r<br />\nAnd pushed it via gpo to the respective clients. I am able to detect the clients. But package showing as unknown.\r<br />\nI dont know What to check where to check.\r<br />\nplease help me.\r<br />\n<br />\nthanks,\r<br />\nNaresh<br />\n",
+    "PostedDate": "2014-09-18T07:42:33.033-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306003",
+    "ThreadId": "459352",
+    "Html": "\r\n<div>\r\n<p>Have you made certain that you installed the certificate on the downstream servers?</p>\r\n</div>\r\n",
+    "PostedDate": "2014-09-18T09:57:09.877-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306022",
+    "ThreadId": "459352",
+    "Html": "Yes, i have installed the same certificate on downstream server and clients as well.<br />\n<br />\nNow package status has changed form &quot;unknown&quot; to &quot;not installed&quot;<br />\n",
+    "PostedDate": "2014-09-18T10:40:38.323-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306028",
+    "ThreadId": "459352",
+    "Html": "\r\n<div>\r\n<p>What version of Windows Server are you running?</p>\r\n<p>Is your downstream server working for MS updates?</p>\r\n<p>Have you set the downstream server as a replica server in WSUS role configuration?</p>\r\n<p>You did not mention whether you installed WPP on the downstream servers.</p>\r\n<p></p>\r\n</div>\r\n",
+    "PostedDate": "2014-09-18T11:10:19.787-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306036",
+    "ThreadId": "459352",
+    "Html": "Windows Server 2008\r<br />\nYes, its working fine for MS updates\r<br />\nYes, thats why it is getting updates (i am not sure)\r<br />\nno, i haven't installed the WPP on downstream servers.  i think its not required <br />\n",
+    "PostedDate": "2014-09-18T11:21:51.653-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306038",
+    "ThreadId": "459352",
+    "Html": "\r\n<div>\r\n<p>I would have to reference the documentation to be certain but actually I am pretty sure WPP is required on the downstream client, this may be your problem.\r\n</p>\r\n<p>At least that is how I have it working anyway.</p>\r\n<p></p>\r\n</div>\r\n",
+    "PostedDate": "2014-09-18T11:25:01-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306039",
+    "ThreadId": "459352",
+    "Html": "\r\n<div>\r\n<p>When I said “downstream client” I meant downstream server. </p>\r\n</div>\r\n",
+    "PostedDate": "2014-09-18T11:25:59.907-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306040",
+    "ThreadId": "459352",
+    "Html": "i dont think so... if it is the case, did you installed on all 13 servers ?<br />\n",
+    "PostedDate": "2014-09-18T11:28:51.88-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306041",
+    "ThreadId": "459352",
+    "Html": "\r\n<div>\r\n<p>Yes, it is installed on all 13 of our downstream replica servers and working flawlessly.\r\n</p>\r\n<p></p>\r\n<p></p>\r\n<p></p>\r\n</div>\r\n",
+    "PostedDate": "2014-09-18T11:32:09.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306042",
+    "ThreadId": "459352",
+    "Html": "And are you creating the package on all the servers or only on upstream server ?<br />\n",
+    "PostedDate": "2014-09-18T11:34:34.247-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306043",
+    "ThreadId": "459352",
+    "Html": "\r\n<div>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Also make sure your certificate is installed in the “computer” store and not under “user” certificate store.\r\n</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<p><b><u><span style=\"font-size:18.0pt; font-family:\"></span></u></b><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n</div>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<div style=\"border:none; border-top:solid #B5C4DF 1.0pt; padding:3.0pt 0in 0in 0in\">\r\n<p><b><span style=\"font-size:10.0pt; font-family:\"></span></b></p>\r\n</div>\r\n</div>\r\n</div>\r\n",
+    "PostedDate": "2014-09-18T11:34:59.73-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306044",
+    "ThreadId": "459352",
+    "Html": "\r\n<div>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Packages are created only on the upstream server and then they replicate to the others after synchronization just like WSUS updates do.\r\n</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<p><b><u><span style=\"font-size:18.0pt; font-family:\"></span></u></b><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n</div>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<div style=\"border:none; border-top:solid #B5C4DF 1.0pt; padding:3.0pt 0in 0in 0in\">\r\n<p><b><span style=\"font-size:10.0pt; font-family:\"></span></b></p>\r\n</div>\r\n</div>\r\n</div>\r\n",
+    "PostedDate": "2014-09-18T11:36:40.613-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306045",
+    "ThreadId": "459352",
+    "Html": "Yes certificate is under computer store only both in root and publisher<br />\n",
+    "PostedDate": "2014-09-18T11:37:04.453-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306046",
+    "ThreadId": "459352",
+    "Html": "But this WPP is like a portable software, how can it run as a service ?<br />\n",
+    "PostedDate": "2014-09-18T11:38:05.767-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306048",
+    "ThreadId": "459352",
+    "Html": "\r\n<div>\r\n<p><span style=\"font-size:11.0pt; font-family:\">It doesn’t, it simply puts packages in the WSUS content folder and utilizes it’s service. I’m not sure of the technical details but I believe that is how it works. I also ran into a problem with UAC so be sure\r\n you are running WPP as administrator to avoid problems by right-clicking and selecting run-as administrator.\r\n</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<p><b><u><span style=\"font-size:18.0pt; font-family:\"></span></u></b><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n</div>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<div style=\"border:none; border-top:solid #B5C4DF 1.0pt; padding:3.0pt 0in 0in 0in\">\r\n<p><b><span style=\"font-size:10.0pt; font-family:\"></span></b></p>\r\n</div>\r\n</div>\r\n</div>\r\n",
+    "PostedDate": "2014-09-18T11:41:29.697-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306050",
+    "ThreadId": "459352",
+    "Html": "\r\n<div>\r\n<p><span style=\"font-size:11.0pt; font-family:\">We can agree to disagree but I would suggest simply trying to install WPP on one of your downstream servers just to eliminate it as the possible culprit. It is entirely possible that it is not necessary but I\r\n am just going on the way I have it setup and working for almost a year now on 14 servers.\r\n</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<p><b><u><span style=\"font-size:18.0pt; font-family:\"></span></u></b><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n</div>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<div style=\"border:none; border-top:solid #B5C4DF 1.0pt; padding:3.0pt 0in 0in 0in\">\r\n<p><b><span style=\"font-size:10.0pt; font-family:\"></span></b></p>\r\n</div>\r\n</div>\r\n</div>\r\n",
+    "PostedDate": "2014-09-18T11:44:49.737-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306051",
+    "ThreadId": "459352",
+    "Html": "Oh ok, i  am the domain administrator.. \r<br />\nAnd when you installed the WPP on downstream servers, while connecting the servers which option did you select &gt;\r<br />\nLocal or Remote?  I mean downstream or upstream<br />\n",
+    "PostedDate": "2014-09-18T11:45:53.06-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306052",
+    "ThreadId": "459352",
+    "Html": "Oh dont get angry boss.. sure i will give it a try<br />\n",
+    "PostedDate": "2014-09-18T11:46:58.03-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306054",
+    "ThreadId": "459352",
+    "Html": "\r\n<div>\r\n<p><span style=\"font-size:11.0pt; font-family:\">I understand you are probably logged in as an administrator but contingent on your UAC settings you may need to actually use the “run-as” feature to launch the program as administrator.\r\n</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">The downstream servers are set to local in the WPP settings if that is what you are referring to.\r\n</span></p>\r\n<div>\r\n<p><b><u><span style=\"font-size:18.0pt; font-family:\"></span></u></b><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n</div>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<div style=\"border:none; border-top:solid #B5C4DF 1.0pt; padding:3.0pt 0in 0in 0in\">\r\n<p><b><span style=\"font-size:10.0pt; font-family:\"></span></b></p>\r\n</div>\r\n</div>\r\n</div>\r\n",
+    "PostedDate": "2014-09-18T11:52:23.557-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306055",
+    "ThreadId": "459352",
+    "Html": "\r\n<div>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Not getting angry, just want to be sure we don’t miss something simple to expedite the resolution of your problem.</span></p>\r\n<div>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n</div>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<div style=\"border:none; border-top:solid #B5C4DF 1.0pt; padding:3.0pt 0in 0in 0in\">\r\n<p><b><span style=\"font-size:10.0pt; font-family:\"></span></b></p>\r\n</div>\r\n</div>\r\n</div>\r\n",
+    "PostedDate": "2014-09-18T11:53:19.717-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306058",
+    "ThreadId": "459352",
+    "Html": "For example A is my Upstream and B is my downstream.\r<br />\nCurrently i am running WPP on A as local means &quot;A&quot;\r<br />\nSo, you are saying that i should run on downstream server as &quot;B&quot;\r<br />\nThen it will be run as local, how the application will contact A, using certificate ?<br />\n",
+    "PostedDate": "2014-09-18T11:56:53.213-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306060",
+    "ThreadId": "459352",
+    "Html": "It is set to local on both servers, WSUS takes care of the rest since the downstream server is a replica server. <br />\n",
+    "PostedDate": "2014-09-18T12:01:39.82-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306062",
+    "ThreadId": "459352",
+    "Html": "Sorry boss, i am not able to view the images.\r<br />\n<br />\nI tried in different browsers<br />\n",
+    "PostedDate": "2014-09-18T12:04:43.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306068",
+    "ThreadId": "459352",
+    "Html": "Can you send those screen shots to my email ?\r<br />\n<a href=\"mailto:naresh_raks@yahoo.co.in\" rel=\"nofollow\">naresh_raks@yahoo.co.in</a><br />\n",
+    "PostedDate": "2014-09-18T12:16:37.113-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306082",
+    "ThreadId": "459352",
+    "Html": "Thanks, got the images..<br />\n",
+    "PostedDate": "2014-09-18T12:45:44.277-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306093",
+    "ThreadId": "459352",
+    "Html": "Hi, no need to install WPP on all downstream servers. As all your downstream servers are replica, you can't publish update onto a replica, so no need WPP on downstream. You can even install WPP on a Workstation and manage your Wsus from that computer (Wsus console need to be installed first).<br />\n",
+    "PostedDate": "2014-09-18T13:16:55.53-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306096",
+    "ThreadId": "459352",
+    "Html": "Thanks DCourtel for clearing that up as I was not sure but didn't want to overlook anything.  I guess the only reason we installed it on the downstream servers was to check the status of 3rd party updates without having to synchronize (we are limited on bandwidth between our sites). <br />\n",
+    "PostedDate": "2014-09-18T13:18:03.37-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306101",
+    "ThreadId": "459352",
+    "Html": "if i install WSS on workstation, do i need to all wsus servers in WPP console or only upstream is fine ?<br />\n<br />\nAnd do i need to generate the certificate again ?<br />\nBecause i already pushed this certificate to all the clients :(<br />\n",
+    "PostedDate": "2014-09-18T13:39:32.747-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306225",
+    "ThreadId": "459352",
+    "Html": "Hi Adorr,<br />\n<br />\nas you suggest i am running WPP on downstream as well.<br />\nbut on downstream server the package is showing in red color ?<br />\nis there is any fault ? <br />\n<br />\nAnd i am able to detect the client on upstream. But when i pass the &quot;detect now&quot; command on downstream its giving error :(<br />\n",
+    "PostedDate": "2014-09-19T01:36:30.787-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306332",
+    "ThreadId": "459352",
+    "Html": "According to DCourtel you were correct that WPP is not required on the downstream server so that is apparently unrelated, regardless I find it useful in troubleshooting for scenarios such as the one you have now.  I have encountered exactly what you are describing and it was a certificate issue.  For sake of posterity I would export the certificate from the functional upstream server and reimport that certificate file into the  downstream servers computer Trusted Root Certification Authorities certificates folder and Trusted Publishers certificates folder.  When I encountered this problem I was certain I had imported the same certificate but when I did it the aforementioned way it solved my problem and I felt a little silly afterword.  <br />\n",
+    "PostedDate": "2014-09-19T06:19:28.953-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306347",
+    "ThreadId": "459352",
+    "Html": "I have the same certificate on both servers and on client as well.\r<br />\nAny how i will re-import the certificate on downstream server and let you know.<br />\n",
+    "PostedDate": "2014-09-19T07:02:05.383-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306349",
+    "ThreadId": "459352",
+    "Html": "I believe you 100%, I compared the certificates prior to reimporting them in my installation and everything looked the same but for some reason reimporting them did the trick for me.  Doesn't hurt to give it a shot just be sure to export a new one from the functional upstream server and not simply reimport the old one.  <br />\n",
+    "PostedDate": "2014-09-19T07:04:40.59-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306355",
+    "ThreadId": "459352",
+    "Html": "Which certificate should i export?\r<br />\nRoot or publisher or wsus\r<br />\nI believe all are same, but i just want to conform<br />\n",
+    "PostedDate": "2014-09-19T07:08:19.407-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306361",
+    "ThreadId": "459352",
+    "Html": "It should not matter because they are all the same (or should be anyway).<br />\n",
+    "PostedDate": "2014-09-19T07:17:04.933-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306368",
+    "ThreadId": "459352",
+    "Html": "No Luck.\r<br />\nIts still the same :(<br />\n",
+    "PostedDate": "2014-09-19T07:31:22.063-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306369",
+    "ThreadId": "459352",
+    "Html": "Hmmm, did you force a WSUS synchronization and reconnect with WPP on the downstream server?<br />\n",
+    "PostedDate": "2014-09-19T07:34:32.287-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306375",
+    "ThreadId": "459352",
+    "Html": "yes, i did that<br />\n",
+    "PostedDate": "2014-09-19T07:40:47.543-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306378",
+    "ThreadId": "459352",
+    "Html": "Have you been through your event logs to see if anything stands out after you synchronize?<br />\n",
+    "PostedDate": "2014-09-19T07:47:58.54-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306384",
+    "ThreadId": "459352",
+    "Html": "Can you tell me the location of the log file<br />\n",
+    "PostedDate": "2014-09-19T08:00:31.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306394",
+    "ThreadId": "459352",
+    "Html": "Start -&gt; Administrative Tools -&gt; Event Viewer and search for Windows Server Update Services in the Application log.  See if you find any errors.  <br />\n",
+    "PostedDate": "2014-09-19T08:18:04.397-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306397",
+    "ThreadId": "459352",
+    "Html": "No boss,\r<br />\ni couldn't find anything :(<br />\n",
+    "PostedDate": "2014-09-19T08:25:04.4-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306400",
+    "ThreadId": "459352",
+    "Html": "I sent you a message to your e-mail.  <br />\n",
+    "PostedDate": "2014-09-19T08:37:20.757-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306414",
+    "ThreadId": "459352",
+    "Html": "Thanks a lot Adorr for all your support :)<br />\n",
+    "PostedDate": "2014-09-19T10:00:30.223-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1306434",
+    "ThreadId": "459352",
+    "Html": "My pleasure, and just for anyone else encountering similar problems it ended up being resolved after finding the certificate was under the User certificates rather then Computer certificates and the WSUS server was set to a different port then the default port 80 that can be configured under the WPP settings.  Changed the certificate location and port in WPP and clients were able to pull 3rd party updates. <br />\n",
+    "PostedDate": "2014-09-19T11:07:58.64-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-22T13:50:41.997-07:00"
+  },
+  {
+    "Id": "1326838",
+    "ThreadId": "459352",
+    "Html": "Hi Adorr,<br />\n<br />\nAgain i am getting the same issue :(<br />\nIt worked fine till last month..  i haven't changed any settings.. Ports , certificate is fine.. but sill on the client side the package showing in red color.<br />\nWhat could be the issue.. i have created the package in 25th, i should reach the down stream servers on 26th(as per schedule).<br />\nArrival  date, created date showing properly.. i tried revise the package.. but no luck... what could be the issue :(<br />\n<br />\nThanks,<br />\nNaresh<br />\n",
+    "PostedDate": "2014-11-27T10:05:32.903-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1327684",
+    "ThreadId": "459352",
+    "Html": "Hello Naresh, I was out of the office last week so I apologize for the delay.  I have a couple questions regarding your problem; is it the Folder field that is showing up red on the replica server?  If you browse to the path in the WSUS content store does the .cab file exist there?  Is this a new replica server where this is occurring or all replica servers?\r<br />\n<br />\nWhen I encountered this it definitely did end up being a certificate issue.  I would check the Windows Event Viewer Application log and filter the view by Windows Server Update Services source on the replica server after performing a synchronization to see if you are getting any errors as a start.<br />\nPlease let me know what you find.  Also, reference my last post above to be sure server port and certificate is in right location if it is a new replica server.  <br />\n",
+    "PostedDate": "2014-12-01T06:14:55.56-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

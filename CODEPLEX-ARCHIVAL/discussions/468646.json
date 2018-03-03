@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1123323",
+    "ThreadId": "468646",
+    "Html": "Hi! \r<br />\n<br />\nI have a short question: What does &quot;Make imported updates language-Independent&quot; mean? \r<br />\n<br />\nI want to import updates from Adobe Reader 11 catalog. We are using a German Windows 7 with German Adobe Reader 11. \r<br />\n<br />\nbest regards<br />\n",
+    "PostedDate": "2013-11-13T23:22:57.1-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1123368",
+    "ThreadId": "468646",
+    "Html": "Hi,\r<br />\n<br />\nsome catalogs (Dell f.i.) are designed for English language updates only. But if your WSUS is configured to only have German Language Updates, you can't publish and/or deploy &quot;English&quot; Updates. So this checkbox just does, as it says, it removes the assigned language from the catalog updates. I usually have it checked.\r<br />\n<br />\nHTH\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-11-14T02:25:28.43-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T07:59:15.467-08:00"
+  }
+]

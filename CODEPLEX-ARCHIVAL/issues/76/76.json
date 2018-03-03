@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Rules Update Wizard",
+      "DisplayName": "Rules Update Wizard"
+    },
+    "ClosedComment": "Refactor the UI",
+    "ClosedDate": "2013-06-25T13:21:37.64-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "When displaying IsInstalled or IsInstallable rules, the UI show vertical and horizontal scrollbars when not need.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1306.16",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-25T13:21:20.56-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "UI bug when displaying rules",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 76
+  },
+  "FileAttachments": [
+    {
+      "FileId": 696817,
+      "FileName": "UI bug Rules.png",
+      "DownloadUrl": ".\\696817"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Rearrange the displaying.",
+      "PostedDate": "2013-06-25T13:39:50.833-07:00",
+      "Id": 104108
+    }
+  ]
+}

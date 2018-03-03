@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Feature submitted to WPP V2.",
+    "ClosedDate": "2013-09-08T06:52:45.683-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Because the Reporting of Wsus Package Publisher is so much cooler than the Reporting of the normal WSUS-Console we would like to be able to also show the normal Microsoft WSUS Updates in Wsus Package Publisher. Probably lust a Checkbox under Tools > Settings > Updates.\r\n",
+    "LastUpdatedDate": "2013-09-08T06:53:22.467-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-09-06T01:17:05.04-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Postponed"
+    },
+    "Summary": "[Postponed] Option to show Microsoft Updates",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 104
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "> Probably lust a Checkbox under Tools > Settings > Updates\n\nI think it will be more complicated than this.",
+      "PostedDate": "2013-09-08T06:50:58.293-07:00",
+      "Id": 112789
+    }
+  ]
+}

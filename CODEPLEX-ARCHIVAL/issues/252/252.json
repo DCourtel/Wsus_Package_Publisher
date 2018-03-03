@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "File Update Wizard",
+      "DisplayName": "File Update Wizard"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-04-12T10:27:02.15-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When creating an update and adding folders, add the ability to add several folders at once.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.3.1411.09",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-03-01T12:46:11.247-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "Add the ability to add several folders",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 252
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

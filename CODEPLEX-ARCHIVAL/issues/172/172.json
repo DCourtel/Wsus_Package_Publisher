@@ -1,0 +1,101 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-01-21T08:05:36.407-08:00",
+    "CommentCount": 10,
+    "Custom": null,
+    "Description": "Hi Team,\r\n\r\nFirst I should say Thank you for this application. If we done with our testing then its going to help us a ton. But, unfortunately we are facing some issue during testing. Hope WSUS package publisher is just plug and play application and it doesn't require any installation except that whole folder content.\r\n\r\nEnvironment : Windows 2012 r2 server with WSUS package publisher.\r\n\r\nIssue 1: Custom updates disappeared when we reopen the WSUS package publisher. But, still we can see this update in WSUS console.\r\n\r\nIssue 2:  After approving this update to one of WSUS group. We tried to click install a updates on some servers. But no response ( That software is not getting installed.). \r\n\r\nQuery 1: Do we have any log file to see what are updates are created with this tool and installed on clients.\r\n\r\nRegards,\r\nD Ganesh\r\n+91 9884909084 \r\n\r\n",
+    "LastUpdatedDate": "2014-01-21T08:05:36.827-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-01-20T05:10:48.673-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "[Solved] Custom updates disappear when i reopen the WSUS package publisher",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 172
+  },
+  "FileAttachments": [
+    {
+      "FileId": 781252,
+      "FileName": "Errors.docx",
+      "DownloadUrl": ".\\781252"
+    },
+    {
+      "FileId": 781270,
+      "FileName": "Installation screenshot.JPG",
+      "DownloadUrl": ".\\781270"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Issue 1: Just tick the checkbox \"show locally published updates that are also visible....\" on the update tab under Settings.\n\nIssue 2: That could be anything. What update are you trying to deploy?\n\nRegards\nNorbert",
+      "PostedDate": "2014-01-20T05:40:17.6-08:00",
+      "Id": 130875
+    },
+    {
+      "Message": "I think attachment was missed p. please find the attachment",
+      "PostedDate": "2014-01-20T06:38:39.253-08:00",
+      "Id": 130883
+    },
+    {
+      "Message": "The attached document will give you a clear details about this issue.",
+      "PostedDate": "2014-01-20T06:39:31.297-08:00",
+      "Id": 130884
+    },
+    {
+      "Message": "Is this an .msi package? Is it possible to install it manually in silent mode without user interaction?\n\nRegards\nNorbert\n",
+      "PostedDate": "2014-01-20T07:10:46.883-08:00",
+      "Id": 130886
+    },
+    {
+      "Message": "Hi Norbert,\r\n\r\nYes I can able to install this product in quiet mode. Please find the attached screenshot.\r\n\r\nRegards,\r\nD Ganesh",
+      "PostedDate": "2014-01-20T08:03:57.447-08:00",
+      "Id": 130893
+    },
+    {
+      "Message": "Hi Ganesh,\n\n _Hope WSUS package publisher is just plug and play application and it doesn't require any installation except that whole folder content._\n\nThere is no instalaltion process, but some configurations are needed before you can use it. Especially for the certificate whom need to be deployed on clients computers (if you are using Active Directory, that's easy)\n\n_Issue 1: Custom updates disappeared when we reopen the WSUS package publisher. But, still we can see this update in WSUS console._ \n\nAs Norbert  said, \"Just tick the checkbox \"show locally published updates that are also visible....\" on the update tab under Settings.\"\n\n_After approving this update to one of WSUS group. We tried to click install a updates on some servers. But no response ( That software is not getting installed.)._ \n\nA lot of things can prevent an update to install on the client. Look into C:\\Windows\\WindowsUpdate.log for more informations on what's happen.\nIn the last screen capture, I can see an error message 80246007, which mean : \"The update has not been downloaded.\"\n\n_Do we have any log file to see what are updates are created with this tool and installed on clients._\n\nTo see what updates are created by the tool, look into %Temp%\\wpp-GUID.log. This file is the log file of WPP. It's deleted each time WPP start.\nTo see what updates are installed on clients computers, look into C:\\Windows\\WindowsUpdate.log. It's the log file of Windows Update Agent.",
+      "PostedDate": "2014-01-20T08:56:04.857-08:00",
+      "Id": 130899
+    },
+    {
+      "Message": "Yes you are  right... Its seems to download related issues.. Do we need to place custom updates in any specific location or it will copy wsus default location during custom update creation...\n",
+      "PostedDate": "2014-01-20T21:23:23.703-08:00",
+      "Id": 131013
+    },
+    {
+      "Message": "All Updates are published \"into\" the WSUS, so you don't need anything else.",
+      "PostedDate": "2014-01-21T00:17:13.15-08:00",
+      "Id": 131022
+    },
+    {
+      "Message": "Thank you Norbert & DCourtel . Issue is resolved. :) The command resolved this download issue \n\nnet stop wuauserv\ncd %systemroot%\\SoftwareDistribution \nren Download Download.old\nnet start wuauserv\nnet stop bits \nnet start bits\n\nRegards,\nD Ganesh",
+      "PostedDate": "2014-01-21T02:59:57.73-08:00",
+      "Id": 131029
+    },
+    {
+      "Message": "Thanks for the Feedback. :)\n\nRegards\nNorbert",
+      "PostedDate": "2014-01-21T06:12:33.207-08:00",
+      "Id": 131041
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1064368",
+    "ThreadId": "449027",
+    "Html": "I followed all instructions for installation and installed dot net 4.0 . i have my wsus on a server 2003 R2 64 bit . Installed  the Certs fine and i go threw the steps for creating a flash player update and publish then it gets to this screen which says &quot;Wsus Package Publisher cannot contain child element because parent element's content model is empty&quot; ive also uploaded a picture to the following link\r<br />\n<br />\n<a href=\"https://skydrive.live.com/redir?resid=2E92B80F31C901CB!136\" rel=\"nofollow\">https://skydrive.live.com/redir?resid=2E92B80F31C901CB!136</a><br />\n",
+    "PostedDate": "2013-07-03T21:11:45.847-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1064377",
+    "ThreadId": "449027",
+    "Html": "Hi Badassbaz, When this happen, go to 'Help' -&gt; 'Send Debug info' and click 'Yes' to send the file. I will analyse this.<br />\n",
+    "PostedDate": "2013-07-03T21:56:53.99-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1065300",
+    "ThreadId": "449027",
+    "Html": "Do you have found the time to sent me the debug file ? I didn't received any ?\r<br />\nI can't do much with only the screen capture. I need to look at the XML file.<br />\n",
+    "PostedDate": "2013-07-07T11:42:27.063-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1065414",
+    "ThreadId": "449027",
+    "Html": "did a debug thing today about 8 hours ago<br />\n",
+    "PostedDate": "2013-07-07T21:51:23.813-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1065417",
+    "ThreadId": "449027",
+    "Html": "ARHHHH sussed out what was wrong i needed a wsus update <a href=\"http://blogs.technet.com/b/sus/archive/2012/09/04/an-update-for-windows-server-update-services-3-0-service-pack-2-is-available-kb2734608.aspx\" rel=\"nofollow\">http://blogs.technet.com/b/sus/archive/2012/09/04/an-update-for-windows-server-update-services-3-0-service-pack-2-is-available-kb2734608.aspx</a>\r<br />\n<br />\nt<br />\n",
+    "PostedDate": "2013-07-07T22:11:47.32-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:32:15.207-07:00"
+  }
+]

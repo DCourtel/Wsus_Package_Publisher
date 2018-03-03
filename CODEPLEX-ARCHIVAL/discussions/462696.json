@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1109135",
+    "ThreadId": "462696",
+    "Html": "Hi,\r<br />\n<br />\nas far as i understand rules in WPP, it should be enough to create update packages with the default rule which checks the Product ID, if the update is installed? Is that correct?\r<br />\nIn my case i've downloaded Thunderbird.exe and create an msi file with the software  &quot;exetomsi&quot;.\r<br />\nThen i created an update Package without any rules and approved it to the testgroup which installed successful, but keeps showing up as an Update which wanted to be installed. \r<br />\n<br />\nWhere do i get this Product id on the client pc to change the wpp update isinstalled rule that it matches? I've doublechecked Adobe reader Product id from rule with package on the client which is in folder &quot;SoftwareDistribution&quot; but they doesn't match also.\r<br />\n<br />\nbye\r<br />\nHannes<br />\n",
+    "PostedDate": "2013-10-18T03:26:23.65-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1109226",
+    "ThreadId": "462696",
+    "Html": "Usually MSI files comes with predefined rules. So you can let Wsus 'auto-detect' if the package is applicable or already installed. EXE file don't have rules. So If you don't set rule in WPP, then Wsus clients doesn't know how to determine if the package is already installed.\r<br />\n<br />\nIn this case you should look for a 'Thunderbird' folder in the HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\r<br />\nTry to match a 'Display version' key or something like that.<br />\n",
+    "PostedDate": "2013-10-18T07:39:16.56-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1109232",
+    "ThreadId": "462696",
+    "Html": "Thanks for the tip. my thought was because of the product id or msi id which is present in isinstalled rule (like in all the other updates).  No possibility to check that on the client? Even if theres no input neccessary when creating the msi with mentioned software, shouldn't the msi or product id created by design? Which then in the second step i can check on the client.\r<br />\n<br />\nAnyway...maybe it's not a big deal to test it with a different rule. <br />\n",
+    "PostedDate": "2013-10-18T07:48:36.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1109240",
+    "ThreadId": "462696",
+    "Html": "Why don't you just use this .msi files?\r<br />\n<a href=\"http://www.frontmotion.com/Firefox/download_firefox.htm\" rel=\"nofollow\">http://www.frontmotion.com/Firefox/download_firefox.htm</a>\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-10-18T08:14:07.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1109244",
+    "ThreadId": "462696",
+    "Html": "Indeed i use Frontmotions version of firefox and it works like a charm. But here's the case Thunderbird and i couldn't find newest version as msi on the internet.<br />\n",
+    "PostedDate": "2013-10-18T08:20:36.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1109353",
+    "ThreadId": "462696",
+    "Html": "Oh sorry,  I mixed up Firefox and thunderbird. :(<br />\n",
+    "PostedDate": "2013-10-18T12:18:38.573-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:44:55.963-07:00"
+  }
+]

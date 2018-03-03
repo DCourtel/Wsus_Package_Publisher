@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1493809",
+    "ThreadId": "661810",
+    "Html": "Hi,\r<br />\n<br />\nafter using WPP via remote desktop directly on WSUS server for some years now, I tried now to use it on my local Windows 10 machine to manage/connect the WSUS server remote and no longer need to use remote desktop. I got it to run via SSL connection so I can see the manual created updates in the tree/list and also see the computers/groups etc..\r<br />\n<br />\nBut I cannot load the certificate to create/revise updates... When loading the certificate file (.pfx) by using the button &quot;Load a certificate&quot; I get the german message &quot;Zugriff verweigert&quot; (english translation: &quot;Access denied&quot;) although the program language is still set to &quot;English&quot;. So I suppose it's an system generated message by Windows itself. The file is accessibly and the entered password is correct (when entering a wrong password, another error message appears).\r<br />\n<br />\nThe used certificate is signed by own CA and works fine with WPP directly on local WSUS. The signing CA is also trusted on the Windows 10 machine.\r<br />\n<br />\nAny suggestions to solve that problem or how to Import the certificate in WPP? Is there any debug log for WPP?\r<br />\nWhere does WPP save the certificate? I could try to put it manually in the right location!\r<br />\n<br />\n<br />\nThanks,\r<br />\nOliver<br />\n",
+    "PostedDate": "2017-03-09T03:52:43.933-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

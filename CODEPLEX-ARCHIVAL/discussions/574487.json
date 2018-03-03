@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1330490",
+    "ThreadId": "574487",
+    "Html": "Dear Team,<br />\n<br />\nKindly suggest me on these issues,<br />\n<br />\n-&gt;. We have been recently started pushing Windows 8, 8.1 machines in production and WSUS package publisher is used to push custom updates, but updates are failing in Windows 8 whereas no issues in Windows 7 (running perfectly). Tried with clean, reset of updates folder and WU service and .NET Framework 3.5 installation but with no success.<br />\n<br />\nFYI: <br />\nServer OS: Windows Server 2008R2<br />\nWSUS Version: 3.2.7600.256<br />\n<br />\n-&gt;. Old published (inactive) updates are getting auto deleted<br />\n",
+    "PostedDate": "2014-12-10T01:30:34.083-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1330496",
+    "ThreadId": "574487",
+    "Html": "In WSUS-FAQ No. 44 <a href=\"http://wsus.de/faq\" rel=\"nofollow\">http://wsus.de/faq</a> you will see which updates for your WSUS you are missing:\r<br />\n<br />\nWSUS 3.0 (SP2) + KB2720211: \tBuild 3.2.7600.251\r<br />\nWSUS 3.0 (SP2) + KB2734608: \tBuild 3.2.7600.256\r<br />\nWSUS 3.0 (SP2) + KB2828185: \tBuild 3.2.7600.262\r<br />\nWSUS 3.0 (SP2) + KB2938066: \tBuild 3.2.7600.274\r<br />\n<br />\nPls install Updates your WSUS is missing, after this restart W8.1 Clients and try again. If it is failing again, post the last <strong>50</strong> Lines from the local %windir%\\WindowsUpdate.log.<br />\n",
+    "PostedDate": "2014-12-10T01:35:22.9-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1330762",
+    "ThreadId": "574487",
+    "Html": "Does it only occurs with Custom Update (regular update from WPP are working) ?\r<br />\nIf yes, it's probably because your clients are unable to run CustomUpdateEngine.exe (which is compile in .Net Framework 2.0)\r<br />\n<br />\nTry this :<br />\n<ul>\n<li>Open WPP</li>\n<li>Connect to your Wsus server</li>\n<li>Select a custom update</li>\n<li>On the information tab, click on the 'ID' link. This will open a explorer window</li>\n<li>Open the folder and search for CustomUpdateEngine.exe</li>\n<li>Copy it on an USB key</li>\n<li>On a Windows 8 client that have this problem, run the CustomUpdateEngine.exe and see what happen</li>\n</ul>\n",
+    "PostedDate": "2014-12-10T13:14:18.26-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1331238",
+    "ThreadId": "574487",
+    "Html": "Apologies for the delay in reply.\r<br />\n<br />\nAllow me some time to provide you with results after running CustomUpdateEngine.exe<br />\n",
+    "PostedDate": "2014-12-12T00:33:06.403-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

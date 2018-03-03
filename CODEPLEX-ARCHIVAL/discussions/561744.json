@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1291957",
+    "ThreadId": "561744",
+    "Html": "Hi, i have a question on Deploy Adobe reader. i found that the id in the information tag can not be click to open it . Any setting that i am wrong. Secondary, Dose any steps we need to take in order to upgrade the WPP from 1.3.1407.11 to 1.3.14.7.29 ??\r<br />\n<br />\nthanks  <br />\n",
+    "PostedDate": "2014-08-21T01:40:43.087-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1292175",
+    "ThreadId": "561744",
+    "Html": "Hi,<br />\n<blockquote>\ni found that the id in the information tag can not be click to open it <br />\n</blockquote>\nTry to clickon the link, then got to &quot;help&quot; -&gt; &quot;Send debug info...&quot; -&gt; clickon &quot;Show Informations...&quot; on the bottom left corner and send me the content of the file at <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a><br />\n<blockquote>\nDose any steps we need to take in order to upgrade <br />\n</blockquote>\nSimply overwrite old files with newest.<br />\n",
+    "PostedDate": "2014-08-21T10:46:28.75-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1292292",
+    "ThreadId": "561744",
+    "Html": "Hi, DCourtel\r<br />\n<br />\nWhen i send the content file to you. it reply that, the message size exceeds the databytes limit. \r<br />\nBut anyway , after upgrade the WPP from 1.3.1407.11 to 1.3.14.7.29. now the ID in the information tag resume normal.\r<br />\n<br />\ni have one more question. Since i have deploy the Adobe reader more than one time. \r<br />\nNow i found that in the updates tree list , i have more than on Adobe reader list.\r<br />\nfirst, in the top it showing &quot;Approved&quot;. and in the report tag All computer are located in &quot;Not Applicable&quot; status\r<br />\nSecond, in the top it showing &quot;Declined {Expired). and in the report tag all computer are located in &quot;Unknown&quot; status\r<br />\nthirty, in the top it showing &quot;Declined {Expired). and in the report tag all computer are located in &quot;Unknown&quot; status\r<br />\n<br />\nWhere the Flash Player in the top it showing &quot;Approved&quot;. and in the report tag All computer are located in &quot;Installed&quot; status\r<br />\n<br />\nThose correct setting ? If not how can i delete those fault setting?\r<br />\n<br />\nthanks<br />\n",
+    "PostedDate": "2014-08-21T19:34:18.56-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1292560",
+    "ThreadId": "561744",
+    "Html": "<blockquote>\nThose correct setting ?<br />\n</blockquote>\nI'm not sure to understand what you mean. Which 'setting' ?\r<br />\nYou have to approve udpates you want to deploy on your computers.<br />\n",
+    "PostedDate": "2014-08-22T12:46:47.88-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1292930",
+    "ThreadId": "561744",
+    "Html": "Hi, \r<br />\n<br />\nMy question is how to find those &quot;first, sencond , third&quot;  is the correct setting ? if i found one of the following setting is wrong , How can i deleted it?.\r<br />\n<br />\nthanks<br />\n",
+    "PostedDate": "2014-08-24T17:53:25.277-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1461695",
+    "ThreadId": "650826",
+    "Html": "Hallo zusammen,\r<br />\n<br />\nich habe aktuell ein Problem mit Java. \r<br />\nWenn ich Java auf bekanntem Wege als .msi extrahiere und dieses als Update veröffentliche, dann kann diese Update problemlos von jedem Client &quot;gefunden&quot; und installiert werden.\r<br />\n<br />\nNun das Problem. Ich wollte, um alte Java Versionen loszuwerden, alles mithilfe der Uninstall2Install Anleitung installieren.\r<br />\nDort wird dann allerdings als erstes die .exe aufgerufen. Seitdem ich das Ganze nun also wie unter <a href=\"http://www.wsus.de/uninstall2install\" rel=\"nofollow\">http://www.wsus.de/uninstall2install</a> umsetze, wird nun das Update nach Veröffentlichung nicht einmal vom Client als verfügbares Update gefunden.\r<br />\n<br />\nMeine Vermutung, dass dies an der .exe liegt kommt nun daher, dass ich zuvor schon einmal Versuche mit anderen Programmen und .exe Installationsdateien versucht habe, dies allerdings aufgrund derselben Problematik verworfen habe.\r<br />\n<br />\nHat jemand eine Idee oder kann mir vielleicht weiterhelfen?\r<br />\n<br />\nVielen Dank im Voraus.\r<br />\n<br />\nLG,\r<br />\nAlex<br />\n",
+    "PostedDate": "2016-02-02T06:45:51.32-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1461903",
+    "ThreadId": "650826",
+    "Html": "Ich kann dir versichern, es funktioniert mit meiner EXE ganz wunderbar. Du hast sicherlich nur die falsche ProduktID verwendet und möglicherweise in der zweiten Regel das NOT vergessen.\r<br />\n<br />\nBTW: Du solltest in der REG-Datei natürlich <strong>alle</strong> möglichen Uninstall Strings sammeln, nur so kannst Du sicher sein auch alle möglichen alten Versionen zu erwischen.<br />\n",
+    "PostedDate": "2016-02-04T03:55:39.13-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1461911",
+    "ThreadId": "650826",
+    "Html": "Hallo WinfriedSonntag,\r<br />\n<br />\nerst einmal vielen Dank für deine Antwort. Was ich mich dabei jetzt frage: <br />\n<ol>\n<li>\nsollte ich die falschen IDs angegeben haben oder einen Fehler bei den Regeln gemacht haben, kann dies denn dann auch der Grund dafür sein, dass das erst gar nicht als Update auftaucht?<br />\n</li>\n<li>\nRein vom Verständnis her bzgl. Regeln: Ist es wichtig ob ich die auf der ersten Seite bzw. in der ersten Regel angebe oder in der zweiten?<br />\n</li>\n</ol>\nVielen Dank für die Info.\r<br />\n<br />\nLG\r<br />\nAlex<br />\n",
+    "PostedDate": "2016-02-04T04:26:53.573-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1461947",
+    "ThreadId": "650826",
+    "Html": "Wenn du z.B. die ID für eine Version angegeben hast, die bereits auf den Clients installiert ist, fordert sie auch keine Client mehr an. Und ja, wenn Du bei den Regeln Fehler machst, fordern die Clients das Update nicht an.\r<br />\n<br />\nNimm den MSI-Produkt Code aus dem MSI das Du zur Verfügung stellen willst und geh exakt nach meiner Anleitung vor, schon klappt das ganz sicher. Du mußt natürlich die ID in beiden Regeln angeben, in der zweiten Regel mit NOT. Dann klappt es auch.<br />\n",
+    "PostedDate": "2016-02-04T06:43:36.053-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2016-02-05T00:38:58.63-08:00"
+  },
+  {
+    "Id": "1462100",
+    "ThreadId": "650826",
+    "Html": "Perfekt. Deine letzte Nachricht hat mich auf den richtigen Weg gebracht.\r<br />\n<br />\nVielen Dank für die Hilfe!<br />\n",
+    "PostedDate": "2016-02-05T00:38:37.46-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

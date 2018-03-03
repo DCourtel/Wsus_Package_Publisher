@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Rules Update Wizard",
+      "DisplayName": "Rules Update Wizard"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-10-10T12:08:10.107-07:00",
+    "CommentCount": 7,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI tried to use root\\cimv2\\Security\\MicrosoftVolumeEncryption but it wouldn't be found in WPP. Any tip, on how I can create an installable rule with this Namespace?\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1310.05",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-08T03:32:21.743-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "WMI Namespaces",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 129
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "WPP query the local computer to list WMI namespaces. May be this namespace is not declared on this computer.\nIf so, you can just copy/paste this namespace in the textbox.",
+      "PostedDate": "2013-10-09T10:33:24.22-07:00",
+      "Id": 117952
+    },
+    {
+      "Message": "If I copy it to the TextBox, it gets cut down to root\\cimv2\\Security maybe a bug?\n\nRegards\nNorbert",
+      "PostedDate": "2013-10-09T11:28:11.457-07:00",
+      "Id": 117963
+    },
+    {
+      "Message": "I don't have this behavior.\nDo you copy in the textbox (first window) or in the comboBox that list all namespaces (second window) ?",
+      "PostedDate": "2013-10-09T21:55:20.437-07:00",
+      "Id": 118016
+    },
+    {
+      "Message": "Thats possible, let me try.",
+      "PostedDate": "2013-10-10T04:46:53.16-07:00",
+      "Id": 118025
+    },
+    {
+      "Message": "OK, thats working. Issue can be closed.",
+      "PostedDate": "2013-10-10T08:36:28.817-07:00",
+      "Id": 118041
+    },
+    {
+      "Message": "I modify the behavior of the \"WMI namespaces\" window to copy the Text from the combobox to the TextBox if the user paste a unkown namespace.",
+      "PostedDate": "2013-10-10T12:07:28.343-07:00",
+      "Id": 118057
+    },
+    {
+      "Message": "Thanks.",
+      "PostedDate": "2013-10-10T13:44:06.923-07:00",
+      "Id": 118068
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-02-14T12:25:36.267-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "I'm experiencing issues deploying the Adobe Flash Player 32-bit/64-bit ActiveX 15.0.0.223 update via WSUS PP which I have imported from the Adobe catalog (AdobeFlashPlayerCatalog_SCUP.cab).  The update is presented to me via Windows Update console so detection logic is fine but it just fails to install with the generic Microsoft 8024200D Error code.  Funnily enough the Adobe Flash Player 32-bit/64-bit Plugin 15.0.0.223 is presented and installs fine on my client machines and earlier versions of the ActiveX component have installed without issue in the past.\r\n\r\nHas something changed with Flash Player ActiveX 15.0.0.223 component that I am struggling to understand which is preventing it's installation ?\r\n\r\nI'd appreciate any feedback or things to attempt to try and resolve.\r\n\r\nI can supply logs if necessary but to be honest they are not really telling me anything.\r\n\r\nThanks in advance.\r\n\r\nDave........",
+    "LastUpdatedDate": "2015-02-14T12:25:36.267-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-11-25T03:57:49.9-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Adobe Flash Player V15.0.0.223",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 236
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hello,\n\n> it just fails to install with the generic Microsoft 8024200D Error code.\n\nWhich mean : _The installer requires more data to be downloaded_\n\nIt's the first time I see this error code.\nMy may, try to delete this update and publish again.",
+      "PostedDate": "2014-11-25T10:04:49.127-08:00",
+      "Id": 166600
+    },
+    {
+      "Message": "I've deployed the update from the SCUP catalog here and I haven't seen this error (or any errors from this update, though my sample size is admittedly small, as many users' computers are turned off for vacation right now).\n\nI'm curious about whether this is a client issue or a one-off WPP issue.\n\nSo, before you delete the update, can you verify that the update can be installed from the package you have in WSUS?\n\nIn WPP, you can right click on the update, export it, and then extract the files on a test system and run the extracted file from an elevated SYSTEM context command line (since Windows Update runs in this context; you can use \"PSExec -i -s -d cmd.exe\" from SysInternals Suite to get a command line running as SYSTEM). I don't see any special flags in the metadata, so just running an msiexec.exe /qn /i [path-to-flash-msi] should be sufficient for testing here, though you can enable verbose logging for more info with a /L*v [path-to-log-file]\n\nFor taking a hammer to the windows update client components (if the install from the exported update works fine):\n\nYou can reset all of the Windows Updates components by following instructions in this article: http://support.microsoft.com/kb/971058\n\nI'd also check out whether BITS is properly patched on the systems with errors. See http://support.microsoft.com/kb/331716 for a list of BITS updates.\n",
+      "PostedDate": "2014-11-28T07:51:03.24-08:00",
+      "Id": 166825
+    }
+  ]
+}

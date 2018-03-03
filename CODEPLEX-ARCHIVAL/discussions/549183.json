@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1258127",
+    "ThreadId": "549183",
+    "Html": "Hi everybody,\r<br />\n<br />\nI need to issue a new certificate for the Package Publisher.\r<br />\nHow do I recertify all my updates? \r<br />\n<br />\nThanks\r<br />\nRobert<br />\n",
+    "PostedDate": "2014-06-19T23:06:12.487-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1258400",
+    "ThreadId": "549183",
+    "Html": "Select updates that needs to be re-sign, then right-click and choose 'Re-sign'<br />\n",
+    "PostedDate": "2014-06-20T13:01:04.567-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-01T00:59:29.143-07:00"
+  }
+]

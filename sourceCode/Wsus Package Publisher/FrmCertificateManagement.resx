@@ -1,0 +1,697 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;txtBxPassword.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>- Generate and use a self-signed certificate : </value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnOk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>284, 217</value>
+  </data>
+  <data name="&gt;&gt;btnGenerate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>332, 13</value>
+  </data>
+  <data name="&gt;&gt;btnOk.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnLoad.Text" xml:space="preserve">
+    <value>Load a certificate...</value>
+  </data>
+  <data name="&gt;&gt;btnGenerate.Name" xml:space="preserve">
+    <value>btnGenerate</value>
+  </data>
+  <data name="openFileDialog1.Filter" xml:space="preserve">
+    <value>pfx File|*.pfx</value>
+  </data>
+  <data name="btnGenerate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 23</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FrmCertificateManagement</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 109</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;btnGenerate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 13</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>Save the certificate..</value>
+  </data>
+  <data name="&gt;&gt;btnGenerate.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="txtBxPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;btnLoad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtBxPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog1.Name" xml:space="preserve">
+    <value>saveFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 172</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Italic</value>
+  </data>
+  <data name="btnLoad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 23</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 13</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>230, 167</value>
+  </data>
+  <data name="btnGenerate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>230, 32</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnGenerate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="saveFileDialog1.Filter" xml:space="preserve">
+    <value>cer File|*.cer</value>
+  </data>
+  <data name="btnLoad.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 87</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Password : </value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtBxPassword.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>- Save the certificate to a file : </value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnLoad.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnLoad.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="txtBxPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 127</value>
+  </data>
+  <data name="&gt;&gt;btnOk.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnOk.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;btnOk.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnLoad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>230, 82</value>
+  </data>
+  <data name="txtBxPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 20</value>
+  </data>
+  <data name="btnGenerate.Text" xml:space="preserve">
+    <value>Generate the certificate</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtBxPassword.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="btnOk.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAMAMDAAAAEAIACoJQAANgAAACAgAAABACAAqBAAAN4lAAAQEAAAAQAgAGgEAACGNgAAKAAAADAA
+        AABgAAAAAQAgAAAAAAAAJAAAEwsAABMLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAACAAAAAwAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAA
+        AAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAA
+        AAQAAAAEAAAABAAAAAQAAAAEAAAAAwAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAUAAAAQAAAAGgAAAB4AAAAfAAAAHwAAAB8AAAAfAAAAHwAAAB8AAAAfAAAAHwAA
+        AB8AAAAfAAAAHwAAAB8AAAAfAAAAHwAAAB8AAAAfAAAAHwAAAB8AAAAfAAAAHwAAAB8AAAD/AAAAHwAA
+        AB8AAAAfAAAA/wAAAB8AAAAfAAAAHwAAAB8AAAAeAAAAGgAAABAAAAAFAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAABAAAAAuAAAASAAAAFEAAABSAAAAUgAAAFIAAABSAAAAUgAA
+        AFIAAABSAAAAUgAAAFIAAABSAAAAUgAAAFIAAABSAAAAUgAAAFIAAABSAAAAUgAAAFIAAABSAAAAUgAA
+        AFIAAAD/AAAA/wAAAG4AAAD/AAAA/wAAAFIAAABSAAAAUgAAAFIAAABRAAAASAAAAC4AAAAQAAAAAgAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAH4AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/knCO/wAAAP9dR1r/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAA
+        AEgAAAAaAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP/CwsL/tbW1/7W1
+        tf+1tbX/tbW1/7W1tf+1tbX/tbW1/7W1tf+1tbX/tbW1/7W1tf+1tbX/tbW1/7W1tf+1tbX/tbW1/7W1
+        tf+1tbX/tbW1/7W1tf+1tbX/tbW1/7W1tf8AAAD/knCO/29VbP9vVWz/AAAA/7W1tf+1tbX/tbW1/5qa
+        mv+MjIz/AAAA/wAAAFEAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA
+        AP/a2tr/7e/v/+3u7v/s7u7/7O3t/+vt7f/r7Oz/6uzs/+rr6//p6+v/6erq/+jq6v/o6en/5+np/+fo
+        6P/m6Oj/5ufn/+Xn5//l5ub/5Obm/+Tl5f/j5eX/4+Tk/+Lk5P8AAAD/knCO/29VbP9vVWz/AAAA/9/h
+        4f/f4OD/3+Dg/9/g4P+ampr/AAAA/wAAAFIAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAABAAAAP//////7u/v/+7v7//t7u7/7e7u/+zt7f/s7e3/6+zs/+vs7P/q6+v/6uvr/+nq
+        6v/p6ur/6Onp/+fp6f/n6Oj/5ujo/+bn5//l5+f/5efn/+Tm5v/U19z/vcHM/+Hj4/8AAAD/jm2M/1tJ
+        Z/9lT2n/AAAA/+Di4v/f4eH/3+Hh/9/g4P+1tbX/AAAA/wAAAFIAAAAfAAAABAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP//////7/Dw/+7v7//u7+//7e7u/+3u7v/s7u7/7O3t/+vt
+        7f/r7Oz/6uzs/+rr6//p6+v/6erq/+jq6v/o6en/5+np/+fo6P/m6Oj/5ufn/+Pl5v+Pl7n/LTx5/0dT
+        hP8PFzn/Nj1x/zA8cP8cJlv/BgoX/97f4P/g4uL/3+Hh/9/h4f+1tbX/AAAA/wAAAFIAAAAfAAAABAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP//////8PHx/+/w8P/v8PD/7u/v/+7v
+        7//t7u7/7e7u/+zt7f/s7e3/6+zs/+vs7P/q6+v/6uvr/+nq6v/o6ur/6Onp/+fp6f/n6Oj/5ujo/9nb
+        4f9/irv/JjmH/xQmdf8aJXr/KDCG/zpDiP82Qnf/IyxW/7W6xf/h4+P/4OLi/+Di4v+1tbX/AAAA/wAA
+        AFIAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP//////8PHx//Dx
+        8f/v8PD/7/Dw/+7v7//u7+//7e7u/+3u7v/s7e3/7O3t/+vs7P/r7Oz/6uzs/+rr6//p6+v/6erq/+jq
+        6v/o6en/5+np/8bL2/9WZ7D/FyaW/wsYlf8PIY3/ECOB/w4dfv8fKIz/PUWL/ztFdv9zepb/lJmq/73B
+        x/+1tbX/AAAA/wAAAFIAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA
+        AP//////8fLy/8bHx/+MjIz/jIyM/4yMjP+MjIz/jIyM/4yMjP+MjIz/jIyM/4yMjP+MjIz/jIyM/4yM
+        jP+MjIz/jIyM/4yMjP+MjIz/jIyM/210kv8jM57/ECKj/xQtn/8TLJP/EiiK/xAlfv8PIXX/GCKD/ztC
+        iv8iLmH/ER1L/2lwhf+1tbX/AAAA/wAAAFIAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAABAAAAP//////8vPz/4yMjP//////////////////////////////////////////////
+        ///////////////////////////////////x8vj/lJ3F/yg4lf8PIaf/GDW1/xcyrP8VL6D/FCyW/xIp
+        iv8RJYH/DyF2/x0mi/81QHT/JC5X/6ist/+1tbX/AAAA/wAAAFIAAAAfAAAABAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP//////8/Pz/4yMjP//////zs7O/21tbf/j4+P/nJyc/8LC
+        wv+cnJz//////6ysrP+QkJD/kJCQ/8LCwv//////wsLC/8LCwv+lqr3/Rlij/xUnlP8ULbr/GTm//xg1
+        tv8WMqr/FS+g/xMslP8SKYv/ECV//w0cfv85QoP/NT5j/9ze3/+1tbX/AAAA/wAAAFIAAAAfAAAABAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP//////8/T0/4yMjP//////4+Pj/5CQ
+        kP/Ozs7/l5eX/+Pj4/+Xl5f//////6Wlpf/Ozs7/4+Pj/5ycnP/j4+P/wsLC//////+ussP/ZXW8/x8z
+        pf8XM8r/GzzM/xo5wv8YNrb/FzKt/xUvoP8ULJf/EimL/xAkg/8tN4n/Lztq/8/S2P+1tbX/AAAA/wAA
+        AFIAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP//////9PX1/4yM
+        jP//////////////////////////////////////////////////////////////////////////////
+        ///r7vn/ipnZ/yQ2qP8XM8v/HD/V/xs8zP8ZOcD/GDa2/xYyqv8VL6H/EyyV/w8hjv8kMof/Fyhq/36G
+        pP+1tbX/AAAA/wAAAFIAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA
+        AP//////9fb2/8jIyP+MjIz/jIyM/4yMjP+MjIz/jIyM/4yMjP+MjIz/jIyM/4yMjP+MjIz/jIyM/4yM
+        jP+MjIz/jIyM/4yMjP+Li4z/e4a2/ztOsP8TJrP/HUHd/x0/2P8bPMz/GjnD/xg2t/8XM63/FC2h/woY
+        l/8TJnz/EiJp/3d/oP+1tbX/AAAA/wAAAFIAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAABAAAAP//////9vb2//X29v/19fX/9PX1//T09P/f2tv/8/Pz//Lz8//y8vL/8fLy//Hx
+        8f/w8fH/7/Dw/+/w8P/u7+//7u/v/+3u7v/t7u7/ytDn/1xwwv8fMKL/EyzH/x1B3f8cP9b/GzzN/xk5
+        wf8YNrf/DyKk/w8glf8YK33/Hy5u/8bJ0/+1tbX/AAAA/wAAAFIAAAAfAAAABAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP//////9vf3//b29v/19vb/9fX1//T19f/g29z/8/T0//P0
+        9P/y8/P/8vPz//Hy8v/x8vL/8PHx//Dx8f/v8PD/7/Dw/+7v7//u7+//7e7u/6643/9kdsL/KDim/xMm
+        tP8XM8z/FzTM/xUuv/8SJbD/Gi2n/yQ7n/8sPYj/jJSz/+bo6P+1tbX/AAAA/wAAAFIAAAAfAAAABAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP//////9/j4//f39//29/f/4tvd/8Oz
+        tv/Rxcf/0MXH/+Da2//z9PT/8/Pz//Lz8//y8vL/8fLy//Dx8f/w8fH/7/Dw/+/w8P/u7+//7u/v/+bo
+        7P/GzOT/c4TK/0FUtv8hNa7/GTGz/x0ztf8xSLv/RFq9/0tftP91gbT/2dvh/+fp6f+1tbX/AAAA/wAA
+        AFIAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP//////+Pj4//f4
+        +P++vr7/s62u/7Otrv+qn6H/qp6g/7y9vf+8vLz/saus/7GrrP/y8/P/8vPz//Hy8v/x8vL/8PHx//Dx
+        8f/v8PD/7/Dw/+7v7//u7+//6Ont/8LK5f+NnNz/b4PW/4yb2f+Ypdz/mKXa/6Kt1v/m5+j/6Orq/+jp
+        6f+1tbX/AAAA/wAAAFIAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA
+        AP//////+fn5//j5+f/FtLf/xLS3//f39/+4paj/4tvd/66YnP/h29z/rpec/+Da2//z9PT/8vPz//Lz
+        8//x8vL/8fLy//Dx8f/w8fH/7/Dw/+/w8P/u7+//7u/v/+3u7v/p6+3/4uXr/+zt7f/r7Oz/5+jr/+fo
+        6v/q6+v/6evr/+nq6v+1tbX/AAAA/wAAAFIAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAABAAAAP//////+fr6//n5+f/Ftbj/+Pj4/6+Znf+vmJ3/4tzd/6+YnP/19vb/9fX1/9DF
+        x//09PT/8/T0//Pz8//y8/P/8vLy//Hy8v/x8vL/8PHx//Dx8f/v8PD/7/Dw/+7v7//u7+//7e7u/+3u
+        7v/s7e3/6+3t/+vs7P/q7Oz/6uvr/+nr6/+1tbX/AAAA/wAAAFIAAAAfAAAABAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP//////+vr6//r6+v/k3t//xbW4/8W1uP/4+Pj/9/j4//f3
+        9//29/f/9vb2//X29v/g29z/4Nvc//P09P/z9PT/8vPz//Lz8//x8vL/8fLy//Dx8f/w8fH/7/Dw/+/w
+        8P/u7+//7u/v/+3u7v/t7u7/7O3t/+zt7f/r7Oz/6+zs/+rr6/+1tbX/AAAA/wAAAFIAAAAfAAAABAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP//////+/v7//r7+//l3+D/5N/g//n5
+        +f/4+fn/+Pj4//f4+P/39/f/9vf3//b29v/19vb/9fX1/+Db3P/g2tv/8/T0//Pz8//y8/P/8vLy//Hy
+        8v/x8fH/8PHx//Dx8f/v8PD/7/Dw/+7v7//u7+//7e7u/+zu7v/s7e3/6+3t/+vs7P+1tbX/AAAA/wAA
+        AFIAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP///////Pz8//v7
+        +//7+/v/+vr6//r6+v/5+fn/+fn5//j4+P/4+Pj/9/f3//f39//29/f/9fb2//X29v/09fX/9PX1//P0
+        9P/z9PT/8vPz//Lz8//x8vL/8fLy//Dx8f/w8fH/7/Dw/+/w8P/u7+//7u/v/+3u7v/t7u7/7O3t/+zt
+        7f+1tbX/AAAA/wAAAFIAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA
+        AP///////P39//z8/P/7/Pz/+/v7//r7+//6+vr/+fr6//n5+f/4+fn/+Pj4//f4+P/39/f/9vf3//b2
+        9v/19vb/9fX1//T19f/09PT/8/T0//Pz8//y8/P/8vLy//Hy8v/x8fH/8PHx//Dw8P/v8PD/7u/v/+7v
+        7//t7+//7e7u/+zu7v+1tbX/AAAA/wAAAFIAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAABAAAAP///////f39//39/f/CwsL/wsLC/8HBwf/BwcH/wcHB/8HBwf/AwMD/wMDA//j4
+        +P/EtLf/uKWo/7ilqP+vmJz/uKSo/66YnP+3pKf/t6Sn//P09P+7vLz/uru7/7q7u/+6urr/urq6/7m6
+        uv+5urr/7/Dw/+/w8P/u7+//7u/v/+3u7v+1tbX/AAAA/wAAAFIAAAAfAAAABAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP///////v7+//39/f/9/f3//Pz8//z8/P/7/Pz/+/v7//r7
+        +//6+vr/+fr6//n5+f/4+fn/+Pj4//f4+P/39/f/9vf3//b29v/19vb/9fX1//T19f/09PT/8/T0//Pz
+        8//y8/P/8vLy//Hy8v/w8fH/8PHx/+/w8P/v8PD/7u/v/+7v7/+1tbX/AAAA/wAAAFIAAAAfAAAABAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP////////////7+/v/ExMT/w8PD/8PD
+        w//CwsL/wsLC/8HBwf/BwcH/wcHB/8DBwf/AwMD/v8DA/7+/v/++v7//vr6+/76+vv/29vb/9fb2//X1
+        9f/09fX/9PT0//P09P/z9PT/8vPz//Lz8//x8vL/8fLy//Dx8f/w8fH/7/Dw/+/w8P+1tbX/AAAA/wAA
+        AFIAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP//////////////
+        ///+/v7//v7+//39/f/9/f3//Pz8//z8/P/7+/v/+/v7//r7+//6+vr/+fr6//n5+f/4+fn/+Pj4//f4
+        +P/39/f/9vf3//b29v/19vb/9fX1//T19f/09PT/8/T0//Pz8//y8/P/8fLy//Hy8v/w8fH/8PHx/+/w
+        8P+1tbX/AAAA/wAAAFIAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA
+        AP/////////////////FxcX/xcXF/8TExP/ExMT/w8PD/8PDw//CwsL/wsLC/8HBwf/BwcH/wcHB/8DB
+        wf/AwMD/v8DA/7+/v/++v7//vr6+/76+vv++vr7/vb6+/729vf+8vb3/vLy8/7u8vP+7u7v/uru7//Lz
+        8//x8vL/8fLy//Dx8f+1tbX/AAAA/wAAAFIAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAABAAAAP/////////////////////////////////+/v7//v7+//39/f/9/f3//Pz8//z8
+        /P/7+/v/+/v7//r6+v/6+vr/+fn5//n5+f/4+fn/+Pj4//f4+P/39/f/9vf3//b29v/19vb/9fX1//T1
+        9f/z9PT/8/T0//Lz8//y8/P/8fLy//Hy8v+1tbX/AAAA/wAAAFIAAAAfAAAABAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP////////////////////////////////////////////7+
+        /v/+/v7//f39//z9/f/8/Pz/+/z8//v7+//6+/v/+vr6//n6+v/5+fn/+Pn5//j4+P/3+Pj/9/f3//b3
+        9//29vb/9fb2//X19f/09fX/9PT0//P09P/z8/P/8vPz//Ly8v+1tbX/AAAA/wAAAFIAAAAfAAAABAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP//////////////////////////////
+        ///////////////////+/v7//v7+//39/f/9/f3//Pz8//z8/P/7+/v/+/v7//r6+v/6+vr/+fn5//n5
+        +f/4+Pj/+Pj4//f4+P/39/f/9vf3//b29v/19vb/9PX1//T19f/z9PT/8/T0//Lz8/+1tbX/AAAA/wAA
+        AFIAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP//////////////
+        //////////////////////////////////////////////7+/v/9/v7//f39//z9/f/8/Pz/+/z8//v7
+        +//6+/v/+vr6//n6+v/5+fn/+Pn5//j4+P/3+Pj/9/f3//b39//29vb/9fb2//X19f/09fX/9PT0//P0
+        9P+1tbX/AAAA/wAAAFIAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA
+        AP/////////////////////////////////+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//39
+        /f/8/Pz//Pz8//v8/P/7+/v/+/v7//v7+//7+/v/+vr6//n6+v/5+vr/+fn5//v7+//39/f/9/f3/+fn
+        5//Fxsb/yMnJ/7m6uv96enr/AAAA/wAAAFEAAAAfAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAABAAAAP////////////////////////////////////////////7+/v/+/v7//v7+//7+
+        /v/+/v7//v7+//7+/v/8/Pz//Pz8//z8/P/8/Pz//Pz8//z8/P/7/Pz/+/v7//v7+//6+vr/8vLy//Pz
+        8//AwMD/qqqq/5+goP+Kior/enp6/2xsbP9FRUX/AAAA/wAAAEoAAAAbAAAABAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP/////////////////FxcX/xcXF/8XFxf/FxcX/xcXF/8XF
+        xf/FxcX/xMTE/8TExP/ExMT/xMTE/8TExP/Dw8P//f39//39/f/8/f3//Pz8//z8/P/8/Pz//Pz8//z8
+        /P/7/Pz/8/T0/6urq/9RUVH/R0dH/0VGRv9GRkb/RkZG/1xdXf+pqan/AAAA/wAAADcAAAARAAAAAgAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP//////////////////////////////
+        ///////////////////////////////////+/v7//v7+//7+/v/+/v7//f39//39/f/9/f3//f39//39
+        /f/8/f3//Pz8//z8/P/8/Pz/9PT0/6ysrP/s7Oz/w8PD/8vLy/+4uLj/wsLC/8jJyf+oqKj/AAAAnAAA
+        AB8AAAAHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP//////////////
+        ///FxcX/xcXF/8XFxf/FxcX/xcXF/8XFxf/FxcX/xcXF/8XFxf/FxcX/xcXF/8TExP/ExMT//v7+//7+
+        /v/+/v7//f39//39/f/9/f3//f39//39/f/9/f3/9PX1/7W1tf//////+fn5//z8/P//////y8vL/6Wl
+        pf8AAAD/AAAAJgAAAAsAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA
+        AP//////////////////////////////////////////////////////////////////////////////
+        ///+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//39/f/9/f3/9vb2/7i4uP///////f39////
+        ///c3Nz/o6Sk/w4ODv8AAAAmAAAADAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAABAAAAP//////////////////////////////////////////////////////////////
+        ///////////////////+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7/9/f3/9LS
+        0v///////////+3t7f+urq7/BwcH/wAAACYAAAAMAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAP//////////////////////////////////////////////
+        ///////////////////////////////////+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+
+        /v/+/v7/9/f3/9fX1///////8fHx/7e3t/8AAAD/AAAAJgAAAAwAAAACAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAP//////////////////////////////
+        ///////////////////////////////////////////////////+/v7//v7+//7+/v/+/v7//v7+//7+
+        /v/+/v7//v7+//7+/v/+/v7/+/v7//b29v/t7e3/wMDA/wAAAP8AAAAmAAAADQAAAAIAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAP/a2tr/////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////9vb2/8/Pz/9wcHD/AAAA/wAAAB4AAAAMAAAAAgAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AHEAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/IiIi7B0dHa8AAABaAAAAGwAA
+        AAsAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAACAAAAAwAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAA
+        AAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAA
+        AAMAAAACAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP4AAAAAHwAA/AAAAAAPAAD4AAAAAAcAAPgAAAAABwAA+AAAAAAHAAD4AAAAAAcAAPgA
+        AAAABwAA+AAAAAAHAAD4AAAAAAcAAPgAAAAABwAA+AAAAAAHAAD4AAAAAAcAAPgAAAAABwAA+AAAAAAH
+        AAD4AAAAAAcAAPgAAAAABwAA+AAAAAAHAAD4AAAAAAcAAPgAAAAABwAA+AAAAAAHAAD4AAAAAAcAAPgA
+        AAAABwAA+AAAAAAHAAD4AAAAAAcAAPgAAAAABwAA+AAAAAAHAAD4AAAAAAcAAPgAAAAABwAA+AAAAAAH
+        AAD4AAAAAAcAAPgAAAAABwAA+AAAAAAHAAD4AAAAAAcAAPgAAAAABwAA+AAAAAAHAAD4AAAAAAcAAPgA
+        AAAABwAA+AAAAAAHAAD4AAAAAA8AAPgAAAAADwAA+AAAAAAfAAD4AAAAAD8AAPgAAAAAfwAA+AAAAAD/
+        AAD4AAAAAf8AAPwAAAAD/wAA/gAAAA//AAD///////8AACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAABML
+        AAATCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAkAAAANAAAADQAAAA0AAAANAAAADQAA
+        AA0AAAANAAAADQAAAA0AAAANAAAADQAAAA0AAAANAAAACwAAACwAAAAsAAAACgAAAD0AAAAXAAAADAAA
+        AA0AAAALAAAABQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAeAAAARAAAAFAAAABQAAAAUAAA
+        AFAAAABQAAAAUAAAAFAAAABQAAAAUAAAAFAAAABQAAAAUAAAAFAAAABMAAAAjwkHCcQGBQaCAwID1AAA
+        AGMAAABQAAAAUAAAAEMAAAAfAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADyIiIqxFRUXuQkJC8EJC
+        QvBCQkLwQkJC8EJCQvBCQkLwQkJC8EJCQvBCQkLwQkJC8EJCQvBCQkLwQkJC8ERERPAqKir1SzpJ/0Y2
+        RPslHiT/Ozs78UJCQvA4ODjwFhYWxgAAAEMAAAALAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaUlJS6drb
+        2//a29v/2tvb/9na2v/Z2tr/2NnZ/9jZ2f/X2Nj/19jY/9bX1//W19f/1dbW/9XW1v/U1dX/2dra/4uM
+        iv9bRVj/dlpz/zoxOf+7vbz/09PT/7m5uf84ODjxAAAAUQAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        ABphYGDo9fb2/+/w8P/u7+//7e/v/+3u7v/s7e3/6+zs/+rs7P/q6+v/6erq/+jp6f/n6en/5+np/9jb
+        4P+mrcP/bnOD/0Y8WP9TSG3/MC08/8rMzP/j5eX/0tPT/0JBQfAAAABRAAAADAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAGmJiYuj29/f/8PHx//Dx8f/w8fH/7/Dw/+7v7//t7+//7e7u/+zt7f/r7Oz/6uvr/+nr
+        6//p6+r/v8TW/0VUlf8cKnP/Iy12/y45ev8vN2D/tLjB/93f4P/R0tL/QkJC8AAAAFEAAAAMAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAaYmJi6Pb29v/b3Nz/y8zM/8vMzP/Ly8v/ysvL/8rKyv/Jysr/ycrK/8jJ
+        yf/Iycn/yMjI/8fIyP+LlLv/JTaf/w8hk/8SJYj/FiWB/yo0hP9NVob/bnWQ/6Wpsf9DQ0PwAAAAUQAA
+        AAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABpiYmLo7+/v/7q6uv/R0dH/zc3N/9DQ0P/Ozs7/0tLS/87O
+        zv/Ly8v/09PT/9PT0//Nzc7/l521/zVDm/8VLKz/FTCl/xMslf8RJoT/EyN+/yYwfv8uOGT/lpql/0RE
+        Q/AAAABRAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGmJiYujs7Oz/vr6+/+Dg4P+vr6//wMDA/7+/
+        v//b29v/vb29/7a2tv/S0tL/3t7d/87P1f9xfbX/GzCo/xc1wf8YNrb/FjGm/xMslf8QJob/GyqC/0NM
+        e/+8vsP/Q0ND8AAAAFEAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaYmJi6O3u7v+8vLz/6Ojo/9XV
+        1f/X19f/3Nzc/+Li4v/b29v/4+Pj/9ra2v/j4+P/4+To/46ZzP8lO7b/GTnP/xo7x/8YNrb/FjGm/xMr
+        lv8WJ4r/LDp7/5idrv9EREPwAAAAUQAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABpiYmLo9/f3/83N
+        zf+7vLz/urq6/7q5uf+8vLz/u7u7/7u7u/+6u7v/u7u7/7q6uv+5ubn/nKTD/ztNtf8YNMj/HD7W/xo7
+        yP8YNrf/Eyul/w8gjv8gMHf/k5is/0REQ/AAAABRAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGmJi
+        Yuj6+/v/9vf3//X19f/q6Oj/6+jp//Pz8//09fX/8vPz//Dx8f/w8fH/7/Dw/+/w7//g4+z/h5TO/zNG
+        tv8YMsT/FzTK/xUvu/8XLKv/IDSV/2Ftnv/Gyc3/Q0ND8AAAAFEAAAAMAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAaYmJi6Pz8/P/w8fD/19LT/8S5u//Gvb7/19XW/93c3P/j4uL/8vLy//Dx8f/w8fH/7/Dw/+7v
+        7//e4ev/pa7Y/19vxP87UMH/RVnD/1lrxP91g8D/xcnZ/9fY2P9CQkLwAAAAUQAAAAwAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAABpiYmLo/f7+/+Xh4v/Fu73/yL/A/8Cztf/Bt7n/wri6/9fS0//z9PT/8vPz//Hy
+        8v/w8fH/7/Dw/+/w8P/t7u//2t7q/8LK5f/L0eb/ztPm/9nc5v/r7Oz/2NnY/0JCQvAAAABRAAAADAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAGmJiYuj9/v7/6+bn/9fNz//Gtrn/29LU/9vT1P/v7e7/5eHi/+3s
+        7P/y8/P/8vPz//Hy8v/w8fH/8PHx/+/w8P/v8O//7/Dv/+/v7v/t7u3/7O3s/+vt7f/Y2dn/QkJC8AAA
+        AFEAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaYmJi6P7+/v/z8vL/4Nja/+zo6f/4+fn/9/j4//f3
+        9//z8/P/7evs/+nm5//v7+//8/Pz//Ly8v/x8vL/8PHx/+/w8P/v8PD/7u/v/+3u7v/s7e3/7e7u/9na
+        2v9CQkLwAAAAUQAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABpiYmLo/v7+//v7+//5+fn/+/v7//n5
+        +f/4+fn/+Pj4//f39//29/f/8/Pz//T09P/09fX/8/T0//Lz8//x8vL/8fHx//Dx8f/v8PD/7u/v/+3u
+        7v/u7+//2tvb/0JCQvAAAABRAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGmJiYuj/////8vLy/9zc
+        3P/c3Nz/29zc/9vb2//e3t7/7Onq/9fNz//TyMn/0sbI/9DFx//WzM7/5eXl/9PU1P/S09P/0tLS/9HS
+        0v/k5eX/7/Dw/+/w8P/a29v/QkJC8AAAAFEAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaYmJi6P//
+        ///09PT/4eHh/+Hh4f/g4OD/3+Dg/+Dg4P/i4uL/3dvc/9za2v/a2Nn/4d/f/+/u7v/y8vL/7e7u/+zt
+        7f/s7Oz/6+zs/+7v7//w8fH/8PHx/9vc3P9CQkLwAAAAUQAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        ABphYWHo//////X19f/i4uL/4uLi/+Hh4f/g4OD/4ODg/9/f3//e39//3t7e/93d3f/j5OT/8PDw/+/v
+        7//u7+//7u7u/+3t7f/s7e3/6+zs//Dx8f/x8vL/3N3d/0JCQvAAAABRAAAADAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAGmFhYej/////9PT0/9/f3//f39//3t7e/97e3v/d3d3/3Nzc/9zc3P/b29v/2tra/9nZ
+        2f/X2Nj/19fX/9bX1//W1tb/1dXV/9TU1P/W19f/7/Dw//L09P/d3d3/QkJC8AAAAFEAAAAMAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAaYWFh6P///////////////////////////v7+//39/f/8/f3//Pz8//v7
+        +//6+vr/+fr6//n5+f/4+Pj/9/f3//b39//29vb/9fX1//T19f/z9PT/8/T0/97e3v9CQkLwAAAAUQAA
+        AAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABphYWHo/////////////////////////////////v7+//39
+        /f/8/f3//Pz8//v7+//6+vr/+fr6//n5+f/4+Pj/9/j4//b39//29vb/9fb2//X19f/19vb/39/f/0JC
+        QvAAAABRAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGmFhYej/////////////////////////////
+        ///////////////////+/v7//Pz8//v7+//7+/v/+vv7//r6+v/5+fn/+Pn5//j4+P/y8vL/4eHh/9HS
+        0v+ys7P/MTEx8AAAAFAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaYWFh6P/////4+Pj/6urq/+vr
+        6//q6ur/6urq/+rq6v/q6ur/6urq/+np6f/19fX//f39//z8/P/8/Pz/+/z8//v7+//19fX/yMjI/5KS
+        kv+AgID/cHBw/2xtbf8oKCjvAAAARwAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABphYWHo//////X1
+        9f/j4+P/5OTk/+Tk5P/k5OT/4+Pj/+Pj4//j4+P/4uLi//T09P/+/v7//f39//z9/f/8/Pz//P39/+/w
+        8P+2trb/paWl/5ycnP+ZmZn/np6e/0ZGRsMAAAAnAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGmFh
+        Yej/////9PT0/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/f39//8/Pz//7+/v/+/v7//f39//39
+        /f/9/f3/8PDw/9XV1f/8/Pz/+Pj4/8vLy/9iYmLmEBAQVAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAaYWFh6P/////////////////////////////////////////////////////+/v7//v7+//7+
+        /v/+/v7//v7+//7+/v/z8/P/4ODg///////b29v/ZmZm6RISEloAAAAHAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAABpiYmLo////////////////////////////////////////////////////////
+        //////////////////////////////n5+f/t7e3/4uLi/2lpaeYKCgpaAAAABgAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAGFJSUuPb29v/4uLi/+Li4v/i4uL/4uLi/+Li4v/i4uL/4uLi/+Li
+        4v/i4uL/4uLi/+Li4v/i4uL/4uLi/+Li4v/i4uL/4eHh/7+/v/lgYGDhDQ0NWAAAAAcAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGEBAQaiIiIqckJCSnJCQkpyQkJKckJCSnJCQkpyQk
+        JKckJCSnJCQkpyQkJKckJCSnJCQkpyQkJKckJCSnJCQkpyQkJKc3NzeeNjY2bQEBATAAAAAGAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9PT0A4ODgAP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8ANDQ0AAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AAAA+AAAAPgAAAD4AAAA+AAAAPgAAAD4AAAA+AA
+        AAPgAAAD4AAAA+AAAAPgAAAD4AAAA+AAAAPgAAAD4AAAA+AAAAPgAAAD4AAAA+AAAAPgAAAD4AAAA+AA
+        AAPgAAAD4AAAA+AAAAPgAAAH4AAAD+AAAB/gAAA/4AAAf/////8oAAAAEAAAACAAAAABACAAAAAAAAAE
+        AAATCwAAEwsAAAAAAAAAAAAAAAAAAAAAAAMAAAArAAAAQwAAAEMAAABDAAAAQwAAAEMAAABDAAAARAsI
+        CnINCgx2AAAAUQAAADkAAAAPAAAAAAAAAAAAAAAXc3NzxZaWluyUlJTqk5OT6pKTk+qSkpLqkZKS6o2O
+        jupZT1j1STtI+H5/fu5aWlrTAAAAMwAAAAAAAAAAAgICHrS1teLy8/P/7e7u/+vt7f/q6+v/6Orq/+jp
+        6f+jqsX/QUZ4/0REbP++wcf/j4+Q7AAAADsAAAAAAAAAAAUFBR6vr6/i1dXV/83Ozv/Pz8//zMzM/9DR
+        0P+5u8b/RFOq/xEnlP8bLIL/VF2L/3ByeOwEAwI6AAAAAAAAAAAICAgeqqqq4tHR0f/Jycn/z8/P/8zM
+        zP/Y19b/o6nJ/yE7uv8XNbf/EiqW/zA+hv9rbnjsBQUCOgAAAAAAAAAAAwMDHrS0tOLi4uL/1NLT/9na
+        2v/a29v/2tra/8bJ1/9QY8b/GTfH/xYvr/8+TZr/cnV+7AMDADoAAAAAAAAAAAEBAR64uLji497f/8m/
+        wf/Tzc//6efo//Lz8//w8fH/z9Tl/4+b1/+Kl9P/vMLa/5KSkuwAAAA6AAAAAAAAAAABAQEeuLm54unk
+        5f/h2tv/6+jp/+7s7P/w8fH/8vPz//Lz8v/x8vH/7/Dv/+/w7/+TlJTsAAAAOgAAAAAAAAAAAAAAHrm5
+        ueL09PT/6+zs/+3t7f/r6en/49/g/+bj4//o6en/5OTk/+fo6P/w8fH/lJWV7AAAADoAAAAAAAAAAAAA
+        AB66urri7e3t/93d3f/d3d3/3Nvc/9jW1//j4eL/6erq/+bm5v/n6Oj/8fLy/5WVlewAAAA6AAAAAAAA
+        AAAAAAAeurq64vj4+P/w8PD/7u7u/+3t7f/s7Oz/6+vr/+rq6v/o6en/6Onp//T19f+Xl5fsAAAAOwAA
+        AAAAAAAAAAAAHrq6uuL///////////7+/v/9/f3//Pz8//v7+//6+vr/+Pn5/+/v7//f39//g4OD7AAA
+        ADoAAAAAAAAAAAAAAB66urri8vLy/+fn5//n5+f/5ubm/+7u7v/8/f3//P39//T09P+7u7v/mZmZ/2Ji
+        YtwAAAApAAAAAAAAAAAAAAAeurq64vr6+v/y8vL/8vLy//Ly8v/29vb////////////29vb/6urq/7i4
+        uPJSUlJrAAAABAAAAAAAAAAAAAAAHKWlpdzk5OT/4uLi/eLi4v3i4uL94uLi/eHh4f3h4eH94ODg/Lu7
+        u+dbW1tsAAAABQEBAQAAAAAAAAAAAAAAAAc/Pz9RU1NTaFJSUmdSUlJnUlJSZ1JSUmdSUlJnUlJSZ1pa
+        WmRJSUk6AAAABgAAAAAAAAAAAAAAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIAB
+        AACAAQAAgAEAAIABAACAAQAAgAMAAIAHAAA=
+</value>
+  </data>
+  <data name="&gt;&gt;txtBxPassword.Name" xml:space="preserve">
+    <value>txtBxPassword</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>You need to run WPP on the Wsus Server or use a SSL Connection.</value>
+  </data>
+  <data name="btnOk.Text" xml:space="preserve">
+    <value>&amp;Close</value>
+  </data>
+  <data name="btnGenerate.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnLoad.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 37</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Manage Certificate</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 13</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>- Use an existing certificate : </value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 13</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 130</value>
+  </data>
+  <data name="btnOk.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;btnLoad.Name" xml:space="preserve">
+    <value>btnLoad</value>
+  </data>
+  <data name="&gt;&gt;btnOk.Name" xml:space="preserve">
+    <value>btnOk</value>
+  </data>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 23</value>
+  </data>
+  <data name="&gt;&gt;txtBxPassword.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnSave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnLoad.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>373, 252</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
+    <value>openFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>157, 17</value>
+  </metadata>
+</root>

@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1324694",
+    "ThreadId": "572749",
+    "Html": "Hi,\r<br />\nwe have several PCś installed with Win7 and Office 2010 now we have the challange to update to Office 2013.\r<br />\n<br />\nIs that possible with WPP or do i need a other solution?\r<br />\n<br />\nThanks\r<br />\n<br />\nregards\r<br />\nCarsten<br />\n",
+    "PostedDate": "2014-11-21T05:08:30.163-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1324715",
+    "ThreadId": "572749",
+    "Html": "Yes, it is possible to publish Office 2013 within WPP to your clients.<br />\n<br />\nWhich exact Edition/Version you want to publish? Is it from a Volume License Contract?<br />\n",
+    "PostedDate": "2014-11-21T06:04:57.1-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-12-03T13:25:46.67-08:00"
+  },
+  {
+    "Id": "1324778",
+    "ThreadId": "572749",
+    "Html": "Hello, there is plenty Blog and HowTo describing this operation. I'm pretty much sure that Microsoft have publish an article on this.<br />\n",
+    "PostedDate": "2014-11-21T08:11:11.17-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1324786",
+    "ThreadId": "572749",
+    "Html": "Yes, there is a Video from Mark Heitbrink if he he is publishing a Office 2013 with WPP and WSUS to clients. <a href=\"http://www.youtube.com/watch?v=lPQlYw053CY\" rel=\"nofollow\">http://www.youtube.com/watch?v=lPQlYw053CY</a> Only in German Language. ;)<br />\n",
+    "PostedDate": "2014-11-21T08:20:01.353-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1324822",
+    "ThreadId": "572749",
+    "Html": "Cool ! I wasn't aware of this video.<br />\n",
+    "PostedDate": "2014-11-21T09:27:50.293-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

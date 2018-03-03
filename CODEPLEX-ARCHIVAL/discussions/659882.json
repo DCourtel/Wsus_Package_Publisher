@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1489154",
+    "ThreadId": "659882",
+    "Html": "Hi there,<br />\nI am using the frontmotion msi files for quite a while now together with WSUSPP. Never had a problem. To day I tried to deploy the latest (security relevant) update:<a href=\"http://www.frontmotion.com/news/firefox/releases/firefox-50-0-2/\" rel=\"nofollow\">http://www.frontmotion.com/news/firefox/releases/firefox-50-0-2/</a><br />\nBut it isn't detected at all by the clients. Everything else works fine with PP (other packages still are detected and installed).<br />\nSo I guess the problem may be on the side of the msi package.<br />\nI tried to loosen the installable / installed rules from the msi based rules to things like processor architecture or file version. This did not change anything.<br />\nThe clients just do not detect this update no matter what I do (revising/deleting and re-deploying/ re-downloading the msi/ you name it...).<br />\n<br />\nI tested the msi by manually installing it from the command line, which worked fine. So the msi is not totally broken.<br />\nSince there are no error messages, I can not do anything - can I?<br />\nHas anybody else possibly experienced this?<br />\n",
+    "PostedDate": "2016-12-02T07:54:02.32-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1489347",
+    "ThreadId": "659882",
+    "Html": "Guess what fixed this issue? You're right, restarting the WSUS did the trick. Should have tried that earlier :-)<br />\n",
+    "PostedDate": "2016-12-06T07:02:56.927-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

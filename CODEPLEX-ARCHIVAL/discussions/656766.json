@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1480037",
+    "ThreadId": "656766",
+    "Html": "Hi there! \r<br />\nI'm trying to install Greenshot by WPP, which works perfectly. The only thing I can't get to work is the following:\r<br />\n<br />\nOur users don't have local admin rights on the clients, so the updates are installed by another user in the background.\r<br />\nI have to delete a file under the %appdata% folder of the current user. I'd like to use the &quot;Allow to Copy, Delete or Rename Files&quot; action for this. The problem is, that if I run that it wouldn't delete the file in the direction of the current user, but in the one of the administrator.\r<br />\n<br />\nIs there any way to archive deleting of files in that directory by WPP?\r<br />\n<br />\nGreets.<br />\n",
+    "PostedDate": "2016-07-28T06:15:40.153-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1480088",
+    "ThreadId": "656766",
+    "Html": "The hard part is to get the current logon user. What happens if the update is installed when nobody is logon on (scheduled install or &quot;at shutdown&quot;) ?\r<br />\n<br />\nIf there is someone currently logged, you can try this <a href=\"https://blogs.msdn.microsoft.com/alejacma/2008/03/04/how-to-get-the-logged-on-user-with-wmi-vbscript/\" rel=\"nofollow\">VBScript</a>\r<br />\n<br />\nOnce you have the login of the user, you have to browse : HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList\r<br />\nand compare the content of the value : ProfileImagePath with the login of the current logon user. Once found, you have the &quot;Home Folder&quot; for this user.\r<br />\n<br />\nGood luck ! <br />\n",
+    "PostedDate": "2016-07-29T02:49:45.9-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

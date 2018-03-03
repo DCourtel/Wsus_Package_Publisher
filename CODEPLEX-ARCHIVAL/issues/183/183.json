@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-05-02T07:41:12.4-07:00",
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nour clients have only 8531 port (https) opened to wsus server. When custom update is published WPP automatically creates http://<server fqdn>:8530/Content... address for the update and update download fails with error code 80072EE2.\r\n\r\nIs there any way to modify custom update address to https and port 8531?\r\n\r\nRegars,\r\nAntti",
+    "LastUpdatedDate": "2014-05-02T07:41:12.4-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-03-20T04:38:35.08-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "WSUS on HTTPS only",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 183
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi, \n>  When custom update is published WPP automatically creates http://<server fqdn>:8530/Content... address \n\nWPP doesn't create any address. The address you can see beside the 'Folder' label, came from the Wsus API. This is what WSUS answer when WPP ask 'Where is the file for this Update ?'\nIf WPP show HTTP instead of HTTPS, this mean, you have a configuration problem into the Wsus server.\n\nDoes your clients computers successfully download Microsoft updates ?",
+      "PostedDate": "2014-03-20T14:09:36.003-07:00",
+      "Id": 137476
+    },
+    {
+      "Message": "> WPP doesn't create any address. The address you can see beside the 'Folder' label, came from the Wsus API. This is what WSUS answer when WPP ask 'Where is the file for this Update ?'\nIf WPP show HTTP instead of HTTPS, this mean, you have a configuration problem into the Wsus server.\n\n\nThanks for fast reply. Any pointers where I should look on WSUS to repair this?\n\n> Does your clients computers successfully download Microsoft updates ?\n\nYes, only updates published through WPP have problems to download.\n\n",
+      "PostedDate": "2014-03-20T23:56:53.173-07:00",
+      "Id": 137511
+    },
+    {
+      "Message": "We are using WSUS on SSL, Port 8531 and i deploy a lot of Applications in the last months. Never i had this problem",
+      "PostedDate": "2014-03-22T15:21:51.517-07:00",
+      "Id": 137655
+    },
+    {
+      "Message": "If clients computers can successfully install Microsoft updates, this mean they can download package from the Wsus server.\nCan you do that on a client computer :\n - Stop Windows update service.\n - Delete C:\\Windows\\WindowsUpdate.log\n - Start Windows update service.\n - Wait 1 minute\n - Launch this command : wuauclt /DetectNow\n - Wait 1 minutes\n - Send me the C:\\Windows\\WindowsUpdate.log to package.publisher@free.fr",
+      "PostedDate": "2014-03-27T09:54:55.71-07:00",
+      "Id": 139015
+    },
+    {
+      "Message": "I made a small HowTo for changing from HTTP to HTTPS. But in German. Maybe the Images can help you: http://www.wsus.de/ssl_kommunikation",
+      "PostedDate": "2014-03-27T10:57:23.29-07:00",
+      "Id": 139023
+    }
+  ]
+}

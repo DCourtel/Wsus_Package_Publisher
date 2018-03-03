@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1343624",
+    "ThreadId": "578178",
+    "Html": "Hello, <br />\nI have currently started having an issue with WPP. I go to create a Package and when I click on Publish I get &quot;CreateDirectory failed&quot; I am not sure what is going on. I have looked up online and do not see anything related to this issue except permissions to the temp folder which I have. It was working last week, but believe maybe some folders were deleted. WSUS is working fine. Any help would be appreciated. <br />\n<br />\nWPP Release: 1.3.1411.9<br />\n",
+    "PostedDate": "2015-01-20T13:21:25.01-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

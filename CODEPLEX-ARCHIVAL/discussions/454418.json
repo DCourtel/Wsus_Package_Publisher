@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1084440",
+    "ThreadId": "454418",
+    "Html": "Hi Guys,\r<br />\nhow can i add a file additional to a cab file? I've forget the mst file for the setup.\r<br />\n<br />\n<br />\nRegards,\r<br />\nDaniel<br />\n",
+    "PostedDate": "2013-08-24T05:18:13.36-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1084442",
+    "ThreadId": "454418",
+    "Html": "Hi, You cannot add a file to an already published update. You have to make a new update.<br />\n",
+    "PostedDate": "2013-08-24T05:26:04.46-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:18:50.067-07:00"
+  }
+]

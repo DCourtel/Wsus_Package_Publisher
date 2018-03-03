@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1320462",
+    "ThreadId": "571656",
+    "Html": "Hello\r<br />\n<br />\nI try to create a custom update and copy a configuration file (XML) to a subdir of the install directory. Is it only possible to make a local copy (C:\\Temp --&gt; C:\\Program Files (x86)\\$ProgramDir)?\r<br />\nI tried to include the XML-file in the update CAB, but where is this file temporarly extracted, so I can take the temp path as source path?\r<br />\n<br />\nIs there another way to include a XML-File in a custom update? I have no active Directory, so deploying this file via GPO is not possible.<br />\n",
+    "PostedDate": "2014-11-09T22:20:09.99-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1320803",
+    "ThreadId": "571656",
+    "Html": "Hello,\r<br />\nall additionnals files that you add to the main file are copiedin the same directory than the main file (CustomUpdateEngine.exe in this case).\r<br />\nSo, if you need to copy an additional file into another directory, just put the name of this file.\r<br />\nFor example:<br />\n<ul>\n<li>You want to copy Config.xml into C:\\Program Files\\Broadcom\\BACS</li>\n<li>\nIn the copy file wizard:\n<ul>\n<li>File field : Config.xml</li>\n<li>Destination field : C:\\Program Files\\Broadcom\\BACS\\Config.xml OR %ProgramFiles%\\Broadcom\\BACS\\Config.xml</li>\n</ul>\n</li>\n<li>\nIf you want to rename the file:<br />\n<ul>\n<li>\nDestination field : C:\\Program Files\\Broadcom\\BACS\\NewName.xml OR %ProgramFiles%\\Broadcom\\BACS\\NewName.xml<br />\n</li>\n</ul>\n</li>\n</ul>\nIf the destination folder doesn't exist, it will be created.<br />\n",
+    "PostedDate": "2014-11-11T01:11:38.357-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1321012",
+    "ThreadId": "571656",
+    "Html": "Hello\r<br />\n<br />\nThat's the way I tried first because I thought it should work this way. Maybe I made another mistake. Is there a difference if the file that should be copied exists in destination directory? Will it be overwritten or could this be the reason?<br />\n",
+    "PostedDate": "2014-11-11T11:08:43.223-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1321059",
+    "ThreadId": "571656",
+    "Html": "<blockquote>\nIs there a difference if the file that should be copied exists in destination directory? Will it be overwritten or could this be the reason?<br />\n</blockquote>\nYes, it's a problem. If the file already exists on the destination folder, the file is not overwritten. First, use a 'DeleteFile' action (if the file doesn't exists, nothing will happen) and then use a 'Copyfile' Action.\r<br />\n<br />\nN.B: Before release v1.3.1411.09, WPP doesn't properly deals with the environment variable %ProgramFiles(x86)%. So, if you have used this environment variable to create the Action : Download the latest release and re-create the Custom update.<br />\n",
+    "PostedDate": "2014-11-11T13:33:37.91-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-11-13T12:58:02.73-08:00"
+  },
+  {
+    "Id": "1321918",
+    "ThreadId": "571656",
+    "Html": "Hello\r<br />\n<br />\nThank you, deleting the original file before works. The software is deployed. :-)<br />\n",
+    "PostedDate": "2014-11-13T12:57:56.943-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

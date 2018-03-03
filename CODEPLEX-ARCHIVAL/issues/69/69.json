@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-19T13:41:35.533-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "WPP warn the user that he will not be able to publish updates because the Server vresion and the Console version mismatch, even if the server is a Replica.\r\n\r\nChange the way WPP handle this case. The user is not warn anymore.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1306.16",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-19T13:41:24.863-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Don't warn user when Server and Console version mismatch on a Replica.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 69
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

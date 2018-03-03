@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1455682",
+    "ThreadId": "648681",
+    "Html": "Hi, guys, I have recently been able to deploy Java 8 Update 65 with WSUS Package Publisher. This tutorial  contains Step by Step deployment Guide with Screenshots. I hope this will help you to deploy Java to clients.\r<br />\n<br />\nYou can try to follow this step by step guide with screenshots: <a href=\"http://www.sthshare.com/wordpress/how-to-deploy-java-to-clients-using-wsus-package-publisher.html\" rel=\"nofollow\">http://www.sthshare.com/wordpress/how-to-deploy-java-to-clients-using-wsus-package-publisher.html</a>\r<br />\n<br />\nI hope it will help you.<br />\n",
+    "PostedDate": "2015-12-12T05:07:13.413-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1462021",
+    "ThreadId": "648681",
+    "Html": "<strong>sthshare wrote:</strong><br />\n<blockquote>\nHi, guys, I have recently been able to deploy Java 8 Update 65 with WSUS Package Publisher. This tutorial  contains Step by Step deployment Guide with Screenshots. I hope this will help you to deploy Java to clients.<br />\n<br />\nYou can try to follow this step by step guide with screenshots: <a href=\"http://www.sthshare.com/wordpress/how-to-deploy-java-to-clients-using-wsus-package-publisher.html\" rel=\"nofollow\">http://www.sthshare.com/wordpress/how-to-deploy-java-to-clients-using-wsus-package-publisher.html</a><br />\n<br />\nI hope it will help you.<br />\n</blockquote>\nHow do you handle the need for the browser, e.g. Internet Explorer to be closed?<br />\n",
+    "PostedDate": "2016-02-04T14:06:11.54-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1463576",
+    "ThreadId": "648681",
+    "Html": "<strong>Otapx wrote:</strong><br />\n<blockquote>\n<strong>sthshare wrote:</strong><br />\n<blockquote>\nHi, guys, I have recently been able to deploy Java 8 Update 65 with WSUS Package Publisher. This tutorial  contains Step by Step deployment Guide with Screenshots. I hope this will help you to deploy Java to clients.<br />\n<br />\nYou can try to follow this step by step guide with screenshots: <a href=\"http://www.sthshare.com/wordpress/how-to-deploy-java-to-clients-using-wsus-package-publisher.html\" rel=\"nofollow\">http://www.sthshare.com/wordpress/how-to-deploy-java-to-clients-using-wsus-package-publisher.html</a><br />\n<br />\nI hope it will help you.<br />\n</blockquote>\nHow do you handle the need for the browser, e.g. Internet Explorer to be closed?<br />\n</blockquote>\nWPP aslo can deploy the Chrome, Firefox browser to clients.<br />\n<a href=\"http://www.sthshare.com/wordpress/wsus-package-publisher-deploy-firefox.html\" rel=\"nofollow\">WSUS Package Publisher deploy Firefox</a><br />\n",
+    "PostedDate": "2016-02-17T23:29:37.217-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

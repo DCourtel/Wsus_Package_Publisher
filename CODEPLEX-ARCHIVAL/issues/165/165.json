@@ -1,0 +1,126 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Rules Update Wizard",
+      "DisplayName": "Rules Update Wizard"
+    },
+    "ClosedComment": "Remove the ability to make a rule against REG_MULTI_SZ, as it is not supported by the Wsus Agent on clients.",
+    "ClosedDate": "2014-01-10T11:10:37.187-08:00",
+    "CommentCount": 14,
+    "Custom": null,
+    "Description": "I do not know if this issue is a WPP thing, but I'm starting here.  I'm trying to publish an update that uses a 'RegValueExists' rule.  That isn't impressive.  What is significant is if the value is of type 'REG_MULTI_SZ', workstations fail with an error message when searching for new updates.  If the value type is REG_SZ, all is well.\r\n\r\n<bar:RegValueExists Key=\"HKEY_LOCAL_MACHINE\" Subkey=\"Software\\HelpBox\\userInstalled\" Value=\"Google Chrome\" Type=\"REG_MULTI_SZ\"/>\r\n\r\nHas anyone seen this?\r\n\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1401.04",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-01-02T08:55:29.407-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "WSUS Error With MULTI_SZ",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 165
+  },
+  "FileAttachments": [
+    {
+      "FileId": 774520,
+      "FileName": "wsus_80070057.png",
+      "DownloadUrl": ".\\774520"
+    },
+    {
+      "FileId": 775962,
+      "FileName": "workitem-165.zip",
+      "DownloadUrl": ".\\775962"
+    },
+    {
+      "FileId": 776249,
+      "FileName": "update.rules",
+      "DownloadUrl": ".\\776249"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Can you do that :\n- Stop _Windows Update Service_\n- Rename this folder : _C:\\Windows\\SoftwareDistribution_ into _C:\\Windows\\SoftwareDistributionOld_\n- Start _Windows Update Service_\n- Wait 30 seconds\n- Open a command line window\n- Type _wuauclt /DetectNow_\n- Wait 1 minute\n- Open _C:\\Windows\\WindowsUpdate.log_\n- Paste the content of the file here.\n\nThanks",
+      "PostedDate": "2014-01-03T11:43:23.11-08:00",
+      "Id": 129010
+    },
+    {
+      "Message": "i zipped the contents.  i turned on wsus log debugging before executing the /detectnow.  i also included the update rule from WPP.",
+      "PostedDate": "2014-01-07T10:41:19.203-08:00",
+      "Id": 129648
+    },
+    {
+      "Message": "Pls try this Solution on the client: http://answers.microsoft.com/en-us/windows/forum/windows_other-windows_update/error-80070057-when-installing-windows-updates/3646cb74-3cfc-4bea-b5a0-ba78ff4864d0\n",
+      "PostedDate": "2014-01-07T11:25:24.717-08:00",
+      "Id": 129661
+    },
+    {
+      "Message": "i already did it.  please know this is not a single machine.  the moment i publish the update, and not even approved it mind you, every one of the hundreds of machines being managed the WSUS server begin to fail.  these machines cover XP, 2003, 2008 R1, 2008 R2, vista, 7, 8, 8.1, 2012 R1.\n\ni should also mention that the WSUS server is 2012 R1.\n",
+      "PostedDate": "2014-01-07T12:07:46.52-08:00",
+      "Id": 129668
+    },
+    {
+      "Message": "Wow, crazy error. Is this a special software?",
+      "PostedDate": "2014-01-07T12:55:49.307-08:00",
+      "Id": 129678
+    },
+    {
+      "Message": "i can't see how the software could be the problem. I've isolated the cause to the single rule I mention above. if I change the value type of the rule from REG_MULTI_SZ to REG_SZ everything is fine. in addition I'm only testing for the existence of the value. I'm not trying to match the value's data. ",
+      "PostedDate": "2014-01-07T13:42:54.173-08:00",
+      "Id": 129694
+    },
+    {
+      "Message": "OK, we should wait for David, he is the developer, maybe he find some things.",
+      "PostedDate": "2014-01-07T14:07:23.297-08:00",
+      "Id": 129703
+    },
+    {
+      "Message": "That's awesome !\nI've reproduce the error on my computer, using your .rules file.\nThis is due to a typo in the rule :\n\n![Double Backslash Error](http://i.imgur.com/LEOwIfz.png)\n\nPlease, delete the update from the server. Wait 1 minute. Create a new update with the same specifications, load the .rules file and correct the typo error. Publish the update.\nWait 1 minute, And launch a new detection on a computer.",
+      "PostedDate": "2014-01-07T14:14:32.77-08:00",
+      "Id": 129705
+    },
+    {
+      "Message": "The best way to avoid typo in this rule, is to copy the full key name from Regedit (for example : HKEY_LOCAL_MACHINE\\SOFTWARE\\FileZilla 3\\fzshellext) by right-clicking in the key and choosing \"Copy the key name\".\nThen, paste it into the form. WPP will automatically remove the \"HKEY_LOCAL_MACHINE\\\" for you.",
+      "PostedDate": "2014-01-07T14:26:24.557-08:00",
+      "Id": 129708
+    },
+    {
+      "Message": "thanks. I have so many updates in play for so many products. I missed it because I would have thought that typo would show up with any value type. my logic led me away from my own mistake. ",
+      "PostedDate": "2014-01-07T15:14:57.75-08:00",
+      "Id": 129713
+    },
+    {
+      "Message": "i made the change.  it did not fix my error.  i uploaded the repaired rules file to demonstrate.",
+      "PostedDate": "2014-01-08T02:01:13.847-08:00",
+      "Id": 129769
+    },
+    {
+      "Message": "updated file.",
+      "PostedDate": "2014-01-08T02:02:57.337-08:00",
+      "Id": 129770
+    },
+    {
+      "Message": "Hi patanne, sorry for the false 'good news'. That fails as well on my computer with your last uploaded file.\n\nThe XML file generated by WPP is well-formed and valid in regards of the XSD validation. The Wsus server accepts it. I must admit that the Windows Update Agent, on clients computers, is a black box for me. I can't see what happens when the client inspects rules.\n\nDespite the fact that I didn't find any articles on Microsoft web site, that explicitly state it, my conclusion is that 'RegValueExists' didn't support REG_MULTI_SZ. [This article](http://technet.microsoft.com/en-us/library/bb531094.aspx) talks about this rule.",
+      "PostedDate": "2014-01-08T04:32:03.61-08:00",
+      "Id": 129783
+    },
+    {
+      "Message": "so odd that it would seem only those data types are supported.  thank you for helping me hunt down the issue. ",
+      "PostedDate": "2014-01-08T06:14:20.997-08:00",
+      "Id": 129794
+    }
+  ]
+}

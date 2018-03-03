@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-07-14T09:50:45.527-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nif you hit the command \"Clean SoftwareDistribution Folder\" and the folder is __already empty__ WPP shows within the status window \"__failed__\".\r\n\r\nThe command was not failed in this case - the folder was already empty. It will be much better if WPP shows \"__folder already empty__\" instead of \"failed\". If I see \"failed\" somewhere, I think that something goes wrong - but it does. __Confusing status output__.\r\n\r\nGreetings\r\nPurecut",
+    "LastUpdatedDate": "2013-07-14T09:50:45.527-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-07-07T16:16:00.423-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Cleaning the SoftwareDistribution",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 82
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "WPP now display \"Succeeded\" even if the folder have been already deleted.",
+      "PostedDate": "2013-07-14T09:50:34.56-07:00",
+      "Id": 105998
+    }
+  ]
+}

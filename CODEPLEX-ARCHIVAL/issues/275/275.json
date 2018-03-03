@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-10T12:54:33.673-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "I currently am having a issue with WPP...  I have the recent update, but for some odd reason, almost all of the PC's are showing up as Offline in WPP...  I am not sure why this is or if there is a issue.  I am unable to push published update for testing first in WPP becuase of this..  Any help would be appreciated...  Thanks\r\n\r\n~J",
+    "LastUpdatedDate": "2015-11-10T12:54:33.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-07-24T10:15:50.407-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Workstations not showing online in WPP but are",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 275
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1475367,
+      "FileName": "snip.JPG",
+      "DownloadUrl": ".\\1475367"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "WPP simply rely on Ping command to test if the computer is online or not. So ensure thatyour Workstation answer to Ping request (firewall, etc...)",
+      "PostedDate": "2015-07-24T10:53:15.82-07:00",
+      "Id": 187681
+    }
+  ]
+}

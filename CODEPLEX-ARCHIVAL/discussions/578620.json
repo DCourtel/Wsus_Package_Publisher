@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1345890",
+    "ThreadId": "578620",
+    "Html": "Hi Guys,<br />\ni have a create software group &quot;Net At Work&quot;. There exists 4 entries.<br />\nThe dependences look like:<br />\n1) Microsoft Visual C++ 2010  x64 Redistributable - 10.0.40219<br />\n2) Microsoft Visual C++ 2010  x64 Redistributable - KB2565063 (Dependence: id 1)<br />\n3) Visual Studio 2010-Tools für Office-Laufzeit (Dependence: id 2)<br />\n4) Outlook Add-in 9.2.180.0 (32Bit) (Dependence id 3)<br />\n<br />\nThe programs 1-3 successfully installed. The last one is not found by the windows update on the client. <br />\n<br />\nEnvironment Server:<br />\n<ul>\n<li>Windows Server 2012R2</li>\n<li>WSUS </li>\n<li>\nNewest WPP Version<br />\n</li>\n</ul>\nEnvironment Client:<br />\n<ul>\n<li>Windows 7 Professional, SP1, 64Bit</li>\n<li>Delete Windows Update Cache</li>\n<li>\nIn the correct wsus group<br />\n</li>\n</ul>\nP.S. The rollout from the newst Adobe Flashplayer was no problem.<br />\n",
+    "PostedDate": "2015-01-26T12:33:08.21-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1346351",
+    "ThreadId": "578620",
+    "Html": "Delete all packages and deplay any one new. Now it works on all Clients.<br />\n",
+    "PostedDate": "2015-01-27T09:02:20.013-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-01-27T09:02:23.17-08:00"
+  }
+]

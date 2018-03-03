@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1470725",
+    "ThreadId": "653775",
+    "Html": "Hallo Forum,\r<br />\ngibt es ein Howto , wie man den WPP selbst updatet ?\r<br />\nHabe hier im Forum keinen zielführenden Treffer gefunden.\r<br />\nMöchte meine Version 1.3.1511.15 auf 1.3.1603.29 updaten.\r<br />\n<br />\nVielen Dank !<br />\n",
+    "PostedDate": "2016-04-20T01:29:43.4-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1470727",
+    "ThreadId": "653775",
+    "Html": "Das ZIP downloaden, entpacken. Ist eine Options.xml enthalten, die nicht mitkopieren, den Rest kannst Du einfach bei geschlossenem WPP per Copy and Paste aktualisieren.<br />\n",
+    "PostedDate": "2016-04-20T01:39:49.793-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2016-04-21T00:29:43.37-07:00"
+  },
+  {
+    "Id": "1470883",
+    "ThreadId": "653775",
+    "Html": "Hallo Winfried,\r<br />\nperfekt, vielen Dank und nochmals sorry, das Forum mit solchen Basics zu &quot;beglücken&quot; :-)<br />\n",
+    "PostedDate": "2016-04-21T00:32:09.653-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Rules Update Wizard",
+      "DisplayName": "Rules Update Wizard"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-09-07T05:40:07.343-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "When creating a rule based on Windows Version, the Build Number parameter can't be more than 100.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1309.03",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-09-07T05:39:04.413-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "BuildNumber in Windows Version rule can't be more than 100",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 105
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Adjust UI filtering so that, now, Build Number can be set as much as 65535",
+      "PostedDate": "2013-09-07T05:39:55.037-07:00",
+      "Id": 112763
+    }
+  ]
+}

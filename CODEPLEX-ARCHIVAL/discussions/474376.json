@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1137098",
+    "ThreadId": "474376",
+    "Html": "Hi,\r<br />\nI was wondering if the WPP published packages would be available in SCCM (2007R3/2012R2)?\r<br />\nSince I've had some problems with SCUP (System Center Update Publisher), with stuff like publishing Adobe's Updates and Shavlik SCUPdates.\r<br />\n<br />\nWould I be able to view my WPP updates in SCCM?\r<br />\nSCUP sucks and WPP rocks!\r<br />\n<br />\nThanks,\r<br />\nNikolaj<br />\n",
+    "PostedDate": "2013-12-17T05:48:15.847-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1137178",
+    "ThreadId": "474376",
+    "Html": "Honestly, I never used SCCM or Scup. Too much complicated to install, and far much expensive.\r<br />\nMay be some WPP's users can answer to your question.<br />\n",
+    "PostedDate": "2013-12-17T08:47:38.623-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1144917",
+    "ThreadId": "474376",
+    "Html": "It seems like they get published to SCCM 2007R3, haven't tried with SCCM 2012R2 yet.\r<br />\nI think WPP works with SCCM 2007R3.<br />\n",
+    "PostedDate": "2014-01-03T00:08:44.687-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1144946",
+    "ThreadId": "474376",
+    "Html": "I guess that SCCM uses the Local Publishing API.<br />\n",
+    "PostedDate": "2014-01-03T02:11:46.617-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T07:53:35.153-08:00"
+  }
+]

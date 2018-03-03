@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1492778",
+    "ThreadId": "661399",
+    "Html": "Hello / Bonjour,\r<br />\n<br />\nRecently i test the WPP for publishing  64 bitsApps with success :  now i wonder about what is the best way to publish packages for 32 and 64 bits computers in the same wsus group of computers ( with W7 pro 32/64 bits and W7 Embedded 32 bits)\r<br />\n<br />\nIf i want to publish a IE 11 package to upgrade the computers with IE10 i need to prepare scripts or package for 32 and 64 bits versions OS.\r<br />\n<br />\nShould i publish 2 packages  (32 and 64 bits), and let the computer choose the right version for them ? Is that ok ? \r<br />\nor in WPP must i configure it in different way and how ?\r<br />\nor simply make different computers groups to distinguish 32 and 64 bits versions ?\r<br />\n<br />\nThanks in advance for your response !<br />\n",
+    "PostedDate": "2017-02-16T07:36:34.09-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1492784",
+    "ThreadId": "661399",
+    "Html": "Hi, IE11 is already in Wsus, why don't you use it ?\r<br />\nIf you really want to publish IE11 into Wsus with WPP, you should make two package :<br />\n<ul>\n<li>one for 32bit computers</li>\n<li>\na second for 64bit computers<br />\n</li>\n</ul>\nmake a rule in the IsInstallable rule to filter computers by bitness.<br />\n",
+    "PostedDate": "2017-02-16T08:59:17.09-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

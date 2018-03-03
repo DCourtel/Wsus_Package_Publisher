@@ -1,0 +1,162 @@
+[
+  {
+    "Id": "1117466",
+    "ThreadId": "465355",
+    "Html": "I am totally lost. I had it working, upgraded to the new version and now nothing. I removed all certificates. Rebooted. Created a new certificate using Package Publisher, Rebooted. and still get the error. I switched back to the old version and nothing. \r<br />\n<br />\nI am running Server 2012 and the latest version of Package Publisher. Please help!!!!<br />\n",
+    "PostedDate": "2013-11-04T17:39:38.923-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1117490",
+    "ThreadId": "465355",
+    "Html": "What error do you get ? When does this error appears ? What are you doing to get this error ?<br />\n",
+    "PostedDate": "2013-11-04T21:42:46.597-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1117650",
+    "ThreadId": "465355",
+    "Html": "I run the program and generate the certificate. Save the certificate and restart the computer. Once it reboots I open MMC and verify that there is a certificate in the WSUS, Trusted Root, and Trusted Publishers folders.\r<br />\n<br />\nI launch WPP and attempt to create an update. I use the simple tutorial of the Adobe Reader 11.05 msp. It gets to the last step where it builds and publishes the update and I get the error  Failed to sign the package: 2148081670\r<br />\n<br />\nI have removed the certificates from the mmc rebooted and tried the process again. I even went as far to reinstall the server from scratch and still nothing. I know it is a Certificate error, but I can't figure out what I am doing wrong. I have read and reread the directions and I still get the same error. \r<br />\n<br />\nI even tried downloading updates packages from Adobe using the import tool. It downloads and fails with the exact same error. \r<br />\n<br />\nI appreciate your help.\r<br />\n<br />\nAnthony<br />\n",
+    "PostedDate": "2013-11-05T06:19:36.64-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1117672",
+    "ThreadId": "465355",
+    "Html": "You have to Import this certificate into the trusted Publishers and trusted root certification store.\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-11-05T07:14:42.617-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1117686",
+    "ThreadId": "465355",
+    "Html": "I did import it into both locations for on the local computer and verified that they are there with MMC.<br />\n",
+    "PostedDate": "2013-11-05T07:51:44.59-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1117774",
+    "ThreadId": "465355",
+    "Html": "Can you send me by mail the  Options.xml file (it is in the same directory that the exe) at <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a><br />\n",
+    "PostedDate": "2013-11-05T08:56:53.497-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1117988",
+    "ThreadId": "465355",
+    "Html": "Are you using a self-signed certificate or a certificate issued by your own Root Authority ?\r<br />\nCan you check your certificate deployment against this board :\r<br />\n<img src=\"http://i.imgur.com/9Zhpt70.png\" alt=\"Checking Certificate deployment\" />\r<br />\n<br />\nIf you have rebuild the server, remember that dropping the cert into the &quot;Wsus&quot; store is not enough. You have to import it through WPP.<br />\n",
+    "PostedDate": "2013-11-05T11:22:30.483-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1118236",
+    "ThreadId": "465355",
+    "Html": "It is in the correct places. I allowed WPP to build the Self Signed Certificate and ensured it was each of the locations above. WPP is running on the server.<br />\n",
+    "PostedDate": "2013-11-05T13:50:06.227-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1118275",
+    "ThreadId": "465355",
+    "Html": "Does the certificate is in the 'Computer stores' or 'User stores' ?<br />\n",
+    "PostedDate": "2013-11-05T14:17:50.027-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1118301",
+    "ThreadId": "465355",
+    "Html": "\r\n<div dir=\"ltr\">Computer </div>\r\n<div><br clear=\"all\">\r\n<div><b>Anthony Volpe</b>\r\n<div>IT Instructor</div>\r\n<div>Atlantic County Institute of Technology</div>\r\n<div>5080 Atlantic Avenue</div>\r\n<div>Mays Landing, NJ 08330</div>\r\n<div>Ph: 609-625-2249 x7607</div>\r\n</div>\r\n<br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-11-05T14:35:45.847-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1119990",
+    "ThreadId": "465355",
+    "Html": "If you have reinstall the Wsus server, generate a new self-signed certificate with WPP and check that all cert are in the right place... I'm little bit lost.\r<br />\n<br />\nIf you want I can take a look at your Wsus server by a Teamviewer session. Send me an email at <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a> in this case.<br />\n",
+    "PostedDate": "2013-11-07T12:10:50.377-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T08:08:40.077-08:00"
+  },
+  {
+    "Id": "1123354",
+    "ThreadId": "465355",
+    "Html": "I am having the same issue like described in this post. All certifices (self-signed) are installed correctly like described here. If try to publish an update I'll get this error message. Anyone have a solution for this issue right now?<br />\n",
+    "PostedDate": "2013-11-14T01:49:51.383-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1123427",
+    "ThreadId": "465355",
+    "Html": "\r\n<div dir=\"ltr\">I still have not gotten it working, but I have not had much more time to test.\r\n<div><br>\r\n</div>\r\n<div>Anthony</div>\r\n</div>\r\n<div><br clear=\"all\">\r\n<div><b>Anthony Volpe</b>\r\n<div>IT Instructor</div>\r\n<div>Atlantic County Institute of Technology</div>\r\n<div>5080 Atlantic Avenue</div>\r\n<div>Mays Landing, NJ 08330</div>\r\n<div>Ph: 609-625-2249 x7607</div>\r\n</div>\r\n<br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-11-14T04:56:21.453-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1128991",
+    "ThreadId": "465355",
+    "Html": "Is is possible to create a WSUS Code Signing certificate from a Stand-alone CA? I am not sure how to create the request to process on the CA.\r<br />\n<br />\nAnthony<br />\n",
+    "PostedDate": "2013-11-25T18:02:22.083-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1129024",
+    "ThreadId": "465355",
+    "Html": "Yes, you can import your own code signing certificate from your own CA. In the documentation, you will find an article in English. I suppose you can find many tutorials on this subject on Internet.<br />\n",
+    "PostedDate": "2013-11-25T21:51:29.727-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1129169",
+    "ThreadId": "465355",
+    "Html": "\r\n<div dir=\"ltr\">The tutorial I found online indicates that you need an Enterprise CA, I have a stand alone CA configured that is trusted by my domain. I am not sure how to generate the request file to start the process.\r\n<div><br>\r\n</div>\r\n<div>Anthony</div>\r\n</div>\r\n<div><br clear=\"all\">\r\n<div><b>Anthony Volpe</b>\r\n<div>IT Instructor</div>\r\n<div>Atlantic County Institute of Technology</div>\r\n<div>5080 Atlantic Avenue</div>\r\n<div>Mays Landing, NJ 08330</div>\r\n<div>Ph: 609-625-2249 x7607</div>\r\n</div>\r\n<br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-11-26T05:43:07.033-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1129763",
+    "ThreadId": "465355",
+    "Html": "I don't have enought experience on Certificate Authority to give advice. You may expect some help from WPP's users. But you should try your luck on other forums, like technet.<br />\n",
+    "PostedDate": "2013-11-27T13:30:55.627-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1130143",
+    "ThreadId": "465355",
+    "Html": "Hi,\r<br />\n<br />\nI don't have a stand alone CA at Hand, but this indicates, that it should be possible:\r<br />\n<a href=\"http://social.technet.microsoft.com/Forums/windowsserver/en-US/67c4666a-fe7c-4589-ac2d-8a18069d1b0c/generate-code-signing-certificate-from-a-2003-standalone-ca\" rel=\"nofollow\">http://social.technet.microsoft.com/Forums/windowsserver/en-US/67c4666a-fe7c-4589-ac2d-8a18069d1b0c/generate-code-signing-certificate-from-a-2003-standalone-ca</a>\r<br />\n<br />\nHTH\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-11-28T20:58:40.11-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1137433",
+    "ThreadId": "465355",
+    "Html": "Hi,<br />\nI use a WS2012 Enterprise CA and it works fine, I issued a 'Code Signing' certificate and followed the rest of the guide.<br />\n<a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=499803\" rel=\"nofollow\">Guide link</a><br />\n<br />\nWorks with WSUS on a WS2012 and newest WPP version.<br />\n",
+    "PostedDate": "2013-12-18T02:27:10.313-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1137722",
+    "ThreadId": "465355",
+    "Html": "Good to know.<br />\n",
+    "PostedDate": "2013-12-18T11:26:54.65-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "1223519",
+    "ThreadId": "539246",
+    "Html": "Hi all,<br />\nI deployed this package to 50 Windows 7 SP1 64bit clients, and it worked perfectly.<br />\n<br />\nHere is a PDF guide - lots of screenshots!<br />\n<a href=\"http://www.sendspace.com/file/2sfg0v\" rel=\"nofollow\">Guide</a><br />\n<br />\nDownload the package:<br />\n<a href=\"http://www.sendspace.com/file/2r8s5t\" rel=\"nofollow\">Package</a><br />\n<br />\nExtract the file somewhere on your WSUS server, and follow the .PDF guide.<br />\n<br />\nIt contains of the following parts:<br />\nJava .MSI, MST and .CAB file - with autoupdate disabled.<br />\nDeployment.Properties and deployment.Config:<br />\n<pre><code>deployment.security.level=MEDIUM\ndeployment.expiration.check.enabled=false\ndeployment.console.startup.mode=HIDE\ndeployment.webjava.enabled=true</code></pre>\n\nJava-CleanUp.ps1 - it cleans Appdata and user registry, kills processes and prepares for Java install.<br />\n<br />\nExecute Powershellscript:<br />\n.\\Java-CleanUp.ps1<br />\n<pre><code>## Date to logfile ##\nmkdir C:\\temp -ErrorAction SilentlyContinue\nWrite-Output (Get-date) | Out-File C:\\temp\\Java-CleanUp.log -Append -Force\n\n## Kill Processes ##\n$procs = @( &quot;*javaw*&quot;,&quot;*javaws*&quot;,&quot;*firefox*&quot;,&quot;*iexplore*&quot;,&quot;*iexplorer*&quot;,&quot;*chrome*&quot;,&quot;*jaucheck*&quot;,&quot;*jaureg*&quot;,&quot;*jucheck*&quot;,&quot;*jusched*&quot;,&quot;*SpcUiClient*&quot;,&quot;*jqs*&quot;,&quot;*java*&quot;)\nforeach ($proc in $procs) {\nStop-Process -Name $proc -Force -ErrorAction SilentlyContinue\nWrite-Output &quot;Killing process: $proc&quot; | Out-File C:\\temp\\Java-CleanUp.log -Append -Force\n }\n\nStop-Service -Name &quot;JavaQuickStarter&quot; -ErrorAction SilentlyContinue\n\n## Del folders ##\nRemove-Item -Path C:\\Windows\\Sun -Recurse -Force -ErrorAction SilentlyContinue \n \n## Clean AppData ##\n$usersPath = Get-ChildItem -Path &quot;C:\\Users&quot;\nForEach ($userPath in $usersPath)\n{\nif (Test-Path -Path &quot;C:\\Users\\$userPath\\AppData\\LocalLow\\Sun&quot;)\n    {\n    Remove-Item -Path &quot;C:\\Users\\$userPath\\AppData\\LocalLow\\Sun&quot; -Force -Recurse\n    Write-Output &quot;C:\\Users\\$userPath\\AppData\\LocalLow\\Sun has been removed.&quot; | Out-File C:\\temp\\Java-CleanUp.log -Append -Force\n    }\n}\n\n## Clean Registry ##\n$regUsers = Get-ChildItem -Path &quot;registry::HKey_Users&quot;\n$regUsers | Where-Object {$_.Name -like &quot;*21*&quot; -and $_.Name -notlike &quot;*Classes&quot;} | ForEach-Object {if(test-path -Path &quot;Registry::$_\\Software\\AppDataLow\\Software\\Javasoft&quot;){remove-item -Path &quot;Registry::$_\\Software\\AppDataLow\\Software\\Javasoft&quot; -Force -Recurse}}\n\n## Make folders ##\nmkdir C:\\Windows\\Sun -ErrorAction SilentlyContinue\nmkdir C:\\Windows\\Sun\\Java -ErrorAction SilentlyContinue\nmkdir C:\\Windows\\Sun\\Java\\Deployment -ErrorAction SilentlyContinue\n\n## Copy files ##\nWrite-Output (Get-Location) | Out-file C:\\temp\\Java-CleanUp.log -Append -Force\n\nCopy-Item -Path .\\deployment.config -Destination C:\\Windows\\Sun\\Java\\Deployment\\deployment.config -Force\nCopy-Item -Path .\\deployment.properties -Destination C:\\Windows\\Sun\\Java\\Deployment\\deployment.properties -Force</code></pre>\n\nFell free to ask questions or examine the package before use.<br />\n<ul>\n<li>Nikolaj</li>\n</ul>\n",
+    "PostedDate": "2014-03-17T07:37:29.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1223525",
+    "ThreadId": "539246",
+    "Html": "Hi Nicolaj,\r<br />\n<br />\nI downloaded your package, but I'm unable to import into my WPP.\r<br />\nThe error is related to the sign:\r<br />\n<br />\nVerification of file signature failed for file: bla bla bla....cab\r<br />\n<br />\nI have a question about JavaQuickStarter: I can't find this service anywhere. It's still it the name?<br />\n",
+    "PostedDate": "2014-03-17T07:49:54.847-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1223545",
+    "ThreadId": "539246",
+    "Html": "Hi Nicolaj, \r<br />\n<br />\nAll exported packages are digitally signed. So to be able to import it into Wsus you need to have a trust relationship with the Root certification authority. \r<br />\nThis is imposed by Microsoft, presumably for security reasons.<br />\n",
+    "PostedDate": "2014-03-17T08:21:42.897-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1223560",
+    "ThreadId": "539246",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nHi Nicolaj, <br />\n<br />\nAll exported packages are digitally signed. So to be able to import it into Wsus you need to have a trust relationship with the Root certification authority. <br />\nThis is imposed by Microsoft, presumably for security reasons.<br />\n</blockquote>\nOh, I feel like an idiot.\r<br />\nBut you should be able to resign the package after import.\r<br />\nIsn't that possible?<br />\n",
+    "PostedDate": "2014-03-17T08:50:24.517-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1223563",
+    "ThreadId": "539246",
+    "Html": "hi Nicolaj,\r<br />\n<br />\nthanks for your effort, but maybe could much useful a procedure to deploy 51 following your way.\r<br />\n<br />\nI tried to follow the u21 and it didn't work with u51;\r<br />\nI tried to follow this guide: <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/462519\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/462519</a> and I have several problem on Detect rules: Java would install update also on computers that doesn't have Java installed, and I don't understand why.<br />\n",
+    "PostedDate": "2014-03-17T08:55:00.32-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1224736",
+    "ThreadId": "539246",
+    "Html": "Hi Nicolaj,\r<br />\n<br />\nThis sould exactly like what I've been trying to achieve for the past 4 days!\r<br />\n<br />\nI can't see where to download your package - I assume once I have it it can be manually viewed and recreated in our environment?\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2014-03-20T04:02:05.843-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1225116",
+    "ThreadId": "539246",
+    "Html": "Hi all,\r<br />\nI've updated the guide.<br />\n",
+    "PostedDate": "2014-03-21T00:21:33.75-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1227906",
+    "ThreadId": "539246",
+    "Html": "Hi NikolajP\r<br />\n<br />\nI do not see Click 'Download nu'  in the link.  can you check let me know?<br />\n",
+    "PostedDate": "2014-03-28T09:52:04.643-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1228469",
+    "ThreadId": "539246",
+    "Html": "<strong>leet1976 wrote:</strong><br />\n<blockquote>\nHi NikolajP<br />\n<br />\nI do not see Click 'Download nu'  in the link.  can you check let me know?<br />\n</blockquote>\nThe link is at the very top of the thread. PDF and Download. Guide and Package are the links to click.<br />\n",
+    "PostedDate": "2014-03-31T00:28:15.73-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1228959",
+    "ThreadId": "539246",
+    "Html": "I updated it with new links, on sendspace.com\r<br />\n@leet1976 @Valee<br />\n",
+    "PostedDate": "2014-04-01T04:05:40.66-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:47:18.2-07:00"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "1322142",
+    "ThreadId": "572079",
+    "Html": "Hi everybody,<br />\n<br />\nI searched for a method to install .net Framework 4.0 on Windows 7 Clients for a software which I push with a GPO. This Software (Viscosity for VPN) requires .net 4.0 Framework.<br />\n<br />\nI tried to make a MSI-File out of the .net Exe. But it didn't worked. I also found the answer in the internet, that you can't install .net 4.0 via GPO.<br />\n<br />\nSo I made a Start up Script which is working, but that's not a satisfied method. So I went on with my search and found the WPP.<br />\n<br />\nThe installation was directly on the WSUS succesful. I tried to create a &quot;custom update&quot; - but always when I push it to the WSUS and let the WSUS pushing it out, my Test Client which tries to install the update is failing.<br />\n<br />\nWindows Update just says &quot;Failure Code FFFC&quot;.<br />\n<br />\nI'm not sure what you need, here is my XML which belongs to this custom update package:<br />\n<br />\n<br />\n&lt;CustomUpdate&gt;<br />\n&lt;Action&gt;<br />\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;<br />\n&lt;PathToExecutable&gt;C:\\Program Files\\WSUS Package Publisher\\dotNetFx40_Full_x86_x64.exe&lt;/PathToExecutable&gt;<br />\n&lt;Parameters&gt;/q /norestart&lt;/Parameters&gt;<br />\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;<br />\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;<br />\n&lt;Variable/&gt;<br />\n&lt;/Action&gt;<br />\n&lt;/CustomUpdate&gt;<br />\n<br />\n<br />\n<br />\nAny suggestion? I hope you can help me out, I'm tired of searching another method for deploying that .net....<br />\n<br />\nGreetings<br />\n<br />\n<br />\n<br />\nEDIT:<br />\nI also created a GPO with the two Cert's succesfully. Certification is IMHO not the problem.<br />\n",
+    "PostedDate": "2014-11-14T04:14:38.93-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1322179",
+    "ThreadId": "572079",
+    "Html": ".Net Framework 4.0 is in WSUS available. In <a href=\"http://support.microsoft.com/kb/2492172/de\" rel=\"nofollow\">http://support.microsoft.com/kb/2492172/de</a> you will find it in the middle. You have to activate Feature Packs in your WSUS. \r<br />\nAnd after Installation Clients will report back to your WSUS what Security Updates they want.<br />\n",
+    "PostedDate": "2014-11-14T05:57:35.2-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1322222",
+    "ThreadId": "572079",
+    "Html": "For .NET Framework 4.0, it's KB982671\r<br />\nBy the way, code 'FFFC' mean, file not found.<br />\n<blockquote>\n&lt;PathToExecutable&gt;C:\\Program Files\\WSUS Package Publisher\\dotNetFx40_Full_x86_x64.exe&lt;/PathToExecutable&gt;<br />\n</blockquote>\n'PathToExecutable' refers to the folder where CLIENTS COMPUTERS will find the EXE to execute. I'm pretty much sure that 'C:\\Program Files\\WSUS Package Publisher' is not present on clients computers !!!\r<br />\nYou should include this file in the update package. So, it will be available for clients, in the same directory than the update itself.\r<br />\nthe parameter should, then be : &lt;PathToExecutable&gt;dotNetFx40_Full_x86_x64.exe&lt;/PathToExecutable&gt;\r<br />\nbecause the file is in the same directory than CustomUpdateEngine<br />\n",
+    "PostedDate": "2014-11-14T07:56:04.323-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1322253",
+    "ThreadId": "572079",
+    "Html": "Hey dudes,\r<br />\n<br />\nawesome, thanks for your replies!\r<br />\n<br />\nI activated the Feature Packs in WSUS, but there are no Updates/Packs under &quot;Feature Packs&quot;. Do I have to do more, that there is shown something? I guess that's also the point, why I'm still not finding KB982671 there.\r<br />\n<br />\nThanks in advice and regards<br />\n",
+    "PostedDate": "2014-11-14T08:44:19.607-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1322255",
+    "ThreadId": "572079",
+    "Html": "Did you synchronize after activation Feature Packs? If no, pls synchronize one time manually. After this, have a look in Feature Packs again.<br />\n",
+    "PostedDate": "2014-11-14T08:46:41.527-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-11-14T09:18:26.47-08:00"
+  },
+  {
+    "Id": "1322260",
+    "ThreadId": "572079",
+    "Html": "Awesome, I got it!\r<br />\n<br />\nThank you very much and have a nice weekend. :-)<br />\n",
+    "PostedDate": "2014-11-14T09:00:36.467-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1322265",
+    "ThreadId": "572079",
+    "Html": "Well, I think I was too early with being happy....\r<br />\n<br />\nI See the update, I allowed it for my testgroup. I allowed the .net 4.0 for Windows 7 x86 and x64.\r<br />\n<br />\nBut my Client in this group does not show me this update... Hm any suggestions?\r<br />\n<br />\nRegards<br />\n",
+    "PostedDate": "2014-11-14T09:11:57.837-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1322268",
+    "ThreadId": "572079",
+    "Html": "Well however, no it's there and get's installed.. I just searched for the 5th time and pushed it on WSUS for 5th time...<br />\n",
+    "PostedDate": "2014-11-14T09:16:31.757-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1322271",
+    "ThreadId": "572079",
+    "Html": "Is the update downloaded complete? You can see the download status on the Startpage from WSUS: \r<br />\n<a href=\"http://www.wsus.de/images/wsus-version.png\" rel=\"nofollow\">http://www.wsus.de/images/wsus-version.png</a>\r<br />\n<br />\nPls check too the Version from your WSUS, if you have installed the WSUS on a OS &lt;W2012.\r<br />\n<a href=\"http://wsus.de/faq\" rel=\"nofollow\">http://wsus.de/faq</a> If your Build lower the .274 pls install the Updates.<br />\n",
+    "PostedDate": "2014-11-14T09:17:38.237-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1322272",
+    "ThreadId": "572079",
+    "Html": "<strong>JusT4Los3 wrote:</strong><br />\n<blockquote>\nWell however, no it's there and get's installed.. I just searched for the 5th time and pushed it on WSUS for 5th time...<br />\n</blockquote>\nIt take some time for download. ;)<br />\n",
+    "PostedDate": "2014-11-14T09:18:14.77-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1322273",
+    "ThreadId": "572079",
+    "Html": "Thank you for your very helpful instructions! Keep on!<br />\n",
+    "PostedDate": "2014-11-14T09:20:30.14-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

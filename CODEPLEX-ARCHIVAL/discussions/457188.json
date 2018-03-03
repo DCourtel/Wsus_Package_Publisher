@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1093556",
+    "ThreadId": "457188",
+    "Html": "I have created a java 7 update 40 x64 update package and was successful in deploying it to my test machine.  As soon as it is installed, windows update shows it again as needing to be installed.  If I look inside of wpp it says that it is installed.<br />\n",
+    "PostedDate": "2013-09-17T07:25:45.563-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1093574",
+    "ThreadId": "457188",
+    "Html": "What do you have set for 'IsInstalled' and 'IsInstallable' Rules ?<br />\n",
+    "PostedDate": "2013-09-17T08:09:16.57-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1093582",
+    "ThreadId": "457188",
+    "Html": "IsInstalled:\r<br />\nRule type: MSI Product Installed\r<br />\n&lt;msiar:MsiProductInstalled ProductCode=&quot;{26a24ae4-039d-4ca4-87b4-2f86417021ff}&quot;/&gt;\r<br />\n<br />\nIsInstallable:\r<br />\nRule type: MSI Product Installed\r<br />\n<br />\n&lt;lar:Not&gt;\r<br />\n&lt;msiar:MsiProductInstalled ProductCode=&quot;{26a24ae4-039d-4ca4-87b4-2f86417021ff}&quot;/&gt;\r<br />\n&lt;/lar:Not&gt;\r<br />\n<br />\n&lt;bar:Processor Architecture=&quot;9&quot;/&gt;<br />\n",
+    "PostedDate": "2013-09-17T08:15:13.09-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1093632",
+    "ThreadId": "457188",
+    "Html": "This MSI code is for Java 7 Update 21 !<br />\n",
+    "PostedDate": "2013-09-17T09:37:27.017-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-12T08:35:58.18-07:00"
+  },
+  {
+    "Id": "1093648",
+    "ThreadId": "457188",
+    "Html": "I'm working on getting Java 7u40 deployed to my domain today, and having a bear of a time; I'll post later with my solution. Here are the 7u40 MSI strings though: <br />\n<br />\nMSI code update 40 32-bit:<br />\n{26A24AE4-039D-4CA4-87B4-2F83217040FF}<br />\nMSI code update 40 64-bit:<br />\n{26A24AE4-039D-4CA4-87B4-2F86417040FF}<br />\n<br />\nYou can find these by using the WSUS Package Publisher and going to tools &gt; MSI Reader, loading the MSI, and going to the property table. Install string is labeled &quot;ProductCode&quot;.<br />\n<br />\nTo obtain the MSI,  install Java, then navigate to:<br />\nC:\\Users\\&lt;yourusername&gt;\\AppData\\LocalLow\\Sun\\Java (Vista/7 Directory; I forget for XP, should be a quick Google.)<br />\nThe jre folders therein contain the uncompressed installers; your results may not be desireable if you attempt to uncompress the jre executable installer with 7zip or winRAR and then try to use those installers to create a package; just something I ran into a while back, FYI.<br />\n<br />\nLet me know how your work on 7u40 is going!<br />\n<br />\n-Dave<br />\n",
+    "PostedDate": "2013-09-17T10:16:20.683-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1093686",
+    "ThreadId": "457188",
+    "Html": "Well even using the wrong msi code the 64 bit version installed just fine.  Other then it showing back up in the updates :)  I have changed the msi code so now I will see if it will install and then not come back.<br />\n",
+    "PostedDate": "2013-09-17T11:26:27.5-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1093709",
+    "ThreadId": "457188",
+    "Html": "Awesome; hope that worked! If you have problems deploying to a UAC environment, check out the how-to Java 7u40 I'm about to post; I think you can click on my username, and see my posts.<br />\n",
+    "PostedDate": "2013-09-17T12:27:03.017-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1094502",
+    "ThreadId": "457188",
+    "Html": "DParks256 - I went ahead and followed your newer guide to installing java.  So far on my single test machine it worked perfectly.  I am now going to try and push it out to a single dept in my company.  If that goes well then I will send it out company wide.<br />\n",
+    "PostedDate": "2013-09-19T07:51:13.683-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

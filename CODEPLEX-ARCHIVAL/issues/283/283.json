@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-11T22:23:17.223-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hello,\r\nI have created couple of packages like Google Chrome, Skype..\r\nAmong those chrome went fine and got installed on all the machines. But clients unable to get the skype update. i have followed same steps for both the packages.. i dont know whats wrong with it, status showing unknown.\r\nIs anyone tried skype pakage?\r\nPlease help me.\r\n",
+    "LastUpdatedDate": "2015-11-11T22:23:17.223-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-08-10T07:10:53.253-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Skype 7.7.0.103 not hitting the clients",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 283
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "You can try to activate Windows Update Client Debug log with this .Reg\n\n```\nWindows Registry Editor Version 5.00\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\WindowsUpdate\\Trace]\n\"Flags\"=dword:00000016\n\"LogFile\"=\"WindowsUpdate.log\"\n\"Level\"=dword:00000004\n [HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\WindowsUpdate\\Trace\\Datastore]\n\"Flags\"=dword:00000016\n\"Level\"=dword:00000003\n```\n\nAnd see which rule doesn't match",
+      "PostedDate": "2015-08-11T09:09:27.663-07:00",
+      "Id": 188233
+    }
+  ]
+}

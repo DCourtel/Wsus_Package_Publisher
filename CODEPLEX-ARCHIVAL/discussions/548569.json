@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1255973",
+    "ThreadId": "548569",
+    "Html": "Hello,\r<br />\n<br />\nI use WPP on the upstream server, where I am in administrator group. Everything works.\r<br />\n<br />\nWhen I try to use WPP on a downstream server, it works.\r<br />\n<br />\nIf I remove my account from upstream WSUS server administrators group, i can't connect to it with a certificate error.\r<br />\n<br />\nIs there a way to use WPP on downstream server without administor rights on the upstream server ?\r<br />\n<br />\nThanks in advance.\r<br />\n<br />\nGregory<br />\n",
+    "PostedDate": "2014-06-13T05:16:29.353-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1258399",
+    "ThreadId": "548569",
+    "Html": "Does the downstream server is a replica ?\r<br />\nCheck that the account you are using to run WPP is included in the &quot;Wsus administrators&quot; group on downstream server.<br />\n",
+    "PostedDate": "2014-06-20T13:00:12.597-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1258825",
+    "ThreadId": "548569",
+    "Html": "\r\n<div>\r\n<p><span lang=\"EN-US\" style=\"font-size:11.0pt; font-family:\">Yes, the downstream server is a replica.</span></p>\r\n<p><span lang=\"EN-US\" style=\"font-size:11.0pt; font-family:\">I am on WSUS administrator group on the replica server and on the upstream server.</span></p>\r\n<p><span lang=\"EN-US\" style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span lang=\"EN-US\" style=\"font-size:11.0pt; font-family:\">If I try to connect to the local server (replica), I can see updates, but I can’t modify or create updates.</span></p>\r\n<p><span lang=\"EN-US\" style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span lang=\"EN-US\" style=\"font-size:11.0pt; font-family:\">On the same server, if I try to connect to the upstream server, I have a certificate error “You don’t have any certificate. You will not be able to publish updates”</span></p>\r\n<p><span lang=\"EN-US\" style=\"font-size:11.0pt; font-family:\">If I add my account on the administrators group of upstream server, no problem.</span></p>\r\n<p><span lang=\"EN-US\" style=\"font-size:11.0pt; font-family:\">The same certificate set up on the both servers.</span></p>\r\n<p><span lang=\"EN-US\" style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span lang=\"EN-US\" style=\"font-size:11.0pt; font-family:\">How to solve this problem ?</span></p>\r\n<p><span lang=\"EN-US\" style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span lang=\"EN-US\" style=\"font-size:11.0pt; font-family:\">Gregory</span></p>\r\n<p><span lang=\"EN-US\" style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<div style=\"border:none; border-top:solid #E1E1E1 1.0pt; padding:3.0pt 0cm 0cm 0cm\">\r\n<p><b><span style=\"font-size:11.0pt; font-family:\">De :</span></b><span style=\"font-size:11.0pt; font-family:\"> DCourtel [email removed]\r\n<br>\r\n<b>Envoyé :</b> vendredi 20 juin 2014 22:00<br>\r\n<b>À :</b> Seignobosc, Gregory<br>\r\n<b>Objet :</b> Re: WPP remote connection on a downstream server [WsusPackagePublisher:548569]</span></p>\r\n</div>\r\n</div>\r\n<p></p>\r\n<p><span style=\"font-size:9.0pt; font-family:\">From: DCourtel</span></p>\r\n<div id=\"ThreadNotificationPostBody\" style=\"margin-bottom:24.0pt\">\r\n<p><span style=\"font-size:9.0pt; font-family:\">Does the downstream server is a replica ?\r\n<br>\r\nCheck that the account you are using to run WPP is included in the &quot;Wsus administrators&quot; group on downstream server.</span></p>\r\n</div>\r\n<p style=\"margin-bottom:12.0pt\"><span style=\"font-size:9.0pt; font-family:\"></span></p>\r\n<p align=\"center\" style=\"text-align:center\"><span style=\"font-size:9.0pt; font-family:\">Click\r\n<a href=\"https://www.mailcontrol.com/sr/MZbqvYs5QwJvpeaetUwhCQ==\">here</a> to report this email as spam.</span></p>\r\n</div>\r\n<br>\r\n<br>\r\n<p align=\"center\"><font style=\"background-color:#ffffff\">This message has been scanned for malware by Websense.\r\n</font><a href=\"http://www.websense.com/\"><font color=\"#000000\" style=\"background-color:#ffffff\">www.websense.com</font></a></p>\r\n",
+    "PostedDate": "2014-06-23T03:03:22.517-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1259168",
+    "ThreadId": "548569",
+    "Html": "<blockquote>\nIf I try to connect to the local server (replica), I can see updates, but I can’t modify or create updates.<br />\n</blockquote>\nThat's a normal situation. This is how Replica works. you can't change anything on a replica (except deleting updates). You will never be able to publish directly to the replica or approve directly to the replica. Replica server are manage by the upstream server.<br />\n<blockquote>\nIf I add my account on the administrators group of upstream server, no problem.<br />\n</blockquote>\nTo manage a Wsus server with WPP, you need to be in the Wsus administrators group.<br />\n",
+    "PostedDate": "2014-06-24T02:43:01.303-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1259186",
+    "ThreadId": "548569",
+    "Html": "Okay for replica.\r<br />\n<br />\nTo manage remotely the WSUS upstream server with WPP, I am on the WSUS administrators group on Upstream and Replica.\r<br />\nIf I try to connect remotely to the upstream server in WPP, I got the certificate error.\r<br />\n<br />\nIf I add my account on the administrators group on the upstream server only, it works.\r<br />\n<br />\nI just want to be able to work on WPP remotely through a replica server, and without to be administrator of the upstream server.\r<br />\n<br />\nIs it possible ?<br />\n",
+    "PostedDate": "2014-06-24T03:51:23.307-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1259310",
+    "ThreadId": "548569",
+    "Html": "Two points :<br />\n<ul>\n<li>It is useless to run WPP on the replica server. You will no be able to manage that server. Run WPP directly from your computer (Ensure the Wsus Console is installed).</li>\n<li>You don't have to be in the Windows Administrators group to manage a Wsus with WPP (or Wsus Console). You just have to use an account that is member of the &quot;Wsus administrators&quot; group, that is, is administrator of the Wsus functionality (not of Windows Server)</li>\n</ul>\n",
+    "PostedDate": "2014-06-24T10:23:57.757-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-01T00:58:51.673-07:00"
+  },
+  {
+    "Id": "1305871",
+    "ThreadId": "548569",
+    "Html": "Hello,\r<br />\n I have same kind of setup.\r<br />\nI have installed WPP on up stream server.<br />\nBut i am not able to detect the clients from WPP.... its giving error when i say &quot;detect&quot;\r<br />\nfirewall and settings are fine i have opened the ports which are required.\r<br />\n<br />\nAny help is most appreciable.\r<br />\n<br />\nThanks  <br />\n",
+    "PostedDate": "2014-09-18T03:44:48.707-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

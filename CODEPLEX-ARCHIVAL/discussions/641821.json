@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "1435725",
+    "ThreadId": "641821",
+    "Html": "I'm very familiar with WSUS itself, but a newbie for WPP.  I've successfully deployed several basic self-contained updates using WPP.\r<br />\n<br />\nBut how do I create and update for an exe that requires a custom command line parameters to make it run silently?\r<br />\n<br />\nI've searched and I find lots of posts that talk about using custom command lines, but I can't find anything that tells me specifically how to create a custom command line.\r<br />\n<br />\nI did check into using the &quot;Custom Update&quot; wizard in WPP, which looks like it will do what I need to do.  But is that the only way to create an update to use a custom command line?  Is there no way to just add command line parameters to a normal update?\r<br />\n<br />\nAlso, if I use the Custom Update wizard, or if there is indeed another easier way for normal updates, are there any caveats to be aware of regarding quote characters on the command line?  My command line does require quotes.\r<br />\n<br />\nOne other idea I had... I do have a license for WinZip self-extractor full version where I can create packages &quot;for software installation&quot; (where it extracts the self-extracting .exe to the TEMP directory, runs a command line, then deletes the extracted contents from TEMP).  I could encapsulate my program installer .exe inside the WinZip self-extractor and publish the WinZip .exe file.  So WSUS would just run the WinZip .exe file which would still require no extra parameters and run silently, and the WinZip .exe would then extract the actual software install .exe and run the custom command line.  Is there any reason that wouldn't work?\r<br />\n<br />\nThank you!<br />\n",
+    "PostedDate": "2015-07-23T11:02:43.377-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1435729",
+    "ThreadId": "641821",
+    "Html": "You can have a look at this documentation (page 3) : <a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=525620\" rel=\"nofollow\">TightVNC Deployment with Custom Settings</a><br />\n",
+    "PostedDate": "2015-07-23T12:38:00.277-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-07-23T14:25:24.487-07:00"
+  },
+  {
+    "Id": "1435738",
+    "ThreadId": "641821",
+    "Html": "Ha!  Thanks!  I really appreciate your reply.  Now I feel really stupid though (through entirely my own fault).  :)  Somehow I totally missed seeing that Command Line field.  Duh!<br />\n",
+    "PostedDate": "2015-07-23T13:29:49.28-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436295",
+    "ThreadId": "641821",
+    "Html": "Follow-up on this.  Is there any special handling of quotes on the command line?  My command line isn't working.\r<br />\n<br />\nThis is one of those things where the installer is an .msi encapsulated inside a setup.exe.  So the parameter I need to add to the command line for the setup.exe is:\r<br />\n/v”/qn REBOOT=ReallySuppress”\r<br />\n<br />\nThis works fine when I run that command line manually to install the product, but it's not working when deploying through WSUS with WPP.  The WindowsUpdate.log file on the workstation PC says it's installing the update, but it's not actually installed.  I'm thinking that maybe the quotes are the issue, but I don't know for sure.\r<br />\n<br />\nThank you.<br />\n",
+    "PostedDate": "2015-07-28T06:56:28.183-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436328",
+    "ThreadId": "641821",
+    "Html": "You can make multi try. Just revise the update and change the command-Line<br />\n",
+    "PostedDate": "2015-07-28T09:39:47.627-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436368",
+    "ThreadId": "641821",
+    "Html": "I'm sorry, but I don't know what you mean by multi try.  And in what way would I revise the command line?\r<br />\n<br />\nI will say, WSUS does re-detect that the update is not installed on the next detection, and does try to install it again, and again, and again.<br />\n",
+    "PostedDate": "2015-07-28T12:19:53.873-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436386",
+    "ThreadId": "641821",
+    "Html": "Right click on the update in WPP and choose 'Revise'. Then change the Command-Line until you find the right one.<br />\n",
+    "PostedDate": "2015-07-28T13:43:14.817-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436392",
+    "ThreadId": "641821",
+    "Html": "I know HOW to change the command line.  I don't know what I'd change it to.  That IS the correct the command line that I posted in the my original post.\r<br />\n<br />\nI'm still not sure what you mean by &quot;make multi try&quot; in your earlier reply today.  can you please explain that?\r<br />\n<br />\nSince you didn't address this question in your earlier replies, am I correct that I don't need to do anything special for having quotes in the command line?  I don't need to &quot;escape&quot; the quotes, or make them double quotes, or anything else special?\r<br />\n<br />\nThanks again.<br />\n",
+    "PostedDate": "2015-07-28T14:05:49.277-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436523",
+    "ThreadId": "641821",
+    "Html": "Well, I figured out my problem.  Darn &quot;autocorrect&quot; and copy &amp; paste! :)\r<br />\n<br />\nIt was indeed the quotes that were the issue, but not in the way I thought.\r<br />\n<br />\nI had copied and pasted the command line into WPP from an Outlook email message.  Outlook had &quot;autocorrected&quot; the quote characters to fancy &quot;open&quot; and &quot;close&quot; quote characters instead of just plain standard quotes.  So that's what I pasted into WPP.\r<br />\n<br />\nOnce I manually typed in the quote characters on the command line field in WPP so they were true quote characters, the install worked just fine.<br />\n",
+    "PostedDate": "2015-07-29T11:57:56.267-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-07-29T13:32:13.577-07:00"
+  }
+]

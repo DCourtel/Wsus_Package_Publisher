@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1432733",
+    "ThreadId": "640823",
+    "Html": "Hi,\r<br />\n<br />\nafter Import This Catalog: \r<br />\n<a href=\"http://armmf.adobe.com/arm-manifests/win/SCUP/ReaderCatalog-2015.cab\" rel=\"nofollow\">http://armmf.adobe.com/arm-manifests/win/SCUP/ReaderCatalog-2015.cab</a>\r<br />\npushing the update Fails. \r<br />\n<br />\nthe .cab file are available in the wsuscontent folder but in the wsus Publisher gui the update are not available! \r<br />\n<br />\nNeed some help! <br />\n",
+    "PostedDate": "2015-07-01T04:44:58.817-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1433714",
+    "ThreadId": "640823",
+    "Html": "First- Thank you for tell me the Catalog Adress for the new Reader, because....<br />\nI cant found the .cab in the Adobe FTP Server for Adobe Reader.<br />\nI cant found the .cab in the Adobe Download Section:<br />\n<a href=\"http://www.adobe.com/support/downloads/product.jsp?product=10&amp;platform=Windows\" rel=\"nofollow\">http://www.adobe.com/support/downloads/product.jsp?product=10&platform=Windows</a> , the traditional typical place....<br />\n<br />\nI'm downloaded the .exe manual, extract it to .msi and diffeent files more, change different install options with Adobe Customization Wizard, and then I create a new update in WPP, include the different files, and deploy it for a W7 Testclient. Works well.<br />\nI use Client-Group-permission with WPP, and not with WSUS, because it was a source of troubble in my installation to import and update the Database to make it visible in WSUS. <br />\n<br />\nMake a deinstallation and reinstall Adobe XI, start the next test:<br />\n<br />\nNow using catalog.....<br />\nopen Katalog, download and Import.  -  works. ( Take al little bit time )..<br />\nOn WPP main screen, Update is aviable under Updates / Adobe Systems, Inc / Adobe Reader - Adobe Acrobar ReaderDC - MUI15.06.30033 - ok.<br />\nGive it free for installation  ( on the same a W7 Testclient )  -but ... Status returned : not applicable - HMMMM!<br />\n<br />\nSet the catalog based deployment to &quot;Not approved&quot; , and the self created deployment to &quot; approved for Installation&quot;. <br />\nStatus returned &quot; not installed &quot;, and client installation start again.<br />\n<br />\nOk, based on this I will recommend to go the first way for deployment and dont use the catalog at the moment. Its the same like the old java deployment, and you can customize the Adobe Reader DC 2015 Installation ( e.g. without EULA )<br />\nUnfortunatly there is no .msi for the business Version AR DC 2015, .msi is only for the consumer version availible.<br />\n<br />\nPS:<br />\nCatalog imported update used &quot;requirements&quot; ( on the first site of configuration ) , self created not, maybe it works if you deactivate the requirements ..... ( not tested)<br />\n<br />\n<br />\nkind regards,<br />\nSirko<br />\n",
+    "PostedDate": "2015-07-09T05:52:21.373-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

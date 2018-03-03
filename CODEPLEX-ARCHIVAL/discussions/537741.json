@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1218719",
+    "ThreadId": "537741",
+    "Html": "Dear All,\r<br />\nI Have WSUS 6.3 (2012R2) And I have  CA in my Environment, I followed your steps that are shown in the Document &quot;Creating a Code Signing Certificate&quot;, But i noticed when you generated the Code Signing Certificate in step #2 that you selected &quot;My User Account&quot; in order to request the new Certificate.\r<br />\nMy Question is , Am I supposed to choose &quot;My Computer Account&quot; in order to request this new certificate ? because by the steps followed in the manual this certificate will be issued to the user account not the WSUS computer Account<br />\n",
+    "PostedDate": "2014-03-03T22:03:23.483-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1219015",
+    "ThreadId": "537741",
+    "Html": "I'm not an expert in PKI, but the most important thing is to import the certificat into the 'Computer profile' when importing into &quot;Trusted publisher&quot; and &quot;Trusted editor&quot;<br />\n",
+    "PostedDate": "2014-03-04T06:57:49.83-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:53:54.303-07:00"
+  }
+]

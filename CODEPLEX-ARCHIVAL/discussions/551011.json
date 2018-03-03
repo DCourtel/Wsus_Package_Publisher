@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1263910",
+    "ThreadId": "551011",
+    "Html": "Hi Guys,\r<br />\n<br />\nwe got two customers, each got WPP installed, now we wanna export Updates from one and Import into the other.\r<br />\nHow can we do that? We already tried to export the certificate and import it again, but doesnt work.\r<br />\nPlease can anybody help?\r<br />\n<br />\nGreetz Susie<br />\n",
+    "PostedDate": "2014-07-09T03:07:15.497-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:48:43.78-07:00"
+  },
+  {
+    "Id": "1317252",
+    "ThreadId": "551011",
+    "Html": "Hello,\r<br />\nI have the same Problem. How could I export Updates from one WSUS and Import them into a different WSUS with a different signing Cert ?\r<br />\n<br />\nSusie: Did you get it managed to do this task ?\r<br />\n<br />\nBest regards\r<br />\nIngo<br />\n",
+    "PostedDate": "2014-10-29T00:49:04.163-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1322080",
+    "ThreadId": "551011",
+    "Html": "Same problem here. Is there any solution?<br />\n",
+    "PostedDate": "2014-11-14T01:21:39.41-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1326954",
+    "ThreadId": "551011",
+    "Html": "+1\r<br />\nidem as you.\r<br />\n<br />\nps : Why the subject is closed ?\r<br />\n<br />\nbest regards<br />\n",
+    "PostedDate": "2014-11-28T03:00:39.467-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1327688",
+    "ThreadId": "551011",
+    "Html": "I've found a workaround for this issue. Its possible to unpack an wpp-exported cab-file, resign the inner cab-file with the certificate of the target wpp environment and than repack it to a new outer cab-file.<br />\n",
+    "PostedDate": "2014-12-01T06:23:24.727-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1327998",
+    "ThreadId": "551011",
+    "Html": "I didn't know why it is set to closed<br />\n",
+    "PostedDate": "2014-12-02T04:22:38.273-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

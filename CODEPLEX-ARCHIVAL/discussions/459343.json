@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1099631",
+    "ThreadId": "459343",
+    "Html": "Hi team.<br />\n<br />\nI have imported some updates from the HP update catalog for testing purposes.<br />\n<br />\nWhen I check on the reporttab for the update it says that some computers already has it installed(I haven't approved it).<br />\n<br />\n<img src=\"http://korta.nu/dovoi\" alt=\"Image\" /><br />\n<br />\nThe question is how this is possible when the &quot;Installed&quot;rules for this HP package is blank?<br />\n<br />\n<img src=\"http://korta.nu/t9caz\" alt=\"Image\" /><br />\n<br />\nThank you.<br />\n",
+    "PostedDate": "2013-09-26T05:57:21.797-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1099657",
+    "ThreadId": "459343",
+    "Html": "Hi,<br />\n<blockquote>\nWhen I check on the reporttab for the update it says that some computers already has it installed(I haven't approved it).<br />\n</blockquote>\nThis mean that 4 computers have received this update by another way. (HP update tool, manual installation...)<br />\n<blockquote>\nThe question is how this is possible when the &quot;Installed&quot;rules for this HP package is blank?<br />\n</blockquote>\nIn fact, a package have tow level of rules, &quot;Installable Item&quot; Level and &quot;Package&quot; Level. WPP only show you &quot;Installable Item&quot; Level rules.\r<br />\nIn Catalogs, rules are often in &quot;Package&quot; Level.\r<br />\n<br />\nBut the most important question is, what screen capture tool are you using ? It look like so cool :-)<br />\n",
+    "PostedDate": "2013-09-26T06:52:15.927-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-12T08:37:09.737-07:00"
+  },
+  {
+    "Id": "1099669",
+    "ThreadId": "459343",
+    "Html": "Ok! So there is no way for me to view the rules in the package level to verify what checks are used to determine if the HPpackage is installed?\r<br />\n<br />\nAnd about screencapture, download and install <a href=\"http://evernote.com/skitch/\" rel=\"nofollow\">Skitch</a> from evernote(FREE), it's totally great for fast screencaptures and edits with text, arrows etc!<br />\n",
+    "PostedDate": "2013-09-26T07:13:29.373-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1099683",
+    "ThreadId": "459343",
+    "Html": "<blockquote>\nSo there is no way for me to view the rules in the package level to verify what checks are used to determine if the HPpackage is installed? <br />\n</blockquote>\nFor instance no. I have to add this feature in a next release.\r<br />\n<br />\nIf you really want to see these information : Right-click on an update, choose revise, click Cancel, go to Help, send Debug Infor, click on the link &quot;show informations...&quot;. This will open the log file. Go to the end of the text file and search for &quot;Isisnstalled&quot;<br />\n",
+    "PostedDate": "2013-09-26T07:34:08.777-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

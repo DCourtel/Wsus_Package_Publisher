@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1248396",
+    "ThreadId": "546231",
+    "Html": "Hello,\r<br />\n<br />\ni am very thankfull for this site. I am totally new and have to learn very much.\r<br />\n<br />\nI Installed my WPP right and got it working with the Certificates etc.\r<br />\n<br />\nI delopyed Flash player 13.0.214 without any prolbems (also without many settings... it just worked)...\r<br />\n<br />\nNow i try to deploy Java 7 Update 55. I use the 7 Update 21 pdf ... but my java 7 doesnt install.\r<br />\n<br />\nFirst i tryed the Java SDK - that worked. But IE doesnt use this, so i want to install the JRE - but here my testclient hangs somewhere. I also tryed without the uninstaller, but it doesnt work.\r<br />\n<br />\nI get the stuff like in the pdf. My client detects it, but then he updates for ca. 1 hour... and fails. Maybe after all timeouts are gone.\r<br />\n<br />\nI also dont know sure where to find procukt codes... i think these are right?\r<br />\nJava 7 55 32 bit: 4EA42A62-D930-4AC4-784B-F238120755FF\r<br />\nJava 7 55 64 bit: 4EA42A62-D930-4AC4-784B-F268140755FF\r<br />\n<br />\nThats what my reg keys are called. there is also an entry in this regkey with Productkey - but its an oter thing without the Versions at the last patterns. so i think that postet bevore should be the right keys.\r<br />\n<br />\nIs there any handful way to find these keys? without installing and registry checking?\r<br />\n(maybe a tool or something...)\r<br />\n<br />\nAlso my clients have serveral versions of Java installed, i would like to uninstall all older versions, but i dont know how.\r<br />\n<br />\nWith the Acrobat Reader 11.0.7 i cannot find a msi-file at the ftp servers. \r<br />\n<br />\nI would be very thankfull if someone makes me a howto like the pdf's for my problems.\r<br />\n<br />\nSorry for my bad english.\r<br />\n<br />\nGreetings<br />\n",
+    "PostedDate": "2014-05-22T07:04:18.893-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1248529",
+    "ThreadId": "546231",
+    "Html": "<strong>derklausi wrote:</strong><br />\n<blockquote>\nWith the Acrobat Reader 11.0.7 i cannot find a msi-file at the ftp servers. <br />\n</blockquote>\nYou will need to extract the MSI file from the exe file located at the FTP server. I think this command should work.<br />\n<pre><code>AdbeRdr11007_en_US -nos_o&quot;C:\\Folder&quot; -nos_ne</code></pre>\n\nOnce you have the MSI file you can create a MST transform according to the PDF guide. Please see my previous attempts when publishing Adobe Reader 11.0.7, <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/545390\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/545390</a><br />\n",
+    "PostedDate": "2014-05-22T11:17:21.527-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1248532",
+    "ThreadId": "546231",
+    "Html": "Another option is to import the Catalog. I only have a german HowTo: <a href=\"http://www.wsus.de/veroeffentlichen_von_hardwareupdates_mit_hilfe_von_wsus_package_publisher\" rel=\"nofollow\">http://www.wsus.de/veroeffentlichen_von_hardwareupdates_mit_hilfe_von_wsus_package_publisher</a> There you can see how easy you can import Updates from a catalog.\r<br />\n<br />\nIn WPP you can use a EXE with Commandline Parameters. This is another option for you.\r<br />\n<br />\nDid you use the MSI in Java 7? If yes, you only have to click next &gt; next &gt; publish. Maybe a rule for only clients, but it must work without a rule too.<br />\n",
+    "PostedDate": "2014-05-22T11:25:18.877-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1248731",
+    "ThreadId": "546231",
+    "Html": "Otapx: Thank you, that worked so far, now i have the MSI Files. I will follow the PDF on the Documents Page and then have  a look at your Thread (i already found it, but i was to many steps bevore yesterday).<br />\n<br />\nWinfriedSonntag: Also thank you, the catalogue is a nice idea. We have Fujitsu Siemens Esprimo Clients (all almost the same) ... but i cant find a catalogue to download. I think a catalog would be the easyest <br />\nCan u help me finding a catalog? Maybe also a Dell etc. ... i will not use Driver etc. for now, first Java and Reader and so on (the stuff that is on every pc an wants to be updated) would be enough for me.<br />\n<br />\nJava/MSI: I started Setup on a Client and copy the MSI from the Folder, so i think i have the msi. When i deploy it as Update just selecting the msi an next next next publish the Client hangs installing the update.<br />\n",
+    "PostedDate": "2014-05-23T00:06:56.547-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1248737",
+    "ThreadId": "546231",
+    "Html": "<strong>derklausi wrote:</strong><br />\n<blockquote>\nWinfriedSonntag: Also thank you, the catalogue is a nice idea. We have Fujitsu Siemens Esprimo Clients (all almost the same) ... but i cant find a catalogue to download. I think a catalog would be the easyest <br />\nCan u help me finding a catalog? Maybe also a Dell etc. ... i will not use Driver etc. for now, first Java and Reader and so on (the stuff that is on every pc an wants to be updated) would be enough for me.<br />\n</blockquote>\nWPP will bring some catalogs.\r<br />\nMenu Updates &gt; Manage Catalog Subscriptions &gt; Load a Shared Catalog. Here you will find Catalogs are shipped with WPP. Ask your dealer for Catalogs, they are the same who are using in System Center Configuration Manager.<br />\n<blockquote>\nJava/MSI: I started Setup on a Client and copy the MSI from the Folder, so i think i have the msi. When i deploy it as Update just selecting the msi an next next next publish the Client hangs installing the update.<br />\n</blockquote>\nDid you copying all files? The MSI alone is noth enough.\r<br />\n<a href=\"http://www.klaus-hartnegg.de/gpo/msi_java.html\" rel=\"nofollow\">http://www.klaus-hartnegg.de/gpo/msi_java.html</a>\r<br />\n<br />\nHere are some configuration tipps: <a href=\"http://www.kevintaber.com/2011/10/25/disable-java-auto-update/\" rel=\"nofollow\">http://www.kevintaber.com/2011/10/25/disable-java-auto-update/</a> Every Registry Key or Value can be set/edit/delete with Group Policy Preferences.<br />\n",
+    "PostedDate": "2014-05-23T00:16:23.243-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1248757",
+    "ThreadId": "546231",
+    "Html": "Yes, i also copied the data1.cab and jre1031.mst file from the Java Setup and added them in the wpp as aditional files, so they should be available during install.<br />\n",
+    "PostedDate": "2014-05-23T01:11:05.27-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1248815",
+    "ThreadId": "546231",
+    "Html": "<strong>derklausi wrote:</strong><br />\n<blockquote>\nYes, i also copied the data1.cab and jre1031.mst file from the Java Setup and added them in the wpp as aditional files, so they should be available during install.<br />\n</blockquote>\nOK, and what exactly Errormessages will be created in Eventlog on the Clients? Did the installation failed at each client or only on one or two clients? Did the manuelly installation works?<br />\n",
+    "PostedDate": "2014-05-23T04:06:30.393-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:48:15.233-07:00"
+  }
+]

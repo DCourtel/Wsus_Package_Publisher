@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1314216",
+    "ThreadId": "570023",
+    "Html": "Hello,<br />\n<br />\nI<code>ve already installed and configured WPP. Certificate was published and add to group policy, firewall rules also were configured. Then I</code>ve setuped test virtual workstation. First I<code>ve tried to publish tightVNC and this application was successfully published,detected by test workstation and installed. Then I</code>ve tried to publish Adobe Reader XI. I<code>ve downloaded Polish version 11.0.0 from Adobe FTP and published it with deployment instruction from this site. Test workstation also detected this update and succesfully instaled it. Then I</code>ve tried to publish update 11.0.09 for Adobe Reader XI. I<code>ve also configured and published update. But Status for this update was Not applicable. I</code>ve tried to invistigate this problem and found the solution that need to add processor architecture    in rules window. I<code>ve added this options, update changed status for this workstationfrom Not applicable no Not installed, but workstation still not detected this update. Then I have tried any combinations of rules for this update. But nothing changed and at the end I have reinstalled virtual machine but dont changed published applications like vnc and adobe reader xi and update for it. But yesterday this new virtual machine do</code>nt detect any updates. Also vnc that worked before.. Today I power on virtual machine and it see TightVNC, but not detect Adobe Reader XI .. In the WPP console Adobe Reader XI 11.0.0 has status Not Installed for this workstation. This update already approved.. The update 11.0.09 not approved and has status not applicable. At the second window of rules: &quot;Indicate here the rule or rules that allow clients computer to determine if the update is installable.&quot; I<code>ve add processor architecture for x86 and x64 ( Is it possible in the future add feature for x86/x64 systems to select in this case?) <br />So I don</code>t know what to do now.. How to check what can blocking detect update for Adobe Reader? Why workstation can`t detect original adobe reader 11.0.0 that was published and worked before.. and also how to resolve problem with not applicable status for adobe reader update? <br />\nWhen I try to install 11.0.09 from msp file it successfully installed on test workstation.. Is I need to check superseed for  published adobe reader 11.0.0 in the 11.0.09 update settings?<br />\n<br />\nIf you need any logs or screenshots I can paste it here<br />\n",
+    "PostedDate": "2014-10-17T00:25:26.29-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1314245",
+    "ThreadId": "570023",
+    "Html": "Recreated update for adobe reader 11.0.0 from mui installer downloaded from adobe ftp. Workstation is online in WPP. Sent Ping, sent detect. Worksatation changed status from unknown to Not installed for this update. I<code>ve approved update and workstation still not detect this update in Windows Update. In pending updates only tightvnc that I have not installed yet... I don</code>t know what to do..<br />\n",
+    "PostedDate": "2014-10-17T02:01:01.803-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1314263",
+    "ThreadId": "570023",
+    "Html": "After some investigations I found that in WSUS Console this update had status approved but not benn downloaded yet.. \r<br />\nThe I<code>ve restarted WSUS Service and checked in WSUS console the status again. Now update is approved and test workstation detected this update in WU :)\r<br />\r<br />Ok. let</code>s try to install vnc and reader 11.0.0. Then will try to publish update 11.0.09 for reader again :)<br />\n",
+    "PostedDate": "2014-10-17T02:38:03.54-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1314282",
+    "ThreadId": "570023",
+    "Html": "It works now! But I think that it is a bug that I need start WSUS service every time when workstation has a problem with updates detect. \r<br />\nbecause when i try to stop WSUS service from console I recieve an error that service is not running. Then I start service, go to test workstation and checking for new updates. And after this manipulations Windows Update successfuly detect new updates<br />\n",
+    "PostedDate": "2014-10-17T03:33:12.397-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1314361",
+    "ThreadId": "570023",
+    "Html": "Do you see any error message in the C:\\Windows\\WindowsUpdate.log<br />\n",
+    "PostedDate": "2014-10-17T07:35:33.753-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1314370",
+    "ThreadId": "570023",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nDo you see any error message in the C:\\Windows\\WindowsUpdate.log<br />\n</blockquote>\nIt is works now.. <br />\n<br />\nCould you help me with two other problems?<br />\n<br />\nFirst one is that after adobe reader is installed  from wsus i have not any shortcuts for Adobe reader... When I check msi package in Adobe customization wizard I see two shortcuts: one on desktop and the second in start menu -&gt; programs<br />\nHow can resolve this problem? My test workstation has Windows 7 x64 system<br />\n<br />\nThe second problem, I don`t know how to deploy customized version of reader 11.0.0 for clients which already has installed any other versions of Adobe Reader 11.x.x manually..  Is it possible to create some rules  to remove adobe reader if for example adobe auto update is installed and then install customized version from wsus?<br />\n",
+    "PostedDate": "2014-10-17T07:55:52.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

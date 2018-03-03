@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-01-26T12:07:01.533-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nwould it be possible to change the product and vendor and title when importing from a catalog? Unfortunatly the scup catalogs from adobe and the .msi files are using different vendors.\r\nSo it would be nice to have the imported updates placed into the correct category. See screenshot:\r\n\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2014-01-26T12:07:01.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-01-17T03:07:10.837-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Postponed"
+    },
+    "Summary": "Change while importing",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 169
+  },
+  "FileAttachments": [
+    {
+      "FileId": 780350,
+      "FileName": "17-01-2014 11-44-44.jpg",
+      "DownloadUrl": ".\\780350"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "I will study this in the V2.",
+      "PostedDate": "2014-01-26T12:06:41.237-08:00",
+      "Id": 131623
+    }
+  ]
+}

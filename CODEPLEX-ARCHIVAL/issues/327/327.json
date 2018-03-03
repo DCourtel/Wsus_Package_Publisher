@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Please, for this type of question, open a «Discussion» instead of an «Issue». ",
+    "ClosedDate": "2017-01-30T22:05:37.513-08:00",
+    "CommentCount": 7,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\ntoday I tried to create and distribute a custom update (batch-file-execution) with version 1.3.1411.09. Creating the update worked, but installation on clients failed (error FFFC). So I downloaded the latest version 1.3.1511.15 and tried the same here. The update appears in WSUS correctly but is shown as inapplicable for the clients (consequently they don't get the update).\r\nIt was exactly the same procedure as I had done with the old version 1.3.1411.09.\r\nCan someone help me here? How can I execute batch-scripts via custom update (for uninstalling old Java versions)?\r\n\r\nThanks in advance.\r\ndocwaremf",
+    "LastUpdatedDate": "2017-01-30T22:05:37.53-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-02-23T04:31:23.147-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Custom Update is shown as inapplicable",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 327
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "For Uninstall and Install new Java Versions, you can use Uninstall2Install. Only you need to read a little german: http://wsus.de/uninstall2install",
+      "PostedDate": "2016-02-23T05:01:11.083-08:00",
+      "Id": 196885
+    },
+    {
+      "Message": "Thank you! I will try that\nBut anyway: how can I create a custom update to execute a batch file?",
+      "PostedDate": "2016-02-24T04:46:51.3-08:00",
+      "Id": 196916
+    },
+    {
+      "Message": "I never try to create a custom update for extiting a batch. Can you share the content from the batch?",
+      "PostedDate": "2016-02-24T05:38:37.233-08:00",
+      "Id": 196919
+    },
+    {
+      "Message": "Sorry, execute, not extiting. :)",
+      "PostedDate": "2016-02-24T05:39:30.787-08:00",
+      "Id": 196920
+    },
+    {
+      "Message": "Of course:\nwmic product where name=\"Java 8 Update 66\" call uninstall\nwmic product where name=\"Java 8 Update 66\" call uninstall /nointeractive\n",
+      "PostedDate": "2016-02-24T05:56:05-08:00",
+      "Id": 196921
+    },
+    {
+      "Message": "What is Uninstall?\n\nI think the better way is to use it very simple:\n\nCode:\n\nstart /wait msiexec /x {Number from Java 8 Update 66} /options for silent\n\nNothing more, this must run. You can check it before with following trick:\n\nCreate the Batch, put in %windir%\\SoftwareDistribution. Create a scheduled Task, run this Task with User SYSTEM. If its running, the custom update within WPP must run too.",
+      "PostedDate": "2016-02-24T07:21:10.12-08:00",
+      "Id": 196925
+    },
+    {
+      "Message": "I tried to uninstall the previous Java versions, thats why I used \"Uninstall\". It worked, if I executed it manually, but it did not work via Custom Update in WPP.\nAlright, thank you, I will try it that way!",
+      "PostedDate": "2016-02-24T23:33:33.08-08:00",
+      "Id": 196938
+    }
+  ]
+}

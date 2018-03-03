@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1421973",
+    "ThreadId": "636170",
+    "Html": "shall i create update package for each new release for java Or just i create one package the publisher will understand to get updates from java catalog <br />\n",
+    "PostedDate": "2015-05-01T03:50:26.153-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1425767",
+    "ThreadId": "636170",
+    "Html": "Do you have a Java Catalog? ;) You have to create an update for each and every Java release you want to publish.\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2015-05-16T14:02:42.32-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

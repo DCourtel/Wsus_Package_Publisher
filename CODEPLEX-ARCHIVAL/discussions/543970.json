@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1240253",
+    "ThreadId": "543970",
+    "Html": "Hi all,\r<br />\n<br />\nI do my deployments for Adober Flash player and Reader with WPP.  It's all working fine, except the integration with Internet Explorer.\r<br />\nSome websites still want to install Flash player (Adobe Flash version check says it's installed) and Reader doesn't even show up on the add-ons.\r<br />\nHow can I get this fixed?  I want both add-ons to be active and working on all websites.\r<br />\n<br />\nRegards,\r<br />\n<br />\nAd<br />\n",
+    "PostedDate": "2014-05-01T06:55:14.593-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240307",
+    "ThreadId": "543970",
+    "Html": "There is two version of Flash Player, one for Internet Explorer (ActiveX) and another one for third party browser (Plugin)\r<br />\n<a href=\"http://www.adobe.com/products/flashplayer/distribution3.html\" rel=\"nofollow\">This This Page</a><br />\n",
+    "PostedDate": "2014-05-01T10:04:44.76-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240530",
+    "ThreadId": "543970",
+    "Html": "Of course I use the active-x version of Flash player.  If you check on <a href=\"http://helpx.adobe.com/flash-player.html\" rel=\"nofollow\">http://helpx.adobe.com/flash-player.html</a> it says the player is installed.  Still there are some websites that want to install it.  If you check for add-ons in IE it's available and loaded.\r<br />\nReader also installs fine and works OK, but no correct IE integration.  There is no add-on in IE.  Some Pdf's open in the browser, but that's not always the case.\r<br />\nIn both programs there is some integration, but it's not the same as installing from the Adobe website.<br />\n",
+    "PostedDate": "2014-05-02T00:21:59.75-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240665",
+    "ThreadId": "543970",
+    "Html": "<blockquote>\nThere is no add-on in IE. Some Pdf's open in the browser, but that's not always the case. <br />\n</blockquote>\nI wonder how this is possible : No add-on but some PDF open in IE !\r<br />\n<br />\nIf you install manually Flash Player on this computer, does it solve the issue ?\r<br />\nMay be you can find more help on Adobe Forum.<br />\n",
+    "PostedDate": "2014-05-02T07:51:35.697-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1242431",
+    "ThreadId": "543970",
+    "Html": "Both reader and Flash Player work fine when manually installed.\r<br />\nIt simply looks like the installation is not complete when doing this with WPP.\r<br />\nFlash is the one that seems to work best.  Only a few websites don't see that it's installed.  The Adobe flash check sees it's installed.\r<br />\nReader is the one with the most problems.  It does not show on the installed add-ons.  In some cases it shows on all add-ons.  Reading a PDF in IE works on a lot of websites, but not on all.\r<br />\nI see if the Adobe Forum can give me some answers.<br />\n",
+    "PostedDate": "2014-05-07T01:45:40.34-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1242949",
+    "ThreadId": "543970",
+    "Html": "Can you give us some example of URL where Falsh player are not detected ? Same for Adobe reader ?\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2014-05-08T02:13:58.23-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1251907",
+    "ThreadId": "543970",
+    "Html": "Sorry for the delay, but I'm very busy at the moment.\r<br />\nI have installed a test PC to reproduce the problems.  I could not reproduce the Flash problem.\r<br />\nI'm also not able to reproduce the Adobe reader problem, but there is no add-on in the list in IE.  That is quite strange, but it's working.\r<br />\nIt might have something to do with the IE version.  It could also be that these are just individual problems.\r<br />\nI continue my investigations, but for now I think we can close this case.\r<br />\nThanks.\r<br />\n<br />\n<br />\nRegards,\r<br />\n<br />\nAd<br />\n",
+    "PostedDate": "2014-06-02T04:26:19.587-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-06-02T09:13:46.383-07:00"
+  }
+]

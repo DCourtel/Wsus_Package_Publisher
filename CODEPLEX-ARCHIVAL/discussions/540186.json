@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1226862",
+    "ThreadId": "540186",
+    "Html": "hello!\r<br />\nI have done a package for the clients with the update Flash Player 11.0.0.77. The clients have sucessfully downloaded and installed. The problem is that Windows Update finds in that clients an old package with the version Flash Player 11.0.0.70 to download. Why doesnt it know that an newest version is already installed? <br />\n",
+    "PostedDate": "2014-03-26T04:39:13.83-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1227445",
+    "ThreadId": "540186",
+    "Html": "When you publish a new version of an already published software, you have to :<br />\n<ul>\n<li>Publish the new release as a superseding update.\r<br />\nOr</li>\n<li>Decline the old update.\r<br />\nOr</li>\n<li>Make 'isInstallable' rules in the old update, so that it never install over a more recent release.</li>\n</ul>\n",
+    "PostedDate": "2014-03-27T09:38:05.103-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:44:31.627-07:00"
+  }
+]

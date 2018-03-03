@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1461787",
+    "ThreadId": "650871",
+    "Html": "Just a quick note to say that I did not find this documented anywhere within this project - in order to get updates working on a client, I had to update this local (group) policy setting so that non-microsoft updates were accepted by the client.<br />\n",
+    "PostedDate": "2016-02-03T06:54:46.68-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

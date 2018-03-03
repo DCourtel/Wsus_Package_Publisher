@@ -1,0 +1,298 @@
+﻿23/09/2013 12:10:07	=================================================================================================================
+23/09/2013 12:10:07	Starting. Release : 1.3.1309.16
+23/09/2013 12:10:07	Upgrade Settings : False
+23/09/2013 12:10:07	Windows was installed in : es (Spanish)
+23/09/2013 12:10:07	Entering Void .ctor() : FrmSettings
+23/09/2013 12:10:07	Language is : Anglais.
+23/09/2013 12:10:07	Entering Wsus_Package_Publisher.WsusWrapper GetInstance()
+23/09/2013 12:10:07	Entering Void .ctor() : UpdateControl
+23/09/2013 12:10:07	Entering Void .ctor() : UpdateListViewer
+23/09/2013 12:10:07	Entering Wsus_Package_Publisher.WsusWrapper GetInstance()
+23/09/2013 12:10:07	Entering Void .ctor() : UpdateDetailViewer
+23/09/2013 12:10:08	Entering Wsus_Package_Publisher.Credentials GetInstance()
+23/09/2013 12:10:08	CredentialNotice set to : Features connecting to remote computers will use the same credentials than the application.
+23/09/2013 12:10:08	CredentialNotice set to : Features connecting to remote computers will use the same credentials than the application.
+23/09/2013 12:10:08	Entering Wsus_Package_Publisher.WsusWrapper GetInstance()
+23/09/2013 12:10:08	Entering Void chkCmbBxFilter_SelectionChanged()
+23/09/2013 12:10:08	Entering Void DisplayUpdates(Microsoft.UpdateServices.Administration.UpdateCollection)
+23/09/2013 12:10:08	Entering Void ClearDisplay()
+23/09/2013 12:10:08	Entering Void ClearBeforeConnecting()
+23/09/2013 12:10:08	Entering Void ClearDisplay()
+23/09/2013 12:10:08	Entering Void AdjustSplitterDistance()
+23/09/2013 12:10:08	Entering Void ResetControl()
+23/09/2013 12:10:08	Entering Void ClearDisplay()
+23/09/2013 12:10:08	Entering Void .ctor() : ComputerControl
+23/09/2013 12:10:08	Entering Void .ctor() : ComputerListViewer
+23/09/2013 12:10:08	Entering Wsus_Package_Publisher.Credentials GetInstance()
+23/09/2013 12:10:08	Entering Wsus_Package_Publisher.WsusWrapper GetInstance()
+23/09/2013 12:10:08	Entering Wsus_Package_Publisher.Credentials GetInstance()
+23/09/2013 12:10:08	Entering Void .ctor() : ComputerDetailViewer
+23/09/2013 12:10:08	Entering Void dtpInstalledAfter_ValueChanged(System.Object, System.EventArgs)
+23/09/2013 12:10:08	Entering Void Display(System.Windows.Forms.DataGridViewSelectedRowCollection)
+23/09/2013 12:10:08	Entering Void dtpInstalledAfter_ValueChanged(System.Object, System.EventArgs)
+23/09/2013 12:10:08	Entering Void Display(System.Windows.Forms.DataGridViewSelectedRowCollection)
+23/09/2013 12:10:08	Entering Wsus_Package_Publisher.WsusWrapper GetInstance()
+23/09/2013 12:10:08	Entering Void FrmWsusPackagePublisher_Shown(System.Object, System.EventArgs)
+23/09/2013 12:10:08	Entering Void FillServerList()
+23/09/2013 12:10:08	Entering System.Collections.Generic.List`1[Wsus_Package_Publisher.WsusServer] LoadServerSettings()
+23/09/2013 12:10:08	Entering Void .ctor()
+23/09/2013 12:10:08	Entering System.Collections.Generic.List`1[Wsus_Package_Publisher.WsusServer] LoadServerSettings() : AVENZOAR
+23/09/2013 12:10:08	Name : AVENZOAR
+23/09/2013 12:10:08	Entering System.Collections.Generic.List`1[Wsus_Package_Publisher.WsusServer] LoadServerSettings() : True
+23/09/2013 12:10:08	IsLocal : True
+23/09/2013 12:10:08	Entering Void set_Port(Int32) : 80
+23/09/2013 12:10:08	Port : 80
+23/09/2013 12:10:08	Entering System.Collections.Generic.List`1[Wsus_Package_Publisher.WsusServer] LoadServerSettings() : False
+23/09/2013 12:10:08	UseSSL : False
+23/09/2013 12:10:08	Entering System.Collections.Generic.List`1[Wsus_Package_Publisher.WsusServer] LoadServerSettings() : False
+23/09/2013 12:10:08	ignoreCertErrors : False
+23/09/2013 12:10:08	Entering System.Collections.Generic.List`1[Wsus_Package_Publisher.WsusServer] LoadServerSettings() : 0
+23/09/2013 12:10:08	Entering System.Collections.Generic.List`1[Wsus_Package_Publisher.WsusServer] LoadServerSettings() : 0
+23/09/2013 12:10:08	Entering System.Collections.Generic.List`1[Wsus_Package_Publisher.WsusServer] LoadServerSettings() : 0
+23/09/2013 12:10:08	Entering Void set_VisibleInWsusConsole(MakeVisibleInWsusPolicy) : Never
+23/09/2013 12:10:08	Adding server : AVENZOAR
+23/09/2013 12:10:08	Returning 1 Servers.
+23/09/2013 12:10:08	Entering Void .ctor(System.String, Boolean, Int32, Boolean, Int32, Int32, Int32) : AVENZOAR, True, 80, False, 0, 0, 0
+23/09/2013 12:10:08	Entering Void set_Name(System.String) : AVENZOAR
+23/09/2013 12:10:08	Entering Void .ctor(System.String, Boolean, Int32, Boolean, Int32, Int32, Int32) : True
+23/09/2013 12:10:08	Entering Void set_Port(Int32) : 80
+23/09/2013 12:10:08	Entering Void .ctor(System.String, Boolean, Int32, Boolean, Int32, Int32, Int32) : False
+23/09/2013 12:10:08	Entering Void set_DeadLineDaysSpan(Int32) : 0
+23/09/2013 12:10:08	Entering Void set_DeadLineHour(Int32) : 0
+23/09/2013 12:10:08	Entering Void set_DeadLineMinute(Int32) : 0
+23/09/2013 12:10:08	Entering Void set_VisibleInWsusConsole(MakeVisibleInWsusPolicy) : Never
+23/09/2013 12:10:08	Entering System.Object Clone() : False
+23/09/2013 12:10:08	Wsus Server AVENZOAR added to the Combobox
+23/09/2013 12:10:08	WPP is up and ready
+23/09/2013 12:10:11	Entering Void ConnectToServer(System.Object, System.EventArgs)
+23/09/2013 12:10:11	Entering Void ClearBeforeConnecting()
+23/09/2013 12:10:11	Entering Void ClearDisplay()
+23/09/2013 12:10:11	Entering Void AdjustSplitterDistance()
+23/09/2013 12:10:11	Entering Void ResetControl()
+23/09/2013 12:10:11	Entering Void ClearDisplay()
+23/09/2013 12:10:11	Entering Void .ctor() : ComputerControl
+23/09/2013 12:10:11	Entering Void .ctor() : ComputerListViewer
+23/09/2013 12:10:11	Entering Wsus_Package_Publisher.Credentials GetInstance()
+23/09/2013 12:10:11	Entering Wsus_Package_Publisher.WsusWrapper GetInstance()
+23/09/2013 12:10:11	Entering Wsus_Package_Publisher.Credentials GetInstance()
+23/09/2013 12:10:11	Entering Void .ctor() : ComputerDetailViewer
+23/09/2013 12:10:11	Entering Void dtpInstalledAfter_ValueChanged(System.Object, System.EventArgs)
+23/09/2013 12:10:11	Entering Void Display(System.Windows.Forms.DataGridViewSelectedRowCollection)
+23/09/2013 12:10:11	Entering Void dtpInstalledAfter_ValueChanged(System.Object, System.EventArgs)
+23/09/2013 12:10:11	Entering Void Display(System.Windows.Forms.DataGridViewSelectedRowCollection)
+23/09/2013 12:10:11	Entering Wsus_Package_Publisher.WsusWrapper GetInstance()
+23/09/2013 12:10:11	Try connecting to : AVENZOAR
+23/09/2013 12:10:11	Entering Void StartWaitingForm(System.String)
+23/09/2013 12:10:11	Entering Boolean Connect(Wsus_Package_Publisher.WsusServer, System.String) : AVENZOAR (Local), en
+23/09/2013 12:10:14	Connected to local Wsus
+23/09/2013 12:10:14	Entering Void set_UserRole(Microsoft.UpdateServices.Administration.UpdateServerUserRole) : Administrator
+23/09/2013 12:10:14	Entering CertificateStatus CheckCertificateStatus(Microsoft.UpdateServices.Administration.IUpdateServerConfiguration)
+23/09/2013 12:10:14	Entering System.String GetTempFolder()
+23/09/2013 12:10:14	Returning : C:\DOCUME~1\pacabvid\CONFIG~1\Temp\1\WPP\
+23/09/2013 12:10:14	Trying to get certificate from server.
+23/09/2013 12:10:14	Successfully get certificate from server.
+23/09/2013 12:10:14	EffectiveDate : 22/09/2013 14:14:07 / ExpirationDate : 21/09/2018 14:14:07
+23/09/2013 12:10:14	Valid
+23/09/2013 12:10:14	Entering Void set_GetCertificateStatus(CertificateStatus) : Valid
+23/09/2013 12:10:14	Entering Int32 CheckCertificateKeyLength(Microsoft.UpdateServices.Administration.IUpdateServerConfiguration)
+23/09/2013 12:10:14	Entering System.String GetTempFolder()
+23/09/2013 12:10:14	Returning : C:\DOCUME~1\pacabvid\CONFIG~1\Temp\1\WPP\
+23/09/2013 12:10:14	Entering Int32 GetCertificateKeyLength(System.String) : C:\DOCUME~1\pacabvid\CONFIG~1\Temp\1\WPP\certificate.cer
+23/09/2013 12:10:14	Will return 2048
+23/09/2013 12:10:14	Will return : 2048
+23/09/2013 12:10:14	Entering Boolean Connect(Wsus_Package_Publisher.WsusServer, System.String) : 2048
+23/09/2013 12:10:14	Successfully connected to Wsus server.
+23/09/2013 12:10:14	This is not a Replica server.
+23/09/2013 12:10:14	Entering PopulateTreeviewWithComputerGroups. With group : All Computers And node : All Computers
+23/09/2013 12:10:14	Entering PopulateTreeviewWithComputerGroups. With group : Unassigned Computers And node : Unassigned Computers
+23/09/2013 12:10:14	Entering PopulateTreeviewWithComputerGroups. With group : EquiposServidoresSistemas-AvisarAntes And node : EquiposServidoresSistemas-AvisarAntes
+23/09/2013 12:10:14	Entering PopulateTreeviewWithComputerGroups. With group : EquiposActualizables And node : EquiposActualizables
+23/09/2013 12:10:15	Entering PopulateTreeviewWithComputerGroups. With group : EquiposNoActualizables And node : EquiposNoActualizables
+23/09/2013 12:10:15	Entering PopulateTreeviewWithComputerGroups. With group : PDFCreator And node : PDFCreator
+23/09/2013 12:10:15	Entering PopulateTreeviewWithComputerGroups. With group : ServicePack And node : ServicePack
+23/09/2013 12:10:15	Entering PopulateTreeviewWithComputerGroups. With group : Adobe Reader 9.5.0 And node : Adobe Reader 9.5.0
+23/09/2013 12:10:15	Entering PopulateTreeviewWithComputerGroups. With group : Windows 7 And node : Windows 7
+23/09/2013 12:10:15	Entering PopulateTreeviewWithComputerGroups. With group : Windows 2000 And node : Windows 2000
+23/09/2013 12:10:15	Entering PopulateTreeviewWithComputerGroups. With group : X And node : X
+23/09/2013 12:10:15	Entering PopulateTreeviewWithComputerGroups. With group : Pruebas And node : Pruebas
+23/09/2013 12:10:15	Entering PopulateTreeviewWithComputerGroups. With group : Pruebas Servidores And node : Pruebas Servidores
+23/09/2013 12:10:15	Entering PopulateTreeviewWithComputerGroups. With group : EquiposServidores And node : EquiposServidores
+23/09/2013 12:10:15	Entering PopulateTreeviewWithComputerGroups. With group : atse And node : atse
+23/09/2013 12:10:15	Entering PopulateTreeviewWithComputerGroups. With group : dcs And node : dcs
+23/09/2013 12:10:15	Entering PopulateTreeviewWithComputerGroups. With group : Windows Vista And node : Windows Vista
+23/09/2013 12:10:15	Entering PopulateTreeviewWithComputerGroups. With group : Adobe Reader 11 And node : Adobe Reader 11
+23/09/2013 12:10:15	Entering PopulateTreeviewWithComputerGroups. With group : Java 7 And node : Java 7
+23/09/2013 12:10:15	Entering PopulateTreeviewWithComputerGroups. With group : Windows XP And node : Windows XP
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : All Computers And computersGroup : All Computers
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : Adobe Reader 11 And computersGroup : Adobe Reader 11
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : Adobe Reader 9.5.0 And computersGroup : Adobe Reader 9.5.0
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : EquiposActualizables And computersGroup : EquiposActualizables
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : EquiposNoActualizables And computersGroup : EquiposNoActualizables
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : EquiposServidores And computersGroup : EquiposServidores
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : atse And computersGroup : atse
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : dcs And computersGroup : dcs
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : EquiposServidoresSistemas-AvisarAntes And computersGroup : EquiposServidoresSistemas-AvisarAntes
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : Java 7 And computersGroup : Java 7
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : PDFCreator And computersGroup : PDFCreator
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : Pruebas And computersGroup : Pruebas
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : Pruebas Servidores And computersGroup : Pruebas Servidores
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : ServicePack And computersGroup : ServicePack
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : Unassigned Computers And computersGroup : Unassigned Computers
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : Windows 2000 And computersGroup : Windows 2000
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : Windows 7 And computersGroup : Windows 7
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : Windows Vista And computersGroup : Windows Vista
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : Windows XP And computersGroup : Windows XP
+23/09/2013 12:10:15	Entering PopulateComputerGroups. With node : X And computersGroup : X
+23/09/2013 12:10:15	Entering Void FillMetaGroups()
+23/09/2013 12:10:15	Entering InitializeMetaGroups. With wsusServer : AVENZOAR
+23/09/2013 12:10:15	Entering InitializeComputerGroups With WsusServer : AVENZOAR
+23/09/2013 12:10:15	Entering Void PopulateMetaGroupNode()
+23/09/2013 12:10:15	Entering Void CollectUpdates()
+23/09/2013 12:10:15	Entering Void CreateNewCompany(Microsoft.UpdateServices.Administration.IUpdateCategory, Boolean)
+23/09/2013 12:10:15	Adding : Adobe Systems, Inc. With ID : 94d731de-22a6-4458-dc4d-b5267de026fc
+23/09/2013 12:10:15	Entering GetProductNode. For Company : Adobe Systems, Inc. and Category : Adobe Flash Player
+23/09/2013 12:10:15	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : 70cfad70-6629-b54b-5819-c809a605515e, Adobe Flash Player From Adobe Systems, Inc.
+23/09/2013 12:10:15	Entering Void set_ProductName(System.String) : Adobe Flash Player
+23/09/2013 12:10:15	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : Adobe Systems, Inc.
+23/09/2013 12:10:16	Adding update : Adobe Flash Player 32-bit/64-bit ActiveX 11.7.700.224
+23/09/2013 12:10:16	Adding update : Adobe Flash Player 32-bit/64-bit Plugin 11.7.700.224
+23/09/2013 12:10:16	Adding update : Adobe Flash Player 32-bit/64-bit ActiveX 11.8.800.94
+23/09/2013 12:10:16	Adding update : Adobe Flash Player 32-bit/64-bit Plugin 11.8.800.94
+23/09/2013 12:10:16	Entering GetProductNode. For Company : Adobe Systems, Inc. and Category : Adobe Reader
+23/09/2013 12:10:16	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : e1d507be-497c-d8fd-61d7-b0d93ee399ca, Adobe Reader From Adobe Systems, Inc.
+23/09/2013 12:10:16	Entering Void set_ProductName(System.String) : Adobe Reader
+23/09/2013 12:10:16	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : Adobe Systems, Inc.
+23/09/2013 12:10:16	Adding update : Adobe Reader 9.5.4
+23/09/2013 12:10:16	Adding update : Adobe Reader 9.5.0 - Español
+23/09/2013 12:10:16	Adding update : Reader 10.0.1
+23/09/2013 12:10:16	Adding update : Adobe Reader 9.5.2
+23/09/2013 12:10:16	Adding update : Adobe Reader 9.5.3
+23/09/2013 12:10:16	Adding update : Adobe Reader 9.5.1
+23/09/2013 12:10:16	Adding update : Reader 10.1.1 Update
+23/09/2013 12:10:16	Adding update : Reader 10.1.2 Update
+23/09/2013 12:10:16	Adding update : Reader 10.1.3 Update
+23/09/2013 12:10:16	Adding update : Reader 10.1.4 Update
+23/09/2013 12:10:16	Adding update : Reader 10.1.5 Update
+23/09/2013 12:10:16	Adding update : Reader 10.1.6 Update
+23/09/2013 12:10:16	Adding update : Reader 10.1.7 Update
+23/09/2013 12:10:16	Adding update : Reader 11.0.03 Update
+23/09/2013 12:10:16	Adding update : Adobe Reader 9.5.5
+23/09/2013 12:10:16	Adding update : Adobe Reader X (10.1.0) - Español
+23/09/2013 12:10:16	Adding update : Adobe Reader XI - Español
+23/09/2013 12:10:16	Adding update : Reader 11.0.04 Update
+23/09/2013 12:10:16	Entering Void CreateNewCompany(Microsoft.UpdateServices.Administration.IUpdateCategory, Boolean)
+23/09/2013 12:10:16	Adding : Igor Pavlov With ID : 1a3d8bc8-4d27-496c-4e5a-57bae5b3833d
+23/09/2013 12:10:16	Entering GetProductNode. For Company : Igor Pavlov and Category : 7-Zip 9.20
+23/09/2013 12:10:16	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : 16d51b61-81cd-3fe3-2de5-e144db0aad76, 7-Zip 9.20 From Igor Pavlov
+23/09/2013 12:10:16	Entering Void set_ProductName(System.String) : 7-Zip 9.20
+23/09/2013 12:10:16	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : Igor Pavlov
+23/09/2013 12:10:16	Entering GetProductNode. For Company : Igor Pavlov and Category : 7-Zip
+23/09/2013 12:10:16	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : 4e6e1d49-ea9f-d2f8-d19d-996dde9347d2, 7-Zip From Igor Pavlov
+23/09/2013 12:10:16	Entering Void set_ProductName(System.String) : 7-Zip
+23/09/2013 12:10:16	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : Igor Pavlov
+23/09/2013 12:10:17	Adding update : 7-Zip 9.20
+23/09/2013 12:10:17	Adding update : 7-Zip 9.20 (x64)
+23/09/2013 12:10:17	Entering Void CreateNewCompany(Microsoft.UpdateServices.Administration.IUpdateCategory, Boolean)
+23/09/2013 12:10:17	Adding : IrfanView With ID : 443ba841-323c-ab00-511e-ab57f9a1b20e
+23/09/2013 12:10:17	Entering GetProductNode. For Company : IrfanView and Category : IrfanView
+23/09/2013 12:10:17	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : 6a1a2c1f-fb31-09ac-6794-31709a31dde3, IrfanView From IrfanView
+23/09/2013 12:10:17	Entering Void set_ProductName(System.String) : IrfanView
+23/09/2013 12:10:17	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : IrfanView
+23/09/2013 12:10:17	Adding update : IrfanView 4.35
+23/09/2013 12:10:17	Adding update : IrfanView 4.36
+23/09/2013 12:10:17	Adding update : Spanish - Flash
+23/09/2013 12:10:17	Entering Void CreateNewCompany(Microsoft.UpdateServices.Administration.IUpdateCategory, Boolean)
+23/09/2013 12:10:17	Adding : Mozilla With ID : 65d2506b-799c-4ff4-408d-d4ee00ff7d41
+23/09/2013 12:10:17	Entering GetProductNode. For Company : Mozilla and Category : Firefox
+23/09/2013 12:10:17	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : 3d7aefdb-98da-a094-2fb5-3d3100181123, Firefox From Mozilla
+23/09/2013 12:10:17	Entering Void set_ProductName(System.String) : Firefox
+23/09/2013 12:10:17	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : Mozilla
+23/09/2013 12:10:18	Adding update : Mozilla Firefox 12
+23/09/2013 12:10:18	Adding update : Mozilla Firefox 23.0.1
+23/09/2013 12:10:18	Entering Void CreateNewCompany(Microsoft.UpdateServices.Administration.IUpdateCategory, Boolean)
+23/09/2013 12:10:18	Adding : Notepad++ With ID : 61d9e6c8-2fc0-0ec2-be83-d78adc14d1e2
+23/09/2013 12:10:18	Entering GetProductNode. For Company : Notepad++ and Category : npp633
+23/09/2013 12:10:18	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : 5984a176-0dd6-05ad-59be-d0f71be5cb96, npp633 From Notepad++
+23/09/2013 12:10:18	Entering Void set_ProductName(System.String) : npp633
+23/09/2013 12:10:18	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : Notepad++
+23/09/2013 12:10:18	Adding update : Notepad++ 6.3.3
+23/09/2013 12:10:18	Entering Void CreateNewCompany(Microsoft.UpdateServices.Administration.IUpdateCategory, Boolean)
+23/09/2013 12:10:18	Adding : Oracle With ID : b6641343-0f45-7cc4-cdbf-6a2205dfdb1b
+23/09/2013 12:10:18	Entering GetProductNode. For Company : Oracle and Category : Java 7
+23/09/2013 12:10:18	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : ff91b5fe-b010-45af-6047-7a584016b819, Java 7 From Oracle
+23/09/2013 12:10:18	Entering Void set_ProductName(System.String) : Java 7
+23/09/2013 12:10:18	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : Oracle
+23/09/2013 12:10:18	Adding update : Java 7 Update 21
+23/09/2013 12:10:18	Adding update : Java 7 Update 25
+23/09/2013 12:10:18	Entering Void CreateNewCompany(Microsoft.UpdateServices.Administration.IUpdateCategory, Boolean)
+23/09/2013 12:10:18	Adding : PDFCreator With ID : 774bbfb4-a11d-237d-fe4f-8d10f52e2576
+23/09/2013 12:10:18	Entering GetProductNode. For Company : PDFCreator and Category : PDFCreator
+23/09/2013 12:10:18	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : 43385aa1-0112-991b-16b6-5e5ceed36906, PDFCreator From PDFCreator
+23/09/2013 12:10:18	Entering Void set_ProductName(System.String) : PDFCreator
+23/09/2013 12:10:18	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : PDFCreator
+23/09/2013 12:10:19	Adding update : PDFCreator 1.7.0
+23/09/2013 12:10:19	Entering Void CreateNewCompany(Microsoft.UpdateServices.Administration.IUpdateCategory, Boolean)
+23/09/2013 12:10:19	Adding : The Document Foundation With ID : 65f64af5-704f-9bde-fa44-991d7aef7a71
+23/09/2013 12:10:19	Entering GetProductNode. For Company : The Document Foundation and Category : LibreOffice
+23/09/2013 12:10:19	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : f656e6b4-fca7-b25d-d57b-51c6ff659f83, LibreOffice From The Document Foundation
+23/09/2013 12:10:19	Entering Void set_ProductName(System.String) : LibreOffice
+23/09/2013 12:10:19	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : The Document Foundation
+23/09/2013 12:10:19	Adding update : LibreOffice 4.1.1.2
+23/09/2013 12:10:19	Entering Void SetComputerGroups(Wsus_Package_Publisher.ComputerGroup, System.Windows.Forms.TreeNode)
+23/09/2013 12:10:19	Entering Void SetComputerGroups(Wsus_Package_Publisher.ComputerGroup, System.Windows.Forms.TreeNode)
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : All Computers
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Adobe Reader 11
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Adobe Reader 9.5.0
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : EquiposActualizables
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : EquiposNoActualizables
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : EquiposServidores
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : atse
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : dcs
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : EquiposServidoresSistemas-AvisarAntes
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Java 7
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : PDFCreator
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Pruebas
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Pruebas Servidores
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : ServicePack
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Unassigned Computers
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Windows 2000
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Windows 7
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Windows Vista
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Windows XP
+23/09/2013 12:10:19	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : X
+23/09/2013 12:10:20	Entering Void StopWaitingForm()
+23/09/2013 12:10:20	Entering Void CheckSubscriptions()
+23/09/2013 12:10:20	Entering Wsus_Package_Publisher.CatalogSubscription GetCatalogSubscription(System.IO.FileInfo) : C:\Documents and Settings\pacabvid\Mis documentos\Descargas\Wsus Package Publisher\Release v1.3.1309.15v2\Subscribed Catalogs\MetaData\AdobeFlashPlayerCatalog_SCUP.cab.xml
+23/09/2013 12:10:20	Entering Wsus_Package_Publisher.CatalogSubscription GetCatalogSubscription(System.IO.FileInfo) : C:\Documents and Settings\pacabvid\Mis documentos\Descargas\Wsus Package Publisher\Release v1.3.1309.15v2\Subscribed Catalogs\MetaData\Reader11_Catalog.cab.xml
+23/09/2013 12:10:20	Entering Void trvWsus_AfterSelect(System.Object, System.Windows.Forms.TreeViewEventArgs)
+23/09/2013 12:10:20	Server
+23/09/2013 12:10:20	Entering Void InitializeContextMenuForServer()
+23/09/2013 12:10:20	Server Version is : 3.2.7600.262
+23/09/2013 12:10:20	Console Version is : 3.2.7600.262
+23/09/2013 12:10:20	Local OS is : Microsoft Windows NT 5.2.3790 Service Pack 2
+23/09/2013 12:10:26	Entering Void createUpdatetoolStripMenuItem_Click(System.Object, System.EventArgs)
+23/09/2013 12:10:26	Entering CreateNewUpdate with xmlAction : 
+23/09/2013 12:10:26	Entering Void .ctor() : FrmUpdateRulesWizard
+23/09/2013 12:10:26	Entering Void grpDsp1_SelectionChange(Wsus_Package_Publisher.GroupDisplayer)
+23/09/2013 12:10:26	Entering Void grpDsp1_SelectionChange(Wsus_Package_Publisher.GroupDisplayer)
+23/09/2013 12:10:26	RuleMsiProductInstalled
+23/09/2013 12:10:26	Entering Void .ctor() : FrmUpdateFilesWizard
+23/09/2013 12:10:26	Entering Void .ctor() : FrmUpdateRulesWizard
+23/09/2013 12:10:26	RuleProcessorArchitecture
+23/09/2013 12:10:26	RuleWindowsVersion
+23/09/2013 12:10:26	RuleMsiProductInstalled
+23/09/2013 12:10:26	Entering Void grpDsp1_SelectionChange(Wsus_Package_Publisher.GroupDisplayer)
+23/09/2013 12:10:26	Entering Void grpDsp1_SelectionChange(Wsus_Package_Publisher.GroupDisplayer)
+23/09/2013 12:10:26	Entering Void .ctor(System.Collections.Generic.Dictionary`2[System.Guid,Wsus_Package_Publisher.Company]) : FrmUpdateWizard
+23/09/2013 12:10:26	UnhandledException. Something Went Wrong
+23/09/2013 12:10:26	**** Value cannot be null.
+Parameter name: item
+23/09/2013 12:10:26	Entering Void InitializeComponent(System.Collections.Generic.Dictionary`2[System.Guid,Wsus_Package_Publisher.Company], Wsus_Package_Publisher.Company, Wsus_Package_Publisher.Product, Microsoft.UpdateServices.Administration.SoftwareDistributionPackage)
+23/09/2013 12:10:26	Entering Void .ctor() : FrmSendDebugInfo
+23/09/2013 12:10:26	Entering Wsus_Package_Publisher.WsusWrapper GetInstance()
+23/09/2013 12:10:26	Entering Void .ctor(System.Collections.Generic.Dictionary`2[System.Guid,Wsus_Package_Publisher.Company], Wsus_Package_Publisher.Company, Wsus_Package_Publisher.Product, Microsoft.UpdateServices.Administration.SoftwareDistributionPackage) : FrmUpdateInformationsWizard
+23/09/2013 12:10:26	Entering Void FillPrerequisites()
+23/09/2013 12:10:26	Entering Void InitializeComponent(Wsus_Package_Publisher.Company, Wsus_Package_Publisher.Product, Microsoft.UpdateServices.Administration.SoftwareDistributionPackage)
+23/09/2013 12:10:26	Entering Void InitializeUpdateFilesWizard()
+23/09/2013 12:10:26	Entering Void FrmUpdateWizard_Shown(System.Object, System.EventArgs)
+23/09/2013 13:11:37	Entering Void lnkLblShowInformations_LinkClicked(System.Object, System.Windows.Forms.LinkLabelLinkClickedEventArgs)

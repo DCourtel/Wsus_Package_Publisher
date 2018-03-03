@@ -1,0 +1,1506 @@
+[
+  {
+    "Id": 2,
+    "Title": "Delete old local published udpates on replica servers"
+  },
+  {
+    "Id": 3,
+    "Title": "Update Report is bigger than the form"
+  },
+  {
+    "Id": 5,
+    "Title": "Go to the file location on double-clicking"
+  },
+  {
+    "Id": 6,
+    "Title": "Anchor of \"Arrival Date\" textbox"
+  },
+  {
+    "Id": 7,
+    "Title": "Mark \"Expired\" updates as \"Refused (Expired)\""
+  },
+  {
+    "Id": 8,
+    "Title": "False missing file warning"
+  },
+  {
+    "Id": 9,
+    "Title": "Add a filter \"Installed or Non Applicable\""
+  },
+  {
+    "Id": 10,
+    "Title": "Add a warning in case of certificate problem"
+  },
+  {
+    "Id": 11,
+    "Title": "Anchor of the \"Prerequisistes\" checkComboBox"
+  },
+  {
+    "Id": 12,
+    "Title": "Default language to english"
+  },
+  {
+    "Id": 13,
+    "Title": "Possibility for setting Approval back to inherited"
+  },
+  {
+    "Id": 14,
+    "Title": "Allow \"Get WsusClientID\" and \"Reset WsusClientID\" buttons to use Credentials settings"
+  },
+  {
+    "Id": 15,
+    "Title": "Remember credentials"
+  },
+  {
+    "Id": 17,
+    "Title": "Add ability to do some actions before and/or after installing the update"
+  },
+  {
+    "Id": 18,
+    "Title": "'Show Pending Updates' doesn't use Credentials"
+  },
+  {
+    "Id": 19,
+    "Title": "Make Updates visible in WUP after SET IsLocallyPublished = 0"
+  },
+  {
+    "Id": 20,
+    "Title": "Correct Translation"
+  },
+  {
+    "Id": 21,
+    "Title": "Windows Version not set correctly"
+  },
+  {
+    "Id": 22,
+    "Title": "Add the option for \"reportnow\" and \"detectnow\""
+  },
+  {
+    "Id": 23,
+    "Title": "Delete or modify Product Title field"
+  },
+  {
+    "Id": 24,
+    "Title": "Add the Transforms command automatically when a .mst file is added"
+  },
+  {
+    "Id": 25,
+    "Title": "Filter online computers"
+  },
+  {
+    "Id": 26,
+    "Title": "WPP crash after check checkbox"
+  },
+  {
+    "Id": 27,
+    "Title": "Cannot access a closed Stream"
+  },
+  {
+    "Id": 28,
+    "Title": "Prerequisites are not shown correctly"
+  },
+  {
+    "Id": 29,
+    "Title": "Crash when revising an update with empty rules"
+  },
+  {
+    "Id": 30,
+    "Title": "Defining supersedes is not possible"
+  },
+  {
+    "Id": 31,
+    "Title": "WPP crashes when deleting update"
+  },
+  {
+    "Id": 32,
+    "Title": "Drag and drop of rules"
+  },
+  {
+    "Id": 33,
+    "Title": "Ctrl+A not working"
+  },
+  {
+    "Id": 34,
+    "Title": "Show Updatelog"
+  },
+  {
+    "Id": 35,
+    "Title": "Update selection on right clicking"
+  },
+  {
+    "Id": 36,
+    "Title": "Allow to Reload server data"
+  },
+  {
+    "Id": 37,
+    "Title": "Allow to filter on computer group with approval"
+  },
+  {
+    "Id": 38,
+    "Title": "Online computer status didn't work after double-clicking on a row in the report tab"
+  },
+  {
+    "Id": 39,
+    "Title": "Settings from previous release are not kept"
+  },
+  {
+    "Id": 40,
+    "Title": "WPP crash if in Security Bulletin ID Text"
+  },
+  {
+    "Id": 41,
+    "Title": "Position second Windows Update Creation Wizard"
+  },
+  {
+    "Id": 42,
+    "Title": "Switching languages without restart"
+  },
+  {
+    "Id": 43,
+    "Title": "Make visible not working with msp?"
+  },
+  {
+    "Id": 44,
+    "Title": "Show which computer is online"
+  },
+  {
+    "Id": 45,
+    "Title": "Allow to Save/Load set of rules"
+  },
+  {
+    "Id": 46,
+    "Title": "\"Show pending updates\" error"
+  },
+  {
+    "Id": 47,
+    "Title": "Couln't delete empty items in tree view"
+  },
+  {
+    "Id": 48,
+    "Title": "Windows 7 status not changing"
+  },
+  {
+    "Id": 49,
+    "Title": "Add Import/Export updates"
+  },
+  {
+    "Id": 50,
+    "Title": "Add ability to send debug info"
+  },
+  {
+    "Id": 51,
+    "Title": "Verification of file signature failed for file"
+  },
+  {
+    "Id": 52,
+    "Title": "Delete non-empty products"
+  },
+  {
+    "Id": 53,
+    "Title": "\"The parameter is incorrect\" when loading a Certificat"
+  },
+  {
+    "Id": 54,
+    "Title": "Add Certificate Expiration Date"
+  },
+  {
+    "Id": 55,
+    "Title": "Can not create an uninstall deployment to an update that does not support uninstall"
+  },
+  {
+    "Id": 56,
+    "Title": "Publishing operation failed because the console and remote server versions do not match."
+  },
+  {
+    "Id": 57,
+    "Title": "Showpendingupdates.exe firewallports?"
+  },
+  {
+    "Id": 58,
+    "Title": "Remember last used path"
+  },
+  {
+    "Id": 59,
+    "Title": "Table size in computerview"
+  },
+  {
+    "Id": 60,
+    "Title": "Clean c:\\Windows\\SoftwareDistribution"
+  },
+  {
+    "Id": 61,
+    "Title": "Remember last used or preconfigurated path"
+  },
+  {
+    "Id": 62,
+    "Title": "Timezone adjusted for Date/Time display under status and reports"
+  },
+  {
+    "Id": 63,
+    "Title": "Certificate Validation prevent publishing updates event if the certificate is ~Valid~"
+  },
+  {
+    "Id": 64,
+    "Title": "Adobe Reader 11 install - no start menu entry"
+  },
+  {
+    "Id": 65,
+    "Title": "Add custom update classification"
+  },
+  {
+    "Id": 66,
+    "Title": "Add setting to prevent Wsus to apply automatic approval rules to new locally published updates"
+  },
+  {
+    "Id": 67,
+    "Title": "Crash when checking \"Show online computers only\""
+  },
+  {
+    "Id": 68,
+    "Title": "Updates don't appear anymore after creation and publishing"
+  },
+  {
+    "Id": 69,
+    "Title": "Don't warn user when Server and Console version mismatch on a Replica."
+  },
+  {
+    "Id": 70,
+    "Title": "Reconnect last Server used"
+  },
+  {
+    "Id": 71,
+    "Title": "Adding update files from unc-path does not do anything"
+  },
+  {
+    "Id": 72,
+    "Title": "Wrong translation - German"
+  },
+  {
+    "Id": 73,
+    "Title": "Remove empty Vendors"
+  },
+  {
+    "Id": 74,
+    "Title": "Configuring certificate creation"
+  },
+  {
+    "Id": 75,
+    "Title": "Prefill WMI Namespace with root\\cimv2"
+  },
+  {
+    "Id": 76,
+    "Title": "UI bug when displaying rules"
+  },
+  {
+    "Id": 77,
+    "Title": "Scroll Bars in Custom Update Creator window"
+  },
+  {
+    "Id": 78,
+    "Title": "Code 800B0109 (Win 7 SP1) when installing Flash update 11.0.7.224 with automatic updates"
+  },
+  {
+    "Id": 79,
+    "Title": "Filter Computers"
+  },
+  {
+    "Id": 80,
+    "Title": "Windows 7 Clients shown \"offline\" - but they are online"
+  },
+  {
+    "Id": 81,
+    "Title": "Crash when ArrivalDateAfter = ArrivalDateBefore"
+  },
+  {
+    "Id": 82,
+    "Title": "Cleaning the SoftwareDistribution"
+  },
+  {
+    "Id": 83,
+    "Title": "Show Current Logon User"
+  },
+  {
+    "Id": 84,
+    "Title": "'Update File' & UNC path"
+  },
+  {
+    "Id": 85,
+    "Title": "Crash when 'ShowPendingUpdates' is launch with wrong credentials"
+  },
+  {
+    "Id": 86,
+    "Title": "Update Event History"
+  },
+  {
+    "Id": 87,
+    "Title": "Check Admin rights before trying to generate self-Signed certificate"
+  },
+  {
+    "Id": 88,
+    "Title": "Custom Update : Use the return code of the VBScript"
+  },
+  {
+    "Id": 89,
+    "Title": "Automatically elevate privileges if UAC is on"
+  },
+  {
+    "Id": 90,
+    "Title": "Automatically check online for new version"
+  },
+  {
+    "Id": 91,
+    "Title": "Speed up the display of the updates creation wizard"
+  },
+  {
+    "Id": 92,
+    "Title": "Import Catalogs (*.cab)"
+  },
+  {
+    "Id": 93,
+    "Title": "Automatically install Certificate when running local"
+  },
+  {
+    "Id": 94,
+    "Title": "Display Certificate Key Length"
+  },
+  {
+    "Id": 95,
+    "Title": "Adding double click action to update"
+  },
+  {
+    "Id": 96,
+    "Title": "Server 2012 R2 Preview - Create Certificate - Application crash"
+  },
+  {
+    "Id": 97,
+    "Title": "Synchronize with Downstream Servers"
+  },
+  {
+    "Id": 98,
+    "Title": "Create Superseding Update"
+  },
+  {
+    "Id": 99,
+    "Title": "CreateDirectory failed if WSUS running in SSL Mode"
+  },
+  {
+    "Id": 100,
+    "Title": "Check automatically if newest version of Catalog is available"
+  },
+  {
+    "Id": 101,
+    "Title": "Path too long exception"
+  },
+  {
+    "Id": 102,
+    "Title": "Automatically convert LocalTime to UniversalTime"
+  },
+  {
+    "Id": 103,
+    "Title": "Spelling Error on server/client version check dialog box."
+  },
+  {
+    "Id": 104,
+    "Title": "[Postponed] Option to show Microsoft Updates"
+  },
+  {
+    "Id": 105,
+    "Title": "BuildNumber in Windows Version rule can't be more than 100"
+  },
+  {
+    "Id": 106,
+    "Title": "Cannot delete some folders in UpdateServicePackage Folder"
+  },
+  {
+    "Id": 107,
+    "Title": "WPP hung if changing Computer in computer list"
+  },
+  {
+    "Id": 108,
+    "Title": "Modified Date rule doesn't set Hour, Minute and Second"
+  },
+  {
+    "Id": 109,
+    "Title": "Ideas for WPP V2 - Call for contributions"
+  },
+  {
+    "Id": 110,
+    "Title": "Filter for Updatelist"
+  },
+  {
+    "Id": 111,
+    "Title": "Multi-Thread the \"InstallUpdateNow\" option"
+  },
+  {
+    "Id": 112,
+    "Title": "Report Datefields transposed"
+  },
+  {
+    "Id": 113,
+    "Title": "Add a module under 'check computers against AD'"
+  },
+  {
+    "Id": 114,
+    "Title": "Reboot Feature with timer"
+  },
+  {
+    "Id": 115,
+    "Title": "Can't extract Release v1.3.1309.15 "
+  },
+  {
+    "Id": 116,
+    "Title": "clickable URLs"
+  },
+  {
+    "Id": 117,
+    "Title": "New filters"
+  },
+  {
+    "Id": 118,
+    "Title": "WPP doesn't remember custom activated columns"
+  },
+  {
+    "Id": 119,
+    "Title": "Upgrade to new version of WPP without loosing updates"
+  },
+  {
+    "Id": 121,
+    "Title": "When I click on Update Creation Wizard, I get a Send Debug Informations"
+  },
+  {
+    "Id": 122,
+    "Title": "Allow to abort \"Install This Update\" wizard"
+  },
+  {
+    "Id": 123,
+    "Title": "Crash if more than 64 jobs"
+  },
+  {
+    "Id": 124,
+    "Title": "WPP Update check"
+  },
+  {
+    "Id": 125,
+    "Title": "Problem with resign"
+  },
+  {
+    "Id": 126,
+    "Title": "create a superseding update"
+  },
+  {
+    "Id": 127,
+    "Title": "deleting an update with defined supersedes info"
+  },
+  {
+    "Id": 128,
+    "Title": "[Solved] Quelques fautes de frappes ou erreurs de traduction à corriger"
+  },
+  {
+    "Id": 129,
+    "Title": "WMI Namespaces"
+  },
+  {
+    "Id": 130,
+    "Title": "Catalog comparison"
+  },
+  {
+    "Id": 131,
+    "Title": "[Solved] GUI correction needed"
+  },
+  {
+    "Id": 132,
+    "Title": "Keep formating in revise dialog"
+  },
+  {
+    "Id": 133,
+    "Title": "Show Package Level Rules"
+  },
+  {
+    "Id": 134,
+    "Title": "COM Exeption. Verify the firewall settings on the remote machine"
+  },
+  {
+    "Id": 135,
+    "Title": "Various English Translation Issues."
+  },
+  {
+    "Id": 136,
+    "Title": "Hourglass will not change back"
+  },
+  {
+    "Id": 137,
+    "Title": "need Form for Proxy Settings"
+  },
+  {
+    "Id": 138,
+    "Title": "Sorting in DataGridView are not preserved when selection change"
+  },
+  {
+    "Id": 139,
+    "Title": "New OS (8.1 and Windows 2012 R2)"
+  },
+  {
+    "Id": 140,
+    "Title": "Error when trying to show updates in WSUS console"
+  },
+  {
+    "Id": 141,
+    "Title": "Certificate Error"
+  },
+  {
+    "Id": 142,
+    "Title": "Crash if trying to sort MetaGroup while there's no MetaGroup"
+  },
+  {
+    "Id": 143,
+    "Title": "WPP wrongly allows to revise an update while Console Version and Server Version differ"
+  },
+  {
+    "Id": 144,
+    "Title": "Update fails but WPPstatus set to Installed?"
+  },
+  {
+    "Id": 145,
+    "Title": "New Actions in Custom Update"
+  },
+  {
+    "Id": 146,
+    "Title": "Sorting by date uses string sorting"
+  },
+  {
+    "Id": 147,
+    "Title": "\"Manage Catalogs Subscription\" form is in English"
+  },
+  {
+    "Id": 148,
+    "Title": "Package wants to reinstall again and again...."
+  },
+  {
+    "Id": 149,
+    "Title": "Import \"Metadata-Only Update\" from Catalog"
+  },
+  {
+    "Id": 150,
+    "Title": "Error code -2147023293"
+  },
+  {
+    "Id": 151,
+    "Title": "Error FFFC when trying to install a cutsom update with a ExecutableElement"
+  },
+  {
+    "Id": 152,
+    "Title": "MSP updates appears as 'Not Applicable' instead of 'Not Installed'"
+  },
+  {
+    "Id": 153,
+    "Title": "Package wants to install again"
+  },
+  {
+    "Id": 154,
+    "Title": "Remove Messagebox"
+  },
+  {
+    "Id": 155,
+    "Title": "Double-Click for Approval"
+  },
+  {
+    "Id": 156,
+    "Title": "Approve Update Time"
+  },
+  {
+    "Id": 157,
+    "Title": "GUI Error on \"color\" tab"
+  },
+  {
+    "Id": 158,
+    "Title": "Allow Custom Updates to work in the \"Wow6432Node\""
+  },
+  {
+    "Id": 159,
+    "Title": "Allow Custom Updates to 'Translate' directory path to x86 on x64 systems"
+  },
+  {
+    "Id": 160,
+    "Title": "Allow to revise a Custom Update"
+  },
+  {
+    "Id": 161,
+    "Title": "Support for Bundled Updates"
+  },
+  {
+    "Id": 162,
+    "Title": "Source Code Out of Date"
+  },
+  {
+    "Id": 163,
+    "Title": "Make Automatic Publishing of Imported Catalogs Optional"
+  },
+  {
+    "Id": 164,
+    "Title": "Metadata Only Publish Option"
+  },
+  {
+    "Id": 165,
+    "Title": "WSUS Error With MULTI_SZ"
+  },
+  {
+    "Id": 166,
+    "Title": "Check for Updates (WPP)"
+  },
+  {
+    "Id": 167,
+    "Title": "When looking at a catalog, you can't see what you've already imported"
+  },
+  {
+    "Id": 168,
+    "Title": "can't save certificate"
+  },
+  {
+    "Id": 169,
+    "Title": "Change while importing"
+  },
+  {
+    "Id": 170,
+    "Title": "replacements across vendor or products"
+  },
+  {
+    "Id": 171,
+    "Title": "Access to module dbo.SwitchLocallyPublished is blocked because the signature is not valid"
+  },
+  {
+    "Id": 172,
+    "Title": "[Solved] Custom updates disappear when i reopen the WSUS package publisher"
+  },
+  {
+    "Id": 173,
+    "Title": "Adobe reader distribution"
+  },
+  {
+    "Id": 174,
+    "Title": "servers driver and firmware updates through WPP"
+  },
+  {
+    "Id": 175,
+    "Title": "operational overview"
+  },
+  {
+    "Id": 176,
+    "Title": "Updates list view"
+  },
+  {
+    "Id": 177,
+    "Title": "Deploying Java to Windows 8.1 Clients"
+  },
+  {
+    "Id": 178,
+    "Title": "Is it possible to manage updates published in wsus console through WPP tool."
+  },
+  {
+    "Id": 179,
+    "Title": "WPP will support for multiple domains or forest level support?"
+  },
+  {
+    "Id": 180,
+    "Title": "Bug in v1.3.1401.04: Import Update fails from larger imported SCUP catalog"
+  },
+  {
+    "Id": 181,
+    "Title": "Manage Catalog Subscriptions Unit error"
+  },
+  {
+    "Id": 182,
+    "Title": "Status: Unknown"
+  },
+  {
+    "Id": 183,
+    "Title": "WSUS on HTTPS only"
+  },
+  {
+    "Id": 184,
+    "Title": "Not able to import certificate - solved"
+  },
+  {
+    "Id": 185,
+    "Title": "I have a non-standard SSL port for WSUS"
+  },
+  {
+    "Id": 186,
+    "Title": "Error message opening ShowPendingUpdates"
+  },
+  {
+    "Id": 187,
+    "Title": "Wrong certificate directory"
+  },
+  {
+    "Id": 188,
+    "Title": "VB script popup not displaying anymore"
+  },
+  {
+    "Id": 189,
+    "Title": "CreateDirectory failed"
+  },
+  {
+    "Id": 190,
+    "Title": "Checkbox Remote Commands"
+  },
+  {
+    "Id": 191,
+    "Title": "Update Level rules or Package level rules won't work"
+  },
+  {
+    "Id": 192,
+    "Title": "Verfication of file signature failed"
+  },
+  {
+    "Id": 193,
+    "Title": "Custom Update kit issue"
+  },
+  {
+    "Id": 194,
+    "Title": "Executabel Setup installs but return Code to WiUpdate is cancelled"
+  },
+  {
+    "Id": 195,
+    "Title": "Unable to generate cert"
+  },
+  {
+    "Id": 196,
+    "Title": "Modify XML coda before plublishing an update"
+  },
+  {
+    "Id": 197,
+    "Title": "Server Version different from console version"
+  },
+  {
+    "Id": 198,
+    "Title": "Can see published updates in WSUS Console"
+  },
+  {
+    "Id": 199,
+    "Title": "Updates everything is empty"
+  },
+  {
+    "Id": 200,
+    "Title": "The WPP console crash everytime on report"
+  },
+  {
+    "Id": 201,
+    "Title": "Not updating the source code or providing it when requested violates the GPL license that this software is licensed under"
+  },
+  {
+    "Id": 202,
+    "Title": "Server Version different from console version"
+  },
+  {
+    "Id": 203,
+    "Title": "Unable to publish a Detectoid"
+  },
+  {
+    "Id": 204,
+    "Title": "Creating Java Installation Custom Update documentation is out of date"
+  },
+  {
+    "Id": 205,
+    "Title": "Cannot select return code variable if variable is created after return code element is created"
+  },
+  {
+    "Id": 206,
+    "Title": "Text is copied to the clipboard whenever an element is double clicked in the Custom Update Creator"
+  },
+  {
+    "Id": 207,
+    "Title": "Cannot remove return code from a \"Allow to execute a file\" element"
+  },
+  {
+    "Id": 208,
+    "Title": "Feature Request: saved configurations for Custom Updates"
+  },
+  {
+    "Id": 209,
+    "Title": "Feature request: revise/edit a custom update"
+  },
+  {
+    "Id": 210,
+    "Title": "Release v1.3.1407.11 doesn't include some custom updates files, crashes"
+  },
+  {
+    "Id": 211,
+    "Title": "Feature Request: Show online computers only as default"
+  },
+  {
+    "Id": 212,
+    "Title": "Unable to publish package bigger than 384MB"
+  },
+  {
+    "Id": 213,
+    "Title": "Enhance the feature \"Clean SoftwareDistribution Directory\""
+  },
+  {
+    "Id": 214,
+    "Title": "MsiReader Source/Copyright"
+  },
+  {
+    "Id": 215,
+    "Title": "Accidentally clicked on \"Generate the Certificate\" again"
+  },
+  {
+    "Id": 216,
+    "Title": "WPP can be launch several time on the same computer"
+  },
+  {
+    "Id": 217,
+    "Title": "Feature Request: Make Ctrl+A perform a Select All when editing applicability metadata"
+  },
+  {
+    "Id": 218,
+    "Title": "Removal of update in Package Publisher not possible"
+  },
+  {
+    "Id": 219,
+    "Title": "Flash Update installs despite Rules not to"
+  },
+  {
+    "Id": 220,
+    "Title": "Reg Sz To Version Registry Key Rule not working properly"
+  },
+  {
+    "Id": 221,
+    "Title": "Create Directory Failed"
+  },
+  {
+    "Id": 222,
+    "Title": "status inconnu dans rapport WPP"
+  },
+  {
+    "Id": 223,
+    "Title": "unable to install the .exe file "
+  },
+  {
+    "Id": 224,
+    "Title": "Add column to status tab"
+  },
+  {
+    "Id": 225,
+    "Title": "MS Fix it distribution => loop"
+  },
+  {
+    "Id": 226,
+    "Title": "Install X2goClient.exe"
+  },
+  {
+    "Id": 227,
+    "Title": "%ProgramFiles(x86)% is not properly expand"
+  },
+  {
+    "Id": 228,
+    "Title": "The certificae is invalid. You will not be able to publish updates"
+  },
+  {
+    "Id": 229,
+    "Title": "Deleting rules when revising updates not works"
+  },
+  {
+    "Id": 230,
+    "Title": "Updates in WPP are invisible"
+  },
+  {
+    "Id": 231,
+    "Title": "Unable to Publish Updates from Multiple User/Admin Accounts"
+  },
+  {
+    "Id": 232,
+    "Title": "Cant install Adobe Reader on proper language!!!"
+  },
+  {
+    "Id": 233,
+    "Title": "English translation corrections."
+  },
+  {
+    "Id": 234,
+    "Title": "Installation de JAVA 8.25 Windows 7"
+  },
+  {
+    "Id": 235,
+    "Title": "Report tab"
+  },
+  {
+    "Id": 236,
+    "Title": "Adobe Flash Player V15.0.0.223"
+  },
+  {
+    "Id": 237,
+    "Title": "Can we add a Refresh View button, like in WSUS console"
+  },
+  {
+    "Id": 238,
+    "Title": "Feature Request: Import/Export collections of updates"
+  },
+  {
+    "Id": 239,
+    "Title": "Custom Updates: Kill a process"
+  },
+  {
+    "Id": 240,
+    "Title": "Can't delete empty product category"
+  },
+  {
+    "Id": 241,
+    "Title": "Probleme windows update administrateur"
+  },
+  {
+    "Id": 242,
+    "Title": "Failed to sign package; error was: 2148204801"
+  },
+  {
+    "Id": 243,
+    "Title": "CreateDirectory failed"
+  },
+  {
+    "Id": 244,
+    "Title": "New UO in active directory"
+  },
+  {
+    "Id": 246,
+    "Title": "Customer Updates not working"
+  },
+  {
+    "Id": 247,
+    "Title": "version error after loading Microsoft KB3013488 or KB3013769"
+  },
+  {
+    "Id": 248,
+    "Title": "Date string in Last Download Date column in Subscribe to Catalogs view doesn't follow local format"
+  },
+  {
+    "Id": 249,
+    "Title": "Export an update with multiple CAB files"
+  },
+  {
+    "Id": 250,
+    "Title": "package non applicable"
+  },
+  {
+    "Id": 251,
+    "Title": "Cannot delete package group"
+  },
+  {
+    "Id": 252,
+    "Title": "Add the ability to add several folders"
+  },
+  {
+    "Id": 253,
+    "Title": "Erreur lors de l'install de ActiveX Flash Player"
+  },
+  {
+    "Id": 254,
+    "Title": "Adobe Flash/Reader Updates"
+  },
+  {
+    "Id": 255,
+    "Title": "Copie des règles maj remplaçante, Suite"
+  },
+  {
+    "Id": 256,
+    "Title": "Supprimer le fichier options.xml de l'archive"
+  },
+  {
+    "Id": 257,
+    "Title": "Code retour 0 n'est plus automatique"
+  },
+  {
+    "Id": 258,
+    "Title": "Création règles automatique sur fichier MSI"
+  },
+  {
+    "Id": 259,
+    "Title": "Release v1.3.1504.12 not carring forward setting when creating a superseding update"
+  },
+  {
+    "Id": 260,
+    "Title": "Unable to kill Outlook"
+  },
+  {
+    "Id": 261,
+    "Title": "Trying to update Java"
+  },
+  {
+    "Id": 262,
+    "Title": "Update Detail Viewer display UTC time instead of LocalTime"
+  },
+  {
+    "Id": 263,
+    "Title": "Fenêtre des mises à jour en attente"
+  },
+  {
+    "Id": 264,
+    "Title": "Crash while making custom update"
+  },
+  {
+    "Id": 265,
+    "Title": "If i delete an update the WSUS DB crash"
+  },
+  {
+    "Id": 266,
+    "Title": "How Do I Upgrade To A New Release"
+  },
+  {
+    "Id": 267,
+    "Title": "Version 1.3.1504.15 not reading the MSI Product number"
+  },
+  {
+    "Id": 268,
+    "Title": "Remove existing msi rules at update level when creating superseding updates"
+  },
+  {
+    "Id": 269,
+    "Title": "Problem with Updates"
+  },
+  {
+    "Id": 270,
+    "Title": "Certificate is invalid, although it is not"
+  },
+  {
+    "Id": 271,
+    "Title": "verification of signature failed for file"
+  },
+  {
+    "Id": 272,
+    "Title": "Need to modify Folder path for update."
+  },
+  {
+    "Id": 273,
+    "Title": "Crash importing Adobe Flash Plugin updates from catalog"
+  },
+  {
+    "Id": 274,
+    "Title": "Deleted packages not updating on replica server"
+  },
+  {
+    "Id": 275,
+    "Title": "Workstations not showing online in WPP but are"
+  },
+  {
+    "Id": 276,
+    "Title": "Possible to update folder's with files"
+  },
+  {
+    "Id": 277,
+    "Title": "Settings for Adobe Acrobat Reader DC .msp Patch"
+  },
+  {
+    "Id": 278,
+    "Title": "Mettre à jour Java sur les postes de travail ayant déjà Java"
+  },
+  {
+    "Id": 279,
+    "Title": "When renaming an update an empty group remains"
+  },
+  {
+    "Id": 280,
+    "Title": "Error when setting an update as prerequisite for another update"
+  },
+  {
+    "Id": 281,
+    "Title": "WSUS Update Publisher packages will not install under Windows 10"
+  },
+  {
+    "Id": 282,
+    "Title": "Show pending updates"
+  },
+  {
+    "Id": 283,
+    "Title": "Skype 7.7.0.103 not hitting the clients"
+  },
+  {
+    "Id": 284,
+    "Title": "Display Update Revision on UpdateDetailViewer"
+  },
+  {
+    "Id": 285,
+    "Title": "WPP update process"
+  },
+  {
+    "Id": 286,
+    "Title": "Add Windows 10 in the quick selection for Windows Version Rule"
+  },
+  {
+    "Id": 287,
+    "Title": "local connection failed after configuring ssl"
+  },
+  {
+    "Id": 288,
+    "Title": "Report Tab always empty"
+  },
+  {
+    "Id": 289,
+    "Title": "Cannot Delete Updates after Revise or Approval"
+  },
+  {
+    "Id": 290,
+    "Title": "Cannot Import Certificate"
+  },
+  {
+    "Id": 291,
+    "Title": "Configured Symantec Endpoint for Deployment"
+  },
+  {
+    "Id": 292,
+    "Title": "Package still listing even after installation"
+  },
+  {
+    "Id": 293,
+    "Title": "Mise à jour sans passé par WSUS"
+  },
+  {
+    "Id": 294,
+    "Title": "Update flash player 18 to 19"
+  },
+  {
+    "Id": 295,
+    "Title": "Missing Update level rules when Revise..."
+  },
+  {
+    "Id": 296,
+    "Title": "Show WindowsUpdate Log for Windows 10?"
+  },
+  {
+    "Id": 297,
+    "Title": "Message d'erreur CreateDirectory Failed"
+  },
+  {
+    "Id": 298,
+    "Title": "Add Folders..."
+  },
+  {
+    "Id": 299,
+    "Title": "Approved for Uninstall shows not installed"
+  },
+  {
+    "Id": 300,
+    "Title": "Manage Catalog Subscriptions greyed out?"
+  },
+  {
+    "Id": 301,
+    "Title": "\"Update Level Rules\" vs. \"Package Level Rules\"?"
+  },
+  {
+    "Id": 302,
+    "Title": "Unable to distribute custom update"
+  },
+  {
+    "Id": 303,
+    "Title": "Problems installing Adobe Reader XI"
+  },
+  {
+    "Id": 304,
+    "Title": "Version mismatch"
+  },
+  {
+    "Id": 305,
+    "Title": "Windows 10 - Approval For Uninstallation does not work"
+  },
+  {
+    "Id": 306,
+    "Title": "Invisible Update after import"
+  },
+  {
+    "Id": 307,
+    "Title": "Windows 8.1 - Update stops at 99%"
+  },
+  {
+    "Id": 308,
+    "Title": "Interface Issue"
+  },
+  {
+    "Id": 309,
+    "Title": "Adobe Reader 2015 Updates Catalog"
+  },
+  {
+    "Id": 310,
+    "Title": "Adobe Acrobat Reader DC - MSP don't work"
+  },
+  {
+    "Id": 311,
+    "Title": "Adobe Acrobat Reader DC MSP Update"
+  },
+  {
+    "Id": 312,
+    "Title": "Import of Certificate does not work"
+  },
+  {
+    "Id": 313,
+    "Title": "Failed to publish update"
+  },
+  {
+    "Id": 314,
+    "Title": "Make update visible in downstream WSUS server console"
+  },
+  {
+    "Id": 315,
+    "Title": "WPP does not work for Win 10"
+  },
+  {
+    "Id": 316,
+    "Title": "Win10 WPP connected to Win2016 TP4"
+  },
+  {
+    "Id": 317,
+    "Title": "Adode Reader and Flash updates"
+  },
+  {
+    "Id": 318,
+    "Title": "Digital signature not trusted"
+  },
+  {
+    "Id": 319,
+    "Title": "Not Applicable / Not Approved"
+  },
+  {
+    "Id": 320,
+    "Title": "Certificate issue/question"
+  },
+  {
+    "Id": 321,
+    "Title": "Java Veröffentlichung schlägt fehl / Java publishing fails"
+  },
+  {
+    "Id": 322,
+    "Title": "Unable to deploy LibreOffice"
+  },
+  {
+    "Id": 323,
+    "Title": "When creating update get CreateDirectory failed"
+  },
+  {
+    "Id": 324,
+    "Title": "Deinstallieren von veröffentlichten Update / uninstallation of published updates"
+  },
+  {
+    "Id": 325,
+    "Title": "Update nach Anlage im WPP nicht sichtbar"
+  },
+  {
+    "Id": 326,
+    "Title": "Unable to Create CAB when filename include chinease letters(signs)"
+  },
+  {
+    "Id": 327,
+    "Title": "Custom Update is shown as inapplicable"
+  },
+  {
+    "Id": 328,
+    "Title": "Custum Update Creator - Modify Registry Value other than REG_SZ not possible?"
+  },
+  {
+    "Id": 329,
+    "Title": "Custom Update - Keine Verteilung am Client"
+  },
+  {
+    "Id": 330,
+    "Title": "Chrome - Error code 800B0109"
+  },
+  {
+    "Id": 331,
+    "Title": "Windows Code 524"
+  },
+  {
+    "Id": 332,
+    "Title": "WPP does not work for Win 10"
+  },
+  {
+    "Id": 333,
+    "Title": "Win 10 Update - Error 0x8024000b"
+  },
+  {
+    "Id": 334,
+    "Title": "Allow to launch Remote MSI Manager by right click on computers"
+  },
+  {
+    "Id": 335,
+    "Title": "MSI Uninstall element not working"
+  },
+  {
+    "Id": 336,
+    "Title": "Install Pending updates action"
+  },
+  {
+    "Id": 337,
+    "Title": "UNC-Path not supported"
+  },
+  {
+    "Id": 338,
+    "Title": "Update Creation Wizard - MsiProductCode"
+  },
+  {
+    "Id": 339,
+    "Title": "Java 8u91 only installs with admin rights"
+  },
+  {
+    "Id": 340,
+    "Title": "Resign not updating SSL signature"
+  },
+  {
+    "Id": 341,
+    "Title": "Server version different than console version - after installing KB3159706"
+  },
+  {
+    "Id": 342,
+    "Title": "Update Approval box initially appears too big"
+  },
+  {
+    "Id": 343,
+    "Title": "Update Approval box requires too many clicks"
+  },
+  {
+    "Id": 344,
+    "Title": "Error 0x80246003 on Windows 10"
+  },
+  {
+    "Id": 345,
+    "Title": "Failed to sign package; error was: 2147942432"
+  },
+  {
+    "Id": 346,
+    "Title": "Forcepoint Triton AP Endpoint deployment"
+  },
+  {
+    "Id": 347,
+    "Title": "Wsus Package Publisher crahes when saving certificate to file"
+  },
+  {
+    "Id": 348,
+    "Title": "InstallPendingUpdates service failed to start"
+  },
+  {
+    "Id": 349,
+    "Title": "Not Responding on Create and Revise"
+  },
+  {
+    "Id": 350,
+    "Title": "Maximum Cab File Size"
+  },
+  {
+    "Id": 351,
+    "Title": "Error when importing Update from DellSDPCatalog.cab"
+  },
+  {
+    "Id": 352,
+    "Title": "Flash Update via Catalog no longer working"
+  },
+  {
+    "Id": 353,
+    "Title": "disk space question"
+  },
+  {
+    "Id": 354,
+    "Title": "WPP package not copying to replica WSUS server when synced with primary WSUS"
+  },
+  {
+    "Id": 355,
+    "Title": "Disable Return Code list when the main file is a MSI or MSP"
+  },
+  {
+    "Id": 356,
+    "Title": "Adobe Flash Player ActiveX 24.0.0.194"
+  },
+  {
+    "Id": 357,
+    "Title": "Unable to set Registry value (empty) on  FileVersionPrependRegSz"
+  },
+  {
+    "Id": 359,
+    "Title": "Problem Download Update Adobe Reader DC"
+  },
+  {
+    "Id": 360,
+    "Title": "Query on Custom Update create"
+  },
+  {
+    "Id": 361,
+    "Title": "Update not listed"
+  },
+  {
+    "Id": 362,
+    "Title": "SourceCode Update"
+  },
+  {
+    "Id": 363,
+    "Title": "source of dependencies"
+  },
+  {
+    "Id": 364,
+    "Title": "Windows10 Client for Update creation"
+  },
+  {
+    "Id": 365,
+    "Title": "Exporting Update"
+  },
+  {
+    "Id": 366,
+    "Title": "CustomUpdateEngine delete write-protect files"
+  },
+  {
+    "Id": 367,
+    "Title": "Java 7 Update 131 Install error"
+  },
+  {
+    "Id": 368,
+    "Title": "Delete products entries"
+  },
+  {
+    "Id": 369,
+    "Title": "WSUS Package Publisher Crash"
+  },
+  {
+    "Id": 370,
+    "Title": "New published Updates getting deleted 20 seconds after publishing"
+  },
+  {
+    "Id": 371,
+    "Title": "Custom Updates Missing"
+  },
+  {
+    "Id": 372,
+    "Title": "Uninstalling All Java release except the latest one"
+  },
+  {
+    "Id": 373,
+    "Title": "Superseded"
+  },
+  {
+    "Id": 374,
+    "Title": "How to KB4012598"
+  },
+  {
+    "Id": 375,
+    "Title": "Download Fails"
+  },
+  {
+    "Id": 376,
+    "Title": "Windows Server 2016"
+  },
+  {
+    "Id": 377,
+    "Title": "W2012R2 no sucsessful import from catalog files"
+  },
+  {
+    "Id": 378,
+    "Title": "WSUS 2016"
+  },
+  {
+    "Id": 379,
+    "Title": "Citrix Receiver Deployment Issue"
+  },
+  {
+    "Id": 380,
+    "Title": "Citrix Receiver Installation Issue"
+  },
+  {
+    "Id": 381,
+    "Title": "WSUS 10 error"
+  },
+  {
+    "Id": 382,
+    "Title": "Error: Some update files aren't signed correctly.  Error code: (0x800b0109)"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1102800",
+    "ThreadId": "460948",
+    "Html": "It seems optional updates are working incorrectly.  I was expecting the following behavior:\r<br />\n<br />\n&quot;The new API supports creating approvals for “optional installation,” which tells the Windows Update Agent to make the update available for installation in the Add or Remove Programs dialog box, but not via Automatic Updates.&quot; - technet\r<br />\n<br />\nHowever the update is seen as both an &quot;Important update: (Automatic Updates) and under Add or Remove Programs dialog box (Install a program from the network). I'm not sure if this is a bug or a package manager rules issue.\r<br />\n<br />\nThe app in question is java, and I followed the guide on this site. so the only rules are if msi product is detected or not.<br />\n",
+    "PostedDate": "2013-10-02T08:42:29.317-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1103266",
+    "ThreadId": "460948",
+    "Html": "What is the client OS : Win XP or Win 7 ?<br />\n",
+    "PostedDate": "2013-10-03T10:21:21.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1103338",
+    "ThreadId": "460948",
+    "Html": "Windows 7.<br />\n",
+    "PostedDate": "2013-10-03T13:06:34.22-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1103778",
+    "ThreadId": "460948",
+    "Html": "You have to set explicitly, this GPO to disable :\r<br />\n<br />\n<img src=\"http://i.imgur.com/MWqsrMT.png\" alt=\"Gpo Recommended Updates\" />\r<br />\n<br />\nWhich give this RegKey :\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU\\IncludeRecommendedUpdates = 0<br />\n",
+    "PostedDate": "2013-10-04T12:12:10.623-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-07T10:13:22.343-07:00"
+  },
+  {
+    "Id": "1105022",
+    "ThreadId": "460948",
+    "Html": "That did the trick, thanks.<br />\n",
+    "PostedDate": "2013-10-08T07:50:41.907-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "1461771",
+    "ThreadId": "650861",
+    "Html": "Hello everyone,\r<br />\n<br />\nI ran into an issue with Java 8 updates. They are installing fine, but the old installations still remain.\r<br />\n<br />\nI deployed Java 8 b66 to everyonea and now b71 came out. I created a superseding update and removed the b66 and the b71 installs fine, but the b66 is still installed on the computer. So now i have a Java8 b66 and Java8 b71 installed on the computers. Previously it just upgraded it and the old build disappeared (unless it was a major update from 7 to 8).\r<br />\n<br />\nIs there a way to force it to uninstall or properly upgrade the builds within major versions?<br />\n",
+    "PostedDate": "2016-02-03T04:41:40.33-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1461904",
+    "ThreadId": "650861",
+    "Html": "If you understand German, you can use this HowTo and the EXE inside. \r<br />\n<a href=\"http://www.wsus.de/uninstall2install\" rel=\"nofollow\">http://www.wsus.de/uninstall2install</a><br />\n",
+    "PostedDate": "2016-02-04T03:56:55.37-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1468413",
+    "ThreadId": "650861",
+    "Html": "Hi!\r<br />\n<br />\nI just create a new Update with the MSI file adding this optional command line:<br />\n<pre><code>INSTALL_SILENT=Enable AUTO_UPDATE=Disable WEB_ANALYTICS=Disable EULA=Disable REBOOT=Disable NOSTARTMENU=Enable WEB_JAVA=Enable WEB_JAVA_SECURITY_LEVEL=H SPONSORS=Disable REMOVEOLDERJRES=1</code></pre>\n\nWith the last switch all versions of the same architecture are uninstalled.\r<br />\n<br />\nOtherwise you can perform a custom update running this command first:<br />\n<pre><code>wmic product where &quot;name like 'Java%%' and version &lt; '8.0.66'&quot; call uninstall</code></pre>\n\n",
+    "PostedDate": "2016-03-30T03:20:54.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1468414",
+    "ThreadId": "650861",
+    "Html": "EDIT:<br />\n<br />\nYou can get a list of the program name and version # running this command in a dosbox:<br />\n<pre><code>wmic product get name,version</code></pre>\n\ncomparing the the command above you can deinstall Adobe Flash 21 like this:<br />\n<pre><code>wmic product where &quot;name like 'Adobe Flash Player %%' and version &lt; '22'&quot; call uninstall</code></pre>\n\n",
+    "PostedDate": "2016-03-30T03:26:39.98-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1468924",
+    "ThreadId": "650861",
+    "Html": "A little bit late, but maybee helpfull for other folks.....\r<br />\n<br />\nIf you deployed your JAVA as .msi, there is one way more. Do not remove the old update in WPP, but set the update permission from &quot; Permission to install &quot; to &quot; Permission to deinstall&quot;. A new update &quot;installs&quot; on your clients an deinstall the software.\r<br />\n<br />\nA very new way, with new WPP Version 1.3.1603.29 is to create a custom update with the option &quot; deinstall MSI-Installation&quot; .<br />\n",
+    "PostedDate": "2016-04-04T07:39:56.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1469159",
+    "ThreadId": "650861",
+    "Html": "GMBU -  Thank you for the replay.\r<br />\nwhere can I find the &quot; Permission to install &quot; ? \r<br />\nI tried to follow the guide from the documentation section but it's failing to uninstall\r<br />\nthe install process work perfectly but the uninstall won't work<br />\n",
+    "PostedDate": "2016-04-06T01:59:47.04-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1469320",
+    "ThreadId": "650861",
+    "Html": "GMBU, but my expirience is, that deinstall MSI not working well. Like is described in &quot;uninstalling all java release except the latest one.pdf&quot;<br />\n",
+    "PostedDate": "2016-04-07T06:33:52.097-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1470734",
+    "ThreadId": "650861",
+    "Html": "for me, the last Java release 8 update 91 msi (from %userprofile%\\AppData\\LocalLow\\Oracle\\Java) works with the commandline Switch REMOVEOLDERJRES=1.\r<br />\n<br />\nAll Switches together  does not work.\r<br />\n<br />\nINSTALL_SILENT=Enable AUTO_UPDATE=Disable WEB_ANALYTICS=Disable EULA=Disable REBOOT=Disable NOSTARTMENU=Enable WEB_JAVA=Enable WEB_JAVA_SECURITY_LEVEL=H SPONSORS=Disable REMOVEOLDERJRES=1 <br />\n",
+    "PostedDate": "2016-04-20T02:27:43.743-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471253",
+    "ThreadId": "650861",
+    "Html": "If you open and check the msi, you can see that REMOVEOLDERJRES=1 is standard configuration. Mysterious. So, typicaly it is not nessasary.\r<br />\n<br />\nBut Im also in deinstallation trouble, Remouving of old instalations? Maybeee.... from time to time, one client yes, one client no.... <br />\n<ul>\n<li>&quot;Permission to deinstallation&quot; for older installations of Java 8 does not work on all clients.....</li>\n<li>\nthe new Custom update &quot;deinstall MSI product&quot; does not work on all clients... <br />\n</li>\n</ul>\nmaybee there is a extra bug in combination with upgraded w7 -&gt;W10 Clients....<br />\n",
+    "PostedDate": "2016-04-25T08:03:34.943-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

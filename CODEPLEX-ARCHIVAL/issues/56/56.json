@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-09T09:18:49.777-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I have received a Deubg Info file at 04/06/2013 09:15:33 with error message:\r\nPublishing operation failed because the console and remote server versions do not match.\r\n\r\nTo avoid this, I have added some check in WPP to disable publishing attempte when Server and console version mismastch.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.2.1305.26",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-04T03:45:21.27-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Publishing operation failed because the console and remote server versions do not match.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 56
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

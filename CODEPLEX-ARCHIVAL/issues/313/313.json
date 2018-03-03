@@ -1,0 +1,56 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-30T12:32:24.41-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI am trying to publish an update using an .msp file (Adobe Reader) but received the Cannot access a closed Stream error. (see attached error message). The WPP is run on the WSUS server and connected to the local server. Please help.\r\n\r\nThank you.",
+    "LastUpdatedDate": "2015-11-30T12:32:24.41-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-11-26T02:22:14.83-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Failed to publish update",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 313
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1522216,
+      "FileName": "11-26-2015 6-20-03 PM.jpg",
+      "DownloadUrl": ".\\1522216"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "See this post : http://wsuspackagepublisher.codeplex.com/workitem/27\n",
+      "PostedDate": "2015-11-27T03:24:30.783-08:00",
+      "Id": 194038
+    },
+    {
+      "Message": "DCourtel,\n\nThe solution works. Thank you!",
+      "PostedDate": "2015-11-29T21:28:36.357-08:00",
+      "Id": 194065
+    }
+  ]
+}

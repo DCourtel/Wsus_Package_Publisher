@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1349084",
+    "ThreadId": "579500",
+    "Html": "Hello,\r<br />\n<br />\n   I am currently in the Process of Pushing out an Adobe Acrobat 10.0.13 .msp update.   The issue is that I have tried every way to run this update and it fails.  If I do a &quot;create a custom update&quot;, I can get the services to stop, but the .msp does not install. \r<br />\n<br />\nIf I use &quot;Create a Update&quot;  The .msp will not install becuase I am unsure on the command line how to stop a service.  i have tried just using net stop &quot;Service Name&quot; but I get error code 80070667.\r<br />\n<br />\n  Any help in this area would be great. <br />\n",
+    "PostedDate": "2015-02-04T13:12:57.533-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1349360",
+    "ThreadId": "579500",
+    "Html": "This has been fixed....  Below is what I had to do to create the custom update for stopping the service and the command line parameters...\r<br />\n<br />\n<br />\nAdobe Acrobat 10:  ( Create Custom Update)\r<br />\n<br />\nDeclare Variable: Return Code / INT\r<br />\nStop Service UCTAPICLIENT\r<br />\nPause 3 Seconds\r<br />\nStop Service Fax\r<br />\nPause 3 Seconds\r<br />\n<br />\n%windir%\\System32\\msiexec.exe\r<br />\n<br />\n/p AdobeAcrobat10013.msp /qb /norestart\r<br />\n<br />\n<br />\nI have successfully published this and pushed out the .msp<br />\n",
+    "PostedDate": "2015-02-05T08:44:12.433-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-02-05T08:44:15.013-08:00"
+  }
+]

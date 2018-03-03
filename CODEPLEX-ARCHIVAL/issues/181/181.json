@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-05-02T07:46:13.48-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hi,\r\nI have tried to manage Catalog Subscription so I changed the unit from weeks to days, after closing and reopening it is back on weeks, why?\r\n\r\nBR\r\nKarsten",
+    "LastUpdatedDate": "2014-05-02T07:46:13.48-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-03-06T00:25:55.607-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Postponed"
+    },
+    "Summary": "Manage Catalog Subscriptions Unit error",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 181
+  },
+  "FileAttachments": [
+    {
+      "FileId": 810344,
+      "FileName": "katalog.pdf",
+      "DownloadUrl": ".\\810344"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "You are right, you need to quite WPP and restart it to have the display updated.",
+      "PostedDate": "2014-03-06T01:20:30.02-08:00",
+      "Id": 136016
+    }
+  ]
+}

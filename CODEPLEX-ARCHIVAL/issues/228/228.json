@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "WPP now ask before generating a new self-signed certificate, if any previous is still present and valid.",
+    "ClosedDate": "2015-02-14T12:32:01.76-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi all.\r\n\r\nAccidentally clicked the button __Toolse-certificate-generate the certificate__. Now when you connect an error __The certificae is invalid. You will not be able to publish updates__. Delete a certificate from the server does not solve the problem. Assume that this function you need somewhere to turn off.\r\n\r\nIn advance thanks.",
+    "LastUpdatedDate": "2015-02-14T12:32:01.76-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-11-07T02:24:24.823-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "The certificae is invalid. You will not be able to publish updates",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 228
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

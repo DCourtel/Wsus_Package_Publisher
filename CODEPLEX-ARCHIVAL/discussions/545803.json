@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1246883",
+    "ThreadId": "545803",
+    "Html": "Hi\r<br />\n<br />\nI've trie to use WPP. I'm using a microsoft domain with server 2008 and 2012. WSUS was already installed and configured.\r<br />\nI've downloaded the required source, rolled out the certificate by GPO (works)\r<br />\nThe WSUS groups are listed and i can see all the clients and server.\r<br />\n<br />\nSo I tried to connect to a client by using &quot;Report now&quot; and other options.\r<br />\nA box was prompted to input my credentials. I've entered the domain admin.\r<br />\nBut the connection failed.\r<br />\nAfter several tries i've tried to connect to a server with the same credentials. This was working. so i thought it's a Firewall Problem (Windows Firewall is runing on the Client)\r<br />\n<br />\nFor a test i've deactivated the firewall on my test client and rebooted the system.\r<br />\nUnfortunately it is still not workin.\r<br />\n<br />\nDo you have a hint or even better the solution for my Problem?\r<br />\n<br />\nHere the message i get: &quot;Failed to connect with provided credentials. Do you want to...&quot;\r<br />\n<br />\nbtw. my admin has the following rights: Administrators; Domain Admins; Domain Users; Enterprise Admins; Group Policy Creator Owners and Schema Admins (so i think it sould not be a permission Problem)<br />\n",
+    "PostedDate": "2014-05-19T04:30:44.78-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1247038",
+    "ThreadId": "545803",
+    "Html": "Hi,\r<br />\nthis error message is only display when credentials are wrongs. That mean, WPP have successfuly contacted the client computer (not a firewall problem) and the client has denied access due to wrong credentials. Ensure that these credentials are in the local administrators group of the client.<br />\n",
+    "PostedDate": "2014-05-19T10:02:55.26-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1248124",
+    "ThreadId": "545803",
+    "Html": "Login should be formatted like this : Administrator\r<br />\nand not like this : Domain\\Administrator or <a href=\"mailto:Administrator@domaine.local\" rel=\"nofollow\">Administrator@domaine.local</a><br />\n",
+    "PostedDate": "2014-05-21T12:48:54.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1248282",
+    "ThreadId": "545803",
+    "Html": "Hi<br />\n<br />\nThank you very much for your reply.<br />\n<br />\nNow my Problem is fixed. It was a permission problem.<br />\nI feel stupid and I'm sorry for not checking this in advance!<br />\n<br />\nKind regards,<br />\n",
+    "PostedDate": "2014-05-22T00:55:03.533-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-22T04:20:56.067-07:00"
+  },
+  {
+    "Id": "1341495",
+    "ThreadId": "545803",
+    "Html": "For those of us who are also experiencing this problem, would you be able to provide the solution.  It is clearly a permission problem, but I am unclear as to what permissions need to be changed and where?\r<br />\n<br />\nI have tried using the domain administrators account using both administrator and password and domain name\\username and password.  I have tried using local admin accounts and I am unable to access machines remotely.  Turning firewall off both ends has no effect!  I can however do some things like show windows update log, which clearly means that I have read access to the local computer!\r<br />\n<br />\nI have just set up WSUS Package Publisher, so its probably some kind of configuration issue that is at fault.\r<br />\n<br />\nThank you.<br />\n",
+    "PostedDate": "2015-01-13T08:23:57.937-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

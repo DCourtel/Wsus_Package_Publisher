@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1290041",
+    "ThreadId": "561164",
+    "Html": "Hello,\r<br />\n<br />\nis there a way, to check for a registry entry depending on the architecture (on 64-bit system SOFTWARE\\Wow6432Node\\xyz and on 32-bit systems SOFTWARE\\xyz)? I have tried the &quot;OR&quot; Feature but it gets deleted after publishing and then both querys are valid and this is why the package is not available on any client (32-bit and 64-bit).\r<br />\n<br />\nThe goal ist to install a update when any version of this software is installed. If there is nothing installed the update should not be installed.\r<br />\n<br />\nThanks!<br />\n",
+    "PostedDate": "2014-08-14T07:20:11.817-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1290051",
+    "ThreadId": "561164",
+    "Html": "Use he Registry Type 32 :\r<br />\n<br />\n<img src=\"http://i.imgur.com/xolxw2S.png\" alt=\"Registry Type 32\" /><br />\n",
+    "PostedDate": "2014-08-14T07:34:06.21-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-15T05:03:48.407-07:00"
+  },
+  {
+    "Id": "1290053",
+    "ThreadId": "561164",
+    "Html": "Okay so I can use \\Software\\xyz and check this box and this workd an 64bit and 32bit systems? sounds good.\r<br />\nI didn't had the heart to try this because on LUP this doesn't worked for me :)<br />\n",
+    "PostedDate": "2014-08-14T07:36:43.253-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1290169",
+    "ThreadId": "561164",
+    "Html": "<blockquote>\nOkay so I can use \\Software\\xyz and check this box and this workd an 64bit and 32bit systems?<br />\n</blockquote>\nYes.<br />\n",
+    "PostedDate": "2014-08-14T13:21:07.063-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

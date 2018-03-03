@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1327038",
+    "ThreadId": "573448",
+    "Html": "It worked fine till last month.. i haven't changed any settings.. Ports , certificate is fine.. but sill on the downstream servers the package filed sowing in red color\r<br />\nWhat could be the issue.. Please help me out.<br />\n",
+    "PostedDate": "2014-11-28T06:55:13.913-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1327058",
+    "ThreadId": "573448",
+    "Html": "Does it occurs with newly published package or already published package ?<br />\n",
+    "PostedDate": "2014-11-28T07:53:35.71-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1327069",
+    "ThreadId": "573448",
+    "Html": "new package <br />\n",
+    "PostedDate": "2014-11-28T08:28:49.81-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1327075",
+    "ThreadId": "573448",
+    "Html": "This mean that downstream servers doesn't trust packages on upstream servers. check certificate on downstream servers.<br />\n",
+    "PostedDate": "2014-11-28T09:02:34.707-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1327193",
+    "ThreadId": "573448",
+    "Html": "But i haven't  changed anything on down stream servers... And the certificate looks to be fine.. <br />\n",
+    "PostedDate": "2014-11-29T02:53:45.703-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1327311",
+    "ThreadId": "573448",
+    "Html": "i have deleted and re-imported the certificate... now its working fine..\r<br />\nStill i don't know what was the issue, its the same certificate i imported...\r<br />\nThanks for your support :)<br />\n",
+    "PostedDate": "2014-11-29T23:02:18.597-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-12-03T13:13:49.2-08:00"
+  }
+]

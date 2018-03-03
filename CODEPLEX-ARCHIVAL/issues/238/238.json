@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Will be possible into WPP V2.",
+    "ClosedDate": "2017-01-30T22:12:54.71-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Exporting or importing multiple updates currently requires going through the process of exporting or importing updates one at a time. This requires a lot of user interaction.\r\n\r\nHaving the option to export or import multiple updates would ease the amount of user interaction required to export or import many updates at once.",
+    "LastUpdatedDate": "2017-01-30T22:12:54.803-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-12-22T11:26:21.013-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Postponed"
+    },
+    "Summary": "Feature Request: Import/Export collections of updates",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 2,
+    "Id": 238
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Possible use cases are starting up a new WSUS server or sharing the updates with another WSUS admin.",
+      "PostedDate": "2015-02-04T07:59:35.29-08:00",
+      "Id": 173474
+    }
+  ]
+}

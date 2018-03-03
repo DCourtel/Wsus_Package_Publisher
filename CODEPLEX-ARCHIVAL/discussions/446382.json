@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1054212",
+    "ThreadId": "446382",
+    "Html": "We configured the program per the installation guide. However, when we attempt to connect to the server we receive, &quot; invalid certificate&quot;. We installed by generating a certificate so we are stumped as to why we are receiving this error. \r<br />\nWe installed WSUS on Server 2008 R2 and will be using the publisher on the same machine. We are in the process of installing two downstream (replica) servers to update a large number of computers in our school district.\r<br />\nAny assistance would be greatly appreciated<br />\n",
+    "PostedDate": "2013-06-07T17:38:14.647-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1054342",
+    "ThreadId": "446382",
+    "Html": "Hi Burntout, \r<br />\nTry to restart the server to take in account the certificate.<br />\n",
+    "PostedDate": "2013-06-08T05:54:21.63-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1054443",
+    "ThreadId": "446382",
+    "Html": "Hi &quot;D&quot;,<br />\n<pre><code>     Thank's for the reply. Already tried that and didn't work. I also tried trashing the original set up and that didn't work either. So now I'm really stumped. I really would like to get this working for us. My boss didn't think it would work for us buy I told him I would give it a shot anyway. Any help you can offer is appreciated.</code></pre>\n\n/Bob<br />\n",
+    "PostedDate": "2013-06-08T17:14:55.473-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1054490",
+    "ThreadId": "446382",
+    "Html": "Open WPP, connect to the local Wsus server. Go to Help=&gt;About and look at the Server Version.\r<br />\nGo to 'Control panel' =&gt; 'Program &amp; Features' =&gt; display updates. Search for KB2661254.\r<br />\nIf KB2661254 is installed, then your server version <strong>MUST</strong> be at least at 3.2.7600.251 (that mean the KB2720211 <strong>MUST</strong> be installed too)\r<br />\n<br />\nIf you install KB2720211, you <strong>MUST</strong> re-generate the certificate.\r<br />\n<br />\nOk, let start over.<br />\n<ul>\n<li>Open a session as administrator on the Wsus server.</li>\n<li>Go to Start menu =&gt; run =&gt; type mmc.exe + enter</li>\n<li>The MMC console appeare.</li>\n<li>Go ot File =&gt; Add/Remove snappin and choose 'Certificates'. Choose 'Computer Account', 'local computer', 'ok'</li>\n<li>In the certificat snappin, develop 'Wsus'=&gt;'Certificate'. Delete ALL certificates here.</li>\n<li>Develop 'Trusted editors'. Delete ALL 'Wsus Publisher self-signed' certificates.</li>\n<li>Develop 'Trusted Root Certification Authority'. Delete ALL 'Wsus Publisher self-signed' certificates.</li>\n<li>You should have nomore 'Wsus Publisher self-signed' certificates. Leave the MMC open.</li>\n<li>Open WPP and connect to the local Wsus.</li>\n<li>Go To 'Tools' =&gt; Certificate =&gt; 'Generate the certificate'</li>\n<li>Once the certificate is generate, click on the 'Save the certificate' button. Save it on a location where there is no other certificates. Remember the location.</li>\n<li>Close WPP.</li>\n<li>Return into the Certificate MMC.</li>\n<li>Verify tha the new certificate if present in the 'Wsus'=&gt;'Certificate' store. (Do a refresh display if necessary).</li>\n<li>Double click on the new  certificate. It should open and indicate that it is valid and you have a private key for it.</li>\n<li>Develop 'Trusted editors'. Right click on 'Certificate' folder =&gt; 'All tasks' =&gt; Import. Browse to the location where the new certificate is. and import it.</li>\n<li>Develop 'Trusted Root Certification Authority'. Right click on 'Certificate' folder =&gt; 'All tasks' =&gt; Import. Browse to the location where the new certificate is. and import it.</li>\n<li>Restart the Wsus server.</li>\n<li>\nReturn to the Certificate MMC. Open the 3 certificates and ensure they are valid.<br />\n</li>\n</ul>\nOpen WPP and connect to the local Wsus to see if it's ok.<br />\n",
+    "PostedDate": "2013-06-09T01:30:54.067-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:37:45.49-07:00"
+  },
+  {
+    "Id": "1054799",
+    "ThreadId": "446382",
+    "Html": "\r\n<div>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Replied on the weekend, thank you. I will check this out and let you know how I make out. Thank you so much for your quick response.</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">/Bob</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<div style=\"border:none; border-top:solid #B5C4DF 1.0pt; padding:3.0pt 0in 0in 0in\">\r\n<p><b><span style=\"font-size:10.0pt; font-family:\"></span></b></p>\r\n</div>\r\n</div>\r\n</div>\r\n",
+    "PostedDate": "2013-06-10T04:45:57.127-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1054838",
+    "ThreadId": "446382",
+    "Html": "\r\n<div>\r\n<p><span style=\"font-size:11.0pt; font-family:\">You are fantastic, thank you very much for taking the time to send that step by step guide. It worked!\r\n</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">Have a great day and hopefully I won’t have to bother you again.</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\">/Bob</span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<div style=\"border:none; border-top:solid #B5C4DF 1.0pt; padding:3.0pt 0in 0in 0in\">\r\n<p><b><span style=\"font-size:10.0pt; font-family:\"></span></b></p>\r\n</div>\r\n</div>\r\n</div>\r\n",
+    "PostedDate": "2013-06-10T05:53:27.163-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1054877",
+    "ThreadId": "446382",
+    "Html": "Glad to hear that.\r<br />\nCan you share the solution with other.<br />\n",
+    "PostedDate": "2013-06-10T07:22:58.967-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

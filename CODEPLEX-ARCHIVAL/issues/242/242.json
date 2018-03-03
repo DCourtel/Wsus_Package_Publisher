@@ -1,0 +1,80 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-11T22:28:51.057-08:00",
+    "CommentCount": 8,
+    "Custom": null,
+    "Description": "I keep getting the above error message every time I try to import or create a new update.  I tried reloading the certificate but not having any luck.  This just started either yesterday or the day before as everything was working perfectly earlier this week.\r\nAny help with this error is greatly appreciated.",
+    "LastUpdatedDate": "2015-11-11T22:28:51.057-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-01-16T09:59:31.037-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Failed to sign package; error was: 2148204801",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 242
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Never mind - I just realized that the Certificate expired on the 14th.\nIf at all possible, it would be nice for that error message to change to something that actually says the Code Signing Certificate has expired instead of \"2148204801\".\n\nThanks",
+      "PostedDate": "2015-01-16T13:50:29.857-08:00",
+      "Id": 170318
+    },
+    {
+      "Message": "What is the version of WPP you are using ?\nWhat is the version of the OS where Wsus run ?\nDo you run WPP directly on the Wsus server or on an administrative computer ?\nDo you have tick the option \"Ignore code signing certificate errors\" ?\n",
+      "PostedDate": "2015-01-17T00:46:23.377-08:00",
+      "Id": 170332
+    },
+    {
+      "Message": "WPP \n  Release: 1.3.1411.9\n  Console Version: 3.2.7600.251\nWSUS OS: Server '08 R2 Ent.\nWPP Runs on Same system\nThe Ignore errors option was checked before but no longer\n\nWith it unchecked, it tells me the Cert is expired when I \"Connect/Reload\" but that's the only time it says that. It still gives the above error if I try to publish an Update.",
+      "PostedDate": "2015-01-18T11:24:54.687-08:00",
+      "Id": 170394
+    },
+    {
+      "Message": "When code signing certificate error notifications is enable, WPP notify you when the certificate will expire in less than 30 days.\n",
+      "PostedDate": "2015-01-19T09:30:43.427-08:00",
+      "Id": 170442
+    },
+    {
+      "Message": "With Code Signing Certificate errors enabled, I get \"The certificate is invalid. You will not be able to publish updates.\" and it prevents me from even trying to create an update.\nWith it disabled, everything works fine and all Domain computers have no problems installing updates with the Domain Certificate that WPP said was invalid.\n\nOn a somewhat related note, I noticed that now that I have a new certificate in WPP, I now get an error when I try to Expire an Update:  \"Verification of file signature failed for file: ...\"\nSurely I won't have to load the old certificate to expire the old updates created wit it or will I?",
+      "PostedDate": "2015-01-21T13:03:48.837-08:00",
+      "Id": 170622
+    },
+    {
+      "Message": "Failed to sign package; error was: 2148081670 is the error I get and I am on the most current version",
+      "PostedDate": "2015-01-27T10:35:11.857-08:00",
+      "Id": 170921
+    },
+    {
+      "Message": "jperalis, is your code signing certificate valid? Also, you should post this question in the discussion threads, not the issue tracker, as this is likely a configuration issue, not necessarily a WPP issue.",
+      "PostedDate": "2015-01-30T09:53:34.57-08:00",
+      "Id": 171208
+    },
+    {
+      "Message": "> On a somewhat related note, I noticed that now that I have a new certificate in WPP, I now get an error when I try to Expire an Update: \"Verification of file signature failed for file: ...\"\n\nIf you change the certificate, you have to re-sign all already published updates.",
+      "PostedDate": "2015-02-14T11:58:25.197-08:00",
+      "Id": 174603
+    }
+  ]
+}

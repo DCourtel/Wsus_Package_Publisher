@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1220214",
+    "ThreadId": "538274",
+    "Html": "I want to deploy Acrobat to Windows 7 PC's only (ie not Server 2008) \r<br />\n<br />\nI am using \r<br />\n<br />\n&lt;bar:WindowsVersion Comparison=&quot;EqualTo&quot; MajorVersion=&quot;6&quot; MinorVersion=&quot;1&quot; ProductType=&quot;1&quot;/&gt;\r<br />\n<br />\nIs my understanding that the ProductType1 = Workstations correct <br />\n",
+    "PostedDate": "2014-03-07T02:49:57.547-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221195",
+    "ThreadId": "538274",
+    "Html": "Yes, you can use 'ProductType=&quot;1&quot;' to detect workstations.<br />\n",
+    "PostedDate": "2014-03-10T13:40:57.347-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:52:50.967-07:00"
+  }
+]

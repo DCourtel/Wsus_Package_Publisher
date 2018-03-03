@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1227815",
+    "ThreadId": "540452",
+    "Html": "When creating a custom update, does 'path to file' under the Allow to execute a file tab point to where the file is located on the server, or to a directory that will be created once the update is created?<br />\n",
+    "PostedDate": "2014-03-28T07:19:44.997-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1227912",
+    "ThreadId": "540452",
+    "Html": "This field refere to the location where the file is.\r<br />\n<br />\n3 possibilities :<br />\n<ul>\n<li>The file is in a shared folder on a server (Not recommended). Then the field should be filled like this : \\\\ServerName\\SharedFolder\\SubFolder\\file.ext</li>\n<li>The file is already present on clients computers (For example MsiExec.exe). Then you should put : C:\\Windows\\System32\\MsiExec.exe</li>\n<li>\nThe file is not present on clients computers but is part of the update (For example a Setup.exe file provided by the vendor). Then you should put : Setup.exe. And Embedded the file into the update package (Add  additionnal files when you set up the file tab)<br />\n</li>\n</ul>\n",
+    "PostedDate": "2014-03-28T10:02:30.94-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:40:46.487-07:00"
+  },
+  {
+    "Id": "1227916",
+    "ThreadId": "540452",
+    "Html": "So if my file is located on the Wsus server I would make it C:... (etc to where I've placed it)\r<br />\n<br />\nI keep getting errors on my install with the Java package, and I think this is where it's failing.\r<br />\n<br />\nThanks for your help.<br />\n",
+    "PostedDate": "2014-03-28T10:14:14.347-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1228955",
+    "ThreadId": "540452",
+    "Html": "You should NOT make it C:.. You'll need to make it an UNC path. \\WSUSServer\\files\\file.exe you cannot execute a file on the wsus server with C:\\files\\file.exe, the Windows Update client will look on it's own computer then.<br />\n",
+    "PostedDate": "2014-04-01T03:57:20.583-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

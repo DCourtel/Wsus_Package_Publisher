@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1289170",
+    "ThreadId": "560934",
+    "Html": "Hello,\r<br />\n<br />\nafter some time using the WSUS Package Publisher i have some unused product categories and vendors.\r<br />\n<br />\nHow can i get rid of them?<br />\n",
+    "PostedDate": "2014-08-12T02:21:23.137-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1289214",
+    "ThreadId": "560934",
+    "Html": "First you have to delete the Products on the right View in WPP. After this you can select unused Products on the left side &gt; right click &gt; Delete Product.<br />\n",
+    "PostedDate": "2014-08-12T04:44:43.173-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1289230",
+    "ThreadId": "560934",
+    "Html": "It was greyed out first.<br />\nI found the solution here: <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/454725\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/454725</a><br />\n<br />\nNow i have just one Vendor and one product left that can<code>t be deleted:<br /><br />Vendor: Lokaler Herausgeber<br />Product: Lokal veröffentlichte Pakete<br /><br />The product category is empty but the &quot;Delete Product&quot; button is still greyed out<br /><br />I actually don</code>t know if the folder was there form the start or if it has to be there.<br />\n",
+    "PostedDate": "2014-08-12T05:23:11.11-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-12T13:12:52.163-07:00"
+  },
+  {
+    "Id": "1289433",
+    "ThreadId": "560934",
+    "Html": "Hello,\r<br />\n<br />\nVendor: Lokaler Herausgeber\r<br />\nProduct: Lokal veröffentlichte Pakete\r<br />\n<br />\nThis folder is created by Microsoft when Wsus install.\r<br />\nLeave it alone. You will not be able to delete it with WPP. It's by design.<br />\n",
+    "PostedDate": "2014-08-12T13:14:36.26-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1289542",
+    "ThreadId": "560934",
+    "Html": "ok, thank you very much.<br />\n",
+    "PostedDate": "2014-08-12T22:56:00.7-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

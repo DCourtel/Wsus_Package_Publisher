@@ -1,0 +1,61 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-01-11T12:14:45.87-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nAfter I installed WPP three months ago, an issue usually annoys me, that's I create adobe reader and flashplayer updates in WPP successfully, then I published and deployed them in WPP. They worked well as expect.\r\n\r\nBut after few days, they disappeared from WPP console, I couldn't find them....So I recreated them again manually. But again, after few days, I find they disappear again today.\r\n\r\nIs this a WPP bug? \r\n\r\nOr my WPP updates will disappear after WSUS receives new updates from Microsoft at middle of every months?\r\n\r\nI find those WPP updates that are configured to be visable in WSUS, are still visible in WSUS console; but those WPP updates are not configured to be visable in WSUS, are not INVISIBLE in BOTH WSUS and WPP consoles.\r\n\r\nPlease see my attached picture. Thanks for you help!\r\n\r\nBR\r\n\r\n",
+    "LastUpdatedDate": "2015-01-11T12:14:45.87-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-11-13T01:42:56.36-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Updates in WPP are invisible",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 230
+  },
+  "FileAttachments": [
+    {
+      "FileId": 931166,
+      "FileName": "2014-11-13_173554.png",
+      "DownloadUrl": ".\\931166"
+    },
+    {
+      "FileId": 931179,
+      "FileName": "13-11-_2014_11-52-04.png",
+      "DownloadUrl": ".\\931179"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Open WPP, Tools > Settings > Servers.\n[X] Connect to local Server.\n[X] Always make this update visible in WSUS Console.\n\nTools > Settings > Updates.\n[X] Show locally..\n\nMisc. [X] When starting, connect to the last used server.\n\nAfter you made this settings, restart WPP.\n",
+      "PostedDate": "2014-11-13T02:42:58.167-08:00",
+      "Id": 164634
+    },
+    {
+      "Message": "See attached screenshot.",
+      "PostedDate": "2014-11-13T02:53:30.14-08:00",
+      "Id": 164635
+    }
+  ]
+}

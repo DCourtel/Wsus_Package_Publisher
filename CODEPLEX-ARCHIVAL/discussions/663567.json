@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1497660",
+    "ThreadId": "663567",
+    "Html": "Hi - I am running WPP version 1.3.1702.10 on a Windows Server 2016 WSUS instance. Trying to connect, I followed the documentation, and chose &quot;Connect to local server&quot; as my connection option. I get the error of &quot;Connection Failed: The request failed with HTTP status 400: Bad Request.&quot;.<br />\n\r<br />\nI've verified the WSUS instance is running properly, and I can get to the SimpleAuth Web Service test page for WSUS with no issue. I've also tried disabling the local firewall to ensure it wasn't blocking anything, but am getting the same result. Any thoughts on what could be causing my issue? <br />\n",
+    "PostedDate": "2017-08-07T14:11:23.997-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

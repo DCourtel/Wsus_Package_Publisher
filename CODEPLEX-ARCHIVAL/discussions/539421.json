@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1224191",
+    "ThreadId": "539421",
+    "Html": "Hi,\r<br />\n<br />\nI have successfully installed Flash Player 12.0.077 using &quot;<a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=663365\" rel=\"nofollow\">https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=663365</a>&quot;\r<br />\n<br />\nMy Question is how to i achieve copying the &quot;mms.cfg&quot; to the windows directory as i did before using another deployment tool.\r<br />\n<br />\nNormally i would install flash player with this synatx below into a batch file:\r<br />\n<br />\ncopy mms.cfg %WINDIR%\\SysWOW64\\Macromed\\Flash /Y\r<br />\ncopy mms.cfg %WINDIR%\\System32\\Macromed\\Flash /Y\r<br />\nmsiexec /i install_flash_player_12_active_x.msi /quiet /norestart\r<br />\nmsiexec /i install_flash_player_12_plugin.msi /quiet /norestart\r<br />\n<br />\nwhat syntax or what method do i use to do this in WPP?\r<br />\n<br />\nThanks in advance\r<br />\nDan<br />\n",
+    "PostedDate": "2014-03-18T16:30:35.417-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1224305",
+    "ThreadId": "539421",
+    "Html": "Hi, you can create a 'Custom Update' and add a 'Create a Text File' Action.<br />\n",
+    "PostedDate": "2014-03-19T01:21:59.107-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:50:30.27-07:00"
+  }
+]

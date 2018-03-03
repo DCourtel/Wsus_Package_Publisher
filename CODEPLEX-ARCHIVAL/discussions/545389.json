@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1245561",
+    "ThreadId": "545389",
+    "Html": "We have an organization listed under the updates category that we would like to remove, including all the products underneath.<br />\n\r<br />\nThe Delete button does not seem to do anything.  Nor are there options for removal when I right click the organization/company.<br />\n",
+    "PostedDate": "2014-05-14T16:37:35.923-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1245570",
+    "ThreadId": "545389",
+    "Html": "<ol>\n<li>Re-added an update to this organzation / company as there were none.</li>\n<li>Clicked decline button at right for this update.</li>\n<li>Clicked delete button at right.</li>\n</ol>\n",
+    "PostedDate": "2014-05-14T17:07:04.033-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1245887",
+    "ThreadId": "545389",
+    "Html": "First, ensure there is nomore updates in each product for the Company you want to delete. Then try to delete every product, one by one.\r<br />\nYou need to run WPP locally on the Wsus server.<br />\n",
+    "PostedDate": "2014-05-15T13:06:17.907-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:33:33.043-07:00"
+  }
+]

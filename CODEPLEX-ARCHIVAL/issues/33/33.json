@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Information Update Wizard",
+      "DisplayName": "Information Update Wizard"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-05-07T08:04:38.107-07:00",
+    "CommentCount": 6,
+    "Custom": null,
+    "Description": "If revising an update, it would be helpful to be able to do ctrl+a at least in the description-box.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1305.03",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-07T02:53:51.723-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Ctrl+A not working",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 33
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I'll take a look.",
+      "PostedDate": "2013-05-07T03:01:15.043-07:00",
+      "Id": 99556
+    },
+    {
+      "Message": "CTRL+A now works in the Description TextBox when revising an update.",
+      "PostedDate": "2013-05-07T07:56:03.07-07:00",
+      "Id": 99584
+    },
+    {
+      "Message": "Thanks. :)",
+      "PostedDate": "2013-05-07T08:01:38.223-07:00",
+      "Id": 99586
+    },
+    {
+      "Message": "Maybe an addition I often use the description field for multiple updates of the same product but different versions. At the Moment I have to revise the update to copy the content. Would it be possible to have the content selectable like the Folder or ID?\n\nRegards\nNorbert",
+      "PostedDate": "2013-05-07T08:04:47.323-07:00",
+      "Id": 99587
+    },
+    {
+      "Message": "I have made the change. You will be able to select the content of the \"Description\" field in the UpdateDetailViewer.\nCtrl+A will also works .",
+      "PostedDate": "2013-05-07T13:40:37.14-07:00",
+      "Id": 99626
+    },
+    {
+      "Message": "Thanks a lot.",
+      "PostedDate": "2013-05-07T14:11:37.6-07:00",
+      "Id": 99636
+    }
+  ]
+}

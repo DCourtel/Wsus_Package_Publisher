@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1487279",
+    "ThreadId": "659135",
+    "Html": "Hi,\r<br />\n<br />\nI have a problem publishing Dell updates from DellSDPCatalog.cab.\r<br />\npublishing from this catalog works as long as I use version WPP Release v1.3.1411.09 or older.\r<br />\nWhen I use a newer version, I get an error message &quot;Error when importing update&quot; as soon as I hit the [import selected updates] button in the &quot;import from catalog&quot; window.\r<br />\n<br />\nI have seen this problem for a long time now, so i have been using the old version until now.\r<br />\nI would like to upgrade to the latest version of WPP, but how can i solve this issue?\r<br />\n<br />\nKind Regards,\r<br />\nTom<br />\n",
+    "PostedDate": "2016-11-02T09:56:16.37-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

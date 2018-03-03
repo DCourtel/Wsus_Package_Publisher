@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "1098703",
+    "ThreadId": "458988",
+    "Html": "Hi, \r<br />\n<br />\nI'd like to know if its possible to deploy EXE files in workstations for users that haven't admin privileges.\r<br />\n<br />\nThanks,\r<br />\nWagner Queiroz<br />\n",
+    "PostedDate": "2013-09-24T11:38:07.367-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1098739",
+    "ThreadId": "458988",
+    "Html": "By default, Windows Update Agent, install updates with the &quot;System&quot; account. So yes, you can install updates on computer where users are not Admin.<br />\n",
+    "PostedDate": "2013-09-24T13:03:01.11-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1098760",
+    "ThreadId": "458988",
+    "Html": "Hi DCourtel, congrats to your product.\r<br />\nHere for users without admin privileges the Windows Update window stay freezy, like waiting for install, but the window for the use interact, to give next, next, finish doesn't appear, but for users with admin privileges the window appears and the software can be installed successfully.<br />\n",
+    "PostedDate": "2013-09-24T14:12:16.69-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1098771",
+    "ThreadId": "458988",
+    "Html": "Can you explain a bit your configuration for WSUS via GPO? Please state every policy Setting here, so we can help you out.\r<br />\nIs this just with custom updates like .exe files or with all Updates? Can you give more info about the deployed .exe files and there Parameters?\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-09-24T14:39:55.057-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1098932",
+    "ThreadId": "458988",
+    "Html": "<blockquote>\nfor users without admin privileges the Windows Update window stay freezy, like waiting for install<br />\n</blockquote>\nThis mean that the EXE try to display a User Interface to the screen but &quot;System&quot; Account doesn't have such feature.<br />\n<blockquote>\nfor users with admin privileges the window appears and the software can be installed successfully.<br />\n</blockquote>\nIf the EXE needs some informations to install the software, then the UI need to be displayed. In the &quot;Update Creation Wizard&quot;, check the checkbox call &quot;Can request user input&quot;.\r<br />\n<br />\nWhich software do you try to deploy ?<br />\n",
+    "PostedDate": "2013-09-25T02:22:25.827-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-12T08:47:57.857-07:00"
+  },
+  {
+    "Id": "1099267",
+    "ThreadId": "458988",
+    "Html": "Hi, \r<br />\nI'm using the install_flash_player_11_plugin.exe and 7z920-x64.exe to test.\r<br />\nI set the option &quot;Can request user input&quot; and now the workstation display the error number 80240020.\r<br />\nIm not using GPO yet, my test is manual.<br />\n",
+    "PostedDate": "2013-09-25T10:11:30.817-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1099306",
+    "ThreadId": "458988",
+    "Html": "Both products (Flashplayer and 7zip) are available as .msi packages. Why aren't you using those?\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-09-25T11:36:17.667-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1099323",
+    "ThreadId": "458988",
+    "Html": "Hi Norbert, \r<br />\nI know that, and I will use MSI packages to deploy them. \r<br />\nI intent to deploy Mozilla Firefox EXE or create my own MSI converting the EXE file. I don't trust in Front Motion, because I don't know how they create the package.\r<br />\nThanks a lot, you can close this thread. I will deploy products with native MSI files.    <br />\n",
+    "PostedDate": "2013-09-25T12:29:20.613-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1099378",
+    "ThreadId": "458988",
+    "Html": "Ok. I guess You could just ask in frontmotion's Forum about that. ;)<br />\n",
+    "PostedDate": "2013-09-25T14:20:46.71-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

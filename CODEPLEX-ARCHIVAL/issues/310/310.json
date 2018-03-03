@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Rules Update Wizard",
+      "DisplayName": "Rules Update Wizard"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:52.76-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Ich konnte mein Problem der sich immer wiederholenden Updates ( gleichen Fall hatte jemand vor ein paar Tagen in einem parallelen Thread gepostet ) gestern noch lösen. Habe das Update gelöscht und komplett neu aus dem Katalog geladen, dann gings. Wohlgemerkt war das bisherige aber auch schon seit Tagen erfolgreich in Betrieb. Keine logische Erklärung.\r\nEs gibt von Adobe das \"Adobe CC Cleaner Tool\" , das sollte man in solchen Fällen sicherheitshalber auch immer griffbereit haben. Insbesondere wenn es nicht läuft wie es sollte :-)\r\n\r\nMit den sich NICHT instalierenden Updates bin ich nicht weiter gekommen. Habe mal die im WPP angezeigten .msi Metadaten der drei bisherigen Updates verglichen, als da gibt es ein paar strukturelle Unterschiede , Stichwort <Obsolated Patch> , aber mir fehlt da das Wissen um zu sehen was da welche Bedeutung hat. \r\n\r\nTja, bei mir funktioniert die Release v1.3.1508.08 . Vor den April Release hatte ich WPP Abstürze bei Verwendung des Adobe Katalog. \r\n\r\nVon Bedeutung ist Möglicherweise das das Handling von .msi Regeln mit den April Releases geändert wurde !\r\n\" Now automatic Rules based on MSI Product code are not generated anymore. Instead, WPP use MetaData integrated by the Publisher. In the \"Package Level\", you will found a rule like \"<msiar:MsiPatchInstalled/>\" and \"<msiar:MsiPatchInstallable/>\"\r\n\r\nDiese Einträge finde ich bei mir NICHT wenn ich ein Reader Update aus dem Katalog erstelle ( aber es funktioniert ), von anderen wurde die Einträge jeodch gesichtet. Das es an den \"WPP integrated MetaData\" würde für mich Sinn machen.  \r\n ",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1508.08",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-11-15T09:22:38.397-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Adobe Acrobat Reader DC - MSP don't work",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 310
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "WPP doesn't advertise Wsus Clients to use MSI/MSP metadata.",
+      "PostedDate": "2015-11-15T09:23:57.63-08:00",
+      "Id": 193671
+    }
+  ]
+}

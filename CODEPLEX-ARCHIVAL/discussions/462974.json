@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1110005",
+    "ThreadId": "462974",
+    "Html": "Hello Guys,<br />\ni write a little vbscript that disable the java update:<br />\n<pre><code>Err = 0\nset objShell=CreateObject(&quot;wscript.shell&quot;)\n\n'Schlüssel ändern/hinzufügen\nobjShell.regwrite &quot;HKLM\\SOFTWARE\\Wow6432Node\\JavaSoft\\Java Update\\Policy\\EnableJavaUpdate&quot;, &quot;0&quot;, &quot;REG_DWORD&quot;\n\nWScript.Quit(Err)</code></pre>\n\nI create a customer update and added the vbscript as task.<br />\nThan i create follow rules:<br />\n<br />\n<a href=\"https://cloud.wurzach-it.de/owncloud/public.php?service=files&amp;t=e089286814d09cbf58e50ca24c559631\" rel=\"nofollow\">https://cloud.wurzach-it.de/owncloud/public.php?service=files&t=e089286814d09cbf58e50ca24c559631</a><br />\n<a href=\"https://cloud.wurzach-it.de/owncloud/public.php?service=files&amp;t=643d6fd8ed8aa19ca7ef40b32a588ae0\" rel=\"nofollow\">https://cloud.wurzach-it.de/owncloud/public.php?service=files&t=643d6fd8ed8aa19ca7ef40b32a588ae0</a><br />\n<a href=\"https://cloud.wurzach-it.de/owncloud/public.php?service=files&amp;t=172a5cea4cddbf65fcc390aaf70484d4\" rel=\"nofollow\">https://cloud.wurzach-it.de/owncloud/public.php?service=files&t=172a5cea4cddbf65fcc390aaf70484d4</a><br />\n<br />\n<a href=\"https://cloud.wurzach-it.de/owncloud/public.php?service=files&amp;t=cbbfe312503e8c1f94ae7531370948f9\" rel=\"nofollow\">https://cloud.wurzach-it.de/owncloud/public.php?service=files&t=cbbfe312503e8c1f94ae7531370948f9</a><br />\n<br />\nI clean up the software distribution directory. But i don't see the update.<br />\nWhat am I doing wrong?<br />\n<br />\nDaniel<br />\n",
+    "PostedDate": "2013-10-21T07:06:53.527-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1110136",
+    "ThreadId": "462974",
+    "Html": "Hello,\r<br />\n<br />\nFirst, why are you using a VBScript to do that ? This can be achieve by a 'Registry' Action (modify).\r<br />\n<img src=\"http://i.imgur.com/iiGOvNO.png\" alt=\"Registry Action\" />\r<br />\n<br />\nSecond, if you want to set to 0 a registry value, why do you try to detect a registry value set to 1 for IsInstalled, and not set to 1 for IsInstallable ?\r<br />\nThird, try to check the checkbox 'Registry 32bit'.<br />\n",
+    "PostedDate": "2013-10-21T10:55:31.217-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-21T12:37:22.22-07:00"
+  },
+  {
+    "Id": "1110170",
+    "ThreadId": "462974",
+    "Html": "Hi DCourtel,\r<br />\nhumpf... you are right. That is the easiest method. I changed it and configured the correct values for the detection.\r<br />\nNow i work's fine. Thank you!<br />\n",
+    "PostedDate": "2013-10-21T11:51:37.29-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1110211",
+    "ThreadId": "462974",
+    "Html": "Hi,\r<br />\n<br />\nas I don't understand completly what Oracle does with JAVA Update, why wouldn't you not just only use a customized .mst file and set JU=0? Wouldn't that suffice?\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-10-21T13:04:55.607-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1110215",
+    "ThreadId": "462974",
+    "Html": "Hi Norbert,\r<br />\nwe habe problems (control panel cash on start) with the deployment of Java 7 update 25 when we use the msi file. Our tests show us, thats something wrong. But we don't know what. Also we can't update to the newest version because some applications don't work anymore.\r<br />\n<br />\nNow we deploy java 7u25 as exe file and disable the update via customer update. than all applications work fine.\r<br />\n<br />\nRegards,\r<br />\nDaniel<br />\n",
+    "PostedDate": "2013-10-21T13:10:45.98-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1110222",
+    "ThreadId": "462974",
+    "Html": "<strong>badwurzach wrote:</strong><br />\n<blockquote>\nHi Norbert,<br />\nwe habe problems (control panel cash on start) with the deployment of Java 7 update 25 when we use the msi file. Our tests show us, thats something wrong. But we don't know what.<br />\n</blockquote>\nI would than investigate further. ;) Usually it's remains from older versions. Does this happen on clean new OS too?<br />\n<blockquote>\nAlso we can't update to the newest version because some applications don't work anymore.<br />\n</blockquote>\nYes, because Java is absolutly sandboxed and secure. So Banking programs and Websites only work with old Versions. ;) I've seen a lot of such stuff lately.<br />\n<blockquote>\nNow we deploy java 7u25 as exe file and disable the update via customer update. than all applications work fine.<br />\n</blockquote>\nDidn't this help?\r<br />\n<a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=528658\" rel=\"nofollow\">https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=528658</a>\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-10-21T13:20:09.1-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1110223",
+    "ThreadId": "462974",
+    "Html": "<strong>NorbertFe wrote:</strong><br />\n<blockquote>\n<strong>badwurzach wrote:</strong><br />\n<blockquote>\nHi Norbert,<br />\nwe habe problems (control panel cash on start) with the deployment of Java 7 update 25 when we use the msi file. Our tests show us, thats something wrong. But we don't know what.<br />\n</blockquote>\nI would than investigate further. ;) Usually it's remains from older versions. Does this happen on clean new OS too?<br />\n<blockquote>\nAlso we can't update to the newest version because some applications don't work anymore.<br />\n</blockquote>\nYes, because Java is absolutly sandboxed and secure. So Banking programs and Websites only work with old Versions. ;) I've seen a lot of such stuff lately.<br />\n<blockquote>\nNow we deploy java 7u25 as exe file and disable the update via customer update. than all applications work fine.<br />\n</blockquote>\nDidn't this help?<br />\n<a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=528658\" rel=\"nofollow\">https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=528658</a><br />\nAnd Setting this above registry value would be much easier with Group Policy. ;)<br />\n<br />\nRegards<br />\nNorbert<br />\n</blockquote>\n",
+    "PostedDate": "2013-10-21T13:20:52.767-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1110545",
+    "ThreadId": "462974",
+    "Html": "<blockquote>\nDidn't this help?  <a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=528658\" rel=\"nofollow\">https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=528658</a><br />\nThis helps only if you install Java with the exe file. Autoupdate is a seperate installation file. :-)<br />\n<br />\nI would than investigate further. ;) Usually it's remains from older versions. Does this happen on clean new OS too?<br />\nUnfortunately, i have no more time for Troubleshooting. I rollout tonight the 7u45 and my programs work again.<br />\n</blockquote>\n",
+    "PostedDate": "2013-10-22T06:35:06.58-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

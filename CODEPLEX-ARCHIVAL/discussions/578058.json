@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1343248",
+    "ThreadId": "578058",
+    "Html": "Hi guys,<br />\n<br />\nI have 2 issues with publishing the Uninstall update of &quot;Java Auto Update&quot; with the WPP. I have followed the guide on the website but still I have some issues with removing the Java Auto Updater. <br />\n<ol>\n<li>\nWhen the client wants to uninstall the Java Auto update after the installation of Java, Windows Update shows then a pop-up which says: Do you want to uninstall this package &quot;YES&quot; or &quot;NO&quot;? I thought that uninstalling will happen silently on the background and Windows Update should not show a pop-up about this. How can I make sure that this will not happen? Btw, this is a Windows 7 machine.<br />\n</li>\n<li>\nOn Windows 8.1, it takes very long before the Java update 8 u 25 is finished with installing. Also Java auto updater is not removed. Did I do something wrong?<br />\n</li>\n</ol>\n",
+    "PostedDate": "2015-01-19T07:21:12.2-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1343263",
+    "ThreadId": "578058",
+    "Html": "Are you using the /qn flag with msiexec? This should suppress the popup. The popup might be the reason it's taking a while on 8.1, since it may be prompting for input, but not receiving any, so timing out and killing the uninstall after 10 minutes (the default wait time in WPP custom updater, if you didn't change it).<br />\n",
+    "PostedDate": "2015-01-19T08:28:11.673-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1343292",
+    "ThreadId": "578058",
+    "Html": "<blockquote>\nWindows Update shows then a pop-up which says: Do you want to uninstall this package &quot;YES&quot; or &quot;NO&quot;?<br />\n</blockquote>\nEnsure you have not tick the option &quot;Can request user inputs&quot;.<br />\n<blockquote>\nOn Windows 8.1, it takes very long before the Java update 8 u 25 is finished with installing.<br />\n</blockquote>\nWhy are you talking of installing Java 8u25, your package is to uninstall Java Auto Updater, which is another product ?<br />\n",
+    "PostedDate": "2015-01-19T09:43:07.393-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1343300",
+    "ThreadId": "578058",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\n<blockquote>\nWindows Update shows then a pop-up which says: Do you want to uninstall this package &quot;YES&quot; or &quot;NO&quot;?<br />\n</blockquote>\nEnsure you have not tick the option &quot;Can request user inputs&quot;.<br />\n<blockquote>\nOn Windows 8.1, it takes very long before the Java update 8 u 25 is finished with installing.<br />\n</blockquote>\nWhy are you talking of installing Java 8u25, your package is to uninstall Java Auto Updater, which is another product ?<br />\n</blockquote>\nI think he's referring to the documentation where the Java Updater is uninstalled immediately after the JRE is installed as part of the update package, since installing the JRE will install the Java Updater.<br />\n",
+    "PostedDate": "2015-01-19T09:57:29.43-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1343353",
+    "ThreadId": "578058",
+    "Html": "In this case, for Windows 8, he needs to ensure that Microsoft .Net 3.5 is installed. Because, Custom update use .Net to run.<br />\n",
+    "PostedDate": "2015-01-19T14:00:27.007-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1343469",
+    "ThreadId": "578058",
+    "Html": "<strong>austinian wrote:</strong><br />\n<blockquote>\nAre you using the /qn flag with msiexec? This should suppress the popup. The popup might be the reason it's taking a while on 8.1, since it may be prompting for input, but not receiving any, so timing out and killing the uninstall after 10 minutes (the default wait time in WPP custom updater, if you didn't change it).<br />\n</blockquote>\nThank you for your answer. Please let me clearify a couple of things for you. First of all:<br />\n<ol>\n<li>\nI have followed the documentation on the website (Installing Java 7u21 without Java Auto Updater). At step 5, I need to create a Executable Element in a customized update. This will be used to uninstall Java Auto Updater after the installation of Java 8u25. <br />\n</li>\n<li>\nThe command that I have used is just like the command in the document which is: /qn /norestart with msiexec.exe<br />\n</li>\n<li>\nIn Windows 7, after the installation of Java I receive a pop-up which says: Do you want to uninstall this package &quot;Yes&quot; or &quot;No&quot;. This <strong>ONLY</strong> happens in Windows 7.<br />\n</li>\n<li>\nIn Windows 8, it takes very long before Java 8u25 is installed. I don't receive any pop-up about uninstalling Java Auto Updater but it also not removed. <br />\n</li>\n</ol>\n<strong>DCourtel:</strong><br />\n<blockquote>\nEnsure you have not tick the option &quot;Can request user inputs&quot;.<br />\nWhy are you talking of installing Java 8u25, your package is to uninstall Java Auto Updater, which is another product ?<br />\nIn this case, for Windows 8, he needs to ensure that Microsoft .Net 3.5 is installed. Because, Custom update use .Net to run.<br />\n</blockquote>\n<ol>\n<li>&quot;Can request user inputs&quot; option is off.</li>\n<li>I am reffering to the document <strong>Installing Java 7u21 without Java Auto Updater</strong>, but I am using it for Java 8u25 version.</li>\n<li>\nMicrosoft .NET 3.5 is installed.<br />\n</li>\n</ol>\n",
+    "PostedDate": "2015-01-20T03:16:31.72-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1345892",
+    "ThreadId": "578058",
+    "Html": "Ah, yeah. I'm actually having issues with the Java 8 installer myself. The instructions are still good for JRE 7, but Oracle changed the installer in version 8. I gave up on using the EXE file anymore, and I'm trying to get the MSI file that the EXE extracts to %LOCALAPPDATA%\\LocalLow\\Sun\\Java\\jre1.8.0_31. Right now I'm getting a 1722 error when the install executes, but I may be on the brink of solving that one. I'll let you know how I do it once I get it working.<br />\n",
+    "PostedDate": "2015-01-26T12:34:44.837-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

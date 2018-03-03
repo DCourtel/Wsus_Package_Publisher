@@ -1,0 +1,71 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "AD-Wsus Comparer",
+      "DisplayName": "AD-Wsus Comparer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nin the German GUI, the Search Computer and select OU Buttons are overlapping.\r\n\r\nSee screenshot.\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1310.05",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-09T00:57:58.2-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "[Solved] GUI correction needed",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 131
+  },
+  "FileAttachments": [
+    {
+      "FileId": 741949,
+      "FileName": "09-10-2013 09-55-17.jpg",
+      "DownloadUrl": ".\\741949"
+    },
+    {
+      "FileId": 742603,
+      "FileName": "11-10-2013 11-25-33.jpg",
+      "DownloadUrl": ".\\742603"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "That's right. I have saw that last day. I have made the correction.",
+      "PostedDate": "2013-10-09T01:14:03.113-07:00",
+      "Id": 117901
+    },
+    {
+      "Message": "Hi,\r\n\r\nI found another issue. See new screenshot. The label description should be removed or labeled with \"progress\" (English) \"Fortschritt\" (German).\r\n\r\nRegards\r\nNorbert",
+      "PostedDate": "2013-10-11T02:30:21.29-07:00",
+      "Id": 118128
+    },
+    {
+      "Message": "\n\r\n\r** Closed by DCourtel 10/09/2013 1:14AM",
+      "PostedDate": "2013-10-09T01:14:46.903-07:00",
+      "Id": 118129
+    },
+    {
+      "Message": "This is regarding the German language. ;) In English the label is \"Summary\".\r\n",
+      "PostedDate": "2013-10-11T02:31:45.92-07:00",
+      "Id": 118130
+    }
+  ]
+}

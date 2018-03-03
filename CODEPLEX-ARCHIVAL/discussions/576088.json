@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1335637",
+    "ThreadId": "576088",
+    "Html": "Hier muss es nicht &quot;Verzeichnis&quot; heissen, sondern &quot;Dateipfad&quot;:\r<br />\nThis should be &quot;Dateipfad&quot; instead of &quot;Verzeichnis&quot;:\r<br />\n<br />\n<img src=\"http://i57.tinypic.com/wmkpl1.png\" alt=\"Image\" />\r<br />\n<br />\nIm Menü zur Auswahl des Regeltyps sind mehrere Einträge gleich benannt:\r<br />\nIn the menu where to choose the rule type there are some duplicated entries:\r<br />\n<br />\n<img src=\"http://i60.tinypic.com/975hsp.jpg\" alt=\"Image\" />\r<br />\n<br />\nBesser:\r<br />\nBetter:<br />\n<ul>\n<li>Datei existiert</li>\n<li>Datei existiert (Pfad aus RegSZ)</li>\n<li>Dateiversion</li>\n<li>Dateiversion (Pfad aus RegSZ)</li>\n<li>Dateierstellungsdatum</li>\n<li>\nDateierstellungsdatum (Pfad aus RegSZ)<br />\n</li>\n</ul>\n",
+    "PostedDate": "2014-12-22T15:19:41.423-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1359875",
+    "ThreadId": "576088",
+    "Html": "Danke. Einiges davon wird in der nächsten Version gefixt.<br />\n",
+    "PostedDate": "2015-03-04T11:51:47.853-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update Detail Viewer",
+      "DisplayName": "Update Detail Viewer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:53.103-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "I'm wondering if it'd be possible to refresh a single view in WPP instead of reloading everything with the Connect/Reload button, so that it'd be quicker to see changes to tasks that are being worked on. (sometimes using both), and so that after a \"refresh\", you end up in the same view you were in before you pressed the \"refresh\" button, instead of at the top level like what happens now with the Connect/Reload button.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1603.29",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-11-28T09:03:31.257-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Can we add a Refresh View button, like in WSUS console",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 3,
+    "Id": 237
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Added a button to refresh the display of computers status.",
+      "PostedDate": "2017-01-28T09:09:31.143-08:00",
+      "Id": 206289
+    }
+  ]
+}

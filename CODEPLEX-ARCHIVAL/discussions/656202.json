@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "1478382",
+    "ThreadId": "656202",
+    "Html": "Hello,<br />\n<br />\ni recently installed a new wsus server and of course the WSUS Package Publisher.<br />\n<br />\nAlthough i can connect to the server when i uncheck the &quot;connect to local server&quot; checkbox, i can`t connect to the server locally.<br />\n<br />\nThe error message:<br />\n<pre><code>Connection failed: Invalid URI: The hostname could not be parsed.</code></pre>\n\nI tried to use IP-Address or fqdn instead of the hostname but it did not worked.<br />\nPing to the hostname resolves the ip address correctly.<br />\n<br />\nI have found this post but i cannot imagine what registry setting the guy meant:<br />\n<a href=\"https://wsuspackagepublisher.codeplex.com/discussions/638167\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/638167</a><br />\n<br />\nMy WSUS Server is installed on a fresh Server 2012R2 with SSL activated and i use Port 8531 to connect to the server.<br />\n<br />\nMy options.xml:<br />\n<pre><code>&lt;WsusPackagePublisher&gt;\n  &lt;Server&gt;\n    &lt;Name&gt;WSUS-SRV&lt;/Name&gt;\n    &lt;IsLocal&gt;True&lt;/IsLocal&gt;\n    &lt;Port&gt;8531&lt;/Port&gt;\n    &lt;UseSSL&gt;True&lt;/UseSSL&gt;\n    &lt;IgnoreCertErrors&gt;False&lt;/IgnoreCertErrors&gt;\n    &lt;DeadLineDaysSpan&gt;0&lt;/DeadLineDaysSpan&gt;\n    &lt;DeadLineHour&gt;0&lt;/DeadLineHour&gt;\n    &lt;DeadLineMinute&gt;0&lt;/DeadLineMinute&gt;\n    &lt;VisibleInWsusConsole&gt;Always&lt;/VisibleInWsusConsole&gt;\n  &lt;/Server&gt;\n&lt;/WsusPackagePublisher&gt;</code></pre>\n\n",
+    "PostedDate": "2016-07-08T00:07:09.79-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1478383",
+    "ThreadId": "656202",
+    "Html": "The Registry Settings should be this: HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Update Services\\Server\\Setup\r<br />\n<br />\nIs WPP installed on the WSUS? The WSUS.MSC ist working? Did you install KB3159706 on your WSUS? If yes, did you alle the manually Steps?\r<br />\n<br />\nPls post a image with Settings from your WSUS in WPP-Settings.<br />\n",
+    "PostedDate": "2016-07-08T00:28:34.357-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1478384",
+    "ThreadId": "656202",
+    "Html": "Try Port 443 fro SSL.<br />\n",
+    "PostedDate": "2016-07-08T00:29:24.603-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1478391",
+    "ThreadId": "656202",
+    "Html": "Here is the picture:\r<br />\n<br />\n<img src=\"https://abload.de/img/unbenanntg0s6h.jpg\" alt=\"Image\" />\r<br />\n<br />\ni changed the port in the registry to 443 and in the iis/wpp too.\r<br />\n<br />\nerror message changed to:<br />\n<pre><code>Connection failed:\nThe underlying connection was closed: could not establish trust relationship for the SSL/TLS secure channel</code></pre>\n\n",
+    "PostedDate": "2016-07-08T00:58:09.58-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1478392",
+    "ThreadId": "656202",
+    "Html": "Sorry, my fault. In the Registry don't change anything. Change back to 8531 in Registry. \r<br />\n<br />\nChange from 8531 to 443 in your Options.xml. Pls close before your WSUS.<br />\n",
+    "PostedDate": "2016-07-08T01:01:36.833-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1478393",
+    "ThreadId": "656202",
+    "Html": "New error:<br />\n<pre><code>Connection failed: Unable to connect to remote server</code></pre>\n\n",
+    "PostedDate": "2016-07-08T01:05:25.42-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1478405",
+    "ThreadId": "656202",
+    "Html": "Hmm, you changed back in registry to Port 8531? Can you connect with WSUS.MSC? You changed onyl in options.xml? Restart the whole server.<br />\n",
+    "PostedDate": "2016-07-08T02:08:31.017-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1478406",
+    "ThreadId": "656202",
+    "Html": "Yes, i revert the changes to the registry.\r<br />\nI can connect to the wsus.msc\r<br />\n<br />\nI changed the port in the options.xml, in iis binding and the gpo.\r<br />\n<br />\nYou mean i have to stay everywhere on port 8531 except wpp?<br />\n",
+    "PostedDate": "2016-07-08T02:19:16.437-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1478410",
+    "ThreadId": "656202",
+    "Html": "I found a solution.\r<br />\n<br />\ni recreated the wsus certificate with the fqdn as cert name and now it works, even with port 8531 in options.xml.\r<br />\n<br />\nTank you for your help :)<br />\n",
+    "PostedDate": "2016-07-08T02:53:44.39-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2016-07-08T02:53:54.03-07:00"
+  }
+]

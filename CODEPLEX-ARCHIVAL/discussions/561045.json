@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1289636",
+    "ThreadId": "561045",
+    "Html": "Hi, I'm using wsus package publisher in my site that consists of a normal wsus server and a replica server in another city. I managed to install the package publisher, created the certification of the normal wsus server(not the replica), installed via GPO the certification to all of my computers on the network and successfully published a flash player update to all of the computers on the network. The problem now is that I can't install normal updates to the computers that report back to the replica server. If I configure the same computer to report back to the normal server, then the updates are install correctly. When I add it back to the replica server, then the updates are stuck on downloading 0% and then stops with error 80072ee2. \r<br />\nAm I missing something? My configuration used to work with microsoft updates for 2 years, so it must have been something that I'm missing...<br />\n",
+    "PostedDate": "2014-08-13T05:38:37.673-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1289677",
+    "ThreadId": "561045",
+    "Html": "Hi, WPP doesn't modify any settings on Wsus Server (except importing certificate, eventually). So what have been change additionnaly to the WPP installation ?\r<br />\nError code 80072ee2 mean : Time out error. Your clients can't communicate with the replica server. Check firewall, IIS on Wsus replica or any change of network settings.<br />\n",
+    "PostedDate": "2014-08-13T07:03:47.203-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1289894",
+    "ThreadId": "561045",
+    "Html": "Apparently I didn't make any other changes (neither at the network or the server). Maybe something is happening with the certification of the normal server? Do I have to create another certification for the replica server and import it to the computers? Also I haven't enabled the SSL for the replica to connect to the normal server.<br />\n",
+    "PostedDate": "2014-08-13T23:51:46.967-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1290174",
+    "ThreadId": "561045",
+    "Html": "<blockquote>\nMaybe something is happening with the certification of the normal server?<br />\n</blockquote>\nNo, the problem is not related to certificate. The certificate is only used to sign package, so that clients can trust the package.\r<br />\nDoes client computer correctly report to wsus replica (last report date, last contact date) ?<br />\n",
+    "PostedDate": "2014-08-14T13:30:53.717-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1297693",
+    "ThreadId": "561045",
+    "Html": "Yes, the client computers correctly reports to wsus replica. It used to work correctly, but after the computers installed the custom package (flash player from package publisher), then they report that there are some update that are waiting for the installation. When you accept the updates to be installed in the computer, the update starts and hangs at 0%<br />\n",
+    "PostedDate": "2014-09-01T03:26:03.13-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1298069",
+    "ThreadId": "561045",
+    "Html": "Does clients computers are set to &quot;Download and then ask for instalaltion&quot; or &quot;Ask for download and ask for installation&quot; ?<br />\n",
+    "PostedDate": "2014-09-02T03:25:21.387-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

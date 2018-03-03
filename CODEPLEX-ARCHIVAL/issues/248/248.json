@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Catalogs",
+      "DisplayName": "Catalogs"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-04-12T10:29:11.147-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "In the main WPP interface, date strings are shown in local format, e.g., the 5th of November of 2014 shows as 11/5/2015 in the U.S., but in the Subscribe to Catalogs window it displays in a different format, e.g., the 23rd of January of 2015 shows as 23/01/2015.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.3.1411.09",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-02-02T12:33:58.547-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Date string in Last Download Date column in Subscribe to Catalogs view doesn't follow local format",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 248
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

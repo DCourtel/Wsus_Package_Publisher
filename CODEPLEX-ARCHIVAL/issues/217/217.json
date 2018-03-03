@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Rules Update Wizard",
+      "DisplayName": "Rules Update Wizard"
+    },
+    "ClosedComment": "Feature added.",
+    "ClosedDate": "2014-10-17T13:35:47.037-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "In many text fields, pressing Ctrl+A will perform a Select All, but this doesn't happen in the Edit Applicability Metadata view.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "release v1.3.1407.29",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-09-07T20:42:04.55-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Feature Request: Make Ctrl+A perform a Select All when editing applicability metadata",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 217
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

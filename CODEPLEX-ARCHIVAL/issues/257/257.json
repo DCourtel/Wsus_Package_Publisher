@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-11T22:27:19.983-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Bonjour,\r\n\r\nAvec la nouvelle version, la code retour 0 = succès n'est plus ajouté automatiquement à la création d'un nouvelle MAJ. Si on ne le met pas, le client retourne un erreur à l'utilisateur, même si l'installation c'est déroulé sans problème.\r\n\r\nCordialement.",
+    "LastUpdatedDate": "2015-11-11T22:27:19.983-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-04-13T02:43:19.84-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Code retour 0 n'est plus automatique",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 257
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "De quelle erreur il s'agit ?\n",
+      "PostedDate": "2015-04-13T11:46:59.51-07:00",
+      "Id": 182111
+    },
+    {
+      "Message": "J'ai modifié le code pour garder le code de retour par défaut.",
+      "PostedDate": "2015-04-14T13:26:28.55-07:00",
+      "Id": 182875
+    }
+  ]
+}

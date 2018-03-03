@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Approval Form",
+      "DisplayName": "Approval Form"
+    },
+    "ClosedComment": "WPP check if the list is empty before continuing.",
+    "ClosedDate": "2013-10-20T03:04:52.223-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When trying to approve an update, if the user try to sort MetaGroup while the list is empty, WPP throw an exception.\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1310.12",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-20T03:04:23.097-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Crash if trying to sort MetaGroup while there's no MetaGroup",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 142
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

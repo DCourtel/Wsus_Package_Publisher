@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1353359",
+    "ThreadId": "581177",
+    "Html": "Bonjour,\r<br />\nj'ai un problème avec les règles, ou plutôt la mise en place des règles.\r<br />\n<br />\nDans &quot;déjà installé&quot; je ne comprends pas comment sont interprétés les groupe &quot;ET&quot; et &quot;OU&quot;.\r<br />\n<br />\nPar exemple, je souhaite intaller un logiciel:\r<br />\nSi l'architecture est x64 ET présence d'une clé de registre\r<br />\nOU\r<br />\nsi l'architecture est x86 ET présence d'une clé de registre.\r<br />\nsinon, ne rien faire.\r<br />\n<br />\nComment sont donc gérés ces groupes SVP?<br />\n",
+    "PostedDate": "2015-02-17T04:05:11.927-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353402",
+    "ThreadId": "581177",
+    "Html": "Le type de groue s'applique aux règles qu'il contient.\r<br />\nDes règles dans un groupe 'Et' sont logiquement combinées par l'opérateur 'Et'.\r<br />\n<br />\nDans votre exemple, il faudrait faire les groupes suivant :\r<br />\n<br />\nCommencer OU\r<br />\n Commencer ET<br />\n<pre><code>Architecture x64\nClé de registre présente</code></pre>\n\nFin ET\r<br />\n Commencer ET<br />\n<pre><code>Architecture x86\nClé de registre présente</code></pre>\n\nFin ET\r<br />\nFin OU<br />\n",
+    "PostedDate": "2015-02-17T06:24:29.003-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-02-17T21:34:53.017-08:00"
+  },
+  {
+    "Id": "1353426",
+    "ThreadId": "581177",
+    "Html": "merci, je vois un peu mieux le fonctionnement et l'imbrication des groupes ET/OU.\r<br />\nCependant, en utilisant mon exemple, il faut cliquer vraiment au bon endroit dans le logiciel pour pouvoir ajouter les 2 groupes &quot;ET&quot; séparement afin de ne pas avoir 1 groupe &quot;ET&quot; imbriqué dans un autre groupe &quot;ET&quot;. (je suis sur un serveur 2012 R2 et version 1.3.1411.9 de WSUSPP.\r<br />\nPour remédier à ce problème d'ergonomie, je vais enregistrer et réimporter les régles au fur et à mesure.\r<br />\nEn tout cas merci beaucoup pour votre réponse.<br />\n",
+    "PostedDate": "2015-02-17T07:49:31.857-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

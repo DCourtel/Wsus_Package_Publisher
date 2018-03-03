@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1449269",
+    "ThreadId": "646472",
+    "Html": "Dear Community,\r<br />\n<br />\nwe have a standard image for our clients which includes Adobe Reader 11.0.10 MUI.\r<br />\nOn WPP we've created an update package via .msp file for version 11.0.11 (MUI) which runs perfectly.\r<br />\nMeanwhile Adobe released update versions .12 and .13, but neither .msp file will show up in Windows update.\r<br />\nWe've created the packages in the same way as for version 11.0.11, the WSUS report shows installs for approval and not applicable for status.\r<br />\nAny thoughts or ideas?\r<br />\n<br />\nThanks in advance\r<br />\n-Andreas-<br />\n",
+    "PostedDate": "2015-10-21T07:26:51.933-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1449324",
+    "ThreadId": "646472",
+    "Html": "I have noticed that .12 and .13 do not report as needed if you use the Adobe SCUP catalog or you create a standard update package. However, the msp file will install OK manually. I ended up creating custom scripted packages like this:\r<br />\n<br />\n@echo off\r<br />\ncall msiexec.exe /update &quot;%~dp0AdbeRdrUpd11013.msp&quot; /quiet /norestart\r<br />\nexit /B %EXIT_CODE%\r<br />\n<br />\nI tried to troubleshoot the metadata in the msp file but it is beyond my capability.\r<br />\n<br />\n-Jim B.<br />\n",
+    "PostedDate": "2015-10-21T15:29:46.04-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1449738",
+    "ThreadId": "646472",
+    "Html": "Version 11.0.12 works for me but not 11.0.13. WsusPP displays the status as &quot;Not Applicable&quot; - and the client does not show, download or install the update.\r<br />\n<br />\nIs it possible to find out with WsusPP, why the update is not applicable?\r<br />\n<br />\n-boesi<br />\n",
+    "PostedDate": "2015-10-26T08:04:55.757-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1450676",
+    "ThreadId": "646472",
+    "Html": "I have found a solution for the update 11.0.13 that requires no extra script:<br />\n<ol>\n<li>create an normal update with the msp file</li>\n<li>on the page for installed updates select MSI Patch Installed For Product and click Add Rule</li>\n<li>Patch Code: ac76ba86-7ad7-0000-2550-7a8c40011013</li>\n<li>Product Code: AC76BA86-7AD7-1053-7B44-AB0000000001</li>\n<li>repeat step 2-4 on the page for installable updates, but check Reverse Rule</li>\n</ol>\n",
+    "PostedDate": "2015-11-02T06:18:36.617-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451118",
+    "ThreadId": "646472",
+    "Html": "Well my solution doesn't work in all cases. I have a network with a SBS 2008, where the clients download and install the update and everything is alright.\r<br />\n<br />\nOn another network with a SBS 2011 the clients also download and install the update without an error. But then the clients download the update again just to see they don't need it. And then again and again and ... I had to expire the update to stop the loop.\r<br />\n<br />\nI checked the rules on both servers and they are identical. Are there any explanations for this behaviour?<br />\n",
+    "PostedDate": "2015-11-05T21:18:23.933-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452993",
+    "ThreadId": "646472",
+    "Html": "Got the same problem with 11.0.13 and decided to switch over to latest Adobe Reader 2015 (Classic Track!) since I was not able to find out the problem...<br />\n",
+    "PostedDate": "2015-11-18T08:16:41.843-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1453615",
+    "ThreadId": "646472",
+    "Html": "Thanks Boesi - this initially threw the 0x8024000F error when we first put it in, that and selecting 'All Computers' for the approval, not a good idea, still catching up after that fiasco. I'll try to post any similar results I see. Beginning an incremental push = small groups of a dozen here &amp; there. Few first test systems worked fine.<br />\n",
+    "PostedDate": "2015-11-23T13:01:55.61-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1453649",
+    "ThreadId": "646472",
+    "Html": "Dear All,\r<br />\n<br />\nwe used the manuall install via &quot;msiexec&quot; for now, which runs without any errors.\r<br />\n<br />\nmsiexec.exe /update AdbeRdrUpd11013_MUI.msp /quiet /norestart\r<br />\n(MSIPatchInstalledForProduct | Patch-Code: ac76ba86-7ad7-ffff-2550-7a8c40011013 | Product-Code: ac76ba86-7ad7-ffff-7b44-ab0000000001) \r<br />\n<br />\nMeanwhile we've noticed the release of a new WPP version (1.3.1511.15):<br />\n<ul>\n<li>Fix a bug that prevent client computers to read MSI/MSP MetaData</li>\n<li>Fix a bug that prevent WPP to display &quot;File Exist Prepend Reg SZ&quot;</li>\n<li>Add Windows 10 in the quick selection OS version list</li>\n<li>\nDisplay Update revision in the UpdateDetailViewer<br />\n</li>\n</ul>\nDoes someone know whether the first bugfix is releated to our threat?\r<br />\n<br />\nBest regards\r<br />\n-Andreas-<br />\n",
+    "PostedDate": "2015-11-24T00:36:57.597-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

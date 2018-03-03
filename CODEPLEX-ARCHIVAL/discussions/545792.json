@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1246854",
+    "ThreadId": "545792",
+    "Html": "Hi\r<br />\nI like to copy a file from our WPP server to a client. Is it possible to do it with WPP?<br />\n",
+    "PostedDate": "2014-05-19T02:07:24.173-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1246857",
+    "ThreadId": "545792",
+    "Html": "<strong>mistered5 wrote:</strong><br />\n<blockquote>\nI like to copy a file from our WPP server to a client. Is it possible to do it with WPP?<br />\n</blockquote>\nHi,<br />\n<br />\ni think it is more easier to copy a file with Group Policy Preferences or with a Batch or a Command File to the Client.<br />\n",
+    "PostedDate": "2014-05-19T02:17:47.777-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1247031",
+    "ThreadId": "545792",
+    "Html": "Hi, you can either<br />\n<ul>\n<li>Use a GPO as Winfried said.\r<br />\nor</li>\n<li>Create a custom update and use a &quot;Copy File&quot; element</li>\n</ul>\n",
+    "PostedDate": "2014-05-19T09:51:52.82-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-01T01:06:13.73-07:00"
+  }
+]

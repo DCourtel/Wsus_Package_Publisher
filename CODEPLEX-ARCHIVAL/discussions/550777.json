@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1263175",
+    "ThreadId": "550777",
+    "Html": "I have problems to use the GUI (Update Creation Wizard) for the custom rules. I need rules to publish the updates on only needes workstations.\r<br />\n<br />\nA test installation on Mictosoft Windows 2003R2 / WSUS 3.0 SP2 (the same as my production environment) let me publish some software (for example: Adobe AIR)\r<br />\n<br />\ni have problems to use the gui, so i export some rules and edit the ASCII File. Fine, that works fine. Now i want to publish the latest update from AIR, and a new rule does not work. If i load the rule, a messagebox with no content appears<br />\n<pre><code>&lt;lar:And&gt;\n&lt;lar:Or&gt;\n  &lt;bar:WindowsVersion Comparison=&quot;GreaterThanOrEqualTo&quot; MajorVersion=&quot;6&quot; MinorVersion=&quot;1&quot; ProductType=&quot;1&quot;/&gt;\n&lt;/lar:Or&gt;\n&lt;lar:Or&gt;\n  &lt;bar:Processor Architecture=&quot;0&quot;/&gt;\n  &lt;bar:Processor Architecture=&quot;9&quot;/&gt;\n&lt;/lar:Or&gt;\n&lt;lar:Or&gt;\n  &lt;bar:FileExists Path=&quot;C:\\Program Files (x86)\\Common Files\\Adobe AIR\\Versions\\1.0\\Adobe AIR.dll&quot;/&gt;\n  &lt;bar:FileExists Path=&quot;C:\\Program Files\\Common Files\\Adobe AIR\\Versions\\1.0\\Adobe AIR.dll&quot;/&gt;\n&lt;/lar:Or&gt;\n&lt;lar:Or&gt;\n  &lt;bar:FileVersion Path=&quot;C:\\Program Files (x86)\\Common Files\\Adobe AIR\\Versions\\1.0\\Adobe AIR.dll&quot; Comparison=&quot;LessThan&quot; Version=&quot;3.9.0.1210&quot;/&gt;\n  &lt;bar:FileVersion Path=&quot;C:\\Program Files\\Common Files\\Adobe AIR\\Versions\\1.0\\Adobe AIR.dll&quot; Comparison=&quot;&quot;LessThan Version=&quot;3.9.0.1210&quot;/&gt;\n&lt;/lar:Or&gt;\n&lt;/lar:And&gt;\n</code></pre>\n\nWhat is wrong with this rules? <br />\n",
+    "PostedDate": "2014-07-07T02:02:57.973-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1263205",
+    "ThreadId": "550777",
+    "Html": "Hi check this line :<br />\n<blockquote>\n&lt;bar:FileVersion Path=&quot;C:\\Program Files\\Common Files\\Adobe AIR\\Versions\\1.0\\Adobe AIR.dll&quot; Comparison= <strong>&quot;&quot;LessThan</strong> Version=&quot;3.9.0.1210&quot;/&gt;<br />\n</blockquote>\n",
+    "PostedDate": "2014-07-07T03:11:57.817-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-07-07T08:03:37.1-07:00"
+  },
+  {
+    "Id": "1263211",
+    "ThreadId": "550777",
+    "Html": "This is very embarrassing.\r<br />\n<br />\nI wait a lot of week do it once more and look for the error in every single character... but i don´t see it.\r<br />\n<br />\nSorry, and thanks a lot!<br />\n",
+    "PostedDate": "2014-07-07T03:24:10.93-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1263216",
+    "ThreadId": "550777",
+    "Html": "the syntax know is ok, but i have still a problem.\r<br />\nI have two clients installed with Windows 7 64bit. The first has installed Adobe AIR 4.0.0.1390 and the second has installed Adobe AIR 3.9.0.1210.\r<br />\n<br />\nThe first client want to download and install the update. Can someone tell me why?\r<br />\nSorry for the bad questions, i need holidays :-(<br />\n",
+    "PostedDate": "2014-07-07T03:51:07.617-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1263253",
+    "ThreadId": "550777",
+    "Html": "Seems to be a logical problem\r<br />\nThat works for me... <br />\n<pre><code>&lt;lar:Or&gt;\n  &lt;lar:And&gt;\n    &lt;bar:Processor Architecture=&quot;0&quot;/&gt;\n    &lt;bar:WindowsVersion Comparison=&quot;GreaterThanOrEqualTo&quot; MajorVersion=&quot;6&quot; MinorVersion=&quot;1&quot; ProductType=&quot;1&quot;/&gt;\n    &lt;bar:FileExists Path=&quot;C:\\Program Files\\Common Files\\Adobe AIR\\Versions\\1.0\\Adobe AIR.dll&quot;/&gt;\n    &lt;bar:FileVersion Path=&quot;C:\\Program Files\\Common Files\\Adobe AIR\\Versions\\1.0\\Adobe AIR.dll&quot; Comparison=&quot;LessThan&quot; Version=&quot;3.9.0.1210&quot;/&gt;\n  &lt;/lar:And&gt;\n  &lt;lar:And&gt;\n    &lt;bar:Processor Architecture=&quot;9&quot;/&gt;\n    &lt;bar:WindowsVersion Comparison=&quot;GreaterThanOrEqualTo&quot; MajorVersion=&quot;6&quot; MinorVersion=&quot;1&quot; ProductType=&quot;1&quot;/&gt;\n    &lt;bar:FileExists Path=&quot;C:\\Program Files (x86)\\Common Files\\Adobe AIR\\Versions\\1.0\\Adobe AIR.dll&quot;/&gt;\n    &lt;bar:FileVersion Path=&quot;C:\\Program Files (x86)\\Common Files\\Adobe AIR\\Versions\\1.0\\Adobe AIR.dll&quot; Comparison=&quot;LessThan&quot; Version=&quot;3.9.0.1210&quot;/&gt;\n  &lt;/lar:And&gt;\n&lt;/lar:Or&gt;\n</code></pre>\n\n",
+    "PostedDate": "2014-07-07T06:40:35.117-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

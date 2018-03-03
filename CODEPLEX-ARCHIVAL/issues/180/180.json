@@ -1,0 +1,66 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Catalogs",
+      "DisplayName": "Catalogs"
+    },
+    "ClosedComment": "Bug fixed. WPP can now import updates from catalogs that contains several vendors.",
+    "ClosedDate": "2014-03-04T10:29:47.217-08:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Have bought for a customer the SCUP catalog from www.patchmypc.com. Can successfully import the catalog into Wsus Package Publisher. Have then discovered that I can import some Adobe Updates. But importing other updates from the catalog immediately fail with the error messge \"select, at least, one package\". See attached printscreen.\r\n\r\nHave then tried to import the free evaluation Scup catalog from patchmypc which contains only one update for the FoxIT Reader. Was able to successfully import this evaluation catalog __and__ could successfully import the update! Importing the same FoxIT Reader update from the much larger SCUP catalog that we have bought doesn't work.\r\nHave then extracted the XML files from both SCUP CAB files. Have then extracted the two XML file sections of the Java Update 51 Updates from the PatchMyPC SCUP file that we have bought and added this two updates to the XML file of the evaluation PatchMyPC XML file.\r\nCould then successfully import my XML file which contains only three updates (2 Java and 1 FoxIT Reader) into WSUS package publisher __and__ was able to import all three updates!\r\n\r\nConclusion: WSUS Package Publisher can not import the updates from a larger SCUP catalog.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1401.04",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-02-27T07:55:31.36-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Bug in v1.3.1401.04: Import Update fails from larger imported SCUP catalog",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 180
+  },
+  "FileAttachments": [
+    {
+      "FileId": 808077,
+      "FileName": "WPP-Import-Update-from-catalog-error.JPG",
+      "DownloadUrl": ".\\808077"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Can you send me the catalog file at package.publisher@free.fr. I would like to take a look into it.",
+      "PostedDate": "2014-02-27T12:35:21.053-08:00",
+      "Id": 135320
+    },
+    {
+      "Message": "> __Conclusion: WSUS Package Publisher can not import the updates from a larger SCUP catalog.__\n\nWell, in fact WPP cannot import from a Catalog that contains multiples vendors. When you open a catalog with several vendors, you can only import from the first vendor.\n\nI will correct this quickly.",
+      "PostedDate": "2014-03-02T12:55:19.977-08:00",
+      "Id": 135566
+    },
+    {
+      "Message": "Is there any change to get a fixed version of the code / program?",
+      "PostedDate": "2014-03-14T15:35:45.683-07:00",
+      "Id": 136894
+    },
+    {
+      "Message": "Yes, I have fix it. For the moment, I don't have publish the new release. If you want I can send you the fixed release by mail. Send me a mail at package.publisher@free.fr",
+      "PostedDate": "2014-03-15T01:16:35.633-07:00",
+      "Id": 136936
+    }
+  ]
+}

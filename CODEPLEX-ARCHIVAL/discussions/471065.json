@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1128743",
+    "ThreadId": "471065",
+    "Html": "Hi,\r<br />\n<br />\nRather than importing a code signing cert to WPP that would sign all my packages, can I sign the package &quot;manually&quot; with our root CA and than deploy the already signed package with WPP?\r<br />\n<br />\nMany thanks\r<br />\n<br />\nGabor<br />\n",
+    "PostedDate": "2013-11-25T08:25:33.55-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1128745",
+    "ThreadId": "471065",
+    "Html": "Yes you can use a codesigning certificate from your root CA.<br />\n",
+    "PostedDate": "2013-11-25T08:27:50.103-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1128766",
+    "ThreadId": "471065",
+    "Html": "Hi NorbertFe,\r<br />\n<br />\nSorry, I am not sure if I made myself clear. I know I can use a codesigning certificate from your root CA, but can the package beimported to WPP <strong>already</strong> signed or does it have to be signed as part of the publishing process?\r<br />\n<br />\nThanks\r<br />\n<br />\nGabor<br />\n",
+    "PostedDate": "2013-11-25T08:54:05.84-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1128928",
+    "ThreadId": "471065",
+    "Html": "To be honest, I never try that. I'm not sure that you can import an already signed package. But I think it's required to have a code signing certificate into the &quot;Wsus&quot; store to allow Wsus to work properly with Locally Published updates.<br />\n",
+    "PostedDate": "2013-11-25T13:33:28.357-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T07:58:54.36-08:00"
+  }
+]

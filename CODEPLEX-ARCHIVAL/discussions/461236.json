@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1103933",
+    "ThreadId": "461236",
+    "Html": "Bonjour à tous,\r<br />\n<br />\nJ'ai installé Wpp et je suis entrain de regarder pour déployer 2 applications flash player et java.\r<br />\n<br />\nPour flash player j'ai importé le cataloge adobe flash player. Selectionner la version voulu, puis indiquer quel pc aura le droit de recevoir cette MAJ.\r<br />\n<br />\nMa démarche est-elle correcte?\r<br />\n<br />\nPar contre pour java, j'ai téléchargé java sur le site Oracle (decompresser le fichier) j'ai donc maintenant le package MSI , CAB et un fichier MST.\r<br />\n<br />\nComment parametrer cela dans WPP pour que cela s'installe normalement?\r<br />\n<br />\nMerci d'avance pour votre aide\r<br />\n<br />\nguigui69<br />\n",
+    "PostedDate": "2013-10-05T02:50:22.097-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1103951",
+    "ThreadId": "461236",
+    "Html": "<blockquote>\nPour flash player j'ai importé le catalogue adobe flash player. Selectionner la version voulu, puis indiquer quel pc aura le droit de recevoir cette MAJ. <br />\n</blockquote>\nEn général, après avoir publié une mise à jour, je regarde si les PC qui sont censé en avoir besoin, la déclare bien comme 'Non Installé', et sont qui n'en ont pas besoin, comme 'Non Applicable' ou 'Installé'. Ca permet de valider les règles de détection.\r<br />\nPuis j'approuve la mise à jour dans un groupe de test (où ce trouve mon PC). Je l'installe sur mon PC pour voir si ca n'échoue pas ou si la mise à jour n'est pas reproposée.\r<br />\n<br />\nPour Java d'Oracle, il y a deux écoles:<br />\n<ul>\n<li>Ceux qui utilise le fichier EXE</li>\n<li>\nCeux qui utilise le fichier MSI extrais de l'EXE.<br />\n</li>\n</ul>\nPerso, j'utilise toujours l'EXE, comme ce fichier conduis au plus grand nombre de succès d'installation. En particulier dans les cas où la mise à jour s'installe lorsque Internet Explorer est en cours d'utilisation.\r<br />\nVoir sur la page 'Documentation' du site. Il y a une procédure d'installation pour Java 7 u21.<br />\n",
+    "PostedDate": "2013-10-05T05:59:09.143-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-07T10:12:51.923-07:00"
+  },
+  {
+    "Id": "1103959",
+    "ThreadId": "461236",
+    "Html": "D'accord pour flash je valide cela cette semaine. sur un pc de test.\r<br />\n<br />\nPour Java, j'ai regarde le tuto c'est pour une installation customisé est-il possible d'utiliser une le mode update simple (create eu update)?\r<br />\n<br />\nCar au niveau updater java, mes utilisateur ne le vois pas et j'ai bloqué update au niveau GPO\r<br />\n<br />\nMerci d'avance pour vos reponse\r<br />\n<br />\nguigui69<br />\n",
+    "PostedDate": "2013-10-05T06:47:57.75-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1103972",
+    "ThreadId": "461236",
+    "Html": "Oui, tu peux faire une update normale. \r<br />\nQu'est ce que tu fait comme GPO pour bloquer les mises à jour Java ? Ca m'intéresse ?<br />\n",
+    "PostedDate": "2013-10-05T07:56:53.447-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1103977",
+    "ThreadId": "461236",
+    "Html": "Et avec un update normale en MSI ou EXE ?\r<br />\n<br />\nJe regarde ca et je te répond pour java.\r<br />\n<br />\nil ya une partie GPO pour pas afficher le logo de mise à jour et j'ai configuré java avec un niveau plus bas pour par forcement mettre à jour tout de suite\r<br />\n<br />\nMerci\r<br />\n<br />\nguigui69<br />\n",
+    "PostedDate": "2013-10-05T08:26:32.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1103999",
+    "ThreadId": "461236",
+    "Html": "Je préfère l'EXE, parce qu'il fait des vérifications avant l'installation, de sorte que ca ce passe bien après. Le MSI, il installe tout de suite et des fois ca plante (si IE est en cours d'utilisation par exemple).<br />\n",
+    "PostedDate": "2013-10-05T09:37:50.777-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1109111",
+    "ThreadId": "461236",
+    "Html": "Re bonjour,\r<br />\n<br />\nJ'ai récuperer la fichier java 7 U45 et je voudrais le preparer  en faisant une update simple.\r<br />\nJ'ai fait ceci:\r<br />\n<br />\n1-<a href=\"http://zupimages.net/up/3/1595622211.jpg\" rel=\"nofollow\">http://zupimages.net/up/3/1595622211.jpg</a>\r<br />\n2-<a href=\"http://zupimages.net/up/3/403159825.jpg\" rel=\"nofollow\">http://zupimages.net/up/3/403159825.jpg</a>\r<br />\n3-<a href=\"http://zupimages.net/up/3/721029430.jpg\" rel=\"nofollow\">http://zupimages.net/up/3/721029430.jpg</a>\r<br />\n<br />\nC'est dans le point 3 je ne sais pas comment faire pour qu'il detect que la mise a jour est installé, car si je met rien il va proposer en continue la mise à jour c'est bien ca ?\r<br />\n<br />\nguigui69<br />\n",
+    "PostedDate": "2013-10-18T02:22:25.753-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1109220",
+    "ThreadId": "461236",
+    "Html": "Perso je me base sur le code MSI du produit. Pour Oracle c'est toujours la même trame :\r<br />\n26a24ae4-039d-4ca4-87b4-2f8 xx 170 yy ff\r<br />\n<br />\nxx : 32 pour la version 32bit, 64 pour la version 64bit\r<br />\nyy : version mineur de la release\r<br />\n<br />\nDonc pour la version 32bit de Java 7u45 : 26a24ae4-039d-4ca4-87b4-2f83217045ff\r<br />\n<br />\nSi tu déploie aussi la version 64bit, dans le package pour cette version, met une règle se basant sur le processeur pour qu'elle ne s'installe que sur les postes 64bit.<br />\n",
+    "PostedDate": "2013-10-18T07:30:17.857-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

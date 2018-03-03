@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1432476",
+    "ThreadId": "640640",
+    "Html": "There are already several topics about Java Updates but there is none with this question:\r<br />\n<br />\nEverybody is talking about uninstalling all previous versions of Java with a script, with Uninstall2Install and so on...\r<br />\n<br />\nWhat about the MODIFYREMOVE property in the MST file?\r<br />\n<br />\nThere are some old topics from older Versions of Java where you could use this Property to uninstall all older Versions?\r<br />\nHas anybody trieb this?<br />\n",
+    "PostedDate": "2015-06-30T08:43:30.28-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1433100",
+    "ThreadId": "640640",
+    "Html": "I never try this proerty and i never use a MST File. We are using group policys for configuration Java.<br />\n",
+    "PostedDate": "2015-07-04T02:21:54.09-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1434271",
+    "ThreadId": "640640",
+    "Html": "Another possibility for replication the old behavior of the Java Updates (Uninstalling the previous Version) is to create a custom Update and executing the two msiexec strings.\r<br />\nUninstalling the old Version and installing the new one.<br />\n",
+    "PostedDate": "2015-07-14T02:47:30.023-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1434281",
+    "ThreadId": "640640",
+    "Html": "<strong>TGT wrote:</strong><br />\n<blockquote>\nAnother possibility for replication the old behavior of the Java Updates (Uninstalling the previous Version) is to create a custom Update and executing the two msiexec strings.<br />\nUninstalling the old Version and installing the new one.<br />\n</blockquote>\nThis was the reason for creating Uninstall2Install: <a href=\"http://www.wsus.de/uninstall2install\" rel=\"nofollow\">http://www.wsus.de/uninstall2install</a>\r<br />\n:)<br />\n",
+    "PostedDate": "2015-07-14T03:48:28.32-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

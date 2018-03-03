@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1223588",
+    "ThreadId": "539262",
+    "Html": "Hi guys,\r<br />\n<br />\nI saw that the last release of source code is out-dated. Last version available is 1.1.1212.23 .\r<br />\n<br />\nIt's possible to have the last release source code available?\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2014-03-17T09:46:24.493-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1260419",
+    "ThreadId": "539262",
+    "Html": "Have you voted on the issue <a href=\"https://wsuspackagepublisher.codeplex.com/workitem/162\" rel=\"nofollow\">here</a>? We've been asking for this for a while.\r<br />\nDCourtel, I saw your post on StackOverflow <a href=\"http://stackoverflow.com/questions/21113654/publishing-detectoids-via-wsus-api\" rel=\"nofollow\">here</a> and would like to see the source code updated so I could try to help.<br />\n",
+    "PostedDate": "2014-06-27T06:49:05.72-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-08-04T07:25:11.5-07:00"
+  }
+]

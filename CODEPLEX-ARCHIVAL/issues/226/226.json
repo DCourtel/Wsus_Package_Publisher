@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-11-07T03:20:42.983-08:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nI'm french admin in a company and i want to deploy X2go client on computers.\r\nI created an update that contains the .exe with the option / S for silent installation.\r\nOn my test client, X2go installs correctly and it works!\r\nThe problem is that in windows update there is always: Code 80070643 Installation failed ..\r\nThe update never disappears from the client computer ... even though I reinstalled the update over still the same error ..\r\n\r\nHave you any idea?\r\nThank you very much!",
+    "LastUpdatedDate": "2014-11-07T03:20:42.983-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-11-06T01:30:23.353-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Install X2goClient.exe",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 226
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Bonjour, ce code d'erreur signifie que l'installation à renvoyé un code final autre que 0.\nSoit l'installation à réellement échoué, soit le code renvoyé est différent mais signifie que l'installation est ok (éventuellement nécessite un reboot). Il faudrait obtenir la liste des codes de retour possible pour ce logiciel (voir avec l'éditeur).\n\nPour ce qui est du package qui est reproposé encore et encore, qu'avez vous mis comme règle 'IsInstalled' ?\nEst-ce que le fichier se présente sous forme d'EXE ou d'un MSI ?\n",
+      "PostedDate": "2014-11-06T03:54:37.093-08:00",
+      "Id": 164069
+    },
+    {
+      "Message": "Re-bonjour,\n\nTout d'abord merci pour votre aide.\nOK je vais essayer de trouver la listes des codes de retours si possible.\nPar contre je n'est rien mis en regle \"Isinstalled\" car il faut entrer le code MSI mais le fichier se présente sous forme d'EXE...\n\n",
+      "PostedDate": "2014-11-06T05:29:56.153-08:00",
+      "Id": 164073
+    },
+    {
+      "Message": "> OK je vais essayer de trouver la listes des codes de retours si possible.\n\nLe code de retour est peut-être indiqué dans le fichier journal C:\\Winows\\WindowsUpdate.log\n\n> Par contre je n'est rien mis en regle \"Isinstalled\" car il faut entrer le code MSI mais le fichier se présente sous forme d'EXE...\n\nTu peux entrer autre chose qu'un code MSI. Tu peux faire des règles se basant sur une clé de registre ou la présence d'un fichier...",
+      "PostedDate": "2014-11-06T07:22:39.847-08:00",
+      "Id": 164077
+    },
+    {
+      "Message": "OK merci beaucoup !\nje vais suivre vos conseils.\nBonne journée",
+      "PostedDate": "2014-11-06T23:41:53.48-08:00",
+      "Id": 164120
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1426865",
+    "ThreadId": "638518",
+    "Html": "Hi,\r<br />\n<br />\nI need to rename an update. Do I have to decline/delete and recreate the update or can I choose to revise and then rename the update ?\r<br />\n<br />\n(is there a user manual for WPP somewhere ?)\r<br />\n<br />\nThnak you.\r<br />\n<br />\nChris<br />\n",
+    "PostedDate": "2015-05-21T07:04:30.48-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1426939",
+    "ThreadId": "638518",
+    "Html": "Hi, you can revise the update and rename the &quot;Title&quot; field.\r<br />\nyou can, also change the &quot;Vendor Name&quot; and &quot;Product Name&quot; but this will generate a new folder in the update tree.<br />\n",
+    "PostedDate": "2015-05-21T12:17:43.57-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-05-22T00:15:24.97-07:00"
+  }
+]

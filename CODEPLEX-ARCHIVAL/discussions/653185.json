@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1468825",
+    "ThreadId": "653185",
+    "Html": "Guten Abend zusammen,\r<br />\nwir möchten gerne über WPP zukünftig auch Autodesk AutoCAD 2016 verteilen.\r<br />\nBeim veröffentlichten des Updates erscheint nach 30-45 Minuten folgende Fehlermeldung:\r<br />\nFehler beim Erstellen von CAD-Datei: 0\r<br />\n<br />\n<img src=\"http://fs5.directupload.net/images/160403/aut2ajv8.png\" alt=\"Image\" />\r<br />\nDas administrative Installation hat rund 3,65GB umfasst 7.747 Dateien, 781 Ordner.\r<br />\nPacke ich das Verzeichnis zusammen so ist die ZIP-Datei 1,81 GB (1.950.752.768 Bytes).\r<br />\nIch habe gelesen, dass es evtl. an der Option &quot;Max Cab Size&quot; liegen kann... diese habe ich bereits für ein anderes Paket auf 1941MB erhöht.\r<br />\n<br />\nServer: Windows Server 2012R2 Standard\r<br />\nWPP: 1.3.1511.15\r<br />\n<br />\nWie kann ich das Problem umgehen?\r<br />\n<br />\n<br />\nGruß,\r<br />\nDaniel<br />\n",
+    "PostedDate": "2016-04-03T10:30:34.173-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1468828",
+    "ThreadId": "653185",
+    "Html": "Platz ist noch genügend auf dem WSUS/WPP? Ist da ein FAT32 irgendwo im Spiel? Ist ein AV-Scanner im Spiel? Wenn ja, deinstallieren, abschalten wird nicht funktionieren.<br />\n",
+    "PostedDate": "2016-04-03T11:15:15.5-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1468839",
+    "ThreadId": "653185",
+    "Html": "Platz ist noch genug da - auf C:\\ (BS und Programme) ca. 10GB, auf D:\\ (Ablage für WSUS) ca. 30 GB.<br />\nBeide Datenträger ist als NFTS formatiert.<br />\nAls Virenscanner kommt Microsoft Forefront Entpoint Protection zum Einsatz. War bisher bei größeren Paketen (1,73 GB) noch kein Problem, aber ein Versuch ist es wert.<br />\n",
+    "PostedDate": "2016-04-03T14:29:19.457-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1468887",
+    "ThreadId": "653185",
+    "Html": "Nach der Deinstallation des Virenscanners ist das Ergebnis das Selbe wie in der Eingangsfrage. :-/<br />\nKlickt man den Dialog mit &quot;OK&quot; weg, erscheint da hinter in roten Schrift: Fehler bei der Veröffentlichung.<br />\n",
+    "PostedDate": "2016-04-04T04:27:04.963-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1468894",
+    "ThreadId": "653185",
+    "Html": "Du könntest die zulässige Größe nochmal nach oben drehen, ansonsten nur noch den ProcessMonitor mitlaufen lassen und am Ende der Aktion das Protokoll des Process Monitor auf Fehler prüfen.\r<br />\n<br />\nWenn Du nur die Hälfte der erforderlichen Dateien dazu nimmst, funktioniert es dann? Langsam an ein evtl. vorhandenes Limit herantasten. Prüf auch die zum Zeitpunkt des Abbruches verwendeten Arbeitsspeicher vom WPP und vom System allgemein.\r<br />\n<br />\nWenn da auch nichts dabei rumm kommt, solltest Du dir IMHO die Methode der Bereitstellung überlegen bzw. ändern. Mit der Powershell kannst Du so ein Paket auch mit Hilfe des BITS an die Clients übertragen, anschließend ein GPO ausführen lassen, das die SW beim Start des Client installiert. Lokal liegt sie ja schon, sollte also etwas einfacher sein, als hier mit dem WPP weiter zu experimentieren.<br />\n",
+    "PostedDate": "2016-04-04T05:22:44.95-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1468897",
+    "ThreadId": "653185",
+    "Html": "<strong>WinfriedSonntag wrote:</strong><br />\n<blockquote>\nDu könntest die zulässige Größe nochmal nach oben drehen, ...<br />\n</blockquote>\nWas ist die maximal zulässige Größe denn? Ich habe irgendwo etwas von 2GB gelesen. An der wäre ich mit meiner jetzigen Einstellung an der Obergrenze.<br />\n",
+    "PostedDate": "2016-04-04T05:38:37.267-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1468906",
+    "ThreadId": "653185",
+    "Html": "Ich kenne die maximale Größe nicht, aber vermutlich kommst Du jetzt über die Grenze. Deshalb schrub ich ja auch, nutze den ProcessMonitor und den Taskmanager. Möglicherweise ist das Tool, das vom WPP zum verpacken benutzt wird, ein 32-Bit Programm, und da ist IMHO bei 2 GB Schluß.\r<br />\n<br />\nWenn Du hier in Englisch schreiben würdest, könnte der Entwickler auch mitlesen und versuchen zu helfen. ;)<br />\n",
+    "PostedDate": "2016-04-04T06:00:07.96-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Wsus Wrapper",
+      "DisplayName": "Wsus Wrapper"
+    },
+    "ClosedComment": "WPP have been updated to detect the very latest version of the console",
+    "ClosedDate": "2014-07-29T10:45:47.99-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "I am getting this error message after doing WPP install on an administrative computer. \r\nWSUS Server version: 3.2.7600.226\r\nServer OS 2003\r\nAdministrative workstation version: 3.2.7600.226\r\nWorkstation OS Windows 7\r\nThe Hotfix mention in a thread doesn't apply for a Server with an OS of 2003. \r\nAll settings seem to be in order, I can pull all my units up in the WPP console.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1407.11",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "High",
+      "Severity": 150,
+      "Id": 3
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-07-11T10:56:47.397-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Server Version different from console version",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 202
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Open WPP, connect to the server, then go to Help->About\nTell me what is wrote aside of \"Server Version\" and \"Console Version\".",
+      "PostedDate": "2014-07-11T11:29:50.32-07:00",
+      "Id": 152124
+    },
+    {
+      "Message": "Your WSUS-Version is very old. Pls install all Updates on your WSUS *and* on your Windows Client with installed WSUS-Console:\n\nWSUS 3.0 (SP2): \tBuild 3.2.7600.226\nWSUS 3.0 (SP2) + KB2720211: \tBuild 3.2.7600.251\nWSUS 3.0 (SP2) + KB2734608: \tBuild 3.2.7600.256\nWSUS 3.0 (SP2) + KB2828185: \tBuild 3.2.7600.262\nWSUS 3.0 (SP2) + KB2938066: \tBuild 3.2.7600.274\n\n\nHere you find the exact Version:\nhttp://www.wsus.de/images/wsus-version.png",
+      "PostedDate": "2014-07-12T08:26:52.437-07:00",
+      "Id": 152165
+    }
+  ]
+}

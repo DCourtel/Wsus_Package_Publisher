@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "WPP is now able to import package from Vendors' catalog (*.cab). \nPackage with prerequisite(s) are ignored.",
+    "ClosedDate": "2013-09-01T10:56:28.34-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Add ability to import editors' catalogs (*.cab)",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-08-08T14:12:14.82-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Import Catalogs (*.cab)",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 92
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 514</value>
+  </data>
+  <data name="btnAddAndGroup.Text" xml:space="preserve">
+    <value>Добавить 'И'</value>
+  </data>
+  <data name="chkBxEmptyInstallableItemRule.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 17</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Тип правила : </value>
+  </data>
+  <data name="btnEdit.Text" xml:space="preserve">
+    <value>&amp;Изменить</value>
+  </data>
+  <data name="btnAddRule.Text" xml:space="preserve">
+    <value>До&amp;бавить правило</value>
+  </data>
+  <data name="btnLoadRules.Text" xml:space="preserve">
+    <value>&amp;Загрузить правила...</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Правила уровня пакета:</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Правила уровня обновления:</value>
+  </data>
+  <data name="chkBxEmptyInstallableItemRule.Text" xml:space="preserve">
+    <value>Удалить правила на уроне пакета</value>
+  </data>
+  <data name="btnPrevious.Text" xml:space="preserve">
+    <value>&amp;Назад</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnAddRule" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="grpDspUpdateLevel" Row="3" RowSpan="1" Column="0" ColumnSpan="4" /&gt;&lt;Control Name="cmbBxRules" Row="0" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="btnAddAndGroup" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnAddOrGroup" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnDelete" Row="1" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="btnEdit" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btnNext" Row="7" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="btnCancel" Row="7" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="btnPrevious" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnLoadRules" Row="6" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="btnSaveRules" Row="6" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="chkBxEmptyInstallableItemRule" Row="6" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="grpDspPackageLevel" Row="5" RowSpan="1" Column="0" ColumnSpan="4" /&gt;&lt;Control Name="label2" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label3" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="rdBtnUpdateLevel" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="rdBtnPackageLevel" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;Rows Styles="Absolute,30,Absolute,30,Absolute,25,Percent,50,Absolute,25,Percent,50,Absolute,30,Absolute,30" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="rdBtnPackageLevel.Text" xml:space="preserve">
+    <value>Изменить эту группу</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Мастер правил обновления</value>
+  </data>
+  <data name="btnSaveRules.Text" xml:space="preserve">
+    <value>&amp;Сохранить правила...</value>
+  </data>
+  <data name="btnNext.Text" xml:space="preserve">
+    <value>&amp;Далее</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>О&amp;тмена</value>
+  </data>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>&amp;Удалить</value>
+  </data>
+  <data name="btnAddOrGroup.Text" xml:space="preserve">
+    <value>Добавить 'ИЛИ'</value>
+  </data>
+  <data name="rdBtnUpdateLevel.Text" xml:space="preserve">
+    <value>Изменить эту группу</value>
+  </data>
+</root>

@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1435706",
+    "ThreadId": "641816",
+    "Html": "I've deployed the new Java 1.8.51 via WPP. All the client failed to intall it with error code 0x80070643. The configuration xml bellow.\r<br />\n<br />\n&lt;CustomUpdate&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.VariableElement&lt;/ElementType&gt;\r<br />\n&lt;Name&gt;ReturnCode&lt;/Name&gt;\r<br />\n&lt;Type&gt;Int&lt;/Type&gt;\r<br />\n&lt;ID&gt;383d159a-65fe-4de0-a456-54871568adba&lt;/ID&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ServiceElement&lt;/ElementType&gt;\r<br />\n&lt;ServiceAction&gt;Stop&lt;/ServiceAction&gt;\r<br />\n&lt;ServiceName&gt;JavaQuickStarterService&lt;/ServiceName&gt;\r<br />\n&lt;PathToEXE&gt;&lt;/PathToEXE&gt;\r<br />\n&lt;StartupMode&gt;Undefined&lt;/StartupMode&gt;\r<br />\n&lt;StartingAccount&gt;Undefined&lt;/StartingAccount&gt;\r<br />\n&lt;Login&gt;&lt;/Login&gt;\r<br />\n&lt;Password&gt;&lt;/Password&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;\r<br />\n&lt;PathToExecutable&gt;jre1.8.0_51.msi&lt;/PathToExecutable&gt;\r<br />\n&lt;Parameters&gt;/i jre1.8.0_51.msi /quiet /norestart AUTOUPDATECHECK=0 WEB_JAVA=1 JAVAUPDATE=0 JU=0 &lt;/Parameters&gt;\r<br />\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;\r<br />\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;\r<br />\n&lt;Variable&gt;383d159a-65fe-4de0-a456-54871568adba&lt;/Variable&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.WaitElement&lt;/ElementType&gt;\r<br />\n&lt;Wait&gt;30&lt;/Wait&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;\r<br />\n&lt;PathToExecutable&gt;%windir%\\System32\\msiexec.exe&lt;/PathToExecutable&gt;\r<br />\n&lt;Parameters&gt;/x {4A03706F-666A-4037-7777-5F2748764D10} /qn /norestart&lt;/Parameters&gt;\r<br />\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;\r<br />\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;\r<br />\n&lt;Variable/&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.WaitElement&lt;/ElementType&gt;\r<br />\n&lt;Wait&gt;30&lt;/Wait&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ServiceElement&lt;/ElementType&gt;\r<br />\n&lt;ServiceAction&gt;Stop&lt;/ServiceAction&gt;\r<br />\n&lt;ServiceName&gt;JavaQuickStarterService&lt;/ServiceName&gt;\r<br />\n&lt;PathToEXE&gt;&lt;/PathToEXE&gt;\r<br />\n&lt;StartupMode&gt;Undefined&lt;/StartupMode&gt;\r<br />\n&lt;StartingAccount&gt;Undefined&lt;/StartingAccount&gt;\r<br />\n&lt;Login&gt;&lt;/Login&gt;\r<br />\n&lt;Password&gt;&lt;/Password&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ServiceElement&lt;/ElementType&gt;\r<br />\n&lt;ServiceAction&gt;ChangeStartingMode&lt;/ServiceAction&gt;\r<br />\n&lt;ServiceName&gt;JavaQuickStarterService&lt;/ServiceName&gt;\r<br />\n&lt;PathToEXE&gt;&lt;/PathToEXE&gt;\r<br />\n&lt;StartupMode&gt;Disabled&lt;/StartupMode&gt;\r<br />\n&lt;StartingAccount&gt;Undefined&lt;/StartingAccount&gt;\r<br />\n&lt;Login&gt;&lt;/Login&gt;\r<br />\n&lt;Password&gt;&lt;/Password&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ReturnCodeElement&lt;/ElementType&gt;\r<br />\n&lt;ReturnCodeMethod&gt;Variable&lt;/ReturnCodeMethod&gt;\r<br />\n&lt;StaticReturnCode&gt;0&lt;/StaticReturnCode&gt;\r<br />\n&lt;Variable&gt;383d159a-65fe-4de0-a456-54871568adba&lt;/Variable&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;/CustomUpdate&gt;\r<br />\n<br />\nAny one has any idea about this issue?\r<br />\nBest,\r<br />\nZoltan<br />\n",
+    "PostedDate": "2015-07-23T08:02:09.623-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1435718",
+    "ThreadId": "641816",
+    "Html": "Hi, as you are using custom update, you should look at C:\\Windows\\Temp\\CustomUpdate.log to see any error message.\r<br />\nAdditionnaly, you can have a look into C:\\Windows\\WindowsUpdate.log<br />\n",
+    "PostedDate": "2015-07-23T09:48:26.923-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436132",
+    "ThreadId": "641816",
+    "Html": "Hi!\r<br />\n<br />\nIn the CustomUpdateEngine.log file I found the follwing error:\r<br />\n<br />\nRunning 8 Elements.\r<br />\n2015.07.23. 17:09:27\tRunning CustomUpdateEngine.ServiceElement\r<br />\n2015.07.23. 17:09:27\tRunning ServiceElement for action : Stop\r<br />\n2015.07.23. 17:09:27\tWill try to stop : JavaQuickStarterService\r<br />\n2015.07.23. 17:09:27\tFailed to stop JavaQuickStarterService\r<br />\nA szolgáltatás (JavaQuickStarterService) nem található a következő számítógépen: „.”.\r<br />\nIn english: the service (JavaQuickStarterService) could not locate on the following computer: „.”.\r<br />\n2015.07.23. 17:09:27\tEnd of ServiceElement.\r<br />\n2015.07.23. 17:09:27\tRunning CustomUpdateEngine.ExecutableElement\r<br />\n2015.07.23. 17:09:27\tRunning ExecutableElement.\r<br />\n2015.07.23. 17:09:27\tPath To expand is : jre1.8.0_51.msi\r<br />\n2015.07.23. 17:09:27\tExpanded Path is : jre1.8.0_51.msi\r<br />\n2015.07.23. 17:09:27\tRunning : jre1.8.0_51.msi With arguments : /i jre1.8.0_51.msi /quiet /norestart AUTOUPDATECHECK=0 WEB_JAVA=1 JAVAUPDATE=0 JU=0 \r<br />\n2015.07.23. 17:09:29\tError running :  jre1.8.0_51.msi. A megadott végrehajtható fájl nem érvényes Win32 alkalmazás.\r<br />\nIn english: the given executable file not a valid Win32 application.\r<br />\n<br />\nIn the WindowsUpdate.log\r<br />\nInstall failed, error = 0x80070643 / 0x0000FFFC\r<br />\n<br />\nI've succesfuly installed the Java 8.45 with the same method.\r<br />\nAny idea, what I do wrong?<br />\n",
+    "PostedDate": "2015-07-27T07:23:26.88-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436148",
+    "ThreadId": "641816",
+    "Html": "<strong>HZoltan wrote:</strong><br />\n<blockquote>\n2015.07.23. 17:09:27\tRunning : jre1.8.0_51.msi With arguments : /i jre1.8.0_51.msi /quiet /norestart AUTOUPDATECHECK=0 WEB_JAVA=1 JAVAUPDATE=0 JU=0 <br />\n2015.07.23. 17:09:29\tError running :  jre1.8.0_51.msi. A megadott végrehajtható fájl nem érvényes Win32 alkalmazás.<br />\nIn english: the given executable file not a valid Win32 application.<br />\n</blockquote>\nI think your arguments are wrong.\r<br />\n<br />\nTry this: /i /quiet /norestart AUTOUPDATECHECK=0 WEB_JAVA=1 JAVAUPDATE=0 JU=0\r<br />\nYou have a path to a executable, you don't need to have give the MSI as an argument.<br />\n",
+    "PostedDate": "2015-07-27T08:20:59.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436152",
+    "ThreadId": "641816",
+    "Html": "Thanks for the quick reply. I'll try with the modified argument and let you know the result.<br />\n",
+    "PostedDate": "2015-07-27T08:44:03.477-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436177",
+    "ThreadId": "641816",
+    "Html": "Hi, thanks for the log file. It clearly confirm what I was thinking. <br />\n<blockquote>\nThe given executable file not a valid Win32 application.<br />\n</blockquote>\nYou set :<br />\n<pre><code>&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt; \n&lt;PathToExecutable&gt;jre1.8.0_51.msi&lt;/PathToExecutable&gt; \n&lt;Parameters&gt;/i jre1.8.0_51.msi /quiet /norestart AUTOUPDATECHECK=0 WEB_JAVA=1 JAVAUPDATE=0 JU=0 &lt;/Parameters&gt; </code></pre>\n\nBut you cannot <strong>RUN</strong> an .MSI file, you need to <strong>OPEN</strong> it with MsiExec.exe. As you cannot <strong>RUN</strong> an .XLS file, you need to <strong>OPEN</strong> it with Excel.exe.\r<br />\n<br />\nSo you should write : <br />\n<pre><code>&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt; \n&lt;PathToExecutable&gt;%windir%\\System32\\msiexec.exe&lt;/PathToExecutable&gt; \n&lt;Parameters&gt;/i jre1.8.0_51.msi /quiet /norestart AUTOUPDATECHECK=0 WEB_JAVA=1 JAVAUPDATE=0 JU=0 &lt;/Parameters&gt;</code></pre>\n\n",
+    "PostedDate": "2015-07-27T11:27:58.543-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-08-04T07:06:58.633-07:00"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1230727",
+    "ThreadId": "541309",
+    "Html": "Hi Guys,\r<br />\ni've created a customer update package with a powershell script.\r<br />\nThe script works fine, if i start it manually:<br />\n<pre><code>Copy-Item -Path .\\TEST C:\\ -Recurse -force\nCopy-Item -Path .\\WINDOWS C:\\ -Recurse -force</code></pre>\n\nThe Customer Update log says:<br />\n<pre><code>05.04.2014 14:44:08 Running 3 Elements.\n05.04.2014 14:44:08 Running CustomUpdateEngine.ScriptElement\n05.04.2014 14:44:08 Running ScriptElement.\n05.04.2014 14:44:08 Running : C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe With arguments : &quot;copyfiles.ps1&quot; \n05.04.2014 14:44:32 Exiting process with ExitCode = 1\n05.04.2014 14:44:32 End of ScriptElement.\n05.04.2014 14:44:32 Running CustomUpdateEngine.WaitElement\n05.04.2014 14:44:32 Running WaitElement.\n05.04.2014 14:44:34 End waiting.\n05.04.2014 14:44:34 Running CustomUpdateEngine.ReturnCodeElement\n05.04.2014 14:44:34 Return Code Method is : Variable\n05.04.2014 14:44:34 Returning :  1</code></pre>\n\nCan everyone write me, how i have to create the customer update with a powershell script?<br />\n",
+    "PostedDate": "2014-04-05T08:39:23.79-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1231147",
+    "ThreadId": "541309",
+    "Html": "I think you have the 'wrong' path to the script, you'll need:<br />\nC:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe With arguments : &quot;.\\copyfiles.ps1&quot;<br />\n<br />\nLook at my XML file:<br />\n<pre><code>&lt;ElementType&gt;CustomUpdateElements.ScriptElement&lt;/ElementType&gt;\n&lt;ScriptType&gt;Powershell&lt;/ScriptType&gt;\n&lt;Filename&gt;.\\Java-CleanUp.ps1&lt;/Filename&gt;\n&lt;Arguments/&gt;\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;\n&lt;TimeBeforeKilling&gt;6&lt;/TimeBeforeKilling&gt;</code></pre>\n\n.\\ is importent!<br />\n",
+    "PostedDate": "2014-04-06T23:49:26.193-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-04-09T11:24:53.923-07:00"
+  },
+  {
+    "Id": "1232173",
+    "ThreadId": "541309",
+    "Html": "You are right. Now the update works successfully.\r<br />\nThanks!<br />\n",
+    "PostedDate": "2014-04-09T01:21:09.473-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

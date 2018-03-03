@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-10T12:52:53.967-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Bonjour,\r\n\r\nNous utilisons WSUS pour la gestion des mises à jour Microsoft, et nous avons mis en place WSUS Package Publisher.\r\n\r\nTout fonctionnais bien. Pour un côté pratique, nous avons décidé de ne plus distribuer les mises à jour Microsoft via WSUS mais de les laisser se télécharger depuis le client Windows. \r\n\r\nMalheureusement, les mises à jour que nous voudrions déployer avec WSUSPP ne fonctionne plu, car le gestionnaire de MAJ de Windows ne fait plus le lien.\r\n\r\nExiste-t-il une manière de conserver le déploiement WSUSPP sans passer par WSUS, ou une autre manière de garder nos configurations actuel ?\r\n\r\nCordialement,\r\n\r\nVM ",
+    "LastUpdatedDate": "2015-11-10T12:52:53.967-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-09-10T07:47:46.143-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Mise à jour sans passé par WSUS",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 293
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Oui, c'est possible. Il faut paramétrer le Wsus pour qu'il ne prenne que les métadonnées sur le site de Microsoft. Vous ne faite que les approbations sur le serveur et les clients téléchargent chez Microsoft pour les patchs Windows.",
+      "PostedDate": "2015-09-11T02:38:01.407-07:00",
+      "Id": 190113
+    }
+  ]
+}

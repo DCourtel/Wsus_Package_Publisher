@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1109129",
+    "ThreadId": "462693",
+    "Html": "Hi,<br />\n<br />\nfirst i want to thank the developers for this great piece of work!<br />\n<br />\nMy question is about detection logic when i move a pc into a group eg. WPP_Testgroup which already has approved updates in it. <br />\nMy experience is that updates aren't detected. No updates are showing up. Status for this new pc leaves at &quot;Not Installed&quot;. When creating and approving new updates this new pc receives them, or when revising already approved updates. i not quite sure what happens when changing update (which don''t show up at the client) from status &quot;not approved&quot; and after while back to &quot;approved&quot;. i think one client received them, but another client (which also was moved to this group after some updates where already approved) doesn't show them. <br />\nThe other way around: what should i do if i install a new pc which is detected by WSUS and showed up in the group&quot; unconfigured computers&quot; (i mean the standard group, but i've got german version of WSUS. Hope you know which group i mean!). For Windows updates i don't need to move the pc (but i could!) because any security Update is also approved for this standard group and they are showing up. When moving this pc tho a &quot;WPP_Testgroup&quot; older approved updates won't be showing up.<br />\nWhat is the configuration or behaviour which i misunderstand?<br />\n<br />\nThanks in advance<br />\nHannes<br />\n",
+    "PostedDate": "2013-10-18T03:13:22.007-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1109382",
+    "ThreadId": "462693",
+    "Html": "Hi,\r<br />\n<br />\nLocally published updates are manage by Wsus the same way that Microsoft updates. Once you have change the 'Computer Group' membership of a manage computer,  and assuming it has 'realize' his membership have changed, it will report the status for approved updates in this new group.\r<br />\nI don't know how you have set your GPO regarding time interval between to detection/report but I think to remember that the default setting is 22h.\r<br />\n<br />\nPersonnaly, I use a special group where I put new computers that I prepare. These computers need some softwares that need to be installed only once, then update like other computers.\r<br />\nOnce I have finish to install these software, I move the computer to his definitive computer group.<br />\n",
+    "PostedDate": "2013-10-18T13:30:37.62-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1109861",
+    "ThreadId": "462693",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nHi,<br />\n<br />\nLocally published updates are manage by Wsus the same way that Microsoft updates. Once you have change the 'Computer Group' membership of a manage computer,  and assuming it has 'realize' his membership have changed, it will report the status for approved updates in this new group.<br />\nI don't know how you have set your GPO regarding time interval between to detection/report but I think to remember that the default setting is 22h.<br />\n</blockquote>\nThats the behaviour which i experience with Microsoft updates in WSUS. GPO with standard rate 22h. I triggered the detection and reporting manually several times with wuauclt.exe /detectnow /reportnow an watched the windowsupdate.log. <br />\n<blockquote>\nPersonnaly, I use a special group where I put new computers that I prepare. These computers need some softwares that need to be installed only once, then update like other computers.<br />\nOnce I have finish to install these software, I move the computer to his definitive computer group.<br />\n</blockquote>\nThanks for the tip<br />\n",
+    "PostedDate": "2013-10-21T01:28:24.933-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:45:16.137-07:00"
+  }
+]

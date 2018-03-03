@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "1471301",
+    "ThreadId": "653982",
+    "Html": "Ich habe früher ImageJ verteilt, als es glaube noch eine Installation dafür gab.<br />\nJetzt gibt es nur noch ein Programmpaket.<br />\n<br />\nMein Plan war jetzt das Programmpaket in der Fiji Version in eine Serverfreigabe zu legen und den Clients eine Desktopverknüpfung anzulegen.<br />\n<br />\nDer manuelle Programmstart auf dem Server funktioniert von den Clients aus. Das bedeutet es müßte funktionieren.<br />\n<br />\nAllerdings gibt es Schwierigkeiten mit der Verteilung per WPP.<br />\n<br />\nDas Positive: Es wird schon eine Verknüpfung angelegt. Allerdings passen die Regeln nicht, die Installation erfolgt immer wieder. Der Plan war auf die  &quot;Datei exsistiert&quot; zu prüfen, oder auf was prüft man am besten bei einer Verknüpfung?<br />\nDa bräuchte ich Beratung :-) bzw. müßte mir das nochmal genau ansehen.<br />\n<br />\nDas Hauptproblem ist das beim Start der angelegten Verknüpfung kurz das Fiji Symbol erscheint, aber das Programm nicht startet.<br />\n<br />\nEs gab beim anlegen des Updates eine Menge Optionen wo ich nicht so sicher war.<br />\nz.B. habe ich als Ziel immer das optionale &quot; Common_DesktopDirectory&quot; aktiviert, schließlich soll es Betriebssystemunabhängig auf alle Desktop . Trotzdem wird noch einvollqualifizierter Zielpfad als erforderlich verlangt, womit ich dann nichts anfangen konnte. Sonst geht es nicht weiter. Habe also erst mal nur ein Leerzeichen gesetzt.<br />\n<br />\nAußerdem wurde nach einem Programmausführungspfad gefragt wo mir beim ersten Versuch auch nichts einfiel. Was trägt man da ein ?<br />\n<br />\nWer hat sowas mit einer ausführbaren .exe Datei schon mal durchexerziert und kann helfen ?<br />\n<br />\nby Pö <br />\n",
+    "PostedDate": "2016-04-25T14:07:16.093-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471332",
+    "ThreadId": "653982",
+    "Html": "So ganz habe ich noch nicht verstanden auf was Du hinaus willst.\r<br />\n<br />\nBezüglich Regeln könnten diese beiden Artikel helfen: <a href=\"http://www.wsus.de/chrome_per_wpp\" rel=\"nofollow\">http://www.wsus.de/chrome_per_wpp</a>\r<br />\n<a href=\"http://www.wsus.de/uninstall2install\" rel=\"nofollow\">http://www.wsus.de/uninstall2install</a>\r<br />\nIn der zweiten Regel mußt Du NOT oder REVERSE aktivieren, denn es soll ja nur installiert werden, wenn es noch nicht installiert ist.<br />\n",
+    "PostedDate": "2016-04-25T23:30:08.747-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471335",
+    "ThreadId": "653982",
+    "Html": "Zweite Regel ? Hm? Damit meine ich die zweite Seite:\r<br />\n &quot;Geben Sie hier die Regel oder Regeln an, mit der festgestellt werden kann ob das Update installiert werden kann.&quot;\r<br />\nDa ist eigentlich alles ok, da prüfe ich immer nur ob W7 oder höher vorliegt.\r<br />\n<br />\n<br />\nIch hab wohl eher Probleme mit der ersten Regelseite:\r<br />\n&quot;Geben Sie hier die Regel oder Regeln an, die Computer ermöglicht festzustellen, ob das Update bereits installiert ist.&quot;\r<br />\nAuf was prüft man da am besten bei einer Verknüpfung?\r<br />\nIch probiere es gerade mit &quot;Datei exsistiert&quot;, habe da aber wieder das Problem mit der erforderlichen Pfadangabe.\r<br />\nWenn ich für eine Verknüpfung als Ziel &quot;Common_DesktopDirectory&quot; auswähle, was soll ich denn dann noch als Pfad angeben? Damit ist doch schon alles gesagt, einen weiteren Pfad gibts doch da gar nicht. Das Programm zwingt mich allerdings zu einer Angabe.\r<br />\n<br />\nUnd was ist der Programmausführungspfad wenn der Client via Verknüpfung eine exe auf dem Server startet?<br />\n",
+    "PostedDate": "2016-04-26T00:12:31.467-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471338",
+    "ThreadId": "653982",
+    "Html": "<strong>GMBU wrote:</strong><br />\n<blockquote>\nZweite Regel ? Hm? Damit meine ich die zweite Seite:<br />\n &quot;Geben Sie hier die Regel oder Regeln an, mit der festgestellt werden kann ob das Update installiert werden kann.&quot;<br />\nDa ist eigentlich alles ok, da prüfe ich immer nur ob W7 oder höher vorliegt.<br />\n</blockquote>\nDas ist dein Fehler. Hast du dir denn die HowTos angeschaut? Insbesonders das zweite ist das interessante für dich. Wenn die Datei NICHT vorhanden ist, darf installiert werden, verstehst Du?<br />\n<blockquote>\nIch hab wohl eher Probleme mit der ersten Regelseite:<br />\n&quot;Geben Sie hier die Regel oder Regeln an, die Computer ermöglicht festzustellen, ob das Update bereits installiert ist.&quot;<br />\nAuf was prüft man da am besten bei einer Verknüpfung?<br />\nIch probiere es gerade mit &quot;Datei exsistiert&quot;, habe da aber wieder das Problem mit der erforderlichen Pfadangabe.<br />\nWenn ich für eine Verknüpfung als Ziel &quot;Common_DesktopDirectory&quot; auswähle, was soll ich denn dann noch als Pfad angeben? Damit ist doch schon alles gesagt, einen weiteren Pfad gibts doch da gar nicht. Das Programm zwingt mich allerdings zu einer Angabe.<br />\n</blockquote>\nEine Verknüpfung ist auch eine Datei im Dateisystem. lnk ist die Dateiendung.<br />\n<blockquote>\nUnd was ist der Programmausführungspfad wenn der Client via Verknüpfung eine exe auf dem Server startet?<br />\n</blockquote>\nDort könntest Du %TEMP% angeben. Dann wird das lokale Tempverzeichnis des ausführenden Benutzers verwendet.<br />\n",
+    "PostedDate": "2016-04-26T00:27:25.75-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471343",
+    "ThreadId": "653982",
+    "Html": "Danke für den Hinweis mit  %TEMP%, das probieren wir gleich mal.<br />\n<br />\n<br />\nBei den Regeln scheint es wohl verschiedene Taktiken zu geben, bzw. wir meinen das Gleiche und reden aneinander vorbei:-) <br />\n<br />\nIch gehe normalerweise bei allen Installationen so vor:<br />\n&quot;Geben Sie hier die Regel oder Regeln an, die Computer ermöglicht festzustellen, ob das Update bereits installiert ist.&quot; ( 1. Seite):<br />\nHier hinterlege ich,  wie die Überschrift empfieht, zB. die Installationsversion von dem Programm was installiert werden soll. Sagen wir Thunderbird 45.0<br />\nSteht in der Reg die 45 drin ist es bereits installiert, ansonsten wird es installiert.<br />\n<br />\nMir ist schon klar das die Datei installiert werden soll wenn Sie NICHT vorhanden ist. Und genau das passiert ja wenn man in der ersten Regel das einträgt was man installiert haben möchte. Denn Die Regel prüft auf &quot;vorhanden&quot; nicht auf &quot;fehlt&quot;. Funktioniert schon seit Jahren so :-)<br />\n<br />\n&quot;Geben Sie hier die Regel oder Regeln an, mit der festgestellt werden kann ob das Update installiert werden kann.&quot; (2.Seite):<br />\nHier prüfe ich nur ob die Rechner auf Betriebssystem W7 oder höher verfügen, quasi als Installationsvorraussetzung für die Software - genau wie es die Anleitung empfieht.<br />\n<br />\nIch sehe das Problem eher darin das sich der Prüfort scheinbar nicht ganz klar adressieren lässt weil eine in meinen Augen nicht vorhandene Pfadangabe gefordert wird.<br />\n<br />\nNaja, eins nach dem anderen....<br />\n<br />\nEDIT:<br />\n<br />\ndas mit dem %TEMP% hilft auch nicht. Ich sehe kurz das Startlogo und dann wars das.<br />\n<br />\nEs ist auch ungünstig das man die Benutzerdefinierten Updates nicht überarbeiten kann.  Es sei denn vermutlich  man macht sich direkt an der xml Datei zu schaffen.<br />\n<br />\nAlso heißt es immer ein neues Update erstellen.<br />\n",
+    "PostedDate": "2016-04-26T00:51:50.297-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471346",
+    "ThreadId": "653982",
+    "Html": "<strong>GMBU wrote:</strong><br />\n<blockquote>\nBei den Regeln scheint es wohl verschiedene Taktiken zu geben, bzw. wir meinen das Gleiche und reden aneinander vorbei:-) <br />\n</blockquote>\nEs gibt nur die richtige Möglichkeit, Taktik ist der falsche Ausdruck.<br />\n<blockquote>\nIch gehe normalerweise bei allen Installationen so vor:<br />\n&quot;Geben Sie hier die Regel oder Regeln an, die Computer ermöglicht festzustellen, ob das Update bereits installiert ist.&quot; ( 1. Seite):<br />\nHier hinterlege ich,  wie die Überschrift empfieht, zB. die Installationsversion von dem Programm was installiert werden soll. Sagen wir Thunderbird 45.0<br />\nSteht in der Reg die 45 drin ist es bereits installiert, ansonsten wird es installiert.<br />\n<br />\nMir ist schon klar das die Datei installiert werden soll wenn Sie NICHT vorhanden ist. Und genau das passiert ja wenn man in der ersten Regel das einträgt was man installiert haben möchte. Denn Die Regel prüft auf &quot;vorhanden&quot; nicht auf &quot;fehlt&quot;. Funktioniert schon seit Jahren so :-)<br />\n<br />\n&quot;Geben Sie hier die Regel oder Regeln an, mit der festgestellt werden kann ob das Update installiert werden kann.&quot; (2.Seite):<br />\nHier prüfe ich nur ob die Rechner auf Betriebssystem W7 oder höher verfügen, quasi als Installationsvorraussetzung für die Software - genau wie es die Anleitung empfieht.<br />\n</blockquote>\nUnd bei der zweiten Regel mußt Du prüfen, ob die Datei NICHT vorhanden ist, erst dann darf sie installiert werden.<br />\n<blockquote>\nIch sehe das Problem eher darin das sich der Prüfort scheinbar nicht ganz klar adressieren lässt weil eine in meinen Augen nicht vorhandene Pfadangabe gefordert wird.<br />\n<br />\nNaja, eins nach dem anderen....<br />\n<br />\nEDIT:<br />\n<br />\ndas mit dem %TEMP% hilft auch nicht. Ich sehe kurz das Startlogo und dann wars das.<br />\n<br />\nEs ist auch ungünstig das man die Benutzerdefinierten Updates nicht überarbeiten kann.  Es sei denn vermutlich  man macht sich direkt an der xml Datei zu schaffen.<br />\n<br />\nAlso heißt es immer ein neues Update erstellen.<br />\n</blockquote>\nEvtl. ist es einfach für diese uns unbekannte Anwendung der falsche Weg der Installation.<br />\n",
+    "PostedDate": "2016-04-26T01:11:27.427-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471353",
+    "ThreadId": "653982",
+    "Html": "Und bei der zweiten Regel mußt Du prüfen, ob die Datei NICHT vorhanden ist, erst dann darf sie installiert werden.\r<br />\nDa sehe ich jetzt den Sinn nicht wenn ich in der Registry zwei mal das Gleiche aus verschiedenen Blickwinkeln ansehe. \r<br />\nRegel 1 hat die Existienzfrage doch bereits geklärt, Regel 2 soll klären ob es installiert werden KANN, also ob die Vorraussetzungen vorhanden sind, zB Betriebssystemseitig. \r<br />\nAber wie gesagt ist das wohl nicht der Problempunkt in dem Fall. Ich hab nur nicht so viele Möglichkeiten der Prüfung bei einer Verknüpfung. Hm. Womöglich mal über die Registry probieren ....\r<br />\n<br />\n<br />\n<br />\n&quot;Evtl. ist es einfach für diese uns unbekannte Anwendung der falsche Weg der Installation.&quot;\r<br />\n<br />\nEs gibt keine Installation. Das Paket wird einfach irgendwohin kopiert und die exe gestartet. Quasi &quot;portable&quot;.\r<br />\nIch mache auch Fortschritte .-) Der Programmstart über die Verknüpfung funktioniert und es läuft wenn ich die Version ohne ExtraPlugins aufrufe. Super. \r<br />\n<br />\nImageJ ist ein in Wissenschaft &amp; Forschung sehr weit verbreitetes  Open Source Tool für Bildauswertung und Bearbeitung. ZB zum Zählen von Sternen oder Bakterien, mathematischen Operationen mit Bildern usw.<br />\n",
+    "PostedDate": "2016-04-26T01:56:41.967-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471439",
+    "ThreadId": "653982",
+    "Html": "Ok, da es irgendwie mit der Prüfung ob die Verknüpfung angelegt ist  im Regelwerk nicht klappen wollte, habe ich auf die Mechanismen der Konkurrenz zurückgegriffen und verteile die Verknüpfung nun per GPO. Auch nicht verkehrt.\r<br />\n<br />\nWäre trotzdem daran interessiert wie eine Regel aussehen muss die auf die Exsistenz einer Desktopverknüpfung prüft.<br />\n",
+    "PostedDate": "2016-04-27T03:08:37.03-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471442",
+    "ThreadId": "653982",
+    "Html": "GPO ist keine Konkurenz zum WSUS. Und normalerweise nutze ich auch GPPs um Verknüpfungen auf Clients zu erstellen.\r<br />\nZum Starten der EXE könntest Du ja auch einen Eintrag aus dem Taskplaner verwenden, vorher den Eintrag im Taskplaner per GPP erstellen. ;)\r<br />\n<br />\nUnd wie ich schon schrub, eine Desktopverknüpfung ist auch nur eine Datei im Dateisystem. Prüfe auf deren Existenz, HowTos hab ich dir schon gepostet, umsetzen kann es für dich nicht auch noch.<br />\n",
+    "PostedDate": "2016-04-27T03:46:17.39-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

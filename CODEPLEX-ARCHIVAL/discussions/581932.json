@@ -1,0 +1,130 @@
+[
+  {
+    "Id": "1356057",
+    "ThreadId": "581932",
+    "Html": "I had this problem a year ago and finally just told WSUS Package Publisher to ignore Certificate Errors but I would really prefer to get this corrected.\r<br />\n<br />\nI have followed all the steps (multiple times) in the documentation (Installation Guide &amp; Creating a Code Signing Certificate) and I continue to get errors loading certificates.\r<br />\nI know if I tell it to ignore certificate errors I can successfully create and deploy updates and client computers have no problems installing them so the certificate should be good.\r<br />\n<br />\nWhen I try to import it in to WSUS Package Publisher, I get the error &quot;Failed to load the certificate. Check the file.&quot; and the Debug Log has a line that says &quot;2/26/2015 11:36:15 AM\tIsValideCertificate = False&quot;.  This suggests that I either missed a step or somehow messed up in the certificate creation process.\r<br />\n<br />\nI verified the certificate is replicated across my domain, it is a Code Signing Certificate, and at least 1024 bits (RSA (2048 Bits)).\r<br />\n<br />\nI really don't want to use a self-signed certificate if I don't have to.  Surely I am missing something somewhere.<br />\n",
+    "PostedDate": "2015-02-26T10:04:57.207-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1356065",
+    "ThreadId": "581932",
+    "Html": "What is the build from your WSUS? If WSUS is installed on a W2008R2 or lower, pls check the Build.\r<br />\n<a href=\"http://www.wsus.de/images/wsus-version.png\" rel=\"nofollow\">http://www.wsus.de/images/wsus-version.png</a>\r<br />\n<br />\nWSUS 3.0 (SP2): \tBuild 3.2.7600.226\r<br />\nWSUS 3.0 (SP2) + KB2720211: \tBuild 3.2.7600.251\r<br />\nWSUS 3.0 (SP2) + KB2734608: \tBuild 3.2.7600.256\r<br />\nWSUS 3.0 (SP2) + KB2828185: \tBuild 3.2.7600.262\r<br />\nWSUS 3.0 (SP2) + KB2938066: \tBuild 3.2.7600.274\r<br />\n<br />\nThe latest Build is .274. If your WSUS Build is lower then install posted updates.<br />\n",
+    "PostedDate": "2015-02-26T10:37:20.607-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1356094",
+    "ThreadId": "581932",
+    "Html": "It is a '08R2 server with WSUS Version 3.2.7600.226\r<br />\n<br />\nLooking through my update history I see it installed KB2720211 but I don't see any of those others and Windows Update does not show them as available.\r<br />\n<br />\nI am looking in to the mentioned updates now and will install them in order.  It seems somewhat odd to me that these would not be pushed down through Windows Update...<br />\n",
+    "PostedDate": "2015-02-26T12:08:38.127-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1356098",
+    "ThreadId": "581932",
+    "Html": "Are you sure with .226? You are looking at right place for the build number? If KB2720211 is installed, your WSUS is on Build .251.\r<br />\nPls check again your Build: <a href=\"http://www.wsus.de/images/wsus-version.png\" rel=\"nofollow\">http://www.wsus.de/images/wsus-version.png</a><br />\n",
+    "PostedDate": "2015-02-26T12:13:19.08-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1356106",
+    "ThreadId": "581932",
+    "Html": "<blockquote>\nthe Debug Log has a line that says &quot;2/26/2015 11:36:15 AM IsValideCertificate = False&quot;.<br />\n</blockquote>\nWPP use the Verify() Method of the.Net class System.Security.Cryptography.X509Certificates.X509Certificate2\r<br />\nUnfortunately, this method is not 100% accurate, and may return false negative results. This's why there is an option to ignore Code-Signing certificate errors.\r<br />\nIf your certificate is successfully used by your Wsus server to sign packages, it's certainly a good certificate.<br />\n",
+    "PostedDate": "2015-02-26T12:46:08.253-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1356107",
+    "ThreadId": "581932",
+    "Html": "Yes, I was looking in the right location.  I just finished installing KB2734608 and it now says Server version: 3.2.7600.256\r<br />\n<br />\nDo you think maybe there was a problem with KB2720211?  Should I try installing it again?<br />\n",
+    "PostedDate": "2015-02-26T12:47:40.323-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1356114",
+    "ThreadId": "581932",
+    "Html": "No, you can install all other updates for build .274.<br />\n",
+    "PostedDate": "2015-02-26T13:06:30.95-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1356360",
+    "ThreadId": "581932",
+    "Html": "Okay, I got my WSUS server completely updated to build .274 which should help fix a lot of issues.  Thank you WinfriedSonntag.  However, I am still having the same certificate issue in Package Publisher.\r<br />\n<br />\n<strong>DCourtel wrote:</strong><br />\n<blockquote>\nWPP use the Verify() Method of the.Net class System.Security.Cryptography.X509Certificates.X509Certificate2<br />\nUnfortunately, this method is not 100% accurate, and may return false negative results. This's why there is an option to ignore Code-Signing certificate errors.<br />\n</blockquote>\nThank you for your reply DCourtel but are you seriously saying the only thing I can do is ignore it?  I used the exact method recommended in generating the certificate.  All servers used in this process are Windows '08 R2 and completely updated.  Surely there is a method for me to generate a certificate that the &quot;Verify() Method of the .Net class System&quot; accepts as valid.<br />\n",
+    "PostedDate": "2015-02-27T06:16:10.87-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1356369",
+    "ThreadId": "581932",
+    "Html": "Unfortunately, I never find a list of all conditions that this method check. So, it is very hard to know what's goes wrong.\r<br />\nHow do you have made this certificate ? Have you a chain of certificate servers ?<br />\n",
+    "PostedDate": "2015-02-27T06:52:39.637-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1356375",
+    "ThreadId": "581932",
+    "Html": "<strong>WWWolf wrote:</strong><br />\n<blockquote>\nOkay, I got my WSUS server completely updated to build .274 which should help fix a lot of issues.  Thank you WinfriedSonntag.  However, I am still having the same &gt; certificate issue in Package Publisher.<br />\n</blockquote>\nNow i think you can create a new certificate with WPP. Publish the new certificate with Group Policies to all Clients/Servers.<br />\n",
+    "PostedDate": "2015-02-27T07:15:31.89-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1356439",
+    "ThreadId": "581932",
+    "Html": "<strong>WinfriedSonntag wrote:</strong><br />\n<blockquote>\nNow i think you can create a new certificate with WPP. Publish the new certificate with Group Policies to all Clients/Servers.<br />\n</blockquote>\nYou are thinking about self-signed certificates.  I am creating a code-signing certificate on my domain Certificate Authority.\r<br />\n<br />\n<strong>DCourtel wrote:</strong><br />\n<blockquote>\nUnfortunately, I never find a list of all conditions that this method check. So, it is very hard to know what's goes wrong.<br />\nHow do you have made this certificate ? Have you a chain of certificate servers ?<br />\n</blockquote>\nI have 1 CA Server on my domain and that's all it does (Server '08 R2).  On this Root CA, I have added 2 Code Signing Templates (the default &quot;Code Signing&quot; one referenced in your documentation &amp; one I titled &quot;Windows Updates&quot; for purposes of signing 3rd party updates).  I have tried with both and both give the same results.\r<br />\nI am currently looking through the &quot;Windows Updates&quot; template to see what changes I can make that might help.\r<br />\nI decided to change it from the default of 1 year up to 5 and am considering have it publish to Active Directory.\r<br />\nPurpose: Signature\r<br />\nAllow private key to be exported is checked\r<br />\nAlgorithm: RSA\r<br />\nMinimum Key size: 2048\r<br />\nRequest hash: SHA1\r<br />\nThere are other properties I can check as well for the template but none appear like they would cause any problems.\r<br />\n<br />\nOn the WSUS server ('08 R2) I open the MMC and load the Certificates snap-in as user (Administrator) and Request New Personal Certificate.\r<br />\nAD Enrollment Policy &gt; Select &quot;Windows Updates (Code Signing) &amp; Click Properties\r<br />\nOn private Key tab, expand Key Options and check Make private key exportable &amp; strong protection (leave archive option unchecked) &amp; enroll the key\r<br />\nI then right-click the new key &amp; select All Tasks &gt; Export...\r<br />\nyes, export the private key\r<br />\nLeave defaults on file format window (.PFX - all 3 boxes unchecked)\r<br />\nGive it Password\r<br />\ngive it a name &amp; export it to an appropriate location.\r<br />\n<br />\nNormally at this point I would import it to trusted publishers and add it to group policy to be trusted across the domain but as I am just testing Package Publisher's verification algorithm as I am typing this reply, I am skipping ahead to adding this newly exported cert to PP just to see if it will accept it...\r<br />\n<br />\nOpen WSUS Package Publisher.\r<br />\nCheck Settings to verify ignore certificate errors is unchecked.\r<br />\nClick Connect/Reload\r<br />\nClick Ok on the error message that says &quot;The certificate is invalid.  You will not be able to publish updates.&quot;\r<br />\nTools &gt; Certificate...\r<br />\nEnter Password\r<br />\nLoad certificate\r<br />\nBrowse to the .pfx file &amp; click open\r<br />\nGet error &quot;Failed to load the certificate.  Check the file.&quot;\r<br />\n<br />\nLogically, it seems to me like there is some issue with the certificate templates that it does not like.\r<br />\n<br />\nI plan to do some more testing with this but if you have any ideas, I would love to hear them.  I am thinking about generating a self-signed cert to compare against.\r<br />\n<br />\nThanks for your time,\r<br />\n<br />\n~John<br />\n",
+    "PostedDate": "2015-02-27T09:40:07.143-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1356500",
+    "ThreadId": "581932",
+    "Html": "I tried a few things and still no luck.\r<br />\n<br />\nThe only real differences I am seeing with a PP Self-Signed Cert and a Generated Cert is the Extensions.\r<br />\nThe Self-Signed cert only has the &quot;Enhanced Key Usage&quot; extension while the other has many more...\r<br />\nIn addition to Enhanced key Usage (which has the same value) there are also these fields:\r<br />\nCertificate Template Information\r<br />\nKey Usage\r<br />\nApplication Policies\r<br />\nSubject Key Identifier\r<br />\nAuthority Key Identifier\r<br />\nCRL Distribution Points\r<br />\nAuthority Information Access\r<br />\nSubject Alternative Name\r<br />\n<br />\nPerhaps one of these fields is causing a problem but for now I am done.  I will try to pick this back up on Monday.\r<br />\n<br />\nThanks again<br />\n",
+    "PostedDate": "2015-02-27T13:00:34.773-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1356729",
+    "ThreadId": "581932",
+    "Html": "There is another difference. The self-signed certificate don't rely on another cert to be valid. The problem may be in the cert of the root authority.<br />\n",
+    "PostedDate": "2015-02-28T01:09:36.643-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1358897",
+    "ThreadId": "581932",
+    "Html": "Correct me if I am wrong but if there was a problem with the cert of the Root CA clients wouldn't install any updates signed with any cert generated by the Root CA.\r<br />\n<br />\nThe fact that I can get it all to work just by telling Package Publisher to ignore Cert Errors suggests that the cert itself is fine but rather something in the detection mechanism just doesn't like it.\r<br />\n<br />\nI suspect the &quot;Key Usage&quot; Extension\r<br />\n<br />\nThe Self-Signed cert does not have a &quot;Key Usage&quot; extension.\r<br />\nBoth keys have an &quot;Enhanced Key Usage&quot; Extension with a value of &quot;Code Signing (1.3.6.1.5.5.7.3.3)&quot; but the Root CA Generated key also has &quot;Key Usage&quot; with a value of &quot;Digital Signature (80)&quot; that by default is critical (unchecking critical doesn't help).  This should not be a problem unless the detection method is looking for &quot;Code Signing&quot; in the &quot;Key Usage&quot; extension rather than &quot;Enhanced Key Usage&quot;.<br />\n",
+    "PostedDate": "2015-03-02T09:49:42.087-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1359449",
+    "ThreadId": "581932",
+    "Html": "I have given up and am now just using a self-signed certificate.  I don't particularly like this option but it's not worth the hassle the other way around.\r<br />\n<br />\nThanks again for your help.<br />\n",
+    "PostedDate": "2015-03-03T09:50:38.79-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-03-03T09:50:47.933-08:00"
+  },
+  {
+    "Id": "1497089",
+    "ThreadId": "581932",
+    "Html": "Hi,\r<br />\nI just stumbled upon the same problem. As far as I realize the Error is related to the existence of an certificate revocation list.\r<br />\n<br />\nI checked my Certificate with <strong>Certutil -f -urlfetch -verify &lt;Crt File&gt;</strong> an got a error(?) message, that the certificate could not be checked, because there are no revocation information (Not exactly, but as i understood it is translated from German).\r<br />\n<br />\nHope It helps somebody else.\r<br />\n<br />\nRegards<br />\n",
+    "PostedDate": "2017-06-16T05:32:07.513-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

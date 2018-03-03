@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-02-14T12:34:01.677-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nthe assembly MSIReader.dll owned by \"Easy Company\" has no sources and there is no statement telling where it comes from . Could you please point me where I could get it?\r\n\r\nThank you",
+    "LastUpdatedDate": "2015-02-14T12:34:01.677-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-08-22T02:08:31.473-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "MsiReader Source/Copyright",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 214
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "The same applies to CheckComboBox assembly",
+      "PostedDate": "2014-08-22T02:11:35.727-07:00",
+      "Id": 156714
+    },
+    {
+      "Message": "Hi, these two DLL have been wrote by myself for my convenience. They have not been release as open source, and are not available for download.",
+      "PostedDate": "2014-08-23T12:51:44.293-07:00",
+      "Id": 156812
+    }
+  ]
+}

@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 13</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Производитель : </value>
+  </data>
+  <data name="cmbBxVendorName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 12</value>
+  </data>
+  <data name="cmbBxVendorName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 21</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 13</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Имя продукта : </value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 42</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 13</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Заголовок :</value>
+  </data>
+  <data name="txtBxTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 39</value>
+  </data>
+  <data name="txtBxTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>605, 20</value>
+  </data>
+  <data name="txtBxDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 65</value>
+  </data>
+  <data name="txtBxDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>598, 110</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 68</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 13</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Описание :</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 191</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 13</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>URL с инормацией : </value>
+  </data>
+  <data name="txtBxMoreInfoURL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 188</value>
+  </data>
+  <data name="txtBxMoreInfoURL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>335, 20</value>
+  </data>
+  <data name="txtBxSupportURL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 214</value>
+  </data>
+  <data name="txtBxSupportURL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>335, 20</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 217</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 13</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>URL поддержки: </value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Id статьи KB : </value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-4, 380</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 13</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Возвращаемые коды : </value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 243</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 13</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Тип обновления :</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 298</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 13</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Взаимодействие : </value>
+  </data>
+  <data name="cmbBxUpdateClassification.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 240</value>
+  </data>
+  <data name="cmbBxUpdateClassification.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 21</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 326</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Перезагрузка : </value>
+  </data>
+  <data name="chkBxCanRequestUserInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>495, 190</value>
+  </data>
+  <data name="chkBxCanRequestUserInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 17</value>
+  </data>
+  <data name="chkBxCanRequestUserInput.Text" xml:space="preserve">
+    <value>Может требовать действий пользователя</value>
+  </data>
+  <data name="chkBxRequiresNetworkConnectivity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>495, 217</value>
+  </data>
+  <data name="chkBxRequiresNetworkConnectivity.Text" xml:space="preserve">
+    <value>Требует подключения к сети</value>
+  </data>
+  <data name="cmbBxImpact.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 296</value>
+  </data>
+  <data name="cmbBxImpact.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 21</value>
+  </data>
+  <data name="cmbBxRebootBehavior.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 323</value>
+  </data>
+  <data name="cmbBxRebootBehavior.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 21</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>395, 277</value>
+  </data>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 13</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Важность Msrc : </value>
+  </data>
+  <data name="btnNext.Text" xml:space="preserve">
+    <value>&amp;Далее</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>О&amp;тмена</value>
+  </data>
+  <data name="btnPrevious.Location" type="System.Drawing.Point, System.Drawing">
+    <value>418, 558</value>
+  </data>
+  <data name="btnPrevious.Text" xml:space="preserve">
+    <value>&amp;Назад</value>
+  </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>332, 251</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 13</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Id биллютеня безопасности : </value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 13</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Командная строка : </value>
+  </data>
+  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 536</value>
+  </data>
+  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>317, 13</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Дополнительно : Укажите команду, например /q, /s, /silent...</value>
+  </data>
+  <data name="txtBxCommandLine.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 513</value>
+  </data>
+  <data name="txtBxCommandLine.Size" type="System.Drawing.Size, System.Drawing">
+    <value>598, 20</value>
+  </data>
+  <data name="Value.HeaderText" xml:space="preserve">
+    <value>Значение</value>
+  </data>
+  <data name="Result.HeaderText" xml:space="preserve">
+    <value>Результат</value>
+  </data>
+  <data name="NeedReboot.HeaderText" xml:space="preserve">
+    <value>Необходима перезагрузка</value>
+  </data>
+  <data name="dtgrvReturnCodes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 380</value>
+  </data>
+  <data name="dtgrvReturnCodes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>598, 127</value>
+  </data>
+  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Замещает : </value>
+  </data>
+  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>405, 355</value>
+  </data>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Зависимости : </value>
+  </data>
+  <data name="cmbBxPackageType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 267</value>
+  </data>
+  <data name="cmbBxPackageType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 21</value>
+  </data>
+  <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 270</value>
+  </data>
+  <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 13</value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>Тип пакета : </value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Мастер информации об обновлении</value>
+  </data>
+</root>

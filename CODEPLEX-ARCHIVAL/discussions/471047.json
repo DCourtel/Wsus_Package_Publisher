@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1128686",
+    "ThreadId": "471047",
+    "Html": "Hi there,\r<br />\n<br />\nI installed today release 1.3.1311.24, on a single WSUS Server - Server 2012. Then connected to local Server and now trying to create updates. I walked through the documented guideline and succeeded with &quot;the update has been published&quot; - so certificate configuration should be fine.\r<br />\n<br />\nThe update was showing up at tree &quot;updates&quot; with Count (0). When I click on it, nothing happens. main window stay empty. After restart WPP, no update is shown below updates.\r<br />\n<br />\nThe same happens when I try to add HP catalog. I can browse and download content, after adding It shows up with (0) but can't go further, after restart, the entry is gone.\r<br />\n<br />\nInstallation is at %program files%, rebooted twice the Server. \r<br />\n<br />\nOn clients the last installed items are shown like this:\r<br />\n-&gt; Adobe Reader XI\r<br />\n-&gt; Adobe Reader XI - Deutsch\r<br />\n-&gt; Intel(R) AMT LMS_SOL for AMT 9.xx [9.0.3.1347.A1]\r<br />\n-&gt; Adobe Reader XI - Deutsch\r<br />\n<br />\nthats obviously my testing, but i never approved any update.\r<br />\n<br />\nSo, what could be wrong?<br />\n",
+    "PostedDate": "2013-11-25T06:19:11.35-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1128747",
+    "ThreadId": "471047",
+    "Html": "Go to setting and check the first checkbox on the &quot;Updates&quot;-Tab (Show locally...)\r<br />\n<br />\nHTH\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-11-25T08:30:19.893-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-11-25T23:16:24.2-08:00"
+  },
+  {
+    "Id": "1128909",
+    "ThreadId": "471047",
+    "Html": "Do you see these updates in the Wsus console (Wsus.msc) ? If yes, Norbert is right. You have probably used the option to make these updates visible in the Wsus console, so to see it in WPP, you need to check the option &quot;Show locally-Published updates that are also visible in the Wsus console&quot;<br />\n",
+    "PostedDate": "2013-11-25T12:39:25.367-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-11-25T23:16:44.353-08:00"
+  },
+  {
+    "Id": "1129043",
+    "ThreadId": "471047",
+    "Html": "thats it, Problem solved\r<br />\nthank you :)<br />\n",
+    "PostedDate": "2013-11-25T23:16:09.88-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

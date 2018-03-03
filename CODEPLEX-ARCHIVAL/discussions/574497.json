@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1330533",
+    "ThreadId": "574497",
+    "Html": "Hello,\r<br />\n<br />\nis there a way to change the &quot;Approved (Replaced)&quot; status to &quot;Approved&quot; when the option replace was a fault?<br />\n",
+    "PostedDate": "2014-12-10T03:26:52.68-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1330759",
+    "ThreadId": "574497",
+    "Html": "Hello,\r<br />\nYes. Revise the supersedes update, and untick the checkbox aside of the superseded update (in the list of updates).<br />\n",
+    "PostedDate": "2014-12-10T13:07:13.107-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1330943",
+    "ThreadId": "574497",
+    "Html": "i have tried this - but status is still &quot;Approved (Replaced)&quot;. On the information tab of the superseded updated the &quot;is superseded&quot; checkbox is still active.<br />\n",
+    "PostedDate": "2014-12-11T03:24:45.78-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

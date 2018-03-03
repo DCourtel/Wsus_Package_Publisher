@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1305843",
+    "ThreadId": "567761",
+    "Html": "Hi,\r<br />\n<br />\nI have a question about configuration. Can I still use the package publisher and WSUS to deploy custom packages if I skip the remote administration configurations on domain computers? I want to use this product to enable deployment of, for example, Adobe Reader, with WSUS but I do not want to open up the remote administration parts of package publisher.\r<br />\n<br />\nRegards,\r<br />\nUrmas<br />\n",
+    "PostedDate": "2014-09-18T01:47:54.357-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1305865",
+    "ThreadId": "567761",
+    "Html": "Hi, \r<br />\nyes, publishing package into Wsus doesn't require any firewall configuration. Such configuration is need only for extra features like sending 'DetectNow', 'ReportNow', 'install This update', 'Show windows update log' ...\r<br />\nIf you only need to publish package, you don't need to touch your firewall. \r<br />\nNote : The column &quot;Online&quot; may indicate &quot;No&quot; for all computers if computers are not enable to respond to ping request.<br />\n",
+    "PostedDate": "2014-09-18T03:26:18.967-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-18T23:29:34.793-07:00"
+  }
+]

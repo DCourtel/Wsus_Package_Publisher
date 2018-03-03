@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Course of the mismatch of api version and server version you cant create updates with win10-clients. there seams to be a workaround in the discussions-area ?! ",
+    "LastUpdatedDate": "2017-03-09T10:23:47.427-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-03-08T09:27:53.44-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Windows10 Client for Update creation",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 364
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Which workaround do you talk about ?",
+      "PostedDate": "2017-03-09T02:41:55.117-08:00",
+      "Id": 207693
+    },
+    {
+      "Message": "http://wsuspackagepublisher.codeplex.com/discussions/655107\nthis one, but may you got a better idea. ",
+      "PostedDate": "2017-03-09T10:23:47.427-08:00",
+      "Id": 207698
+    }
+  ]
+}

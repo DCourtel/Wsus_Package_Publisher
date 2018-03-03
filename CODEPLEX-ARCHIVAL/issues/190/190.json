@@ -1,0 +1,71 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-06-05T13:02:15.103-07:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\ncan you add a checkbox in the remote command windows \"Close when done\"?\r\n\r\nRegards\r\nNorbert\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1405.17",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-05-20T06:33:24.45-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "Checkbox Remote Commands",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 190
+  },
+  "FileAttachments": [
+    {
+      "FileId": 847901,
+      "FileName": "20-05-_2014_15-25-39.png",
+      "DownloadUrl": ".\\847901"
+    },
+    {
+      "FileId": 848356,
+      "FileName": "20-05-_2014_15-25-39.png",
+      "DownloadUrl": ".\\848356"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Sure !",
+      "PostedDate": "2014-05-21T14:36:27.017-07:00",
+      "Id": 147373
+    },
+    {
+      "Message": "Please, download Release v1.3.1405.23 (you will need to display hidden release) and let me know if it meet your needs.",
+      "PostedDate": "2014-05-23T12:20:00.597-07:00",
+      "Id": 147562
+    },
+    {
+      "Message": "Hi,\n\nworks great. Thanks. :)\n\nregards\nNorbert",
+      "PostedDate": "2014-05-23T12:51:44.683-07:00",
+      "Id": 147567
+    },
+    {
+      "Message": "Btw: German Translation would be \"Bei Fertigstellung automatisch Fenster schließen\"",
+      "PostedDate": "2014-05-23T12:58:25.497-07:00",
+      "Id": 147569
+    }
+  ]
+}

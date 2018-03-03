@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1098125",
+    "ThreadId": "458820",
+    "Html": "Error: server version is different from console version. you won't be able to publish updates. \r<br />\n<br />\nServer version is 3.2.7600.256 - WSUS is windows 2k3 server\r<br />\nConsole version is 3.2.7600.226 - Windows 7 pro desktop\r<br />\n<br />\nIs there away to update the client to match the server? or is this a limitation on WSUS that would force us to use WPP directly on the server?<br />\n",
+    "PostedDate": "2013-09-23T10:39:46.2-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1098173",
+    "ThreadId": "458820",
+    "Html": "Install Microsoft KB2734608 on the Windows 7 to upgrade the console.<br />\n",
+    "PostedDate": "2013-09-23T12:10:31.48-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:05:03.17-07:00"
+  },
+  {
+    "Id": "1098195",
+    "ThreadId": "458820",
+    "Html": "Thanks for the help, and this amazing tool :)\r<br />\n<br />\nFor future reference you need to install the patch as follows on windows 7 computers:\r<br />\nWSUS-KB2734608-x64.exe /q C:\\MySetup.log<br />\n",
+    "PostedDate": "2013-09-23T13:03:59.707-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

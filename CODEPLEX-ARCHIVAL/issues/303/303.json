@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:08.067-08:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI followed the manual for deploying Adobe Reader XI (it's the first version I want to include on WSUS Package Publisher of Reader). I used the Adobe Customization tool XI last version. When I tried to install the version 11.0.0 I get an error on client computers, (the update is available). On the Temp log of the installation appears the following:\r\n\r\n_MSI (s) (74:FC) [09:02:42:321]: Note: 1: 1708 \r\nMSI (s) (74:FC) [09:02:42:321]: Producto: Adobe Reader XI - Español -- Fallo en la operación de instalación.\r\n\r\nMSI (s) (74:FC) [09:02:42:321]: Windows Installer instaló el producto. Nombre del producto: Adobe Reader XI - Español. Versión del producto: 11.0.00. Idioma del producto: 1034. Fabricante: Adobe Systems Incorporated. Resultado de la instalación: 1603.\r\n\r\nMSI (s) (74:FC) [09:02:42:321]: Attempting to delete file C:\\Windows\\Installer\\35857b8.mst\r\nMSI (s) (74:FC) [09:02:42:326]: Deferring clean up of packages/files, if any exist\r\nMSI (s) (74:FC) [09:02:42:326]: Attempting to delete file C:\\Windows\\Installer\\35857b8.mst\r\nMSI (s) (74:FC) [09:02:42:326]: Unable to delete the file outside of the engine. LastError = 2\r\nMSI (s) (74:FC) [09:02:42:326]: MainEngineThread is returning 1603\r\nMSI (s) (74:AC) [09:02:42:326]: No System Restore sequence number for this installation.\r\n=== Registro detenido: 21/10/2015  9:02:42 ===\r\nMSI (s) (74:AC) [09:02:42:326]: User policy value 'DisableRollback' is 0\r\nMSI (s) (74:AC) [09:02:42:326]: Machine policy value 'DisableRollback' is 0\r\nMSI (s) (74:AC) [09:02:42:326]: Incrementing counter to disable shutdown. Counter after increment: 0\r\nMSI (s) (74:AC) [09:02:42:326]: Note: 1: 1402 2: HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Installer\\Rollback\\Scripts 3: 2 \r\nMSI (s) (74:AC) [09:02:42:326]: Note: 1: 1402 2: HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Installer\\Rollback\\Scripts 3: 2 \r\nMSI (s) (74:AC) [09:02:42:326]: Note: 1: 1402 2: HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Installer\\InProgress 3: 2 \r\nMSI (s) (74:AC) [09:02:42:326]: Note: 1: 1402 2: HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Installer\\InProgress 3: 2 \r\nMSI (s) (74:AC) [09:02:42:326]: Decrementing counter to disable shutdown. If counter >= 0, shutdown will be denied.  Counter after decrement: -1\r\nMSI (s) (74:AC) [09:02:42:326]: Restoring environment variables\r\nMSI (s) (74:AC) [09:02:42:326]: Destroying RemoteAPI object.\r\nMSI (s) (74:C4) [09:02:42:326]: Custom Action Manager thread ending.\r\nMSI (c) (64:94) [09:02:42:326]: Decrementing counter to disable shutdown. If counter >= 0, shutdown will be denied.  Counter after decrement: -1\r\nMSI (c) (64:94) [09:02:42:326]: MainEngineThread is returning 1603\r\n=== Verbose logging stopped: 21/10/2015  9:02:42 ===_\r\n\r\nOn Windows update log appears the following:\r\n\r\n----------------------------------------------------------------------------------------------\r\n\r\n_Failure\tContent Install\tInstallation Failure: Windows failed to install the following update with error 0x80070643: Adobe Reader 11.0.0._\r\n\r\nCan someone help me?\r\n\r\nThanks,\r\n\r\nRegards,",
+    "LastUpdatedDate": "2017-02-03T11:50:08.067-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-10-21T01:04:40.263-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Problems installing Adobe Reader XI",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 303
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Someone can help me?\n\nThanks,\n\nRegards,",
+      "PostedDate": "2015-10-27T02:52:23.207-07:00",
+      "Id": 192949
+    },
+    {
+      "Message": "Hi, is this happening only with the Adobe Reader 11 package? Or are you seeing it with other locally published updates too? What happens if you try to install your msi (with msp?) manually? Is this installing correctly?\n\nRegards\nNorbert",
+      "PostedDate": "2015-10-27T08:34:39.507-07:00",
+      "Id": 192957
+    },
+    {
+      "Message": "I tried to execute the msi file and I receive the following message: Setup has detected that you already have a more functional product installed.\n\nIt's strange, because I have not installed any version of Adobe Reader on this test pc and I executed the Adobe Reader Cleanup tool, can you help me?\n\nThanks,\n\nRegards,",
+      "PostedDate": "2015-10-30T04:26:28.223-07:00",
+      "Id": 193122
+    }
+  ]
+}

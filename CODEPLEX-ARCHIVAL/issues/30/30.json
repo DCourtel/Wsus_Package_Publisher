@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Ok, I close the ticket as the bug can not be reproduce.\r\nLet me know if you have other problems.",
+    "ClosedDate": "2013-04-29T14:10:17.18-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI'm trying to publish a new application (Cisco Jabber) and want to define supersedes for the old version. I can not choose to any supersede package. See Screenshot.\r\nAfter being published with LUP with supersedes, I can see and change the supersedes in WPP.\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-04-29T00:50:53.687-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Defining supersedes is not possible",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 30
+  },
+  "FileAttachments": [
+    {
+      "FileId": 670223,
+      "FileName": "defining-Supersedes.png",
+      "DownloadUrl": ".\\670223"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "OK, seems to be working with Adobe Flashplayer. Maybe some user error on my side. ;)",
+      "PostedDate": "2013-04-29T01:18:04.213-07:00",
+      "Id": 98763
+    }
+  ]
+}

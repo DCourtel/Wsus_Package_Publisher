@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1494527",
+    "ThreadId": "662165",
+    "Html": "Hallo,\r<br />\n<br />\ndas Anzeigen der Updates in der WSUS-Konsole ist nicht möglich. Unter den Debug-Informationen finden sich folgende Fehlermeldungen.\r<br />\n<br />\n\\.\\pipe\\MSSQL$MICROSOFT##SSEE\\sql\\query : SUSDB\r<br />\n**** Netzwerkbezogener oder instanzspezifischer Fehler beim Herstellen einer Verbindung mit SQL Server. Der Server wurde nicht gefunden, oder auf ihn kann nicht zugegriffen werden. Überprüfen Sie, ob der Instanzname richtig ist und ob SQL Server Remoteverbindungen zulässt. (provider: Named Pipes Provider, error: 40 - Verbindung mit SQL Server konnte nicht geöffnet werden)\r<br />\n<br />\nAuf einem Windows 2016 Server mit WSUS sollte die WID-Instanz doch über \\.\\pipe\\Microsoft##WID\\tsql\\query zu erreichen sein, oder?\r<br />\n<br />\nLässt sich das ändern?\r<br />\n<br />\nVielen Dank!<br />\n",
+    "PostedDate": "2017-03-23T07:13:24.817-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1494668",
+    "ThreadId": "662165",
+    "Html": "Wenn man das über die Commandline probiert, sollte das funktionieren:<br />\n<br />\nnp:\\.\\pipe\\Microsoft##WID\\tsql\\query<br />\n<br />\nIch kann es erst später am Abend prüfen.<br />\n<br />\nEDIT: Der Editor nimmt beim speichern einen Backslash raus. Man muss ihn wohl verdoppeln.<br />\nnp:\\\\.\\pipe\\Microsoft##WID\\tsql\\query <br />\n<br />\nGenau, es müssen also 4 Backslahes zu Beginn eingegeben werden, der Editor kürzt die Eingabe. :(<br />\n",
+    "PostedDate": "2017-03-26T03:16:15.153-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1494677",
+    "ThreadId": "662165",
+    "Html": "So, getestet. Die Updates werden trotz Fehlermeldung in die SUSDB gebracht. Ich hab mir dieses SQL Server Management Studio installiert: Microsoft SQL Server 2014 - 12.0.2000.8 (X64)   Feb 20 2014 20:04:26   Copyright (c) Microsoft Corporation  Windows Internal Database (64-bit) on Windows NT 6.3 &lt;X64&gt; (Build 14393: ) (Hypervisor)  Verbindung via np:\\.\\pipe\\Microsoft##WID\\tsql\\query hergestellt. In der Tabelle tbUpdate findest Du die Datensätze mit folgender Abfrage:<br />\n<pre><code>SELECT  [LocalUpdateID]\n      ,[UpdateID]\n      ,[UpdateTypeID]\n      ,[IsClientSelfUpdate]\n      ,[PublisherID]\n      ,[IsPublic]\n      ,[IsHidden]\n      ,[DetectoidType]\n      ,[LegacyName]\n      ,[LastUndeclinedTime]\n      ,[IsLocallyPublished]\n      ,[ImportedTime]\n  FROM [SUSDB].[dbo].[tbUpdate]\n  WHERE IsLocallyPublished = 1</code></pre>\n\nMit diesem Update Query<br />\n<pre><code>USE [SUSDB]\nGO\nUPDATE [dbo].[tbUpdate]\n   SET \n      [IsLocallyPublished] = 0\n WHERE [IsLocallyPublished] = 1\nGO</code></pre>\n\nwerden die Updates vom WPP auch in der WSUS-Konsole sichtbar. Probier es aus, funktioniert. Zumindest bei mir soeben.<br />\n",
+    "PostedDate": "2017-03-26T09:51:41.08-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1494703",
+    "ThreadId": "662165",
+    "Html": "Ich habe es gerade ausprobiert und es funktioniert auch bei mir.\r<br />\n<br />\nDanke schön!<br />\n",
+    "PostedDate": "2017-03-27T00:58:06.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

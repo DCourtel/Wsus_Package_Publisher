@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Please, for this type of question, open a «Discussion» instead of an «Issue». ",
+    "ClosedDate": "2017-01-30T22:04:38.03-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Please, could someone tell me why I am receiving an error code 800B0109 back when installing for Chrome.\r\nI am using ChromeStandAlone.MSI\r\nAdded the UID only and published.\r\nCertificates have been added manually on the laptop.\r\n\r\nMany thanks,\r\n\r\nSl1m",
+    "LastUpdatedDate": "2017-01-30T22:04:38.077-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-03-10T07:55:37.047-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Chrome - Error code 800B0109",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 330
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hey,\n\nI guess its something about the root certificate. Do other updates work on your computer?\n\nSnuggle",
+      "PostedDate": "2016-03-14T06:35:58.793-07:00",
+      "Id": 197903
+    }
+  ]
+}

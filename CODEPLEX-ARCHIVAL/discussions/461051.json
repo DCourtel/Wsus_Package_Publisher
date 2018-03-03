@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1103204",
+    "ThreadId": "461051",
+    "Html": "Hello,\r<br />\n<br />\nI have a domain with 4 sites. On the main site, we have the master WSUS server on which the WPP is installed. I created differents install and update packages for Adobe Reader and tested them successfully on a test group (GPO defined). I wanted to put in production on the smallest remote site and have set the packages to &quot;Install&quot;. On the remote site i have a replica of the main server.\r<br />\n<br />\nIf i connect to the WPP console to the replica server, the folder path for the CAB file still points to the main server (but it's grey); the Id is orange but i read in another post that it was a normal behaviour. I checked the WSUS Content folder on the replica and couldn't find the CAB file. Same after a forced sync from the replica.\r<br />\n<br />\nOn the client, even if the updates are on &quot;install&quot;, they are not detected, as their WSUS Server doesn't have the CAB files...\r<br />\n<br />\nWhat did i do wrong ?\r<br />\n<br />\nThank you in advance for your pecious help\r<br />\n<br />\nBest regards\r<br />\n<br />\nThe code signing certificate <br />\n",
+    "PostedDate": "2013-10-03T07:48:32.863-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1103263",
+    "ThreadId": "461051",
+    "Html": "Hello, check that the certificate is in place on the replica server (Trusted Publihser and Trusted Root Authority). If not, put it in place and make a replication, wait the time for your replica server to download the cab file.<br />\n",
+    "PostedDate": "2013-10-03T10:18:50.633-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1103493",
+    "ThreadId": "461051",
+    "Html": "Hello,<br />\n<br />\nI checked all the certificates, and they are on both servers the same ( i checked the certificates in &quot;Current User&quot;). I got the printscreens if you'd like.<br />\n<br />\nThe main server is Windows 2008 R2 Enterprise and the replica a Windows 2003 R2 Standard, Could it be the problem ? Both are on WSUS 3.2.7600.226.<br />\n<br />\nBeside that, is that normal that i see my WPP created updates only in the WPP console, and not in the WSUS one ?<br />\n",
+    "PostedDate": "2013-10-03T23:50:34.813-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1103562",
+    "ThreadId": "461051",
+    "Html": "<blockquote>\ni checked the certificates in &quot;Current User&quot;<br />\n</blockquote>\nNo, certificates <strong>MUST</strong> be place in &quot;computer&quot; stores.<br />\n<blockquote>\nBeside that, is that normal that i see my WPP created updates only in the WPP console, and not in the WSUS one ?<br />\n</blockquote>\nThere is an options in 'Tools' -&gt; 'Settings' -&gt; 'Servers' tab : &quot;When publishing a new update&quot; = &quot;Let me choose&quot; or &quot;Always make this update visible in Wsus Console&quot;. WPP must run on the Wsus server for these options be available.<br />\n",
+    "PostedDate": "2013-10-04T03:32:20.607-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:01:47.31-07:00"
+  },
+  {
+    "Id": "1103602",
+    "ThreadId": "461051",
+    "Html": "That was it... Sorry for the disturbance ! And thank you for this wonderful product !!!<br />\n",
+    "PostedDate": "2013-10-04T05:46:04.12-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

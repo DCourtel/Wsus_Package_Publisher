@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-07-18T11:33:07.687-07:00",
+    "CommentCount": 7,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nI am a long time to use the WSUS also looking for software deployment and then was held yesterday Interesting note on WPP. I have decided for the WPP because it also runs on Windows Server 2012. For these useful tool first a welcome thank you.\r\n\r\nSo far so good I have installed and set up the WPP today and the connection to the WSUS is also running. Also, I see all PCs in the WPP. But what is amazing is the fact that all Windows 7 PCs _x64 are indicated \"offline\" (orange). If I excecute in WPP the command  to send his report, I see in the window of  WPP (ping - no ping).\r\n\r\nWindows XP machine and the server are shown in green. If I send the ping command in cmd the Windows 7 client answers properly. What must I do that the Windows 7 clients appear as online (green) in the WPP and why the ping does not work. On all machines the firewall is disabled.",
+    "LastUpdatedDate": "2013-07-18T11:33:07.877-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-07-06T06:07:01.853-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Windows 7 Clients shown \"offline\" - but they are online",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 80
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi Purecut,\nInteresting, what about PC with 32bit OS ?\nWPP ping remote computers based on the computer name. Does your computer enable to resolve the name to an IP adress ?\nWhen you ping a remote Win7_x64 :\n   - Are you using the name of the computer or the IP adress ?\n   - What is the round trip time in the ping result ?\n   - Does there any firewall betwen your PC and the remote computer ?",
+      "PostedDate": "2013-07-07T11:37:32.507-07:00",
+      "Id": 105319
+    },
+    {
+      "Message": "Hello and thanks for your responce.\n\nI have located the problem and it is related to the ipv6 configuration on a Windows 2008 Server and Windows 7 clients. IPv6 is by default installed on the Windows server 2008. Clients can not communicate with each other if no IPv6 router is configured or installed in the netzwork. If you throws a ping in the WPP and on the Windows 2008 server IPv6 is active, the ping always use the IPv6 protocol from the dual stack. If no IPv6 routers is configureirt within the network, then the queries run into empty.\n\nTo avoid this, there are two solutions. You can disable the IPv6 protocol on all WIN7 clients or the WPP  pings withe command ping -4, because IPv4 is enabled and configured on all clients in the complete network. What ping format you have to use in WPP can be located from the WSUS. WSUS tells you waht kind of OS the client is using. So you have to decide if you have to use ping or ping -4.\n\nAfter I disabled the IPv6 protocol on some WIN7 Clienst the WPP ping goes through and the WIN 7 client was green (online). This is very cumbersome in a large network. For this reason I would wish that you can find a way to send the right ping to WIN7/8 Clients with active IPv6 = ping -4.",
+      "PostedDate": "2013-07-07T15:32:02.477-07:00",
+      "Id": 105335
+    },
+    {
+      "Message": "BTW.\n\nTo answer your questions:\n\n1.) It had nothing to do with the firewall\n2.) If you ping with the ipv4 IP / or name everythin works fine\n3.) if you ping with ipv6 / or name with no ipv6 router installed or a not right configured ipv6 DHCP for DNS resoluton the ping times out. In a IPv6 Network it would be great if WPP send the ping in the right format:\n\nping -4 \"Client-Maschine\"\n\nGreetings\nPurecut",
+      "PostedDate": "2013-07-07T15:37:19.58-07:00",
+      "Id": 105336
+    },
+    {
+      "Message": "I think I will add a option in the settings :\n\n * When Pinging a remote computer :\n     - Always use IPv4. (Recommended) <- Default setting\n     - Always Use IPV6.\n     - Use IPV6 first and, if fail, use IPV4.\n\nWhat do you think about that ?",
+      "PostedDate": "2013-07-12T09:47:00.473-07:00",
+      "Id": 105857
+    },
+    {
+      "Message": "Hi,\n\nGood idear,\n\nbut on a windows 7/8 machine you MUST use the ping -4 otherwise the ping takes the 6er format\n\nAlways use IPv4. (Recommended) <- Default setting  - ok\nAlways Use IPV6. - ok\nUse IPV6 first and, if fail, use IPV4  - but with the -4 string for IPv4, otherwise the ping does not work on these machines)\n\nGreetings",
+      "PostedDate": "2013-07-14T21:32:27.987-07:00",
+      "Id": 106022
+    },
+    {
+      "Message": "\n\r\n\r** Closed by DCourtel 07/14/2013 9:21AM",
+      "PostedDate": "2013-07-14T09:21:21.523-07:00",
+      "Id": 106023
+    },
+    {
+      "Message": "> but on a windows 7/8 machine you MUST use the ping -4 otherwise the ping takes the 6er format\n\nThat depends of the remote computer. If, from a Windows 7/8 you try to Ping a MachineName, and if this MachineName doesn't have register IPV6 address on the DNS, then you will Ping a IPV4 address.",
+      "PostedDate": "2013-07-14T21:57:01.78-07:00",
+      "Id": 106025
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1471602",
+    "ThreadId": "654109",
+    "Html": "Hello,\r<br />\n<br />\nHere my little contribution for the Adobe flash player deploy on the WSUS publisher.\r<br />\n<br />\nI use the Adobe repository to get the updates for flash player ActiveX. But doesn't really work &quot;plug&amp;play&quot;.\r<br />\n<br />\nWhen a deploy directly the update, it fail with this MSI log : <br />\n<blockquote>\nMSI (s) (3C:30) [14:52:55:575]: Product: Adobe Flash Player 21 ActiveX -- Installation failed.<br />\n<br />\nMSI (s) (3C:30) [14:52:55:575]: Windows Installer installed the product. Product Name: Adobe Flash Player 21 ActiveX. Product Version: 21.0.0.213. Product Language: 1033. Manufacturer: Adobe Systems Incorporated. Installation success or error status: 1639.<br />\n<br />\nMSI (s) (3C:30) [14:52:55:577]: MainEngineThread is returning 1639<br />\nInfo 1639.Invalid command line argument. Consult the Windows Installer SDK for detailed command line help.<br />\n/QN<br />\n</blockquote>\nIt's because WSUS publisher implicitly always add /qn options.\r<br />\nAnd by default, the Adobe repository add Command Line : /qn REBOOT=ReallySuppress\r<br />\nThe msiexec has this options passed and fail : /qn /qn REBOOT=ReallySuppress\r<br />\n<br />\nOnly revise the update and remove &quot;/qn&quot; from Command Line\r<br />\n<br />\n<img src=\"http://img15.hostingpics.net/pics/977776wsuspublisherflashremoveqn.png\" alt=\"Image\" />\r<br />\n<br />\nPS : it's very confusing to see /q in example /q, /s, /silent if it always implicit to wsus publisher... I think we need to remove this from text.<br />\n",
+    "PostedDate": "2016-04-28T07:54:28.46-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

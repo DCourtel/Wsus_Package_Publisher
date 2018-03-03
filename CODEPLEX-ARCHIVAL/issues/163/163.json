@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:07.24-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "This is really annoying, especially with large catalogs that you may only want a couple updates from.\r\n\r\nThe import should only import into WPP, then we should be able to select what we want to publish. Right now we have to import the catalog into SCUP and then export the updates we want into another catalog and then import that with WPP.",
+    "LastUpdatedDate": "2017-02-03T11:50:07.24-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-12-04T13:05:28.397-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Make Automatic Publishing of Imported Catalogs Optional",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 4,
+    "Id": 163
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

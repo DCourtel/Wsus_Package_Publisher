@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "1106278",
+    "ThreadId": "461845",
+    "Html": "Hello,\r<br />\n<br />\nOur multiple site, multiple replicas installation is a wonder thanks to your excellent job. I still have a problem with a replica that is in another forest and domain. There is no problem with WSUS functioning so (bidirectional trust). But the certificate is not recognized on the remote site (on the WSUS and on the client GPO). The certificate information says &quot;This certificate cannot be verified up to a trusted certification authority&quot;. Certificates are not my cup of tea and i wanted to know if you could be helpful here, before i have to dig deeper in cross-domain certificates validation...\r<br />\n<br />\nThanks in advance<br />\n",
+    "PostedDate": "2013-10-10T23:34:40.84-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1106727",
+    "ThreadId": "461845",
+    "Html": "I'm afraid to be useless in this case.<br />\n",
+    "PostedDate": "2013-10-12T10:09:08.797-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1106853",
+    "ThreadId": "461845",
+    "Html": "Thanks anyway. Do you think it would be possible to install a wpp instance connected to the replica on the remote site ?<br />\n",
+    "PostedDate": "2013-10-13T04:49:14.657-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1106858",
+    "ThreadId": "461845",
+    "Html": "Yes, WPP can manage Replica Servers (but there is few things to manage on Replica Server. You can not publish to a replica server) and remote servers. Until you have stable connection between these site.<br />\n",
+    "PostedDate": "2013-10-13T06:03:53.99-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1106997",
+    "ThreadId": "461845",
+    "Html": "Thank you for your answer, but i don't understand it. Maybe french will be better in this case...\r<br />\n<br />\nJe ne peux donc pas installer un WPP en local sur mon replica pour publier des updates sur mon site distant dans une autre forêt. Mais à la fin de votre commentaire précédent vous dites: jusqu'à ce que vous ayez une connection stable entre les sites.\r<br />\n<br />\nCes sites sont reliés par une connection réseau MPLS stable... Est-ce que cela change qqch ? Ou vouliez-vous parler de l'interconnection des serveurs de certificats ?\r<br />\n<br />\nMerci d'avance pour vos éclaircissements<br />\n",
+    "PostedDate": "2013-10-13T23:41:37.12-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1107023",
+    "ThreadId": "461845",
+    "Html": "C'est fou la nombre de Français qui parle Anglais sur ce site :-)\r<br />\n<br />\nOn ne peux pas publier de mise à jour sur un serveur réplica (d'où le nom). Par contre vous pouvez utiliser WPP sur un serveur réplica pour le gérer (mais il n'y a pas grand chose à gérer).\r<br />\nWPP peux se connecter à un serveur WSUS distant sans problème, mais il faut une connexion stable (même si HTTP(s) supporte sans trop de problème les micro-coupures).\r<br />\nVous pouvez aussi utiliser WPP sur un PC avec la console de gestion WSUS d'installé.<br />\n",
+    "PostedDate": "2013-10-14T00:59:23.033-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1107030",
+    "ThreadId": "461845",
+    "Html": "J'ai eu une autre idée mais a-t-elle un sens: je génère un code signing certificate sur l'autorité de certification de mon site distant (qui est dans une autre forêt). Et je l'installe sur le serveur WSUS replica du site distant et sur les clients du site distant via GPO. Est-ce que ça peut marcher (le paquet est délivré depuis le serveur WSUS distant mais a été crée sur mon WSUS Master) ?<br />\n<br />\nEdit... Idée stupide puisque les packages WPP sont signés avec le certificat de mon site principal...<br />\n<br />\nPuis-je par contre créer comme ci-dessus un certificat code signing sur mon autorité de certification distante et utliliser celui-ci en le chargeant dans WPP à chaque fois que je veux créer un package pour mon site distant ? Ce qui voudrait dire que je dois créer tous mes updates à double (1x pour mes sites de la même forêt et une fois pour la forêt distante) et faire les approbations en fonction...<br />\n",
+    "PostedDate": "2013-10-14T01:12:58.017-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1107044",
+    "ThreadId": "461845",
+    "Html": "Ca ne serait pas plus simple de créer un certificat pour l'authorité de certification privé de la foret une et de l'importer dans le magasin &quot;Authorité de certification racine de confiance' de tes machines de la foret deux ? De cette facon les machines de la foret deux feraient confiance aux certificats de l'authorité de la foret une.<br />\n",
+    "PostedDate": "2013-10-14T02:01:18.24-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T08:02:26.927-08:00"
+  },
+  {
+    "Id": "1107076",
+    "ThreadId": "461845",
+    "Html": "En effet... Je crois que je vais aller me boire un café...<br />\n",
+    "PostedDate": "2013-10-14T03:05:31.69-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

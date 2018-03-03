@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1467363",
+    "ThreadId": "652707",
+    "Html": "Patch My PC appears a reasonably priced &amp; easy to implement solution for 3rd party updates where vendors may not supply a SCUP catalog.<br />\n<br />\nPatch My PC specifically notes WPP as working, but not supported in their FAQ. <br />\n<blockquote>\n&quot;Some customers successfully publish and deploy updates in our SCUP catalog using WSUS only and a third party tool WSUS Package Publisher. &quot;<br />\n</blockquote>\nCurious if anyone has any experience with this product they could share.  There is a demo catalog  that is easy to configure with WPP, but I run into mixed results so far.<br />\n<br />\nDemo catalog:<br />\n<a href=\"https://patchmypc.net/scupcatalog/downloads/PatchMyPCTrial.cab\" rel=\"nofollow\">https://patchmypc.net/scupcatalog/downloads/PatchMyPCTrial.cab</a><br />\n<br />\nThanks,<br />\n",
+    "PostedDate": "2016-03-19T10:16:55.107-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1469630",
+    "ThreadId": "652707",
+    "Html": "Hi, We use it for some of our updates, makes Java updates a breeze just it tends to be about 2-3 weeks behind but thats no bother for us. We've not really used many of the other programs in the catalog but will look to over time.  I guess we've been using it for 6-9 months now.<br />\n",
+    "PostedDate": "2016-04-10T15:10:39.093-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1469631",
+    "ThreadId": "652707",
+    "Html": "oh one quick point about using Patch My PC Java updates:\r<br />\n<br />\n&quot;\r<br />\nonce the update is downloaded and showing in WPP you will most likely need to amend the “Return Codes” for it. This defiantly needs to be done for the Java updates.\r<br />\nOtherwise windows will assume that the install failed when in fact it succeeded.\r<br />\nDouble click on your new update and add a new line under Return Codes. Set “0” to “Succeeded”\r<br />\n&quot;<br />\n",
+    "PostedDate": "2016-04-10T15:18:29.527-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1482689",
+    "ThreadId": "652707",
+    "Html": "Howdy, <br />\n<br />\nare there any tricks to getting the PatchMyPC demo catalog added to WPP?<br />\n<br />\nOnly seems to load from a local path, but when i do i get 403 errors importing the updates.  Browser access to the site seems aok, running as Admin, firewall off.<br />\n<br />\nWPP 3.2.7600.251, on W2K8 R2, running the console on the local server.<br />\n<br />\nAny advice appreciated, <br />\nJustin<br />\n<br />\nAdditional - imported the Adobe Acrobat Catalog aok, so appears to be just the PatchMyPC download - can you add credentials to a download process, perhaps?<br />\n",
+    "PostedDate": "2016-09-01T17:12:14.507-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1482705",
+    "ThreadId": "652707",
+    "Html": "Your WSUS is not up2date. The actually Build is .274. You need to install this Hotfixes:\r<br />\n<br />\nWSUS 3.0 (SP2) + KB2720211: \tBuild 3.2.7600.251\r<br />\nWSUS 3.0 (SP2) + KB2734608: \tBuild 3.2.7600.256\r<br />\nWSUS 3.0 (SP2) + KB2828185: \tBuild 3.2.7600.262\r<br />\nWSUS 3.0 (SP2) + KB2938066: \tBuild 3.2.7600.274\r<br />\n<br />\nAfter each Hotfix reboot the whole Server and control the Build.<br />\n",
+    "PostedDate": "2016-09-01T21:53:19.983-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1482918",
+    "ThreadId": "652707",
+    "Html": "Thanks Winfried, <br />\n<br />\nhave patched up but still getting the 403 error when downloading the updates. <br />\n<br />\nThink its a PatchMyPC issue, not a WSUS one, will log a call with them.  Will post if i find anything.<br />\n<br />\nrgrds<br />\nJustin<br />\n",
+    "PostedDate": "2016-09-04T19:35:55.33-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

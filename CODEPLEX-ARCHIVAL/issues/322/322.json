@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Please, for this type of question, open a «Discussion» instead of an «Issue». ",
+    "ClosedDate": "2017-01-30T22:06:36.733-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nI'm trying to deploy LibreOffice on Windows from Vista to 10.\r\nI'm using 5.0.4 msi.\r\n\r\nI don't have any error message, in WU.log or the Event viewer.\r\nDeployment seems to be fine but in reality nothing is installed.\r\n\r\nWith or without parameters (i'm trying with REMOVE=gm_o_Onlineupdate), it's the same.\r\nIf i'm trying to deploy the msi from the command line, it works.\r\n\r\nTested with Vista x86, 7 x64, 8x64 and 10 x86/x64.\r\nI allowed user interactions.\r\n\r\nExtract from WU.log file :\r\n> 2016-02-08 16:17:09:758 2556 778 Handler ::::::::::::: \r\n> 2016-02-08 16:17:09:758 2556 778 Handler :: START :: Handler: MSI Install \r\n> 2016-02-08 16:17:09:758 2556 778 Handler ::::::::: \r\n> 2016-02-08 16:17:09:758 2556 778 Handler : Updates to install = 1 \r\n> 2016-02-08 16:17:09:805 2556 778 Handler MSI update {00000000-0000-0000-0000-000000000000}.0 using source image from 1 CABs. \r\n> 2016-02-08 16:17:14:704 2556 778 Handler : Batch installing 1 updates \r\n> 2016-02-08 16:17:14:719 2556 778 Handler List of MSPs in transaction: \r\n> 2016-02-08 16:17:14:719 2556 778 Handler List of Transforms in transaction: \r\n> 2016-02-08 16:17:14:719 2556 778 Handler MSI final command line: REMOVE=gm_o_Onlineupdate ALLUSERS=1 MSIRESTARTMANAGERCONTROL=Disable REBOOT=REALLYSUPPRESS \r\n> 2016-02-08 16:17:57:494 2556 778 Handler : MSI transaction completed. MSI: 0x00000000, Handler: 0x00000000, Source: No, Reboot: 0 \r\n> 2016-02-08 16:17:57:509 2556 778 Handler ::::::::: \r\n> 2016-02-08 16:17:57:509 2556 778 Handler :: END :: Handler: MSI Install \r\n> 2016-02-08 16:17:57:509 2556 778 Handler ::::::::::::: \r\n> 2016-02-08 16:17:57:556 1200 d38 AU >>## RESUMED ## AU: Installing update [UpdateId = {AA57C935-8E2D-4645-9932-65053FC6529F}, succeeded] \r\n> 2016-02-08 16:17:57:619 1200 d60 Agent *********\r\n\r\nAny idea ?\r\n\r\nThanks.\r\n",
+    "LastUpdatedDate": "2017-01-30T22:06:36.78-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-02-10T07:55:29.957-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Unable to deploy LibreOffice",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 322
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Sorry, should have posted in discussion.\nYou can close this one.",
+      "PostedDate": "2016-02-15T01:19:40.52-08:00",
+      "Id": 196672
+    }
+  ]
+}

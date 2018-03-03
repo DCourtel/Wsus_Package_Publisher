@@ -1,0 +1,154 @@
+[
+  {
+    "Id": "1126592",
+    "ThreadId": "470471",
+    "Html": "Hi everyone, \r<br />\n<br />\nI'm having some trouble getting Java Updates to install correctly. My test machines are running Windows 7 x64, with Java 7 u 25 (32bit) installed. I'm trying to deploy the update to Java 7 Update 45 (32bit). I followed this guide to do so, <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/462519\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/462519</a> . UAC is enable, and I've tried installing the updates with an admin, and non admin user logged in (although I don't think that should matter). The update downloads fine on the client machines, but fails almost immediately when the install starts. I've attempted this numerous times, with no success. I've verified that the MSIs are not corrupted, and followed the steps to a tee. Any help will be appreciated! I really want to make this work. Here's a snippet from the update log on one of the test clients: \r<br />\n<br />\n:07:602\t 828\tb6c\tAgent\t*********\r<br />\n2013-11-19\t10:21:07:602\t 828\tb6c\tAgent\t  * Updates to install = 1\r<br />\n2013-11-19\t10:21:07:602\t 828\tb6c\tAgent\t  *   Title = Java 7 Update 45\r<br />\n2013-11-19\t10:21:07:602\t 828\tb6c\tAgent\t  *   UpdateId = {C99D2075-04EE-4A51-A7FC-7C3E4C0B90F3}.1\r<br />\n2013-11-19\t10:21:07:618\t 828\tb6c\tAgent\tWARNING: failed to calculate prior restore point time with error 0x80070002; setting restore point\r<br />\n2013-11-19\t10:21:12:368\t 828\tb7c\tReport\tREPORT EVENT: {09696748-8EA2-4A35-A945-2400F69B7669}\t2013-11-19 10:21:07:367-0500\t1\t162\t101\t{C99D2075-04EE-4A51-A7FC-7C3E4C0B90F3}\t1\t0\tAutomaticUpdatesWuApp\tSuccess\tContent Download\tDownload succeeded.\r<br />\n2013-11-19\t10:21:12:368\t 828\tb7c\tReport\tREPORT EVENT: {CFC0C1B4-27BB-4682-978E-1D17A0379ABD}\t2013-11-19 10:21:07:367-0500\t1\t188\t102\t{00000000-0000-0000-0000-000000000000}\t0\t0\tAutomaticUpdates\tSuccess\tContent Install\tInstallation Ready: The following updates are downloaded and ready for installation. This computer is currently scheduled to install these updates on ‎Wednesday, ‎November ‎20, ‎2013 at 3:00 AM:  - Java 7 Update 45\r<br />\n2013-11-19\t10:21:12:368\t 828\tb7c\tReport\tCWERReporter finishing event handling. (00000000)\r<br />\n2013-11-19\t10:21:25:462\t 828\tb6c\tDnldMgr\tPreparing update for install, updateId = {C99D2075-04EE-4A51-A7FC-7C3E4C0B90F3}.1.\r<br />\n2013-11-19\t10:21:26:025\t2920\ta84\tMisc\t===========  Logging initialized (build: 7.6.7600.256, tz: -0500)  ===========\r<br />\n2013-11-19\t10:21:26:025\t2920\ta84\tMisc\t  = Process: C:\\Windows\\system32\\wuauclt.exe\r<br />\n2013-11-19\t10:21:26:025\t2920\ta84\tMisc\t  = Module: C:\\Windows\\system32\\wuaueng.dll\r<br />\n2013-11-19\t10:21:26:025\t2920\ta84\tHandler\t:::::::::::::\r<br />\n2013-11-19\t10:21:26:025\t2920\ta84\tHandler\t:: START ::  Handler: Command Line Install\r<br />\n2013-11-19\t10:21:26:025\t2920\ta84\tHandler\t:::::::::\r<br />\n2013-11-19\t10:21:26:025\t2920\ta84\tHandler\t  : Updates to install = 1\r<br />\n2013-11-19\t10:21:30:275\t2920\ta84\tHandler\t  : WARNING: Command line install completed. Return code = 0x0000fffc, Result = Failed, Reboot required = false\r<br />\n2013-11-19\t10:21:30:275\t 828\t480\tAU\t&gt;&gt;##  RESUMED  ## AU: Installing update [UpdateId = {C99D2075-04EE-4A51-A7FC-7C3E4C0B90F3}]\r<br />\n2013-11-19\t10:21:30:275\t 828\t480\tAU\t  # WARNING: Install failed, error = 0x80070643 / 0x0000FFFC\r<br />\n2013-11-19\t10:21:30:275\t2920\ta84\tHandler\t  : WARNING: Exit code = 0x8024200B\r<br />\n2013-11-19\t10:21:30:275\t2920\ta84\tHandler\t:::::::::\r<br />\n2013-11-19\t10:21:30:275\t2920\ta84\tHandler\t::  END  ::  Handler: Command Line Install\r<br />\n2013-11-19\t10:21:30:275\t2920\ta84\tHandler\t:::::::::::::\r<br />\n2013-11-19\t10:21:30:447\t 828\tb6c\tAgent\t*********\r<br />\n2013-11-19\t10:21:30:447\t 828\tb6c\tAgent\t**  END  **  Agent: Installing updates [CallerId = AutomaticUpdates]\r<br />\n2013-11-19\t10:21:30:447\t 828\tb6c\tAgent\t*************<br />\n",
+    "PostedDate": "2013-11-19T08:31:20.343-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1126665",
+    "ThreadId": "470471",
+    "Html": "Please select the update in WPP, and click on the link beside the 'Id' label. This will open a window, open the folder and open the .xml file. Copy the content of the file and paste it here.<br />\n",
+    "PostedDate": "2013-11-19T10:57:49.81-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1126674",
+    "ThreadId": "470471",
+    "Html": "Here is the contents of the .xml file. Thanks! \r<br />\n<br />\n&lt;CustomUpdate&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.VariableElement&lt;/ElementType&gt;\r<br />\n&lt;Name&gt;Return Code&lt;/Name&gt;\r<br />\n&lt;Type&gt;Int&lt;/Type&gt;\r<br />\n&lt;ID&gt;7d13d8be-ca2c-4642-ab82-5f2e7290e05a&lt;/ID&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ServiceElement&lt;/ElementType&gt;\r<br />\n&lt;ServiceAction&gt;Stop&lt;/ServiceAction&gt;\r<br />\n&lt;ServiceName&gt;JavaQuickStarterService&lt;/ServiceName&gt;\r<br />\n&lt;PathToEXE&gt;&lt;/PathToEXE&gt;\r<br />\n&lt;StartupMode&gt;Undefined&lt;/StartupMode&gt;\r<br />\n&lt;StartingAccount&gt;Undefined&lt;/StartingAccount&gt;\r<br />\n&lt;Login&gt;&lt;/Login&gt;\r<br />\n&lt;Password&gt;&lt;/Password&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;\r<br />\n&lt;PathToExecutable&gt;%windir%\\System32\\msiexec.exe&lt;/PathToExecutable&gt;\r<br />\n&lt;Parameters&gt;/i jre1.7.0_45.msi /quiet /norestart AUTOUPDATECHECK=0 IEXPLORER=1 JAVAUPDATE=0 JU=0 MOZILLA=1&lt;/Parameters&gt;\r<br />\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;\r<br />\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;\r<br />\n&lt;Variable&gt;7d13d8be-ca2c-4642-ab82-5f2e7290e05a&lt;/Variable&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;/CustomUpdate&gt;<br />\n",
+    "PostedDate": "2013-11-19T11:07:27.037-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1126676",
+    "ThreadId": "470471",
+    "Html": "Look in the same folder where you have found the xml file, do you see the file &quot;jre1.7.0_45.msi&quot;, wrote <strong>exactly</strong> like this ?<br />\n",
+    "PostedDate": "2013-11-19T11:10:27.673-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1126680",
+    "ThreadId": "470471",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nLook in the same folder where you have found the xml file, do you see the file &quot;jre1.7.0_45.msi&quot;, wrote <strong>exactly</strong> like this ?<br />\n</blockquote>\nYes, I see the following in that folder:\r<br />\n<br />\nlongstringofnumbers.xml\r<br />\nCustomUpdateEngine.exe\r<br />\nData1.cab\r<br />\njre1.7.0_45.msi<br />\n",
+    "PostedDate": "2013-11-19T11:14:16.333-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1126688",
+    "ThreadId": "470471",
+    "Html": "On a client computer, go to C:\\Windows\\Temp and look in the CustomUpdateEngine.log. Copy the content here.<br />\n",
+    "PostedDate": "2013-11-19T11:25:06.733-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1126692",
+    "ThreadId": "470471",
+    "Html": "\r\n<div dir=\"ltr\">Here it is: <br>\r\n<div><br>\r\n11/19/2013 10:21:29 AM ========================================================================================================================<br>\r\n11/19/2013 10:21:29 AM Starting CustomUpdateEngine with ActionFile : 98545cd4-904c-4190-8ddf-9180891793b6.xml<br>\r\n11/19/2013 10:21:29 AM Starting parsing ActionFile.<br>\r\n11/19/2013 10:21:29 AM Get Element from : &lt;Action&gt;<br>\r\n&lt;ElementType&gt;CustomUpdateElements.VariableElement&lt;/ElementType&gt;<br>\r\n&lt;Name&gt;Return Code&lt;/Name&gt;<br>\r\n&lt;Type&gt;Int&lt;/Type&gt;<br>\r\n&lt;ID&gt;7d13d8be-ca2c-4642-ab82-5f2e7290e05a&lt;/ID&gt;<br>\r\n&lt;/Action&gt;<br>\r\n11/19/2013 10:21:29 AM Get VariableElement from : &lt;Action&gt;<br>\r\n&lt;ElementType&gt;CustomUpdateElements.VariableElement&lt;/ElementType&gt;<br>\r\n&lt;Name&gt;Return Code&lt;/Name&gt;<br>\r\n&lt;Type&gt;Int&lt;/Type&gt;<br>\r\n&lt;ID&gt;7d13d8be-ca2c-4642-ab82-5f2e7290e05a&lt;/ID&gt;<br>\r\n&lt;/Action&gt;<br>\r\n11/19/2013 10:21:29 AM Get Element from : &lt;Action&gt;<br>\r\n&lt;ElementType&gt;CustomUpdateElements.ServiceElement&lt;/ElementType&gt;<br>\r\n&lt;ServiceAction&gt;Stop&lt;/ServiceAction&gt;<br>\r\n&lt;ServiceName&gt;JavaQuickStarterService&lt;/ServiceName&gt;<br>\r\n&lt;PathToEXE&gt;&lt;/PathToEXE&gt;<br>\r\n&lt;StartupMode&gt;Undefined&lt;/StartupMode&gt;<br>\r\n&lt;StartingAccount&gt;Undefined&lt;/StartingAccount&gt;<br>\r\n&lt;Login&gt;&lt;/Login&gt;<br>\r\n&lt;Password&gt;&lt;/Password&gt;<br>\r\n&lt;/Action&gt;<br>\r\n11/19/2013 10:21:29 AM Get ServiceElement from : &lt;Action&gt;<br>\r\n&lt;ElementType&gt;CustomUpdateElements.ServiceElement&lt;/ElementType&gt;<br>\r\n&lt;ServiceAction&gt;Stop&lt;/ServiceAction&gt;<br>\r\n&lt;ServiceName&gt;JavaQuickStarterService&lt;/ServiceName&gt;<br>\r\n&lt;PathToEXE&gt;&lt;/PathToEXE&gt;<br>\r\n&lt;StartupMode&gt;Undefined&lt;/StartupMode&gt;<br>\r\n&lt;StartingAccount&gt;Undefined&lt;/StartingAccount&gt;<br>\r\n&lt;Login&gt;&lt;/Login&gt;<br>\r\n&lt;Password&gt;&lt;/Password&gt;<br>\r\n&lt;/Action&gt;<br>\r\n11/19/2013 10:21:29 AM End of Initializing of ServiceElement.<br>\r\n11/19/2013 10:21:29 AM Get Element from : &lt;Action&gt;<br>\r\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;<br>\r\n&lt;PathToExecutable&gt;%windir%\\System32\\msiexec.exe&lt;/PathToExecutable&gt;<br>\r\n&lt;Parameters&gt;/i jre1.7.0_45.msi /quiet /norestart AUTOUPDATECHECK=0 IEXPLORER=1 JAVAUPDATE=0 JU=0 MOZILLA=1&lt;/Parameters&gt;<br>\r\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;<br>\r\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;<br>\r\n&lt;Variable&gt;7d13d8be-ca2c-4642-ab82-5f2e7290e05a&lt;/Variable&gt;<br>\r\n&lt;/Action&gt;<br>\r\n11/19/2013 10:21:29 AM Get ExecutableElement from : &lt;Action&gt;<br>\r\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;<br>\r\n&lt;PathToExecutable&gt;%windir%\\System32\\msiexec.exe&lt;/PathToExecutable&gt;<br>\r\n&lt;Parameters&gt;/i jre1.7.0_45.msi /quiet /norestart AUTOUPDATECHECK=0 IEXPLORER=1 JAVAUPDATE=0 JU=0 MOZILLA=1&lt;/Parameters&gt;<br>\r\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;<br>\r\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;<br>\r\n&lt;Variable&gt;7d13d8be-ca2c-4642-ab82-5f2e7290e05a&lt;/Variable&gt;<br>\r\n&lt;/Action&gt;<br>\r\n11/19/2013 10:21:29 AM Instance ExecutableElement successful.<br>\r\n11/19/2013 10:21:29 AM Running 2 Elements.<br>\r\n11/19/2013 10:21:29 AM Running CustomUpdateEngine.ServiceElement<br>\r\n11/19/2013 10:21:29 AM Running ServiceElement for action : Stop<br>\r\n11/19/2013 10:21:29 AM Will try to stop : JavaQuickStarterService<br>\r\n11/19/2013 10:21:30 AM Failed to stop JavaQuickStarterService<br>\r\nService JavaQuickStarterService was not found on computer '.'.<br>\r\n11/19/2013 10:21:30 AM End of ServiceElement.<br>\r\n11/19/2013 10:21:30 AM Running CustomUpdateEngine.ExecutableElement<br>\r\n11/19/2013 10:21:30 AM Running ExecutableElement.<br>\r\n11/19/2013 10:21:30 AM Path To Executable starting with : %windir%\\System32\\msiexec.exe<br>\r\n11/19/2013 10:21:30 AM Path To Executable ending with : C:\\Windows\\System32\\msiexec.exe<br>\r\n11/19/2013 10:21:30 AM %windir%\\System32\\msiexec.exe doesn't exists.<br>\r\n<br>\r\n</div>\r\n</div>\r\n<div><br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-11-19T11:30:46.03-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1126702",
+    "ThreadId": "470471",
+    "Html": "Ok, effectively there is a bug in the ExecutableElement. It try to launch the file using the path with System Variables instead of using the translated path.\r<br />\n<br />\nSend me an email to <a href=\"mailto:package.publisher@free.fr,\" rel=\"nofollow\">package.publisher@free.fr,</a> I will sent you a fixed version. You will have to decline the update then delete it and re-publish a new one with this new version.<br />\n",
+    "PostedDate": "2013-11-19T11:45:14.557-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-11-24T14:19:37.237-08:00"
+  },
+  {
+    "Id": "1126705",
+    "ThreadId": "470471",
+    "Html": "\r\n<div dir=\"ltr\">Thanks!! I just sent you an email. I really appreciate you looking into this so quickly.\r\n<div><br>\r\n</div>\r\n<div><br>\r\n</div>\r\n</div>\r\n<div><br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-11-19T11:49:16.11-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1206351",
+    "ThreadId": "470471",
+    "Html": "Same problem here! :( Is there a way to solve the issue by myself? I have a lot of updates to be done, and I would preffer to make them work quickly.\r<br />\n<br />\nAlso, on some computers I get an error that &quot;can't update the requested files while they are in use&quot;. Any ideea?<br />\n",
+    "PostedDate": "2014-02-10T06:39:56.167-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1206362",
+    "ThreadId": "470471",
+    "Html": "@hutiucip, My problem was resolved with the latest release. What version of package publisher are you running?<br />\n",
+    "PostedDate": "2014-02-10T06:59:50.873-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1206408",
+    "ThreadId": "470471",
+    "Html": "The last, I have installed WSUSPP this last friday, for the first time<br />\n",
+    "PostedDate": "2014-02-10T08:50:28.123-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1206423",
+    "ThreadId": "470471",
+    "Html": "\r\n<div dir=\"ltr\">Just to clarify, are you trying to install Java 7 update 45? If so, are you using the MSI, or the EXE? You may have issues installing the EXE if you users are not administrators and/or UAC is a factor.</div>\r\n<div><br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2014-02-10T09:15:48.993-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1206781",
+    "ThreadId": "470471",
+    "Html": "@9993009fmmmdkk22, I have recreated the update, and now it is deplyed and installed, but even if the install status is ”Successful” the Update still appears and is being offered to be installed again (and again, and again...).<br />\n<br />\nI am talking about Java 7 Update 51 (x86), .exe, tryed to make it as an ”Update” (simple) or a ”Custom Update”, using the tutorial found in the ”Documentation” section, as PDF.<br />\n",
+    "PostedDate": "2014-02-11T05:00:32.64-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1206871",
+    "ThreadId": "470471",
+    "Html": "I am using the msi because it allows you to create a rule using the product ID to see if the update is already installed. Perhaps you could try that option. For what it's worth, I've had a similar problem with other updates that do not have detection rules.\r\n<br>\r\n<br>\r\n",
+    "PostedDate": "2014-02-11T08:36:09.057-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1206895",
+    "ThreadId": "470471",
+    "Html": "<strong>9993009fmmmdkk22 wrote:</strong><br />\n<blockquote>\nI am using the msi because it allows you to create a rule using the product ID to see if the update is already installed. Perhaps you could try that option. For what it's worth, I've had a similar problem with other updates that do not have detection rules.<br />\n</blockquote>\nIs it only the update created on the .msi file that allows for software installation detection? In the downloaded .pdf documentation &quot;Installing Java 7u21 Without Java Auto Updater.pdf&quot; it is not mentioned, and I suppose that is not necessary to grab the .msi from the .exe, since the signature string is inserted in the published update... Or?\r<br />\n<br />\nThank you very much\r<br />\n<br />\nPS I just republished (yes, again :D ) the update, still the same problem, It is repeatedly offered for installation even after the update is installed on the test machine, returning the &quot;Success&quot; code. :((<br />\n",
+    "PostedDate": "2014-02-11T09:50:10.437-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1206915",
+    "ThreadId": "470471",
+    "Html": "\r\n<div dir=\"ltr\">You should be able to do a fresh install with the MSI. Here are the directions I've been using:\r\n<a href=\"http://wsuspackagepublisher.codeplex.com/discussions/462519\">http://wsuspackagepublisher.codeplex.com/discussions/462519</a>\r\n<div><br>\r\n</div>\r\n<div>Don't use the product ID in these instructions; make sure to grab the new one for the u51 update. If you aren't sure how, let me know.\r\n</div>\r\n</div>\r\n<div><br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2014-02-11T10:38:29.217-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1206942",
+    "ThreadId": "470471",
+    "Html": "OK, it looks like the last 4 digits (before ”FF”) is the version/ subversion/ sub-subversion. So, I have to Revise, changing the code from ”26A24AE4-039D-4CA4-87B4-2F8321__7021__FF” to ”26A24AE4-039D-4CA4-87B4-2F8321__7051__FF”. \r<br />\n<br />\nAnd now I confirm that everything is fine! :) \r<br />\n<br />\nSo, for everyone, the MSI product code changes from version to version, if you create the custom update as I did, meaning following the &quot;Installing Java 7u21 Without Java Auto Updater.pdf&quot; from documentation, do not just ”Copy-Paste” the MSI Product Code found in the .pdf, adjust it as described above.\r<br />\n<br />\nGood luck everyone!\r<br />\n<br />\nPS I guess it is better for this matters (ie finding, using the WSUSPP, the MSI Product Code of every app needed to be deployed etc.) to be included in the documentation... I realize that I have lost 4 full working days and some more extra-time (not payed, unfortunately) to figure all this out. Though, I don't forget this is a free product, and I really and fully thank a lot to the developers for it.\r<br />\nGREAT WORK, GUYS!!! (!)<br />\n",
+    "PostedDate": "2014-02-11T11:28:51.24-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1206957",
+    "ThreadId": "470471",
+    "Html": "\r\n<p dir=\"ltr\">You can also find the product code using ORCA or with the MSI viewer built into wsuspp.</p>\r\n<div></div>\r\n",
+    "PostedDate": "2014-02-11T12:02:29.077-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1420619",
+    "ThreadId": "635279",
+    "Html": "Looking for help deploying Filezilla 3.10.3. It already has a /S silent install switch, so I added just added the exe as an update, gave it the /s command-line option, set up File Version rules, and pushed it out to test. My test machine has been sitting there trying to run that update for 30 minutes... I've tried several other methods like making a custom update to run the exe from msiexec, etc. nothing doing. My other updates are testing fine. What might I be doing wrong?<br />\n",
+    "PostedDate": "2015-04-28T10:48:50.447-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1497356",
+    "ThreadId": "663394",
+    "Html": "I had some trouble with previous installations of WPP. Now I would like to test WPP on Windows Server 2012 (Version 6.2.9200) with WPP Release v1.3.1702.10.\r<br />\n<br />\nAre there any special prerequires for this combination? For example needed updates for the server, version of WSUS, configuration of WPP? Should I publish WPP-Pakets in WSUS?\r<br />\n<br />\nThank you very much for some help.<br />\n",
+    "PostedDate": "2017-07-10T02:12:35.973-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

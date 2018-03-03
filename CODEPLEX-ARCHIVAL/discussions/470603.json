@@ -1,0 +1,106 @@
+[
+  {
+    "Id": "1127119",
+    "ThreadId": "470603",
+    "Html": "I've encountered a strange issue that I'm sure if it's a bug or something I've incorrectly configured.\r<br />\n<br />\nI have two WSUS boxes - one with Windows 2012, the other with Windows 2003.  I've built packages for Adobe Reader (.exe, .msp), Flash (.msi), Java (.exe).  The 2012 box is used for patching Windows 8 and Windows 2012; the 2003 box patches everything else.\r<br />\n<br />\nOn the 2012 box, the packages work properly.  On the 2003 box, so far only the Flash package works.  The others show the status of &quot;Not applicable&quot; and won't install.  The packages on both servers were built the same way, and each server and their clients use its own cert.  Reg key &quot;AcceptTrustedPublisherCerts&quot; has been enabled.\r<br />\n<br />\nI've rebooted clients and server, forced re-detects, and nothing on the 2003 box.  On Windows 2012, the packages show up with the proper status of &quot;Not installed&quot;.  Is there something missing on XP/2003 clients?  Is it a bug?<br />\n",
+    "PostedDate": "2013-11-20T08:14:21.58-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1128458",
+    "ThreadId": "470603",
+    "Html": "Please, delete updates that appear as 'Not Applicable'. Download the latest release of WPP and publish again those updates.\r<br />\nLet me know if that solve your problem.<br />\n",
+    "PostedDate": "2013-11-24T14:22:08.307-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T03:01:06.203-07:00"
+  },
+  {
+    "Id": "1128755",
+    "ThreadId": "470603",
+    "Html": "Hi, I was able to work around the bug by putting in conditions for package installation.  What I ended up doing was adding in the rule &quot;If x64 or x86 CPU, then install the package&quot;.  With no conditions, it was considered &quot;not applicable&quot;.\r<br />\n<br />\nI'll try out the new update as well.  Thanks for all the help!  Much appreciated.<br />\n",
+    "PostedDate": "2013-11-25T08:38:58.47-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1128906",
+    "ThreadId": "470603",
+    "Html": "That's right. The bug affect only updates made from a MSP file, and that don't have any rules in the &quot;Is Installable&quot; tab. \r<br />\nPutting rules in the &quot;Is installable&quot; tab can help to work around the bug.<br />\n",
+    "PostedDate": "2013-11-25T12:33:42.383-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1132414",
+    "ThreadId": "470603",
+    "Html": "I'm struggling with the same issue for Adobe Reader.  Reader itself installs fine, the updates (MSP) give &quot;not applicable&quot;.  After reading this thread I tried to work around  it with the same rule as joe_dude did.  This seemed to work.  It shows not installed and it shows up in the client using the Windows Update.  When I install the update it starts installing and ends with the message not needed.  The error in the Windows Update log is 0x80240017.<br />\nI'm using the latest version of Package Publisher.  How can I get the updates installed?<br />\n",
+    "PostedDate": "2013-12-06T00:42:17.25-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1132432",
+    "ThreadId": "470603",
+    "Html": "What happen if you copy the MSP file on the computer and launch it manually ? Does it get installed ?<br />\n",
+    "PostedDate": "2013-12-06T02:05:52.083-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1132518",
+    "ThreadId": "470603",
+    "Html": "Ad_S, double-check the reg key and cert has been installed (in both places) on the client.<br />\n",
+    "PostedDate": "2013-12-06T07:45:06.033-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1132581",
+    "ThreadId": "470603",
+    "Html": "There seems to be some incompatibility between reader and the updates.  Thee updates don't install manually.  I have downloaded the dutch version of reader, there was only 1 version of the updates.<br />\nWhat version of the reader needs to be downloaded.   Dutch is preferred, but English would be fine too.  I don't know if MUI will work. <br />\n<br />\nReg key and cert are fine.  Other programs install fine.<br />\n",
+    "PostedDate": "2013-12-06T10:24:55.77-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1133593",
+    "ThreadId": "470603",
+    "Html": "Did some extra reading and started from scratch.  First I reinstalled my test PC.  That deleted all garbage from previous testing.\r<br />\n<br />\nI downloaded the US version of Reader and customized this.  I included the locales from the languages I needed and did a test install.  This succeeded with the correct language displayed in Reader.  After this I imported the updates from the catalog and all installed fine.\r<br />\nNow I have Adobe Reader, Flash player and Java handled by WSUS. \r<br />\nGreat product and thanks for all the effort you put into it.  But please, pay a little more attention to correct and updated documentation (i know this is forgotten easily).\r<br />\n<br />\nThanks for your help and for pointing me to the right direction.<br />\n",
+    "PostedDate": "2013-12-10T06:10:40.683-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1313634",
+    "ThreadId": "470603",
+    "Html": "<strong>joe_dude wrote:</strong><br />\n<blockquote>\nHi, I was able to work around the bug by putting in conditions for package installation.  What I ended up doing was adding in the rule &quot;If x64 or x86 CPU, then install the package&quot;.  With no conditions, it was considered &quot;not applicable&quot;.<br />\n<br />\nI'll try out the new update as well.  Thanks for all the help!  Much appreciated.<br />\n</blockquote>\nI<code>ve published adobe reader 11 polish version and approved it for test group. Application successfully installed. But then I</code>ve published update 11.0.09 and also had the same problem. Then I`ve added processor architecture for x86 and x64., And it works!<br />\n<br />\nThis solution helped me! Thank you<br />\n",
+    "PostedDate": "2014-10-15T08:22:37.967-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1313649",
+    "ThreadId": "470603",
+    "Html": "Hm.. In the WPP console update for reader has status Not installed on test computer. I<code>ve approved update but workstation don</code>t detect this update...\r<br />\nSomebody can help me with this?<br />\n",
+    "PostedDate": "2014-10-15T08:58:01.96-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1342307",
+    "ThreadId": "470603",
+    "Html": "I'm experiencing this issue with 2 last versions of Flash (16.0.0.257 and the one before) ActiveX and for plugin based browsers on WPP 1.3.1411.9.<br />\n<br />\nI add the rules &quot;If ProductCode exists&quot; and &quot;If x64 or x86 CPU&quot;, while selecting &quot;Delete Rules at Package Level&quot; on both pages and both patches on two different WSUS servers appear as not applicable for all the approved machines.<br />\n<br />\nAnd I have no issues deploying Java using the same 2 WSUS instances.<br />\n<br />\nIs anyone else experiencing this?<br />\n",
+    "PostedDate": "2015-01-15T11:27:10.443-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1450870",
+    "ThreadId": "470603",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nThat's right. The bug affect only updates made from a MSP file, and that don't have any rules in the &quot;Is Installable&quot; tab. <br />\nPutting rules in the &quot;Is installable&quot; tab can help to work around the bug.<br />\n</blockquote>\nI think this bug is back in release v1.3.1508.08. No package level rules for the last reader msp update.\r<br />\nI tried to create the package with release V1.3.1504.15 and package level rules are presents with the same msp.<br />\n",
+    "PostedDate": "2015-11-04T06:40:36.003-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1287992",
+    "ThreadId": "560575",
+    "Html": "After updating to the last wpp version 1.3.1407.29 I tried the <strong>Import from catalog</strong> functionality for the latest Adobe Flash Player update. I was stuck after few seconds with a &quot;Failed to Sign Package&quot; error. Google searches pointed me in the wrong direction: I simply missed the proxy configuration. I would add the error message was not very friendly.\r<br />\n<br />\nThere is still something unclear to me: how the previous version of Wpp (installed in march 2014) could detect the latest release if it didn't have the proxy configuration ? Was it lost when I overwrote the previous files with the newest ones ? \r<br />\n<br />\nIn that case it is worth to add an installation note somewhere.\r<br />\n \r<br />\nI decided to report my problem and solution here hoping it may help others.\r<br />\n<br />\nBye\r<br />\nFilippo<br />\n",
+    "PostedDate": "2014-08-08T04:11:59.82-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-12T12:40:47.973-07:00"
+  },
+  {
+    "Id": "1289405",
+    "ThreadId": "560575",
+    "Html": "I'm not convinced this is what it was happen.\r<br />\nIf WPP can't download at all the package from the editor, it simply wait until you click on &quot;Cancel&quot;. Then the publication fail.\r<br />\nIf you have the error message &quot;Failed to Sign package&quot; that mean that WPP have download something from the vendor and try to publish it.\r<br />\n<br />\nMost likely, the misconfigured proxy has authorized WPP to go through Internet (even partially).\r<br />\n<br />\nWhen WPP is upgraded, the process of upgrading options is entirely managed by the .Net Framework.<br />\n",
+    "PostedDate": "2014-08-12T12:40:45.26-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

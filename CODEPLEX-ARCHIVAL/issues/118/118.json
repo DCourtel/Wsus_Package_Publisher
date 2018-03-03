@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Computer List Viewer",
+      "DisplayName": "Computer List Viewer"
+    },
+    "ClosedComment": "WPP now remember displayed columns.",
+    "ClosedDate": "2013-09-21T07:26:40.14-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nif I activate f.i. Bios Version in the computergrid, this column isn't there anymore after restarting WPP.\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1309.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-09-18T00:13:59.15-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "WPP doesn't remember custom activated columns",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 118
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Thanks for fixing this. WPP does remember to Show manually activated columns, but not their Position. I do move the bios Version behind Modell. But if I restart WPP Bios Version is the third column again.\n\nRegards\nNorbert",
+      "PostedDate": "2013-09-29T13:12:57.377-07:00",
+      "Id": 115950
+    }
+  ]
+}

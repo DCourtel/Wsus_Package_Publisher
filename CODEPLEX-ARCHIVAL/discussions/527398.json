@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1199038",
+    "ThreadId": "527398",
+    "Html": "Please help. Windows 8.1 computers are not downloading updates released. While appearing online, on your upgrade status appears: Unknown\r<br />\n<br />\n<img src=\"http://imagizer.imageshack.us/v2/800x600q90/89/0rkx.jpg\" alt=\"Image\" /><br />\n",
+    "PostedDate": "2014-01-27T09:56:49.293-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1199104",
+    "ThreadId": "527398",
+    "Html": "Hi Angelalbo,\r<br />\nOn the line you have selected I can see that the last report time of the client is 13/12/2013 !!!\r<br />\nEnsure this client can report status to the Wsus server.<br />\n",
+    "PostedDate": "2014-01-27T13:04:02.703-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-29T07:20:33.777-08:00"
+  },
+  {
+    "Id": "1200395",
+    "ThreadId": "527398",
+    "Html": "Thank you very much<br />\n<br />\nActually the problem is solved and was wsus. Another query, when the Firewall is enabled do not appear online, if I disable the firewall I can visualize. What rule / port have to turn on the Windows Firewall?. <br />\n<br />\nThanks for your help.<br />\n<br />\n<img src=\"http://imagizer.imageshack.us/v2/800x600q90/577/temf.jpg\" alt=\"Image\" /><br />\n",
+    "PostedDate": "2014-01-29T03:44:58.86-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1200491",
+    "ThreadId": "527398",
+    "Html": "Online state is query by pinging the computer.\r<br />\nFor other feature, see this <a href=\"http://wsuspackagepublisher.codeplex.com/discussions/456981\" rel=\"nofollow\">POST</a><br />\n",
+    "PostedDate": "2014-01-29T07:20:15.637-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

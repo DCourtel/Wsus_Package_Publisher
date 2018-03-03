@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-21T13:34:36.747-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nit is possible to correct the word in the Report-Section for \"Gedownloadet\" into \"Heruntergeladen\". It sounds better!\r\n\r\nAlso in the Report-Section the translation has an error \"Nur Computergruppen mit Genehmigng anzeigen\" must be \"Nur Computergruppen mit Genehmigung anzeigen\"\r\n\r\nThanks",
+    "LastUpdatedDate": "2013-06-21T13:34:36.747-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-21T04:52:46.25-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Wrong translation - German",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 72
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "OK, we will add it in the next release.\n\nThank you for the Feedback. ;)\n\nWinfried",
+      "PostedDate": "2013-06-21T06:56:31.32-07:00",
+      "Id": 103775
+    },
+    {
+      "Message": "I have made the change.\n\nThank you Dusselritter.",
+      "PostedDate": "2013-06-21T13:34:20.96-07:00",
+      "Id": 103817
+    }
+  ]
+}

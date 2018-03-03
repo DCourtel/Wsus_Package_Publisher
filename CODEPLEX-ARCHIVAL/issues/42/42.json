@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Add a messagebox to warn the user.",
+    "ClosedDate": "2013-05-10T04:36:16.787-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nswitching the language without restarting the program would be nice. Or have a popup inform the user to restart the program.\r\n\r\nRegards",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1305.03",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-10T03:43:33.64-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Switching languages without restart",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 42
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": ".Net is not very at ease with Localization and changing Language at runtime is not clearly supported.\nI have add a MessageBox to tell the user that modification will take effect after restarting the application.\nThe message is in the language chosen by the user :-)",
+      "PostedDate": "2013-05-10T04:35:31.907-07:00",
+      "Id": 99894
+    },
+    {
+      "Message": "Thanks. :)",
+      "PostedDate": "2013-05-10T04:44:22.243-07:00",
+      "Id": 99895
+    }
+  ]
+}

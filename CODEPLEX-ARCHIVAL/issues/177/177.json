@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-03-04T10:42:22.917-08:00",
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\ni want deploy Java Update but it doesnt work. Windows found the Update and when i want to install it i get errors like 80070667. I also try to deploy the same package to an Windows 7 machine and it works?!?!\r\n\r\nCan anybody explain me this ??\r\n\r\nThanks for your help.\r\n\r\nWPP is installed on a Server 2008R2\r\n",
+    "LastUpdatedDate": "2014-03-04T10:42:22.917-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-01-23T04:53:05.753-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Deploying Java to Windows 8.1 Clients",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 177
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Are you trying to deploy the .exe or the .msi package?",
+      "PostedDate": "2014-01-23T05:43:13.603-08:00",
+      "Id": 131295
+    },
+    {
+      "Message": "Hi mijacd,\ncan you do this on a Windows 8 client :\n- Stop Windows Update Service\n- Delete the file : C:\\Windows\\WindowsUpdate.log\n- Start Windows Update Service\n- Launch a detection and try to install the update\n- Once the error appears, send me the WindowsUpdate.log to package.publisher@free.fr\n\nThanks.",
+      "PostedDate": "2014-01-23T12:26:02.773-08:00",
+      "Id": 131347
+    },
+    {
+      "Message": "is your problem similar to this?: [http://wsuspackagepublisher.codeplex.com/discussions/446109](http://wsuspackagepublisher.codeplex.com/discussions/446109).\n\nMaybe your command line parameters are incorrect and it's trying to prompt you for a GUI, but is unable to display it.\n",
+      "PostedDate": "2014-01-24T22:28:41.203-08:00",
+      "Id": 131556
+    },
+    {
+      "Message": "I just deployed Java 7u51 x86 and x64 successfully to a windows 8.1 client using WPP. I just followed [the guide](https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=691788) (except put in the Java 7u51 msi product codes, and added a folder delete step to delete the start menu shortcut folder).\nI used the exe files (NOT the msi files, as Oracle have stated that they do not support or recommend installing via msi - their exe does extra stuff to make it work)",
+      "PostedDate": "2014-01-26T02:29:12.753-08:00",
+      "Id": 131611
+    },
+    {
+      "Message": "oh, and I left off the \"IExplore=1\" part of the switches as that is implied in later versions (i.e. I only used \"/s\")",
+      "PostedDate": "2014-01-26T20:13:57.383-08:00",
+      "Id": 131645
+    }
+  ]
+}

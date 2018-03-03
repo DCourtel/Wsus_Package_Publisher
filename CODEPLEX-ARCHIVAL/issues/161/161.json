@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:07.287-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "There doesn't appear to be any support for creating bundled updates with WPP was wondering if is this intentional choice and the reasoning behind it. Also wonder if there are plans to add support for bundled update creation in the near future?",
+    "LastUpdatedDate": "2017-02-03T11:50:07.287-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-12-03T14:17:12.687-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Support for Bundled Updates",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 4,
+    "Id": 161
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Effectively, WPP doesn't support bundled udpates. This is because when I started to write WPP, I, first, concentrate on basic functionnalities. And these type of updates are not very usefull for local publishing. I'm not sure this is very needs by WPP's users.\nI don't have plan to add these feature in V1. May be in V2 if required by many users.",
+      "PostedDate": "2013-12-04T11:57:19.637-08:00",
+      "Id": 126127
+    },
+    {
+      "Message": "Well I wouldn't say they are not useful, they are extremely useful. \n\nJust so you know all Microsoft Updates are provided as bundled updates, even if they only include one update that is how they release. This is a standard they have set, and its a good one. \n\nAlso another big reason for enterprises to want to use bundles for anything that has more than two related updates is for reporting. With bundles you get a single line that states that 2 or more updates are remediated or not for a computer.  You use bundles to group the patches for the same version of an update but has different installers for each architecture and each language primary. They are exactly one update that is available in more than one file for what ever reason, you want reporting to show as a single update.",
+      "PostedDate": "2013-12-04T12:54:44.883-08:00",
+      "Id": 126135
+    }
+  ]
+}

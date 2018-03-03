@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Rules Update Wizard",
+      "DisplayName": "Rules Update Wizard"
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\ni am trying to configure a FileVersionPrependRegSz on Update level rule with the next values.\r\nI need to query default value of registry key, so i left empty the text box [Registry Value]. The problem is that the [Ok] button only became active if i enter anything in [Registry Value].\r\n\r\nActually, i workaround this by saving a rule on disk, editing manually with text editor and loading. With this method i can use an empty value.\r\n\r\nIs posible to fix that situation?\r\n\r\nTHANKS!!!\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1702.10",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-02-14T02:48:53.05-08:00",
+    "Status": {
+      "Name": "Active",
+      "Id": 2
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Unable to set Registry value (empty) on  FileVersionPrependRegSz",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 357
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1637648,
+      "FileName": "empty.png",
+      "DownloadUrl": ".\\1637648"
+    }
+  ],
+  "Comments": []
+}

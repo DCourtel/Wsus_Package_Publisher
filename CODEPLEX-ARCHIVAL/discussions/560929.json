@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1289151",
+    "ThreadId": "560929",
+    "Html": "Hello\r<br />\n<br />\nThe already very useful WPP client actions would be even better if It would be possible to start and stop the Windows Update client service. The client action &quot;clean SoftwareDistribution directory&quot; fails most of the time. But this action succeeds when the Windows update client service is stopped before.\r<br />\n<br />\nKind regards,\r<br />\nFranz<br />\n",
+    "PostedDate": "2014-08-12T01:17:40.683-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1289414",
+    "ThreadId": "560929",
+    "Html": "Hello, WPP already stop &quot;Windows Update&quot; service before trying to delete this folder.\r<br />\nPlease, when you try to use this option and it failed, go to &quot;Help&quot; -&gt; &quot;Send debug info&quot; and click on the &quot;Show information&quot; link at bottom/left.\r<br />\nSend me the content of the file at <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a> with a reference to this thread.<br />\n",
+    "PostedDate": "2014-08-12T12:54:06.99-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1289417",
+    "ThreadId": "560929",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nHello, WPP already stop &quot;Windows Update&quot; service before trying to delete this folder.<br />\nPlease, when you try to use this option and it failed, go to &quot;Help&quot; -&gt; &quot;Send debug info&quot; and click on the &quot;Show information&quot; link at bottom/left.<br />\nSend me the content of the file at <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a> with a reference to this thread.<br />\n</blockquote>\nDavid, i think it will be be a good idea for the next release to stop BITS too before try to delete %windir%\\SoftwareDistribution. Sometimes i have to stop the BITS manually and then i can delete SoftwareDistribution.<br />\n",
+    "PostedDate": "2014-08-12T12:57:04.79-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1289434",
+    "ThreadId": "560929",
+    "Html": "I didn't precised it, but WPP also stop Bits' service. :-)<br />\n",
+    "PostedDate": "2014-08-12T13:16:51.497-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1291468",
+    "ThreadId": "560929",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"https://wsuspackagepublisher.codeplex.com/workitem/213\" rel=\"nofollow\">here</a> to go to the work item and continue the discussion.<br />\n",
+    "PostedDate": "2014-08-19T12:52:12.89-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:24:27.953-07:00"
+  }
+]

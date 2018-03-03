@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2016-09-01T13:24:50.087-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hello together,\r\n\r\nwould like to modify a existing DWORD Value. But isn't possible to change Value Type in GUI.\r\nSee attached Screenshot.\r\n\r\nIs this a bug - or a layer 8 Problem ? \r\n\r\nThank you for your Reply ;).\r\n\r\nGreetings\r\nWolfgang",
+    "LastUpdatedDate": "2016-09-01T13:24:50.087-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-03-02T01:07:57.603-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Custum Update Creator - Modify Registry Value other than REG_SZ not possible?",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 328
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1553120,
+      "FileName": "Modify-Reg-Problem.PNG",
+      "DownloadUrl": ".\\1553120"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Hi, you don't need to specify that the Reg Value is of type of DWORD as the Reg Value already exists.\nWPP will not use the content of the field «Value Type», as he don't need it.\nIn addition, you have to put the name of the Reg Value in the field «Value» instead of the old Data.",
+      "PostedDate": "2016-03-02T12:48:04.36-08:00",
+      "Id": 197143
+    }
+  ]
+}

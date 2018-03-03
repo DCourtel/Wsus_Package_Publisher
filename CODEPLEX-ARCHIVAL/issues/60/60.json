@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Computer List Viewer",
+      "DisplayName": "Computer List Viewer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-09T09:10:15.59-07:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nwould it be possible to have a context menu entry per Computer \"clean SoftwareDistribution Directory\"? That should than stop wuauserv, delete the Folder and ist Content, start wuauserv and Trigger a \"detectnow\"\r\n\r\nRegards\r\nNorbert\r\n\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.2.1305.26",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-06T06:01:02.073-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Clean c:\\Windows\\SoftwareDistribution",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 2,
+    "Id": 60
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I vote for this:\n\nnet stop wuauserv\nnet stop bits\nrd /s /q %windir%\\SoftwareDistribution\nnet start wuauserv\nnet start bits\nwuauclt /detectnow\nwuauclt /reportnow\n\nRegards\nWinfried",
+      "PostedDate": "2013-06-06T06:27:32.507-07:00",
+      "Id": 102260
+    },
+    {
+      "Message": "In which situation does it usefull ?",
+      "PostedDate": "2013-06-06T11:52:40.51-07:00",
+      "Id": 102297
+    },
+    {
+      "Message": "Today i got a Computer, which didn't show any needed updates (reboot, restart update service didn't help). wpp showed several needed new updates (locally published) for this computer. Deleting the folder solved the problem.\n\nRegards\nNorbert",
+      "PostedDate": "2013-06-06T12:03:42.497-07:00",
+      "Id": 102304
+    },
+    {
+      "Message": "We need this for every new client in our environment. After Installation, switch to WSUS, we must run a batch with above commands, after this, client will download and install updates.\n\nBut: Pls make a Messagebox: Update History on Client will deleted!\n\nAnd, if you want, pls delete the %windir%\\WindowsUpdate.log too. No one need a Log with old informations.\n\nRegards\nWinfried",
+      "PostedDate": "2013-06-06T12:31:51.557-07:00",
+      "Id": 102307
+    }
+  ]
+}

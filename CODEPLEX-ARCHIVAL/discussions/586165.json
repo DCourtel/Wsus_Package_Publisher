@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1362858",
+    "ThreadId": "586165",
+    "Html": "Hello,\r<br />\nmaybe ist is possible to create a feature like the .cab Catalog Import ( Adobe . Dell  and so on) for other software.\r<br />\n<br />\nFor instance:\r<br />\nYou can download mozilla products via ftp, an there is for every software a path &quot;LatestVersion&quot;.\r<br />\nIf WPP can check this path for new files, the admin can informed if new product versions are availible.\r<br />\n<br />\nlike:\r<br />\nftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/latest-esr/win32/de<br />\n",
+    "PostedDate": "2015-03-12T09:08:27.057-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1364078",
+    "ThreadId": "586165",
+    "Html": "Hello,\r<br />\nTo be notify for new release, personnaly, I use <a href=\"https://www.followthatpage.com\" rel=\"nofollow\">FollowThatPage</a><br />\n",
+    "PostedDate": "2015-03-16T04:01:47.957-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1414596",
+    "ThreadId": "586165",
+    "Html": "Hello,\r<br />\n<br />\nHave a look on the &quot;Ketarin&quot; application (<a href=\"https://ketarin.org/\" rel=\"nofollow\">https://ketarin.org/</a>). \r<br />\nWith this app, you can define a download url with some custom variables (dependant on specific text in a page or file, customvalue,...). You can specify commands to execute before/after a download<br />\n",
+    "PostedDate": "2015-04-15T23:59:32.343-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

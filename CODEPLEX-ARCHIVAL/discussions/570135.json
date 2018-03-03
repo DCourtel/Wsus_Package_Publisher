@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1314569",
+    "ThreadId": "570135",
+    "Html": "Hi, I already posted my issue in an old (closed) thread, so i repost it now.\r<br />\n<br />\n<br />\nI followed winfried´s instructions for deploying JAVA in my case version 8u25. Other than he suggested my old java version wasn´t uninstalled in the process so i ended up with java 7u51 and 8u25 installed on the same machine.\r<br />\n<br />\nI tried this now with several difference versions, always ending up with more than one JAVA´s installed.\r<br />\n<br />\nI used new update and custom Update.\r<br />\nI tried defining it as Application and Updated, nothing helped.\r<br />\n<br />\n<br />\ngreez<br />\n",
+    "PostedDate": "2014-10-18T01:44:40.453-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1314572",
+    "ThreadId": "570135",
+    "Html": "As i posted in the other Thread, you can use Java 7 Update 72 and create a update like before. <a href=\"http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html\" rel=\"nofollow\">http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html</a>\r<br />\nI have had the same problems with publishing java 8 update 25, but there is now no time for investigate. my workaraound is to publish Java 7 Update 72. This is working very well. ;)<br />\n",
+    "PostedDate": "2014-10-18T02:11:32.337-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1316115",
+    "ThreadId": "570135",
+    "Html": "Thanks Winfried, as you posted, with 7u72 it works just fine.<br />\n<br />\nAll clients were updated and 7u51 was uninstalled in the process.<br />\n<br />\nI hope this will keep on working<br />\n<br />\ncheers<br />\n",
+    "PostedDate": "2014-10-23T13:52:53.54-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-12-03T13:44:17.343-08:00"
+  }
+]

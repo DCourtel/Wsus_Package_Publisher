@@ -1,0 +1,122 @@
+[
+  {
+    "Id": "1342365",
+    "ThreadId": "577804",
+    "Html": "I am new to WSUS Package Publisher, so bear with me.  I have managed to deploy Flash Player Activex msi file, so I know that the deployment process works properly.\r<br />\n<br />\nHowever, I cannot work out how to publish Firefox.exe.  I don't know if the problem is because its an exe file or if there is some other issue.  I configured the rule to check if c:\\program files\\mozilla firefox\\firefox.exe is less than version 35.0 which is the latest version for the check if previously installed rule.\r<br />\n<br />\nAccording to the windowsupdatelog on the client machine its showing as no updates available.  On the server end, there are no pending updates!\r<br />\n<br />\nI have tried removing the rule, no change.\r<br />\n<br />\nI have tried using -ms (which was the last known command syntax for silently installing Firefox, however I don't know if that still works).  Still no joy - windowsupdatelog still shows as no updates available!\r<br />\n<br />\nDo I need to create a rule in the second rule where it determines whether the update can be installed for that operating system.  I did not put anything in there as Firefox will be deployed for all systems.\r<br />\n<br />\nAny suggestions would be appreciated.\r<br />\n<br />\nThank you.<br />\n",
+    "PostedDate": "2015-01-15T13:13:35.937-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1342377",
+    "ThreadId": "577804",
+    "Html": "What do you have set exactly as &quot;IsInstalled&quot; and &quot;IsInstallable&quot; rules ?\r<br />\nHow computers report for this package (Installed, not installed or not applicable) ?<br />\n",
+    "PostedDate": "2015-01-15T13:42:06.723-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1342887",
+    "ThreadId": "577804",
+    "Html": "I have managed to get further.  The client now recognises that there is a firefox update.  I had to change the settings in IsInstalled to look for program files and then the path underneath.  This seemed to work!  So I may have mistyped the path to the firefox executable or something.\r<br />\n<br />\nI am now at the stage, where its trying to install the update.  When you shut the computer down it sits on installing update and you have to forcibly switch off the machine.  This obviously means that I need to test the silent install commands as its clearly starting the install, but not installing it as its waiting for end user commands.\r<br />\n<br />\nI will be able to test this on Wednesday, so I will update you with my progress.\r<br />\n<br />\nThank you.<br />\n",
+    "PostedDate": "2015-01-17T06:16:52.643-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1342914",
+    "ThreadId": "577804",
+    "Html": "<blockquote>\nI have managed to get further. The client now recognises that there is a firefox update. I had to change the settings in IsInstalled to look for program files and then the path underneath. This seemed to work! So I may have mistyped the path to the firefox executable or something. <br />\n</blockquote>\nGlad to hear this.<br />\n<blockquote>\nThis obviously means that I need to test the silent install commands as its clearly starting the install, but not installing it as its waiting for end user commands. <br />\n</blockquote>\nThat's my assumption as well.<br />\n",
+    "PostedDate": "2015-01-17T08:31:44.023-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1345073",
+    "ThreadId": "577804",
+    "Html": "I put in -ms for the silent install argument and this installs Firefox beautifully!  However it doesn't matter whether I put in c:\\program files\\mozilla firefox\\firefox.exe or if I use well known directory program_files and then \\mozilla firefox\\firefox.exe it keeps re-installing Firefox.  I have had to create the package without the isInstalled Rule and then it just installs it once and once only!  I think that it will be fine to do this without the isinstalled rule as I want the program installed everywhere and the install will most likely be installing a new version.\r<br />\n<br />\nI am probably doing something wrong with the isInstalled rule but I cannot work out what I am doing wrong.  All I want it to do is check if the firefox.exe file is version is less than version 35 and if so, then install the firefox program.  Obviously it is checking and for some reason is thinking that the firefox version is less than version 35 even though I have just installed version 35.\r<br />\n<br />\nMy plan anyway is to remove the firefox package when getting rid of an old installation update and just put in a new firefox package when updating the firefox program so I don't think that I will need the IsInstalled rule for Firefox, but it would be nice to know if there is some tool that can tell me why the computer is checking if the file is version 35 and what it is actually seeing!\r<br />\n<br />\nBut this program rocks!<br />\n",
+    "PostedDate": "2015-01-22T04:12:51.65-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1345091",
+    "ThreadId": "577804",
+    "Html": "Turns Windows Update Agent log on.<br />\n",
+    "PostedDate": "2015-01-22T05:11:47.807-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451046",
+    "ThreadId": "577804",
+    "Html": "Try the Solution in this website. I think it can help you.\r<br />\n<a href=\"http://www.sthshare.com/wordpress/wsus-package-publisher-deploy-firefox.html\" rel=\"nofollow\">http://www.sthshare.com/wordpress/wsus-package-publisher-deploy-firefox.html</a><br />\n",
+    "PostedDate": "2015-11-05T09:16:17.18-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1459286",
+    "ThreadId": "577804",
+    "Html": "Because I have been so busy, I never got around to sorting one issue with Firefox out, but I have some time and would like to understand what I am doing wrong here.\r<br />\n<br />\nThis is my process, I download firefox.exe and save it to my server\r<br />\nI create a new package and in the command line I put -ms to get a silent install.\r<br />\n<br />\nCurrently Firefox is on version 43.1 and my computers are on version 42.  What I have been doing over the last year, is selecting file version and putting in c:\\program files\\mozilla firefox\\firefox.exe less than or equal to 43 on the third page  where it asks you to determine whether product is installable.  The problem with this method is that it installs Firefox no problem, but the windows always marks the software status as not applicable after installing.  I want it to say installed.\r<br />\n<br />\nI have tried putting it into the second window where you specify whether the program is already installed.  However, it marks the software as already installed despite the fact that I have version 42 on the computer and version 43 as the new software.  If I say greater than or equal to 43 then it says not applicable!  So I have no idea how to get WSUS Package Publisher to install Firefox 43 upwards if the version on the computer is lessn than 43.\r<br />\n<br />\nAll I am doing is putting in  selecting file version and path c:\\program files\\mozilla firefox\\firefox.exe as the path and for comparison less than or equal to whatever version the new update is.  Thanky you.<br />\n",
+    "PostedDate": "2016-01-14T07:30:45.58-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1459374",
+    "ThreadId": "577804",
+    "Html": "I suggest you can create rules using WMI Query so that you can easy to push the new version of Firefox. I use WMI Query  for creating rules to push Java to 64-bit Clients. It work perfectly. <a href=\"http://www.sthshare.com/wordpress/wsus-package-publisher-deploy-to-specific-clients-or-groups-using-rules.html\" rel=\"nofollow\">http://www.sthshare.com/wordpress/wsus-package-publisher-deploy-to-specific-clients-or-groups-using-rules.html</a><br />\n",
+    "PostedDate": "2016-01-15T01:11:48.817-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1459388",
+    "ThreadId": "577804",
+    "Html": "Thank you.  I will have a look at wmi Query's to see if I can get that to work.  But you misunderstood my last post slightly.  My problem is not specifically about deploying an update to Firefox.  I discovered that I have the same problem when updating Picasa which also uses an exe file.\r<br />\n<br />\nIn short, I would like to understand how the file version function works in WSUS Package Publisher as I don't think that I am using it correctly.  The file version should really be all that I need.  So in short, has anyone managed to get file version to work in the sense of telling the program to install the software if there is an older version installed on the computer.<br />\n",
+    "PostedDate": "2016-01-15T03:30:37.907-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1459751",
+    "ThreadId": "577804",
+    "Html": "Sorry, i can not understand you.<br />\n would you please make a example to explain your issue so that I can help you.<br />\n",
+    "PostedDate": "2016-01-19T00:54:48.387-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1460039",
+    "ThreadId": "577804",
+    "Html": "On my computer in\r<br />\n<br />\nC:\\program files\\Mozilla Firefox\\Firefox.exe - the file version is 40.0.3 under the details tab.\r<br />\n<br />\nWhen I go to WSUS Package Publisher, I add the Firefox.exe setup file on the server and on the second page where it says &quot;Indicate here the rule or rules that allow clients computer to determine if the update is already installed.&quot;\r<br />\n<br />\nWhat I do is create a rule &quot;file Version&quot;\r<br />\n<br />\nand I am puttinng in the following:\r<br />\n<br />\nFile Path:  C:\\Program Files\\mozilla firefox\\firefox.exe\r<br />\nComparison: Less than\r<br />\nFile Version 43\r<br />\n<br />\nBut it doesn't install.  It just says not applicable.  But it should install as the file version on the computer is 40.0.3 and the file version I specified is 43, therefore the computer version is less than 43, so it should install the new version!  Hope that makes sense.<br />\n",
+    "PostedDate": "2016-01-21T05:51:54.64-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1461883",
+    "ThreadId": "577804",
+    "Html": "<strong>rmdtech wrote:</strong><br />\n<blockquote>\nOn my computer in<br />\n<br />\nC:\\program files\\Mozilla Firefox\\Firefox.exe - the file version is 40.0.3 under the details tab.<br />\n<br />\nWhen I go to WSUS Package Publisher, I add the Firefox.exe setup file on the server and on the second page where it says &quot;Indicate here the rule or rules that allow clients computer to determine if the update is already installed.&quot;<br />\n<br />\nWhat I do is create a rule &quot;file Version&quot;<br />\n<br />\nand I am puttinng in the following:<br />\n<br />\nFile Path:  C:\\Program Files\\mozilla firefox\\firefox.exe<br />\nComparison: Less than<br />\nFile Version 43<br />\n<br />\nBut it doesn't install.  It just says not applicable.  But it should install as the file version on the computer is 40.0.3 and the file version I specified is 43, therefore the computer version is less than 43, so it should install the new version!  Hope that makes sense.<br />\n</blockquote>\nWhat is your older version of Firefox.  File 40.0.2(42) ???<br />\n",
+    "PostedDate": "2016-02-04T00:46:29.35-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1463878",
+    "ThreadId": "577804",
+    "Html": "Hi sthshare.  Sorry its taken me so long to reply.  I have been very busy with other urgent projects so this got put on the back burner.\r<br />\n<br />\nI have discovered that it seems to work if I have a setup like this.\r<br />\nNew Firefox version 43\r<br />\nOld Firefox Version 41\r<br />\nSo I say in File version comparison less than - I put File version 42.\r<br />\n<br />\nFor some reason, this seems to work!  Maybe its a bug with the program where you cannot put the same version as the latest version of the software?\r<br />\n<br />\nI have now done an upgrade on one client from version 41 to version 43.  In a couple of days, I will check and see if the clients have upgraded and are showing as installed.  I will also need to check that they don't keep re-installing.\r<br />\n<br />\nIf all works, I will get back to you, but it does seem like a bug where I have to put in version 42 instead of version 43 (the latest version) and then it seems to work.  But I will need to test this more long time, because I have noticed it seems a bit random.<br />\n",
+    "PostedDate": "2016-02-21T10:51:19.32-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1470137",
+    "ThreadId": "577804",
+    "Html": "Hi rmdtech,<br />\n<br />\nfor the original Firefox setup.exe (not the FrontMotion .msi), a simple is-installed-rule would be to check the FileVersion of firefox.exe. But make sure to compare to the file version that you find on the details tab of the file's properties - this might  be different from the product version (like more detailed)! For the current esr installer the rule would look like:<br />\n<br />\n&lt;bar:FileVersion Path=&quot;Mozilla Firefox\\firefox.exe&quot; Comparison=&quot;EqualTo&quot; Version=&quot;45.0.2.5945&quot; Csidl=&quot;38&quot;/&gt;<br />\n<br />\nAn similarily simple is-installable-rule would be to check if the file doesn't exist at all or the file version is less than the one you're installing:<br />\n<br />\n&lt;lar:Or&gt;<br />\n&lt;lar:Not&gt;<br />\n&lt;bar:FileExists Path=&quot;Mozilla Firefox\\firefox.exe&quot; Csidl=&quot;38&quot;/&gt;<br />\n&lt;/lar:Not&gt;<br />\n&lt;bar:FileVersion Path=&quot;Mozilla Firefox\\firefox.exe&quot; Comparison=&quot;LessThan&quot; Version=&quot;45.0.2.5945&quot; Csidl=&quot;38&quot;/&gt;<br />\n&lt;/lar:Or&gt;<br />\n<br />\nFurthermore for the command line arguments of the Firefox installer you might check <a href=\"https://wiki.mozilla.org/Installer:Command_Line_Arguments\" rel=\"nofollow\">https://wiki.mozilla.org/Installer:Command_Line_Arguments</a><br />\n",
+    "PostedDate": "2016-04-14T07:03:20.2-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

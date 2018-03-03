@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1239648",
+    "ThreadId": "543822",
+    "Html": "Here I'm not complaining about a WPP problem but I would like to receive some confirmation that what I'm going to describe is an unsupported scenario. I think it will be useful to others too because it a subject poorly documented in internet.\r<br />\n<br />\nFrom an MSI (it was Adobe Reader XI) I created an AIP (administrative installation point), a sort od partially unzipped MSI for those who doesn't know it. Then I applied a msp patch directly to this AIP, the 11.0.3. I installed the patched software using GPO. \r<br />\n<br />\nRecently I tried to deploy the 11.0.6 patch alone using WPP but its is reported to be 'Not applicable'.\r<br />\n<br />\nFrom the few information I found it may be the correct behavior. In fact it seems that the msp patches doesn't recognize the software installed from an AIP where an older patch was applied. \r<br />\n<br />\nI would be glad if somebody can explain this fact with greater details.\r<br />\n<br />\nThanks\r<br />\nFilippo<br />\n",
+    "PostedDate": "2014-04-30T00:06:44.52-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1239721",
+    "ThreadId": "543822",
+    "Html": "Hi, I never test this scenario. But, one think I'm sure is that .MSP file will need a MSI installation of the product to be apply.<br />\nTry to run the .MSP file directly on the computer and see if the software is update. If yes, try to change applicablity rules.<br />\n",
+    "PostedDate": "2014-04-30T02:48:10.107-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:38:47.61-07:00"
+  },
+  {
+    "Id": "1239823",
+    "ThreadId": "543822",
+    "Html": "Hi,\r<br />\n<br />\nAdobe Reader is not normal. ;) I can see a couple of clients who install the 11.0.6 MSP without any problems, other clients will install not the MSP. Some times it is not possible to install the MSP manuall, some times it is possible.\r<br />\n<br />\nI don't care about this case. OK, it is not correct, but it is easier for me. ;)\r<br />\n<br />\nWinfried<br />\n",
+    "PostedDate": "2014-04-30T07:12:33.977-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

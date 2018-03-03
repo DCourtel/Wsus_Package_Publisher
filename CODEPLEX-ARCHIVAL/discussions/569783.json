@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1313231",
+    "ThreadId": "569783",
+    "Html": "I'm currently having two issues with my Adobe Reader packages. The first one being I have a test machine running Adobe Reader 11.0.0.8 currently and created the package for Adobe Reader 11.0.0.9. WPP is says the newer update is installed already under status when I check the machine it is still running 11.0.0.8.\r<br />\n<br />\nWe recently tested changes with Group Policy to hide updates for Java and Adobe Reader to avoid having multiple people calling the Help Desk when the program tells them they need to update. I'm not sure if this could be related but figured it worth mentioning.\r<br />\n<br />\nThe other issue I'm having is on a few machines, the Reader update would install, but no shortcuts would be visible. Not even from the Start Menu and All Programs. The only way to open reader (without opening a .pdf) is navigating to the home directory (C:\\Program Files (x86)\\Adobe\\Reader 11.0\\Reader). Any ideas on why this issue would happen in a fashion that appears to be random among test users.<br />\n",
+    "PostedDate": "2014-10-14T11:01:44.013-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1313326",
+    "ThreadId": "569783",
+    "Html": "This are my already installed rules...<br />\n<pre><code>&lt;bar:RegSzToVersion Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{AC76BA86-7AD7-1033-7B44-AB0000000001}&quot; Value=&quot;DisplayVersion&quot; Comparison=&quot;EqualTo&quot; Data=&quot;11.0.9.0&quot;/&gt;</code></pre>\n\nor<br />\n<pre><code>&lt;bar:RegSzToVersion Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{AC76BA86-7AD7-1033-7B44-AB0000000001}&quot; Value=&quot;DisplayVersion&quot; Comparison=&quot;EqualTo&quot; Data=&quot;11.0.9.0&quot;/&gt;</code></pre>\n\nand update is installable rules.<br />\n<pre><code>&lt;bar:RegSzToVersion Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{AC76BA86-7AD7-1033-7B44-AB0000000001}&quot; Value=&quot;DisplayVersion&quot; Comparison=&quot;LessThan&quot; Data=&quot;11.0.9.0&quot;/&gt;</code></pre>\n\nor<br />\n<pre><code>&lt;bar:RegSzToVersion Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{AC76BA86-7AD7-1033-7B44-AB0000000001}&quot; Value=&quot;DisplayVersion&quot; Comparison=&quot;LessThan&quot; Data=&quot;11.0.9.0&quot;/&gt;</code></pre>\n\nModifying the shortcut can be manipulated through Group Policy but most of the time it is through a transform file.<br />\n",
+    "PostedDate": "2014-10-14T15:25:07.93-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1314586",
+    "ThreadId": "569783",
+    "Html": "I have the same problem with shortcuts.. I have checked msi file in customization wizard and I see that adobe reader should create two shorcuts one at dekstop and second  in start menu... But It  not do this.. Do not know why...<br />\n",
+    "PostedDate": "2014-10-18T03:01:22.31-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1314640",
+    "ThreadId": "569783",
+    "Html": "<strong>RedLineby wrote:</strong><br />\n<blockquote>\nI have the same problem with shortcuts.. I have checked msi file in customization wizard and I see that adobe reader should create two shorcuts one at dekstop and second  in start menu... But It  not do this.. Do not know why...<br />\n</blockquote>\nMost likely, you have publish this update without the option &quot;Can request user input&quot;. So, the update installs with &quot;System&quot; account and therefore doesn't have access to the user's profile.\r<br />\nIf you use the option &quot;Can request user input&quot;, you will probably have these (useless) shortcuts, but you will also have a user interface shown during the install.<br />\n",
+    "PostedDate": "2014-10-18T09:20:42.52-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1314656",
+    "ThreadId": "569783",
+    "Html": "<strong>RedLineby wrote:</strong><br />\n<blockquote>\nI have the same problem with shortcuts.. I have checked msi file in customization wizard and I see that adobe reader should create two shorcuts one at dekstop and second  in start menu... But It  not do this.. Do not know why...<br />\n</blockquote>\nYou can create a shortcut in a Active Directory Envorinment with Group Policy Preferences. I think it is the better way.<br />\n",
+    "PostedDate": "2014-10-18T11:17:40.67-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1314886",
+    "ThreadId": "569783",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\n<strong>RedLineby wrote:</strong><br />\n<blockquote>\nI have the same problem with shortcuts.. I have checked msi file in customization wizard and I see that adobe reader should create two shorcuts one at dekstop and second  in start menu... But It  not do this.. Do not know why...<br />\n</blockquote>\nMost likely, you have publish this update without the option &quot;Can request user input&quot;. So, the update installs with &quot;System&quot; account and therefore doesn't have access to the user's profile.<br />\nIf you use the option &quot;Can request user input&quot;, you will probably have these (useless) shortcuts, but you will also have a user interface shown during the install.<br />\n</blockquote>\nI have changed package and add option &quot;Can request user input&quot;; removed adobe reader and clean up SoftwareDistribution folder; restarted test machine; checked for update and installed Reader. But nothing was changed...<br />\n",
+    "PostedDate": "2014-10-20T00:49:07.793-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1314957",
+    "ThreadId": "569783",
+    "Html": "My issue was resolved by a change I was enacting in the Adobe Customization Wizard when modifying the MSI. Under Direct Editor my instructions stated to drop the Shortcuts row under the table InstallExecuteSequence. I remade my package but did not drop that row and my shortcut issue was resolved.<br />\n",
+    "PostedDate": "2014-10-20T06:07:37.27-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-10-20T13:48:59.997-07:00"
+  },
+  {
+    "Id": "1314978",
+    "ThreadId": "569783",
+    "Html": "<strong>Psolberg wrote:</strong><br />\n<blockquote>\nMy issue was resolved by a change I was enacting in the Adobe Customization Wizard when modifying the MSI. Under Direct Editor my instructions stated to drop the Shortcuts row under the table InstallExecuteSequence. I remade my package but did not drop that row and my shortcut issue was resolved.<br />\n</blockquote>\nThank you. Your solution fixed my problem!<br />\n",
+    "PostedDate": "2014-10-20T07:27:04.443-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

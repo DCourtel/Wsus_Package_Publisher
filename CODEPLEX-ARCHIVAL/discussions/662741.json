@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1495895",
+    "ThreadId": "662741",
+    "Html": "Hi, \r<br />\nWe installed WSUS package installer on the main WSUS server and some packages have been deployed. I have just come onboard and looked at the other WSUS sites by adding the replica servers into the software. I can now see that updates that were created&gt;approved&gt;not approved&gt;deleted on the main wsus site are appearing on the replica sites. These are therefore going out to the clients still. \r<br />\nI cannot unapprove this software remoting from the main wsus server to the replica site or uninstalling the wsus packager on the replica site as the box is greyed out. \r<br />\nIs there a way of stopping the deleted updates that are on the main server, going out from the replica sites?\r<br />\nMany Thanks\r<br />\nDarren<br />\n",
+    "PostedDate": "2017-04-28T02:38:20.64-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1495902",
+    "ThreadId": "662741",
+    "Html": "Hi, deletion is not a replicated activities. So you need to delete the update by connecting to the wsus relica itself.<br />\n",
+    "PostedDate": "2017-04-28T07:08:00.703-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1495995",
+    "ThreadId": "662741",
+    "Html": "Hi, \r<br />\nThank you for getting back to me. I connected to the replicated server and unfortunately the boxes were greyed out. \r<br />\nI can only right click the update and select Expire. However this does not have any effect. \r<br />\nI understand that the update was removed from the main WSUS server. \r<br />\nRegards,\r<br />\nDarren<br />\n",
+    "PostedDate": "2017-05-02T01:20:31.85-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1496226",
+    "ThreadId": "662741",
+    "Html": "I have now further an issue in that I have a package that has been sent out from the main WSUS site to remote sites. \r<br />\nI wanted to remove this package however this option is greyed out on the replica servers. \r<br />\nShould we deploy and approve the packages from the replica servers? <br />\n",
+    "PostedDate": "2017-05-09T04:53:08.193-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

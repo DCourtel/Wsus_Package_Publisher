@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Conflict with SQL trigger",
+    "ClosedDate": "2014-03-04T10:39:56.047-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hi to all,\r\n\r\ni installed the Application like the manual. When i try to create an new Update like JAVA i get an Error called\r\n\"Access to module dbo.SwitchLocallyPublished is blocked because the signature is not valid.\"\r\n\r\nSomeone can help me to resolve this ?\r\n\r\nThanks\r\nDaniel",
+    "LastUpdatedDate": "2014-03-04T10:39:56.047-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-01-20T02:41:16.08-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Access to module dbo.SwitchLocallyPublished is blocked because the signature is not valid",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 171
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi Daniel,\n\n- Do you have set a trigger into the SQL server to make locally published updates visible in the Wsus Console ?\n- Do you have activated the option in WPP to make locally published updates visible in hte Wsus Console ?\n- Do you have activated the option in WPP to ignore Code Signing Certificate validation errors ?",
+      "PostedDate": "2014-01-20T09:04:23.34-08:00",
+      "Id": 130901
+    },
+    {
+      "Message": "Hi,\n\nthanks for your Answer. I solved the Issuses. I set the trigger via SQL MMC on the WID and that doesnt work. I delete the trigger and after this i can publish updates.\n\nThanks a lot",
+      "PostedDate": "2014-01-23T04:49:34.747-08:00",
+      "Id": 131293
+    }
+  ]
+}

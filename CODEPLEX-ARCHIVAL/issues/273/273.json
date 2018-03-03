@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:07.66-08:00",
+    "CommentCount": 6,
+    "Custom": null,
+    "Description": "WSUS Package Publisher crashes when I import an update from AdobeFlashPlayer catalog.\r\nCrash message is: __The path is not of a legal form.__\r\n\r\nCatalog is stored here:\r\n```\r\nD:\\WSUS\\Wsus Package Publisher\\Subscribed Catalogs\\AdobeFlashPlayerCatalog_SCUP.cab\r\n```\r\n\r\nHere is the relevant log part:\r\n```\r\n10/07/2015 08:51:26\tEntering Void trvWsus_NodeMouseClick(System.Object, System.Windows.Forms.TreeNodeMouseClickEventArgs)\r\n10/07/2015 08:51:31\tEntering Void btnImportUpdates_Click(System.Object, System.EventArgs)\r\n10/07/2015 08:51:31\tEntering Void .ctor(System.String)\r\n10/07/2015 08:51:31\tEntering Void PresetVisibleInWsusConsoleChkBx()\r\n10/07/2015 08:51:31\tWsus Is Local : True\r\n10/07/2015 08:51:31\tchkBxVisibleInWsusConsoleis False\r\n10/07/2015 08:51:33\tEntering Void .ctor(System.String) : CatalogHelper : D:\\WSUS\\Wsus Package Publisher\\Subscribed Catalogs\\AdobeFlashPlayerCatalog_SCUP.cab\r\n10/07/2015 08:51:33\tEntering Void OpenCatalog()\r\n10/07/2015 08:51:33\tEntering System.String GetTempFolder()\r\n10/07/2015 08:51:33\tWill return : C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\WPP\\d3a8c16c-7e09-498a-943e-811b6e8ba489\r\n10/07/2015 08:51:33\tCab File.\r\n10/07/2015 08:51:33\tEntering Boolean ExtractCabToFolder(System.String, System.String) : D:\\WSUS\\Wsus Package Publisher\\Subscribed Catalogs\\AdobeFlashPlayerCatalog_SCUP.cab To C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\WPP\\d3a8c16c-7e09-498a-943e-811b6e8ba489\r\n10/07/2015 08:51:33\tSuccessfuly extract CAB file.\r\n10/07/2015 08:51:33\tEntering System.Collections.Generic.List`1[Microsoft.UpdateServices.Administration.SoftwareDistributionPackage] ParseXMLFile(System.String) : C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\WPP\\d3a8c16c-7e09-498a-943e-811b6e8ba489\\AdobeFlashPlayerCatalog_SCUP.xml\r\n10/07/2015 08:51:33\tWill return 8 SDP.\r\n10/07/2015 08:51:33\tEntering Void ParseSDP(System.Collections.Generic.List`1[Microsoft.UpdateServices.Administration.SoftwareDistributionPackage]) : 8\r\n10/07/2015 08:51:33\tEntering Void DeleteDestinationFolder()\r\n10/07/2015 08:51:33\tEntering Void trvCatalog_AfterSelect(System.Object, System.Windows.Forms.TreeViewEventArgs)\r\n10/07/2015 08:51:33\tRoot : Root\r\n10/07/2015 08:51:40\tEntering Void btnImport_Click(System.Object, System.EventArgs)\r\n10/07/2015 08:51:40\tEntering Void btnImport_Click(System.Object, System.EventArgs)\r\n10/07/2015 08:51:40\tEntering Void .ctor(System.Collections.Generic.List`1[Wsus_Package_Publisher.CatalogUpdate], Boolean, System.String)\r\n10/07/2015 08:51:40\tEntering System.String GetTempFolder()\r\n10/07/2015 08:51:40\tWill return : C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\WPP\\sklob3hm.ils\\\r\n10/07/2015 08:51:40\tEntering Void DownloadFile(System.Uri, System.String) : https://fpdownload.macromedia.com/pub/flashplayer/current/licensing/win/install_flash_player_18_active_x.msi => C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\WPP\\sklob3hm.ils\\install_flash_player_18_active_x.msi\r\n10/07/2015 08:51:40\tEntering System.Net.IWebProxy GetHTTPProxy()\r\n10/07/2015 08:51:40\tNoProxy\r\n10/07/2015 08:51:41\tEntering Void DownloadFileCompleted(System.Object, System.ComponentModel.AsyncCompletedEventArgs) : Adobe Flash Player 32-bit/64-bit ActiveX 18.0.0.203\r\n10/07/2015 08:51:41\tWill try to publish : Adobe Flash Player 32-bit/64-bit ActiveX 18.0.0.203\r\n10/07/2015 08:51:41\tThe update doesn't already exists. Continue publication...\r\n10/07/2015 08:51:41\tEntering Microsoft.UpdateServices.Administration.IUpdate PublishUpdate(Microsoft.UpdateServices.Administration.SoftwareDistributionPackage, System.String) : Adobe Flash Player 32-bit/64-bit ActiveX 18.0.0.203 : C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\WPP\\sklob3hm.ils\r\n10/07/2015 08:51:41\tEntering Void CheckMaxFileSize(System.String) : C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\WPP\\sklob3hm.ils\r\n10/07/2015 08:51:41\tEntering System.String GetBiggestFile(System.String, Int64) : C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\WPP\\sklob3hm.ils : 0\r\n10/07/2015 08:51:41\tWill return : \r\n10/07/2015 08:51:41\tEntering Void CheckMaxFileSize(System.String)\r\n10/07/2015 08:51:41\tCurrent MaxCabFile Size is : 384\r\n10/07/2015 08:51:41\tUnhandledException. Something Went Wrong\r\n10/07/2015 08:51:41\t**** The path is not of a legal form.\r\n10/07/2015 08:51:41\tEntering Void .ctor() : FrmSendDebugInfo\r\n10/07/2015 08:51:43\tEntering Void lnkLblShowInformations_LinkClicked(System.Object, System.Windows.Forms.LinkLabelLinkClickedEventArgs)\r\n```\r\n\r\nIt used to work till last week.\r\nHas anyone an idea of what's wrong?",
+    "LastUpdatedDate": "2017-02-03T11:50:07.66-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-07-10T00:00:44.9-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Crash importing Adobe Flash Plugin updates from catalog",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 273
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Are you using the latest release of WPP ?",
+      "PostedDate": "2015-07-10T12:04:13.66-07:00",
+      "Id": 187099
+    },
+    {
+      "Message": "Of course I am, V1.3.1504.15, Windows Server 2008 R2, WSUS 3.2.7600.226.",
+      "PostedDate": "2015-07-11T09:05:57.45-07:00",
+      "Id": 187113
+    },
+    {
+      "Message": "WSUS 3.0 (SP2) + KB2938066:\tBuild 3.2.7600.274\nSo I would suggest updating your wsus first.\n\nRegards\nNorbert",
+      "PostedDate": "2015-07-11T14:24:08.2-07:00",
+      "Id": 187116
+    },
+    {
+      "Message": "That update was already installed, sorry for reporting the wrong build number (due to the usual versioning mess from MS):\n\nMMC | Help | About Update Services --> 3.2.7600.226\nWSUS initial page --> 3.2.7600.274\n\nAnyway, I reinstalled the KB and rebooted the server: same issue.\n\nIf there's no known solution, I'll try to build a Debug version, install it and remotely debug to get further details.\n",
+      "PostedDate": "2015-07-12T05:02:22.053-07:00",
+      "Id": 187124
+    },
+    {
+      "Message": "Just cloned GIT repo but it contains a really old 1.1.1212.23 version and latest commit is dated \"dic 23, 2012\".\nWhere is the source of latest 1.3.1504.15 version?",
+      "PostedDate": "2015-07-13T01:16:40.347-07:00",
+      "Id": 187147
+    },
+    {
+      "Message": "Anyone?",
+      "PostedDate": "2015-07-16T05:44:06.073-07:00",
+      "Id": 187314
+    }
+  ]
+}

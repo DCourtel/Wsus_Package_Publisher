@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1453572",
+    "ThreadId": "647962",
+    "Html": "Hi Everybody,\r<br />\nis it possible to edit an existing custom update xml?\r<br />\ne.g. to create a new revision?\r<br />\n<br />\nthx\r<br />\nMarko<br />\n",
+    "PostedDate": "2015-11-23T07:51:02.267-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1456435",
+    "ThreadId": "647962",
+    "Html": "No because WSUS bundles your data together and digitally signs it - but there is an easy way to review it for a superseding update/new update:<br />\n<ol>\n<li>Revise your old package, left click the ID link and look in the GUID folder for the action file.</li>\n<li>Pull it out and edit it with a colorized editor like notepad++/Sublime/atom. OR Open up a new Custom Update window and mimic your changes OR edit the action file by hand.</li>\n</ol>\n",
+    "PostedDate": "2015-12-18T10:55:53.297-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

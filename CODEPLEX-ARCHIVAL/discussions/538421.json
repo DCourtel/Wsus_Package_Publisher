@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1220701",
+    "ThreadId": "538421",
+    "Html": "Dear All,\r<br />\nAm testing the Publishing of Java , And I performed the steps as in the Manual, the Publishing went fine and the clients installed the updated java , but i found that after the update has been installed successfully , the update still appears that is needed by the same client, then sure when the next time i install the update it fails because the update was already installed.\r<br />\nMy Question is why does the client evaluate that the update is still needed although it is installed ?<br />\n",
+    "PostedDate": "2014-03-08T22:02:34.557-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221048",
+    "ThreadId": "538421",
+    "Html": "Hi\r<br />\nThe update checks if the MSI Product Code exists already, and every package (version, of course) has its own MSI prod. code, so if the update its installed, it doesnt appear to install. <br />\n",
+    "PostedDate": "2014-03-10T07:23:54.687-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221145",
+    "ThreadId": "538421",
+    "Html": "Albricia, you are right , but that doesnt happen in real life when i published this update, Also i found that this update is installed to computers that doesnt even have java installed <br />\n",
+    "PostedDate": "2014-03-10T10:53:47.32-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221197",
+    "ThreadId": "538421",
+    "Html": "What do you have set as IsInstalled rules and IsInstallable Rules ?<br />\n",
+    "PostedDate": "2014-03-10T13:42:15.13-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221277",
+    "ThreadId": "538421",
+    "Html": "I just followed the steps as in the Manual DCourtel<br />\n",
+    "PostedDate": "2014-03-10T21:17:03.727-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221280",
+    "ThreadId": "538421",
+    "Html": "Would you Please illustrate for me the Difference between Installed and Installable rule ?<br />\n",
+    "PostedDate": "2014-03-10T21:22:53.857-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221329",
+    "ThreadId": "538421",
+    "Html": "Dear All I solved the problem , the msi code that i used was wrong i modified it to the new code in the installed and installable rule wasnt correct now i modified it And it worked perfectly, but may i Ask a question\r<br />\nAm having a test lab to test the superseding updates:\r<br />\n1-Published Java 7 u 21\r<br />\n2- the clients detected the update as needed and the update is installed successfully\r<br />\n3-created a superseded update for java 7 u 51\r<br />\n4- the updates is detected by the clients and failed with code FFFF<br />\n",
+    "PostedDate": "2014-03-11T02:18:31.59-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221371",
+    "ThreadId": "538421",
+    "Html": "All,\r<br />\nI solved the Problem :)))\r<br />\nI had to move the XML file of the old package to the new ones and make a modification in it, Can I document the Superseded Updates And send it to you ?<br />\n",
+    "PostedDate": "2014-03-11T03:54:25.777-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-03-12T08:29:32.63-07:00"
+  }
+]

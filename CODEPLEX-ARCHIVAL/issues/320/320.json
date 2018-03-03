@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "WSUS not up to date.",
+    "ClosedDate": "2016-02-05T14:12:21-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nI am working for a company where there is no Enterprise CA.\r\nSo far we have been using WPP on the WSUS Server running Windows Server 2003 using the WPP self-signed certificate.\r\n\r\nNew downstream servers running Windows Server 2012 R2 are implemented and despite that the certificate has been imported, the new updates are not downloaded on those downstream servers.\r\n\r\nI wonder if there is anything linked with the certificate....\r\n\r\nAny help will be much appreciated.\r\n\r\nThanks",
+    "LastUpdatedDate": "2016-02-05T14:12:21-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-02-04T01:39:13.693-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Certificate issue/question",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 320
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This issue has been sorted on this page: http://wsuspackagepublisher.codeplex.com/discussions/650913#post1462105",
+      "PostedDate": "2016-02-05T08:04:17.603-08:00",
+      "Id": 196249
+    },
+    {
+      "Message": "Issue has been fixed.\nDetails here: http://wsuspackagepublisher.codeplex.com/discussions/650913#post1462105",
+      "PostedDate": "2016-02-05T08:04:45.37-08:00",
+      "Id": 196250
+    }
+  ]
+}

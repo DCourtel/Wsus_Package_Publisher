@@ -1,0 +1,101 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-02-14T12:32:56.03-08:00",
+    "CommentCount": 10,
+    "Custom": null,
+    "Description": "Hi friends,\r\ni would like to update my EMC networker client on windows server machines.\r\ni have the setup.exe file and some supporting files to that software. i have created the update with the .exe file and i have added the supporting files folder in \"add folder\" option i can see the package at the client side end. If i click install its showing as installing, but its not installing.\r\nDid i make any mistake while creating the package ?\r\ncan anyone please guide me.\r\n\r\nThanks,\r\nNaresh",
+    "LastUpdatedDate": "2015-02-14T12:32:56.03-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-10-16T10:14:31.793-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "unable to install the .exe file ",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 223
+  },
+  "FileAttachments": [
+    {
+      "FileId": 921682,
+      "FileName": "net.JPG",
+      "DownloadUrl": ".\\921682"
+    },
+    {
+      "FileId": 921886,
+      "FileName": "error.JPG",
+      "DownloadUrl": ".\\921886"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Can you revise the update and check the option \"Can request user input\" ?",
+      "PostedDate": "2014-10-16T13:06:51.607-07:00",
+      "Id": 162467
+    },
+    {
+      "Message": "Sure, i will give it a try and let you know",
+      "PostedDate": "2014-10-16T21:16:25.373-07:00",
+      "Id": 162496
+    },
+    {
+      "Message": "error reading setup initialization file",
+      "PostedDate": "2014-10-16T21:59:59.057-07:00",
+      "Id": 162497
+    },
+    {
+      "Message": "So, now you know why it failed.\nEither, the initialization file is missing or invalid/corrupt.",
+      "PostedDate": "2014-10-17T07:32:47.877-07:00",
+      "Id": 162528
+    },
+    {
+      "Message": "But if i do the manual installation package working fine,\nNow i am recreating the package, What should i select in the rule type  ?\nAnd the update file (setup.exe) which i selected also present in the folder, will it make any difference ?",
+      "PostedDate": "2014-10-18T07:38:05.727-07:00",
+      "Id": 162620
+    },
+    {
+      "Message": "> Now i am recreating the package, What should i select in the rule type ?\n\nI'm not the editor of this software. I can't tell you how to detect if this software is already installed. You need to search these rule by your own.\nFor the \"IsInstallable\" rule, that depends of the enterprise Policy. Do you want to install this software on all computers ? On computers that already have a previous version of this software ? ...\n\n>  And the update file (setup.exe) which i selected also present in the folder, will it make any difference ?\n\nWPP will not let you do that. You can not have the same file twice in a folder.",
+      "PostedDate": "2014-10-18T09:33:25.967-07:00",
+      "Id": 162623
+    },
+    {
+      "Message": "i have recreated the package. still i am getting the same error :(",
+      "PostedDate": "2014-10-19T03:43:27.317-07:00",
+      "Id": 162653
+    },
+    {
+      "Message": "any update on this issue ????",
+      "PostedDate": "2014-10-21T10:37:18.003-07:00",
+      "Id": 162831
+    },
+    {
+      "Message": "Your best chance to solve this, is to get help from the editor of \"EMC networker client\". Only the editor can answer why the exe install correctly when manually launching and don't install when exe is launch by Windows Update Agent.",
+      "PostedDate": "2014-10-23T03:27:33.787-07:00",
+      "Id": 163023
+    },
+    {
+      "Message": "When you run the update successfully, is it with Setup.exe within the folder you are adding or in the parent directory?\n\nYou say you're using the \"Add Folder\" option,  I haven't tested the \"add folder\" option yet, since all of my updates so far have used a flat directory structure, so I don't know how it behaves, but perhaps what's happening to you is that Setup.exe is supposed to be within the folder that you're adding, but since you used \"add folder\" instead of \"add files\" to add the files within the folder, when the cab gets extracted, you end up with\n\n    .\\Setup.exe\n    .\\Added Folder\\[stuff]\n\ninstead of \n\n    .\\Setup.exe\n    .\\[stuff]",
+      "PostedDate": "2014-11-05T12:02:33.77-08:00",
+      "Id": 164030
+    }
+  ]
+}

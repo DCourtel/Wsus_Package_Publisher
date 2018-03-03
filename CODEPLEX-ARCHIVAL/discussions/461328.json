@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1104248",
+    "ThreadId": "461328",
+    "Html": "English: Default message, when rebooting a computer: (120 char. max)\r<br />\nGerman: Standardnachricht wenn ein Computer neugestartet wird: (max. 120 Zeichen)\r<br />\n<br />\nEnglish: This computer will reboot in [TIMER] seconds. Please, save your documents and close all applications.\r<br />\nGerman: Dieser Computer wird in [TIMER] Sekunden neustarten. Bitte speichern Sie ihre Dokumente und schließen Sie alle Anwendungen.\r<br />\n<br />\nBtw: It would be good, to have [TIMER] as a variable, which will be set automatically.\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-10-06T10:15:15.6-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1104262",
+    "ThreadId": "461328",
+    "Html": "<blockquote>\nIt would be good, to have [TIMER] as a variable, which will be set automatically. <br />\n</blockquote>\nIt's the case. When WPP send the message, [TIMER] is substituted with the value of the timer.<br />\n",
+    "PostedDate": "2013-10-06T11:21:27.917-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-07T10:12:07.947-07:00"
+  },
+  {
+    "Id": "1104269",
+    "ThreadId": "461328",
+    "Html": "Great. :)<br />\n",
+    "PostedDate": "2013-10-06T11:37:58.053-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

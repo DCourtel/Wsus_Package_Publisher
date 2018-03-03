@@ -1,0 +1,81 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-28T10:21:22.91-07:00",
+    "CommentCount": 7,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\ninstalling Adobe Reader 11 over Wsus works fine. but the Workstation ( xp sp3 ) has no\r\nstart menu entry nor a Desktop link to start Adobe Reader.\r\nWhat is wrong?\r\n\r\nThank Alex",
+    "LastUpdatedDate": "2013-06-28T10:21:22.91-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-14T04:56:40.603-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Adobe Reader 11 install - no start menu entry",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 64
+  },
+  "FileAttachments": [
+    {
+      "FileId": 692676,
+      "FileName": "Adobe custo Wiz Shortcuts.png",
+      "DownloadUrl": ".\\692676"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Did you modify the MSI? Did you use a MST with the Installation?",
+      "PostedDate": "2013-06-14T05:33:16.627-07:00",
+      "Id": 103062
+    },
+    {
+      "Message": "i have used the step by step guide from wsuspackagepublisher.codeplex.com:\nAdobe Reader XI Deployment with Custom Settings (updated) ",
+      "PostedDate": "2013-06-14T05:44:52.343-07:00",
+      "Id": 103063
+    },
+    {
+      "Message": "The Adobe Customizaition Wizzard Shows the Desktop link and the start menu in AcroRead.msi\n\n[german]\n\nHallo,\n\nich bin nach der step-by-step Anleitung vorgegangen und auch der Customizaition Wizzard zeigt auch\ndie Desktop / Startmenü Einträge in der Datei AcroRead.msi an.\n\nViele Grüße\nAlexander Fröhner",
+      "PostedDate": "2013-06-14T05:52:40.733-07:00",
+      "Id": 103064
+    },
+    {
+      "Message": "Hi, does this happen only on Win XP SP3 ?\r\n\r\nIn the customisation Wizard, select 'Shortcuts' in the left panel and look settings on the right panel. (See my attached screenshot)",
+      "PostedDate": "2013-06-14T07:47:48.733-07:00",
+      "Id": 103069
+    },
+    {
+      "Message": "Did you have installed on a W7 too? If yes, are there the Links available?",
+      "PostedDate": "2013-06-14T09:01:10.797-07:00",
+      "Id": 103074
+    },
+    {
+      "Message": "Hi, no i didn't  installed the update on W7 or W8 Computer , but i will try it an i will make a Feedback to you .",
+      "PostedDate": "2013-06-17T00:37:30.79-07:00",
+      "Id": 103168
+    },
+    {
+      "Message": "> no i didn't installed the update on W7 or W8 Computer , but i will try it an i will make a Feedback to you\n\nDid you find time for testing?\n\nWinfried",
+      "PostedDate": "2013-06-21T03:20:49.95-07:00",
+      "Id": 103761
+    }
+  ]
+}

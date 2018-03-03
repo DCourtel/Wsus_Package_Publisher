@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Wsus Wrapper",
+      "DisplayName": "Wsus Wrapper"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-04-12T10:29:27.573-07:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Hello,\r\nIt seems to be impossible to delete a detection rule from an existing update. If I delete a rule this would not be saved and after finally revising the update the deleted rule will be back again.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.3.1411.09",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-11-12T03:49:42.647-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Deleting rules when revising updates not works",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 229
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hello, I can reproduce the bug only if I try to delete the last rule (if a group contains only one rule, I can't delete this rule).\r\nOtherwise, I can delete rules as I want (except the last one).",
+      "PostedDate": "2014-11-13T09:06:49.46-08:00",
+      "Id": 164657
+    },
+    {
+      "Message": "Can you send me an email at Package.Publisher@free.fr\r\nI will send you a updated release which allows you to delete the last rule.",
+      "PostedDate": "2014-11-14T08:34:03.55-08:00",
+      "Id": 164742
+    },
+    {
+      "Message": "Did you fix his issue in the newest release? I've just stumbled across this problem again. I've got no success in deleting a rule from the installable rules. After revising the update the rule comes back.",
+      "PostedDate": "2014-12-22T15:32:02.117-08:00",
+      "Id": 168752
+    },
+    {
+      "Message": "I have solved this issue but didn't publish yet the release that conatins the fix. Can you send me a email at package.publisher@free.fr .\n\nI will sent you the new release.",
+      "PostedDate": "2015-01-11T12:12:22.197-08:00",
+      "Id": 169868
+    }
+  ]
+}

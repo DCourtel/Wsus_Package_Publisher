@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1083750",
+    "ThreadId": "454245",
+    "Html": "Hi Guys,<br />\ni created with Adobe Application Manager Enterprise Edition an msi file for adobe indesign cs 6.0.3. I imported via drap and drop the msi file to wpp, added all folders and as i click on publish: i get a error message:<br />\n<a href=\"https://ajax.wurzach-it.de/data/public/0130fb\" rel=\"nofollow\">https://ajax.wurzach-it.de/data/public/0130fb</a><br />\n<br />\nThe logfile shows me follow lines:<br />\n<pre><code>22.08.2013 19:09:36 ThreadException. Something Went Wrong\n22.08.2013 19:09:36 **** Der angegebene Pfad und/oder Dateiname ist zu lang. Der vollständig qualifizierte Dateiname muss kürzer als 260 Zeichen und der Pfadname kürzer als 248 Zeichen sein.\n22.08.2013 19:09:36 Entering Void .ctor() : FrmSendDebugInfo\n22.08.2013 19:09:44 Entering Void lnkLblShowInformations_LinkClicked(System.Object, System.Windows.Forms.LinkLabelLinkClickedEventArgs)</code></pre>\n\nExist's a workaround or something else for this problem?<br />\n",
+    "PostedDate": "2013-08-22T10:14:40.98-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1083768",
+    "ThreadId": "454245",
+    "Html": "Hi Badwurzach,\r<br />\n<br />\nThis happen because you try to publish folders that have many subfolders, which lead to too long path. WPP needs to copy these files and folder to a TEMP folder so that WSUS can create a CAB. The TEMP folder used by WPP is %TEMP%\\Wsus Package Publisher\\Random GUID. I realize now, that in some case there can lead to such error you encountered. \r<br />\nThe workaround for now, is to change the mapping of the Environnement variable %TEMP% to point to a shorter path (for example C:\\Temp)\r<br />\n<br />\n<img src=\"http://i.imgur.com/o4AyzJa.png\" alt=\"Image\" />\r<br />\n<br />\n<br />\nIn the next release of WPP, I will shorten the path used.<br />\n",
+    "PostedDate": "2013-08-22T10:53:47.053-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:19:39.427-07:00"
+  },
+  {
+    "Id": "1083819",
+    "ThreadId": "454245",
+    "Html": "Hi DCourtel,\r<br />\nyour workaround works great. Thank you very much.\r<br />\nMy idea is to create a option for a customer path in the settings.\r<br />\n<br />\n<br />\nRegards,\r<br />\nDaniel<br />\n",
+    "PostedDate": "2013-08-22T12:46:01.023-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1327322",
+    "ThreadId": "454245",
+    "Html": "Même si nous utilisons c:\\temp\r<br />\nAvec 2 guid dans le chemin, nous perdons plus de 80 caractères.\r<br />\nJ'attends avec impatience le V2\r<br />\nCordialement.\r<br />\n<br />\n<br />\nEven if we use c:\\temp.\r<br />\nWith two guid in the path, We lose more than eighty characters.\r<br />\nI look forward to the V2 ^^\r<br />\nRegards<br />\n",
+    "PostedDate": "2014-11-30T03:28:22.427-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

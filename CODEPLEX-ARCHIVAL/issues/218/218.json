@@ -1,0 +1,56 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-09-12T03:03:12.68-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nI am using V1.3.1401.04. I created the Adobe Flash Player updates today and since Adobe provided the wrong download files I have to delete these updates and create new ones with the correct files.\r\nI set the updates in the WSUS console to \"Not approved\" again, waited a bit, reconnected Package Publisher and tried to delete them there. But I got an error message, see attachment.\r\nDoes anyone have a solution/idea for that problem?\r\nThanks in advance.\r\n\r\nBest regards,\r\ndocwaremf",
+    "LastUpdatedDate": "2014-09-12T03:03:12.68-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-09-10T00:19:11.203-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Removal of update in Package Publisher not possible",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 218
+  },
+  "FileAttachments": [
+    {
+      "FileId": 906401,
+      "FileName": "errorDeleteUpdate.JPG",
+      "DownloadUrl": ".\\906401"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "First, pls. install the actual Version: http://wsuspackagepublisher.codeplex.com/releases/view/125901\nRightclick at the Update > decline. Now you can delete the update.",
+      "PostedDate": "2014-09-10T01:06:29.43-07:00",
+      "Id": 159320
+    },
+    {
+      "Message": "Awesome, worked, thank you very much!",
+      "PostedDate": "2014-09-10T03:03:31.863-07:00",
+      "Id": 159327
+    }
+  ]
+}

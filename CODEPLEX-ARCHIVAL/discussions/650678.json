@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "1461291",
+    "ThreadId": "650678",
+    "Html": "Well, I am facing the issue, that WPP is not able to provide updates created from an .exe file.\r<br />\nUpdates that were created from a .msi file work without causing any issues.\r<br />\n<br />\nThe main problem in here is that the updates do not even get shown at the clients that should receive the updates.\r<br />\nWSUS just marks the .exe updates as &quot;installed&quot; in WSUS Console.\r<br />\nDid someone face the same issue yet?\r<br />\n<br />\nIt would be quite nice to get some help with this due to the fact that some patches do not get provided as .msi file...\r<br />\n<br />\nThanks in Advance!\r<br />\n-René<br />\n",
+    "PostedDate": "2016-01-29T05:48:16.3-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1472145",
+    "ThreadId": "650678",
+    "Html": "Hi,\r<br />\n<br />\nI have the same problem.\r<br />\nDoes anyone have an idea or solution?\r<br />\n<br />\nThanks in Advance!\r<br />\nMichael<br />\n",
+    "PostedDate": "2016-05-02T02:07:32.367-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1472158",
+    "ThreadId": "650678",
+    "Html": "Well, we are going to install only .msi files using WPP.\r<br />\nAll .exe files get installed using GPO and Scripts ....\r<br />\n<br />\n<br />\nYou are welcome if there are any updates on installing .exe updates using WPP.<br />\n",
+    "PostedDate": "2016-05-02T04:27:46.833-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1472268",
+    "ThreadId": "650678",
+    "Html": "Hi,\r<br />\n<br />\nI have performed the following tests with the tool: <a href=\"https://www.apreltech.com/Free/How_to_wrap_exe_into_msi\" rel=\"nofollow\">https://www.apreltech.com/Free/How_to_wrap_exe_into_msi</a>.\r<br />\nWith the tool, i have converted the exe in a msi.\r<br />\n<br />\nThat's no clean solution, but it works.\r<br />\n<br />\nI do not understand whether this is a problem of the WSUS installation or the database ....\r<br />\nIs there a log?\r<br />\n<br />\nGreetings from South Tyrol\r<br />\nMichael<br />\n",
+    "PostedDate": "2016-05-03T00:54:07.957-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1472395",
+    "ThreadId": "650678",
+    "Html": "There are no problem to use .exe files in WPP to create updates. A lot of administrators use it.\r<br />\nI have working updates for Firefox. Thunderbird, ImageJ, Notepad and much more, all exe based.\r<br />\n<br />\nBe sure that you are use all nessasary (silent) switches for your .exe files.\r<br />\n<br />\nIf you are new on WPP, I think the problem ist that youre rules are not correct. You NEED manual rules if you use .exe files! Read the tutorials for creating updates from .exe files.....\r<br />\n<br />\nkind regards, \r<br />\nPoe<br />\n",
+    "PostedDate": "2016-05-04T05:46:31.33-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1472403",
+    "ThreadId": "650678",
+    "Html": "Hi,<br />\n<br />\nI have distributed exe. 7Zip, Notpad, ...<br />\nJust at a time that has stopped working ...<br />\n<br />\nAlso Custom Updates do not working...<br />\n<br />\nPlease give me an exe with all parameters and rules so I can make a test.<br />\n<br />\nThank you<br />\n<br />\nkind regards,<br />\nMichael<br />\n",
+    "PostedDate": "2016-05-04T07:43:42.317-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1472845",
+    "ThreadId": "650678",
+    "Html": "I will recommend you to read the HowTos and  examples you can find in <a href=\"http://www., and read the documentation from WPP\" rel=\"nofollow\">www., and read the documentation from WPP</a>. \r<br />\n<br />\n&quot;Just at a time that has stopped working ...&quot;\r<br />\nIm sorry ?\r<br />\n<br />\n<br />\nCreate a Update for Firefox ESR.\r<br />\n -ms is the Parameter for silent installation \r<br />\nlooking on a client in registry for the path with Install information and create the first rule :\r<br />\n&lt;bar:RegSz Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\Wow6432Node\\Mozilla\\Mozilla Firefox ESR&quot; Value=&quot;CurrentVersion&quot; Comparison=&quot;Contains&quot; Data=&quot;45.1.0&quot;/&gt;\r<br />\n<br />\ncreate the second rule to check for nessasary Operation System:\r<br />\n&lt;bar:WindowsVersion Comparison=&quot;GreaterThanOrEqualTo&quot; MajorVersion=&quot;5&quot; MinorVersion=&quot;1&quot; ServicePackMajor=&quot;3&quot;/&gt;\r<br />\n<br />\nDont forget different path for  32/ 64bit in rule one  ( if you use it)\r<br />\n<br />\nAnd ofcourse create a firefox group in WSUS ....\r<br />\n<br />\nHere are are example from my installation for FREECAD , im sorry, all my dokus are in german.:\r<br />\n<br />\n<a href=\"http://road-books.jimdo.com/2015/04/01/freecad-mit-wusus-package-publisher-und-wsus-verteilen-zur-optionalen-installation-bereitstellen/\" rel=\"nofollow\">http://road-books.jimdo.com/2015/04/01/freecad-mit-wusus-package-publisher-und-wsus-verteilen-zur-optionalen-installation-bereitstellen/</a><br />\n",
+    "PostedDate": "2016-05-09T04:51:49.333-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1473066",
+    "ThreadId": "650678",
+    "Html": "Hi,\r<br />\n<br />\nThank you. Sorry my English is very bad ... :-)\r<br />\n<br />\nWith your example it works.\r<br />\nThe rules were wrong.\r<br />\n<br />\nThanks again\r<br />\n<br />\n--------------&gt;\r<br />\n<br />\nHallo,\r<br />\n<br />\nDanke. Leider ist mein Englisch sehr schlecht... :-)\r<br />\n<br />\nMit deinem Beispiel funktioniert es.\r<br />\nDie Regeln waren falsch.\r<br />\n<br />\nDanke nochmal\r<br />\nMichael<br />\n",
+    "PostedDate": "2016-05-10T12:33:45.567-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1474724",
+    "ThreadId": "650678",
+    "Html": "Kein Problem, ich supporte gerne in D :-) ,\r<br />\n<br />\n falls du fragen zu weiteren Programmen hast melde dich.<br />\n",
+    "PostedDate": "2016-05-31T06:49:08.227-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1292021",
+    "ThreadId": "561761",
+    "Html": "Hi, I have a question or maybe enhancement request about signing updates.  We want to use WSUS on Server 2012 R2 to deliver third party updates but our security team don't like storing the signing cert on the publishing server and want us to have them sign updates for us (they are using an HSM to store the cert).\r<br />\n<br />\nAs far as I can tell Package Publisher requires the signing cert to be installed locally but it looks like the WSUS API supports importing an already signed update using the PublishSignedPackage method.  Is there already a way to use this within Package Publisher, or could a feature be added to import packages that are already signed so the local signing cert is not used?<br />\n",
+    "PostedDate": "2014-08-21T04:42:54.773-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1292194",
+    "ThreadId": "561761",
+    "Html": "Hi, that's right, there is an API method to import an already signed package. I've never try this. And WPP doesn't provide any way to use this method.\r<br />\nNote that, this method require you provide a CAB file.<br />\n",
+    "PostedDate": "2014-08-21T11:15:24.903-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1292364",
+    "ThreadId": "561761",
+    "Html": "So in theory we could use WPP to create a custom update and export it to a CAB, send that to our code signing service who will return it signed with their cert, then re-import it for assignment to our PCs.  Would it be possible to enhance the import feature of WPP to support the import of already signed packages so that we can benefit from the ability to create them and also satisfy enhanced security requirements for signing?\r<br />\n<br />\nI'm happy to test the feature using the API on it's own if you would like more testing into whether it actually works, but for us at least it would be a valuable enhancement for WPP to support it through the UI so we could manage the whole process using one tool.<br />\n",
+    "PostedDate": "2014-08-22T02:16:02.783-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1292755",
+    "ThreadId": "561761",
+    "Html": "I will need some times to make several tests.<br />\n",
+    "PostedDate": "2014-08-23T12:38:58.783-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1303545",
+    "ThreadId": "561761",
+    "Html": "Hi, just checking in whether you've had a chance to run any tests for this yet?  Feel free to ask if there's anything you would like me to test or help with.<br />\n",
+    "PostedDate": "2014-09-11T03:26:33.203-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1304419",
+    "ThreadId": "561761",
+    "Html": "Hi, I didn't work on this until now. As you are the only one to ask for this feature, I won't put it on high priority.<br />\n",
+    "PostedDate": "2014-09-13T12:01:09.827-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

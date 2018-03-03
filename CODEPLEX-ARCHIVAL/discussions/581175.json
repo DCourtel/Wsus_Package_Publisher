@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1353356",
+    "ThreadId": "581175",
+    "Html": "Hello,\r<br />\n<br />\ncould you please help with a driver installation issue on Windows 8.1 x64 clients?\r<br />\n<br />\nEnvironment and steps<br />\n<ol>\n<li>WSUS running on W2012R2</li>\n<li>WSUS Publisher 1.3.1411.09</li>\n<li>Imported a driver from HP Catalog - Broadcom NIC Drivers for Microsoft Win7/Win8.1 -64bit [16.6.4.1.A2]</li>\n<li>Approved on testing computers</li>\n<li>\nClients are getting errors<br />\n</li>\n</ol>\nREPORT EVENT: {BA6AF56B-7F07-4356-A722-99636AC5ADB4}\t2015-02-17 12:24:23:654+0100\t1\t182 [AGENT_INSTALLING_FAILED]\t101\t{00004850-0000-0000-5350-000000066985}\t2\t80070643\tAutomaticUpdatesWuApp\tFailure\tContent Install\tInstallation Failure: Windows failed to install the following update with error 0x80070643: Broadcom NIC Drivers for Microsoft Win7/Win8.1 -64bit [16.6.4.1.A2].<br />\n",
+    "PostedDate": "2015-02-17T03:42:06.413-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353401",
+    "ThreadId": "581175",
+    "Html": "Hello,\r<br />\nerror 0x80070643, is a generic code meaning that the installation failed.\r<br />\n<br />\nOpen WPP and connect to your Wsus server, select the update and, on the 'Informations' tab click on the 'Id' link. This will open a window, open the folder with the GUID and copy all files/subfolders to an USB key. On the test computer, run plug the USB key and run the main file. See if the installation perform as expected.<br />\n",
+    "PostedDate": "2015-02-17T06:21:00.057-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

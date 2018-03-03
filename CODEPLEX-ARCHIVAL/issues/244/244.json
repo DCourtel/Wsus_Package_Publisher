@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "WPP show computer group, not AD OU",
+    "ClosedDate": "2015-01-27T07:18:13.05-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hello!\r\n\r\nI`ve made a new UO in active directory, but it is`t showing up in wsus package publisher![Image]",
+    "LastUpdatedDate": "2015-01-27T07:18:13.05-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-01-21T23:41:23.653-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "New UO in active directory",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 244
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1422328,
+      "FileName": "Untitled3.png",
+      "DownloadUrl": ".\\1422328"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "WPP shows you computer group from Wsus, not OU from AD.",
+      "PostedDate": "2015-01-22T05:08:20.923-08:00",
+      "Id": 170657
+    }
+  ]
+}

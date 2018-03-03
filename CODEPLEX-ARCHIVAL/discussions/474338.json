@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1137007",
+    "ThreadId": "474338",
+    "Html": "Hi,\r<br />\n<br />\nI cannot install the last version of Wsus Package Publisher on Windows Server 2003 Standard Edt.\r<br />\n<br />\nThe error log is: \r<br />\n12/17/2013 8:51:57 AM\t=================================================================================================================\r<br />\n12/17/2013 8:51:57 AM\tStarting. Release : 1.3.1311.24\r<br />\n12/17/2013 8:51:57 AM\tUpgrade Settings : False\r<br />\n12/17/2013 8:51:57 AM\tWindows was installed in : en (English)\r<br />\n12/17/2013 8:51:57 AM\tEntering Void .ctor() : FrmSettings\r<br />\n12/17/2013 8:51:57 AM\tUnhandledException. Something Went Wrong\r<br />\n12/17/2013 8:51:57 AM\t**** Value cannot be null.\r<br />\nParameter name: item\r<br />\n12/17/2013 8:51:57 AM\tEntering Void .ctor() : FrmSendDebugInfo\r<br />\n12/17/2013 8:52:07 AM\tEntering Void lnkLblShowInformations_LinkClicked(System.Object, System.Windows.Forms.LinkLabelLinkClickedEventArgs)\r<br />\n<br />\nAny suggestion?\r<br />\n<br />\nThanks,<br />\n",
+    "PostedDate": "2013-12-16T23:57:06.11-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1137070",
+    "ThreadId": "474338",
+    "Html": "A file is probably missing. Is it a first installation ?\r<br />\nCan you download again the zip file.<br />\n",
+    "PostedDate": "2013-12-17T04:21:25.54-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T08:09:03.713-08:00"
+  }
+]

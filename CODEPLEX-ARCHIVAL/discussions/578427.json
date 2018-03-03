@@ -1,0 +1,122 @@
+[
+  {
+    "Id": "1345323",
+    "ThreadId": "578427",
+    "Html": "I've setup a new WSUS server on Windows Server 2008 R2 with the latest Wsus Package Publisher (v1.3.1411.09). \r<br />\n<br />\nWindows updates are installing fine on my test client (Win 8.1 Pro) but the deployment of Adobe Reader XI and Java 7 fails. The package keeps installing forever... I've deploymeny them with the documentation proveded on the site. I've installed the self signed certificate as well on the client, \r<br />\n<br />\nI've installed the Windows update on 2008 R2 to become compatible with Windows 8.1 devices: KB2734608 / KB2720211. \r<br />\n<br />\nI think the problem is relatied to certificate errors. Because we want to create a internet and we do not have a Certificate Authority setup,  I am unable to create a code sign certificate template as descriped iin setp 1 of the Creating a Code Signing Certificate manual in the Documentation. \r<br />\n<br />\nCan I use my wildcard certificate for this or workaround this issue without having a Certificate authority server?<br />\n",
+    "PostedDate": "2015-01-23T04:06:00.343-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1345802",
+    "ThreadId": "578427",
+    "Html": "The update would fail immediately if the issue were certificate related, as WUA checks the update package certificate and exits immediately with an error if it's invalid. There's probably something else going on. How are &quot;deploying&quot; Reader and Java? Also, Java 7 is going to be EOL in April, you should be looking into transitioning over to 8 unless you have a service contract with Oracle.<br />\n",
+    "PostedDate": "2015-01-26T06:57:35.913-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1345821",
+    "ThreadId": "578427",
+    "Html": "Thanks for the response.\r<br />\n<br />\nI am deploying Adobe Reader 11.0.0 (dutch version) with the documentation as provided here: <a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=684132\" rel=\"nofollow\">https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=684132</a>. I've tried it twice to make sure that I wasn't missing a part. \r<br />\n<br />\nI found out that DNS was the issue (server is located on other network)\r<br />\n<br />\nNow I am facing a error code: 80B0109, which indicates a certificate error. I'll look first into it but if I need further assistance I'll drop it here agian. <br />\n",
+    "PostedDate": "2015-01-26T08:01:31.417-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1345941",
+    "ThreadId": "578427",
+    "Html": "Your WSUS is missing some Updates. Pls look:\r<br />\n<br />\nWSUS 3.0 (SP2) + KB2720211: \tBuild 3.2.7600.251\r<br />\nWSUS 3.0 (SP2) + KB2734608: \tBuild 3.2.7600.256\r<br />\nWSUS 3.0 (SP2) + KB2828185: \tBuild 3.2.7600.262\r<br />\nWSUS 3.0 (SP2) + KB2938066: \tBuild 3.2.7600.274\r<br />\n<br />\nHere you find the place with the correct build: <a href=\"http://www.wsus.de/images/wsus-version.png\" rel=\"nofollow\">http://www.wsus.de/images/wsus-version.png</a><br />\n",
+    "PostedDate": "2015-01-26T14:14:15.783-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1347055",
+    "ThreadId": "578427",
+    "Html": "Ive installed the other updates as well. My build was 7600.256, now it is 7600.274. \r<br />\n<br />\nI've recreated a self signed certificate, verify that is installed as discribed in the manual (serial is on all pc's the same), but I have to resign a package, unfortunaltely that fails with error 2148081670. I am 100% sure that the right certificate is located into the WSUS server certificate folder. \r<br />\n<br />\nI am not using SSL at all so why would wsus need a certificate anyway? <br />\n",
+    "PostedDate": "2015-01-29T02:27:09.533-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1347072",
+    "ThreadId": "578427",
+    "Html": "Did you deploy the certifacte to the Clients and Servers in the correct Certifacate Storages? The Certificate must stored in 2 Stores on all Clients. I only have a image with german details: <a href=\"http://www.wsus.de/images/content/wpp/06_WPP.png\" rel=\"nofollow\">http://www.wsus.de/images/content/wpp/06_WPP.png</a> Pls control on some clients if the certificate is in the 2 correct stores.<br />\n",
+    "PostedDate": "2015-01-29T04:00:15.27-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1347095",
+    "ThreadId": "578427",
+    "Html": "I've done that indeed. \r<br />\n<br />\nBut the problem with resigning a package is server related instead of the client. <br />\n",
+    "PostedDate": "2015-01-29T05:29:40.733-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1347530",
+    "ThreadId": "578427",
+    "Html": "Solved the problem by starting all over agian with a clean intallation of Windows Server 2008 R2! I guess it's important to do it all in the right order. <br />\n<br />\nBut now the Package keeps installing for ever. What may cause this?<br />\n<br />\nIt must have to do something with the packahe it self, I tried java 8 and that installation fails immidiately with error code 80131700....<br />\n<br />\nIs it so hard to deploy packages or do I just need to understand the whole proces of deploying packages? <br />\n<br />\nFor both packaged I followed the guide under documentation of the site. <br />\n",
+    "PostedDate": "2015-01-30T06:03:52.673-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1347604",
+    "ThreadId": "578427",
+    "Html": "<strong>vwijhe wrote:</strong><br />\n<blockquote>\nBut now the Package keeps installing for ever. What may cause this?<br />\n<br />\nIt must have to do something with the packahe it self, I tried java 8 and that installation fails immidiately with error code 80131700....<br />\n</blockquote>\nOracle changed the installer in recent versions of Java 8. I don't have good advice currently on how to solve issues involving patching Java 8. Is this the only patch that's experiencing this issue?<br />\n",
+    "PostedDate": "2015-01-30T09:56:42.817-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348123",
+    "ThreadId": "578427",
+    "Html": "Java is the second package we are trying to publish after Adobe Reader XI which is installing forever. \r<br />\n<br />\nI'll try Flash Player as well since that's a simple MSI installation. I think I'll try to install the java update as well directly from the MSI. <br />\n",
+    "PostedDate": "2015-02-02T00:43:15.993-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348137",
+    "ThreadId": "578427",
+    "Html": "Both Adobe Flash (16.0.0.296) and Java 8 Update 31 are installing fine if I use the standalone MSI. \r<br />\n<br />\nAdobe Reader is important for us to get it working. Any idea's how get this working? <br />\n",
+    "PostedDate": "2015-02-02T01:17:38.527-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348261",
+    "ThreadId": "578427",
+    "Html": "First off, are you doing an update or a deployment? For updates, I highly recommend using the msp files instead of the executables, and you can even use the SCUP catalog provided by Adobe and import them into WSUS using WPP. Here's the link to the Adobe documentation: <a href=\"http://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/sccm.html\" rel=\"nofollow\">http://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/sccm.html</a><br />\n<br />\nTwo places to look for clues: <code>%windir%\\temp\\customupdateengine.log</code> and if you enable logging in the Adobe Reader patch, then wherever you put the log files for that. (MSI switch <code>/l*v %windir%\\temp\\patchname.log</code> is what I'd use, if you're doing an MSI install, which is what you should be doing).<br />\n<br />\nYou can get the MSI for 11.0 for your preferred language or MUI here: <a href=\"ftp://ftp.adobe.com/pub/adobe/reader/win/11.x/11.0.00/\" rel=\"nofollow\">ftp://ftp.adobe.com/pub/adobe/reader/win/11.x/11.0.00/</a>, and the MSP for the latest patch here: <a href=\"ftp://ftp.adobe.com/pub/adobe/reader/win/11.x/11.0.10/misc/\" rel=\"nofollow\">ftp://ftp.adobe.com/pub/adobe/reader/win/11.x/11.0.10/misc/</a><br />\n<br />\nIf you're doing a deployment, you can include the MSI and MSP in the patch, and tell the MSI to install the patch along with the product. You can use an MST file to make any customizations to the MSI prior to install. Since WPP starts the MSI install command line with <code>msiexec /i [msi file] /qn /norestart</code>, you just need to add <code>/p [filename].msp</code> to the command line to install the patch along with the product.<br />\n<br />\nOh, and if the MSP doesn't get installed because it requires an absolute path—it happens sometimes, hopefully this isn't the case here, though—instead of a relative one, you can use <code>%windir%\\SoftwareDistribution\\Download\\Install\\[filename].msp</code>, since that's where the WUA unpacks the cab files created by WPP/WSUS for installation.<br />\n",
+    "PostedDate": "2015-02-02T07:29:19.06-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1349301",
+    "ThreadId": "578427",
+    "Html": "Ok i decided to skip adobe and flash since this is not a requirement on Windows 8.1. It takes too long to get it work. Adobe is installing fine with the package and command line installation (msiexec /i [msi file] /qn /norestart transforms=trans.mst) but not via WSUS package manager. <br />\n",
+    "PostedDate": "2015-02-05T05:25:03.65-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1349446",
+    "ThreadId": "578427",
+    "Html": "<strong>vwijhe wrote:</strong><br />\n<blockquote>\nOk i decided to skip adobe and flash since this is not a requirement on Windows 8.1. It takes too long to get it work. Adobe is installing fine with the package and command line installation (msiexec /i [msi file] /qn /norestart transforms=trans.mst) but not via WSUS package manager.<br />\n</blockquote>\nDid you try MSI logging like I suggested? I could look through the log for you.<br />\n",
+    "PostedDate": "2015-02-05T11:44:18.937-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1349595",
+    "ThreadId": "578427",
+    "Html": "Sure. \r<br />\n<br />\nI did try to install to MSI but it even generates no log files. I am using this custom made MSI folder / file which contains 11.0.10. msiexec /i [msi file] /qn /norestart transforms=trans.mst. \r<br />\n<br />\nThis file structure is created when you do a administrative install:<br />\n<ul>\n<li>msiexec /a AdbeRdr.msi </li>\n<li>\nmsiexec /a c:\\AIP\\AdbeRdr.msi /p AdbeRdrUpd.msi<br />\n</li>\n</ul>\nI've add the MSI file first to wsus package publisher and then added the folder and mst file seperately. \r<br />\n<br />\nI've uploaded the MSI to wetransfer: <a href=\"http://we.tl/supFh6Cs3Q\" rel=\"nofollow\">http://we.tl/supFh6Cs3Q</a><br />\n",
+    "PostedDate": "2015-02-05T22:46:24.61-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

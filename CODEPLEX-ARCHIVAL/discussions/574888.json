@@ -1,0 +1,162 @@
+[
+  {
+    "Id": "1331695",
+    "ThreadId": "574888",
+    "Html": "I'm running Windows 8.1 on my adminstrative machine and Server 2012 R2 for my WSUS server.  Should be identical versions of the console and in fact it is when I check the versions.  Both show they're on 6.3.9600.16384, but I still get the error in WPP.  Thoughts?<br />\n<br />\nI realize I could run it directly from the WSUS server, but I'd rather not do that if I don't have to.<br />\n",
+    "PostedDate": "2014-12-13T15:59:40.36-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1331733",
+    "ThreadId": "574888",
+    "Html": "<blockquote>\nand in fact it is when I check the versions<br />\n</blockquote>\nWhere do you see that it's the same version ?<br />\n<br />\nDid WPP already works ? Or, is it the first time you try to run it an this administrative computer ?<br />\n",
+    "PostedDate": "2014-12-13T23:46:37.927-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1331774",
+    "ThreadId": "574888",
+    "Html": "It pops up that warning when I connect to my WSUS server.  It's the first time on this administrative computer or any computer for that matter.  I'm brand new to the product.\r<br />\n<br />\nI actually got the warning a couple weeks ago when I was running my WSUS server on 2008 R2 so I upgraded it to 2012 R2.  Still get the error even after the upgrade.<br />\n",
+    "PostedDate": "2014-12-14T06:32:03.813-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1331781",
+    "ThreadId": "574888",
+    "Html": "&quot;Where do see that it's the same version ?&quot;\r<br />\n<br />\nSorry I initially misread this.  If I go to Help--&gt;&quot;About Update Services&quot; from either console I see the same version number.  I assume that's showing me the console version?<br />\n",
+    "PostedDate": "2014-12-14T07:20:38.573-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1331787",
+    "ThreadId": "574888",
+    "Html": "<strong>BrianKlish wrote:</strong><br />\n<blockquote>\n&quot;Where do see that it's the same version ?&quot;<br />\n<br />\nSorry I initially misread this.  If I go to Help--&gt;&quot;About Update Services&quot; from either console I see the same version number.  I assume that's showing me the console &gt;version?<br />\n</blockquote>\nHelp is the version from the WSUS-Console, not the Server Version. Where you find the Server-Version? <a href=\"http://www.wsus.de/images/wsus-version.png\" rel=\"nofollow\">http://www.wsus.de/images/wsus-version.png</a> Pls use the WSUS.MSC directly at the Server.\r<br />\n<br />\nFor WSUS-Servers installed on Server-OS lower then W2012 you find here the correct WSUS-Server-Version:\r<br />\n<br />\nWSUS 3.0 (SP2): \tBuild 3.2.7600.226\r<br />\nWSUS 3.0 (SP2) + KB2720211: \tBuild 3.2.7600.251\r<br />\nWSUS 3.0 (SP2) + KB2734608: \tBuild 3.2.7600.256\r<br />\nWSUS 3.0 (SP2) + KB2828185: \tBuild 3.2.7600.262\r<br />\nWSUS 3.0 (SP2) + KB2938066: \tBuild 3.2.7600.274<br />\n",
+    "PostedDate": "2014-12-14T08:12:46.947-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1331794",
+    "ThreadId": "574888",
+    "Html": "To get the Wsus Server version, as Winfried said, open the Wsus.msc, select your Wsus in the treeview at left and look on the right pan. Or open WPP, connect to your Wsus server and go to 'Help'-&gt;'About'\r<br />\nTo get the Wsus Console version, it's a little bit harder, because there is not API method to query that. Open WPP from an administrative computer, connect to your Wsus and  go to 'Help'-&gt;'About'. Don't try by opening WPP on the Wsus server, WPP always display the same version for Wsus and Console when it is running directly on the Wsus server.<br />\n",
+    "PostedDate": "2014-12-14T09:04:01.413-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1331811",
+    "ThreadId": "574888",
+    "Html": "The server version in the WSUS console is 6.3.9600.16384 per your directions above.  From WPP I checked the help about screen and found a difference there.  It shows the same 6.3.9600.16384 for the server that I've seen everywhere else, but the console it says is 6.3.9600.17477.  I have no idea why.  The server has all Windows updates as far as I can tell.  I shall dig further.  Any idea what update gets me to that version?<br />\n",
+    "PostedDate": "2014-12-14T09:42:26.753-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1331824",
+    "ThreadId": "574888",
+    "Html": "It seems that a lot of files were updated to that version with the December update rollup that was delivered last week (<a href=\"http://support.microsoft.com/kb/3013769\" rel=\"nofollow\">http://support.microsoft.com/kb/3013769</a>).  Problem is that update is already installed on both my machine and the server.  Not sure what's going on.<br />\n",
+    "PostedDate": "2014-12-14T10:26:27.8-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1331831",
+    "ThreadId": "574888",
+    "Html": "I have this KB on my wsus server, and I'm still in 6.3.9600.16384. <br />\n",
+    "PostedDate": "2014-12-14T12:01:03.227-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1331832",
+    "ThreadId": "574888",
+    "Html": "Yeah my server is too, but my client appears to be a step ahead somehow.<br />\n",
+    "PostedDate": "2014-12-14T12:21:32.13-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1331834",
+    "ThreadId": "574888",
+    "Html": "IMHO should you use WPP ONLY directly on the WSUS. Is this not possible?<br />\n",
+    "PostedDate": "2014-12-14T12:23:38.197-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1331838",
+    "ThreadId": "574888",
+    "Html": "It is currently.  I was considering running without a GUI on that server so I would be prohibited from doing that.  I also would prefer not to have to RDP first to do administration.<br />\n",
+    "PostedDate": "2014-12-14T12:50:07.007-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1331844",
+    "ThreadId": "574888",
+    "Html": "I get the same results if I run WPP directly on the WSUS server.  Does that make any sense?<br />\n",
+    "PostedDate": "2014-12-14T13:40:33.837-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1331846",
+    "ThreadId": "574888",
+    "Html": "If I check the setting to connect to local server I don't get the error.  If I look at help--&gt;About it shows the exact same versions I saw from my client though.<br />\n",
+    "PostedDate": "2014-12-14T13:44:06.42-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1331847",
+    "ThreadId": "574888",
+    "Html": "I've just seen that on my Wsus server, I have server version = 6.3.9600.16384 and console version = 6.3.9600.17477\r<br />\nIt's kb3013769 that doing this update of the console but not the server !\r<br />\n<br />\nWhen you check the option &quot;Connect to local server&quot;, WPP connect to the same machine where it runs and don't check for console version, it assume that console version and server version will be the same.\r<br />\nIt's the first time I saw this. KB3013769 change the game.<br />\n",
+    "PostedDate": "2014-12-14T13:48:10.767-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341459",
+    "ThreadId": "574888",
+    "Html": "Hello DCourtel,\r<br />\n<br />\nwill there be a version of WPP that does not check the console version upon startup? It would be way more convenient not having to run WPP directly on the WSUS machine or holding back KB3013769 on the other machine...\r<br />\n<br />\nBTW:  Thank you very much for that great tool - I already wonder how we small businesses did it without it before... ;-) We deeply appreciate your work!\r<br />\n<br />\nRegards, Felix<br />\n",
+    "PostedDate": "2015-01-13T06:46:29.673-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348787",
+    "ThreadId": "574888",
+    "Html": "See issue 247 for more information:\r<br />\n<a href=\"https://wsuspackagepublisher.codeplex.com/workitem/247\" rel=\"nofollow\">version error after loading Microsoft KB3013488 or KB3013769</a>\r<br />\n<br />\nThe following registry edit stops the warning from occurring when KB3013488 or KB3013769 are installed:\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Update Services\\Server\\Setup\\VersionString\r<br />\nthe value of the string is set to 6.3.9600.17477 when KB3013488 or KB3013769 are installed.\r<br />\nChanging the value of this registry entry to 6.3.9600.16384 stops the warning occurring!\r<br />\n<br />\nI am not sure how wise it is changing this registry entry as it may have undesirable effects.<br />\n",
+    "PostedDate": "2015-02-03T16:15:21.047-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1352912",
+    "ThreadId": "574888",
+    "Html": "The new release of WPP allow to publish if server version is 6.3.9600.16384  and console version = 6.3.9600.17477.\r<br />\nAdditionnaly, I have add an option to &quot;Ignore Console and Server version mismatch&quot;. <br />\n",
+    "PostedDate": "2015-02-15T08:55:28.88-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-02-15T08:55:34.793-08:00"
+  },
+  {
+    "Id": "1356801",
+    "ThreadId": "574888",
+    "Html": "Thank you DCourtel.  I have been checking often for this new release, but haven't seen it.  When you plan on releasing this?<br />\n",
+    "PostedDate": "2015-02-28T04:43:28.577-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362785",
+    "ThreadId": "574888",
+    "Html": "<blockquote>\nRelease V1.3.1411.09  not work when version mismatch.  DCourtel. publish corrected release, please. Or post instruction how change this option. Thanks.<br />\n</blockquote>\nNormal work only if local connection options true, if remote connection -- error version mismatch.<br />\n",
+    "PostedDate": "2015-03-12T05:45:33.053-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

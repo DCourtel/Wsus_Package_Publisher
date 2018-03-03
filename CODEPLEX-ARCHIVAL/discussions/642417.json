@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1437560",
+    "ThreadId": "642417",
+    "Html": "Hi,\r<br />\n<br />\npossible to include the flash uninstaller in the patch? \r<br />\ncurrently i am patching flash 18.0.0.203 to the clients but some of the clients have flash 18.0.0.209 installed and is causing patching error 80070643 when they are installing the updates.\r<br />\nis there a way to check and not installed to those client with the newer version?\r<br />\n<br />\nthanks<br />\n",
+    "PostedDate": "2015-08-06T07:19:47.523-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1437603",
+    "ThreadId": "642417",
+    "Html": "Hi,<br />\n<blockquote>\npossible to include the flash uninstaller in the patch? <br />\n</blockquote>\nYes, simply make a custom update.<br />\n<blockquote>\nis there a way to check and not installed to those client with the newer version? <br />\n</blockquote>\nYes, when you create your package, in the &quot;IsInstallable&quot; pane, add a rule that detect this version of Adobe Flash Player.<br />\n",
+    "PostedDate": "2015-08-06T11:38:53.85-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-08-11T03:08:13.86-07:00"
+  },
+  {
+    "Id": "1437628",
+    "ThreadId": "642417",
+    "Html": "At the &quot;IsInstallable&quot; pane, do I add the rule at update level or package level? What the difference?<br />\n",
+    "PostedDate": "2015-08-06T13:46:01.01-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1437629",
+    "ThreadId": "642417",
+    "Html": "Is there an option to check if the reg version greater than 18.0.<br />\n",
+    "PostedDate": "2015-08-06T13:47:01.07-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1437667",
+    "ThreadId": "642417",
+    "Html": "Yes, there is a rule for that : <em>Reg_sz to Version</em><br />\n",
+    "PostedDate": "2015-08-06T23:40:08.597-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1437697",
+    "ThreadId": "642417",
+    "Html": "Ok but do I add in update rule or package rule? Any difference? Sent from my iPhone<br />\n",
+    "PostedDate": "2015-08-07T04:31:01.237-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1437702",
+    "ThreadId": "642417",
+    "Html": "No difference. You can add it at any level.<br />\n",
+    "PostedDate": "2015-08-07T06:04:09.953-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

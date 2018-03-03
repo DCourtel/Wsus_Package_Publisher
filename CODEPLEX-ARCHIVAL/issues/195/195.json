@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-07-03T14:31:26.55-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "ERROR : Cannot save configuration because the server is still processing a previous configuration change. ",
+    "LastUpdatedDate": "2014-07-03T14:31:26.55-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-06-04T06:34:22.613-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Unable to generate cert",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 195
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Pls reboot the Server and after reboot and login start WPP with Rightclick: Run as Administrator. Now you can try again to generate a certificate.",
+      "PostedDate": "2014-06-04T09:08:24.45-07:00",
+      "Id": 148819
+    }
+  ]
+}

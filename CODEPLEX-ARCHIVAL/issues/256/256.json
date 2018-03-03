@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-04-14T13:29:15.127-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Bonjour,\r\n\r\nIl serait intéressant de ne pas mettre le fichier options.xml dans l'archive du téléchargement pour deux raisons :\r\n1 - si le fichier n'existe pas, le logiciel le crée.\r\n2 - si l'utilisateur fait une maj du logiciel, il retrouve son paramétrage.\r\n\r\nCordialement.",
+    "LastUpdatedDate": "2015-04-15T05:11:38.11-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-04-13T01:30:36.477-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Supprimer le fichier options.xml de l'archive",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 256
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Bonjour, je ne vois pas le fichier \"Options.xml\" dans l'archive de cette release.\nOù la voyez-vous ?",
+      "PostedDate": "2015-04-13T11:10:29.683-07:00",
+      "Id": 182103
+    },
+    {
+      "Message": "autant pour moi ^^\nune erreur dans ma manipulation.\nmes excuses",
+      "PostedDate": "2015-04-15T05:11:38.11-07:00",
+      "Id": 182897
+    }
+  ]
+}

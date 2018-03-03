@@ -1,0 +1,71 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-11T22:30:42.987-08:00",
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "Bonjour,\r\nJ’ai mis en place WSUSPP et cela fonctionne bien puisque j’ai réussi à déployer « Reader 11.0.10 Update » et « Adobe Flash Player 32-bit/64-bit ActiveX 16.0.0.296 ».\r\nPar contre,  lorsque je teste mon propre package pour java 8u31, j’ai comme résultat dans la console WSUSPP : Non applicable.\r\nJE ne trouve rien dans le log windowsupdate.log sur le poste client. Comment puis-je faire pour analyser et comprendre où est le problème ?\r\nPuis –je trouver comme pour acrobat reader et fash player un catalogue où je peux récupérer l’installation de java ?\r\nD’avance merci de votre aide.\r\nCordialement.\r\nB Lemon\r\n",
+    "LastUpdatedDate": "2015-11-11T22:30:42.987-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-02-09T05:41:03.23-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "package non applicable",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 250
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1427871,
+      "FileName": "windowsupdate.txt",
+      "DownloadUrl": ".\\1427871"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Bonjour,\n> Par contre, lorsque je teste mon propre package pour java 8u31, j’ai comme résultat dans la console WSUSPP : Non applicable. \n\nQuel est le type de fichier que vous avez publiez : Exe ou MSI ?\n\nQuel sont les règles définis dans l'assistant de configuration de la mise à jour (\"EstApplicable\" et \"EstInstallé\") ?\n\n> JE ne trouve rien dans le log windowsupdate.log sur le poste client.\n\nil faut activer le mode debug au niveau de l'agent Windows Update",
+      "PostedDate": "2015-02-09T14:44:05.677-08:00",
+      "Id": 173834
+    },
+    {
+      "Message": "Bonjour,\nJe publie un Exe. J'ai suivi la procédure \"Installing Java 7u21 Without Java Auto Updater.pdf\" disponible sur le site que j'ai adapté pour la version de java 8u31 (N° de produit MSI). J'ai supprimé le package et en le recréant j'ai constaté une erreur de ma part (comme j'installe la version 32 bits, j'avais positionné comme règle \"processor architecture = x86\" alors que mes machines sont en 64 bits. Maintenant je vais plus loin dans le test. Le package est bien  téléchargé, mais il ne s'installe pas.\nJe le voie dans les packages en attente, mais si je clique sur \"installer les mises à jours en attente\", cela ne change rien.\nSur le poste, dans le fichier windowsupdate.log, je voie que l'installation est prévue à 15h00 (ce qui correspond à ma GPO  WindowsUpdate). \nJ'attends donc pour valider que cela fonctionne.\nMerci de votre aide.\nB Lemon",
+      "PostedDate": "2015-02-10T03:11:00.867-08:00",
+      "Id": 174302
+    },
+    {
+      "Message": "Bonjour, \r\nAprès 15h00, j’ai en statut « échoué » et dans dans l’historique des événements (WSUSPP), j’ai l’erreur suivante :\r\nInstallation failure : Windows failed to install the following update with error 0x80070643 : Java 8 Update 31 et j’ai le code d’erreur -2147023293.\r\nJe vous joins le fichier windowsupdate.log.\r\nEncore merci de votre aide.\r\nCordialement.\r\nB Lemon\r\n",
+      "PostedDate": "2015-02-10T08:13:20.613-08:00",
+      "Id": 174326
+    },
+    {
+      "Message": "L’exécutable hors ligne de Java contient le MSI.\nTu peux les trouver sur http://www.java.com/fr/download/manual.jsp\nTu lance l’exécutable sans l'installer pour décompresser l'achive.\nTu trouvera les MSI dans les sous répertoires de  C:\\Users\\<utilisateur>\\AppData\\LocalLow\\Sun\\Java\\",
+      "PostedDate": "2015-02-13T02:19:37.73-08:00",
+      "Id": 174520
+    },
+    {
+      "Message": "Beaucoup de monde semble avoir du mal avec la version 8 de Java. Oracle à dû changer qlq chose qui empêche l'installation avec le compte \"Systeme\". Peut-être essayer avec l'option \"Peut nécessiter une action de l'utilisateur\".",
+      "PostedDate": "2015-02-14T11:26:12.45-08:00",
+      "Id": 174600
+    }
+  ]
+}

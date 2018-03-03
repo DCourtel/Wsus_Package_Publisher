@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1433675",
+    "ThreadId": "641125",
+    "Html": "Hello,\r<br />\n<br />\nI created a new update for the last flash update (18.0.0.203). I choose to supersed the previous version (17.0.0.188) while creating the package. I shouldn't, because I wan't to test the new update before superseded the previous update. \r<br />\n<br />\nIs it possible to remove this setting to rollback to the previous status for update 17.0.0.188 ?\r<br />\n<br />\nThank you<br />\n",
+    "PostedDate": "2015-07-08T23:46:44.83-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

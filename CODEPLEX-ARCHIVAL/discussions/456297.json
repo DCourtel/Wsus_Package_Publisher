@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1090413",
+    "ThreadId": "456297",
+    "Html": "It is really a good kit for us! Thank you!<br />\n<br />\nThere is an feature request from my side. Could you add OU selection module under 'check computers against AD', so that we can compare the computer in specified OU with WSUS.<br />\n",
+    "PostedDate": "2013-09-09T19:21:53.807-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1092735",
+    "ThreadId": "456297",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"https://wsuspackagepublisher.codeplex.com/workitem/113\" rel=\"nofollow\">here</a> to go to the work item and continue the discussion.<br />\n",
+    "PostedDate": "2013-09-14T12:07:34.807-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:07:15.27-07:00"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1349236",
+    "ThreadId": "579532",
+    "Html": "When I send &quot;Detect Now&quot; or &quot;report Now&quot; I get &quot;Error&quot; as result.\r<br />\n<br />\nThe truth is that I can see the Status &quot;Not Installed&quot; and &quot;Not approved&quot; and it shows a last contact and last report dates and time. The client is shown as online too.\r<br />\n<br />\nWhat is happening to me?\r<br />\nHow is possible that Im getting that error but I can see all the data above?\r<br />\n<br />\nThanks in advance.<br />\n",
+    "PostedDate": "2015-02-05T01:30:25.307-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1349267",
+    "ThreadId": "579532",
+    "Html": "These data (Status, date...) are provided by Wsus server.\r<br />\nFor remote commands, ensure that firewall doesn't block.<br />\n",
+    "PostedDate": "2015-02-05T03:05:34.513-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-02-06T04:19:52.227-08:00"
+  },
+  {
+    "Id": "1349672",
+    "ThreadId": "579532",
+    "Html": "DCpurtel, you were right. The pc firewall was blocking.\r<br />\n<br />\nThank you so much for the support.<br />\n",
+    "PostedDate": "2015-02-06T04:19:30.32-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1395721",
+    "ThreadId": "579532",
+    "Html": "Hello,<br />\n<br />\ni've got a problem like above.<br />\n<br />\nWe use the same Hostname after re-installing a client. After re-install the client i can't reach the client via WPP.<br />\n<br />\nOn server commandline i can ping the client and get an answer as requested. When i send &quot;detect now&quot; or &quot;report now&quot; in WPP i got an &quot;no ping&quot; as result.<br />\n<br />\nUnder the tabs for &quot;last contact&quot; or &quot;last report&quot; i get actual Dates but in the tab &quot;OnLine&quot; the WPP shows me &quot;no&quot; (but the machine stands beside me and is online).<br />\n<br />\nWe are using Server2008R2 and for the clients Win7.<br />\nThe Windows Firewall is deaktivated by GPO.<br />\nUnder WSUS i found the client and the client gets actual updates from WSUS but no Updates from WPP.<br />\nWe are using IPv4. IPv6 is deactivated on clients.<br />\nIn WPP Tools-&gt;Settings-&gt;Misc is &quot;Always use IPv4 only&quot; marked. <br />\n<br />\nI've tried &quot;wuauclt.exe /resetauthorization /detectnow&quot; but it change nothing in WPP.<br />\n<br />\nSorry for two things: 1. my bad english (i am working on it to improve) 2. I am realy new on WSUS and WPP....<br />\n<br />\nThank for help<br />\nStefan<br />\n",
+    "PostedDate": "2015-03-25T06:46:43.53-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1395936",
+    "ThreadId": "579532",
+    "Html": "What IP does ping on server to the clients hostname return? Try flushing dns sache on Server.\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2015-03-25T07:51:54.12-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1396298",
+    "ThreadId": "579532",
+    "Html": "Hello Norbert,<br />\n<br />\nPing hostname give the same IP as the entry in the field of the WPP (IP Adress). In WPP this field is orange highlighted. Flushing the DNS cache didn't chance the result. Restarting WPP and the WSUS Server didn't change the result.<br />\n<br />\nThe IP Adress is the same as the client has. <br />\n<br />\nUpdate: <br />\nIf i ping the hostname (ping ABC) i've got a result like &quot;xxx.xxx.xxx.xxx bytes time ttl&quot;. If i ping the FQDN (ping abc.blahblah.blah) i've got an error msg (ping can't find Host, try again).<br />\n<br />\nTrying the same with a client wich is green highlighted in WPP (IP Adress), i get the normal result (IP BYTES TIME TTL).<br />\n",
+    "PostedDate": "2015-03-25T09:26:12.257-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1396588",
+    "ThreadId": "579532",
+    "Html": "So it has nothing to do with WPP. ;) Can you verify, that your Client has registered correctly within your dns Zone?\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2015-03-25T13:41:39.457-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

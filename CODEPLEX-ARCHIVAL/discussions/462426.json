@@ -1,0 +1,114 @@
+[
+  {
+    "Id": "1108146",
+    "ThreadId": "462426",
+    "Html": "Bonjour,\r<br />\n<br />\nj'ai déjà commencé à évoquer ce sujet dans un autre topic (<a href=\"https://wsuspackagepublisher.codeplex.com/discussions/461631\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/461631</a>) mais peut être que pour plus de clarté, je devrais créer un sujet à part entière.\r<br />\n<br />\nSur une 20aine de postes pilotes, je tente d'installer le contrôle ActiveX de la dernière version de Flash Player. C'est la 1ière fois que je déploie celui-ci avec WPP.\r<br />\n<br />\nJ'ai 15 postes OK et 5 en échec (depuis plusieurs jours).\r<br />\nSur les postes en echec, je récupère le fichier FlashInstall.log (dans c:\\WINDOWS\\system32\\Macromed\\Flash du poste).\r<br />\n<br />\nEt alors là .... :D\r<br />\nils n'ont pas tous les mêmes logs. Je précise notamment que j'ai déployé le &quot;plugin&quot; Flash dans le même temps (avec aucun poste en echec par contre, woohooo).\r<br />\n<br />\nLes logs m'indiquent ceci : \r<br />\n1.\r<br />\n<br />\n[...]\r<br />\n0010 [W] 00001100\r<br />\n=X====== M/11.8.800.94 2013-07-24+14-53-53.761 ========\r<br />\n<br />\n﻿=O====== M/11.9.900.117 2013-10-14+06-55-01.865 ========\r<br />\n0000 [I] 00000010 &quot;C:\\WINDOWS\\TEMP\\InstallPlugin_11_9_900_117.exe&quot; -install -msi\r<br />\n0001 [W] 00001036 Software\\Macromedia\\FlashPlayerPlugin/Version 2\r<br />\n0002 [W] 00001036 Software\\Macromedia\\FlashPlayerPlugin/PlayerPath 2\r<br />\n0003 [I] 00000020 C:\\WINDOWS\\system32\\FlashPlayerCPLApp.cpl\r<br />\n0004 [W] 00001037 <a href=\"mailto:SOFTWARE\\MozillaPlugins\\@adobe.com/FlashPlayer/\" rel=\"nofollow\">SOFTWARE\\MozillaPlugins\\@adobe.com/FlashPlayer/</a> 2\r<br />\n0005 [W] 00001037 SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Adobe Flash Player Plugin/ 2\r<br />\n0006 [W] 00001036 Software\\Mozilla\\Firefox\\extensions/Plugins 2\r<br />\n0007 [W] 00001036 Software\\Opera Software/Last CommandLine 2\r<br />\n0008 [W] 00001036 Software\\Opera Software/Last CommandLine 2\r<br />\n0009 [W] 00001036 Software\\Opera Software/Plugin Path 2\r<br />\n0010 [W] 00001036 Software\\Opera Software/Plugin Path 2\r<br />\n0011 [I] 00000014 C:\\WINDOWS\\system32\\Macromed\\Flash\\NPSWF32_11_9_900_117.dll\r<br />\n0012 [I] 00000015 C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashUtil32_11_9_900_117_Plugin.exe\r<br />\n0013 [I] 00000024 C:\\WINDOWS\\system32\\Macromed\\Flash\\plugin.vch\r<br />\n0014 [I] 00000017 C:\\WINDOWS\\system32\\Macromed\\Flash\r<br />\n0015 [I] 00000019 C:\\WINDOWS\\system32\\FlashPlayerCPLApp.cpl\r<br />\n0016 [W] 00001024 C:\\WINDOWS\\system32\\FlashPlayerCPLApp.cpl 183\r<br />\n0017 [W] 00001024 C:\\WINDOWS\\system32\\FlashPlayerApp.exe 183\r<br />\n0018 [I] 00000021 C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashPlayerUpdateService.exe\r<br />\n0019 [W] 00001024 C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashPlayerUpdateService.exe 183\r<br />\n0020 [I] 00000012\r<br />\n=X====== M/11.9.900.117 2013-10-14+06-55-05.271 ========\r<br />\n<br />\n<strong>Remarque</strong> : Je ne vois ici aucune trace des logs d'install de l'activeX; juste du plugin...\r<br />\n<br />\nPour un second poste : <br />\n<ol>\n<li>\n[...]\r<br />\n=X====== M/11.6.602.171 2013-10-09+08-18-29.848 ========<br />\n</li>\n</ol>\n2013-10-11+22-1-58.398 [error] 1226 1062\r<br />\n﻿=O====== M/11.9.900.117 2013-10-11+22-01-54.631 ========\r<br />\n0000 [I] 00000010 &quot;C:\\WINDOWS\\TEMP\\InstallPlugin_11_9_900_117.exe&quot; -install -msi\r<br />\n0001 [I] 00000020 C:\\WINDOWS\\system32\\FlashPlayerCPLApp.cpl\r<br />\n0002 [W] 00001036 Software\\Mozilla\\Firefox\\extensions/Plugins 2\r<br />\n0003 [W] 00001036 Software\\Mozilla\\MaintenanceService\\extensions/Plugins 2\r<br />\n0004 [W] 00001036 Software\\Mozilla\\Mozilla Firefox\\extensions/Plugins 2\r<br />\n0005 [W] 00001036 Software\\Opera Software/Last CommandLine 2\r<br />\n0006 [W] 00001036 Software\\Opera Software/Last CommandLine 2\r<br />\n0007 [W] 00001036 Software\\Opera Software/Plugin Path 2\r<br />\n0008 [W] 00001036 Software\\Opera Software/Plugin Path 2\r<br />\n0009 [I] 00000014 C:\\WINDOWS\\system32\\Macromed\\Flash\\NPSWF32_11_9_900_117.dll\r<br />\n0010 [I] 00000015 C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashUtil32_11_9_900_117_Plugin.exe\r<br />\n0011 [I] 00000024 C:\\WINDOWS\\system32\\Macromed\\Flash\\plugin.vch\r<br />\n0012 [I] 00000017 C:\\WINDOWS\\system32\\Macromed\\Flash\r<br />\n0013 [I] 00000019 C:\\WINDOWS\\system32\\FlashPlayerCPLApp.cpl\r<br />\n0014 [W] 00001024 C:\\WINDOWS\\system32\\FlashPlayerCPLApp.cpl 183\r<br />\n0015 [W] 00001024 C:\\WINDOWS\\system32\\FlashPlayerApp.exe 183\r<br />\n0016 [I] 00000021 C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashPlayerUpdateService.exe\r<br />\n0017 [W] 00001106\r<br />\n0018 [W] 00001106\r<br />\n0019 [W] 00001024 C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashPlayerUpdateService.exe 183\r<br />\n0020 [I] 00000012\r<br />\n=X====== M/11.9.900.117 2013-10-11+22-01-58.445 ========\r<br />\n<br />\nRemarque : Même remarque que pour l'autre. Il n'y a qu'une trace du plugin pas de l'activeX. Et en plus indiqué en Erreur alors que WPP me dit que c'est OK.\r<br />\n<br />\n<br />\n3.Troisième poste : \r<br />\n<br />\n[...]=X====== M/11.0.1.152 2013-09-27+07-52-18.509 ========\r<br />\n<br />\n﻿=O====== M/11.9.900.117 2013-10-10+22-01-18.727 ========\r<br />\n0000 [I] 00000010 &quot;C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashUtil32_11_9_900_117_ActiveX.exe&quot; -refreshIEElevationPolicies\r<br />\n=X====== M/11.9.900.117 2013-10-10+22-01-19.586 ========\r<br />\n<br />\n﻿=O====== M/11.9.900.117 2013-10-10+22-01-18.742 ========\r<br />\n0000 [I] 00000010 &quot;C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashUtil32_11_9_900_117_ActiveX.exe&quot; -refreshIEElevationPolicies\r<br />\n=X====== M/11.9.900.117 2013-10-10+22-01-22.336 ========\r<br />\n<br />\n﻿=O====== M/11.9.900.117 2013-10-10+22-01-18.742 ========\r<br />\n0000 [I] 00000010 &quot;C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashUtil32_11_9_900_117_ActiveX.exe&quot; -refreshIEElevationPolicies\r<br />\n=X====== M/11.9.900.117 2013-10-10+22-01-22.508 ========\r<br />\n<br />\n﻿=O====== M/11.9.900.117 2013-10-10+22-01-18.742 ========\r<br />\n0000 [I] 00000010 &quot;C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashUtil32_11_9_900_117_ActiveX.exe&quot; -refreshIEElevationPolicies\r<br />\n=X====== M/11.9.900.117 2013-10-10+22-01-22.508 ========\r<br />\n<br />\n﻿=O====== M/11.9.900.117 2013-10-10+22-01-15.102 ========\r<br />\n0000 [I] 00000010 &quot;C:\\WINDOWS\\TEMP\\InstallAX_11_9_900_117.exe&quot; -install -msi\r<br />\n0001 [I] 00000020 C:\\WINDOWS\\system32\\FlashPlayerCPLApp.cpl\r<br />\n0002 [I] 00000013 C:\\WINDOWS\\system32\\Macromed\\Flash\\Flash32_11_9_900_117.ocx\r<br />\n0003 [I] 00000015 C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashUtil32_11_9_900_117_ActiveX.exe\r<br />\n0004 [I] 00000016 C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashUtil32_11_9_900_117_ActiveX.dll\r<br />\n0005 [I] 00000023 C:\\WINDOWS\\system32\\Macromed\\Flash\\activex.vch\r<br />\n0006 [I] 00000019 C:\\WINDOWS\\system32\\FlashPlayerCPLApp.cpl\r<br />\n0007 [W] 00001024 C:\\WINDOWS\\system32\\FlashPlayerCPLApp.cpl 183\r<br />\n0008 [I] 00000021 C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashPlayerUpdateService.exe\r<br />\n0009 [I] 00000012\r<br />\n=X====== M/11.9.900.117 2013-10-10+22-01-25.149 ========\r<br />\n<br />\n2013-10-11+22-1-23.541 [error] 1226 1062\r<br />\n﻿=O====== M/11.9.900.117 2013-10-11+22-01-16.697 ========\r<br />\n0000 [I] 00000010 &quot;C:\\WINDOWS\\TEMP\\InstallPlugin_11_9_900_117.exe&quot; -install -msi\r<br />\n0001 [I] 00000020 C:\\WINDOWS\\system32\\FlashPlayerCPLApp.cpl\r<br />\n0002 [W] 00001036 Software\\Mozilla\\Firefox\\extensions/Plugins 2\r<br />\n0003 [W] 00001036 Software\\Opera Software/Last CommandLine 2\r<br />\n0004 [W] 00001036 Software\\Opera Software/Last CommandLine 2\r<br />\n0005 [W] 00001036 Software\\Opera Software/Plugin Path 2\r<br />\n0006 [W] 00001036 Software\\Opera Software/Plugin Path 2\r<br />\n0007 [I] 00000014 C:\\WINDOWS\\system32\\Macromed\\Flash\\NPSWF32_11_9_900_117.dll\r<br />\n0008 [I] 00000015 C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashUtil32_11_9_900_117_Plugin.exe\r<br />\n0009 [I] 00000024 C:\\WINDOWS\\system32\\Macromed\\Flash\\plugin.vch\r<br />\n0010 [I] 00000017 C:\\WINDOWS\\system32\\Macromed\\Flash\r<br />\n0011 [I] 00000019 C:\\WINDOWS\\system32\\FlashPlayerCPLApp.cpl\r<br />\n0012 [W] 00001024 C:\\WINDOWS\\system32\\FlashPlayerCPLApp.cpl 183\r<br />\n0013 [W] 00001024 C:\\WINDOWS\\system32\\FlashPlayerApp.exe 183\r<br />\n0014 [I] 00000021 C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashPlayerUpdateService.exe\r<br />\n0015 [W] 00001106\r<br />\n0016 [W] 00001106\r<br />\n0017 [W] 00001024 C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashPlayerUpdateService.exe 183\r<br />\n0018 [I] 00000012\r<br />\n=X====== M/11.9.900.117 2013-10-11+22-01-23.572 ========\r<br />\n<br />\n<strong>Remarque</strong> : On voit bien une trace du contrôle ActiveX mais pas d'erreur.\r<br />\n<br />\nDans tous les cas les fichiers de logs ont une date de dernière modification au 12/10 alors que la tentative d'installation se fait tous les jours. Peut être est-ce un problème coté Package WSUS mis à dispo sur le poste de l'utilisateur du coup ? \r<br />\nA quel endroit est stocké ce package ? \r<br />\n<br />\n<br />\nMerci<br />\n",
+    "PostedDate": "2013-10-16T01:33:21.743-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1108152",
+    "ThreadId": "462426",
+    "Html": "Ah oui et c'est toujours utile; si je prends un poste qui marche, voici le fichier de logs : \r<br />\n<br />\n[...]\r<br />\n=X====== M/11.8.800.94 2013-10-10+14-33-47.427 ========\r<br />\n<br />\n2013-10-11+7-46-3.363 [error] 1226 1062\r<br />\n﻿=O====== M/11.9.900.117 2013-10-11+07-45-58.431 ========\r<br />\n0000 [I] 00000010 &quot;C:\\WINDOWS\\TEMP\\InstallAX_11_9_900_117.exe&quot; -install -msi\r<br />\n0001 [W] 00001036 Software\\Macromedia\\FlashPlayerActiveX/PlayerPath 2\r<br />\n0002 [I] 00000020 C:\\WINDOWS\\system32\\FlashPlayerCPLApp.cpl\r<br />\n0003 [W] 00001037 SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Adobe Flash Player ActiveX/ 2\r<br />\n0004 [I] 00000013 C:\\WINDOWS\\system32\\Macromed\\Flash\\Flash32_11_9_900_117.ocx\r<br />\n0005 [I] 00000015 C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashUtil32_11_9_900_117_ActiveX.exe\r<br />\n0006 [I] 00000016 C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashUtil32_11_9_900_117_ActiveX.dll\r<br />\n0007 [I] 00000023 C:\\WINDOWS\\system32\\Macromed\\Flash\\activex.vch\r<br />\n0008 [I] 00000019 C:\\WINDOWS\\system32\\FlashPlayerCPLApp.cpl\r<br />\n0009 [W] 00001024 C:\\WINDOWS\\system32\\FlashPlayerCPLApp.cpl 183\r<br />\n0010 [W] 00001024 C:\\WINDOWS\\system32\\FlashPlayerApp.exe 183\r<br />\n0011 [I] 00000021 C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashPlayerUpdateService.exe\r<br />\n0012 [W] 00001106\r<br />\n0013 [W] 00001106\r<br />\n0014 [W] 00001024 C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashPlayerUpdateService.exe 183\r<br />\n0015 [I] 00000012\r<br />\n=X====== M/11.9.900.117 2013-10-11+07-46-03.394 ========\r<br />\n<br />\n2013-10-14+6-51-13.250 [error] 1226 1062\r<br />\n﻿=O====== M/11.9.900.117 2013-10-14+06-51-02.796 ========\r<br />\n0000 [I] 00000010 &quot;C:\\WINDOWS\\TEMP\\InstallPlugin_11_9_900_117.exe&quot; -install -msi\r<br />\n0001 [I] 00000020 C:\\WINDOWS\\system32\\FlashPlayerCPLApp.cpl\r<br />\n0002 [W] 00001036 Software\\Mozilla\\Firefox\\extensions/Plugins 2\r<br />\n0003 [W] 00001036 Software\\Mozilla\\MaintenanceService\\extensions/Plugins 2\r<br />\n0004 [W] 00001036 Software\\Mozilla\\Mozilla Firefox\\extensions/Plugins 2\r<br />\n0005 [W] 00001036 Software\\Opera Software/Last CommandLine 2\r<br />\n0006 [W] 00001036 Software\\Opera Software/Last CommandLine 2\r<br />\n0007 [W] 00001036 Software\\Opera Software/Plugin Path 2\r<br />\n0008 [W] 00001036 Software\\Opera Software/Plugin Path 2\r<br />\n0009 [I] 00000014 C:\\WINDOWS\\system32\\Macromed\\Flash\\NPSWF32_11_9_900_117.dll\r<br />\n0010 [I] 00000015 C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashUtil32_11_9_900_117_Plugin.exe\r<br />\n0011 [I] 00000024 C:\\WINDOWS\\system32\\Macromed\\Flash\\plugin.vch\r<br />\n0012 [I] 00000017 C:\\WINDOWS\\system32\\Macromed\\Flash\r<br />\n0013 [I] 00000019 C:\\WINDOWS\\system32\\FlashPlayerCPLApp.cpl\r<br />\n0014 [W] 00001024 C:\\WINDOWS\\system32\\FlashPlayerCPLApp.cpl 183\r<br />\n0015 [W] 00001024 C:\\WINDOWS\\system32\\FlashPlayerApp.exe 183\r<br />\n0016 [I] 00000021 C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashPlayerUpdateService.exe\r<br />\n0017 [W] 00001106\r<br />\n0018 [W] 00001106\r<br />\n0019 [W] 00001024 C:\\WINDOWS\\system32\\Macromed\\Flash\\FlashPlayerUpdateService.exe 183\r<br />\n0020 [I] 00000012\r<br />\n=X====== M/11.9.900.117 2013-10-14+06-51-13.359 ========<br />\n",
+    "PostedDate": "2013-10-16T01:41:34.82-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1108178",
+    "ThreadId": "462426",
+    "Html": "Bonjour, ci tu veux forcer un poste à re-télécharger la mise à jour, le mieux c'est de supprimer le répertoire &quot;C:\\Windows\\SoftwareDistribution\\Download&quot;<br />\n",
+    "PostedDate": "2013-10-16T02:40:48.02-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T08:12:30.817-08:00"
+  },
+  {
+    "Id": "1108255",
+    "ThreadId": "462426",
+    "Html": "Merci pour ta réponse David (allez je fais le pari que c'est ton prénom ;p)\r<br />\n<br />\nJ'ai supprimé le contenu du dossier Download; j'attends de voir ce soir ce qu'il se passe. (Je n'arrive pas à pousser l'installation du package sans devoir attendre même via le &quot;Install this update...&quot;; en regardant le WindowsUpdate.log il me dit que le package sera installé ce soir à minuit.\r<br />\n<br />\nAutrement, petit hors sujet mais identification d'un léger &quot;bug&quot;.\r<br />\n<br />\nQuand on affiche un package; et qu'on a choisi de classer les informations dans l'onglet Status&quot;, le tri demandé ne s'applique pas lorsque l'on sort de ce package et qu'on y retourne.\r<br />\n<br />\nPar exemple si je sélectionne un package et le tri dans l'onglet Status par la colonne &quot;Status&quot;, celle-ci n'est pas prise en compte si je sors de ce package pour y retourner aussitôt; bien que la petite fléche de tri soit indiquée sur cette colonne. Il faut alors cliquer deux fois pour avoir le tri. C'est un détail mais voila c'est remonté =)<br />\n",
+    "PostedDate": "2013-10-16T05:34:36.16-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1108316",
+    "ThreadId": "462426",
+    "Html": "<blockquote>\nMerci pour ta réponse David (allez je fais le pari que c'est ton prénom ;p) <br />\n</blockquote>\nC'est le début de la célèbrité :-)<br />\n<blockquote>\nJe n'arrive pas à pousser l'installation du package sans devoir attendre même via le &quot;Install this update...&quot;<br />\n</blockquote>\nLes postes ne seraient-ils pas configuré pour &quot;Signaler sans télécharger&quot; les nouvelles mises à jour ?<br />\n<blockquote>\nAutrement, petit hors sujet mais identification d'un léger &quot;bug&quot;. <br />\n</blockquote>\nJe l'ai remarqué aussi et c'est vrai que c'est énervant. Il faut que je regarde ca.<br />\n",
+    "PostedDate": "2013-10-16T07:21:50.56-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1108682",
+    "ThreadId": "462426",
+    "Html": "Re,\r<br />\nles postes sont configurés pour &quot;4 - Télécharger et planifier l'installation&quot;.\r<br />\n<br />\nConcernant le flash, j'ai un peu tout essayé mais sans succès ...\r<br />\nA savoir :\r<br />\nsupprimer le contenu du dossier &quot;C:\\Windows\\SoftwareDistribution\\Download&quot;; \r<br />\nsupprimer le contenu du dossier Systeme32\\Macromed\\Flash\r<br />\n<br />\nPour l'instant rien n'y fait !<br />\n",
+    "PostedDate": "2013-10-17T03:03:17.563-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1108710",
+    "ThreadId": "462426",
+    "Html": "Bon, je pense avoir trouvé en lancant l'install localement depuis le poste.\r<br />\n<br />\nIl y a une clé de registre à supprimer : \r<br />\nhkey_local_machine\\software\\classes\\installer\\products\\00B86459180C72B 4CA69A0A21353E906 (elle fait référence à Flash Player 10).\r<br />\nEn la supprimant ca fonctionne; je vais essayer sur les 4 autres postes impactés histoire d'avoir la confirmation.\r<br />\n<br />\nLa question est : Pourquoi sur ces postes et pas d'autres... ? Aucune idée\r<br />\nL'autre question est de savoir comment faire pour automatiser cette suppression de clé.\r<br />\n<br />\nTu me confirmes que je ne peux pas ajouter dans le package délivré par défaut la suppression de la clé et qu'il faut que je passe par un &quot;Custom MSI&quot; dans un premier temps pour ensuite envoyer mon package d'installation de Flash11 ? (une installation en deux temps c'est bof quand même).\r<br />\n<br />\nMerci<br />\n",
+    "PostedDate": "2013-10-17T04:17:12.787-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T08:12:53.657-08:00"
+  },
+  {
+    "Id": "1108755",
+    "ThreadId": "462426",
+    "Html": "Oui, il faudra faire une custom update pour supprimer la clé de registre et installer Flash player en une seul fois.<br />\n",
+    "PostedDate": "2013-10-17T06:18:27.17-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1109124",
+    "ThreadId": "462426",
+    "Html": "Comment tu fais pour supprimer une clé entière via le Custom Update stp ?\r<br />\nDans Value je mets quoi ? \r<br />\n<br />\nEt ensuite, comment lui indiquer de lancer le flash ? Je choisis &quot;Allow to execute a file&quot; ? Si oui j'indique quoi en &quot;Path to the file&quot;; parameters, etc.. ? \r<br />\n<br />\nJe dois indiquer un &quot;return code&quot; ou ensuite tout est géré comme d'hab ? \r<br />\n<br />\nMerci<br />\n",
+    "PostedDate": "2013-10-18T02:47:58.89-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1109127",
+    "ThreadId": "462426",
+    "Html": "Un petit bug à noter dans le process de création via Custom Update.\r<br />\nUn clique droit sur &quot;Declare a variable to store...&quot; puis &quot;Delete this element&quot; ne fonctionne pas.\r<br />\n<br />\nDe même quand on tente de monter/descendre un élément de la liste (parfois ca monte tout en haut d'un coup et plus possible de le redescendre par exemple).<br />\n",
+    "PostedDate": "2013-10-18T03:03:14.187-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1109352",
+    "ThreadId": "462426",
+    "Html": "<blockquote>\nComment tu fais pour supprimer une clé entière via le Custom Update stp ? <br />\nDans Value je mets quoi ? <br />\n</blockquote>\nEffectivement, le composant 'Registry Value' ne prend en charge que des actions sur des valeurs de clé de registre. Pour le moment, on ne peut pas agir sur les clés en elles mêmes. Ca reste à être ajouté à WPP.\r<br />\nPour contourner le problème, tu peux te baser sur un script VBS.<br />\n<blockquote>\nEt ensuite, comment lui indiquer de lancer le flash ? Je choisis &quot;Allow to execute a file&quot; ?<br />\n</blockquote>\nExactement.<br />\n<blockquote>\nSi oui j'indique quoi en &quot;Path to the file&quot;; parameters, etc.. ? <br />\n</blockquote>\nEtant donné que le fichier d'installation de Flash Player sera dans le même répertoire que la custom update, il faut juste indiquer le nom du fichier (par exemple : FlashPlayer11.9.exe) sans nom de répertoire. Par défaut le CustomUpdateEngine va chercher le fichier à exécuter, dans le même répertoire où il se trouve lui même.\r<br />\nPour le reste ne rien spécifier. Sauf pour &quot;Store Return Code To&quot;, là il faut indiquer le nom de ta variable si tu en utilise une.<br />\n<blockquote>\nJe dois indiquer un &quot;return code&quot; ou ensuite tout est géré comme d'hab ?<br />\n</blockquote>\nOui, N'oublie pas d'ajouter le fichier d'installation de FlashPlayer, une fois que tu est sortie de l'assistant CustomUpdate et que tu est revenu dans l'assistant de création de mise à jour simple.<br />\n",
+    "PostedDate": "2013-10-18T12:16:14.423-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1119992",
+    "ThreadId": "462426",
+    "Html": "Dans la dernière version de WPP, j'ai ajouté la possibilité de travailler avec des valeurs du registre.<br />\n",
+    "PostedDate": "2013-11-07T12:14:28.497-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T08:13:14.107-08:00"
+  },
+  {
+    "Id": "1120028",
+    "ThreadId": "462426",
+    "Html": "Ah extra merci !\r<br />\n<br />\nJ'avais bloqué le déploiement à cause de ça justement !\r<br />\n<br />\nDu coup il y a quelque chose de particulier à faire pour faire la MAJ?<br />\n",
+    "PostedDate": "2013-11-07T14:12:10.263-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1120311",
+    "ThreadId": "462426",
+    "Html": "Il faut recréer la mise à jour et inclure une &quot;Custom Action&quot; Registry Value.<br />\n",
+    "PostedDate": "2013-11-07T21:46:39.217-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

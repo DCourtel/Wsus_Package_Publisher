@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1290092",
+    "ThreadId": "561181",
+    "Html": "Is it possible to approve the parent of some child groups and have the children inherit the approval?<br />\n<br />\nFor example:<br />\n<br />\nComputers<br />\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Test1<br />\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Test2<br />\n<br />\nIf I approve an update for the Computers group, will Test 1 and Test2 also get the approval?<br />\n<br />\nI've got about a hundred nested groups, and it takes quite a while to approve every one of them. It would be much easier and quicker to approve the parent.<br />\n",
+    "PostedDate": "2014-08-14T09:24:32.093-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1290168",
+    "ThreadId": "561181",
+    "Html": "Sorry, for now, WPP doesn't support inheritance. You can use Meta-Group to manage approvals on several groups.<br />\n",
+    "PostedDate": "2014-08-14T13:19:31.81-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1290188",
+    "ThreadId": "561181",
+    "Html": "Is that a feature I don't know about...another piece of software...never heard of it.<br />\n",
+    "PostedDate": "2014-08-14T14:23:43.883-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1290349",
+    "ThreadId": "561181",
+    "Html": "It's a feature of WPP.\r<br />\n<img src=\"http://i.imgur.com/RZESn5S.png\" alt=\"Manage MetaGroup\" />\r<br />\n<br />\nThen create a new MetaGroup :\r<br />\n<img src=\"http://i.imgur.com/v9zLoYJ.png\" alt=\"Create Meta-Group\" />\r<br />\n<br />\nThen approve in Meta-Group :\r<br />\n<img src=\"http://i.imgur.com/6SxIXY5.png\" alt=\"Approve in MetaGroup\" /><br />\n",
+    "PostedDate": "2014-08-15T03:02:52.493-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:25:21.533-07:00"
+  },
+  {
+    "Id": "1291097",
+    "ThreadId": "561181",
+    "Html": "That looks like it will do the trick, but I'm not able to create a MetaGroup. I highlight the WSUS groups I want to include, click Create, enter a name for the MetaGroup, but OK isn't highlighted.\r<br />\n<br />\nWhat's the specific procedure for creating a MetaGroup?<br />\n",
+    "PostedDate": "2014-08-18T09:19:40.433-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1291104",
+    "ThreadId": "561181",
+    "Html": "The Ok button is grayed out because you don't have select any computer group or Meta Group. Select it in the combobox Under the textbox where you have entered the name of the Meta group.<br />\n",
+    "PostedDate": "2014-08-18T09:29:54.11-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1291112",
+    "ThreadId": "561181",
+    "Html": "Finally got it. I think it was the latency that was making it confusing. Logged into a server remotely...takes a few seconds for the drop-down to show up, etc.\r<br />\n<br />\nThank you...this should make life much easier.<br />\n",
+    "PostedDate": "2014-08-18T09:44:00.64-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

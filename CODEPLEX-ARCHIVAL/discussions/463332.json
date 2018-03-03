@@ -1,0 +1,210 @@
+[
+  {
+    "Id": "1111320",
+    "ThreadId": "463332",
+    "Html": "I am having trouble with my first package.  I am installing Java 7 Update 45.  I can get my test system to pick up the install but I cannot get it to just install automatically or without an administrator login.  Can anyone help me with what I am missing at this point?<br />\n",
+    "PostedDate": "2013-10-23T16:49:58.743-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111467",
+    "ThreadId": "463332",
+    "Html": "Hi,\r<br />\n<br />\nhow is your update configuration setup? You have to allow automatic installation (Setting 4) for update notification.\r<br />\nDo you deploy the .msi file or the .exe package?\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-10-24T01:42:35.083-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111562",
+    "ThreadId": "463332",
+    "Html": "Thanks for the response, Norbert.  I am trying both the .msi and the .exe.  I am prone to trying the .msi as I understand it should automatically uninstall the previous install.  However, I also understand that the .exe will not be inhibited by any open usage of Java during the install.  I am not sure where you are pointing me to for Setting 4.  Can you help me get there in more detail?<br />\n",
+    "PostedDate": "2013-10-24T05:42:34.317-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111773",
+    "ThreadId": "463332",
+    "Html": "Hi,\r<br />\n<br />\ndo other updates install without administrator interaction? (Setting 4 is referring to Group policy Setting 4 for automatic download and install)\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-10-24T10:52:17.633-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111784",
+    "ThreadId": "463332",
+    "Html": "\r\n<div dir=\"ltr\">All the windows updates download and install upon shutdown as needed. I think this is what you are asking. In the Windows Update GPO (Server 2008 R2), I have Allow Automatic Updates immediate installation Enabled, if that is what you are saying\r\n as well.</div>\r\n<div><br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-10-24T11:14:32.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111785",
+    "ThreadId": "463332",
+    "Html": "So what exact error do you get when trying to deploy/install JAVA? Take a look at the windowsupdate.log.<br />\n",
+    "PostedDate": "2013-10-24T11:16:43.973-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111788",
+    "ThreadId": "463332",
+    "Html": "\r\n<div dir=\"ltr\">I do not get an error. It will install if I enter an administrator login into the UAC prompt. I am trying to avoid that process though so that it silently installs on a general user. The Windows updates do not require the login, just the ones\r\n I am passing though the WSUS package tool.</div>\r\n<div><br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-10-24T11:35:42.197-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111790",
+    "ThreadId": "463332",
+    "Html": "Did you have an mst file (distributed within the .exe) in the WSUS package?\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-10-24T11:37:57.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111793",
+    "ThreadId": "463332",
+    "Html": "\r\n<div dir=\"ltr\">I just have the MSI and CAB files. I have also tried just the EXE and get the same results.</div>\r\n<div><br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-10-24T11:41:02.327-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111796",
+    "ThreadId": "463332",
+    "Html": "Theres always a .mst file weithin the exe. This has to be in the wsus Package as well. If you don't put it in, you see the effects you're experiencing,<br />\n",
+    "PostedDate": "2013-10-24T11:55:12.593-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111798",
+    "ThreadId": "463332",
+    "Html": "\r\n<div dir=\"ltr\">Shouldn't it work then if I just use the EXE file?</div>\r\n<div><br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-10-24T12:10:22.94-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111801",
+    "ThreadId": "463332",
+    "Html": "Don't know, I'm deploying only .msi package.<br />\n",
+    "PostedDate": "2013-10-24T12:14:13.9-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111802",
+    "ThreadId": "463332",
+    "Html": "\r\n<div dir=\"ltr\">So you include the msi, mst, and cab?</div>\r\n<div><br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-10-24T12:16:32.193-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111806",
+    "ThreadId": "463332",
+    "Html": "\r\n<div dir=\"ltr\">Let me be sure I am doing this right...\r\n<div>I setup the package and I Approve it for a test group of computers. Should it just install itself if left alone, or do I need to trigger the Windows Update manually? I was thinking that nothing is happening automatically so I was forcing the Windows Update\r\n and seeing the package show up there. But then it requires an administrator login to finish the manual update. I am just trying to have it install automatically and silently.</div>\r\n</div>\r\n<div><br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-10-24T12:22:32.29-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111814",
+    "ThreadId": "463332",
+    "Html": "<strong>mattcoulter wrote:</strong><br />\n<blockquote>\nSo you include the msi, mst, and cab?<br />\n</blockquote>\nExactly. :)<br />\n",
+    "PostedDate": "2013-10-24T12:32:40.13-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111815",
+    "ThreadId": "463332",
+    "Html": "<strong>mattcoulter wrote:</strong><br />\n<blockquote>\nLet me be sure I am doing this right... I setup the package and I Approve it for a test group of computers. Should it just install itself if left alone, or do I need to trigger the Windows Update manually? I was thinking that nothing is happening automatically so I was forcing the Windows Update and seeing the package show up there. But then it requires an administrator login to finish the manual update. I am just trying to have it install automatically and silently.<br />\n</blockquote>\nIt will install automatically at the scheduled/configured install time.<br />\n",
+    "PostedDate": "2013-10-24T12:33:39.647-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-11-04T10:10:11.66-08:00"
+  },
+  {
+    "Id": "1111816",
+    "ThreadId": "463332",
+    "Html": "\r\n<div dir=\"ltr\">So, you mean the scheduled time for all the Windows Updates on the WSUS server itself, correct?</div>\r\n<div><br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-10-24T12:37:22.26-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111818",
+    "ThreadId": "463332",
+    "Html": "No, the install date configured with gpo on the Client. ;)<br />\n",
+    "PostedDate": "2013-10-24T12:40:26.23-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111822",
+    "ThreadId": "463332",
+    "Html": "\r\n<div dir=\"ltr\">OK, I'm getting it now... Thanks for clarifying. I think that is the problem is my automatic update is days away and I was triggering it locally manually.</div>\r\n<div><br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-10-24T12:44:42.247-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111823",
+    "ThreadId": "463332",
+    "Html": "You can try setting the package to &quot;never reboots&quot; and See if it helps. If not just configured daily Installation for testing.<br />\n",
+    "PostedDate": "2013-10-24T12:47:09.44-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1112097",
+    "ThreadId": "463332",
+    "Html": "\r\n<div dir=\"ltr\">I'm confused about the settings on the Update tab in WPP. There is the checkbox &quot;When Packag-Type is Update...&quot;, and I am confused whether I would want that enabled or disabled and if that has any impact on this Java Update I'm trying to install\r\n without prompting.</div>\r\n<div><br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-10-25T06:54:32.267-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1112267",
+    "ThreadId": "463332",
+    "Html": "It doesn't, ;)<br />\n",
+    "PostedDate": "2013-10-25T14:20:44.147-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1113125",
+    "ThreadId": "463332",
+    "Html": "Ok, I am having an installation problem.  The update is throwing this error code &quot;Installation failure&quot; &quot;code 0x80070643&quot;\r<br />\n<br />\nAny ideas?<br />\n",
+    "PostedDate": "2013-10-28T08:27:06.737-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1115285",
+    "ThreadId": "463332",
+    "Html": "Can you send me the C:\\Windows\\WindowsUpdate.log file at <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a><br />\n<br />\nThanks.<br />\n",
+    "PostedDate": "2013-10-31T12:22:18.437-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1117177",
+    "ThreadId": "463332",
+    "Html": "\r\n<div dir=\"ltr\">Did you get a chance to see the file I sent?</div>\r\n<div><br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-11-04T06:37:05.773-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1117302",
+    "ThreadId": "463332",
+    "Html": "Nevermind... it is working now.  Not sure why it wasn't working before but now it is installing Java.  Now onto Adobe!<br />\n",
+    "PostedDate": "2013-11-04T10:09:43.44-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-11-07T12:18:05.663-08:00"
+  }
+]

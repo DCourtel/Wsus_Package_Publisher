@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1198810",
+    "ThreadId": "527290",
+    "Html": "Hi! \r<br />\n<br />\nI have an WSUS Server (Win 2008R2) with WPP. Now we want to add an Downstream-Server for our new sub-company in China. (also 2008R2)\r<br />\n<br />\nThe Replica-Server works fine, and all Certs are installed correctly, but if I connect with the WPP-Console (installed on the Main-Server) to the Replica-Server the paths of the packages are pointing to the Main-Server. \r<br />\n<br />\nDoes this mean that clients which pick their updates from the Replica-Server will get their WPP-Packages from the Main-Server? <br />\n",
+    "PostedDate": "2014-01-27T01:11:00.853-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1199094",
+    "ThreadId": "527290",
+    "Html": "Hi StrD,<br />\nIf you are speaking of the 'Folder' field which generally start by 'http ://WsusServerName/Content' or 'https ://WsusServerName/Content', you need to know that this field display the recorded path where Windows Update Clients will have to download the update file. <br />\nIf this field point to your upstream server, that mean that clients will download udpates files from the upstream server. <br />\n<br />\nDo you have setup the downstream server to store updates locally  ?<br />\n",
+    "PostedDate": "2014-01-27T12:30:22.55-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1199564",
+    "ThreadId": "527290",
+    "Html": "Yes I am speaking of the &quot;Folder&quot; field. \r<br />\n<br />\nThe downstream server is configured to store updates locally and the function &quot;download only when approved&quot; is set to active. How do I have to configure the server for downloading the WPP-packages from downstream server?\r<br />\n<br />\nThanks for your help! <br />\n",
+    "PostedDate": "2014-01-28T00:25:28.87-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1200656",
+    "ThreadId": "527290",
+    "Html": "Try to approve the update (in a test group) to see if the downstream server download the file and therefore change the download path.<br />\n",
+    "PostedDate": "2014-01-29T13:21:02.053-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1200778",
+    "ThreadId": "527290",
+    "Html": "I already tried this. \r<br />\n<br />\nThe server has downloaded the file, but the path didn't change. Is there a way to change the path manually? \r<br />\n<br />\nRegards, David<br />\n",
+    "PostedDate": "2014-01-29T23:25:30.73-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1200860",
+    "ThreadId": "527290",
+    "Html": "May be by editing the SQL database, but I didn't recommend this.<br />\n",
+    "PostedDate": "2014-01-30T03:16:37.383-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:59:07.053-07:00"
+  }
+]

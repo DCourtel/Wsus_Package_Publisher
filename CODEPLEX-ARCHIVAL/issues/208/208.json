@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Custom Update Creator",
+      "DisplayName": "Custom Update Creator"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-07-28T09:55:29.74-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Sometimes Custom Updates have almost identical or completely identical steps in the Custom Update Creator. It would be nice to be able to save a series of Custom Update elements to a file and load a file to populate the Custom Update Creator with elements that are already configured or almost configured.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-07-17T12:33:44.217-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Postponed"
+    },
+    "Summary": "Feature Request: saved configurations for Custom Updates",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 208
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Since an XML file is generated already, although in a temporary location, most of the work would probably involve reading the file back in and populating the view with the configuration, that and selecting a place to save the custom update XML files. I'd suggest \"\\Saved Custom Updates\", to continue in the same fashion after the \"Saved Rules\" XML files.",
+      "PostedDate": "2014-07-17T13:17:58.927-07:00",
+      "Id": 152751
+    },
+    {
+      "Message": "Hi Austinian, thanks for your sugestion, in WPP V2 you will be able to save custom updates as templates and load it later.",
+      "PostedDate": "2014-07-28T09:54:48.68-07:00",
+      "Id": 153722
+    }
+  ]
+}

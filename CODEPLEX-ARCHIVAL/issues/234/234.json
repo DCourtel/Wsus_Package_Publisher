@@ -1,0 +1,76 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-11T22:33:37.067-08:00",
+    "CommentCount": 6,
+    "Custom": null,
+    "Description": "Bonjour,\r\n\r\nMes PC client sont en Windows 7 64 bits.\r\n\r\nJe veux tout simplement deployer deux .exe :\r\n-jre-8u25-windows-i586.exe\r\n-jre-8u25-windows-x64.exe\r\n\r\nLe deploiement de ''jre-8u25-windows-x64.exe\" marche parfaitement. \r\nPar contre le deploiement de \"jre-8u25-windows-i586.exe\" ne fonctionne pas.\r\nPour les deux deploiement j'utilise seulement /s comme option.\r\n\r\nvoila l'erreur:\r\n\r\n===================================================================\r\n15:36:28:938\t 568\t1024\tAgent\t*************\r\n2014-11-20\t15:36:28:938\t 568\t1024\tAgent\t** START **  Agent: Installing updates [CallerId = AutomaticUpdates]\r\n2014-11-20\t15:36:28:938\t 568\t1024\tAgent\t*********\r\n2014-11-20\t15:36:28:938\t 568\t1024\tAgent\t  * Updates to install = 1\r\n2014-11-20\t15:36:28:938\t 568\t4fc\tAU\tGetting featured update notifications.  fIncludeDismissed = true\r\n2014-11-20\t15:36:28:938\t 568\t4fc\tAU\tNo featured updates available.\r\n2014-11-20\t15:36:28:954\t 568\t1024\tAgent\t  *   Title = jre1.8.0_25\r\n2014-11-20\t15:36:28:954\t 568\t1024\tAgent\t  *   UpdateId = {96017C9D-2A80-401A-B6D1-12FC19E75122}.1\r\n2014-11-20\t15:36:31:902\t 568\t334\tMisc\tWARNING: Send failed with hr = 80072ee2.\r\n2014-11-20\t15:36:31:902\t 568\t334\tMisc\tWARNING: SendRequest failed with hr = 80072ee2. Proxy List used: <(null)> Bypass List used : <(null)> Auth Schemes used : <>\r\n2014-11-20\t15:36:31:902\t 568\t334\tMisc\tFATAL: SOAP/WinHttp - SendRequest: SendRequestUsingProxy failed. error 0x80072ee2\r\n2014-11-20\t15:36:31:902\t 568\t334\tPT\t  + Last proxy send request failed with hr = 0x80072EE2, HTTP status code = 0\r\n2014-11-20\t15:36:31:902\t 568\t334\tPT\t  + Caller provided credentials = No\r\n2014-11-20\t15:36:31:902\t 568\t334\tPT\t  + Impersonate flags = 0\r\n2014-11-20\t15:36:31:902\t 568\t334\tPT\t  + Possible authorization schemes used = \r\n2014-11-20\t15:36:31:902\t 568\t334\tPT\tWARNING: GetAuthorizationCookie failure, error = 0x80072EE2, soap client error = 5, soap error code = 0, HTTP status code = 200\r\n2014-11-20\t15:36:31:902\t 568\t334\tPT\tWARNING: Failed to initialize Simple Targeting Cookie: 0x80072ee2\r\n2014-11-20\t15:36:31:902\t 568\t334\tPT\tWARNING: PopulateAuthCookies failed: 0x80072ee2\r\n2014-11-20\t15:36:31:902\t 568\t334\tPT\tWARNING: RefreshCookie failed: 0x80072ee2\r\n2014-11-20\t15:36:31:902\t 568\t334\tPT\tWARNING: RefreshPTState failed: 0x80072ee2\r\n2014-11-20\t15:36:31:902\t 568\t334\tPT\tWARNING: PTError: 0x80072ee2\r\n2014-11-20\t15:36:31:902\t 568\t334\tReport\tWARNING: Reporter failed to upload events with hr = 80072ee2.\r\n2014-11-20\t15:36:34:304\t 568\t1024\tDnldMgr\tPreparing update for install, updateId = {96017C9D-2A80-401A-B6D1-12FC19E75122}.1.\r\n2014-11-20\t15:36:34:554\t3772\tea4\tMisc\t===========  Logging initialized (build: 7.6.7600.320, tz: +0100)  ===========\r\n2014-11-20\t15:36:34:554\t3772\tea4\tMisc\t  = Process: C:\\windows\\system32\\wuauclt.exe\r\n2014-11-20\t15:36:34:554\t3772\tea4\tMisc\t  = Module: C:\\windows\\system32\\wuaueng.dll\r\n2014-11-20\t15:36:34:554\t3772\tea4\tHandler\t:::::::::::::\r\n2014-11-20\t15:36:34:928\t3772\tea4\tHandler\t:: START ::  Handler: Command Line Install\r\n2014-11-20\t15:36:34:960\t3772\tea4\tHandler\t:::::::::\r\n2014-11-20\t15:36:34:991\t3772\tea4\tHandler\t  : Updates to install = 1\r\n2014-11-20\t15:36:37:190\t3772\tea4\tHandler\tHandlerSecsInADay = 86400.\r\n2014-11-20\t15:36:41:480\t3772\tea4\tHandler\t  : WARNING: Command line install completed. Return code = 0x00000653, Result = Failed, Reboot required = false\r\n2014-11-20\t15:36:41:652\t3772\tea4\tHandler\t  : WARNING: Exit code = 0x8024200B\r\n2014-11-20\t15:36:41:652\t 568\ta94\tAU\t>>##  RESUMED  ## AU: Installing update [UpdateId = {96017C9D-2A80-401A-B6D1-12FC19E75122}]\r\n2014-11-20\t15:36:41:808\t3772\tea4\tHandler\t:::::::::\r\n2014-11-20\t15:36:41:808\t 568\ta94\tAU\t  # WARNING: Install failed, error = 0x80070643 / 0x00000653\r\n2014-11-20\t15:36:41:933\t3772\tea4\tHandler\t::  END  ::  Handler: Command Line Install\r\n2014-11-20\t15:36:42:151\t3772\tea4\tHandler\t:::::::::::::\r\n2014-11-20\t15:36:42:806\t 568\t1024\tAgent\t*********\r\n2014-11-20\t15:36:42:806\t 568\t1024\tAgent\t**  END  **  Agent: Installing updates [CallerId = AutomaticUpdates]\r\n2014-11-20\t15:36:42:806\t 568\ta94\tAU\tInstall call completed.\r\n2014-11-20\t15:36:42:806\t 568\t1024\tAgent\t*************\r\n2014-11-20\t15:36:42:806\t 568\ta94\tAU\t  # WARNING: Install call completed, reboot required = No, error = 0x00000000\r\n2014-11-20\t15:36:42:806\t 568\ta94\tAU\t#########\r\n2014-11-20\t15:36:42:806\t 568\ta94\tAU\t##  END  ##  AU: Installing updates [CallId = {131A8B14-E312-41B4-A35F-F05452B7B0B5}]\r\n2014-11-20\t15:36:42:806\t 568\ta94\tAU\t#############\r\n\r\n===================================================================",
+    "LastUpdatedDate": "2015-11-11T22:33:37.067-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-11-20T06:57:44.38-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Installation de JAVA 8.25 Windows 7",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 234
+  },
+  "FileAttachments": [
+    {
+      "FileId": 942000,
+      "FileName": "JavaDeployReg.log",
+      "DownloadUrl": ".\\942000"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "bonsoir, le code error = 0x80070643 signifie qu'au moins une mise à jour ne s'est pas installée correctement :-)\nLe code 0x00000653 qui est renvoyé par le fichier MSI, est un code générique. Il faudrait aller voir dans le fichier journal créé par le fichier MSI lors de l'installation.\nQue se  passe-t-il si vous lancez l'installation en double-cliquant directement sur le MSI (avec les droits d'admin) ?",
+      "PostedDate": "2014-11-20T13:48:10.59-08:00",
+      "Id": 166235
+    },
+    {
+      "Message": "Bonjour,\n\nMerci pour votre aide.\nJe ne comprend pas je n'utilise pas de fichier MSI. Par contre si je double clic sur mon .EXE (jre-8u25-windows-i586.exe) l'installation se fait sans probleme.\n\nComment faire pour afficher le fichier journal créer lors de l'installation?\n",
+      "PostedDate": "2014-11-21T00:19:59.277-08:00",
+      "Id": 166287
+    },
+    {
+      "Message": "Bonjour,\n\n> Je ne comprend pas je n'utilise pas de fichier MSI. \n\nC'est parce que le fichier EXE contient un fichier MSI qui est utilisé pour l'installation.\n\n> Comment faire pour afficher le fichier journal créer lors de l'installation?\n\nJe sais pas trop où Oracle pose son fichier journal. Peut être dans C:\\Windows\\Temp\nVoir si plus d'info sur le site d'Oracle Java.",
+      "PostedDate": "2014-11-21T02:56:43.597-08:00",
+      "Id": 166297
+    },
+    {
+      "Message": "voila mon fichier journal\r\n",
+      "PostedDate": "2014-11-21T06:44:56.603-08:00",
+      "Id": 166311
+    },
+    {
+      "Message": "Je suis pas expert Oracle Java, donc difficile pour moi de commenter le fichier journal.\nMais la ligne :\n> latestVersion: 11.25.2 latestHome: C:\\Program Files (x86)\\Java\\jre1.8.0_25\\bin\n\nMe laisse à penser qu'une version de Java 8u25 à déjà été installé (elle à peut-être échoué). Et cela peut empêcher l'installation courante.\n\nJe pense que vous pouvez obtenir plus d'info chez Oracle (forum ou support technique).",
+      "PostedDate": "2014-11-21T08:23:09.987-08:00",
+      "Id": 166322
+    },
+    {
+      "Message": "L'exécutable de Java est un MSI empaqueté.\nIl le décompresse pour le lancé par la suite.\nTu peux le retrouver dans le répertoire C:\\Users\\nomdutilisateur\\AppData\\LocalLow\\Sun\\Java\npour la version 8.25 x86 = jre1.8.0_25 \npour la version 8.25 x64 = jre1.8.0_25_x64\nEt déployer et tester la présence d'un msi est bien plus facile qu'un exe.",
+      "PostedDate": "2015-02-04T04:00:45.607-08:00",
+      "Id": 173454
+    }
+  ]
+}

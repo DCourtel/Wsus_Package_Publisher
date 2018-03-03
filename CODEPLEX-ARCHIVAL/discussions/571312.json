@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "1319207",
+    "ThreadId": "571312",
+    "Html": "Hi,\r<br />\n<br />\nI have just downloaded this application and tired to connect it to my 2012 Server which has the WSUS feature installed and configured.  However, I get the message contained in the subject field.\r<br />\n<br />\nIf I look at the &quot;About&quot; tab is shows Server Version: 6.3.9600.16384 and Console Version: 3.2.7600.226.\r<br />\n<br />\nIs there anything I can do to circumvent this issue?\r<br />\n<br />\nThanks,\r<br />\n<br />\nLee<br />\n",
+    "PostedDate": "2014-11-04T19:09:15.43-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1319231",
+    "ThreadId": "571312",
+    "Html": "Hi, are you using WPP on the Wsus server or from an administrative computer ?<br />\n",
+    "PostedDate": "2014-11-04T21:43:25.817-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1319480",
+    "ThreadId": "571312",
+    "Html": "From an administrative computer, which also has RSAT 7.1 tools installed.<br />\n",
+    "PostedDate": "2014-11-05T14:02:04.06-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1319775",
+    "ThreadId": "571312",
+    "Html": "What OS is installed on this administrative computer ?<br />\n",
+    "PostedDate": "2014-11-06T12:55:45.803-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1319792",
+    "ThreadId": "571312",
+    "Html": "Windows 7 SP1 <br />\n",
+    "PostedDate": "2014-11-06T14:05:54.837-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1320147",
+    "ThreadId": "571312",
+    "Html": "Are you able to manage your Wsus 2012 with RSAT from this computer ?\r<br />\nI have installed RSAT 7.1 on a Windows 7 SP1 computer, and I can't find wsus console.<br />\n",
+    "PostedDate": "2014-11-07T13:26:20.42-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1320148",
+    "ThreadId": "571312",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nAre you able to manage your Wsus 2012 with RSAT from this computer ?<br />\nI have installed RSAT 7.1 on a Windows 7 SP1 computer, and I can't find wsus console.<br />\n</blockquote>\nDavid, you have to start the WSUS-Setup and choose after starting setup the WSUS-Console. In RSAT-Tools there isn't a WSUS-Console.<br />\n",
+    "PostedDate": "2014-11-07T13:28:14.567-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1320276",
+    "ThreadId": "571312",
+    "Html": "I confirm, RSAT for Windows 7 cannot manage Wsus 6.2 or Wsus 6.3. You can't install the Wsus Console from the Wsus-Setup because, in this case, you will end up with a console version of 3.2....<br />\nThere is two ways to use WPP with Wsus 6.2 or 6.3.<br />\n<ul>\n<li>Run WPP on  a Windows 8 or 8.1 with RSAT installed.</li>\n<li>Run WPP directly on the Wsus server.</li>\n</ul>\n",
+    "PostedDate": "2014-11-08T08:04:21.377-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-11-11T00:13:15.707-08:00"
+  },
+  {
+    "Id": "1320421",
+    "ThreadId": "571312",
+    "Html": "Hi David,\r<br />\n<br />\nI'll try running directly from the WSUS server, as we don't have Win8 or 8.1 deployed here.  I shall confirm shortly.<br />\n",
+    "PostedDate": "2014-11-09T15:10:11.873-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-11-10T16:59:59.907-08:00"
+  },
+  {
+    "Id": "1320740",
+    "ThreadId": "571312",
+    "Html": "Hi David,\r<br />\n<br />\nIt works perfectly directly on the WSUS Server.  - I'm starting to tinker with it now :-)\r<br />\n<br />\nThanks for time, effort &amp; help.\r<br />\n<br />\nRegards,\r<br />\n<br />\nLee<br />\n",
+    "PostedDate": "2014-11-10T17:01:06.94-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

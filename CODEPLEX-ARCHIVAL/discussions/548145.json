@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1254728",
+    "ThreadId": "548145",
+    "Html": "Hello,\r<br />\nI would to deploy a msu file (Microsoft hotfix for Windows 7).\r<br />\n<br />\nIs it possible to deploy it with WPP ?\r<br />\n<br />\nI tried with a powershell script and wsusa.exe command line, the update deployed, but my update was not deploy.\r<br />\n<br />\nThanks in advance for your reply<br />\n",
+    "PostedDate": "2014-06-10T03:40:49.517-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1254739",
+    "ThreadId": "548145",
+    "Html": "did you have EXE which include the Hotfix? If yes, try Windows-Key and R &gt; &quot;Path to Hotfix.exe&quot; /? [ENTER] to get the silent parameters. Most of time it is /s for silent and some other switches more. This commandline switches you can use as commandline parameters in the update sequenz.<br />\n",
+    "PostedDate": "2014-06-10T04:05:28.367-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1254961",
+    "ThreadId": "548145",
+    "Html": "Can you see this thread if it meet your needs : <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/453814\" rel=\"nofollow\">Install MSU file</a><br />\n",
+    "PostedDate": "2014-06-10T13:04:47.513-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-06-11T01:09:13.053-07:00"
+  },
+  {
+    "Id": "1255083",
+    "ThreadId": "548145",
+    "Html": "It works perfect !\r<br />\n<br />\nThanks for you powerful help !<br />\n",
+    "PostedDate": "2014-06-11T01:08:59.023-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

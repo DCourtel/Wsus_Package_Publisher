@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update List Viewer",
+      "DisplayName": "Update List Viewer"
+    },
+    "ClosedComment": "I have add the feature. When double-clicking on an update, it open up for revised.",
+    "ClosedDate": "2013-08-12T13:32:55.633-07:00",
+    "CommentCount": 7,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nit would be nice to have double click on an update to be open the update for revising it. (Maybe even as customizing Setting if someone wants doubleclick as resign or anything else)\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1307.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-08-12T02:32:39.98-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Adding double click action to update",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 95
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Good idea ! That should be easy to add this feature.",
+      "PostedDate": "2013-08-12T06:58:57.35-07:00",
+      "Id": 109418
+    },
+    {
+      "Message": "Hi,\n\ncan the Default (double click Action) be formated to be bold on the context menu? And maybe it is possible to let the user choose what Action he wants as double click Action. \n\nregards\nNorbert",
+      "PostedDate": "2013-09-19T02:01:13.663-07:00",
+      "Id": 115012
+    },
+    {
+      "Message": "I have add a setting in 'Tools' -> 'updates' tab :\n![Image](http://i.imgur.com/PPmLG0V.png)\n\nThis allow you to choose the Default Action :\n\n![Image](http://i.imgur.com/mAt4bSn.png)\n",
+      "PostedDate": "2013-09-22T09:51:17.117-07:00",
+      "Id": 115287
+    },
+    {
+      "Message": "Great, could we have such an Option for the Computer grid too? ;)",
+      "PostedDate": "2013-09-22T10:18:34.023-07:00",
+      "Id": 115289
+    },
+    {
+      "Message": "Cool new Feature! :)",
+      "PostedDate": "2013-09-22T11:18:52.263-07:00",
+      "Id": 115292
+    },
+    {
+      "Message": "You forgot to mention this feature in the release notes. ;)",
+      "PostedDate": "2013-09-28T15:59:30.703-07:00",
+      "Id": 115916
+    },
+    {
+      "Message": "You are right. It's corrected now.\nI have also forgot to translate the sentence \"Default action when Double-Clicking on an update\"",
+      "PostedDate": "2013-09-29T03:03:57.287-07:00",
+      "Id": 115935
+    }
+  ]
+}

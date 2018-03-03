@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1052550",
+    "ThreadId": "445932",
+    "Html": "Hi,\r<br />\n<br />\nis it possible to get a function in WPP to create an software package for Terminalserver. On Terminalservers you have to do the following command before the install &quot;change user /install&quot; and after the install you have to type &quot;change user /execute&quot;. I know that I maybe could do it with the &quot;create custom update&quot; but I'm not sure if this will work out ok. Anyways, just asking ...\r<br />\n<br />\nGreatings ...<br />\n",
+    "PostedDate": "2013-06-04T03:50:17.09-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1052779",
+    "ThreadId": "445932",
+    "Html": "If you deploy .msi packages, you do not need to so that. See <a href=\"http://technet.microsoft.com/en-us/library/cc754288(v=ws.10).aspx\" rel=\"nofollow\">http://technet.microsoft.com/en-us/library/cc754288(v=ws.10).aspx</a><br />\n<br />\n<br />\nNote<br />\nIf you install a program from an .msi package, you do not have to run these commands to switch the system in and out of install mode. Instead, you can run the .msi package or associated Setup file directly.<br />\n<br />\nRegards<br />\nNorbert<br />\n",
+    "PostedDate": "2013-06-04T12:54:54.83-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-08T11:23:16.02-07:00"
+  },
+  {
+    "Id": "1052806",
+    "ThreadId": "445932",
+    "Html": "Hi Sk8, WPP doesn't interact with installation on client computers. Once the package is publish, the job is done.\r<br />\nIf you need to put your terminal server in installation mode, you will need to make a Custom Update.<br />\n",
+    "PostedDate": "2013-06-04T13:42:01.63-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]
