@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 207</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 13</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Weitere Informationen:</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>308, 161</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 13</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Eingangsdatum:</value>
+  </data>
+  <data name="txtBxArrivalDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 157</value>
+  </data>
+  <data name="txtBxArrivalDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 20</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>42, 14</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Hersteller:</value>
+  </data>
+  <data name="txtBxCompany.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 11</value>
+  </data>
+  <data name="txtBxCompany.Size" type="System.Drawing.Size, System.Drawing">
+    <value>441, 20</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 161</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Erstellungsdatum:</value>
+  </data>
+  <data name="txtBxCreationDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 158</value>
+  </data>
+  <data name="txtBxCreationDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 20</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 234</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Beschreibung:</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 40</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 13</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Produkt:</value>
+  </data>
+  <data name="txtBxProductTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 37</value>
+  </data>
+  <data name="txtBxProductTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>441, 20</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 66</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 13</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Titel:</value>
+  </data>
+  <data name="txtBxTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 63</value>
+  </data>
+  <data name="txtBxTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>441, 20</value>
+  </data>
+  <data name="btnApprove.Location" type="System.Drawing.Point, System.Drawing">
+    <value>565, 9</value>
+  </data>
+  <data name="btnApprove.Text" xml:space="preserve">
+    <value>Genehmigen</value>
+  </data>
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>565, 155</value>
+  </data>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="btnDecline.Location" type="System.Drawing.Point, System.Drawing">
+    <value>565, 38</value>
+  </data>
+  <data name="btnDecline.Text" xml:space="preserve">
+    <value>Ablehnen</value>
+  </data>
+  <data name="btnExpire.Location" type="System.Drawing.Point, System.Drawing">
+    <value>565, 67</value>
+  </data>
+  <data name="btnExpire.Text" xml:space="preserve">
+    <value>Läuft ab</value>
+  </data>
+  <data name="chkBxIsApproved.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 184</value>
+  </data>
+  <data name="chkBxIsApproved.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 17</value>
+  </data>
+  <data name="chkBxIsApproved.Text" xml:space="preserve">
+    <value>Genehmigt</value>
+  </data>
+  <data name="chkBxIsDeclined.Location" type="System.Drawing.Point, System.Drawing">
+    <value>404, 184</value>
+  </data>
+  <data name="chkBxIsDeclined.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 17</value>
+  </data>
+  <data name="chkBxIsDeclined.Text" xml:space="preserve">
+    <value>Ist Abgelehnt</value>
+  </data>
+  <data name="tabInformations.Text" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 134</value>
+  </data>
+  <data name="lnkLblId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 117</value>
+  </data>
+  <data name="lnkLblId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>441, 13</value>
+  </data>
+  <data name="lnkLblFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 90</value>
+  </data>
+  <data name="lnkLblFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>441, 13</value>
+  </data>
+  <data name="lnkLbAdditionnalInformationURL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 207</value>
+  </data>
+  <data name="lnkLbAdditionnalInformationURL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>455, 20</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 117</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>21, 13</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>ID:</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 90</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 13</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Ordner:</value>
+  </data>
+  <data name="chkBxIsSupersedes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>498, 183</value>
+  </data>
+  <data name="chkBxIsSupersedes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 17</value>
+  </data>
+  <data name="chkBxIsSupersedes.Text" xml:space="preserve">
+    <value>Ist Ersetzt</value>
+  </data>
+  <data name="chkBxIsExpired.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 184</value>
+  </data>
+  <data name="chkBxIsExpired.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 17</value>
+  </data>
+  <data name="chkBxIsExpired.Text" xml:space="preserve">
+    <value>Abgelaufen</value>
+  </data>
+  <data name="btnRevise.Location" type="System.Drawing.Point, System.Drawing">
+    <value>565, 96</value>
+  </data>
+  <data name="btnRevise.Text" xml:space="preserve">
+    <value>Überarbeiten</value>
+  </data>
+  <data name="txtBxDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 234</value>
+  </data>
+  <data name="txtBxDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>541, 132</value>
+  </data>
+  <data name="chkBxShowOnlineComputersOnly.Location" type="System.Drawing.Point, System.Drawing">
+    <value>453, 44</value>
+  </data>
+  <data name="chkBxShowOnlineComputersOnly.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 17</value>
+  </data>
+  <data name="chkBxShowOnlineComputersOnly.Text" xml:space="preserve">
+    <value>Nur Online-Computer anzeigen</value>
+  </data>
+  <data name="lblCredentialNotice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>417, 34</value>
+  </data>
+  <data name="chkCmbBxFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>348, 6</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>294, 9</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Filter:</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Computergruppe:</value>
+  </data>
+  <data name="Computer.HeaderText" xml:space="preserve">
+    <value>Computer</value>
+  </data>
+  <data name="Approbation.HeaderText" xml:space="preserve">
+    <value>Genehmigung</value>
+  </data>
+  <data name="LastContact.HeaderText" xml:space="preserve">
+    <value>Letzter Kontakt</value>
+  </data>
+  <data name="LastReport.HeaderText" xml:space="preserve">
+    <value>Letzter Bericht</value>
+  </data>
+  <data name="OnLine.HeaderText" xml:space="preserve">
+    <value>Online</value>
+  </data>
+  <data name="tabReport.Text" xml:space="preserve">
+    <value>Bericht</value>
+  </data>
+  <data name="chkBxShowRowsWithApproval.Location" type="System.Drawing.Point, System.Drawing">
+    <value>387, 6</value>
+  </data>
+  <data name="chkBxShowRowsWithApproval.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 17</value>
+  </data>
+  <data name="chkBxShowRowsWithApproval.Text" xml:space="preserve">
+    <value>Nur Computergruppen mit Genehmigung anzeigen.</value>
+  </data>
+  <data name="chkBxShowRowsWithValues.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 17</value>
+  </data>
+  <data name="chkBxShowRowsWithValues.Text" xml:space="preserve">
+    <value>Nur Spalten mit Werten anzeigen</value>
+  </data>
+  <data name="Groups.HeaderText" xml:space="preserve">
+    <value>Gruppen</value>
+  </data>
+  <data name="Installed.HeaderText" xml:space="preserve">
+    <value>Installiert</value>
+  </data>
+  <data name="InstalledPendingReboot.HeaderText" xml:space="preserve">
+    <value>Installiert, Neustart ausstehend</value>
+  </data>
+  <data name="Downloaded.HeaderText" xml:space="preserve">
+    <value>Heruntergeladen</value>
+  </data>
+  <data name="NotApplicable.HeaderText" xml:space="preserve">
+    <value>Nicht Verfügbar</value>
+  </data>
+  <data name="NotInstalled.HeaderText" xml:space="preserve">
+    <value>Nicht Installiert</value>
+  </data>
+  <data name="Unknown.HeaderText" xml:space="preserve">
+    <value>Unbekannt</value>
+  </data>
+  <data name="Failed.HeaderText" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="Approval.HeaderText" xml:space="preserve">
+    <value>Genehmigung</value>
+  </data>
+  <data name="dgvReport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 32</value>
+  </data>
+  <data name="dgvReport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>648, 338</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>Computer</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>Genehmigung</value>
+  </data>
+</root>

@@ -1,0 +1,20 @@
+Flash Player :
+http://www.adobe.com/fr/products/flashplayer/distribution3.html
+
+Adobe Reader :
+http://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html
+http://www.adobe.com/downloads/updates/
+ftp://ftp.adobe.com/pub/adobe/reader/win/10.x/
+
+Java :
+http://www.oracle.com/technetwork/java/javase/downloads/index.html
+http://www.oracle.com/technetwork/java/archive-139210.html
+
+Tight VNC :
+http://www.tightvnc.com/download.php
+
+7Zip :
+http://www.7-zip.org/download.html
+
+OCS Inventory : 
+http://www.ocsinventory-ng.org/en/download/download-agent.html

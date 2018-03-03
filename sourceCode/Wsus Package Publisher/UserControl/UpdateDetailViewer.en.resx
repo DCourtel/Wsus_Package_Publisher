@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 231</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 13</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Additional Information URL : </value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>364, 178</value>
+  </data>
+  <data name="txtBxArrivalDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 175</value>
+  </data>
+  <data name="txtBxArrivalDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="txtBxCompany.Size" type="System.Drawing.Size, System.Drawing">
+    <value>469, 20</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 178</value>
+  </data>
+  <data name="txtBxCreationDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 175</value>
+  </data>
+  <data name="txtBxCreationDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 262</value>
+  </data>
+  <data name="txtBxProductTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>469, 20</value>
+  </data>
+  <data name="txtBxTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>469, 20</value>
+  </data>
+  <data name="btnApprove.Location" type="System.Drawing.Point, System.Drawing">
+    <value>574, 6</value>
+  </data>
+  <data name="btnApprove.Text" xml:space="preserve">
+    <value>&amp;Approve...</value>
+  </data>
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>574, 173</value>
+  </data>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>Dele&amp;te</value>
+  </data>
+  <data name="btnDecline.Location" type="System.Drawing.Point, System.Drawing">
+    <value>574, 37</value>
+  </data>
+  <data name="btnDecline.Text" xml:space="preserve">
+    <value>&amp;Decline</value>
+  </data>
+  <data name="btnExpire.Location" type="System.Drawing.Point, System.Drawing">
+    <value>574, 66</value>
+  </data>
+  <data name="btnExpire.Text" xml:space="preserve">
+    <value>&amp;Expire</value>
+  </data>
+  <data name="chkBxIsApproved.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 205</value>
+  </data>
+  <data name="chkBxIsDeclined.Location" type="System.Drawing.Point, System.Drawing">
+    <value>389, 205</value>
+  </data>
+  <data name="tabUpdateDetailViewer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 135</value>
+  </data>
+  <data name="lnkLblId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 118</value>
+  </data>
+  <data name="lnkLblId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>469, 13</value>
+  </data>
+  <data name="lnkLblFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>469, 13</value>
+  </data>
+  <data name="lnkLbAdditionnalInformationURL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 231</value>
+  </data>
+  <data name="lnkLbAdditionnalInformationURL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>489, 20</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 118</value>
+  </data>
+  <data name="chkBxIsSupersedes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>474, 205</value>
+  </data>
+  <data name="chkBxIsExpired.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 205</value>
+  </data>
+  <data name="btnRevise.Location" type="System.Drawing.Point, System.Drawing">
+    <value>574, 95</value>
+  </data>
+  <data name="btnRevise.Text" xml:space="preserve">
+    <value>&amp;Revise</value>
+  </data>
+  <data name="txtBxDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 262</value>
+  </data>
+  <data name="txtBxDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>567, 101</value>
+  </data>
+  <data name="tabInformations.Size" type="System.Drawing.Size, System.Drawing">
+    <value>659, 385</value>
+  </data>
+  <data name="chkBxShowOnlineComputersOnly.Location" type="System.Drawing.Point, System.Drawing">
+    <value>443, 44</value>
+  </data>
+  <data name="lblCredentialNotice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>387, 34</value>
+  </data>
+  <data name="chkCmbBxFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>338, 6</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>284, 9</value>
+  </data>
+  <data name="cmbBxComputerGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 21</value>
+  </data>
+  <data name="Computer.HeaderText" xml:space="preserve">
+    <value>Computers</value>
+  </data>
+  <data name="Approbation.HeaderText" xml:space="preserve">
+    <value>Approval</value>
+  </data>
+  <data name="dgvComputerStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>639, 304</value>
+  </data>
+  <data name="tabStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>659, 385</value>
+  </data>
+  <data name="tabReport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>659, 385</value>
+  </data>
+  <data name="tabUpdateDetailViewer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="tabUpdateDetailViewer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>667, 411</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>670, 411</value>
+  </data>
+</root>

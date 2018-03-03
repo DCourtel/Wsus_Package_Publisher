@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WsusPackagePublisher>
+  <Server>
+    <Name>wsus01</Name>
+    <Port>443</Port>
+    <UseSSL>true</UseSSL>
+    <DeadLineDaysSpan>7</DeadLineDaysSpan>
+    <DeadLineHour>16</DeadLineHour>
+    <DeadLineMinute>30</DeadLineMinute>
+    <DeadLineSecond>00</DeadLineSecond>
+  </Server>
+  <Server>
+    <Name>wsus02</Name>
+    <Port>80</Port>
+    <UseSSL>false</UseSSL>
+    <DeadLineDaysSpan>7</DeadLineDaysSpan>
+    <DeadLineHour>16</DeadLineHour>
+    <DeadLineMinute>30</DeadLineMinute>
+    <DeadLineSecond>00</DeadLineSecond>
+  </Server>  
+</WsusPackagePublisher>
