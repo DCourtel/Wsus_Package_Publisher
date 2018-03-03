@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-09T09:13:36.907-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "I have receive a \"debug info\" file from an anonymous user which try to load a file as a new certificat. When loading this certificat, Wsus throw an Exception \"The parameter is incorrect'.\r\nThe only way to reproduce this error was to rename a non pfx file as *.pfx.\r\n\r\nWsus can only accept pfx file as certificat.\r\nAdd security in the code to avoid a user to try importing a certificat from a remote computer without SSL connection. Add a check to verify the imported file.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.2.1305.26",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-28T14:35:01.73-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "\"The parameter is incorrect\" when loading a Certificat",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 53
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi, DCourtel,\nI think it was me who sent this anonymous debug info (really should have added my email address ...). I use certificates from my own CA and fiddled around with multiple .pfx files. After receiving the error I've thought about the PW for the files & after entering the right one evrything was fine.\n\nThis is what I expected when importing an existing certificate:\n- browse for & choose a saved .pfx file\n- enter PW\n- success (or failure with error description) \n\nAs you changed the order to enter PW in 1st place: why did you do this & can that be changed?\n\nTHX for your good work & regards\nJoerg \n\n",
+      "PostedDate": "2013-05-30T06:26:18.383-07:00",
+      "Id": 101662
+    },
+    {
+      "Message": "Hi Joeschwa,\n\n> I think it was me who sent this anonymous debug info.\n\nI have received only one report for this issue, so yes :-)\n> ...after entering the right one evrything was fine.\n\nGlad to read this.\n> As you changed the order to enter PW in 1st place: why did you do this & can that be changed?\n \nNormally, the button to load a certificate is gray out until the user enter something in the Password TextBox.\nMay be it's not enough as check.",
+      "PostedDate": "2013-05-30T12:10:14.553-07:00",
+      "Id": 101695
+    }
+  ]
+}

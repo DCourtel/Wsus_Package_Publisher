@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1222768",
+    "ThreadId": "539004",
+    "Html": "Hello,\r<br />\n<br />\nI got following problem. I published the new Flashplayer Update out of the catalog within WPP, I approved it for every Computer in our Environment. The Status tells me that it needs to be installed but isn't. So far so Good.\r<br />\n<br />\nBut now my Problem.. None of my PCs show up the new Update (Got it published since wednesday and today is Friday so I think enough time to show up)\r<br />\n<br />\nIf I make a &quot;wuauclt /detectnow&quot; on my pc It doesn't get any update! No Failures are showed. \r<br />\n<br />\nNever had problems with the Updates out of the Adobe Flash Player catalog so I'm kinda confused now.\r<br />\n<br />\nMaybe someone can help me.\r<br />\nThanks \r<br />\nSusie<br />\n",
+    "PostedDate": "2014-03-14T06:55:25.633-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1222880",
+    "ThreadId": "539004",
+    "Html": "Hi Susie,\r<br />\nfirst ensure the update is really approve in this computer group and the status is &quot;not installed&quot;.\r<br />\nThen look at C:\\Windows\\WindowsUpdate.log to see if any error show up.\r<br />\n<br />\nWhat type of file do you have publish EXE or MSI ? Do you have customized 'IsInstalled' rules and/or 'IsInstalleble' rules ?<br />\n",
+    "PostedDate": "2014-03-14T12:13:34.217-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1226243",
+    "ThreadId": "539004",
+    "Html": "I'm experiencing the same issue. The Plugin package seems to install fine, but the ActiveX package fails consistently. \r<br />\n<br />\nThe update package is imported straight from the Adobe Flash Player catalogue. The update cab contains a solitary msi. \r<br />\n<br />\nI've not changed the update package in any way other than to approve for installation for our WSUS pilot group. \r<br />\n<br />\nCheers<br />\n",
+    "PostedDate": "2014-03-24T16:24:11.493-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1226245",
+    "ThreadId": "539004",
+    "Html": "Relevant WindowsUpdate.log entries: <br />\n<pre><code>2014-03-25  10:25:50:253    1172    4bc Agent   *************\n2014-03-25  10:25:50:253    1172    4bc Agent   ** START **  Agent: Installing updates [CallerId = AutomaticUpdatesWuApp]\n2014-03-25  10:25:50:253    1172    4bc Agent   *********\n2014-03-25  10:25:50:253    1172    4bc Agent     * Updates to install = 1\n2014-03-25  10:25:50:257    1172    4bc Agent     *   Title = Adobe Flash Player 32-bit/64-bit ActiveX 12.0.0.77\n2014-03-25  10:25:50:257    1172    4bc Agent     *   UpdateId = {7FD7DFEF-C83F-4B17-914F-F2CC362C194B}.1\n2014-03-25  10:25:50:299    1172    4bc DnldMgr Preparing update for install, updateId = {7FD7DFEF-C83F-4B17-914F-F2CC362C194B}.1.\n2014-03-25  10:25:50:300    9128    117c    Misc    ===========  Logging initialized (build: 7.9.9600.16422, tz: +1100)  ===========\n2014-03-25  10:25:50:300    9128    117c    Misc      = Process: C:\\WINDOWS\\system32\\wuauclt.exe\n2014-03-25  10:25:50:300    9128    117c    Misc      = Module: C:\\WINDOWS\\SYSTEM32\\wuaueng.dll\n2014-03-25  10:25:50:300    9128    117c    Handler :::::::::::::\n2014-03-25  10:25:50:300    9128    117c    Handler :: START ::  Handler: MSI Install\n2014-03-25  10:25:50:300    9128    117c    Handler :::::::::\n2014-03-25  10:25:50:300    9128    117c    Handler   : Updates to install = 1\n2014-03-25  10:25:50:302    9128    117c    Handler MSI update {7FD7DFEF-C83F-4B17-914F-F2CC362C194B}.1 using source image from 1 CABs.\n2014-03-25  10:25:50:536    9128    117c    Handler   : Batch installing 1 updates\n2014-03-25  10:25:50:537    9128    117c    Handler List of MSPs in transaction:\n2014-03-25  10:25:50:537    9128    117c    Handler List of Transforms in transaction:\n2014-03-25  10:25:50:537    9128    117c    Handler MSI final command line:  ALLUSERS=1 MSIRESTARTMANAGERCONTROL=Disable REBOOT=REALLYSUPPRESS\n2014-03-25  10:25:54:147    1172    3c4 Report  REPORT EVENT: {ADD81270-D52B-463C-8F0F-ABF3482E2256}    2014-03-25 10:25:49:147+1100    1   162 [AGENT_DOWNLOAD_SUCCEEDED]  101 {7FD7DFEF-C83F-4B17-914F-F2CC362C194B}  1   0   AutomaticUpdatesWuApp   Success Content Download    Download succeeded.\n2014-03-25  10:25:54:147    1172    3c4 Report  REPORT EVENT: {B1E9935E-C9F5-47A6-8870-8F838991034F}    2014-03-25 10:25:49:147+1100    1   189 [AU_UNSCHEDULED_INSTALL_READY]  102 {00000000-0000-0000-0000-000000000000}  0   0   AutomaticUpdates    Success Content Install Installation Ready: The following updates are downloaded and ready for installation. To install the updates, an administrator should log on to this computer and Windows will prompt with further instructions:  - Adobe Shockwave Player 12.0 - Google Chrome 33.0.1750.154 - Microsoft Visual Studio 2010 Service Pack 1 - Adobe Flash Player 32-bit/64-bit ActiveX 12.0.0.77\n2014-03-25  10:25:54:147    1172    3c4 Report  CWERReporter finishing event handling. (00000000)\n2014-03-25  10:26:11:242    9128    117c    Handler MSP Error List:\n2014-03-25  10:26:11:242    9128    117c    Handler 1: 1722 2: NewCustomAction1 3: C:\\WINDOWS\\TEMP\\InstallAX_12_0_0_77.exe 4: -install -msi \n2014-03-25  10:26:11:242    9128    117c    Handler   : MSI transaction completed. MSI: 0x80070643, Handler: 0x8024200b, Source: No, Reboot: 0\n2014-03-25  10:26:11:242    9128    117c    Handler Updating status for update 0.\n2014-03-25  10:26:11:242    9128    117c    Handler   : WARNING: First failure for update {7FD7DFEF-C83F-4B17-914F-F2CC362C194B}, transaction error = 0x8024200b, MSI result = 0x80070643, MSI action = NewCustomAction1\n2014-03-25  10:26:11:243    9128    117c    Handler Sending completion notification for update 0 ({7FD7DFEF-C83F-4B17-914F-F2CC362C194B}.1).\n2014-03-25  10:26:11:243    9128    117c    Handler Stopping on first error due to FailOptTerminate.\n2014-03-25  10:26:11:243    9128    117c    Handler   : WARNING: Operation failed at update 0, Exit code = 0x8024200B\n2014-03-25  10:26:11:243    9128    117c    Handler :::::::::\n2014-03-25  10:26:11:243    1172    16b4    AU  &gt;&gt;##  RESUMED  ## AU: Installing update [UpdateId = {7FD7DFEF-C83F-4B17-914F-F2CC362C194B}]\n2014-03-25  10:26:11:243    9128    117c    Handler ::  END  ::  Handler: MSI Install\n2014-03-25  10:26:11:243    1172    16b4    AU    # WARNING: Install failed, error = 0x80070643 / 0x000006BA\n2014-03-25  10:26:11:243    9128    117c    Handler :::::::::::::\n2014-03-25  10:26:11:252    1172    4bc Agent   *********\n2014-03-25  10:26:11:252    1172    4bc Agent   **  END  **  Agent: Installing updates [CallerId = AutomaticUpdatesWuApp]\n2014-03-25  10:26:11:252    1172    4bc Agent   *************\n</code></pre>\n\n<strong>Edit</strong><br />\nC:\\WINDOWS\\TEMP\\InstallAX_12_0_0_77.exe is created during the update installation process, but vanishes when the update fails so I don't believe it's a permissions issue.<br />\n",
+    "PostedDate": "2014-03-24T16:27:42.36-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1227452",
+    "ThreadId": "539004",
+    "Html": "This is an installation problem. Try to run the MSI file locally on the computer and see if you have more informations on why it fail.<br />\n",
+    "PostedDate": "2014-03-27T09:48:41.59-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1228470",
+    "ThreadId": "539004",
+    "Html": "Hi and sorry for the late reply (I was sick at home)\r<br />\n<br />\nToday I got my first day at work again and looked into WPP and Flash is installed on every Computer... I don't know what was wrong!\r<br />\n<br />\nSOLVED here! Reason: I don't know... maybe a green midget\r<br />\n<br />\nGreetz Susie<br />\n",
+    "PostedDate": "2014-03-31T00:33:07.957-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-03-31T03:30:08.033-07:00"
+  }
+]

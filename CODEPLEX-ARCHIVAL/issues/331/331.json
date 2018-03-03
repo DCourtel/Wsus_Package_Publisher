@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 6,
+    "Custom": null,
+    "Description": "Hey,\r\n\r\nIch benutze den WPP weitestgehend erfolgreich. Jetzt wollte ich eine Adobe Reader Version (15.007.20033) im Netzwerk ausrollen, aber ich bekomme den Update error code 524. Nicht mehr und nicht weniger. Andere Updates funktionieren (windows updates als auch eigene über den WPP).\r\n\r\nKann jemand damit was anfangen?\r\n\r\nLG Snuggle\r\n\r\n\r\n\r\nHey,\r\n\r\ni am successful using WPP. Now i want to apply Adobe Reader Version 15.007.20033 but now I get the error 524 for the update. Other updates work well.\r\n\r\nCan anybody help?\r\n\r\nbest regards,\r\nSnuggle",
+    "LastUpdatedDate": "2016-03-16T10:49:52.217-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-03-14T06:50:32.253-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Windows Code 524",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 331
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Kannst Du den Reader in der Version denn manuell installieren? Gibt es den 'alten' Reader denn schon auf den Geräten? Willst Du upgraden?",
+      "PostedDate": "2016-03-14T07:36:23.267-07:00",
+      "Id": 197905
+    },
+    {
+      "Message": "Hallo,\nja auf den Clients gibt es bereits Versionen vom Reader, teilweise unterschiedliche Versionen (von 10.XXX zu 11.XXX). Darum sollte es ja mit dem WPP vereinheitlicht werden.\n\nAuf der Testmaschine sollte es erste ein Update werden. Das hat zu einem Fehler 643 geführt. Daraufhin hab ich es deinstalliert und benutzte eine Vollständige MSI von Adobe Reader 15.007.20033 zum Installieren. Manuell installieren ging so einfach nicht.\nKurioser weise kann ich es erst manuell installieren wenn ich zuvor das Microsoft Programm \"MicrosoftFixit.ProgramInstallUninstall.RNP.Run\" ausführe (AdobeReaderDC als Problem auswählen wo dann irgendwas davon entfernt wird - wahrscheinlich Reste in der regestry).\nJedenfalls klappt dann die Installation. Möchte ich es deinstallieren und wieder per update installieren kommt wieder fehler 524.\nAuf einer ähnlichen Testmaschine läuft es genauso ab.\n\n\nps. ich lasse prüfen ob unter SOFTWARE\\Classes\\Installer\\Products\\68AB67CA7DA71301B744CAF070E41400\\SourceList der wert AcroRdrDC1500720033_de_DE.msi vom typ REG_SZ steht. bei der \"ist installierbar\" regel kehre ich das einfach um",
+      "PostedDate": "2016-03-14T08:23:08.727-07:00",
+      "Id": 197907
+    },
+    {
+      "Message": "Puh, sehr verwirrend das alles.\n\nIn https://msdn.microsoft.com/de-de/library/cc759262%28v=ws.10%29.aspx sind die Parameter für MSIEXEC.EXE genannt. Such dir in der Registry eines 32-Bit Windows hier die GUID des Programmes, das Du deinstallieren, bzw. updaten möchtest. HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall Achtung! Wenn es ein 32-Bit Programm auf einem 64-Bit Windows ist, mußt Du an 64WOW denken.\n\nMit msiexec.exe /x {GUID} kannst Du die SW deinstallieren lassen, anschließend dein MSI mit msiexec.exe /i {Name des MSI} installieren lassen. So läuft das eigentlich automatisch ab. Wenn das manuell nicht funktioniert, hast Du ein anderes Problem mit den Clients. Du kannst dir http://wsus.de/uninstall2install anschauen, das Tool macht das mit der mxiexec.exe für dich. Du kannst viele hundert Uninstallstrings angeben und ein MSI zum installieren.\n\nLade das MSI doch auch mal neu herunter, nicht das es durch 3rd Party Software beim Download beschädigt wurde. Vom FTP Server von Adobe kannst Du alles downloaden: ftp://ftp.adobe.com/pub/adobe/reader/win/",
+      "PostedDate": "2016-03-14T12:59:28.013-07:00",
+      "Id": 197912
+    },
+    {
+      "Message": "Danke für die Antwort, ich muss mal schauen ob ich das im Laufe des Tages hinbekomme.",
+      "PostedDate": "2016-03-15T01:13:45.017-07:00",
+      "Id": 197922
+    },
+    {
+      "Message": "Hey Winfried, ich hab den Direktlink von Adobe genommen (den du gepostet hast). Das Ganze noch mal erstellt und den Abfrageschlüssel etwas geändert.\nTja was soll ich sagen, es hat geklappt. Sogar ganz ohne die msiexec befehle.\nWas es mit dem Fehler 524 auf sich hatte, kann ich nur spekulieren, vielleicht tatsächlich eine beschädigte msi Datei.\n\nVielen dank Winfried!",
+      "PostedDate": "2016-03-16T06:12:34.337-07:00",
+      "Id": 197946
+    },
+    {
+      "Message": "Freut mich für dich und Danke für die Rückmeldung. ;)",
+      "PostedDate": "2016-03-16T10:49:52.217-07:00",
+      "Id": 197954
+    }
+  ]
+}

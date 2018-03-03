@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1415154",
+    "ThreadId": "631315",
+    "Html": "I am not sure if this is a feature request, standard functionality or not possible at all but I just throw my idea into the group.\r<br />\n<br />\nI have a working java 8 deployment. I want to install java on computer that I prefer, not for all the computer in the wsus group. If a approve the update for Optional Installation, the update is installed automatically instead of manually. \r<br />\n<br />\nShould this be possible?<br />\n",
+    "PostedDate": "2015-04-17T00:16:50.68-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1415202",
+    "ThreadId": "631315",
+    "Html": "I can't remember exactly, but I think, Microsoft has changed the way &quot;Optional updates&quot; works. It doesn't behave like in Windows XP.<br />\n",
+    "PostedDate": "2015-04-17T03:23:46.173-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

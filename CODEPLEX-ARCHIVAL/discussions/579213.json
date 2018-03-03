@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1348161",
+    "ThreadId": "579213",
+    "Html": "Hi,\r<br />\n<br />\nI know there was discussion regarding not to be able to publish Dell Detectoids, but I cant't find it anymore. Is there a solution in sight or can I help with some logfiles etc.?\r<br />\n<br />\nRegards<br />\n",
+    "PostedDate": "2015-02-02T02:29:31.96-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348398",
+    "ThreadId": "579213",
+    "Html": "You can publish Detectoids since release v1.3.1407.29 <br />\n",
+    "PostedDate": "2015-02-02T13:09:48.667-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348506",
+    "ThreadId": "579213",
+    "Html": "Hi,\r<br />\n<br />\nthanks, now I found the discussion regarding detectoids - in issues. \r<br />\n<br />\nBut there is one thing I don't quite understand: Do the the detectoids reside on the server because (as they are rules)? <br />\n",
+    "PostedDate": "2015-02-02T23:02:21.693-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

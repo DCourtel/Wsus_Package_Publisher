@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1088629",
+    "ThreadId": "455571",
+    "Html": "If i change the computer in computer list, the PP needs long time to respond again.\r<br />\nI guess (but im unsure) its caused of the list of last installed updates in the lower window.\r<br />\nMaybe (if the reason is the refresh) it is possible to chage the deafault settings so the PP did not read that each time the system is changed, and only do if the &quot;refresh&quot; button is pressed. Or maybe add a option in settings menue, so the automatic refresh can be disabled there. <br />\n",
+    "PostedDate": "2013-09-05T00:49:28.16-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1088877",
+    "ThreadId": "455571",
+    "Html": "<blockquote>\nI guess (but im unsure) its caused of the list of last installed updates in the lower window. <br />\n</blockquote>\nYou guess right. I know,this feature is slow, and probably useless. I will probably remove it.<br />\n",
+    "PostedDate": "2013-09-05T10:54:47.447-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1089868",
+    "ThreadId": "455571",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"https://wsuspackagepublisher.codeplex.com/workitem/107\" rel=\"nofollow\">here</a> to go to the work item and continue the discussion.<br />\n",
+    "PostedDate": "2013-09-08T06:54:54.523-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-08T11:22:10.483-07:00"
+  }
+]

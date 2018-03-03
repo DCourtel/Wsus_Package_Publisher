@@ -1,0 +1,76 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "You should import this KB directly into Wsus from the console",
+    "ClosedDate": "2017-05-16T11:17:29.167-07:00",
+    "CommentCount": 6,
+    "Custom": null,
+    "Description": "Hi there,\r\n\r\nQuestion.\r\nI would like to publish KB4012598 on my XP (yeah yeah XP....)\r\nI never publish KB before and i missed the /quiet argument. How can i do ?\r\nI have revise it and resign it, but how to force XP to grab the last revise of the package ?\r\n\r\nThanks a lot",
+    "LastUpdatedDate": "2017-05-17T06:47:35.457-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-05-16T10:15:38.443-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "How to KB4012598",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 374
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1662405,
+      "FileName": "Wsusupdate.rar",
+      "DownloadUrl": ".\\1662405"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "you can import KB410xxx direct in your WSUS. ",
+      "PostedDate": "2017-05-16T11:06:21.97-07:00",
+      "Id": 208356
+    },
+    {
+      "Message": "Could you ask me how ? Sync on wsus doesn't show anything for xp (product XP is checked in list)\n\nHave you some answer about how windows xp windows update works ? Thanks",
+      "PostedDate": "2017-05-16T12:13:01.16-07:00",
+      "Id": 208358
+    },
+    {
+      "Message": "Open WSUS.MSC direct on your WSUS. Select Updates Node, right click > Import Updates. IE must open, now you can search your Update and import the selected Update into WSUS.",
+      "PostedDate": "2017-05-16T12:55:00.797-07:00",
+      "Id": 208361
+    },
+    {
+      "Message": "I just done it. Thanks a lot for the trick ! So i just kick out in rejected my package.\n\nJust one more question, how can i learn all about WSUS and WPP, like this, or how XP WU works. (Like, what happens if I fix a package etc). Docs ? Books ? Somes links ?\n\nThanks !",
+      "PostedDate": "2017-05-16T14:22:06.21-07:00",
+      "Id": 208363
+    },
+    {
+      "Message": "Reading, reading and reading. Testing and testing.",
+      "PostedDate": "2017-05-16T21:53:10.367-07:00",
+      "Id": 208420
+    },
+    {
+      "Message": "I will check if i can separe prod and test computers on wsus (if you have a doc/link/info ? ^^)\r\n\r\nTo delete old entries on XP WU i deployed a GPO at startup computer. see the rar below.\r\n\r\nVBS from here : https://superuser.com/questions/351937/how-do-i-force-windows-to-check-for-updates\r\nAnd cmd run once from : https://community.spiceworks.com/topic/254650-how-to-run-a-script-only-once-in-gpo\r\n\r\nThanks for your help !",
+      "PostedDate": "2017-05-17T06:47:35.457-07:00",
+      "Id": 208426
+    }
+  ]
+}

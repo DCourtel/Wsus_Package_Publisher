@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Install This Update",
+      "DisplayName": "Install This Update"
+    },
+    "ClosedComment": "The option is now Multi-Threaded.",
+    "ClosedDate": "2013-09-09T12:57:38.527-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When selecting option \"Install This Update...\" or \"Install Pending Updates...\" the UI freeze until all computers have received the command. Additionnaly, each computer is treat separately.\r\n\r\n=> Multi-Thread these options to improve speed.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1309.08",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-09-09T12:55:42.85-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "Multi-Thread the \"InstallUpdateNow\" option",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 111
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

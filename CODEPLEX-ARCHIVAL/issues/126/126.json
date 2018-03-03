@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "In WPP V2",
+    "ClosedDate": "2015-02-14T12:34:41.503-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The new feature is great! I would like to also see it expended to allow custom \"superseding updates\" on the right-click menu.",
+    "LastUpdatedDate": "2015-02-14T12:34:41.503-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-02T08:52:21.433-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Postponed"
+    },
+    "Summary": "create a superseding update",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 126
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

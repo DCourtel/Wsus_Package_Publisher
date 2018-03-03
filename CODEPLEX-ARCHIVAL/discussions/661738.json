@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1493660",
+    "ThreadId": "661738",
+    "Html": "Hi All, \r<br />\n<br />\nI am working on to a create package of Citrix receiver deployment using VB Script, the script has been created with exe files. \r<br />\n<br />\ndoes the script run silent installation when creating the exe files or it need to be create with msi files. \r<br />\n<br />\nKindly if possible could anyone share the reference document how to create the custom update.<br />\n",
+    "PostedDate": "2017-03-06T06:49:48.963-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1493895",
+    "ThreadId": "661738",
+    "Html": "Hi All,\r<br />\n<br />\nKindly could anyone support me on providing the Document of create custom update with VBscript.<br />\n",
+    "PostedDate": "2017-03-10T14:54:40.033-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

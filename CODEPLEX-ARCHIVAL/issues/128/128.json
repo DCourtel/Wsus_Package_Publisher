@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-10-07T10:30:34.06-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Quelques fautes de frappes ou erreurs de traduction à corriger\r\ncf PJ",
+    "LastUpdatedDate": "2013-11-01T05:34:37.977-07:00",
+    "PlannedForRelease": "Release v1.3.1310.12",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-07T07:57:52.543-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "[Solved] Quelques fautes de frappes ou erreurs de traduction à corriger",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 128
+  },
+  "FileAttachments": [
+    {
+      "FileId": 741281,
+      "FileName": "French_translation_contextual_menu_under_status_tab.png",
+      "DownloadUrl": ".\\741281"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Euh, la honte :-)",
+      "PostedDate": "2013-10-07T10:30:05.87-07:00",
+      "Id": 117662
+    }
+  ]
+}

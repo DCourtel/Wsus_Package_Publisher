@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update Detail Viewer",
+      "DisplayName": "Update Detail Viewer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-08-23T13:44:15.01-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI'd like to have an option to have the Checkbox \"Show online Computers only\" checked by Default.\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "release v1.3.1407.29",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-08-01T02:38:19.1-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Feature Request: Show online computers only as default",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 211
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Now, each time you change the option \"Show online computers only\", WPP will remember your choice and the next time you will start WPP, the selection will reflect your last setting.\r\n",
+      "PostedDate": "2014-08-01T13:55:40.647-07:00",
+      "Id": 154191
+    },
+    {
+      "Message": "Hi,\n\nthats great. :) Thanks.\n\nRegards\nNorbert",
+      "PostedDate": "2014-08-02T13:39:57.387-07:00",
+      "Id": 154243
+    }
+  ]
+}

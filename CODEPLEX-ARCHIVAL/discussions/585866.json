@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1362048",
+    "ThreadId": "585866",
+    "Html": "How do move or control where the updates are stored on 2012 server current updates for WSUS stored on E drive but I think the default for WSUS Package Publisher is the C Drive <br />\n",
+    "PostedDate": "2015-03-10T00:40:18.663-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362067",
+    "ThreadId": "585866",
+    "Html": "Hi, WPP doesn't store any updates. It import packages into Wsus, then Wsus store it in : \r<br />\n<br />\n \\\\ <em>WsusServerName</em> \\UpdateServicesPackages\\ <em>GUID</em> \r<br />\nand\r<br />\n \\\\ <em>WsusServerName</em> \\WsusContent\\ <em>ID</em> \r<br />\n<br />\nIn WPP, when you select an update, in the 'Informations' Tab, you can click on blue link to open the folder where the update is stored.<br />\n",
+    "PostedDate": "2015-03-10T02:32:21.757-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

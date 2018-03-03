@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1451167",
+    "ThreadId": "647058",
+    "Html": "Bonjour,\r<br />\n<br />\nJ'ai déployé Acrobat Reader DC MSI avec WPP.\r<br />\nL'update est bien appliqué sur les PC.\r<br />\n<br />\nPar contre lorsque je met le MSP (uniquement le dernier en date AcroRdrDCUpd1500920077), il n'est pas proposé au PC.\r<br />\nJ'ai essayé avec le xxxx_MUI.MSP et le xxxx.MSP\r<br />\n<br />\nFaut il passer tous les MSP pour qu'ils s'appliquent les un à la suite des autres ?\r<br />\n<br />\nMerci.<br />\n",
+    "PostedDate": "2015-11-06T05:02:26.533-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452433",
+    "ThreadId": "647058",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"https://wsuspackagepublisher.codeplex.com/workitem/311\" rel=\"nofollow\">here</a> to go to the work item and continue the discussion.<br />\n",
+    "PostedDate": "2015-11-15T09:28:36.463-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

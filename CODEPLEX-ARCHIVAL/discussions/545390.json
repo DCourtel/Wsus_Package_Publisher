@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1245567",
+    "ThreadId": "545390",
+    "Html": "I followed the guide for deploying Adobe Reader with custom settings and it will install just fine on systems that don't have Adobe Reader, but if I have an older version such as 11.0.06, WPP shows the package as already installed. What rules do I need to set?<br />\n",
+    "PostedDate": "2014-05-14T16:52:19.997-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1245890",
+    "ThreadId": "545390",
+    "Html": "you can use one these two solutions :<br />\n<ul>\n<li>Revise the update for 11.0.07 and mark it as supersede 11.0.06</li>\n<li>Revise the update for 11.0.06 and add a rule in the &quot;IsInstalable&quot; tab to detect a registry key like : HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall{AC76BA86-7AD7-1036-7B44-AB0000000001}\\DisplayVersion</li>\n</ul>\n",
+    "PostedDate": "2014-05-15T13:10:33.903-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1245947",
+    "ThreadId": "545390",
+    "Html": "So what is the best route if I don't have 11.0.06 imported into WPP? Should I import and publish and then have 11.0.07 supersede 11.0.06?<br />\n",
+    "PostedDate": "2014-05-15T16:11:56.87-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1246004",
+    "ThreadId": "545390",
+    "Html": "<strong>Otapx wrote:</strong><br />\n<blockquote>\nSo what is the best route if I don't have 11.0.06 imported into WPP? Should I import and publish and then have 11.0.07 supersede 11.0.06?<br />\n</blockquote>\nI think you should do so, Step by Step. ;)<br />\n",
+    "PostedDate": "2014-05-15T23:04:44.577-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1246294",
+    "ThreadId": "545390",
+    "Html": "<strong>WinfriedSonntag wrote:</strong><br />\n<blockquote>\n<strong>Otapx wrote:</strong><br />\n<blockquote>\nSo what is the best route if I don't have 11.0.06 imported into WPP? Should I import and publish and then have 11.0.07 supersede 11.0.06?<br />\n</blockquote>\nI think you should do so, Step by Step. ;)<br />\n</blockquote>\nI did that and am still having trouble :(\r<br />\n<br />\nDo I need to start with version 11.0.0 and work my way all the way to 11.0.07? I don't understand how I can get Flash Player to work fine but Adobe Reader gives me problems. I wonder if it's because Flash Player is a .msi file and Adobe Reader is a .exe?<br />\n",
+    "PostedDate": "2014-05-16T12:01:13.263-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1246484",
+    "ThreadId": "545390",
+    "Html": "Adobe say that Adobe reader 11.0.07 can be installed over any versions of Adobe Reader starting XI. So your &quot;IsInstallable&quot; rule can be something like this :<br />\n<br />\n&lt;msiar:MsiProductInstalled ProductCode=&quot;{ac76ba86-7ad7-1036-7b44-ab0000000001}&quot;/&gt;<br />\n&lt;bar:RegSzToVersion Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall{AC76BA86-7AD7-1036-7B44-AB0000000001}&quot; Value=&quot;DisplayVersion&quot; Comparison=&quot;LessThan&quot; Data=&quot;11.0.7.0&quot;/&gt;<br />\n<br />\nand your &quot;IsInstalled&quot; rule can be something like this :<br />\n<br />\n&lt;bar:RegSzToVersion Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall{AC76BA86-7AD7-1036-7B44-AB0000000001}&quot; Value=&quot;DisplayVersion&quot; Comparison=&quot;EqualTo&quot; Data=&quot;11.0.7.0&quot;/&gt;<br />\n",
+    "PostedDate": "2014-05-17T09:44:36.33-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-19T17:47:43.263-07:00"
+  },
+  {
+    "Id": "1247212",
+    "ThreadId": "545390",
+    "Html": "Thanks DCourtel, the pointers you gave worked. I used OR logic for 32bit and 64bit registry locations. The one change I did make was to remove the MSI Product Installed code so I could update from previous versions as they showed not applicable.<br />\n",
+    "PostedDate": "2014-05-19T17:47:39.067-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

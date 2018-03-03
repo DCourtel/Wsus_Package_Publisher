@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1489086",
+    "ThreadId": "659859",
+    "Html": "Hey there !\r<br />\n<br />\nI have started to try WPP last week. The plan is to use it to publish the PatchMyPC SCUP catalog to our fresh WSUS server so that we can have a central point to publish Microsoft and third-party updates. \r<br />\nBefore buying the full catalog, I wanted to try it so I downloaded their demo catalog but whatever software I try to publish return me a &quot;Not Applicable&quot; status for my test group. \r<br />\n<br />\nWhere should I look at to try and troubleshoot this issue ? Updates are being pulled from WSUS by my client computers but it looks like I have a configuration error somewhere with WPP so any help would be welcome.<br />\n",
+    "PostedDate": "2016-12-01T00:25:11.313-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1489344",
+    "ThreadId": "659859",
+    "Html": "Here's a little addition : all the &quot;Status Not Applicable&quot; issues come with the PatchMyPC demo catalog. There might be something wrong or that does not work with my architecture in their catalog because I successfully published Nmap with a custom update to the same test group.\r<br />\n<br />\nIf one of you has some insights about why there are some publication problems with the PatchMyPC demo catalog, I would be more than happy to hear them. Not that my WSUS service is running on a Windows 2016 server. :)<br />\n",
+    "PostedDate": "2016-12-06T05:26:38.5-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

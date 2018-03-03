@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "May be in WPP V2",
+    "ClosedDate": "2015-02-14T12:23:58.487-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "It would be great if the current logged on user could be added as a column option to the status tab of an update.",
+    "LastUpdatedDate": "2015-02-14T12:23:58.487-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-10-18T01:13:16.65-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Postponed"
+    },
+    "Summary": "Add column to status tab",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 224
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "+1\n\nIn our corp environment, we have approx. 4500 computers spread worldwide so this option would be of a great help.\n\nAny news on this request since the last update from October ?\n\nThanks in advance.\n\nThis tool is AWESOME ! ",
+      "PostedDate": "2014-12-02T02:11:09.443-08:00",
+      "Id": 167057
+    },
+    {
+      "Message": "This list can get quite long, especially on a computer that's being used by multiple people via RDP.\n\nHere's what I get when seeing who is logged onto a system with just a few users. The ones that are labeled with Disc as the state are disconnected users, users that disconnected from the machine without logging off.\n\n```\nPS C:\\> query session /server:SERVER\n SESSIONNAME       USERNAME                 ID  STATE   TYPE        DEVICE\n services                                    0  Disc\n rdp-tcp#1         user004                   1  Active  rdpwd\n                   user001                   2  Disc\n                   user002                   3  Disc\n rdp-tcp#0         user003                   4  Active  rdpwd\n console                                     6  Conn\n rdp-tcp                                 65536  Listen\n```\n\nCan you clarify what you mean by the \"current logged on user\" in cases such as this?",
+      "PostedDate": "2014-12-05T08:03:46.53-08:00",
+      "Id": 167401
+    }
+  ]
+}

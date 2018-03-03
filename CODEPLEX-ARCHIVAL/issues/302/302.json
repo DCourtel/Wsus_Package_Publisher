@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:08.143-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Try to create a custom package with WPP, but it doesn't work. It is for me much more complicated than I expected. The Update installation on the client immediately produces error 80131700\r\n\r\nShould execute the following VB script on the clients for installing two fonts:\r\n\r\n\r\n__Const FONTS = &H14&\r\n\r\nSet objShell = CreateObject(\"Shell.Application\")\r\nSet objFolder = objShell.Namespace(FONTS)\r\nobjFolder.CopyHere \"\\\\srv-file01\\data$\\fonts\\*.ttf\"\r\n\r\nDim objShell\r\nSet objShell = WScript.CreateObject( \"WScript.Shell\" )\r\nobjShell.Run(\"\"\"\\\\srv-file01\\data$\\fonts\\FontReg.exe\"\"\")\r\nSet objShell = Nothing__\r\n\r\nThe script works fine interactive, and was successfully used in the past with SCCM SW distribution.\r\n\r\nIn WPP, tried to create a custom update with \"execute script\" as the action. included all the files in the package foleder (ttf font files, \"install-fonts.vbs\" which contains the commands above and also fontreg.exe)\r\n\r\n---------------\r\nI'm lost. Have read \"Custom Updates.pdf\" from the WPP documentation. It seems that \"custom updates\" are only usable with a \"normal\" Update package, which I haven't. With a normal update package, the wizard screen says that I can specify an EXE, MSI or MSP file, but not a cmd- or Vbs script file. Have the following questions:\r\n\r\n1. Should I create a normal update package instead of a \"custom update\"?\r\n2. Is it possible and supported to run \"cscript.exe <scriptfile>.vbs as the command line for the update?\r\n3. Should I create an \"application\" or \"update\"?\r\n4. Is there any documentation available that decribes such SW distribution tasks with WPP?\r\n5. Has anybody othe tipps how to accomply such tasks with WPP?\r\n\r\nThank you all in advance for any support.\r\nFranz\r\n",
+    "LastUpdatedDate": "2017-02-03T11:50:08.143-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-10-14T09:23:07.893-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Unable to distribute custom update",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 302
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "> The Update installation on the client immediately produces error 80131700\n\nI can't find this error codes in the Wsus error codes table.\n\n> the wizard screen says that I can specify an EXE, MSI or MSP file, but not a cmd- or Vbs script file.\n\nThis how Wsus works\n\n> 1.Should I create a normal update package instead of a \"custom update\"? \n\nNo, if you want to execute a VBS\n\n> 2.Is it possible and supported to run \"cscript.exe <scriptfile>.vbs as the command line for the update? \n\nIt should works as well.\n\n> 3.Should I create an \"application\" or \"update\"? \n\nThere is no impact on the result.\n\n> 4.Is there any documentation available that decribes such SW distribution tasks with WPP? \n\nOnly the doc provided with the download.\n\n> 5.Has anybody othe tipps how to accomply such tasks with WPP?\n\nEnsure that .Net Framework is installed on the targeted computer.\nLook at C:\\Windows\\temp\\CustomUpdateEngine.log\n",
+      "PostedDate": "2015-11-10T12:39:56.94-08:00",
+      "Id": 193410
+    }
+  ]
+}

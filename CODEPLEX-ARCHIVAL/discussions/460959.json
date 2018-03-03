@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1102840",
+    "ThreadId": "460959",
+    "Html": "I use the last version of wsus package publisher, i have 60 Computers and want to deploy a JAVA, but on 30 Computer i get the message that the update is not needed. But i know that update is not installed.  and then when i want to see current user logon, or install this update i get the message &quot;COM Exception ! Verify the firewall settings on the remote computer.&quot; can someone help me, because i dont now why by 30 coputer everything is working but on 30 not.<br />\n",
+    "PostedDate": "2013-10-02T10:24:30.62-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1102865",
+    "ThreadId": "460959",
+    "Html": "Try to find différences between these computers.<br />\nCheck firewall rules and logs to see if anything is blocked. Try to disable firewall for a short period and test if it work.<br />\nEnsure you provide credential that have administrative rights on remote computers. <br />\nCheck services on remote computers (Remote Procedure Call, remote Windows Management...)<br />\n<br />\nSee <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/456981\" rel=\"nofollow\">this post</a><br />\n",
+    "PostedDate": "2013-10-02T11:31:34.56-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-12T08:50:10.613-07:00"
+  },
+  {
+    "Id": "1102874",
+    "ThreadId": "460959",
+    "Html": "ok i will then make some gpo like on the picture. i dont know, but, the reason why i have this message could be because the computers are cloned. But i m not 100 % sure.  but they are in the domain, so sysprep must  be done.<br />\n",
+    "PostedDate": "2013-10-02T11:49:19.317-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

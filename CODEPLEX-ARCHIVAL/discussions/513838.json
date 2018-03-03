@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1183651",
+    "ThreadId": "513838",
+    "Html": "Hello all,\r<br />\n<br />\nlast week I published the latest Adobe Flash Player ActiveX 12.0.0.38 from catalog.\r<br />\nClientside this update shows up as needed update day by day although it is already installed.\r<br />\n<br />\nSomeone else notice this issue with Adobe Flash Player ActiveX 12.0.0.38?\r<br />\n<br />\nGreetings\r<br />\nHelmut<br />\n",
+    "PostedDate": "2014-01-20T01:20:41.017-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1184839",
+    "ThreadId": "513838",
+    "Html": "Hi Helmut, I have published these updates at work today (not using the catalog) and at home using catalog, without any problem.\r<br />\nI can remember that some day ago Adobe have publish/delete/publish/delete/publish... a catalog for Flash Player or Adobe Reader (I can't remember). I have suppose at this moment that they have been some problem with this catalog. May be this time it happen again.\r<br />\nTry to download again the catalog.<br />\n",
+    "PostedDate": "2014-01-20T09:08:52.33-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-21T01:27:03.693-08:00"
+  },
+  {
+    "Id": "1186708",
+    "ThreadId": "513838",
+    "Html": "Thx for your answer Dcourtel, that solved the problem!<br />\n",
+    "PostedDate": "2014-01-21T01:26:32.293-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1189407",
+    "ThreadId": "513838",
+    "Html": "You can find more information on this : <a href=\"http://forums.adobe.com/message/6014720\" rel=\"nofollow\">Here</a><br />\n",
+    "PostedDate": "2014-01-21T21:42:11.313-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1189907",
+    "ThreadId": "513838",
+    "Html": "Thank you for that information.<br />\n",
+    "PostedDate": "2014-01-22T00:28:35.87-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

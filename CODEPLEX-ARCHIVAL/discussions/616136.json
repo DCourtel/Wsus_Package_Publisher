@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "1398521",
+    "ThreadId": "616136",
+    "Html": "Hi guys,\r<br />\ntoday I provoke a smal ... bug? feature?- not sure .....  in WPP.\r<br />\nI create a new update for deploying FreeCAD, and after the first installation I realized that the product registered with a private Name as Publisher and not as &quot;FreeCAD&quot;.\r<br />\n<br />\nI switched to my WPP update and changed the publishers name. After rebuilding the Update I found the new Publisher &quot;Juergen Riegel(1)&quot; in tree structure, but also the old publisher,&quot;  Freecad(1) &quot;\r<br />\nThey are both marked with (1) , but there is no visible update under the old publishers path.\r<br />\n<br />\nI dont found a way to delete the old publisher an product entry &quot;FreeCAD&quot; in Tree Structure on the left window.<br />\n",
+    "PostedDate": "2015-04-01T01:55:43.683-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1398523",
+    "ThreadId": "616136",
+    "Html": "<strong>GMBU wrote:</strong><br />\n<blockquote>\nHi guys,<br />\ntoday I provoke a smal ... bug? feature?- not sure .....  in WPP.<br />\nI create a new update for deploying FreeCAD, and after the first installation I realized that the product registered with a private Name as Publisher and not as &quot;FreeCAD&quot;.<br />\n</blockquote>\nWich Registration? In WPP? What do you define as Vendor in your Update?<br />\n<blockquote>\nI switched to my WPP update and changed the publishers name. After rebuilding the Update I found the new Publisher &quot;Juergen Riegel(1)&quot; in tree structure, but also the old publisher,&quot;  Freecad(1) &quot;<br />\nThey are both marked with (1) , but there is no visible update under the old publishers path.<br />\n</blockquote>\nCan you post screenshots?<br />\n",
+    "PostedDate": "2015-04-01T02:12:55.08-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1398527",
+    "ThreadId": "616136",
+    "Html": "<strong>WinfriedSonntag wrote:</strong><br />\n<blockquote>\n<strong>GMBU wrote:</strong><br />\n<blockquote>\nHi guys,<br />\ntoday I provoke a smal ... bug? feature?- not sure .....  in WPP.<br />\nI create a new update for deploying FreeCAD, and after the first installation I realized that the product registered with a private Name as Publisher and not as &quot;FreeCAD&quot;.<br />\n</blockquote>\nWich Registration? In WPP? What do you define as Vendor in your Update?<br />\n</blockquote>\nno, after Client installing i checked installed Software ( &quot;Programms &amp; Features&quot; ) . I see Vendor was &quot;Juergen Riegel&quot;, and not &quot;FreeCAD&quot;, as I think.  So I want to correct the Vendors Name in my update. \r<br />\nAfter changing the Vendors name, now I have two Vendor entrys.<br />\n<blockquote>\n<blockquote>\nI switched to my WPP update and changed the publishers name. After rebuilding the Update I found the new Publisher &quot;Juergen Riegel(1)&quot; in tree structure, but also the old publisher,&quot;  Freecad(1) &quot;<br />\nThey are both marked with (1) , but there is no visible update under the old publishers path.<br />\n</blockquote>\nCan you post screenshots?<br />\n</blockquote>\n<img src=\"http://u.jimdo.com/www67/o/s0b8f83a6d159cd45/img/i1368c3128d606e00/1427880890/std/image.jpg\" alt=\"Image\" /><br />\n",
+    "PostedDate": "2015-04-01T02:36:59.99-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1398536",
+    "ThreadId": "616136",
+    "Html": "OK, click on FreeCAD &gt; right side decline and delete the product. Now click again twice on the left freecad in Juergen Riegel, now you can delete the freecad. If it is the last update in list, Juergen Riegel will now remove.<br />\n<br />\n<a href=\"http://www.myimg.de/?img=WPP10def2.jpg\" rel=\"nofollow\">http://www.myimg.de/?img=WPP10def2.jpg</a><br />\n",
+    "PostedDate": "2015-04-01T02:47:14.437-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1398540",
+    "ThreadId": "616136",
+    "Html": "FreeCAD(1)\r<br />\n  FreeCAD(0)\r<br />\n<br />\nif i open Kontextmenue on this point, &quot;Product delete...&quot; is greyed, because there is no Update inside.\r<br />\n<br />\nI dont want remove &quot; Juergen Riegel!, this is the correct Vendor, I want to remove &quot;Freecad/Freecad&quot;  <br />\n",
+    "PostedDate": "2015-04-01T02:53:58.703-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1398561",
+    "ThreadId": "616136",
+    "Html": "Click on FreeCAD(1)  and now a rightclick on FreeCAD(0). Can you remove FreeCAD(0) now?<br />\n<br />\nWhich WSUS from WPP you are using?<br />\n",
+    "PostedDate": "2015-04-01T03:45:06.957-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1398569",
+    "ThreadId": "616136",
+    "Html": "No, I will tell you again:<br />\nif i open contextmenue on this point, &quot;Product delete...&quot; is greyed, <strong>because there is no Update Product inside</strong>.  The Update was moved to a new Tree J.Riegel/Freecad as I changed the Vendor!<br />\n<br />\n<br />\n<img src=\"http://u.jimdo.com/www67/o/s0b8f83a6d159cd45/img/i1368c3128d606e00/1427887049/std/image.jpg\" alt=\"Image\" /><br />\n<br />\nWhat do you mean - wich WSUS ? Actual WSUS for WS2012.<br />\n",
+    "PostedDate": "2015-04-01T04:19:42.823-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1398571",
+    "ThreadId": "616136",
+    "Html": "Sorry, i mean: Which Version from WPP you are using? ;)\r<br />\n<br />\nYes, i unterstand. Click on FreeCAD(1), after this click again on  FreeCAD(0). Now you can rightclick &gt; delete. \r<br />\nOr shutdown WPP, wait 10 Seconds and start WPP again, now try to delete.<br />\n",
+    "PostedDate": "2015-04-01T04:35:59.627-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1398573",
+    "ThreadId": "616136",
+    "Html": "ok...<br />\nWPP Relaese 1.3.1411.9<br />\n<br />\n&quot;Click on FreeCAD(1), after this click again on FreeCAD(0). Now you can rightclick &gt; delete. &quot;<br />\n<br />\nNOOOOOO. I Cant ! there are three entrys in this context-menue:<br />\n<br />\ncreate update ...<br />\ncreate userdefined update...<br />\ndelete product <br />\n<br />\nAnd the last option, &quot; delete product &quot;, is greyed, I cant use it !<br />\n<br />\n&quot;Or shutdown WPP, wait 10 Seconds and start WPP again, now try to delete.&quot;<br />\n<br />\nNice idea, I have the same idea this morning :-), but it does'nt help!<br />\n",
+    "PostedDate": "2015-04-01T04:47:20.93-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1398585",
+    "ThreadId": "616136",
+    "Html": "Ok, there is a workaround:<br />\ndelete the update, where you rename with a new Vendor.  New Vendor and Product entry will delete automaticly if there is no update inside.  Then, after a restart of WPP , the old Vendor entry are deleted too.<br />\n<br />\nStart again with creating your update with the correct Vendor description and remember: Do not change the Vendor after creating a update!<br />\n<br />\nThis is only a workaround. But I think there is a little bit program-code correction nessasary. It will be better if it is not possible to change Vendor an Product after creating and publish a update! <br />\n<br />\nPS: EDIT:<br />\nOk, and because I do the same in the past with LUP, I make a small description how to deploy this software and what are the used rules ( only in german, sorry, Im not a mainstream blogger like Winfried :-) :<br />\n<a href=\"http://road-books.jimdo.com/2015/04/01/freecad-mit-wusus-package-publisher-und-wsus-verteilen-zur-optionalen-installation-bereitstellen/\" rel=\"nofollow\">FreeCAD deploying with WPP</a><br />\n<br />\n<br />\nThank you,<br />\nSirko<br />\n",
+    "PostedDate": "2015-04-01T06:00:29.863-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1399167",
+    "ThreadId": "616136",
+    "Html": "Hi Sirko,<br />\n<br />\nyou need to configure this Setting:<br />\n&quot;Neues Update veröffentlichen &quot;Das Update immer in der WSUS-Konsole sichtbar machen...&quot; oder &quot;Immer wählen&quot;.<br />\nThan restart WPP or do click the reconnect button.<br />\n<br />\nAfter this you should be able to delete the empty product/category.<br />\n<br />\nHTH<br />\nNorbert<br />\nPS: Mentioned here <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/471290\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/471290</a><br />\n",
+    "PostedDate": "2015-04-02T13:44:37.287-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

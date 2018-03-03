@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1310149",
+    "ThreadId": "568939",
+    "Html": "I've been experimenting with the deployment of the x86 and x64 C++ 2012 Redistributable. \r<br />\n<br />\nGenerally things are looking good, but I am struggling with determining if the update is already installed. My preferred method have been a Registry Value “SOFTWARE\\Microsoft\\DevDiv\\vc\\Servicing\\11.0\\RuntimeMinimum\\Install” or &quot;SOFTWARE\\Wow6432Node\\Microsoft\\DevDiv\\vc\\Servicing\\11.0\\RuntimeMinimum\\Install&quot; equally 1 (I’ve also tried 00000001), specifying REG_DWORD. \r<br />\n<br />\nAlthough it’s an exe, rather than MSI, I’ve also tried the MSI codes from the registry.\r<br />\n<br />\nNeither method seems to work, with the installs being available no matter what, any ideas or hints please?<br />\n",
+    "PostedDate": "2014-10-03T00:55:51.603-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1310276",
+    "ThreadId": "568939",
+    "Html": "Can you give us :<br />\n<ul>\n<li>The exact registry key you want to check (Key + Value + Value type + Data).</li>\n<li>The exact &quot;Isinstalled&quot; rule you have try.</li>\n<li>The MSI product code you have tested.</li>\n<li>The result with that rule.</li>\n</ul>\n",
+    "PostedDate": "2014-10-03T09:09:44.613-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

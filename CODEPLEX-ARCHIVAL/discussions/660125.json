@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1489810",
+    "ThreadId": "660125",
+    "Html": "Since yesterday, when downloading the latest updates of flash player 24.0.0.186, I have the following error:\r<br />\n&quot;Failed to sign package; eror was: 2147942411&quot;.\r<br />\nwhat should I do ?\r<br />\n<br />\nthank you in advance<br />\n",
+    "PostedDate": "2016-12-14T00:23:07.207-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1489911",
+    "ThreadId": "660125",
+    "Html": "Have a look on your certificate. How long it is valid?<br />\n",
+    "PostedDate": "2016-12-15T04:53:30.663-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1489919",
+    "ThreadId": "660125",
+    "Html": "The certificate has an expiry date of 19/05/2019.\r<br />\n<br />\nI simply import the latest Flash Player (24.0.0.186) update that does not work with the ADOBE catalog.\r<br />\n<br />\nWhen I go ahead to the download on the ADOBE site, I can publish Flah's MSI and Plugin without worries on the PC park<br />\n",
+    "PostedDate": "2016-12-15T07:43:51.66-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

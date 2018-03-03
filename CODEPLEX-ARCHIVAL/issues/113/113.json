@@ -1,0 +1,71 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "AD-Wsus Comparer",
+      "DisplayName": "AD-Wsus Comparer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-10-05T13:40:59.973-07:00",
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "It is really a good kit for us! Thank you!\r\n\r\nThere is an feature request from my side. Could you add OU selection module under 'check computers against AD', so that we can compare the computer in specified OU with WSUS.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1309.28",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-09-14T12:07:34.683-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Add a module under 'check computers against AD'",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 3,
+    "Id": 113
+  },
+  "FileAttachments": [
+    {
+      "FileId": 741112,
+      "FileName": "Untitled.jpg",
+      "DownloadUrl": ".\\741112"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Add a button to select in which OU to search computers :\r\n\r\n![Select OU](http://i.imgur.com/Pl7kUL3.png)\r\n\r\n![OU Selector](http://i.imgur.com/C9R37JC.png)",
+      "PostedDate": "2013-10-01T13:12:17.397-07:00",
+      "Id": 117125
+    },
+    {
+      "Message": "Really appreciate!",
+      "PostedDate": "2013-10-06T01:22:31.6-07:00",
+      "Id": 117574
+    },
+    {
+      "Message": "Dear DCourtel,\r\n\r\nI found something wrong when using the module to export the record. You can find the detals from the screen shot.\r\n\r\nThanks.",
+      "PostedDate": "2013-10-06T23:53:30.553-07:00",
+      "Id": 117617
+    },
+    {
+      "Message": "looks like your Excel try to parse the csv file, using the ',' as separator. Tell Excel to use the ';'",
+      "PostedDate": "2013-10-07T08:40:04.353-07:00",
+      "Id": 117651
+    },
+    {
+      "Message": "yes, it is working after I change the list separator. \n\nThanks again for your WPP.",
+      "PostedDate": "2013-10-07T23:23:11.623-07:00",
+      "Id": 117746
+    }
+  ]
+}

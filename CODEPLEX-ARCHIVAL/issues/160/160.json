@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Custom Update Creator",
+      "DisplayName": "Custom Update Creator"
+    },
+    "ClosedComment": "Not supported by Wsus.",
+    "ClosedDate": "2014-01-10T11:12:40.57-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Users should be able to revise a Custom Update, and by this, editing Custom Actions.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1311.24",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-11-25T13:03:59.893-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Out of scope"
+    },
+    "Summary": "Allow to revise a Custom Update",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 160
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

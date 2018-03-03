@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-06-05T13:03:31.873-07:00",
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "I am wondering if I have completely misunderstood the functionality of the rules section or if it does not work at all.\r\n\r\nHere's what I am doing:\r\n\r\nI want to depoly out a package to the whole estate; but the package should only install on Windows XP workstations. (it is EMET by the way)\r\n\r\nI load the msi first and the in the rules section, I created a update level and a package level rule, indicating Windows version should be equal to Windows XP. \r\n\r\nWhen this package is published, it is downloaded to and applied to all servers and workstations. \r\n\r\nHave I got anything wrong here.\r\n\r\nThanks.\r\n\r\n",
+    "LastUpdatedDate": "2014-06-05T13:03:31.873-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-05-21T03:39:19.06-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Update Level rules or Package level rules won't work",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 191
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": ">  I created a update level and a package level rule\n\nYou should create a set of rule at update level OR at package level but not both.\nIn your case, you have to create a set of rule in the \"IsInstalled\" tab and another set of rule in the \"Isinstallable\" tab.\n * IsInstalled : Use a MSI product code rule. Something like : \n<msiar:MsiProductInstalled ProductCode=\"{adee751b-09ae-4da7-9658-dcf90e8f9ed7}\"/>\n\n * IsInstallable : Use a MSI product code and a Windows Version rule. Something like :\n<lar:Not>\n<msiar:MsiProductInstalled ProductCode=\"{adee751b-09ae-4da7-9658-dcf90e8f9ed7}\"/>\n</lar:Not>\n<bar:WindowsVersion Comparison=\"EqualTo\" MajorVersion=\"5\" MinorVersion=\"1\" ProductType=\"1\"/>",
+      "PostedDate": "2014-05-21T13:09:25.63-07:00",
+      "Id": 147368
+    },
+    {
+      "Message": "Thank you very much for the prompt answer.\n\nHowever, your response have left me even more confused. \n\nWhat are these IsInstalled and IsInstallabole tabs you speak of?\n\nThank you.",
+      "PostedDate": "2014-05-23T04:34:04.777-07:00",
+      "Id": 147517
+    },
+    {
+      "Message": "Also \"<msiar:MsiProductInstalled ProductCode=\"{65bc2bda-d828-4596-99e4-a8799c45c84c}\"/>\"\n\nrule seems to include itself by default. What does that check during the installation? Is it if the same msi has been installed there before?\n\nThanks again",
+      "PostedDate": "2014-05-23T04:36:46.55-07:00",
+      "Id": 147518
+    },
+    {
+      "Message": "Hi,\n\nif you are able to read a German tutorial, you can try here: http://www.wsus.de/wsus_package_publisher\nread from here on:\n> Über das Menü Updates oder über einen Rechtsklick im Treeview auf Updates kann ein neues Update erstellt werden.\n\nThe easy way: first rule page is to check if a package is already installed (isinstalled) and the second one is to determine if a package is installable.\nyou have to create a rule on the second page and have to check Product Type \"Workstation\".\n\nregards\nNorbert",
+      "PostedDate": "2014-05-23T05:18:49.437-07:00",
+      "Id": 147520
+    },
+    {
+      "Message": "Thank you both for the reply, This is the best tool I have ever used. Hope you will continue the good work.",
+      "PostedDate": "2014-05-23T05:25:57.447-07:00",
+      "Id": 147522
+    }
+  ]
+}

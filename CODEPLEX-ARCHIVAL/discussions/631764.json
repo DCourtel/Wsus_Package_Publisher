@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1415933",
+    "ThreadId": "631764",
+    "Html": "Hello,\r<br />\n<br />\nI installed the last version of WPP on a brand new Upstream Server running W2012R2.\r<br />\n<br />\nWSUS all working fine, computers receiving MS Updates.\r<br />\n<br />\nI generated the self-signed certificate directly in WPP, exported it, rebooted the server.\r<br />\n<br />\nOn a dowstream W2012R2 server, I imported the certificate in the Trusted Root and Trusted Publisher and rebooted the server.\r<br />\n<br />\nI then created an MSI based update on the upstream, approved it and launched synchronizaiton on the downstream server.\r<br />\n<br />\nOnly the metadata of the update gets downloaded.\r<br />\nThe file is not downloaded and the path to the update on the downstream server appears in red in WPP.\r<br />\n<br />\nAll the applications, WPP, Certs, and WSUS console have always been run as admin.\r<br />\n<br />\nI don't know what else I can do.\r<br />\n<br />\nAny help will be much appreciated !\r<br />\n<br />\nThanks.<br />\n",
+    "PostedDate": "2015-04-20T06:28:00.433-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

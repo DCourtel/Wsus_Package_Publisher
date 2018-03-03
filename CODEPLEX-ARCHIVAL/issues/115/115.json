@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-09-17T01:11:17.823-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "I can't extract this new release version (v1.3.1309.15) using the windows built-in zip. I have to use 7-zip in order to extract it without errors. If this is normal then disregard this issue. :)",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1309.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-09-16T07:37:30.11-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Can't extract Release v1.3.1309.15 ",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 115
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "You are right. The build-in zip tool of Windows can't unzip the last release. I personnaly use 7-zip to create the package I publish on Codeplex. I may have modified a compression option that isn't compatible with Windows. I will re-create the package after work.\nSorry for the inconvenient.",
+      "PostedDate": "2013-09-16T07:53:09.36-07:00",
+      "Id": 113668
+    },
+    {
+      "Message": "I've uploaded the new file.",
+      "PostedDate": "2013-09-16T11:37:31.457-07:00",
+      "Id": 113716
+    }
+  ]
+}

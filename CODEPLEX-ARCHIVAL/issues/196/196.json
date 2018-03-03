@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Rules Update Wizard",
+      "DisplayName": "Rules Update Wizard"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-06-05T12:52:27.013-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hello,\r\nBefore, I used Local Update Publisher on Windows 2008 R2 WSUS.\r\nI migrated my WSUS server on 2012 R2, and I changed for WSUS Package Publisher.\r\n\r\nI'm trying to do the same think like in LUP : modify XML code (at the end of update creating) to publish a MSP update that have a bad development.\r\nIn LUP, I have just to modify XML language tag from 1031,1033,1036 to 1033 only\r\n\r\nIs it possible to do it with WPP ?\r\n\r\nThanks in advance\r\n\r\nGregory",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1405.23",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-06-05T12:48:38.517-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Modify XML coda before plublishing an update",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 196
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": " * Add a feature to allows XML Metadata edition before publishing/revising an update (For MSI/MSP Metadata)\n * Add a 'Search And Replace' function when editing XML Metadata.\n * Add a function to validate the XML Metadata against the official XSD used by Wsus to validate these Metadata.",
+      "PostedDate": "2014-06-05T12:52:06.39-07:00",
+      "Id": 148973
+    }
+  ]
+}

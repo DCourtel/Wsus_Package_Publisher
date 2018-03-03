@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-04-16T08:44:13.823-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Bonjour,\r\n\r\nil est noté dans la fenêtre \"Mises à jours en attentent\" deux fois.\r\n\"Mises à jour en attente\" c'est mieux :)\r\n\r\nA bientôt",
+    "LastUpdatedDate": "2015-04-16T08:44:13.823-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-04-16T00:36:29.523-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Fenêtre des mises à jour en attente",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 263
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Merci , c'est corrigé.",
+      "PostedDate": "2015-04-16T08:44:01.453-07:00",
+      "Id": 182952
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:07.8-08:00",
+    "CommentCount": 14,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nI've encountered a little issue that irritated and annoyed me firstly.\r\n\r\nIf I want to change the product name of an update thats the only one in a group sorted by product name an error occurs.\r\nWhen I revise this update, alter the name and finish the revision an empty group remains in WPP.\r\n\r\nA similar error occurs when I change the vendor name while revisioning an update.\r\n\r\nI attached a screenshot of this behaviour.\r\n\r\nThe problem persists even if I restart WPP. To solve this problem in both cases I deleted the appropriate vendor group with the revised update completely and restarted WPP.\r\n\r\nThats the point that frustrated me a bit because I had a bunch of updates in another product group in that specific vendor group that worked well. But I didn't like the messed up display. So I deleted them all.\r\n\r\n\r\nGreetings\r\n\r\nwilly",
+    "LastUpdatedDate": "2017-02-03T11:50:07.8-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-08-06T00:41:37.693-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "When renaming an update an empty group remains",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 279
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1477875,
+      "FileName": "WPP_emtpy_groups.png",
+      "DownloadUrl": ".\\1477875"
+    },
+    {
+      "FileId": 1477881,
+      "FileName": "WPP_emtpy_groups_2.png",
+      "DownloadUrl": ".\\1477881"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Just click the empty product group and right click delete.",
+      "PostedDate": "2015-08-06T01:42:31.98-07:00",
+      "Id": 188082
+    },
+    {
+      "Message": "For some reason that's not possible.\r\n\r\n\"Delete Product\" is greyed out. I also tried to click it. But nothing happens. The empty groups are still there.",
+      "PostedDate": "2015-08-06T01:54:39.053-07:00",
+      "Id": 188084
+    },
+    {
+      "Message": "I added a screenshot that shows this.",
+      "PostedDate": "2015-08-06T01:55:40.907-07:00",
+      "Id": 188085
+    },
+    {
+      "Message": "Are you using WPP directly on the WSUS Server or from a Workstation? Deleting products just works directly on WSUS Server.",
+      "PostedDate": "2015-08-06T02:02:47.81-07:00",
+      "Id": 188086
+    },
+    {
+      "Message": "I'm using the WPP directly on the WSUS Server. It's a WSUS 2012.",
+      "PostedDate": "2015-08-06T02:08:39.283-07:00",
+      "Id": 188087
+    },
+    {
+      "Message": "You can delete empty products only. And sometimes you have to click onto another product and Switch back to the empty product. If that doesn't help, have you tried cleaning up your wsus?\n\nRegards\nNorbert",
+      "PostedDate": "2015-08-06T02:14:30.403-07:00",
+      "Id": 188088
+    },
+    {
+      "Message": "That particular group i want to delete is empty. For sure.\nI also tried to switch to another product and delete the empty group afterwards just a moment ago. That didn't help.\n\nWhat I haven't done yet is cleaning up the WSUS. I already have seen the \"Clean UpdateServicesPackage Folder\" Option in WPP. Would you suggest me to use this option?\n\nI haven't tried it yet because I'm a little bit scared it could mess up my WSUS / WPP with it. Can I leave all the folders it wants to delete checked without worries? ",
+      "PostedDate": "2015-08-06T02:22:14.29-07:00",
+      "Id": 188089
+    },
+    {
+      "Message": "Nö, because thats not going to help. Just use the WSUS Cleanup Agent under WSUS Settings.",
+      "PostedDate": "2015-08-06T02:30:02.503-07:00",
+      "Id": 188090
+    },
+    {
+      "Message": "It looks like there is a problem with the WSUS Cleanup.\nI tried it two times. Everytime it aborted with an error message I would translate into \"server node reseted\". (Serverknoten wurde zurückgesetzt)\n\nAt the moment I am trying it for the third and last time. If the cleanup aborts again, I will have to fix it.\n\nI will write again as soon I have sorted out this problem.\n\n\n",
+      "PostedDate": "2015-08-06T04:27:04.77-07:00",
+      "Id": 188094
+    },
+    {
+      "Message": "You can try the WSUS Cleanup script here:\nhttp://www.wsus.de/serverbereinigung2\nIf you never have cleaned up before, it will take some time and CPU cycles. 2h isn't unusual.\n\nRegards\nNorbert",
+      "PostedDate": "2015-08-06T05:38:55.91-07:00",
+      "Id": 188098
+    },
+    {
+      "Message": "The problem solved itself faster than I thought. Maybe the WSUS feared my wooden hammer. :)\n\nWith the third try the cleanup succeeded. Except of the old computers I cleaned everything else. The cleanup took about two hours and released about 10GB of hard disk space.\n\nThe empty folders in WPP are still there. WSUS cleanup also did not help.\n\n",
+      "PostedDate": "2015-08-06T05:39:27.55-07:00",
+      "Id": 188099
+    },
+    {
+      "Message": "Did you try to delete the Folders afterwards? Why didn't you cleanup the old Computers?",
+      "PostedDate": "2015-08-06T06:09:48.383-07:00",
+      "Id": 188101
+    },
+    {
+      "Message": "Hi,\n> \"Delete Product\" is greyed out. I also tried to click it. But nothing happens. The empty groups are still there.\n\nThere is some prerequisites to be able to use this feature.\n- WPP must run on the Wsus Server\n- \"Connect to local server\" must tick on settings\n- The option \"Never make this update visible in Wsus Console\" must __NOT__ be selected\n\nNote that it is not 100% guarantee that this feature works.\n\nThe feature \"Clean UpdateServicesPackage Folder\" will  browse this folder to search for updates that are not listed anymore in Wsus. It then display the name of these folder and you can click to delete these folders. It's a way to release some disk space on the server.",
+      "PostedDate": "2015-08-06T06:46:50.777-07:00",
+      "Id": 188103
+    },
+    {
+      "Message": "> Did you try to delete the Folders afterwards? Why didn't you cleanup the old Computers?\n\nYes, I tried to delete the empty group (empty folders) afterwards. It didn't work either.\nI keep the listed computers in WSUS up to date manually. There are not too many machines so that is ok for me. Some machines I use occasionally, mostly for testing purposes. They probably would have been deleted by the cleanup agent. Therefore I decided to uncheck that option.\n\n> There is some prerequisites to be able to use this feature.\n> WPP must run on the Wsus Server\n> Connect to local server\" must tick on settings\n> The option \"Never make this update visible in Wsus Console\" must NOT be selected\n>\n\nI just have checked if all this requirements are met and options are properly set to be sure. They are...\n\n> The feature \"Clean UpdateServicesPackage Folder\" will browse this folder to search for updates that are not listed anymore in Wsus.\n\nI will give the feature a try in the future. Thank you for answering that question. :)\nBut as NorbertFE mentioned it would not solve the Problem with the empty groups. Or do I get something wrong?",
+      "PostedDate": "2015-08-06T07:54:50.397-07:00",
+      "Id": 188107
+    }
+  ]
+}

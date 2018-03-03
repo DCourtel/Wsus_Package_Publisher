@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1320864",
+    "ThreadId": "571775",
+    "Html": "Hi,\r<br />\n<br />\nI was wondering about the two tabs &quot;Last installed&quot; and &quot;Report&quot;\r<br />\nIn our setup the &quot;Last installed&quot; tab does not reflect the actual status of our servers.\r<br />\n<br />\nIf I choose an after date and a Before date, patches installed seems to differ.\r<br />\n<br />\nIdentical servers installed at the same time, updated at the same time and with the exact same patch level shows different status. In the Last report status time column we can see that servers report back at about the same time.\r<br />\nFrom what I can see some patches applied does not show up at all, am I missing something obvious here?\r<br />\n<br />\nThe report tab is empty, if we could have some values in these columns our patch management would be a lot easier.\r<br />\nBeeing able to see if a machine is pending reboot before pushing patches and beeing able to see if an update failed would be perfect.\r<br />\n<br />\nIn our environmen we have eight different computer Groups and three different WSUS policys.\r<br />\nGetting the proper info under these tabs would be most helpful.\r<br />\nDoes anyone have clue why the info is not there?\r<br />\nAt the moment we are allowing all network traffic between server LAN and the WSUS-server ip address.\r<br />\n<br />\nWe found this application about a year ago and we have not really used its potential, but that is going to change. It is a great application!\r<br />\n<br />\nThank you, \r<br />\n<br />\nPeter Åkerblom\r<br />\nStockholm<br />\n",
+    "PostedDate": "2014-11-11T04:17:45.243-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1323568",
+    "ThreadId": "571775",
+    "Html": "Hi,<br />\n<blockquote>\nIn our setup the &quot;Last installed&quot; tab does not reflect the actual status of our servers. <br />\n</blockquote>\nThis tab doesn't works as I was expected at first. At the beginning I was thinking that the date refers to the installation date. But in fact it is the date of publication of the package. I think this tab will disappear in WPP v2.<br />\n<blockquote>\nThe report tab is empty...<br />\n</blockquote>\nEnsure, you have selected at least one computer. At least, one update is approved in the ComputerGroup where the selected computer is.<br />\n",
+    "PostedDate": "2014-11-18T13:22:33.927-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1324792",
+    "ThreadId": "571775",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"https://wsuspackagepublisher.codeplex.com/workitem/235\" rel=\"nofollow\">here</a> to go to the work item and continue the discussion.<br />\n",
+    "PostedDate": "2014-11-21T08:26:40.353-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-12-03T13:24:52.023-08:00"
+  }
+]

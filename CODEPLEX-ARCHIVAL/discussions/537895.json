@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "1218948",
+    "ThreadId": "537895",
+    "Html": "hello!\r<br />\nI have a question: I am deploying the updates for differents programs: firefox, reader, etc I want that the clients with an old version, recive the update, but the clients who don't have that program, omited that update. \r<br />\nWhere can I say in Wsus Publisher that rule? \r<br />\n<br />\nThanks in advanced<br />\n",
+    "PostedDate": "2014-03-04T04:02:58.967-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1219000",
+    "ThreadId": "537895",
+    "Html": "There is several ways to do that. You can define rules on each update to check a file version, registry key or something else. Personally, I like to declare the new update as a superseding update for the previous one.<br />\n",
+    "PostedDate": "2014-03-04T06:40:26.06-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-06T08:35:33.3-07:00"
+  },
+  {
+    "Id": "1239638",
+    "ThreadId": "537895",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nPersonally, I like to declare the new update as a superseding update for the previous one.<br />\n</blockquote>\nCorrect me, please, if I understand wrong: you are advising to install new versions of software by choosing &quot;Package Type&quot; as Update and checking all older versions of this software in &quot;Supersedes&quot; list?<br />\n",
+    "PostedDate": "2014-04-29T23:42:21.823-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1239723",
+    "ThreadId": "537895",
+    "Html": "Yes, that's correct.<br />\n",
+    "PostedDate": "2014-04-30T02:54:45.147-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1239753",
+    "ThreadId": "537895",
+    "Html": "Unfortunately I cannot make WPP to install new version of KeePass (((\r<br />\n<br />\nI have correct (I hope) installation package of KeePass 2.25. In section isInstalled it has only one rule:\r<br />\n&lt;msiar:MsiProductInstalled ProductCode=&quot;{1b023d7a-2044-432e-89be-245343e5a392}&quot;/&gt;\r<br />\nand the same rule in section isInstallabe (with reverse condition).\r<br />\nVersion 2.25 of KeePass installed perfectly.\r<br />\n<br />\nThen I want to upgrade it with 2.26 version.\r<br />\nI've made the same packages as for version 2.25, but in Supersedes list checked previous version - 2.25.\r<br />\nThe rules isInstalled and isInstallabe are the same as for version 2.25.\r<br />\n<br />\nWhen I send Detect now and Report now commands I see that package version 2.26 is installed but actually is installed old version 2.25.\r<br />\nAnd new version of KeePass don't want to be installed.\r<br />\n<br />\nMaybe I have to change isInstalled or isInstallable rules? Can you give any example of similar upgrade?<br />\n",
+    "PostedDate": "2014-04-30T05:17:43.777-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1239887",
+    "ThreadId": "537895",
+    "Html": "MSI ProductCode are specific to version of the application. This mean that there is a MSI ProductCode for KeePass 2.25 and another ProductCode for 2.26.\r<br />\n<br />\nYou need to get the MSI ProductCode for KeePass 2.26.\r<br />\nif the file is a MSI :<br />\n<ul>\n<li>Open WPP</li>\n<li>Go to Tools -&gt; MsiReader</li>\n<li>Load the MSI file</li>\n<li>Open the Dropdown list and select 'Property'</li>\n<li>\nSearch for 'ProductCode'<br />\n</li>\n</ul>\nIf the file is .EXE :<br />\n<pre><code>- Install manually on a computer\n- Open Regedit\n- Browse to HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\n- Search for 'KeePass' and then look at the 'UninstallString' value</code></pre>\n\n",
+    "PostedDate": "2014-04-30T09:19:04.387-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1241537",
+    "ThreadId": "537895",
+    "Html": "Thank you!\r<br />\nI don't expected that MSI ProductCode is different from version to version. I used as example Java installation with has the same ProductCode.<br />\n",
+    "PostedDate": "2014-05-05T06:43:36.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1241560",
+    "ThreadId": "537895",
+    "Html": "Java doesn't use the same product code over release. They just change some bytes :<br />\n<br />\nRelease 7u40: <br />\nx86 : 26a24ae4-039d-4ca4-87b4-2f8 <strong>32</strong> 170 <strong>40</strong> ff<br />\nx64 : 26a24ae4-039d-4ca4-87b4-2f8 <strong>64</strong> 170 <strong>40</strong> ff<br />\n<br />\nRelease 7U25 :<br />\nx86 : 26a24ae4-039d-4ca4-87b4-2f8 <strong>32</strong> 170 <strong>25</strong> ff<br />\nx64 : 26a24ae4-039d-4ca4-87b4-2f8 <strong>64</strong> 170 <strong>25</strong> ff<br />\n",
+    "PostedDate": "2014-05-05T07:32:33.673-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1241871",
+    "ThreadId": "537895",
+    "Html": "Oh! I see.. Really, I've checked my Java installation - product codes are different.\r<br />\nThank you. Now I really will remember it! ))<br />\n",
+    "PostedDate": "2014-05-05T21:59:25.073-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1243669",
+    "ThreadId": "537895",
+    "Html": "The best method I have found for checking to see if the software is already installed regardless of version is to test if a key exists in HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths for the application in question.\r<br />\n<br />\nFor example to deploy firefox 28.0 only to computers with a version already installed:\r<br />\n<br />\nOn the already installed test, I would create this rule:\r<br />\nRule type: Registry Key Exists\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Mozilla Firefox 28.0 (x86 en-US)\r<br />\n<br />\nand  for the Installable test I would create these 2 rules:\r<br />\nRule type: Registry Key Exists\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths\\firefox.exe\r<br />\n<br />\n&amp; \r<br />\nRule type: Registry Key Exists\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Mozilla Firefox 28.0 (x86 en-US)\r<br />\n&amp; select the Reverse Rule option so it doesn't try to install to clients that already have it installed<br />\n",
+    "PostedDate": "2014-05-09T14:03:49.953-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

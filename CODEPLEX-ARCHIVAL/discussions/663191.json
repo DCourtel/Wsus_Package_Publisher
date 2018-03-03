@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1496925",
+    "ThreadId": "663191",
+    "Html": "I have setup WSUS Package Publisher on a new Windows 2016 server, it only has WSUS installed on it, which is configured and runs great.\r<br />\nWe wanted to deploy acrobat reader to our users, and probably other applications down the road.\r<br />\nIt wasn't working at the beginning, and after searching around, I found a thread that mention adding the Processor X64 or X86 in the rules, and that worked for me, installed on my test computer without any problems.\r<br />\nIt showed up as Installed in WPP... but now that I go back in, its showing as NOT APPLICABLE for that same computer.\r<br />\nIs this a default setting for Installed application or did something corrupt? How am I supposed to know which computers are installed or not?\r<br />\nAny suggestions? let me know\r<br />\nThanks<br />\n",
+    "PostedDate": "2017-06-05T09:25:16.85-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

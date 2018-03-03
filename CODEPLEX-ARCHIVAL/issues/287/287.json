@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Wsus SSL Misconfiguration",
+    "ClosedDate": "2015-08-23T08:44:19.113-07:00",
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI configured some WSUS Servers using SSL only Connections. (Windows Server 2012R2, 2008R2 doesn't matter) On all of them I can not connect with WPP using the \"connect to local Server\"-Checkbox. I'm always getting \"Connection failed: The request failed with HTTP Status 403: Forbidden.\"\r\nIf I'm using servername and SSL port (8531) without the mentioned Checkbox all is working fine. But than it's not possible to set updates to be visible in the WSUS console.\r\n\r\nDoes anyone have this issue as well and a solution to it?\r\n\r\nregards\r\nNorbert",
+    "LastUpdatedDate": "2015-08-23T08:44:19.113-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-08-19T08:43:46.02-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "local connection failed after configuring ssl",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 287
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi Norbert, At work I have all my Wsus running Under Windows 2008R2 with SSL on port 443. And I can connect with option \"Connect to local server\". \nThis week-end I will try to set my test Wsus (2012R2) with SSL on port 8531, to see if I can reproduce the issue.",
+      "PostedDate": "2015-08-20T03:18:31.217-07:00",
+      "Id": 189398
+    },
+    {
+      "Message": "Hi,\n\nthanks for the response. Let me know if you need more info.\n\nregards\nNorbert ",
+      "PostedDate": "2015-08-20T12:25:06.253-07:00",
+      "Id": 189415
+    },
+    {
+      "Message": "That's done. I successfully connect to my Wsus server on Server 2012R2 on port 8531 with SSL activated. \n\nYou have a misconfiguration of your Wsus server. Please check SSL conf on IIS",
+      "PostedDate": "2015-08-23T01:20:54.933-07:00",
+      "Id": 189489
+    },
+    {
+      "Message": "Hi,\n\nI used this https://technet.microsoft.com/en-us/library/Bb633246.aspx to configure my WSUS. And doublechecked my configuration. I'm taking a look into my certificates, maybe there are some limitations to WSUS?",
+      "PostedDate": "2015-08-23T03:31:56.523-07:00",
+      "Id": 189492
+    },
+    {
+      "Message": "Hi,\n\nI solved it. ;) After going through the Microsoft How to (link above) I realized, that I had not done Step 5.\n> 5.Run the following command from <WSUS Installation Folder>\\Tools: WSUSUtil.exe configuressl <Intranet FQDN of the software update point site system>.\n\nAfter I've done that, all is working as expected. :)\n\nIssue can be closed.\n\nRegards\nNorbert",
+      "PostedDate": "2015-08-23T08:05:52.923-07:00",
+      "Id": 189495
+    }
+  ]
+}

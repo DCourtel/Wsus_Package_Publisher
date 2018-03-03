@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Custom Update Creator",
+      "DisplayName": "Custom Update Creator"
+    },
+    "ClosedComment": "Override the default behaviour of the label control to avoid modifying the content of the clipboard.",
+    "ClosedDate": "2014-07-29T07:54:18.73-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Sometimes it is useful to paste input from the clipboard into an element. If this text is in the clipboard, and an element is double clicked to allow editing, the element's text will be copied to the clipboard, overwriting the text that was to be copied to the element.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1407.11",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-07-17T12:00:36.45-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Text is copied to the clipboard whenever an element is double clicked in the Custom Update Creator",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 206
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Yes, I have already noted this. It's a bug introduce by Vista and later OS. When double-clicking on a label, the content of the label is copied into the clipboard.\nit's not easy to workaround. For the moment, I suggest to double-click on the icon of the Element.",
+      "PostedDate": "2014-07-29T07:29:23.527-07:00",
+      "Id": 153825
+    }
+  ]
+}

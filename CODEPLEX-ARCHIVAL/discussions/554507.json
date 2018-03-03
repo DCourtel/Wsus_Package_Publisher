@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1278749",
+    "ThreadId": "554507",
+    "Html": "After some update I'm getting this message:\r<br />\n&quot;specified cryptographic algorithm is not supported on this platform&quot;\r<br />\nevery time I try even change update's status (revise, decline, expire). I'm connecting from Windows XP SP3 pro x86 to Windows Server 2003 R2 x86, both with last updates. \r<br />\nGenerally, from XP i can view status but can't change anything: &quot;algorithm is not supported&quot;\r<br />\n<br />\nHere is the solution (reg file that must be installed in XP SP3 with installed NET 3.5 and 4):\r<br />\n<br />\nWindows Registry Editor Version 5.00\r<br />\n<br />\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Enhanced RSA and AES Cryptographic Provider]\r<br />\n&quot;Image Path&quot;=&quot;rsaenh.dll&quot;\r<br />\n&quot;Type&quot;=dword:00000018\r<br />\n&quot;SigInFile&quot;=dword:00000000\r<br />\n<br />\nfound here: <a href=\"http://siderite.blogspot.com/2010/11/make-sha256cryptoserviceprovider-work.html\" rel=\"nofollow\">Siderite's Blog</a>\r<br />\n<br />\nI think this will be in FAQ. \r<br />\n<br />\nHope'll help someone.<br />\n",
+    "PostedDate": "2014-07-29T06:30:00.263-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-07-29T08:10:30.903-07:00"
+  },
+  {
+    "Id": "1278789",
+    "ThreadId": "554507",
+    "Html": "Hi ffs2001 and thanks for your contribution. Honestly, I didn't test WPP on Windows XP anymore. It is outdated.\r<br />\nThis error message is certainly due to the new way WPP use to store the admin password for remote command.\r<br />\nPrevious release of WPP should still works.<br />\n",
+    "PostedDate": "2014-07-29T08:10:26.027-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

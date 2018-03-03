@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update Detail Viewer",
+      "DisplayName": "Update Detail Viewer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-10T11:47:31.57-07:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "I believe the WSUS server stores all of the \"last updated\" and \"last reported\" in GMT time.  Then the WSUS Client screen adjusted the times to the system's timezone.\r\n\r\nThe WSUS Package Publisher does not do that.   It displayed everything in GMT.   Can we have an option for TimeZone adjustments?",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1306.09",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-10T11:44:59.3-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Timezone adjusted for Date/Time display under status and reports",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 62
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Modified the way WPP displays the \"last updated\" and \"last reported\" time in the \"Update Detail Viewer\" to be local time.",
+      "PostedDate": "2013-06-10T11:47:20.027-07:00",
+      "Id": 102678
+    },
+    {
+      "Message": "It would also be helps for the tool to take that into account when setting the package installation deadline.  (e.g.  convert the local time entered into GMT time when submitting to WSUS)",
+      "PostedDate": "2013-06-10T15:28:43.24-07:00",
+      "Id": 102719
+    },
+    {
+      "Message": "WPP now use LocalTime to display deadline.",
+      "PostedDate": "2013-06-15T08:26:06.087-07:00",
+      "Id": 103134
+    },
+    {
+      "Message": "> WPP now use LocalTime to display deadline.\n\n\nGood Solution. ;)",
+      "PostedDate": "2013-06-15T12:10:24.313-07:00",
+      "Id": 103137
+    }
+  ]
+}

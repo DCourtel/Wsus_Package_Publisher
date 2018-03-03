@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1447780",
+    "ThreadId": "645998",
+    "Html": "Good Morning together,\r<br />\n<br />\ni got the following problem when creating rules to distribute an ASK-Toolbar Uninstaller batch file.\r<br />\nI just created the following rule:\r<br />\n<br />\n&lt;Start Oder&gt;\r<br />\n<br />\n&lt;bar:RegValueExists Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\AskToolbar&quot; Value=&quot;&quot;/&gt;\r<br />\n<br />\n&lt;bar:RegValueExists Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\Wow6432Node\\AskToolbar&quot; Value=&quot;&quot;/&gt;\r<br />\n<br />\n&lt;Ende Oder&gt;\r<br />\n<br />\nThe problem is, that this rule just applies, when both registry keys are found.\r<br />\nI want that its checked, if theres whether the first or the second registry key.\r<br />\nThanks for any help.\r<br />\n<br />\nBest Regards<br />\n",
+    "PostedDate": "2015-10-08T23:10:46.407-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1447925",
+    "ThreadId": "645998",
+    "Html": "Two questions :<br />\n<ul>\n<li>why on earth are you using a RegValueExists Rule instead of a RegKeyExists ????</li>\n<li>why don't you use &quot;Reg Type 32&quot; to perform the comparison against 32 byte Registry ????</li>\n</ul>\n",
+    "PostedDate": "2015-10-09T13:45:43.77-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1448130",
+    "ThreadId": "645998",
+    "Html": "Hi.<br />\n<br />\nfirst of all thanks for your reply.<br />\n<ol>\n<li>I changed it to RegKeyExists now (i tried this also at first, but it didn't worked as well, thats why i changed it to regvalueexists)</li>\n<li>I don't know exactly what this does, is there any kind of documentation for that ?</li>\n<li>\nThe Problem is still the same. if i use 2 arguments in the first place (is allready installed) which are connected with &quot;OR&quot; then they are connected with &quot;AND&quot; and not with &quot;OR&quot;.<br />\nIf i just use 1 Argument and two in the second place (ifcanbeinstalled) it's working without Problems.<br />\n</li>\n</ol>\nBest Regards<br />\n",
+    "PostedDate": "2015-10-11T23:24:25.647-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1449029",
+    "ThreadId": "645998",
+    "Html": "The configuration with OR and AND are difficult to handle with WPP.\r<br />\n<br />\nIf I use a ODER option in WPP ( for instant to check 32 / 64bit )\r<br />\n<br />\nit looks like:\r<br />\n<br />\nSTART OR\r<br />\n<br />\noption one\r<br />\n<br />\noption two\r<br />\n<br />\nEND OR\r<br />\n<br />\n<br />\nwith no OR between the options. Maybee a srennshoot is helpfull to give more help.\r<br />\n<br />\nGood luck!<br />\n",
+    "PostedDate": "2015-10-19T06:58:48.007-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1455747",
+    "ThreadId": "645998",
+    "Html": "I have some experience about 'installed rules' with wusus package publisher. I suggest you can try to use WMI QUERY Rules.\r<br />\nI find the post with screnshoots, I hope it will help you.\r<br />\n<a href=\"http://www.sthshare.com/wordpress/wsus-package-publisher-deploy-to-specific-clients-or-groups-using-rules.html\" rel=\"nofollow\">http://www.sthshare.com/wordpress/wsus-package-publisher-deploy-to-specific-clients-or-groups-using-rules.html</a><br />\n",
+    "PostedDate": "2015-12-13T07:22:09.903-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

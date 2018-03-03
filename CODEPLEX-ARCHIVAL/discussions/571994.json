@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1321724",
+    "ThreadId": "571994",
+    "Html": "Why is it that when I use the default Adobe Catalogs for Ready, Acrobat and Flash approve an update it will eventually disappear in the WSUS Package Publisher.  I need to change the approval or modify the installation but it is not listed under my Updates anymore.  If I go to Updates--Manage Catalog Subscriptions they are there but I have to import the updates again in order to see them in WPP.  Any suggestions?<br />\n",
+    "PostedDate": "2014-11-13T06:58:11.567-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1321730",
+    "ThreadId": "571994",
+    "Html": "Nervermind, found the solution in another thread.  Had to go to Tools--Settings--Updates Tab and check &quot;Show Locally-Published Updates that are also visible in WSUS console&quot;.  Then Reload the connection.<br />\n",
+    "PostedDate": "2014-11-13T07:04:52.423-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-11-13T08:18:58.967-08:00"
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2016-09-01T13:28:59.687-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I have running windows 10 1511 release with last RSAT Tools for Windows 10\r\nBecause of an Build String mismatch i have changed the registry\r\n\r\nWindows Registry Editor Version 5.00\r\n\r\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Update Services\\Server\\Setup]\r\n\"VersionString\"=\"10.0.10586.0\"\r\n\r\nWSUS is running in with SSL!\r\n\r\nManaging Updates works fine but i can not check in new one! i allways get Canot create Cab file error was 0!\r\n\r\nPlease help\r\n",
+    "LastUpdatedDate": "2016-09-01T13:28:59.687-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-01-06T04:26:32.65-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Win10 WPP connected to Win2016 TP4",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 316
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

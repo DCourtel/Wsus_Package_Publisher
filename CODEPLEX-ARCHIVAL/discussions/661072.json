@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1492032",
+    "ThreadId": "661072",
+    "Html": "Hi, I'd sure how to proceed with the new version of Adobe reader or Flash maybe Java. What is the correct procedure? Expired or Declined the old version or delete and apply new one and approved? \r<br />\n<br />\nOn previous version flash 23.0.0.205 I have half computer installed and half &quot;not installed&quot; and I don't why. Earlier versions are installed everywhere almost 100pc.<br />\n",
+    "PostedDate": "2017-02-01T01:39:06.49-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1492064",
+    "ThreadId": "661072",
+    "Html": "You can either :<br />\n<ul>\n<li>Decline the first update </li>\n<li>Declare the old update as superseded by the new one </li>\n<li>Change the &quot;IsInstallable&quot; rules of the old and new update. </li>\n</ul>\n",
+    "PostedDate": "2017-02-01T11:08:45.21-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2017-11-23T03:07:41.697-08:00"
+  }
+]

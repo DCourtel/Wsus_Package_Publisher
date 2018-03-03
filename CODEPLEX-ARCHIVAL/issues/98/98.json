@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update List Viewer",
+      "DisplayName": "Update List Viewer"
+    },
+    "ClosedComment": "Add an option when right-clicking on an update to create a superseding update.",
+    "ClosedDate": "2013-09-22T03:34:34.79-07:00",
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "When right-clicking on an update, display an option to create a superseding update with the same Informations/rules and which automatically supersede the previous version.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1309.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-08-13T07:44:46.623-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Create Superseding Update",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 3,
+    "Id": 98
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This would be great. :)",
+      "PostedDate": "2013-08-13T08:28:39.887-07:00",
+      "Id": 109609
+    },
+    {
+      "Message": "Wow, great. :)",
+      "PostedDate": "2013-08-13T09:14:25.94-07:00",
+      "Id": 109615
+    },
+    {
+      "Message": "Definetly waiting for that feature to make things a bit easier.",
+      "PostedDate": "2013-09-03T03:55:46.44-07:00",
+      "Id": 111900
+    },
+    {
+      "Message": "WPP is now able to create a superseding update from an already published update.\n* If the main update file is a MSI file :\n * If IsInstalled and/or IsInstallable rules contains :\n     - Only one MsiProductInstalled Rule, then the old rule is adapted and copied to the new update. Non-MsiProductInstalled rules (i.e. Processor Architecture, File Version...) are copied 'As is'.\n     - More than one MsiProductInstalled Rule, then old rules are copied 'As Is'.\n     - No MsiProductInstalled rule, then old rules are copied 'As Is'.\n     - No rule at all, WPP generate default MSI rule, based on the new MSI code.\n* If the main update file is not a MSI file :\n * All rules are copied 'As Is'.",
+      "PostedDate": "2013-09-22T03:33:38.757-07:00",
+      "Id": 115278
+    },
+    {
+      "Message": "Great, Thanks a Lot for this Feature. :)",
+      "PostedDate": "2013-09-22T04:45:27.953-07:00",
+      "Id": 115279
+    }
+  ]
+}

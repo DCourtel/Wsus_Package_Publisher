@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1450908",
+    "ThreadId": "646980",
+    "Html": "First attempt at using WPP, and I'm using the PDF from the web site (Installing Java 7u21 without Java Auto Updater) as a guide.\r<br />\n<br />\nWPP is installed on our Server 2012R2 (WSUS 6.3) server.\r<br />\n<br />\nAttempting per subject line, because it works better with the ADP payroll app.\r<br />\n<br />\nPublishing works, but seeing error codes on clients of 80131700 (mostly) and 6BA and one or two others.\r<br />\n<br />\nI'm using jre-8u65-windows-i586.exe from <a href=\"http://java.com\" rel=\"nofollow\">http://java.com</a>. \r<br />\n<br />\nHave tried varying the product code from 32bit to 64bit, and also processor arch, with very poor results - it's only worked once or twice on my test machines, out of about 10 attempts.\r<br />\n<br />\nI also tried the MSI file using a standard package insted of a custom package with even worse results.\r<br />\n<br />\nI'll be happy to provide any settings/configurations required to help troubleshoot this, as I'm sure I'm missing something, but just can't figure it out.\r<br />\n<br />\nThanks,\r<br />\n<br />\nKurt<br />\n",
+    "PostedDate": "2015-11-04T10:40:32.813-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451009",
+    "ThreadId": "646980",
+    "Html": "Try the Solution in this Thread:\r<br />\n<a href=\"https://wsuspackagepublisher.codeplex.com/discussions/578951\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/578951</a><br />\n",
+    "PostedDate": "2015-11-05T05:36:19.76-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451013",
+    "ThreadId": "646980",
+    "Html": "<strong>kurtbuff wrote:</strong><br />\n<blockquote>\nFirst attempt at using WPP, and I'm using the PDF from the web site (Installing Java 7u21 without Java Auto Updater) as a guide.<br />\n</blockquote>\nYes, its al little bit outdated, but the basics are the same.<br />\n<blockquote>\nWPP is installed on our Server 2012R2 (WSUS 6.3) server.<br />\n<br />\nAttempting per subject line, because it works better with the ADP payroll app.<br />\n</blockquote>\nhm<br />\n<blockquote>\nPublishing works, but seeing error codes on clients of 80131700 (mostly) and 6BA and one or two others.<br />\n<br />\n<br />\nI'm using jre-8u65-windows-i586.exe from <a href=\"http://java.com\" rel=\"nofollow\">http://java.com</a>. <br />\n</blockquote>\ncorrect.<br />\n<blockquote>\nHave tried varying the product code from 32bit to 64bit, and also processor arch, with very poor results - it's only worked once or twice on my test machines, out of about 10 attempts.<br />\n</blockquote>\nDont make modifications. I have the same configuration ( Server + WSUS ) , and it is not nessasary to manipulate or creating rules if you use the extracted .msi<br />\n<blockquote>\nI also tried the MSI file using a standard package insted of a custom package with even worse results.<br />\n</blockquote>\nOk. You get the the same result with the simpe .msi and the custom .msi + .mst . So, it is a more basis installation problem<br />\nWhat is happen if you start the msi manual on the client. Runs correct without interaction? <br />\n<blockquote>\nI'll be happy to provide any settings/configurations required to help troubleshoot this, as I'm sure I'm missing something, but just can't figure it out.<br />\n<br />\nThanks,<br />\n</blockquote>\nYes....<br />\nok, first... If you test your deployment, be sure that clients are clean, without old Java Installations and a clean registry. You dont want to have trouble with old offline / online  and modificated installations from Java 7 - today.<br />\n<br />\nSecond. Deployment of .msi is recommended, and a little bit more comfortable like .exe deployment, and give you the possibillity to make configurations for your installation and deinstallation.<br />\n<br />\nThere is a tutorial and more information on my site based on JAVA 8 and LUP, but its the same in WPP. Im sorry, only in german, but your Name is Kurt,  hmmm :-)<br />\nfor .msi :<br />\n<a href=\"http://road-books.jimdo.com/2014/12/01/verteilung-von-java-8-umstieg-von-java-7-mit-local-update-publisher/\" rel=\"nofollow\">http://road-books.jimdo.com/2014/12/01/verteilung-von-java-8-umstieg-von-java-7-mit-local-update-publisher/</a><br />\nfor .exe ( not recommended ):<br />\n<a href=\"http://road-books.jimdo.com/2014/12/03/exe-verteilung-von-java-8-mit-local-update-publisher/\" rel=\"nofollow\">http://road-books.jimdo.com/2014/12/03/exe-verteilung-von-java-8-mit-local-update-publisher/</a><br />\n<blockquote>\nKurt<br />\n</blockquote>\nIf I understand correctly, it works for 1-2 Clients, so it isnt a WPP problem or publishing problem.<br />\n<br />\n<br />\n80131700 is  ERROR_INSTALL_FAILURE , so Installation start and failed. Why? Hm.<br />\n<br />\n good luck,<br />\nPö<br />\n",
+    "PostedDate": "2015-11-05T05:56:27.937-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1455683",
+    "ThreadId": "646980",
+    "Html": "I have recently been able to deploy Java 8 Update 65 with WSUS Package Publisher to Clients. It work prefectly.\r<br />\nThis tutorial contains Step by Step deployment Guide with Screenshots. I hope it can help you.\r<br />\n<a href=\"http://www.sthshare.com/wordpress/how-to-deploy-java-to-clients-using-wsus-package-publisher.html\" rel=\"nofollow\">http://www.sthshare.com/wordpress/how-to-deploy-java-to-clients-using-wsus-package-publisher.html</a><br />\n",
+    "PostedDate": "2015-12-12T05:12:10.797-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

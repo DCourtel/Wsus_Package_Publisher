@@ -1,0 +1,56 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:08.177-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "After installing KB3159706 on my WSUS server, I am receiving the \"Server version different than console version\" error message when using WSUS Package Publisher and I can no longer publish updates.\r\n\r\nServer Version: 6.3.9600.18324\r\nConsole Version: 6.3.9600.17477\r\n\r\nI am using both WPP and the WSUS console on the 2012 R2 server where WSUS is installed.\r\n\r\nAny help would be appreciated and thank you for creating WPP!",
+    "LastUpdatedDate": "2017-02-03T11:50:08.177-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-06-07T13:06:51.473-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Server version different than console version - after installing KB3159706",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 341
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1580317,
+      "FileName": "WSUS_WPP_ConsoleVerMismatch.png",
+      "DownloadUrl": ".\\1580317"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "On your local machine go to register and modifing the string :\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Update Services\\Server\\Setup\\VersionString\nAttibute the value : 6.3.9600.18324 \n",
+      "PostedDate": "2016-07-06T02:22:28.983-07:00",
+      "Id": 200452
+    },
+    {
+      "Message": "If you are using WPP directly on the Wsus server, you have to go to Tools -> Settings -> Servers Tab and checking the option \"Connect to local server\".",
+      "PostedDate": "2017-02-03T11:40:43.967-08:00",
+      "Id": 206395
+    }
+  ]
+}

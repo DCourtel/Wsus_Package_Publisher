@@ -1,0 +1,91 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-10-19T08:36:31.397-07:00",
+    "CommentCount": 9,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI installed WSUS with WID (Windows Internal Database) on a Windows Server 2012 (without R2). Anything is working, except I can not switch the updates to be visible in WSUS. It worked once after many tries, but usually I get this error message. see screenshot. Firewall is on by default with only the default rules after installing wsus active. But as WPP runs locally on the wsus, I don't think, that's an firewall issue. Connect locally is checked in the settings tab.\r\n\r\nAny hints on this?\r\n\r\nRegards\r\nNorbert\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1310.12",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-16T07:53:54.937-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Error when trying to show updates in WSUS console",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 140
+  },
+  "FileAttachments": [
+    {
+      "FileId": 744306,
+      "FileName": "16-10-2013 16-50-01.jpg",
+      "DownloadUrl": ".\\744306"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Have you done some customizations on this db ?\nDo you have any other role on this server (except Wsus) ?",
+      "PostedDate": "2013-10-16T09:01:51.75-07:00",
+      "Id": 118620
+    },
+    {
+      "Message": "No, this is the only role and the Server was installed today. No customizations so far.",
+      "PostedDate": "2013-10-16T09:10:49.377-07:00",
+      "Id": 118621
+    },
+    {
+      "Message": "I have the same behavior on my test server 2012 :-(",
+      "PostedDate": "2013-10-16T09:56:01.907-07:00",
+      "Id": 118628
+    },
+    {
+      "Message": "So I found a bug. Surprisingly nobody tested this setup since today. ;)",
+      "PostedDate": "2013-10-16T10:38:58.837-07:00",
+      "Id": 118631
+    },
+    {
+      "Message": "> I have the same behavior on my test server 2012 :-(\n\nDavid,\n\nwhat is WPP doing if he will updates make visible in WSUS.MSC?\nWhich Connection String you are using?\nIn Windows Server 2012 you have to use this: \\\\.\\pipe\\Microsoft##WID\\tsql\\query\n2008R2 and earlier: \\\\.\\pipe\\mssql$Microsoft##SSEE\\sql\\query",
+      "PostedDate": "2013-10-16T11:50:34.717-07:00",
+      "Id": 118637
+    },
+    {
+      "Message": "Ok, I've got it.\r\nI send you the new release with the bug fix.",
+      "PostedDate": "2013-10-16T13:30:28.527-07:00",
+      "Id": 118644
+    },
+    {
+      "Message": "David, \ncould/would you us tell what the problem was?",
+      "PostedDate": "2013-10-16T14:12:57.817-07:00",
+      "Id": 118647
+    },
+    {
+      "Message": "WPP didn't interpret correctly the Wsus version to infer the connection string.",
+      "PostedDate": "2013-10-16T22:03:06.933-07:00",
+      "Id": 118679
+    },
+    {
+      "Message": "Hi,\n\nJust for letting you know. Same error and solution with windows 2012r2.",
+      "PostedDate": "2013-10-22T13:21:18.187-07:00",
+      "Id": 119253
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1436064",
+    "ThreadId": "641972",
+    "Html": "I'm just trying to <a href=\"https://wsuspackagepublisher.codeplex.com/workitem/273\" rel=\"nofollow\">fix an issue</a> I'm experiencing on my side but latest commit available is <strong>commit cb992940d9ce, dic 23, 2012</strong>, that is <strong>quite useless</strong> now.\r<br />\n<br />\nIs it possible to update source code and have a fresh commit?\r<br />\n<br />\nCheers<br />\n",
+    "PostedDate": "2015-07-27T00:23:09.78-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-08-04T07:07:17.9-07:00"
+  },
+  {
+    "Id": "1437486",
+    "ThreadId": "641972",
+    "Html": "The reason why I installed WPP on my company WSUS (instead of other proprietary solutions) was it being &quot;open source&quot; and, since I'm a developer, I thought I could better &quot;supervise&quot; (and fix) it.\r<br />\n<br />\nActually source control missing, on such a critical software, is becoming too risky for me...<br />\n",
+    "PostedDate": "2015-08-06T00:14:12.623-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

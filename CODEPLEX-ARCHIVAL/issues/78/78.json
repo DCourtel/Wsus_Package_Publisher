@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-07-12T09:49:00.98-07:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nHas anybody encounterd code 800B0109 (Win 7 SP1) when installing Flash update 11.0.7.224 with automatic updates?\r\n\r\nI followed the steps in the manual and as test i configured a laptop and a desktop for WSUS. On the desktop all the updates including Flash were succesfull and on the laptop it keeps failing.\r\n\r\nI triple checked the settings of the laptop and desktop and i can't find an anything wrong with the settings.\r\n\r\nAnybody some advice?",
+    "LastUpdatedDate": "2013-07-12T09:49:00.98-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-07-04T00:23:37.653-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Code 800B0109 (Win 7 SP1) when installing Flash update 11.0.7.224 with automatic updates",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 78
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "HI rayman160, this code mean there is a problem with the file signature. Please check on your laptop that the certificate have been correctly imported in the right certificate store and reboot the computer.",
+      "PostedDate": "2013-07-04T01:39:49.53-07:00",
+      "Id": 105085
+    },
+    {
+      "Message": "Do you still have the problem ?",
+      "PostedDate": "2013-07-07T11:39:26.853-07:00",
+      "Id": 105321
+    },
+    {
+      "Message": "Sorry for the slow reply, i was off for a couple of days.\nI'm pretty sure that i imported the certificate correctly. I had no problems on other computers that i configured manually. \nThe problem seems to be solved at the moment. I disabled updating from wsus, did a reboot, did a check for updates, enabled updating from wsus, did a reboot, check for updates and then the Flash update succeeded. The first time i did these steps the update still gave an error but the second time it worked.\n\nThanks for your time and your help!",
+      "PostedDate": "2013-07-09T00:15:54.373-07:00",
+      "Id": 105501
+    }
+  ]
+}

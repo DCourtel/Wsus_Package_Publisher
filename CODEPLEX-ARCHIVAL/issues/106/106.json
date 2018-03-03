@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Manage this special case.",
+    "ClosedDate": "2013-09-07T05:52:20.723-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When using option to Delete unused folders in UpdateSerVicePackage folder, WPP may crash if files are still in used.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1309.03",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-09-07T05:51:59.353-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Cannot delete some folders in UpdateServicePackage Folder",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 106
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

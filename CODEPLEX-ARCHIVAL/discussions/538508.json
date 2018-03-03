@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1221001",
+    "ThreadId": "538508",
+    "Html": "Hello\r<br />\nPublishing the update of Java jre7 in several clientes is succesfull. But in Windows 8 64 I get always an error. Does somebody have the same problem? error 80131700.\r<br />\nThanks in advanced <br />\n",
+    "PostedDate": "2014-03-10T05:24:30.313-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221199",
+    "ThreadId": "538508",
+    "Html": "Do you have set a standard update or a custom update ? what is the type of the udpate file MSI or EXE ? What do you have set as IsInstalled rules and Isinstallable Rules ? What is the exact version of Java you try to install ? What happen if you copy the installation file on a computer and launch the installation ?<br />\n",
+    "PostedDate": "2014-03-10T13:46:05.26-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221806",
+    "ThreadId": "538508",
+    "Html": "Hi!\r<br />\nThanks for your answer. I have done a custom update, following the steps in Wssus Documentation: Installing Java without Java Auto Update. The version I try now is 7u51, for 64 bits and 32 bits. I use the exe file from the web: oracle.... jre7.  When I get the package I publish in WSUS, with &quot;update clasification&quot; Updates, and folowing the steps of the Documentation. \r<br />\nI deploy the package and it work in W7 (32 and 64), WXP (32) but in W8 (64) doesnt work and the error appears (as well it happened with the other versions that I deployed: 7u25, 7u40, 7u45. I dont get what's the problem with that W8!<br />\n",
+    "PostedDate": "2014-03-12T03:52:21.59-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1222889",
+    "ThreadId": "538508",
+    "Html": "Hi, what happen if you launch the EXE file directly on the client ?<br />\n",
+    "PostedDate": "2014-03-14T12:26:12.553-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1223474",
+    "ThreadId": "538508",
+    "Html": "I launched the EXE directly on the client and it works, Java is installed. Why doesnt work via WSUS- update? Any idea?<br />\n",
+    "PostedDate": "2014-03-17T05:11:33.063-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1225117",
+    "ThreadId": "538508",
+    "Html": "Hi albricia,\r<br />\nCheck out my thread:\r<br />\n<a href=\"https://wsuspackagepublisher.codeplex.com/discussions/539246\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/539246</a><br />\n",
+    "PostedDate": "2014-03-21T00:25:30.84-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:45:45.18-07:00"
+  }
+]

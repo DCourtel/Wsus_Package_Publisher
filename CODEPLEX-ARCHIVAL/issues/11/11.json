@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Information Update Wizard",
+      "DisplayName": "Information Update Wizard"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-04-15T15:07:57.873-07:00",
+    "CommentCount": 0,
+    "Custom": "UI defect",
+    "Description": "The anchor of the \"Prerequisites\" CheckComboBox is not set correctly in the InformationUpdateWizard.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1212.23",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-01-15T22:42:55.4-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Anchor of the \"Prerequisistes\" checkComboBox",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 11
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Rules Update Wizard",
+      "DisplayName": "Rules Update Wizard"
+    },
+    "ClosedComment": "WPP is now able to display/modify rules at package level.",
+    "ClosedDate": "2013-10-19T08:34:43.427-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Allow WPP to display/modify Package Level Rules when creating a new update or publishing an update from a vendor's catalog.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1310.12",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-13T12:36:51.013-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Show Package Level Rules",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 133
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Great, than the Last reason for using lup is gone. ;)",
+      "PostedDate": "2013-10-14T08:38:19.21-07:00",
+      "Id": 118327
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1435867",
+    "ThreadId": "641895",
+    "Html": "Do you know if Adobe will be releasing a SCUP Catalog for Acrobat Reader DC and its professional counterparts so that they can be updated through Package Publisher?<br />\n",
+    "PostedDate": "2015-07-24T07:56:06.207-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1435877",
+    "ThreadId": "641895",
+    "Html": "<strong>Reader</strong> :<br />\nClassic Track : <a href=\"http://armmf.adobe.com/arm-manifests/win/SCUP/ReaderCatalog-2015.cab\" rel=\"nofollow\">http://armmf.adobe.com/arm-manifests/win/SCUP/ReaderCatalog-2015.cab</a><br />\nContinuous track : <a href=\"http://armmf.adobe.com/arm-manifests/win/SCUP/ReaderCatalog-DC.cab\" rel=\"nofollow\">http://armmf.adobe.com/arm-manifests/win/SCUP/ReaderCatalog-DC.cab</a><br />\n<br />\n<strong>Acrobat</strong> : <br />\nClassic Track : <a href=\"http://armmf.adobe.com/manifest/arm-manifests/win/SCUP/AcrobatCatalog-2015.cab\" rel=\"nofollow\">http://armmf.adobe.com/manifest/arm-manifests/win/SCUP/AcrobatCatalog-2015.cab</a><br />\nContinuous track : <a href=\"http://armmf.adobe.com/manifest/arm-manifests/win/SCUP/AcrobatCatalog-DC.cab\" rel=\"nofollow\">http://armmf.adobe.com/manifest/arm-manifests/win/SCUP/AcrobatCatalog-DC.cab</a><br />\n",
+    "PostedDate": "2015-07-24T09:17:31.187-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-08-04T07:07:26.603-07:00"
+  }
+]

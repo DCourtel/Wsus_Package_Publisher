@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1425563",
+    "ThreadId": "638030",
+    "Html": "I am trying to deploy some custom updates but they are dependent on other updates eg .NET framework etc.\r<br />\n<br />\n<br />\nIs it possible to group the updates together so that when you install the update it displays all 3 updates and installs them in the correct order or do I have to install 1 update, then once installed, scan for updates, install the 2nd update, scan for updates, install the 3rd update etc?\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2015-05-15T06:27:44.583-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1425570",
+    "ThreadId": "638030",
+    "Html": "You can use Custom Updates, there you can execute some executables in order what you want. Here you find the documentation for custom updates. <a href=\"http://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=752590\" rel=\"nofollow\">http://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=752590</a><br />\n",
+    "PostedDate": "2015-05-15T06:46:29.647-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1425587",
+    "ThreadId": "638030",
+    "Html": "Thanks for this. I will give it a go and see how it works out.<br />\n",
+    "PostedDate": "2015-05-15T07:29:14.023-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1425766",
+    "ThreadId": "638030",
+    "Html": "Unfortunatly it's not possible to define dependencies across multiple products. So you can put all into one product category and then define pre-requisites. Maybe a future Version will have this Feature. (try opening a new issue as Feature request).\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2015-05-16T14:01:24.227-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

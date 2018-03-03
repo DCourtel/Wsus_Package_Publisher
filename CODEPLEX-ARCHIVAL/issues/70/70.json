@@ -1,0 +1,76 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Settings",
+      "DisplayName": "Settings"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-20T12:12:11.84-07:00",
+    "CommentCount": 6,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI'd like to have a setting to Auto-reconnect at Startup to the last used Server.\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1306.16",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-20T00:43:25.39-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Reconnect last Server used",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 2,
+    "Id": 70
+  },
+  "FileAttachments": [
+    {
+      "FileId": 695265,
+      "FileName": "Connect to Last Used Server.png",
+      "DownloadUrl": ".\\695265"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Me too. :)",
+      "PostedDate": "2013-06-20T01:23:52.98-07:00",
+      "Id": 103583
+    },
+    {
+      "Message": "Hum, looks like I will need a german translation for this sentence :\r\n> Connect to the last used Server when starting.",
+      "PostedDate": "2013-06-20T12:11:28.41-07:00",
+      "Id": 103648
+    },
+    {
+      "Message": "Made a Option in Tools: \n[X] Reconnect to the last used WSUS when starting WPP.\n\nBut take care, if the Server not available, send a Messagebox, don't let crash WPP. ;)\n\n[X] Zum zuletzt verwendeten WSUS wieder verbinden, beim Start von WPP.\n",
+      "PostedDate": "2013-06-20T12:38:52.88-07:00",
+      "Id": 103652
+    },
+    {
+      "Message": "Beim Start automatisch zum zuletzt verwendeten WSUS verbinden\n\nIt Sounds better and needs less space. ;)",
+      "PostedDate": "2013-06-20T12:52:18.467-07:00",
+      "Id": 103657
+    },
+    {
+      "Message": "OK, of course, it is your feature request. :)",
+      "PostedDate": "2013-06-20T14:19:23.303-07:00",
+      "Id": 103688
+    },
+    {
+      "Message": ":) ok, we can Look for better working. But not today. ;)",
+      "PostedDate": "2013-06-20T14:22:51.373-07:00",
+      "Id": 103693
+    }
+  ]
+}

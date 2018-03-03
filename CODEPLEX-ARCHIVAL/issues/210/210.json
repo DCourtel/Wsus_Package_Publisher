@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Custom Update Creator",
+      "DisplayName": "Custom Update Creator"
+    },
+    "ClosedComment": "Publishing a new release with all needed DLL.",
+    "ClosedDate": "2014-07-29T07:58:03.607-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "When attempting to create a Custom Update from Release v1.3.1407.11, WSUS Package Publisher crashes.\r\nIncluding the following files from a previous release fixes the issue:\r\nCustomUpdateElements.dll\r\nCustomUpdateElementViewer.dll\r\nCustomUpdateEngine.exe",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1407.11",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "High",
+      "Severity": 150,
+      "Id": 3
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-07-22T06:57:22.43-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Release v1.3.1407.11 doesn't include some custom updates files, crashes",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 210
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Same problem here. Using windows server 2008r2",
+      "PostedDate": "2014-07-29T06:46:31.903-07:00",
+      "Id": 153819
+    },
+    {
+      "Message": "To work around this, keep these old files from the previous version. Until I publish the next release.",
+      "PostedDate": "2014-07-29T07:57:24.903-07:00",
+      "Id": 153829
+    }
+  ]
+}

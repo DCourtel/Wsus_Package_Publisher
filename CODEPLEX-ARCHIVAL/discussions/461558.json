@@ -1,0 +1,114 @@
+[
+  {
+    "Id": "1105135",
+    "ThreadId": "461558",
+    "Html": "I have some empty Products / Vendors within the Tree View on the left side of the management window.    These products / vendors have a &quot;(0)&quot; indicating there is no updates inside of them.\r<br />\n<br />\nHowever, when I right-click on it the &quot;Delete Product&quot; is greyed out.  Am I unable to delete an empty product?<br />\n",
+    "PostedDate": "2013-10-08T12:21:59.503-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105139",
+    "ThreadId": "461558",
+    "Html": "Did you try reconnect? I recall having the same problem once. Unfortunately I don't remember what solved it.<br />\n",
+    "PostedDate": "2013-10-08T12:25:59.887-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105146",
+    "ThreadId": "461558",
+    "Html": "Unfortunately that doesn't help.   It been like this for the past couple of version of the Publisher product.\r<br />\n<br />\nI just finally created a discussion thread about it.  I'm hoping it something simple that I'm doing wrong.<br />\n",
+    "PostedDate": "2013-10-08T12:31:35.66-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105155",
+    "ThreadId": "461558",
+    "Html": "Hi, <br />\n<br />\nThe 'Delete Product' option is available if :<br />\n<ol>\n<li>WPP run on the Wsus server AND the checkbox &quot;Connect to local Server&quot; is checked.</li>\n<li>&quot;0&quot; is display at the right of the Product name.</li>\n<li>\nThe &quot;When Publishing a new update&quot; option is set to either :<br />\n<ul>\n<li>&quot;Let me choose&quot; or</li>\n<li>\n&quot;Always make this update visible in the wsus console&quot;.<br />\n</li>\n</ul>\n</li>\n</ol>\n<img src=\"http://i.imgur.com/0xTr76e.jpg\" alt=\"DeleteProductSettings\" /><br />\n<br />\nYou can not delete Official Microsoft Products nor the product called &quot;Locally Published&quot;.<br />\n<br />\nHave a look at this <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/454725\" rel=\"nofollow\">thread</a><br />\n",
+    "PostedDate": "2013-10-08T12:47:17.533-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105210",
+    "ThreadId": "461558",
+    "Html": "I have been trying to run the Publisher on the WSUS server itself using the &quot;Connect to local server&quot; option but it keeps giving me a &quot;Unable to connect to remote server&quot;.   The only way that I am able to connect is by UNCHECKING the &quot;Connect to local server&quot; option.\r<br />\n<br />\nWhy does the local server option work?<br />\n",
+    "PostedDate": "2013-10-08T14:36:00.373-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105216",
+    "ThreadId": "461558",
+    "Html": "Did you fill all required fields (Servername, Connection port, SSL) <em>and</em> checked &quot;connect to local Server&quot;?\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-10-08T14:43:59.943-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105218",
+    "ThreadId": "461558",
+    "Html": "Is SSL Required?    That is why it doesn't work. \r<br />\n<br />\nI will have to figure something out with certs then.<br />\n",
+    "PostedDate": "2013-10-08T14:48:21.64-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105223",
+    "ThreadId": "461558",
+    "Html": "<strong>DDSkier wrote:</strong><br />\n<blockquote>\nIs SSL Required?  \n<br />\n</blockquote>\nNo, only if your WSUS is configured to use it. Default is without ssl.<br />\n<blockquote>\nI will have to figure something out with certs then.<br />\n</blockquote>\nNot necessarly.\r<br />\n<br />\nbye\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-10-08T14:56:32.063-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105224",
+    "ThreadId": "461558",
+    "Html": "Hmmm... I my development environment I can't connect locally to the server on port 80.\r<br />\nHowever, in my production environment I CAN connect locally when using SSL.   That is why I think SSL may be required.\r<br />\n<br />\nCould it be something else?<br />\n",
+    "PostedDate": "2013-10-08T14:58:42.45-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105236",
+    "ThreadId": "461558",
+    "Html": "Is your server using port 80 instead of 8530?<br />\n",
+    "PostedDate": "2013-10-08T15:28:55.133-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105241",
+    "ThreadId": "461558",
+    "Html": "The WSUS IIS website is set to use port 80.<br />\n",
+    "PostedDate": "2013-10-08T15:39:19.077-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105335",
+    "ThreadId": "461558",
+    "Html": "SSL is not required for this feature.\r<br />\nWhen you run WPP directly on the Wsus server and the &quot;Connect to local server&quot; is checked, WPP don't use the Port number, the server name nor the SSL state.\r<br />\n<br />\nIf you can't connect to your Wsus server by running WPP directly on the server, you surely have a problem with your Wsus server. Try to see in the log file if anything wrong appear.<br />\n",
+    "PostedDate": "2013-10-09T00:21:44.93-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105534",
+    "ThreadId": "461558",
+    "Html": "The WSUS console work fine from the local server.   The publisher tool just doesn't want to connect using the &quot;Connect to local server&quot; checkbox.\r<br />\n<br />\nThe log for the publisher shows the following:\r<br />\n<br />\n10/9/2013 10:18:01 AM\tWPP is up and ready\r<br />\n10/9/2013 10:19:19 AM\tEntering Void ConnectToServer(System.Object, System.EventArgs)\r<br />\n10/9/2013 10:19:19 AM\tEntering Void ClearBeforeConnecting()\r<br />\n10/9/2013 10:19:19 AM\tEntering Void ClearDisplay()\r<br />\n10/9/2013 10:19:19 AM\tEntering Void AdjustSplitterDistance()\r<br />\n10/9/2013 10:19:19 AM\tEntering Void ResetControl()\r<br />\n10/9/2013 10:19:19 AM\tEntering Void ClearDisplay()\r<br />\n10/9/2013 10:19:19 AM\tEntering Void .ctor() : ComputerControl\r<br />\n10/9/2013 10:19:19 AM\tEntering Void .ctor() : ComputerListViewer\r<br />\n10/9/2013 10:19:19 AM\tEntering Wsus_Package_Publisher.Credentials GetInstance()\r<br />\n10/9/2013 10:19:19 AM\tEntering Wsus_Package_Publisher.WsusWrapper GetInstance()\r<br />\n10/9/2013 10:19:20 AM\tEntering Void .ctor()\r<br />\n10/9/2013 10:19:20 AM\tEntering Void .ctor() : ComputerDetailViewer\r<br />\n10/9/2013 10:19:20 AM\tEntering Void dtpInstalledAfter_ValueChanged(System.Object, System.EventArgs)\r<br />\n10/9/2013 10:19:20 AM\tEntering Void Display(System.Windows.Forms.DataGridViewSelectedRowCollection)\r<br />\n10/9/2013 10:19:20 AM\tEntering Void dtpInstalledAfter_ValueChanged(System.Object, System.EventArgs)\r<br />\n10/9/2013 10:19:20 AM\tEntering Void Display(System.Windows.Forms.DataGridViewSelectedRowCollection)\r<br />\n10/9/2013 10:19:20 AM\tEntering Void .ctor()\r<br />\n10/9/2013 10:19:20 AM\tTry connecting to : dev-wsus.devmclabs.com\r<br />\n10/9/2013 10:19:20 AM\tEntering Void StartWaitingForm(System.String)\r<br />\n10/9/2013 10:19:20 AM\tEntering Boolean Connect(Wsus_Package_Publisher.WsusServer, System.String) : dev-wsus.devmclabs.com (Local), en\r<br />\n10/9/2013 10:19:25 AM\t**** Unable to connect to the remote server\r<br />\n10/9/2013 10:19:27 AM\tEntering Void StopWaitingForm()\r<br />\n10/9/2013 10:19:30 AM\tEntering Void .ctor() : FrmSendDebugInfo\r<br />\n10/9/2013 10:19:31 AM\tEntering Void lnkLblShowInformations_LinkClicked(System.Object, System.Windows.Forms.LinkLabelLinkClickedEventArgs)\r<br />\n<br />\n<br />\n<br />\nAre there other logs you suggest I look at?<br />\n",
+    "PostedDate": "2013-10-09T08:20:51.083-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1109369",
+    "ThreadId": "461558",
+    "Html": "<blockquote>\nThe WSUS console work fine from the local server.<br />\n</blockquote>\nI suspect the Wsus console to always use the port number. If you try to add a server at the wsus console and enter a wrong port number, the console didn't connect.\r<br />\n<br />\nThe log clearly show that WPP will try to connect to the local server :<br />\n<blockquote>\n10/9/2013 10:19:20 AM Entering Boolean Connect(Wsus_Package_Publisher.WsusServer, System.String) : dev-wsus.devmclabs.com (Local), en <br />\n</blockquote>\nBut the error message indicate an error on a remote server :<br />\n<blockquote>\n10/9/2013 10:19:25 AM **** Unable to connect to the remote server <br />\n</blockquote>\nI really don't know what to think about this.\r<br />\nIt's just like something prevents WPP to connect directly to the local server but allow remote connection.\r<br />\n<br />\nI don't know how to solve your problem. The fact that you are the only one user to have reported this problem makes me think that there is a problem with your wsus installation/configuration.<br />\n",
+    "PostedDate": "2013-10-18T12:52:05.73-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-22T13:27:06.783-07:00"
+  }
+]

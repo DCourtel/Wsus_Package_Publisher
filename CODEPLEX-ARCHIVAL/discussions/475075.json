@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1138477",
+    "ThreadId": "475075",
+    "Html": "I have problems installing the update downloads but fails to install.\r<br />\n<br />\nError details: code 6BA\r<br />\n<br />\n<img src=\"http://imageshack.com/a/img855/606/fehd.jpg\" alt=\"Image\" /><br />\n",
+    "PostedDate": "2013-12-19T11:37:41.97-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1138570",
+    "ThreadId": "475075",
+    "Html": "Do you have set a standard update or a custom update ?\r<br />\nWhich file are you using as main update file ?\r<br />\nWhat happen if you are running the main update file manually on the computer ?<br />\n",
+    "PostedDate": "2013-12-19T12:35:46.67-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:46:37.777-07:00"
+  }
+]

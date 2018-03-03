@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update List Viewer",
+      "DisplayName": "Update List Viewer"
+    },
+    "ClosedComment": "WPP, now display \"Arrival Date\" and \"Creation Date\" in Local Time instead of UTC time in the \"Update List Viewer\" component.",
+    "ClosedDate": "2013-11-25T13:26:03.133-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "I approve this update at 15:27 GMT, what time shows WPP?\r\n\r\nThanks and Regards\r\nWinfried",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1311.24",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-11-25T07:02:05.717-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Approve Update Time",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 156
+  },
+  "FileAttachments": [
+    {
+      "FileId": 761951,
+      "FileName": "ApproveUpdateTime.png",
+      "DownloadUrl": ".\\761951"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "You are right. WPP display the UTC time instead of Local Time.\r\nI change this.",
+      "PostedDate": "2013-11-25T13:24:49.5-08:00",
+      "Id": 124215
+    }
+  ]
+}

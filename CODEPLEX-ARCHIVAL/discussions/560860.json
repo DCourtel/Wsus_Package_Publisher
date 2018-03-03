@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1288932",
+    "ThreadId": "560860",
+    "Html": "WSUS package publisher has been working perfectly for everything other than SEP deployments. \r<br />\n<br />\nThe last two versions of SEP have reported the following:<br />\n<blockquote>\nVerification of file signature failed for file: \\{ServerName}\\UpdateServicesPackages\\632b1ff5-c04e-461f-97df-b29719e8b071\\46919abe-6117-4c20-a2a7-955b6e810af9_2.cab<br />\n</blockquote>\nI suspect it may have something to do with the size of the file I'm attempting to publish. (~500 mb) However, that is significantly under the limit in WSUS of 2047MB. Any wisdom would be greatly appreciated. <br />\n",
+    "PostedDate": "2014-08-11T09:26:35.957-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1288951",
+    "ThreadId": "560860",
+    "Html": "I solved our problem by only exporting the basic content. By excluding the definitions it changed the package size down to ~60mb which worked perfectly. The issue is definitely with the size of the package being published. <br />\n<br />\nExport=&gt;Under Installation Settings and Features click on the &quot;Settings&quot; button =&gt; Select &quot;Basic Content&quot; and hit OK.<br />\n<br />\nThen package with WPP following the usual SEP settings.<br />\n",
+    "PostedDate": "2014-08-11T10:49:40.377-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-11T10:50:04.68-07:00"
+  }
+]

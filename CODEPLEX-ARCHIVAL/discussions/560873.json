@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1288987",
+    "ThreadId": "560873",
+    "Html": "Is it possible to use regular expressions when creating installable detection for a published package?\r<br />\n<br />\nExample:<br />\n<ul>\n<li>\nI want a package to be installable if any of these files exist:<br />\n</li>\n</ul>\nWellknown Directory: <br />\n<ul>\n<li>\nSYSTEMX86<br />\n</li>\n</ul>\nFiles Paths: <br />\n<ol>\n<li>Adobe\\Shockwave 8\\Plugin.dll</li>\n<li>Adobe\\Shockwave 9\\Plugin.dll</li>\n<li>Adobe\\Shockwave 10\\Plugin.dll</li>\n</ol>\n",
+    "PostedDate": "2014-08-11T12:40:29.343-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1289422",
+    "ThreadId": "560873",
+    "Html": "I have never heard about such applicability rule.<br />\n",
+    "PostedDate": "2014-08-12T13:03:36.13-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1289429",
+    "ThreadId": "560873",
+    "Html": "I am trying to make a system that may have and outdated version of Shockwave, to install the latest version of Shockwave utilizing the the file version of the Plugin.dll in the C:\\Windows\\System32\\Adobe\\Shockwave # folder.  The # changed with the major release.<br />\n\r<br />\nAre you aware of any other detection logic I can use with WPP?  That is the only location I have been able to find Shockwave version info.<br />\n",
+    "PostedDate": "2014-08-12T13:10:08.287-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1289436",
+    "ThreadId": "560873",
+    "Html": "You can try to detect any Registry value. Look into HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall<br />\n",
+    "PostedDate": "2014-08-12T13:19:06.28-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-19T12:46:46.677-07:00"
+  },
+  {
+    "Id": "1289440",
+    "ThreadId": "560873",
+    "Html": "Thanks for the idea.  I'll give that a shot.<br />\n",
+    "PostedDate": "2014-08-12T13:22:19.247-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

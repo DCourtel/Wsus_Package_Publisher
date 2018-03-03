@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-03-30T09:04:58.313-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nIt appears that WPP can crash from time to time for no reason, and no error messages are shown after the crash. It only started to happen when I connect to the WSUS server on WPP, and after scrolling down the list of workstations, the program randomly crashes without reason.\r\n\r\nIs this something that can be fixed?\r\n\r\nUPDATE: This is no longer an issue as it fixed itself.\r\n ",
+    "LastUpdatedDate": "2017-03-30T09:04:58.313-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-03-30T03:06:55.583-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "WSUS Package Publisher Crash",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 369
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

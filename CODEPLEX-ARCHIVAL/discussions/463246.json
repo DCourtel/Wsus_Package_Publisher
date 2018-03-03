@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1110968",
+    "ThreadId": "463246",
+    "Html": "Hi,\r<br />\n<br />\nI have an up to date Server 2008R2 configured as WSUS Server.\r<br />\n<br />\nI installed the Package Publisher locally and still get the notification each time I connect:\r<br />\n<br />\n&quot;Server Version is different from console version. You won't be able to publish updates.&quot;\r<br />\n<br />\nI can see that the server version is: 3.2.7600.236 and the console version: 3.2.7600.226.\r<br />\n<br />\nAs far as I know this is normal for WSUS 3.0 SP2.\r<br />\n<br />\nAny chances that I can fix this?<br />\n",
+    "PostedDate": "2013-10-23T03:09:02.127-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111000",
+    "ThreadId": "463246",
+    "Html": "<a href=\"https://wsuspackagepublisher.codeplex.com/discussions/458820\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/458820</a> does this help?\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-10-23T04:55:56.51-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-23T06:55:56.347-07:00"
+  },
+  {
+    "Id": "1111057",
+    "ThreadId": "463246",
+    "Html": "Thank you!\r<br />\n<br />\nThat was exactly what I was looking for. It helped!<br />\n",
+    "PostedDate": "2013-10-23T06:55:42.557-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111200",
+    "ThreadId": "463246",
+    "Html": "Norbert is right. Wsus will not let a user to locally publish an update if the console version didn't match the server version.<br />\n",
+    "PostedDate": "2013-10-23T11:40:56.627-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

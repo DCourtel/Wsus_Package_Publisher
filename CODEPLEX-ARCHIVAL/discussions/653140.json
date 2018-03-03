@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1468652",
+    "ThreadId": "653140",
+    "Html": "Hi,\r<br />\nhave created a basic update that works fine like many others. Now, I need to do an exclusion of 3 computers. In the rule page and in the Update level rules section, i put &quot;the MsiProductInstalled&quot; And this WMI query &quot;SELECT * FROM Win32_ComputerSystem where not name = 'XYZ' &quot;. \r<br />\n<br />\nThe problem is that when i check the updates for the client XYZ the update is available for the installation. Instead, I expect to don't see updates available.<br />\n\r<br />\nOf course, i done something of wrong but now it is invisible to my eyes. Please, help me with your advices.\r<br />\n<br />\nMany thanks,\r<br />\nRoberto<br />\n",
+    "PostedDate": "2016-04-01T03:02:51.313-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1468655",
+    "ThreadId": "653140",
+    "Html": "Wrong Syntax.\r<br />\n<br />\nwhere NOT name = \r<br />\nwhere name &lt;&gt; name\r<br />\nwhere name IS NOT xxx\r<br />\n<br />\nSyntax: <a href=\"https://msdn.microsoft.com/en-us/library/aa394605%28v=vs.85%29.aspx\" rel=\"nofollow\">https://msdn.microsoft.com/en-us/library/aa394605%28v=vs.85%29.aspx</a>\r<br />\n<br />\nYou can use Caption too:\r<br />\n<br />\n&quot;SELECT * FROM Win32_ComputerSystem Where Not Caption = 'sdfad'&quot;. Important! No Space between the quotation marks.<br />\n",
+    "PostedDate": "2016-04-01T04:13:17.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1468686",
+    "ThreadId": "653140",
+    "Html": "Thanks WinfriedSonntag.\r<br />\n<br />\nI changed the WMI filter and deleted the space.  Below the screenshot :\r<br />\n<img src=\"https://i.imgsafe.org/3de5ff0.gif\" alt=\"Image\" />\r<br />\n<img src=\"https://i.imgsafe.org/bd795e4.gif\" alt=\"Image\" />\r<br />\n<br />\nbut the update is still available from the client. I have done many times   wuauclt.exe /resetauthorization /detectnow and restarted the computer. :(\r<br />\n<br />\n<br />\nHave you another advice?\r<br />\n<br />\nThanks\r<br />\nRoberto<br />\n",
+    "PostedDate": "2016-04-01T09:15:25.303-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1468688",
+    "ThreadId": "653140",
+    "Html": "Hmm, i never work with WMI-Querys in WPP. ;)\r<br />\n<br />\nTry this: &quot;SELECT * FROM Win32_ComputerSystem Where Not Caption = &quot;sdfad&quot;&quot;\r<br />\nOr without Quotation marks.\r<br />\n<br />\nAfter recreation, run Windows Update again and click again: Search for Updates<br />\n",
+    "PostedDate": "2016-04-01T09:22:22.327-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1469330",
+    "ThreadId": "653140",
+    "Html": "Hi WinfriedSonntag, \r<br />\ni have noted your suggestion and i will try as soon as possibile. For the moment, i have suspended this job for other more urgent. However, I need to solve it .\r<br />\nAt soon.\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2016-04-07T07:25:55.06-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1470818",
+    "ThreadId": "653140",
+    "Html": "Hello!\r<br />\n<br />\nI'm back only to explain my action in waiting to have time for fix the query problem in WPP. \r<br />\n<br />\nThe computers is organized by GPOs (Enable client-side targeting).\r<br />\nFor no-stop the deploy of the new release of Java and preserve the 3 client with the old version { :-( }.   I have worked in AD creating a Group &quot;3PC-NoJavaUpd&quot; and i have put it in the delegation of the standard Wsus-GPo with deny on 'Apply group policy'. In meantime,  another Gpo client-side targeting &quot;3PC-NoJavaUpd&quot; with a WMI Filter i  have redirect the 3 computer in a new group in Wsus and isolated them.\r<br />\n<br />\nRoberto<br />\n",
+    "PostedDate": "2016-04-20T08:37:36.17-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

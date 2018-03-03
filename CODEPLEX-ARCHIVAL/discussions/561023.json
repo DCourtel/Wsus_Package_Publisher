@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1289573",
+    "ThreadId": "561023",
+    "Html": "My Wpp version is 1.3.1407.29\r<br />\nI followed the steps described <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/454725\" rel=\"nofollow\">in this post</a> \r<br />\nand now I can issue a 'delete product' command. It hangs so after some minutes I restart WPP.\r<br />\nInside the Product I tried to delete  there is now an update called <strong>Delete me !</strong>\r<br />\n<br />\nWhat can I do ?\r<br />\n<br />\nThanks\r<br />\nFilippo<br />\n",
+    "PostedDate": "2014-08-13T01:47:23.32-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1289590",
+    "ThreadId": "561023",
+    "Html": "Please, check that you didn't have set a trigger in the SQL database. (I know that some Wsus admin set such trigger to make update visible in the wsus console).<br />\n",
+    "PostedDate": "2014-08-13T02:34:27.763-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1291263",
+    "ThreadId": "561023",
+    "Html": "The Wsus database is in the default configuration, it is the embedded or express edition which is installed with Wsus. Don't think there is a trigger, I can assure I didn't set it.  The update <strong>Delete me !</strong> is weird and cannot understand who put it there. I thought it was WPP during the delete process...<br />\n",
+    "PostedDate": "2014-08-19T02:01:24.05-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1291267",
+    "ThreadId": "561023",
+    "Html": "So, after writing the above post I decided to try again. The product I had unsuccessfully tried to delete some days ago was  reported to have two updates: weird, I was sure I deleted them. So I removed the first update, then the second and last one and the product container was automatically deleted. Don't know was wrong some days ago...in the meantime there was a server restart. Anyway it was a momentary problem. <br />\n",
+    "PostedDate": "2014-08-19T02:10:48.667-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-19T12:43:06.64-07:00"
+  },
+  {
+    "Id": "1291465",
+    "ThreadId": "561023",
+    "Html": "There is no method in the Wsus API to delete an empty &quot;product&quot;. So WPP use a trick to force Wsus to do a little clean up. Publishing a small file (call &quot;Delete me&quot;) is part of this trick.\r<br />\nThis doesn't works each time but most of the time. This method is not perfect, but it's better than nothing.<br />\n",
+    "PostedDate": "2014-08-19T12:42:49.213-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1291551",
+    "ThreadId": "561023",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nThere is no method in the Wsus API to delete an empty &quot;product&quot;. So WPP use a trick to force Wsus to do a little clean up. Publishing a small file (call &quot;Delete me&quot;) is part of this trick.<br />\nThis doesn't works each time but most of the time. This method is not perfect, but it's better than nothing.<br />\n</blockquote>\nFor me it is working very well. :)<br />\n",
+    "PostedDate": "2014-08-19T21:41:50.737-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

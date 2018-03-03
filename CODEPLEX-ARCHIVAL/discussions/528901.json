@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1202595",
+    "ThreadId": "528901",
+    "Html": "I would like to deploy KeePass Password Manager.  I am having two issues with this deployment.  First, the Install Updates seems to require admin credentials.  This occurs regardless of if I use the msi package published from their site or installer exe (sort of expected exe to do this).  Does anyone have suggestions, tips, or tricks for this issue?<br />\n<br />\nWhen i do give it admin credentials, i seem to be getting a 80070667 error.  The only switches i've tried are /silent and /verysilent with the MSI package.  Any thoughts?<br />\n",
+    "PostedDate": "2014-02-04T09:57:01.047-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1202596",
+    "ThreadId": "528901",
+    "Html": "NVM, i was doing too much.  I just removed all command line parameters and removed the &quot;can request user input&quot; options and it installed straight away.<br />\n",
+    "PostedDate": "2014-02-04T10:01:10.803-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-02-04T11:21:31.267-08:00"
+  },
+  {
+    "Id": "1202623",
+    "ThreadId": "528901",
+    "Html": "Effectively, you don't have to do any things to get update to install silently. Wsus do it by itself.<br />\n",
+    "PostedDate": "2014-02-04T11:23:54.333-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

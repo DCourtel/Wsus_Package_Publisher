@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-08-07T07:39:23.003-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "If WPP is run with UAC active, the user can not connect to the server.\r\nNow, WPP automatically elevate privilèges if UAC is on.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1307.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-08-07T07:39:08.637-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Automatically elevate privileges if UAC is on",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 89
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Very good. :)",
+      "PostedDate": "2013-08-07T08:43:07.813-07:00",
+      "Id": 108842
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1454420",
+    "ThreadId": "648309",
+    "Html": "Hey. I have trouble installing Adobe Reader DC MSP package. I did setup to install Adobe DC, that works. The program is installed and everything is OK. Then installs the package (AcroRdrDCUpd1500920077). WSUS it finds, installs and writes that the system is up to date. During the search for new update (AcroRdrDCUpd1500920077) reappears. He does not want to disappear. What settings I use? I'm currently the setting for the update (AcroRdrDCUpd1500920077) like this: \r<br />\n<br />\nUpdate Classification: SecurityUpdates \r<br />\nPackage Type: Update \r<br />\nPrerequisites: 15007.20033\r<br />\nNext MSI Patch Installed For Product \r<br />\nPatch Code: AC76BA86-7AD7-0000-2550-AC0F094E6D00\r<br />\nProduct Code: ac76ba86-7ad7-1033-7b44-ac0f074e4100 \r<br />\nOK\r<br />\nDelete Rules at Package Level \r<br />\nNext MSI Patch Installed For Product \r<br />\nPatch Code: AC76BA86-7AD7-0000-2550-AC0F094E6D00\r<br />\nProduct Code: ac76ba86-7ad7-1033-7b44-ac0f074e4100 \r<br />\nReverse Rule \r<br />\nOK\r<br />\n<br />\nMaybe somebody have same problem as me. Pls help :D<br />\n",
+    "PostedDate": "2015-12-03T06:46:35.8-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

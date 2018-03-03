@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update Detail Viewer",
+      "DisplayName": "Update Detail Viewer"
+    },
+    "ClosedComment": "Fixed",
+    "ClosedDate": "2012-12-22T13:45:44.88-08:00",
+    "CommentCount": 1,
+    "Custom": "UI Defect",
+    "Description": "When connected to a wsus server on port 8530 or 8531, files are marked as missing in the update detail viewer.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.1.1212.16",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2012-12-22T02:26:09.047-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "False missing file warning",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Modified the GetPathFromUrl method to handle such case.",
+      "PostedDate": "2012-12-22T06:24:08.193-08:00",
+      "Id": 84827
+    }
+  ]
+}

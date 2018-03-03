@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-11-21T08:12:51.247-08:00",
+    "CommentCount": 7,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nI am trying to deploy the latest MS Fix it-Tool (51026). Unfortunately after I installed it at the test-client-group, it is proposed again and again. I already had the same problem with another Fix it some time ago.\r\nDoes anyone know that behaviour and maybe has an idea to fix it? The Fix its come as normal msi-packages. It seems that the examination, if the update is already installed, does not work.\r\nThanks in advance.\r\n\r\nBest regards,\r\ndocwaremf",
+    "LastUpdatedDate": "2014-11-24T01:20:46.843-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-10-31T00:17:49.78-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "MS Fix it distribution => loop",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 225
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I'm seeing this behavior as well, but only for some systems. The systems with this behavior generally fall into one of two categories: successful installations that then no longer show the hotfix as installable after detecting updates again, and failed installations that, according to the hotfix documentation, should have installed correctly.\n\nWhen I try to install the patch manually on systems where the patch fails, I'm getting the error “This Microsoft Fix it does not apply to your operating system or application version”, even though the update clearly applies as per the hotfix article. In fact, some systems that use the exact same image are getting this error while others install fine.\n\nAre you properly detecting the hotfix installation? The hotfix is packaged as an MSI, but does not install as MSIs normally do.\n\nHere's an excerpt from a conversation I'm having about this hotfix on the patchmanagement.org mailing list:\n\n> I’m currently detecting installation as the presence of the following keys:\n> \n> HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{19b2ec23-d405-490d-be4b-385387efd0a1}.sdb\n> HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{3a9498f9-243d-424b-893a-8da0b0cfad53}.sdb\n> \n> If anyone has a better detection strategy, please let me know.\n\n[...]\n\n> When you install the MSI, it shows up in add/remove programs as CVE-2014-6352.\n\n[...]\n\n> That’s correct, and the Uninstall registry keys I listed are the keys associated with the CVE-2014-6352 entries on the Add/Remove programs list, at least as far as I’ve seen in my environment. I just don’t know if that covers all cases or if there are edge cases that I’m missing.\n>  \n> I tried looking in the MSI file, but the MSI DB points to a binary installation detection mechanism, so that’s right out. (I don’t want to have to do any binary diving to look into this).\n>  \n> The strings “19b2ec23-d405-490d-be4b-385387efd0a1” and “3a9498f9-243d-424b-893a-8da0b0cfad53” aren’t anywhere in the MSI DB. The product code listed in the MSI DB is {175A4173-EBD8-4FE9-907D-6CACC856D928}. “CVE-2014-6352” is found in the Component table and in the FeatureComponents table. The Component table lists “{4C231858-2B39-11D3-8E0D-00C04F6837D0}” as a ComponentId, but it’s not in the same row as any of the rows containing “CVE-2014-6352”, and doesn’t show up anywhere in the registry of a computer with the hotfix installed.\n>  \n> The string “CVE-2014-6352” is found within the following registry keys on my systems after the Fixit is installed:\n> HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{19b2ec23-d405-490d-be4b-385387efd0a1}.sdb\n> HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{3a9498f9-243d-424b-893a-8da0b0cfad53}.sdb\n> HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\InstalledSDB\\{19b2ec23-d405-490d-be4b-385387efd0a1}\n> HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\InstalledSDB\\{3a9498f9-243d-424b-893a-8da0b0cfad53}\n>  \n> The strings “4C231858-2B39-11D3-8E0D-00C04F6837D0” and “175A4173-EBD8-4FE9-907D-6CACC856D928” are not present anywhere in the systems with the Fixit installed.\n>  \n> The following files are also found on my systems with the hotfix installed (I found the files by looking at the data contained by the listed registry keys):\n> C:\\Windows\\AppPatch\\Custom\\Custom64\\{19b2ec23-d405-490d-be4b-385387efd0a1}.sdb\n> C:\\Windows\\AppPatch\\Custom\\{3a9498f9-243d-424b-893a-8da0b0cfad53}.sdb\n>  \n> It’s just odd that this is an MSI wrapped around a compatibility tool database install. More in that here: http://technet.microsoft.com/en-us/library/cc749169(v=ws.10).aspx\n>  \n> (The fact that they’re managing this through the compatibility tool makes me think that this is a blocking patch rather than a fixing patch.)",
+      "PostedDate": "2014-11-03T12:41:21.613-08:00",
+      "Id": 163883
+    },
+    {
+      "Message": "Thanks for your answer. Unfortunately I have that behaviour no matter if the fix can be installed manually on the systems or not. I also tried to identify the installed Fixit via the reg-uninstall-key (and after that the REG_SZ-valuue) but despite all that the fix appears after successful installation again and again as pending update...",
+      "PostedDate": "2014-11-04T00:32:57.97-08:00",
+      "Id": 163932
+    },
+    {
+      "Message": "Here're my rules:\n\napplicable.rules\n```\n<bar:WindowsVersion Comparison=\"GreaterThanOrEqualTo\" MajorVersion=\"6\" MinorVersion=\"0\" ProductType=\"1\"/><lar:Or>\n<bar:FileExists Path=\"Microsoft Office\\Office12\\POWERPNT.EXE\" Csidl=\"38\"/><bar:FileExists Path=\"Microsoft Office\\Office14\\POWERPNT.EXE\" Csidl=\"38\"/><bar:FileExists Path=\"Microsoft Office\\Office12\\POWERPNT.EXE\" Csidl=\"42\"/><bar:FileExists Path=\"Microsoft Office\\Office14\\POWERPNT.EXE\" Csidl=\"42\"/><bar:FileExists Path=\"Microsoft Office 15\\root\\office15\\POWERPNT.EXE\" Csidl=\"38\"/></lar:Or>\n<lar:And>\n<lar:Not>\n<msiar:MsiProductInstalled ProductCode=\"{175a4173-ebd8-4fe9-907d-6cacc856d928}\"/>\n</lar:Not><lar:Not>\n<bar:RegKeyExists Key=\"HKEY_LOCAL_MACHINE\" Subkey=\"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{3a9498f9-243d-424b-893a-8da0b0cfad53}.sdb\"/>\n</lar:Not><lar:Not>\n<bar:RegKeyExists Key=\"HKEY_LOCAL_MACHINE\" Subkey=\"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{19b2ec23-d405-490d-be4b-385387efd0a1}.sdb\"/>\n</lar:Not></lar:And>\n```\n\ninstalled.rules\n```\n<msiar:MsiProductInstalled ProductCode=\"{175a4173-ebd8-4fe9-907d-6cacc856d928}\"/><bar:RegKeyExists Key=\"HKEY_LOCAL_MACHINE\" Subkey=\"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{3a9498f9-243d-424b-893a-8da0b0cfad53}.sdb\"/><bar:RegKeyExists Key=\"HKEY_LOCAL_MACHINE\" Subkey=\"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{19b2ec23-d405-490d-be4b-385387efd0a1}.sdb\"/>\n```",
+      "PostedDate": "2014-11-05T08:08:04.773-08:00",
+      "Id": 164011
+    },
+    {
+      "Message": "Oh, a note for the rules I posted: they're not completely correct, since they'll list Windows 8/8.1 x64 with Powerpoint x64 as applicable, even though that's not a correct case, but I don't have any computers matching that case here, so I didn't bother to make the exception. If you do, you'll need to make sure you include that exception.",
+      "PostedDate": "2014-11-05T09:03:21.927-08:00",
+      "Id": 164014
+    },
+    {
+      "Message": "Thanks for your answer, I will try that. Since we also have no PowerPoint x64, it shouldn't bother here as well.",
+      "PostedDate": "2014-11-10T00:17:29.89-08:00",
+      "Id": 164391
+    },
+    {
+      "Message": "Oh, and Microsoft patched the vulnerability this FixIt addresses with KB3011443, so you may want to run the Shim Remover: Microsoft Fix it 51027 on machines that match the installed rules listed above, (at least if you've got KB3011443 marked for installation) as the MSI detection rules that are packaged will fail to detect the installation of the shim.",
+      "PostedDate": "2014-11-21T07:34:15.393-08:00",
+      "Id": 166315
+    },
+    {
+      "Message": "Alright, thanks for your help!",
+      "PostedDate": "2014-11-24T01:20:46.843-08:00",
+      "Id": 166463
+    }
+  ]
+}

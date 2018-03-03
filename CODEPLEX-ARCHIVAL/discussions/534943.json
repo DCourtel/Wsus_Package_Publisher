@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1213910",
+    "ThreadId": "534943",
+    "Html": "I'd love to have the feature to be able to set a WSUS client's service to debug mode to troubleshoot (set registry keys to debug then restart service). And once done be able to have them be in non-debug mode. I would think the best place would be when you right click on the client in the package status window.\r<br />\n<br />\nThanks!<br />\n",
+    "PostedDate": "2014-02-24T10:47:21.667-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1214583",
+    "ThreadId": "534943",
+    "Html": "Do you really think this feature can be needed often ?\r<br />\nI think that most of Wsus Clients issue can be solved by other ways.<br />\n",
+    "PostedDate": "2014-02-25T07:15:34.483-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:55:48.277-07:00"
+  },
+  {
+    "Id": "1214738",
+    "ThreadId": "534943",
+    "Html": "The reason for the request is from this &quot;adventure&quot; I had last week:\r<br />\n<br />\n I had spent about 3 days trying to setup the proper Installable, Installed rules for Trend Micro Officescan. I was only able to actually see the reason why Installable was false and Installed was false after I enabled debugging of the WSUS client service and hammered on the rules. \r<br />\n<br />\nTurns out Trend Micro includes a installed &amp; installable rule where the MSI code matches an existing code found it won't install despite the version of each package being different. Only after running a client in debugging did I see a package rule show up (didn't see them in the WSUS package Publisher publishing view, but then again I've never seen a package have rules already defined). I deleted the package rules during the initial publishing (the second time I published it) and it fixed that issue. \r<br />\n<br />\nThe second issue was a Reg_SZ key wasn't being evaluated when set to &quot;equal&quot; as opposed to &quot;contains&quot; when comparing the registry key against a DisplayVersion &quot;10.6.5162&quot;. The debugging showed it completely fail attempting to validate the installed rule and instead report an error about the &quot;C:\\Program Files\\Update Services\\v4\\xml&quot; was corrupt on the client, which made no sense. In a blind guess I flipped it to &quot;contains&quot; and it successfully reported it matched therefor was installed already.<br />\n",
+    "PostedDate": "2014-02-25T10:17:54.87-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1215041",
+    "ThreadId": "534943",
+    "Html": "I suppose that the Wsus client have tried to compare &quot;10.6.5162&quot; with &quot;10.6.5162.0&quot; which is totally different (from the point of view of a computer :-) )<br />\n",
+    "PostedDate": "2014-02-26T02:34:10.51-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1215093",
+    "ThreadId": "534943",
+    "Html": "Ha- I tried that out of desperation. The number the pack was comparing was 10.6 so I was rather urked when it still failed even after I changed the value in the registry to the same thing (10.6).\r<br />\n<br />\nIf any option would be helpful it would possibly be something that takes the deployment's Installable, Installed logic and compares it to a test machine(s) of your choosing (similar to <a href=\"http://technet.microsoft.com/en-us/library/cc781242(v=ws.10).aspx\" rel=\"nofollow\">Active Directory's Group Policy Modeling Wizard</a> ) but this request would be a rather huge lift coding wise.<br />\n",
+    "PostedDate": "2014-02-26T03:54:12.393-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

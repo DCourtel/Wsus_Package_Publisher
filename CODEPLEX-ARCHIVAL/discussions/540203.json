@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1226924",
+    "ThreadId": "540203",
+    "Html": "Hello\r<br />\n<br />\nWe have deleted an &quot;old&quot; Update in the WPP Console, but now it still appears for Installation on every Client. Does anyone have an idea, how to solve this Problem?\r<br />\n<br />\nHere some more details:\r<br />\nWe created and approved an Update called &quot;Adobe Reader XI MUI&quot;.\r<br />\nAfter some time we found out, that this Version of Adobe Reader causes Problems in another application. \r<br />\nSo we decided to create an new Update called &quot;Adobe Reader 11&quot;. Just the German Version.\r<br />\nUnfortunately we have just deleted the old &quot;Adobe Reader XI MUI&quot; from the WPP Console and have forgotten to define the new &quot;Adobe Reader 11&quot; as superwise.\r<br />\nThe Installation of the new one is no Problem, but the old one still appears and Fails.\r<br />\n<br />\nHope you understand my English and have any idea.\r<br />\nThanks a lot.\r<br />\nIsarf<br />\n",
+    "PostedDate": "2014-03-26T07:08:46.45-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1227440",
+    "ThreadId": "540203",
+    "Html": "Hello, this can happen if clients keep this update locally in the WU Agent. Try this on a client :<br />\n<ul>\n<li>Stop Windows Update service.</li>\n<li>Delete C:\\Windows\\SoftwareDistribution</li>\n<li>\nStart Windows Update Service.<br />\n</li>\n</ul>\nLaunch a detection.<br />\n",
+    "PostedDate": "2014-03-27T09:28:16.67-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1228494",
+    "ThreadId": "540203",
+    "Html": "Thanks for your answer.\r<br />\nUnfortunately it doesn't help.\r<br />\nThat happens on new installed clients, too. It looks like the &quot;old&quot; update is automatically approved to all new clients, even it's not anymore visable on the WPP Console.\r<br />\nIt must be somewhere on the server, where I have to change something. Maybe you have another idea?<br />\n",
+    "PostedDate": "2014-03-31T01:35:36.853-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1228530",
+    "ThreadId": "540203",
+    "Html": "If the update try to install on new computer, this mean that the update is still present on the Wsus Server.\r<br />\nTry this : <br />\n<ul>\n<li>Open WPP</li>\n<li>Go to Tools - &gt; Settings -&gt; 'updates' tab and check the option &quot;Show locally-published updates taht are also visible in Wsus-console&quot;</li>\n<li>Search for your update and decline it.</li>\n</ul>\n",
+    "PostedDate": "2014-03-31T03:28:55.133-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-03-31T12:23:03.51-07:00"
+  },
+  {
+    "Id": "1228545",
+    "ThreadId": "540203",
+    "Html": "Yes! That was the solution. Thank you very much for your help! :-)<br />\n",
+    "PostedDate": "2014-03-31T04:08:26.487-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

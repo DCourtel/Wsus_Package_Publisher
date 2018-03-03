@@ -1,0 +1,66 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Add a check to  \"Security Bulletin ID\", \"Kb Article ID\", \"More Info URL\" and \"Support URL\" to filter out too long input.",
+    "ClosedDate": "2013-05-10T02:26:11.153-07:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\ni fill in Security Bulletin ID a URL: http://support.microsoft.com/kb/2847140 ENTER all Steps, after klick on Publish a Unhandled Execption come up. See Screenshots.\r\n\r\nWinfried",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1305.03",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-10T01:46:44.81-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "WPP crash if in Security Bulletin ID Text",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 40
+  },
+  "FileAttachments": [
+    {
+      "FileId": 678042,
+      "FileName": "Screenshot1.png",
+      "DownloadUrl": ".\\678042"
+    },
+    {
+      "FileId": 678043,
+      "FileName": "Screenshot2.png",
+      "DownloadUrl": ".\\678043"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": ".",
+      "PostedDate": "2013-05-10T01:47:27.663-07:00",
+      "Id": 99888
+    },
+    {
+      "Message": "Hi Winfried, this happen because you put an URL instead of a __bulletin ID__\nThis field is restrict by Wsus to 15 characters. I will add a check to this form to reject too long data.",
+      "PostedDate": "2013-05-10T02:06:25.353-07:00",
+      "Id": 99889
+    },
+    {
+      "Message": "> I will add a check to this form to reject too long data.\n\nThis is exact what i want. ;)\n\nCan you pls check if other fields too, if there is it possible to fill in too long or wrong data?\n\nThanks.\nWinfried",
+      "PostedDate": "2013-05-10T02:25:32.58-07:00",
+      "Id": 99891
+    }
+  ]
+}

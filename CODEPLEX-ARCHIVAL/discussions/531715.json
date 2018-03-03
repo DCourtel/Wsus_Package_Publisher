@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1207891",
+    "ThreadId": "531715",
+    "Html": "Hi guys,\r<br />\n<br />\nmy question today is, can I copy a folder or i have just to copy files 1 by 1 ?\r<br />\n<br />\n<br />\nBest Regards,\r<br />\nMartin<br />\n",
+    "PostedDate": "2014-02-13T05:53:06.647-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1208106",
+    "ThreadId": "531715",
+    "Html": "Custom updates doesn't allow to copy a folder. I should add this feature in WPP V2.<br />\n<br />\nYou can rely on a vbscript to do that.<br />\n",
+    "PostedDate": "2014-02-13T13:26:15.293-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-02-20T10:51:38.497-08:00"
+  }
+]

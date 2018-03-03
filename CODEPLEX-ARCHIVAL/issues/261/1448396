@@ -1,0 +1,134 @@
+<CustomUpdate>
+<Action>
+<ElementType>CustomUpdateElements.VariableElement</ElementType>
+<Name>ReturnCode</Name>
+<Type>Int</Type>
+<ID>54c8f69d-3007-4fb2-b500-3ad9295ff34f</ID>
+</Action>
+<Action>
+<ElementType>CustomUpdateElements.ExecutableElement</ElementType>
+<PathToExecutable>c:\windows\system32\taskkill.exe</PathToExecutable>
+<Parameters>/im iexplore.exe /f</Parameters>
+<KillProcess>True</KillProcess>
+<TimeBeforeKilling>10</TimeBeforeKilling>
+<Variable/>
+</Action>
+<Action>
+<ElementType>CustomUpdateElements.ExecutableElement</ElementType>
+<PathToExecutable>c:\windows\system32\msiexec.exe</PathToExecutable>
+<Parameters>/X{26A24AE4-039D-4CA4-87B4-2F83216029FF} /passive /qb</Parameters>
+<KillProcess>True</KillProcess>
+<TimeBeforeKilling>10</TimeBeforeKilling>
+<Variable>54c8f69d-3007-4fb2-b500-3ad9295ff34f</Variable>
+</Action>
+<Action>
+<ElementType>CustomUpdateElements.ExecutableElement</ElementType>
+<PathToExecutable>c:\windows\system32\msiexec.exe</PathToExecutable>
+<Parameters>/X{7148F0A8-6813-11D6-A77B-00B0D0142120} /passive /qb</Parameters>
+<KillProcess>True</KillProcess>
+<TimeBeforeKilling>10</TimeBeforeKilling>
+<Variable>54c8f69d-3007-4fb2-b500-3ad9295ff34f</Variable>
+</Action>
+<Action>
+<ElementType>CustomUpdateElements.ExecutableElement</ElementType>
+<PathToExecutable>c:\windows\system32\msiexec.exe</PathToExecutable>
+<Parameters>/X{26A24AE4-039D-4CA4-87B4-2F83216033FF} /passive /qb</Parameters>
+<KillProcess>True</KillProcess>
+<TimeBeforeKilling>10</TimeBeforeKilling>
+<Variable>54c8f69d-3007-4fb2-b500-3ad9295ff34f</Variable>
+</Action>
+<Action>
+<ElementType>CustomUpdateElements.ExecutableElement</ElementType>
+<PathToExecutable>c:\windows\system32\msiexec.exe</PathToExecutable>
+<Parameters>/X{26A24AE4-039D-4CA4-87B4-2F83216035FF} /passive /qb</Parameters>
+<KillProcess>True</KillProcess>
+<TimeBeforeKilling>10</TimeBeforeKilling>
+<Variable>54c8f69d-3007-4fb2-b500-3ad9295ff34f</Variable>
+</Action>
+<Action>
+<ElementType>CustomUpdateElements.ExecutableElement</ElementType>
+<PathToExecutable>c:\windows\system32\msiexec.exe</PathToExecutable>
+<Parameters>/X{26A24AE4-039D-4CA4-87B4-2F83217025FF} /passive /qb</Parameters>
+<KillProcess>True</KillProcess>
+<TimeBeforeKilling>10</TimeBeforeKilling>
+<Variable>54c8f69d-3007-4fb2-b500-3ad9295ff34f</Variable>
+</Action>
+<Action>
+<ElementType>CustomUpdateElements.ExecutableElement</ElementType>
+<PathToExecutable>c:\windows\system32\msiexec.exe</PathToExecutable>
+<Parameters>/X{26A24AE4-039D-4CA4-87B4-2F83217045FF} /passive /qb</Parameters>
+<KillProcess>True</KillProcess>
+<TimeBeforeKilling>10</TimeBeforeKilling>
+<Variable/>
+</Action>
+<Action>
+<ElementType>CustomUpdateElements.ExecutableElement</ElementType>
+<PathToExecutable>c:\windows\system32\msiexec.exe</PathToExecutable>
+<Parameters>/X{26A24AE4-039D-4CA4-87B4-2F83217051FF} /passive /qb</Parameters>
+<KillProcess>True</KillProcess>
+<TimeBeforeKilling>10</TimeBeforeKilling>
+<Variable>54c8f69d-3007-4fb2-b500-3ad9295ff34f</Variable>
+</Action>
+<Action>
+<ElementType>CustomUpdateElements.ExecutableElement</ElementType>
+<PathToExecutable>c:\windows\system32\msiexec.exe</PathToExecutable>
+<Parameters>/X{26A24AE4-039D-4CA4-87B4-2F83217055FF} /passive /qb</Parameters>
+<KillProcess>True</KillProcess>
+<TimeBeforeKilling>10</TimeBeforeKilling>
+<Variable>54c8f69d-3007-4fb2-b500-3ad9295ff34f</Variable>
+</Action>
+<Action>
+<ElementType>CustomUpdateElements.ExecutableElement</ElementType>
+<PathToExecutable>c:\windows\system32\msiexec.exe</PathToExecutable>
+<Parameters>/X{26A24AE4-039D-4CA4-87B4-2F03217060FF} /passive /qb</Parameters>
+<KillProcess>True</KillProcess>
+<TimeBeforeKilling>10</TimeBeforeKilling>
+<Variable>54c8f69d-3007-4fb2-b500-3ad9295ff34f</Variable>
+</Action>
+<Action>
+<ElementType>CustomUpdateElements.ExecutableElement</ElementType>
+<PathToExecutable>c:\windows\system32\msiexec.exe</PathToExecutable>
+<Parameters>/X{26A24AE4-039D-4CA4-87B4-2F03217065FF} /passive /qb</Parameters>
+<KillProcess>True</KillProcess>
+<TimeBeforeKilling>10</TimeBeforeKilling>
+<Variable>54c8f69d-3007-4fb2-b500-3ad9295ff34f</Variable>
+</Action>
+<Action>
+<ElementType>CustomUpdateElements.ExecutableElement</ElementType>
+<PathToExecutable>c:\windows\system32\msiexec.exe</PathToExecutable>
+<Parameters>/X{26A24AE4-039D-4CA4-87B4-2F03217067FF} /passive /qb</Parameters>
+<KillProcess>True</KillProcess>
+<TimeBeforeKilling>10</TimeBeforeKilling>
+<Variable>54c8f69d-3007-4fb2-b500-3ad9295ff34f</Variable>
+</Action>
+<Action>
+<ElementType>CustomUpdateElements.ExecutableElement</ElementType>
+<PathToExecutable>c:\windows\system32\msiexec.exe</PathToExecutable>
+<Parameters>/X{26A24AE4-039D-4CA4-87B4-2F03217071FF} /passive /qb</Parameters>
+<KillProcess>True</KillProcess>
+<TimeBeforeKilling>10</TimeBeforeKilling>
+<Variable>54c8f69d-3007-4fb2-b500-3ad9295ff34f</Variable>
+</Action>
+<Action>
+<ElementType>CustomUpdateElements.ExecutableElement</ElementType>
+<PathToExecutable>c:\windows\system32\msiexec.exe</PathToExecutable>
+<Parameters>/X{26A24AE4-039D-4CA4-87B4-2F83218031F0} /passive /qb</Parameters>
+<KillProcess>True</KillProcess>
+<TimeBeforeKilling>10</TimeBeforeKilling>
+<Variable>54c8f69d-3007-4fb2-b500-3ad9295ff34f</Variable>
+</Action>
+<Action>
+<ElementType>CustomUpdateElements.ExecutableElement</ElementType>
+<PathToExecutable>jre-8u40-windows-i586</PathToExecutable>
+<Parameters>/s</Parameters>
+<KillProcess>True</KillProcess>
+<TimeBeforeKilling>10</TimeBeforeKilling>
+<Variable>54c8f69d-3007-4fb2-b500-3ad9295ff34f</Variable>
+</Action>
+<Action>
+<ElementType>CustomUpdateElements.ReturnCodeElement</ElementType>
+<ReturnCodeMethod>Variable</ReturnCodeMethod>
+<StaticReturnCode>0</StaticReturnCode>
+<Variable>54c8f69d-3007-4fb2-b500-3ad9295ff34f</Variable>
+</Action>
+</CustomUpdate>

@@ -1,0 +1,98 @@
+[
+  {
+    "Id": "1109248",
+    "ThreadId": "462727",
+    "Html": "Hello Everyone,\r<br />\n<br />\nFirst of all, I'd like to thank you for this great project.\r<br />\nI use WPP for Flash Player and Java Updates.\r<br />\n<br />\nMy Java Update package use .msi and is prepared according to description in HOW TO: Deploy Java 7 Update 45 (32-bit) &amp; (64-bit) with UAC on or off in the client environment (<a href=\"https://wsuspackagepublisher.codeplex.com/discussions/462519\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/462519</a>).\r<br />\n<br />\nNormally it works great, but if any browser (e.g. IE) is opened, it always fails.\r<br />\nWhen update Java manually, there is possibility to force &quot;close browsers and continue&quot;.\r<br />\n<br />\nIs any possibility to get the same or simillar functionality using Java Update through WPP?\r<br />\nI don't want to kill processes using Custom Update. I'd like to give users possibilty to save their work and than update Java.\r<br />\n<br />\nBest regards,\r<br />\nJacek<br />\n",
+    "PostedDate": "2013-10-18T08:30:54.74-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1109347",
+    "ThreadId": "462727",
+    "Html": "Hi,<br />\n<blockquote>\nNormally it works great, but if any browser (e.g. IE) is opened, it always fails.<br />\n</blockquote>\nThis is why I never use the MSI file, but instead the EXE file which can update Java with opened browser.<br />\n<blockquote>\nIs any possibility to get the same or simillar functionality using Java Update through WPP? <br />\n</blockquote>\nYes. You can use a custom update which launch a VBScript that will check if any browser is open, ask the user to close it and then update Java.<br />\n",
+    "PostedDate": "2013-10-18T12:00:25.657-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1109365",
+    "ThreadId": "462727",
+    "Html": "Hello,<br />\n<blockquote>\nThis is why I never use the MSI file, but instead the EXE file which can update Java with opened browser.<br />\n</blockquote>\nI don't know that. I need to test EXE file. \r<br />\nFrom other discussions, it seems that MSI file are better and more reliable for JAVA update.\r<br />\nAre any other pros and cons for using EXE file for JAVA update?<br />\n<blockquote>\nYes. You can use a custom update which launch a VBScript that will check if any browser is open, ask the user to close it and then update Java.<br />\n</blockquote>\nFor me, it'll be easier to use PowerShell :)<br />\n",
+    "PostedDate": "2013-10-18T12:42:46.483-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1109376",
+    "ThreadId": "462727",
+    "Html": "EXE file make some verifications before launching the MSI file. It take appropriate action to ensure a successful deployement of Java.\r<br />\nSo far, I never had problem with EXE file, especially since I use a custom update to kill the process if it take to much time to install Java.<br />\n",
+    "PostedDate": "2013-10-18T13:08:22.727-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1110134",
+    "ThreadId": "462727",
+    "Html": "We've done some tests and try to update JAVA using .exe file - but it doesn't resolve all problems. Results below:\r<br />\nWindows 7 x64, no Java\r<br />\nno browsers open - everything OK\r<br />\nany browsers open – everything OK\r<br />\nbrowser open with Java application – msiexec error and update fails\r<br />\n<br />\nWindows XP, no Javy\r<br />\nno browsers open - everything OK\r<br />\nFirefox open – everything OK\r<br />\nIE open (any page) – msiexec error and update fails\r<br />\n<br />\nWindows XP, Java 7 Update 25\r<br />\nno browsers open - everything OK\r<br />\nFirefox open – everything OK\r<br />\nIE open (any page) – msiexec error and update fails\r<br />\nFirefox open with Java application - everything OK\r<br />\nIE/Crome open with Java application – msiexec error and update fails\r<br />\n<br />\nIt seems very randomly (asspecialy on XP).\r<br />\nAny suggestion?\r<br />\n<br />\nRegards,\r<br />\nJacek<br />\n",
+    "PostedDate": "2013-10-21T10:52:32.69-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1110202",
+    "ThreadId": "462727",
+    "Html": "It has always been difficult to update Java. As your tests show that installation goes well if no browser are open, you may want to try a custom update with a script that check if any browser is open, ask the user to close his browser and update. Another solution is a script which check if the computer is in a process of shutdown, and launch the installation only if this the case.<br />\n",
+    "PostedDate": "2013-10-21T12:50:13.98-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1113139",
+    "ThreadId": "462727",
+    "Html": "&quot;Another solution is a script which check if the computer is in a process of shutdown, and launch the installation only if this the case.&quot;\r<br />\n<br />\nIt is very intersting idea. Do you have any example? Or do you know where to find such script?\r<br />\nAs I understand, such script should also disable a possiblity to install update during normal work.<br />\n",
+    "PostedDate": "2013-10-28T08:49:27.777-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1116736",
+    "ThreadId": "462727",
+    "Html": "Be aware that such script will only, avoid installation of the package if the computer is not in process of shutting down. The update will still show up to the user in 'Windows Update'. The user still be able to launch the installation of this update, the update will not install but appears as installed and then will be reproposed to the user until the shutting down of the computer.\r<br />\nThis may lead to several calls to the helpdesk !<br />\n",
+    "PostedDate": "2013-11-01T16:08:00.64-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1150596",
+    "ThreadId": "462727",
+    "Html": "I have a varied XP/Win7 x86 &amp; x64 environment, and had the same experience with the EXE; like DCourtel says, WSUS is a bit limited, and WPP can't initiate the updates only on shutdown like we wish. \r<br />\n<br />\nNext Java update I'll write a script that notifies the user and kills off Java so it can update, or something like that. Out of my user pool of 300, I probably had 20 bad installations last time, so that was a hassle.\r<br />\n<br />\nThanks for your help, DCourtel! I appreciate your help!<br />\n",
+    "PostedDate": "2014-01-07T13:04:07.28-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1150607",
+    "ThreadId": "462727",
+    "Html": "You're welcome. I think the best thing is to post messages on the Oracle forum for them to improve the installer.<br />\n",
+    "PostedDate": "2014-01-07T13:36:15.813-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T03:00:09.17-07:00"
+  },
+  {
+    "Id": "1165304",
+    "ThreadId": "462727",
+    "Html": "@DParks256\r<br />\nIt would be very neat if you would share that script!\r<br />\nJava 7u60 should be out tomorrow.<br />\n",
+    "PostedDate": "2014-01-14T07:38:15.997-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1165335",
+    "ThreadId": "462727",
+    "Html": "not for nothing, but i solved this (i think it applies here) in a simple way.  i wrote an application that forces a logoff of all users on a computer.  it runs on a scheduler at night at a certain time.  updates deploy after the timed logoff.  the app was necessary because the subscribers to our WSUS were a mixed of domain and non-domain computers.\r<br />\n<br />\ni knew that there would be situations where specific users should be able to stay logged in, or specific machines should not be forced, so the app checks the registry.  if the machine is flagged as 'doNotLogoff', the step is skipped.  if, as the app iterates through all logged in users, a user is listed as 'doNotLogoff', that user is skipped.\r<br />\n<br />\nwould this solved the issue?  i do not believe in forcing updates on people during the work day.  it disrupts productivity.<br />\n",
+    "PostedDate": "2014-01-14T07:48:07.367-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

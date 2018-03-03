@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1356358",
+    "ThreadId": "582027",
+    "Html": "Hi there,\r<br />\nif got some funky issues packaging Adobe Reader 11.0.10. So far i followed the Guide for deploying AR 11 with custom settings. All's fine so far, update working like a charm and no shortcuts or Arm. Right now to the funky part... after the update got deployed it shows up under Programs as version 11.0.0, same under the Adobe Reader Help there shows up 11.0.\r<br />\nSo i wondered if adobe will recodnise that its still installed. So i went to the adobe site and did a manual update for the reader, and voila, it fully updates the already deployed version, after that it shows up under programs and Reader help as version 11.0.10 like it should. SO now i wonder whats wrong here or is this behaviour normal? And NO i didnt deployed the 11.0.0 adobe update ;-) Thx in advance !\r<br />\nGreets from Germany<br />\n",
+    "PostedDate": "2015-02-27T05:59:59.707-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1356370",
+    "ThreadId": "582027",
+    "Html": "How do you have deploy Adobe Reader ? Which file did you have used ?<br />\n",
+    "PostedDate": "2015-02-27T06:54:02.613-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1356372",
+    "ThreadId": "582027",
+    "Html": "I've used the latest build from Adobe FTP Site which  is 11.0.10 (german) setup.exe...then i extracted it with 7zip and did all same like in the tutorial &quot;deploying Adobe Reader 11 with custom settings&quot;... and yes i used the new Product string and added it. After i finished the custom settings i deployed it like in the tutorial over the WPP.<br />\n",
+    "PostedDate": "2015-02-27T06:58:56.173-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1356379",
+    "ThreadId": "582027",
+    "Html": "Try the MSI from the FTP-Server. Is this working?<br />\n",
+    "PostedDate": "2015-02-27T07:17:10.933-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1356384",
+    "ThreadId": "582027",
+    "Html": "<blockquote>\nI've used the latest build from Adobe FTP Site which is 11.0.10 (german) setup.exe...then i extracted it with 7zip <br />\n</blockquote>\nThis is why it doesn't work.\r<br />\nAdobe release two versions for Adobe Reader :<br />\n<ul>\n<li>The base version (.MSI file)</li>\n<li>\nThe latest version (.exe file) which contains the base version + an upgrade file<br />\n</li>\n</ul>\nWhen you extract the setup.exe with 7z, you have get the base version file (11.0.0.0).\r<br />\n<br />\nNote that the documentation provided with WPP, only apply to the base version.<br />\n",
+    "PostedDate": "2015-02-27T07:26:13.347-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

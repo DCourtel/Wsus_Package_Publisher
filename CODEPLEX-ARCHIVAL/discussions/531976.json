@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1208598",
+    "ThreadId": "531976",
+    "Html": "I have WPP running for both Adobe products and Java now.  (Great product, by the way.  Thank you!)\r<br />\n<br />\nBut a question has arisen.  What happens when the next Flash update comes along?  Do I decline/delete my entry for 12.0.0.44 and add the next one?  If not, I can see how things will get very cluttered in a short matter of time.\r<br />\n<br />\nAlso, I have seen some odd behavior from the Adobe Flash 12.0.0.44 catalog.  I got it from Adobe via the subscription.  When I approved it, I started seeing a number of failures listed in WSUS.  However, upon closer inspection, the update has succeeded.  If I run a report on the update and look at page 2, most of the computers show that it failed.  However, if you click on &quot;Failed&quot; for a given computer, you get a message that it succeeded.  This is true for most entries.  Checking Programs and Features confirms this.  Perhaps there was a problem with the catalog provided by Adobe.  Has anyone else seen this?<br />\n",
+    "PostedDate": "2014-02-14T15:52:31.14-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1208795",
+    "ThreadId": "531976",
+    "Html": "You can decline delete the update, or just configure the new update as superseding update.\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2014-02-15T13:03:23.903-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:56:01.943-07:00"
+  }
+]

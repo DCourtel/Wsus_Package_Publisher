@@ -1,0 +1,194 @@
+[
+  {
+    "Id": "1240332",
+    "ThreadId": "543986",
+    "Html": "When connecting WPP to the Adobe Flash Catalog, I am only receiving the 6KB MSI (I assume) the online installers, and not the 17-18MB full installers.  Is there a way to get the full installs from the Flash catalog in WPP that I am missing?  I know I can access the Flash Player Distribution site, and create my own update, but I am trying to avoid that.\r<br />\n<br />\nIt works great for Reader/Acrobat in providing the *.msp's, just having a disconnect for Flash/ActiveX.  <br />\n",
+    "PostedDate": "2014-05-01T11:38:30.027-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240333",
+    "ThreadId": "543986",
+    "Html": "I work from begin with the Catalog, never i have had a problem.\r<br />\n<br />\nCan you import other MSI from other Catalogs?<br />\n",
+    "PostedDate": "2014-05-01T11:42:23.297-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240338",
+    "ThreadId": "543986",
+    "Html": "The Flash catalog provides an MSI, its just not the full install MSI (~18MB) and is only the online install MSI i believe (6KB).\r<br />\n<br />\nThe Acrobat/Reader catalogs provide the MSP's as expected.\r<br />\n<br />\nThe Dell/Fujitsu/HP catalogs don't interest me.  Are there any other catalogs that have MSI's that are free/open source?...maybe containing Oracle/Chrome/etc. updates?<br />\n",
+    "PostedDate": "2014-05-01T11:48:58.883-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240344",
+    "ThreadId": "543986",
+    "Html": "I allways import only the MSI Files ~18 MB. I never import only 6 KB.\r<br />\nCan you try to import it again? Is the CAB only 6KB?<br />\n",
+    "PostedDate": "2014-05-01T11:55:53.017-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240349",
+    "ThreadId": "543986",
+    "Html": "I've attempted 3+ times already with no luck.  The CABs are also only 6KB.\r<br />\n<br />\nI would say my issue is similar to what this guys is seeing here with SCUP/SCCM --&gt; <a href=\"http://social.technet.microsoft.com/forums/systemcenter/en-US/c159b615-f1a9-4648-8ad3-6f206c40a6ae/adobe-flash-scup-updates\" rel=\"nofollow\">http://social.technet.microsoft.com/forums/systemcenter/en-US/c159b615-f1a9-4648-8ad3-6f206c40a6ae/adobe-flash-scup-updates</a>\r<br />\n<br />\nThe responders mention to make sure &quot;Full Downloads&quot; is selected in SCUP when using this catalog.  I don't see such option within the catalog manager in WPP.<br />\n",
+    "PostedDate": "2014-05-01T12:00:49.787-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240374",
+    "ThreadId": "543986",
+    "Html": "can you send me the Cab catalog at <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a><br />\n",
+    "PostedDate": "2014-05-01T13:17:14.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240384",
+    "ThreadId": "543986",
+    "Html": "Sent the email.\r<br />\n<br />\nI am using the one provided in the shared catalogs: <a href=\"http://fpdownload.adobe.com/get/flashplayer/current/licensing/win/AdobeFlashPlayerCatalog_SCUP.cab\" rel=\"nofollow\">http://fpdownload.adobe.com/get/flashplayer/current/licensing/win/AdobeFlashPlayerCatalog_SCUP.cab</a>\r<br />\n<br />\nIs there another CAB you are asking for?<br />\n",
+    "PostedDate": "2014-05-01T13:44:48.883-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240386",
+    "ThreadId": "543986",
+    "Html": "Another email was sent that includes the CAB the Flash 13.0.0.206 created.<br />\n",
+    "PostedDate": "2014-05-01T13:52:17.04-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240629",
+    "ThreadId": "543986",
+    "Html": "@DCourtel - I am not sure if you are receiving any emails from me.  I am unable to provide the zipped CAB files as your email provider is rejecting the message.  Is there another option?<br />\n",
+    "PostedDate": "2014-05-02T06:04:00.963-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240664",
+    "ThreadId": "543986",
+    "Html": "You can try this :<br />\n<ul>\n<li>Rename the .cab file into .txt and send it by email\r<br />\nor</li>\n<li>Use 7zip to compress the cab file and adding a password (this avoid antivirus scanner to see what's in the 7z file)</li>\n</ul>\n",
+    "PostedDate": "2014-05-02T07:48:54.877-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240730",
+    "ThreadId": "543986",
+    "Html": "Sent both ways in 1 email.  It appears it successfully sent.<br />\n",
+    "PostedDate": "2014-05-02T09:43:38.393-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240812",
+    "ThreadId": "543986",
+    "Html": "Hi, I have received your mail. Once rename into .cab, the attached file contains a corrupt MSI file.\r<br />\nIn WPP you can import only XML files or CAB files containing XML file.\r<br />\nIf you click on this link :\r<br />\n<a href=\"http://fpdownload.adobe.com/get/flashplayer/current/licensing/win/AdobeFlashPlayerCatalog_SCUP.cab\" rel=\"nofollow\">http://fpdownload.adobe.com/get/flashplayer/current/licensing/win/AdobeFlashPlayerCatalog_SCUP.cab</a>\r<br />\nYou will get the CAB file from Adobe. This CAB file contains the good XML file.\r<br />\nWPP will be able to import this CAB file and publish Adobe Flash Player.<br />\n",
+    "PostedDate": "2014-05-02T12:36:49.063-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1241521",
+    "ThreadId": "543986",
+    "Html": "Here is what I attempted:<br />\n<ol>\n<li>Downloaded the latest CAB from <a href=\"http://fpdownload.adobe.com/get/flashplayer/current/licensing/win/AdobeFlashPlayerCatalog_SCUP.cab\" rel=\"nofollow\">http://fpdownload.adobe.com/get/flashplayer/current/licensing/win/AdobeFlashPlayerCatalog_SCUP.cab</a></li>\n<li>Ran the &quot;Import from Catalog...&quot; feature in WPP and located the latest CAB i downloaded in previous step</li>\n<li>Selected a couple ActiveX/Plugin versions to import</li>\n<li>\nAll are still corrupted at the 6kb files size<br />\n</li>\n</ol>\nAm I missing something?\r<br />\n<br />\nTo clarify. Previously I was using the &quot;Manage Catalog Subscriptions...&quot; feature in WPP and imported the WPP\\Shared Catalogs\\Adobe-Catalog-FlashPlayer.xml with same results.  In additon, I attempted to manually create a subscription to <a href=\"http://fpdownload.adobe.com/get/flashplayer/current/licensing/win/AdobeFlashPlayerCatalog_SCUP.cab\" rel=\"nofollow\">http://fpdownload.adobe.com/get/flashplayer/current/licensing/win/AdobeFlashPlayerCatalog_SCUP.cab</a> with the same results as well.<br />\n",
+    "PostedDate": "2014-05-05T06:18:00.143-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1241558",
+    "ThreadId": "543986",
+    "Html": "Hi, I've download the same Scup.cab and import it into WPP. I have published ActiveX and Plugin of the latest version (13.0.0.206) and all work fine.\r<br />\nWhich release do you have try ?<br />\n",
+    "PostedDate": "2014-05-05T07:29:22.027-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1241571",
+    "ThreadId": "543986",
+    "Html": "I attempted the latest ActiveX and Plugin (13.0.0.206) as well.\r<br />\n<br />\nI also attempted it again after removing the Adobe Flash/Plugin files from DRIVE:\\WSUS\\UpdateServicesPackages &amp; DRIVE:\\WSUS\\WsusContent, with same results.\r<br />\n<br />\nIts just an odd scenarios, especially if it works elsewhere.  I'm running the latest release of WPP as well.<br />\n",
+    "PostedDate": "2014-05-05T07:54:01.867-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1241586",
+    "ThreadId": "543986",
+    "Html": "As per the cab file, the msi file can be get here :\r<br />\n<a href=\"http://download.macromedia.com/pub/flashplayer/current/licensing/win/install_flash_player_13_plugin.msi\" rel=\"nofollow\">http://download.macromedia.com/pub/flashplayer/current/licensing/win/install_flash_player_13_plugin.msi</a>\r<br />\n<br />\nTry to download it with Internet Explorer to see what happen.<br />\n",
+    "PostedDate": "2014-05-05T08:13:35.343-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1241596",
+    "ThreadId": "543986",
+    "Html": "No problems downloading from IE.<br />\n",
+    "PostedDate": "2014-05-05T08:26:00.323-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1241650",
+    "ThreadId": "543986",
+    "Html": "Did you using a proxy by downloading from WPP? Is your Firewall blocking?\r<br />\nCan you try a installation in a other environment without a proxy? <br />\n",
+    "PostedDate": "2014-05-05T10:06:07.873-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1241679",
+    "ThreadId": "543986",
+    "Html": "@WinfriedSonntag - There is a proxy in place.  IE and WPP are using the same proxy.  Local Firewall on server is disabled.  Its odd that I am able to download via IE just fine, but not WPP with same proxy.  I'll see if I can get the server on an Open connection to see if that helps.<br />\n",
+    "PostedDate": "2014-05-05T10:42:10.327-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1241713",
+    "ThreadId": "543986",
+    "Html": "What do you know....It appears to be the proxy.  I was able to connect the server to an non-Firewalled connection and download the Flash updates from the catalog successfully.  Thanks for all your help!  Sorry for wasting any of your time, I should've caught this a while ago.\r<br />\n<br />\nI've been evaluating this product for potential use and it really is a great product!  If we decide to use it, it will definitely be very useful!<br />\n",
+    "PostedDate": "2014-05-05T11:22:03.417-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:22:57.49-07:00"
+  },
+  {
+    "Id": "1241722",
+    "ThreadId": "543986",
+    "Html": "<strong>Brinky wrote:</strong><br />\n<blockquote>\nWhat do you know....It appears to be the proxy.  I was able to connect the server to an non-Firewalled connection and download the Flash updates from the catalog &gt; successfully.  Thanks for all your help!  Sorry for wasting any of your time, I should've caught this a while ago.<br />\n</blockquote>\nGreat News, thanks. ;) \r<br />\n<br />\nWhat kind of proxy you are using?\r<br />\n<br />\nBTW: Proxies are good devil things! :)<br />\n",
+    "PostedDate": "2014-05-05T11:43:07.257-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1241732",
+    "ThreadId": "543986",
+    "Html": "<strong>WinfriedSonntag wrote:</strong><br />\n<blockquote>\nWhat kind of proxy you are using?<br />\n<br />\nBTW: Proxies are good devil things! :)<br />\n</blockquote>\nUnfortunately, I'm not sure of the Proxy used.  If I can find out I will share.<br />\n",
+    "PostedDate": "2014-05-05T12:04:34.967-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1244511",
+    "ThreadId": "543986",
+    "Html": "Hi,\r<br />\n<br />\ndo you find out which proxy you are using?<br />\n",
+    "PostedDate": "2014-05-12T11:40:19.03-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1244517",
+    "ThreadId": "543986",
+    "Html": "<strong>WinfriedSonntag wrote:</strong><br />\n<blockquote>\nHi,<br />\n<br />\ndo you find out which proxy you are using?<br />\n</blockquote>\nUnfortunately, it doesn't look like I'll be able to get this information.<br />\n",
+    "PostedDate": "2014-05-12T11:57:41.437-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

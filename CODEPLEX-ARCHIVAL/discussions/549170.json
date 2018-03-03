@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1258067",
+    "ThreadId": "549170",
+    "Html": "Hey all,\r<br />\n<br />\nI was wondering if it is possible to push update packages created with WPP on a seperate environment that does not have WPP installed, but has WSUS, KBs, and Update Tools API 3.0 installed?\r<br />\n<br />\nI thought it would work as I am assuming the WPP program works via the API, but I couldn't get it to work using the below method:\r<br />\n<br />\nInternet facing server: Select MS Updates and Create Adobe Package using WPP.\r<br />\nRun the following script:<br />\n<pre><code>Set &quot;version=June_Patches&quot;\n&quot;C:\\Program Files\\Update Services\\Tools\\wsusutil.exe&quot; export &quot;d:\\WSUS\\%version%.cab&quot; &quot;d:\\WSUS\\%version%.log&quot;\n&quot;C:\\Program Files (x86)\\Update Services 3.0 API Samples and Tools\\WsusMigrate\\WsusMigrationExport\\WsusMigrationExport.exe&quot; &quot;D:\\WSUS\\%version%.xml&quot;</code></pre>\n\nair-gapped offline environment:\r<br />\ncopy WSUScontent folder/meta data .cab file/.xml approval list<br />\n<pre><code>Set &quot;version=June_Patches&quot;\n&quot;C:\\Program Files\\Update Services\\Tools\\wsusutil.exe&quot; import &quot;d:\\WSUS\\%version%.cab&quot; &quot;d:\\WSUS\\%version%.log&quot;\n&quot;C:\\Program Files (x86)\\Update Services 3.0 API Samples and Tools\\WsusMigrate\\WsusMigrationImport\\WsusMigrationImport.exe&quot; &quot;D:\\WSUS\\%version%.xml&quot; All None</code></pre>\n\nI thought it would work without WPP on the offline environment as I was assuming it was using the same approval list and I moved over the WSUScontent folder, which has a .cab containing flash player.\r<br />\n<br />\nMany thanks,\r<br />\nM<br />\n",
+    "PostedDate": "2014-06-19T15:03:20.283-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1258398",
+    "ThreadId": "549170",
+    "Html": "Hi, I don't have such configuration in my test environment. But theoretically, it should works. Don't forget to import the code signing certificate onto the wsus and client computers.<br />\n",
+    "PostedDate": "2014-06-20T12:57:19.64-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1258406",
+    "ThreadId": "549170",
+    "Html": "I tried to load the certificate from the same site I tried it with and the load button was greyed out, so I just generated a new one.\r<br />\n<br />\nI have a Code Signing certificate that is from the WSUS Package Publisher, although it is not the same certificate that I created the package with. \r<br />\n<br />\nCould this be the issue? I will work on putting the same certificate on both machines and get back to you on this.\r<br />\n<br />\nMany thanks,\r<br />\nM<br />\n",
+    "PostedDate": "2014-06-20T13:12:52.613-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1258408",
+    "ThreadId": "549170",
+    "Html": "The isolated wsus needs to trust the package. So, <br />\n<ul>\n<li>if you have used a self-signed certificate, you need to put this certificate in the <strong>Trusted Root Certification Authority</strong> and in the <strong>Trusted Publisher</strong></li>\n<li>\nif you have used a home made certificate, you need to put the certificate of the authority in the <strong>Trusted Root Certification Authority</strong> and the code-signing certificate itself in the <strong>Trusted Publisher</strong><br />\n</li>\n</ul>\nIt is mandatory, that the isolated wsus have the certificate that was used to sign packages.<br />\n",
+    "PostedDate": "2014-06-20T13:21:35.327-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1258414",
+    "ThreadId": "549170",
+    "Html": "Ah thank you.\r<br />\n<br />\nI was assuming the algorithm the program uses to generate the certificate would suffice, but I forgot to take into account that the algorithm creates the keys used to verify and it this case they would not be the same keys.\r<br />\n<br />\nThis will be very nice if it works without having the WPP installed on the offline environment, as it gets tricky introducing new software into the system.\r<br />\n<br />\nI will let you know.<br />\n",
+    "PostedDate": "2014-06-20T13:30:10.51-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1258419",
+    "ThreadId": "549170",
+    "Html": "You don't need WPP to be installed into the isolated Wsus. Just put the certificate in the right place, and then import updates like you do usually.<br />\n",
+    "PostedDate": "2014-06-20T13:48:07.47-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1258921",
+    "ThreadId": "549170",
+    "Html": "Worked great thanks, just had mix-matched certs.\r<br />\n<br />\nFor the future if anyone reads this thread, you don't need WPP on the offline environment, but just the environment you create the packages on, but both need to have the same cert that was generated on the WPP server.<br />\n",
+    "PostedDate": "2014-06-23T08:07:43.83-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-06-24T02:29:58.957-07:00"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1440789",
+    "ThreadId": "643777",
+    "Html": "Hello, I am new to WPP.  I have successfully published Adobe Flash from an MSI and it does install successfully on workstations thru WSUS.  My problem is that it also shows up on workstations that have a higher version already installed and thus the update fails.  How do I add a rule to tell the client not to download/install the update if it has a newer version?<br />\n",
+    "PostedDate": "2015-08-16T18:44:25.403-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1440815",
+    "ThreadId": "643777",
+    "Html": "Hello, you can make an &quot;IsInstallable&quot; rule based on this registry Key :\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Macromedia\\FlashPlayerActiveX\r<br />\nand value : Version<br />\n",
+    "PostedDate": "2015-08-17T02:48:43.023-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1440877",
+    "ThreadId": "643777",
+    "Html": "Thank you.<br />\nSo on the Rule Type I select Registry Key Exists and put that registry key in.  There is a Registry Value Exists but how would I specify that any version below the version I want to install so it would update anyone who has Flash installed at any lower value?<br />\n<br />\n<br />\n<br />\nOK I think I have it - RegSZtoVersion rule!<br />\n",
+    "PostedDate": "2015-08-17T11:47:11.517-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1440891",
+    "ThreadId": "643777",
+    "Html": "You can use the Flash catalog, it does have all the necessary rules but only applies to already installed &quot;older&quot; versions. So if you want to deploy new packages, you can deploy a base package with a rule like mentioned before and deploy the updates with the Flash catalog.\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2015-08-17T16:36:00.73-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1441214",
+    "ThreadId": "643777",
+    "Html": "Hi Sorry to Hijack this but I'm having the same issue. Loving WPP by the way, its going to save us lots of time!\r<br />\n<br />\nSo I have imported the Adobe Flash updates via the catalog and as above all works well for machines that have flash already, now for all our workstations we want to install flash where it might have been missed on initial image of the machines so I have taken the cab file from the latest update and extracted and re-imported it as a separate &quot;Application&quot; With all the same details except I know that I need to tell it only to install when the regkey HKEY_LOCAL_MACHINE\\SOFTWARE\\Macromedia\\FlashPlayerActiveX does not exist.\r<br />\n<br />\nSo on the 1st &quot;already installed&quot; rule page I just have the default MSIProductInstalled &quot;a4488e5c-1022-432a-8066-72e1c4023310&quot; rule\r<br />\n<br />\nand\r<br />\n<br />\non the 2nd &quot;update is installable&quot; rule page I have tried both a combination of the default &quot;Not&quot; - MSIProductInstalled &quot;a4488e5c-1022-432a-8066-72e1c4023310&quot; with a &quot;Not&quot; RegKeyExists  &quot;SOFTWARE\\Macromedia\\FlashPlayerActiveX&quot; or a Reg Sz To Version Reg Key of SOFTWARE\\Macromedia\\FlashPlayerActiveX    Value=Version Comparison=Greater Than Or Eual To&quot; leaving the Data set to 0,0,0,0\r<br />\n<br />\nMy attempts so far have not worked, would you be able to clarify the rules that I need to install this if the quoted reg key is not present please?\r<br />\n<br />\nLooking forward to getting this going as it mean's I can use the same on other software too!\r<br />\n<br />\nThanks again\r<br />\nMark<br />\n",
+    "PostedDate": "2015-08-20T21:12:15.64-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1441224",
+    "ThreadId": "643777",
+    "Html": "Hi,<br />\n<br />\nif you imported the updates from the Adobe Catalog, than there's a lot of package Level rules. Did you touch those?<br />\n<br />\nIf you're going to deploy Flash to any machine anywhay, than you should use this:<br />\n<a href=\"https://www.adobe.com/de/products/flashplayer/distribution3.html\" rel=\"nofollow\">https://www.adobe.com/de/products/flashplayer/distribution3.html</a> instead of the catalog.<br />\n<br />\nRegards<br />\nNorbert<br />\n",
+    "PostedDate": "2015-08-20T23:02:47.63-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1441555",
+    "ThreadId": "643777",
+    "Html": "<strong>NorbertFe wrote:</strong><br />\n<blockquote>\nHi,<br />\n<br />\nif you imported the updates from the Adobe Catalog, than there's a lot of package Level rules. Did you touch those?<br />\n<br />\nIf you're going to deploy Flash to any machine anywhay, than you should use this:<br />\n<a href=\"https://www.adobe.com/de/products/flashplayer/distribution3.html\" rel=\"nofollow\">https://www.adobe.com/de/products/flashplayer/distribution3.html</a> instead of the catalog.<br />\n<br />\nRegards<br />\nNorbert<br />\n</blockquote>\nHi &amp; Thanks for getting back to me, I extracted the msi from the cab file used in the latest update from the catalog. I see what you mean about the package level rules on my update chain from the catalog but they didn't get created when I created a new update for my &quot;install&quot; package.\r<br />\n<br />\nI've created anther Flash 18 Install package using the Active-X msi install file from the url you posted and it just has the default MSIProductinstalled update level rules.\r<br />\n<br />\nWould you be able to confirm how I create a rule to only allow installation if a registry key is not present?\r<br />\n<br />\nAlso I take it that it does not matter that I have both the update chain and the install package in the same &quot;Adobe Systems, Inc.&gt;Adobe Flash Player&quot; folder in WPP?\r<br />\n<br />\nMany thanks\r<br />\nMark<br />\n",
+    "PostedDate": "2015-08-23T20:56:51.157-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

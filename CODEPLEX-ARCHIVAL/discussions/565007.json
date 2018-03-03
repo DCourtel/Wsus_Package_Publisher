@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1298350",
+    "ThreadId": "565007",
+    "Html": "Hello,<br />\ni brought the WPP to working and it works fine. Java Update was already sucsessfully with MSI. But now I have a weird problem, that the products / Packages which iam loading from the catalogs are not showing in the gui after installing. Is that Problem known? <br />\n<br />\nThe Clients are not founding adobe flash, reader etc. from the wsus. at the begin it shows also the adobe reader as available updates. I delete the update via the gui to test something, after that i dont can approve Adobe Updates, becaus they are not shown in the gui after instaling. Need further help. <br />\n<br />\nSystem:<br />\n<br />\nWindwos Server 2012 R2 with only WSUS installed.<br />\n",
+    "PostedDate": "2014-09-02T14:51:57.93-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1298716",
+    "ThreadId": "565007",
+    "Html": "Hi, try to publish the update. Then go to 'Help' -&gt; 'Send debug info' -&gt; click on the bottom-left link 'Show informations' and send me the content of the file to <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a><br />\n",
+    "PostedDate": "2014-09-03T11:48:41.69-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1304047",
+    "ThreadId": "565007",
+    "Html": "Hello,\r<br />\ni have the same Problem. \r<br />\nI have a W2K3 Server with WSUS. Yesterday i installed WPP an configured an AdobeUpdateReader from Catalog subcribe.\r<br />\nThe Adobe Update was shown in the gui under updates and was listet in WSUS.\r<br />\nToday no updates are shown under updates in the GUI in WSUS the Update is still listet but my testclients won't get the update to install.\r<br />\nThes cert is generated and in use. In the gpo from domain i have activated the option to install updates from 3. party developers.\r<br />\n<br />\nHope you can understand what i mean (the last i need english is over 20 years ago)\r<br />\n<br />\nThanks in forward\r<br />\nAndreas <br />\n",
+    "PostedDate": "2014-09-12T06:02:36.37-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1304418",
+    "ThreadId": "565007",
+    "Html": "Hi,<br />\n<blockquote>\nToday no updates are shown under updates in the GUI in WSUS...<br />\n</blockquote>\nThis is by design. Locally-published updates are not shown, by default, in the Wsus console. There is an option to do so in WPP.<br />\n<blockquote>\n...the Update is still listet <br />\n</blockquote>\nI will assume that you mean that the update appears in WPP. <br />\n<blockquote>\nmy testclients won't get the update to install<br />\n</blockquote>\nSeveral possibilities :<br />\n<ul>\n<li>The update has not been approved for installation.</li>\n<li>The &quot;Test Client&quot; is not in a computer group where the update have been approved.</li>\n<li>The &quot;Test Client&quot; is not link to this Wsus server.</li>\n<li>The &quot;IsApplicable&quot; rule prevent installation of this update onto this computer.</li>\n</ul>\n",
+    "PostedDate": "2014-09-13T11:57:44.483-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1304684",
+    "ThreadId": "565007",
+    "Html": "Hello,<br />\n<br />\nI think I expressed myself wrong.<br />\n<br />\nThe GUI of WPP doesn't show the catalog updates I have integrated before.<br />\nI can integrate a manual update (Flash Player) and it will be shown under updates but after a restart, the manually update is gone from the GUI.<br />\nUpdates from the catalog are indeed processed but not even displayed, also without a restart of WPP.<br />\n<br />\nOn thurstady last week it worked (WPP + WSUS) without a restart of WPP.<br />\nWPP GUI showed the Updates.<br />\nWSUS showed the updates<br />\nIn the WSUS console the Test-Client showed that he should install an update.<br />\nThe Test-Client didn't download the files and didn't install the update.<br />\nBut the Test-Client installed all other updates.<br />\n<br />\nBTW: The GUI still doesn't show any update but in WSUS I found 4 x Adobe Flash Player Plugin as unapproved<br />\nI checked the debug info: Flash Player Update already exsist's<br />\n",
+    "PostedDate": "2014-09-15T00:59:04.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1304806",
+    "ThreadId": "565007",
+    "Html": "Tested Adobe Reader: same error<br />\n<br />\nThe debug file told:<br />\nWill try to publish : Reader 11.0.08 Update<br />\nThe update already exists.<br />\n<br />\nI tested to set option never make this update visible in WSUS<br />\nbut get same error when import update from catalog<br />\n",
+    "PostedDate": "2014-09-15T06:42:05.377-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1305802",
+    "ThreadId": "565007",
+    "Html": "Solved!\r<br />\n<br />\nThe Option Show locally-Published Upadtes that are also visible in WSUS Console under Settings - Update wasn't activated.\r<br />\nAfter I had activated the option the updates were shown in the GUI.<br />\n",
+    "PostedDate": "2014-09-17T22:53:13.103-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-18T03:26:53.723-07:00"
+  }
+]

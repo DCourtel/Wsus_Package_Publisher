@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1462527",
+    "ThreadId": "651074",
+    "Html": "Hallo,\r<br />\nich habe das Problem dass die letzten zwei java Updates bei einer automatischen Installation zu einem unbeabsichtigten automatischen neustart der Clients führen. \r<br />\nIch habe mich an die Uninstall2Install Anleitung gehalten. <a href=\"http://www.wsus.de/uninstall2install\" rel=\"nofollow\">http://www.wsus.de/uninstall2install</a>\r<br />\nIch habe &quot;NeverReboots&quot; im Update ausgewählt. \r<br />\nHat jemand ein ähnliches Verhalten beobachtet?\r<br />\nDie Clients sind Windows 8.1 Enterprise x64<br />\n",
+    "PostedDate": "2016-02-09T03:11:05.373-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1464067",
+    "ThreadId": "651074",
+    "Html": "Das tritt nur auf, wenn das Update mit einem Stichtag versehen ist.<br />\n",
+    "PostedDate": "2016-02-23T02:23:50.517-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1468305",
+    "ThreadId": "651074",
+    "Html": "Leider ist dies heute wieder bei einem Client aufgetreten.  Diesmal war es ein anderer Client. \r<br />\nDas Update wurde installiert und der Rechner ohne Warnung neu gestartet. Das Update hat keinen Stichtag.<br />\n",
+    "PostedDate": "2016-03-29T03:36:36.68-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1468308",
+    "ThreadId": "651074",
+    "Html": "Uninstall2Install löst keinen Neustart aus. Evtl. hast du ja noch zusätzlich etwas in den Optionen des Updates angegeben, aber Uninstall2Install löst nichts aus. Es wird nur deinstalliert, und gleich wieder neu installiert. Wurden weitere Updates mit installiert? Wenn ja, prüfe die auch nach ob dort ein Stichtag konfiguriert war.\r<br />\n<br />\nFindest Du im Ereignisprotokoll einen Hinweis auf den Neustart? Keiner meiner 200 Rechner macht nach irgendeinem Update einen ungewollten oder ungeplanten Neustart. Das war noch nie so.\r<br />\n<br />\nSchau dir bitte die <strong><em>zweite</em></strong> Benutzereinstellung aus diesem Beispiel-GPO an: <a href=\"http://www.wsus.de/images/WSUSGPO.png\" rel=\"nofollow\">http://www.wsus.de/images/WSUSGPO.png</a> Wenn du die auf die betroffenen Benutzer wirken lässt, will kein Rechner neu starten. Wenn doch, ist es ein Stichtag gewesen.<br />\n",
+    "PostedDate": "2016-03-29T04:15:46.797-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1468318",
+    "ThreadId": "651074",
+    "Html": "Vielen Dank für die Tipps. \r<br />\nLeider konnte ich bei den Updates keinen Stichtag finden. \r<br />\nAls weiteres Update wurde noch der Firefox mit installiert.\r<br />\n<br />\nDie zweite Benutzereinstellung haben wir nicht konfiguriert. Wir werden kurzfristig überlegen diese Funktion zu aktivieren.<br />\n",
+    "PostedDate": "2016-03-29T06:28:31.45-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1468332",
+    "ThreadId": "651074",
+    "Html": "Und im FF wird kein Neustart initiiert? Schau in die Eigenschaften des Updates, bzw. in die Eigenschaften der Dateien, nicht das der FF einen Neustart haben möchte. Möglicherweise kam auch eine Messagebox hoch und der Benutzer hat im genau richtigen/falschen Zeitpunkt ENTER gedrückt. Und du bist wirklich der einzige mit dem Problem, das muss bei euch eine Einstellung sein.\r<br />\n<br />\nHast Du denn schon im Ereignisprotokoll nachgeschaut?\r<br />\n<br />\nDie zweite Einstellung ist viel wert, die Benutzer sehen und kriegen von den Updates nichts mehr mit, es ist absolut silent.<br />\n",
+    "PostedDate": "2016-03-29T08:12:55.743-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1468400",
+    "ThreadId": "651074",
+    "Html": "Der FF hat keinen Neustart initiiert. Der wurde laut Ereignisprotokoll vor den Uninstall2Install Aktionen installiert.\r<br />\nDie letzte Aktion vor dem Neustart war eine Uninstall2Install Aktion:  Sub Main beendet. \r<br />\nDanach kommt nur noch die Meldung dass WindowsUpdate beendet wurde.\r<br />\nDaraufhin erfolgt der Neustart.\r<br />\n<br />\nIch teste gerade die genannte zweite Einstellung.<br />\n",
+    "PostedDate": "2016-03-30T00:23:01.927-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1470740",
+    "ThreadId": "651074",
+    "Html": "Diesmal scheint mit dem Eintrag kein Neustart erfolgt zu sein. \r<br />\nIch habe das neue Java Update noch nicht auf alle Gruppen ausgerollt, aber bis jetzt ist alles gut. <br />\n",
+    "PostedDate": "2016-04-20T03:25:26.287-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1221710",
+    "ThreadId": "538705",
+    "Html": "All,\r<br />\ni wanna Thank you all for this Amazing product and your fast action in support.\r<br />\ni have a weird problem , when I Managed the Adobe reader subscription , the updates appeared to me under the updates node , and then suddenly those updates disappeared, i tired to import them from catalog Again and still it doesnt appear , Any Ideas ?<br />\n",
+    "PostedDate": "2014-03-11T23:04:15.417-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221774",
+    "ThreadId": "538705",
+    "Html": "Maybe this helps:\r<br />\n<a href=\"https://wsuspackagepublisher.codeplex.com/discussions/537899\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/537899</a>\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2014-03-12T02:23:00.78-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-03-12T08:29:07.14-07:00"
+  },
+  {
+    "Id": "1221813",
+    "ThreadId": "538705",
+    "Html": "Thanks NorbetFE it worked :)<br />\n",
+    "PostedDate": "2014-03-12T04:18:10.987-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-01-11T12:15:40.41-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "I actually can't delete an empty product category (with no updates in it). After the \"Please wait\" window with the usually \"No response\" at the end, nothing happens. The empty category and the higher ranked publisher category still exists. Is there any other way to delete this?",
+    "LastUpdatedDate": "2015-01-11T12:15:40.41-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-01-09T16:04:52.867-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Can't delete empty product category",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 240
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Which version of WPP are you using ?\nCan you try to delete an empty product, and then send me the debug file at package.publisher@free.fr\n\nThanks.",
+      "PostedDate": "2015-01-10T00:09:41.623-08:00",
+      "Id": 169823
+    },
+    {
+      "Message": "After another try to delete, the WPP crashed and after the restart the cateogory is now deleted.",
+      "PostedDate": "2015-01-10T13:55:00.943-08:00",
+      "Id": 169835
+    }
+  ]
+}

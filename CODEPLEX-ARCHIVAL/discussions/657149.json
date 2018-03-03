@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1481163",
+    "ThreadId": "657149",
+    "Html": "Hello,<br />\nIm looking for alternative Installation methodes for JAVA, because the traditional method with .exe extracted and transformed .msi / mst file produced static installations and does not support deinstallation of older JAVA products. You need the Enterprise - .MSI from Oracle to do this.<br />\n<br />\nDoes anyone use JAVAs .exe Installer with Comand-Line Option?<br />\n<br />\nUpdates failed if I use different options fom Oracles Command Line Table:<br />\n<a href=\"http://docs.oracle.com/javase/8/docs/technotes/guides/install/config.html#installing_with_config_file\" rel=\"nofollow\">http://docs.oracle.com/javase/8/docs/technotes/guides/install/config.html#installing_with_config_file</a><br />\nThe only working, error-free Update was .exe + CommandLine: /s REMOVEOUTDATEJRES=1<br />\nNice, but incompleted configuration.<br />\nIf I add: /s REMOVEOUTDATEJRES=1 AUTO_UPDATE=Disable , update process does finish &quot;correctly&quot;, but Update isnt installed and start to install again.<br />\n<br />\nOr does anyone use the Installer Config File? <br />\nIm setting in WPP Command-Line: INSTALLCFG=\\serverpath to software deployment\\JRE8.cfg , file filled with different options, but the update failed ( 0x080070643 ).<br />\n",
+    "PostedDate": "2016-08-15T07:34:13.733-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1485648",
+    "ThreadId": "657149",
+    "Html": "Any update on this?\r<br />\nI'm going to try this this week.<br />\n",
+    "PostedDate": "2016-10-09T09:18:12.313-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1485703",
+    "ThreadId": "657149",
+    "Html": "Same problem for me. Runs just fine using PDQ deploy with a bunch of commands... but not WPP. \r<br />\nInteresting to say the least. Maybe a custom update may fix it, I got further doing that than a normal update.<br />\n",
+    "PostedDate": "2016-10-10T06:38:03.67-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1486529",
+    "ThreadId": "657149",
+    "Html": "I have Java installing with no problems and no custom update. It also uninstalls all old versions with the following configurations.\r<br />\n<br />\nThis is from my JAVA 8.0.111 x64 update package<br />\n<ul>\n<li>Download the EXE files (NOT MSI) from java.com</li>\n<li>create an update, select the exe file</li>\n<li>\nCommandLine:  STATIC=0 AUTO_UPDATE=0 EULA=0 REBOOT=0 SPONSORS=0 REMOVEOUTOFDATEJRES=1 INSTALL_SILENT=1<br />\n</li>\n</ul>\ndetermine if the update is already installed.<br />\n<ul>\n<li>\nMsiProductInstalled ProductCode = {26a24ae4-039d-4ca4-87b4-2f64180111f0}  (you can get the code from the registry after manually installing it)<br />\n</li>\n</ul>\ndetermine if the update is installable.<br />\n<ul>\n<li>\nWmiQuery\n<ul>\n<li>Namespace=root\\CIMV2</li>\n<li>WqlQuery=select * from Win32_Product where IdentifyingNumber like &quot;{26A24AE4-039D-4CA4-87B4-2F64180___F0}&quot; and IdentifyingNumber &gt; &quot;{26A24AE4-039D-4CA4-87B4-2F64180111F0}&quot;</li>\n<li>Select Reverse rule<br />\nAND</li>\n</ul>\n</li>\n<li>\nProcessor Architecture=x64<br />\n</li>\n</ul>\nIn the first UUID {26A24AE4-039D-4CA4-87B4-2F64180___F0} it is 2 F 6 4 1 8 0 &lt;underscore&gt; &lt;underscore&gt; &lt;underscore&gt; F 0\r<br />\nthis will select only java 8 Update xxx x64 programs that are installed that are higher than update 111. (in case someone update Java before I get the next update package done) The net result is that it will install if it CAN'T find a higher version already installed.<br />\n",
+    "PostedDate": "2016-10-20T13:30:10.12-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1486737",
+    "ThreadId": "657149",
+    "Html": "Thank you for your information, I will check this with Version 111 again.<br />\n<br />\nYou use CommandLineOption &quot;Sponsor&quot;. This is not supported for JRE Offline Installer.<br />\n<a href=\"http://docs.oracle.com/javase/8/docs/technotes/guides/install/config.html#installing_with_config_file\" rel=\"nofollow\">http://docs.oracle.com/javase/8/docs/technotes/guides/install/config.html#installing_with_config_file</a><br />\n<br />\n<br />\nFor 32bit Version use 26A24AE4-039D-4CA4-87B4-2F32180111F0<br />\n",
+    "PostedDate": "2016-10-24T00:59:34.74-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

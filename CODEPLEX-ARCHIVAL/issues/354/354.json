@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "WPP is not responsible for syncronisation between upstream and downstream servers. If errors occurs, it should be a settings issue in Wsus.",
+    "ClosedDate": "2017-01-27T23:19:44.14-08:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "New using WPP.  Everything installed good, GPO updated for certificates to clients, and I created an Adobe package on my WSUS primary.  Pushes good from the primary to my test workstations.  When I attempt from a replica (I change where my test workstations are looking for updates) it fails because the .cab file isn't found in Windows_Updates\\WSUSContent.  Both WPP and WSUS administrator console loaded on replica.  Can I change the folder location in WPP and manually copy the .cab file?",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-01-24T10:40:48.003-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "WPP package not copying to replica WSUS server when synced with primary WSUS",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 354
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "For me it works. We have 17 replicas, every Update created with WPP on primary can get from the clients at the replicas. How often the sync from replicas to/from the primary run? 24 times a day is the best. Replicas will pick up files from master.",
+      "PostedDate": "2017-01-24T11:15:16.783-08:00",
+      "Id": 206221
+    },
+    {
+      "Message": "I have 20 replicas, Microsoft updates have been working fine.  We only sync once a day, at 03:00, because of bandwidth issues.  I see the package in WPP on the replica, but the .cab file is missing.  On the primary there are 58 files in the content folder, I manually sync (just to be sure) and on the replica there are 57.  The missing .cab is the Adobe package.  I must have something configured wrong.  Thank you for your input.",
+      "PostedDate": "2017-01-24T11:57:33.327-08:00",
+      "Id": 206223
+    },
+    {
+      "Message": "Hi, \n> I see the package in WPP on the replica, but the .cab file is missing.\n\nThis mean that the replica server can't download from the upstream server. The reason is certainly a lack of trustworthy.\nEnsure the replica get the certificate used to signed packages. It must have a trust Relationship between the package and the replica server.",
+      "PostedDate": "2017-01-24T12:23:50.983-08:00",
+      "Id": 206224
+    },
+    {
+      "Message": "You can configure the bandwith BITS should be use by Group Policy. Sorry, i only have a URL in german, maybe  it help: https://wsus.de/de/HowTo/Background-Intelligent-Transfer-Services-BITS Link this GPO to all your Downstream-WSUS-Server.",
+      "PostedDate": "2017-01-24T12:29:13.24-08:00",
+      "Id": 206225
+    }
+  ]
+}

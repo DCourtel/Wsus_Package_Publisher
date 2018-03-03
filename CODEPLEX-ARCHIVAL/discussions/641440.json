@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1434579",
+    "ThreadId": "641440",
+    "Html": "Hi, \r<br />\n<br />\nwith lateste flash player 18.0.0.209 from catalog we have 37 installed/26 not applicable and 2 failed. I was looking to &quot;IsInstalled&quot; and &quot;IsInstallable&quot; rules. I was aslo looking to windowsupdatelog to, but I don't find what is wrong \r<br />\n<br />\nCould you please tel me how can I debug &quot;not applicable&quot; and &quot;failed&quot; status.\r<br />\n<br />\nThank you<br />\n",
+    "PostedDate": "2015-07-16T01:14:04.757-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1434590",
+    "ThreadId": "641440",
+    "Html": "Which Flash exactly you will install? ActiveX or/and Plugin? ActiveX only up to W7, in W8 and higher Flash Player comes through Windows Update/WSUS.\r<br />\n<br />\nI think the failed is on W8 Clients. If yes, you have to create a new Rule, LowerW8Clients.<br />\n",
+    "PostedDate": "2015-07-16T02:26:56.013-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1434636",
+    "ThreadId": "641440",
+    "Html": "It's windows 7 32bit.. all computers are same from same deployment. And it's activex. Plugin is installed automaticly with latest chrome update.<br />\n",
+    "PostedDate": "2015-07-16T08:38:52.45-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1434653",
+    "ThreadId": "641440",
+    "Html": "Run the MSI, downloaded from here: <a href=\"http://www.adobe.com/de/products/flashplayer/distribution3.html\" rel=\"nofollow\">http://www.adobe.com/de/products/flashplayer/distribution3.html</a>, manually on one or two Testclients. If it fails, you can download the UninstallFlashplayer.exe and try to deinstall FlashPlayer. <a href=\"https://helpx.adobe.com/de/flash-player/kb/uninstall-flash-player-windows.html\" rel=\"nofollow\">https://helpx.adobe.com/de/flash-player/kb/uninstall-flash-player-windows.html</a> After this, try install again through Windows Update.<br />\n",
+    "PostedDate": "2015-07-16T11:16:29.487-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1434696",
+    "ThreadId": "641440",
+    "Html": "I can install msi manualy without problem. After uninstall the &quot;failed&quot; status change to the &quot;not applicable&quot; grrr.<br />\n",
+    "PostedDate": "2015-07-16T19:06:20.027-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1434706",
+    "ThreadId": "641440",
+    "Html": "In admin Commandline:\r<br />\n<br />\nnet stop wuauserv\r<br />\nrd /s /q %windir%\\SoftwareDistribution\r<br />\ndel %windir%\\WindowsUpdate.log\r<br />\nnet start wuauserv\r<br />\nwuauclt /detectnow\r<br />\nwuauclt /reportnow\r<br />\n<br />\nWait 10 Minutes.<br />\n",
+    "PostedDate": "2015-07-16T21:51:43.99-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1434750",
+    "ThreadId": "641440",
+    "Html": "...it's looks that the main problem is, that the package imported from adobe catalog is only update not for new installation. I was install on problemed computer previous version of flashplayer and now the update comes up.<br />\n<br />\nInteresting for me is, that I clear all install/update rulles, that the update did not show up<br />\n",
+    "PostedDate": "2015-07-17T03:18:12.507-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-07-17T07:06:51.53-07:00"
+  },
+  {
+    "Id": "1457520",
+    "ThreadId": "641440",
+    "Html": "How to deal with a new install flash player to clean computer? I use SCUP catalog, but their packages it's work only as an update.<br />\n",
+    "PostedDate": "2015-12-30T06:04:18.263-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

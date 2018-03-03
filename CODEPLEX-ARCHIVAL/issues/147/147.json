@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Catalogs",
+      "DisplayName": "Catalogs"
+    },
+    "ClosedComment": "The form is now instanciate after the settings upgrade.",
+    "ClosedDate": "2013-10-30T14:48:28.607-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Each time WPP is upgrade, when going to \"Manage Catalogs Subscriptions\", the form is in English. This happen only one time until the next upgrade.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1310.12",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-30T14:46:33.633-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "\"Manage Catalogs Subscription\" form is in English",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 147
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This happen because the form is instanciate before WPP performe an upgrade of the previous settings.",
+      "PostedDate": "2013-10-30T14:47:53.257-07:00",
+      "Id": 120248
+    }
+  ]
+}

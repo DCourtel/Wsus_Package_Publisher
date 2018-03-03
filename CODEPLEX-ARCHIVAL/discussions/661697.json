@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1493542",
+    "ThreadId": "661697",
+    "Html": "Hy... i need some help with a deployment of an msp....\r<br />\n<br />\nI created a custom update, without any rules (is installed / installable).\r<br />\nbut my clients dont get it with: &quot;nicht verfügbar&quot; (not applicable).\r<br />\n<br />\nthan, i read the forum... and found some old versions had problems when no rules are configured... so i start playing and CHANGED some of my custom updates, but without success. So i created some NEW custom updates, with rules... but no success.\r<br />\n<br />\nSo my question... can somebody help?\r<br />\nI use: WPP Release v1.3.1702.10\r<br />\n<br />\nmsp meta:<br />\n<pre><code>&lt;msiar:MsiPatchMetadata&gt;\n&lt;MsiPatch xmlns=&quot;http://www.microsoft.com/msi/patch_applicability.xsd&quot; SchemaVersion=&quot;1.0.0.0&quot; PatchGUID=&quot;{A6B350E8-6217-4103-96B3-A84FFFE47C69}&quot; MinMsiVersion=&quot;1&quot;&gt;\n&lt;TargetProduct MinMsiVersion=&quot;301&quot;&gt;\n&lt;TargetProductCode Validate=&quot;true&quot;&gt;{D5F969A0-E004-4A61-9CD6-F99CC9D32325}&lt;/TargetProductCode&gt;\n&lt;TargetVersion Validate=&quot;true&quot; ComparisonType=&quot;LessThanOrEqual&quot; ComparisonFilter=&quot;MajorMinor&quot;&gt;15.0.1.119&lt;/TargetVersion&gt;&lt;UpdatedVersion&gt;15.0.3.305&lt;/UpdatedVersion&gt;\n&lt;TargetLanguage Validate=&quot;false&quot;&gt;1033&lt;/TargetLanguage&gt;&lt;UpdatedLanguages&gt;1033&lt;/UpdatedLanguages&gt;\n&lt;UpgradeCode Validate=&quot;true&quot;&gt;{0F5D1D36-F97B-426D-B9D7-FFEAFD65DD36}&lt;/UpgradeCode&gt;&lt;/TargetProduct&gt;\n&lt;TargetProductCode&gt;{D5F969A0-E004-4A61-9CD6-F99CC9D32325}&lt;/TargetProductCode&gt;&lt;SequenceData&gt;\n&lt;PatchFamily&gt;FMP15PatchFamily&lt;/PatchFamily&gt;\n&lt;Sequence&gt;1&lt;/Sequence&gt;\n&lt;Attributes&gt;0&lt;/Attributes&gt;&lt;/SequenceData&gt;&lt;/MsiPatch&gt;&lt;/msiar:MsiPatchMetadata&gt;</code></pre>\n\n",
+    "PostedDate": "2017-03-03T08:57:07.067-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1493584",
+    "ThreadId": "661697",
+    "Html": "Why are you creating a custom update for a MSP file ??? Simply publish a normal update.\r<br />\nAll needed informations are includes in the meta data, it will be used by the WUA on the client to validate the installation.<br />\n",
+    "PostedDate": "2017-03-04T07:33:19.72-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1493657",
+    "ThreadId": "661697",
+    "Html": "you are absolutely right. I just publish an update. not a &quot;custom update&quot; and just give him the corresponding msp file.<br />\n",
+    "PostedDate": "2017-03-06T05:36:53.287-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1493673",
+    "ThreadId": "661697",
+    "Html": "Are you sure that the MSP file apply to your computers ? Try to copy the file onto a computer and launch it manually. See what happen.<br />\n",
+    "PostedDate": "2017-03-06T12:06:05.193-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1493708",
+    "ThreadId": "661697",
+    "Html": "Thanks DCourtel,\r<br />\ni just installed one of them (msp directly) locally and it all works fine. And is installed now.\r<br />\nDo you have another hint, i can try?<br />\n",
+    "PostedDate": "2017-03-07T05:06:07.397-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1494329",
+    "ThreadId": "661697",
+    "Html": "Today I've seen that the software isn't shown in the Softwarelist (Remote MSI Manager) this explains  why WSUS doesn't recognize the necessary updates.\r<br />\n<br />\nBut updates installes just fine, manually!?\r<br />\n<br />\nVery Strange. But Thank you anyway! <br />\n",
+    "PostedDate": "2017-03-20T03:25:35.793-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

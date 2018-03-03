@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1428188",
+    "ThreadId": "638993",
+    "Html": "Hi,<br />\n<br />\nI am curious to know how the check for the catalog works. I want to notify by email when new catalogs are available, it seems there is no functionnality in WPP to notify. So I want to check with a script the .cab files saved locally.  \n<br />\n<ol>\n<li>Does the check work when WPP is running (if we always keep it open) ? If yes, is it a define time when the check will run ?</li>\n<li>Does the check work when we run WPP ?</li>\n<li>Which element is checked ? (Is it the CreationDate attribut in the XML or the PackageID ,... ?)</li>\n<li>When an update is detected, does WPP automatically download the new file and save it into the &quot;Subscribed Catalogs&quot; folder ? </li>\n<li>\nIs it possible to run WPP like a service ?<br />\n</li>\n</ol>\nThanks<br />\n",
+    "PostedDate": "2015-06-01T01:32:06.397-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1428320",
+    "ThreadId": "638993",
+    "Html": "Afair WPP checks every time it is started within 24 hours. So if you leave wpp running it's not checking in Intervalls. No it'S not possible to run WPP as a Service. If you want to be notified you can try this <a href=\"https://www.followthatpage.com/\" rel=\"nofollow\">https://www.followthatpage.com/</a> and define the catalogs sites as page.\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2015-06-02T00:58:36.8-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1428340",
+    "ThreadId": "638993",
+    "Html": "That's right.\r<br />\n<br />\nWPP, hasn't be design to run as a service. Additionnaly, catalog are not updated so frequently. And there is less and less Publisher to use catalog.<br />\n",
+    "PostedDate": "2015-06-02T03:23:34.78-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

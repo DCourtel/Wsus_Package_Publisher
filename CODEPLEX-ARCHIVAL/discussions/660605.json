@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1490909",
+    "ThreadId": "660605",
+    "Html": "Hi there,\r<br />\n<br />\ni am configured on our WPP Server a Package to install Java 8 Update 112. I followed the documentation from <a href=\"https://wsuspackagepublisher.codeplex.com/documentation\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/documentation</a>, but the specifierd clients not showing this update.\r<br />\nWe havent before published Java via WPP. The Updatelog from the client dont show any errors or infos.\r<br />\nAnyone have a hint for me?\r<br />\nIf you need further information pls let me know.\r<br />\n<br />\nGreetings<br />\n",
+    "PostedDate": "2017-01-10T07:07:46.54-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

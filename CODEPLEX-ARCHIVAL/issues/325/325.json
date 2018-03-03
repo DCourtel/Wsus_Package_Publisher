@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Nachdem ich im WPP ein Update anlege (neues Update) und es Überarbeite/Veröffentliche ist es zwar in der WSUS-Konsole wie gewünscht sichtbar und wir auch installiert, in der WPP-Konsole ist es aber nicht mehr zu sehen. Bei den ersten Updates war das noch nicht der Fall, aber auf einmal nix mehr, keine Anzeige. Ich habe es jetzt mehrfach versucht und weiß nicht was ich falsch mache. Nichts hilft, Server neu gestartet...hat jemand eine Idee oder ein ähnliches Verhalten?",
+    "LastUpdatedDate": "2017-11-21T04:10:56.24-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-02-16T09:02:16.057-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Update nach Anlage im WPP nicht sichtbar",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 325
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Dann schau doch mal hier durch diverse Threads, oder zumindest in die Optionen in wpp. So schwer ist der Haken nicht zu finden.\n",
+      "PostedDate": "2016-02-23T00:41:01.087-08:00",
+      "Id": 196877
+    },
+    {
+      "Message": "OK, Danke, hab ich voll übersehen. Sorry für die zu einfache Frage...",
+      "PostedDate": "2016-03-07T09:38:44.283-08:00",
+      "Id": 197257
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1486733",
+    "ThreadId": "658911",
+    "Html": "Hi!\r<br />\n<br />\nHas anyone tried WPP on WSUS 10/Server2016? Any plans/timeline for this if not compatible?<br />\n",
+    "PostedDate": "2016-10-23T23:45:19.427-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1487201",
+    "ThreadId": "658911",
+    "Html": "I tried it with W2016 Technical Preview 3 or 4, no Problems. It works. I will try in the next weeks on W2016 RTM and let you know if there are any problems. But i think its working.<br />\n",
+    "PostedDate": "2016-11-01T05:20:15.883-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1489478",
+    "ThreadId": "658911",
+    "Html": "Hi!\r<br />\n<br />\nI just installed a W2016 Server and installed WSUS without problem. WPP Console ist starting without problems. But if you want to publish an update to the wsus console, it fails with , but if  try to publish an update to WSUS Console, it fails with the following error code:\r<br />\n<br />\nA network-relatet or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 – could not open a connection to SQL server.)\r<br />\n<br />\nDo you have any suggestions?:)<br />\n",
+    "PostedDate": "2016-12-08T05:29:42.123-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

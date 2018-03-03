@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1436144",
+    "ThreadId": "641991",
+    "Html": "I created a new update but forgot to change the Vendor Name.  Therefore it created my update under &quot;Local Publisher&quot;.  But instead of putting under the existing &quot;Local Publisher&quot; vendor item (where it shows the &quot;Locally published packages (0)&quot;), it created a duplicate &quot;Local Publisher&quot; item that list only my published update.\r<br />\n<br />\nSo then I deleted my update, but it didn't remove the product from under the duplicate Local Publisher item.  It just shows my updated product name with a &quot;(0)&quot; at the end.  If I select that update, the Information tab on the right has just blank info.  I can't select it to delete again or anything.\r<br />\n<br />\nI went ahead and republished the update under the correct vendor thinking that maybe once the product name showed up again in the correct vendor, the system would somehow see that and clean up the &quot;Local Publisher&quot; instance of it.  But that didn't happen.\r<br />\n<br />\nHow do I clean this up to get rid of the empty &quot;Local Publisher&quot; instance of my update?\r<br />\n<br />\nThank you.<br />\n",
+    "PostedDate": "2015-07-27T08:06:00.403-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436162",
+    "ThreadId": "641991",
+    "Html": "Well, never mind I guess.  After doing several more things, all of which I'm not even sure, though ending with a server reboot, it cleared itself up.  Thanks anyway!<br />\n",
+    "PostedDate": "2015-07-27T09:47:16.6-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-07-27T11:18:02.327-07:00"
+  },
+  {
+    "Id": "1436173",
+    "ThreadId": "641991",
+    "Html": "Hi, you need to know that &quot;Products&quot; and &quot;Vendors&quot; are entirely managed by Wsus.\r<br />\nWPP can &quot;try&quot; to do some stuff to force Wsus to delete a &quot;Product&quot; or a &quot;Vendor&quot; but that's all.<br />\n",
+    "PostedDate": "2015-07-27T11:17:56.9-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436293",
+    "ThreadId": "641991",
+    "Html": "Thanks for the info.<br />\n",
+    "PostedDate": "2015-07-28T06:42:36.87-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

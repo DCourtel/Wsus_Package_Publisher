@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1340995",
+    "ThreadId": "577464",
+    "Html": "Hi, I have create an Update with the au.msi file, but when I publish the page I receive an error &quot;createDirectory failed&quot;\r<br />\n<br />\nThanks, Michael<br />\n",
+    "PostedDate": "2015-01-12T02:02:01.537-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341173",
+    "ThreadId": "577464",
+    "Html": "Is it the first time you publish a package or have you already successfully publish one ?<br />\n",
+    "PostedDate": "2015-01-12T10:18:07.103-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341328",
+    "ThreadId": "577464",
+    "Html": "This is the first time.<br />\n",
+    "PostedDate": "2015-01-12T23:15:53.46-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341464",
+    "ThreadId": "577464",
+    "Html": "Can you try again. When you have the error message, go to 'Help'-&gt;'Send debug info', then click on the link at bottom left. And send me the file to <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a><br />\n",
+    "PostedDate": "2015-01-13T06:59:33.313-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-01-14T07:54:30.827-08:00"
+  }
+]

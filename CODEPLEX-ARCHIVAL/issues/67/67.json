@@ -1,0 +1,91 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update Detail Viewer",
+      "DisplayName": "Update Detail Viewer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-21T13:59:35.603-07:00",
+    "CommentCount": 8,
+    "Custom": null,
+    "Description": "WPP can sometime crash when checking the checkbox 'Show online computers only'. This happen when a lot of computers are present in the datagridview and checking the option while the filtering is not ended.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1306.16",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-19T04:19:12.15-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Crash when checking \"Show online computers only\"",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 67
+  },
+  "FileAttachments": [
+    {
+      "FileId": 696844,
+      "FileName": "WPP-Ping.png",
+      "DownloadUrl": ".\\696844"
+    },
+    {
+      "FileId": 697152,
+      "FileName": "WPP-Detectnow2.png",
+      "DownloadUrl": ".\\697152"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Can \"send detect now\" and \"send Report now\" honour the Checkbox \"Show online Computers only\"? So that those commands are send to online Computers only?\n\nRegards\nNorbert",
+      "PostedDate": "2013-06-19T04:30:53.19-07:00",
+      "Id": 103406
+    },
+    {
+      "Message": "Norbert, this should already be the case since Release v1.1.1305.03.\nDo you have detect any defect, with this feature ?",
+      "PostedDate": "2013-06-19T11:37:21.297-07:00",
+      "Id": 103507
+    },
+    {
+      "Message": "I'll check this later again and give feedback.\n\nHave a nice weekend",
+      "PostedDate": "2013-06-21T14:04:04.413-07:00",
+      "Id": 103821
+    },
+    {
+      "Message": "Hi,\r\n\r\ntoday I had the chance to check this. And it seems to me, that it does not work like one would expect.\r\nAs you can see at the screenshot, there are computers listed which are offline.\r\nI was using the last released Version available.",
+      "PostedDate": "2013-06-25T14:13:22.953-07:00",
+      "Id": 104118
+    },
+    {
+      "Message": "I'm not sure of what you are meaning.\n\nDid you mean that :\n   - WPP send command to Non-Selected Computers ?\nor \n   - WPP can successfully Ping computers in the main list and can not Ping some of them in the 'Send Command ' Window ? (this could happen sometime depending of the responsiveness of remote computers and network).\n\nDo this test :\n   - Select Online computers and Offline computers.\n   - Note the name of Online Computers and Offline computers.\n   - Check the option, 'Show only online computers'.\n   - Send a 'DetectNow' command.\n   - In the 'Send Command' Window, compare computers name with the list you have write down previously.\n\nNormally, no 'Offline' computer should appear in the 'Send Command' Window. If you do the same test without checking the option 'Show only online computers', the 'Send Command' Window will show all the previously selected computers (online + offline).",
+      "PostedDate": "2013-06-26T12:48:25.657-07:00",
+      "Id": 104252
+    },
+    {
+      "Message": "Thats exactly what I'm trying to say. ;)\r\nPlease see the new screenshot. Only one online computer and lots of offline \"pings\".\r\n",
+      "PostedDate": "2013-06-26T14:22:23.147-07:00",
+      "Id": 104267
+    },
+    {
+      "Message": "Ok, I see what you're doing.\nyou are doing right-clicking on a Computer-Group name in the left panel but don't make any selection in the right side.  In this case the command is send to all computers in this group without any filter.",
+      "PostedDate": "2013-06-27T03:22:49.163-07:00",
+      "Id": 104333
+    },
+    {
+      "Message": "Ah ok. Yes that's what I'm doing, because selecting a lot of Computers in the datagrid is slowly. ;)",
+      "PostedDate": "2013-06-27T05:41:13.437-07:00",
+      "Id": 104343
+    }
+  ]
+}

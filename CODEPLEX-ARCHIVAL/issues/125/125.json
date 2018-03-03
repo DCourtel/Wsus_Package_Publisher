@@ -1,0 +1,76 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-11-01T04:58:56.16-07:00",
+    "CommentCount": 6,
+    "Custom": null,
+    "Description": "I had a problem with the certificate and I created another certificate. Now the updates that were signed with the first certificate will not work, so I tried to re-sign these updates, but not working. These updates are still signed by the first certificate.\r\n\r\nHow I could re-sign all previous updates with the new generated certificate? Or should I create all the updates again?\r\n\r\nThanks!",
+    "LastUpdatedDate": "2013-11-01T05:34:10.553-07:00",
+    "PlannedForRelease": "Release v1.3.1310.12",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-01T03:10:54.57-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Problem with resign",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 125
+  },
+  "FileAttachments": [
+    {
+      "FileId": 738998,
+      "FileName": "WPP-Resign.zip",
+      "DownloadUrl": ".\\738998"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "I tried Revise option... and this way works ok and update de sign with new certificate.\n\nI thought resign option was for this. ",
+      "PostedDate": "2013-10-01T03:52:16.36-07:00",
+      "Id": 116081
+    },
+    {
+      "Message": "> I thought resign option was for this. \n\nIt is !\n\nI have personally used it some days ago, when our certificate has expired. Do you have an error message ? Do you have send Debug info ?",
+      "PostedDate": "2013-10-01T13:17:31.177-07:00",
+      "Id": 117128
+    },
+    {
+      "Message": "Hello!\n\nI have an old certificate with date 07/03/2013, valid until 06/03/2018. This certificate was used for sign all my updates until now.\nTwo weeks ago I created a new certificate valid from 27/09/2013 until 26/09/2018.\nWhen I click Resign option, I get \"Package successfully resigned\", but when I go to properties file (http://avenzoar/Content/43/A24021D17E882C46A5949EE2071B8BFD5D474143.cab) the certificate remains the same, the old certificate.\nHowever, if I try click on Revise option, Next, Next, Revise... then I get a new file (http://avenzoar/Content/70/A5CEB6312C7D01C23F6129CB03967A0F7259F770.cab) with the new certificate.\nThis way is the only one way I get resigned update. And I get another file, plus previos file. So finally I have two files in my WsusContent folder: the old file with old certificate, and the new file with new certificate. The old file is not deleted, so I must have to search it and clean up manually.\n\nI attach some screenshots.\n\nThanks!",
+      "PostedDate": "2013-10-04T00:35:21.107-07:00",
+      "Id": 117444
+    },
+    {
+      "Message": "File attached.",
+      "PostedDate": "2013-10-04T00:35:49.903-07:00",
+      "Id": 117445
+    },
+    {
+      "Message": "Once you have re-sign the update, do you have click on Connect/Reload to have WPP to reload metadata from Wsus server ?",
+      "PostedDate": "2013-10-04T03:25:04.24-07:00",
+      "Id": 117460
+    },
+    {
+      "Message": "I think that it's most a display problem. WPP doesn't refresh the display after re-signing so you still view the old file. I have change the way WPP refresh the display to show the most recent info on the update after a re-sign.",
+      "PostedDate": "2013-10-06T11:52:16.95-07:00",
+      "Id": 117592
+    }
+  ]
+}

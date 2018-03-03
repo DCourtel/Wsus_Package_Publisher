@@ -1,0 +1,80 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-09-03T12:16:56.45-07:00",
+    "CommentCount": 8,
+    "Custom": null,
+    "Description": "Adding Import/Export updates capability.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1307.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-25T10:48:17.893-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "Add Import/Export updates",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 2,
+    "Id": 49
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "The feature has been added.",
+      "PostedDate": "2013-08-09T10:28:17.38-07:00",
+      "Id": 109222
+    },
+    {
+      "Message": "Importing an update, will only work if the update has been exported from a Wsus server that use the same Certificate than the importing server.",
+      "PostedDate": "2013-08-09T16:21:26.623-07:00",
+      "Id": 109276
+    },
+    {
+      "Message": "Which than makes this Feature Kind of useless, don't you think? Would it be possible to Import it into another wsus Server with a different certificate and resign it on Import?\n\nRegards\nNorbert",
+      "PostedDate": "2013-08-13T14:29:47.89-07:00",
+      "Id": 109722
+    },
+    {
+      "Message": "I need to check.",
+      "PostedDate": "2013-08-14T02:57:51.61-07:00",
+      "Id": 109840
+    },
+    {
+      "Message": "\n\r\n\r** Closed by DCourtel 08/09/2013 10:28AM",
+      "PostedDate": "2013-08-09T10:28:28.77-07:00",
+      "Id": 109841
+    },
+    {
+      "Message": "I confirm that, if trying to import a package that have been signed by a Wsus with a different certificate than the importing server, will throw an error.\nI can have a look to make WPP to be able to re-sign the package. But I will need to code a module for searching for signature in the package, and for signing the package if need. That can take some time for me to get all documentations.\nNote: this can be usefull for Windows Server 2012R2. Because wsus 6.3 seem not able anymore to issue self-signed certificate.",
+      "PostedDate": "2013-08-14T05:26:03.2-07:00",
+      "Id": 109859
+    },
+    {
+      "Message": "Re-signing the package mean that, I first need to 'Un-Sign' it. Which is not a trivial job.\nI think that this feature is interesting, essentially, for Wsus admins who use the same Code-Siging certificate through their organisation.\n\nI will let this feature like this for now.",
+      "PostedDate": "2013-09-03T12:16:22.113-07:00",
+      "Id": 111971
+    },
+    {
+      "Message": "Why should it be a problem to export an exisiting update without a signature? Or maybe add an option to save the update unsigned AND in the normal way just while the update creation.",
+      "PostedDate": "2014-11-14T04:17:42.863-08:00",
+      "Id": 164727
+    }
+  ]
+}

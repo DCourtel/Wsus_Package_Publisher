@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1497534",
+    "ThreadId": "663498",
+    "Html": "I had used WPP to deploy Adobe Reader DC back in December.  I recently deployed a new workstation and I realized that the machine was not getting Reader.  When I look at the status, it shows Not Installed, Approval is set to Install and the Last Contact Date is current.\r<br />\n<br />\nWe are on Server 2008 R2 and WSUS updates are working fine.\r<br />\n<br />\nThis took me down a rabbit hole and I tried to create a package for the newest version of Reader.  When I went to publish the package, I get a CreateDirectory Failed message.  I attempted to revise one of the packages currently listed and get the same message.  This is installed on the same machine as my WSUS server.<br />\n\r<br />\nMy installation on is D: and both the UpdateServicesPackages and WsusContent folders have recent timestamps.  I am logged on the server as a Domain Admin.\r<br />\n<br />\nAny guidance is appreciated.<br />\n",
+    "PostedDate": "2017-07-27T12:48:15.6-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

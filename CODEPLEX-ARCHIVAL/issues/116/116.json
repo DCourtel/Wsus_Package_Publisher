@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update Detail Viewer",
+      "DisplayName": "Update Detail Viewer"
+    },
+    "ClosedComment": "Wpp now display \"Additionnal Info URL\", \"Folder\" and \"Id\" as clickable link.",
+    "ClosedDate": "2013-09-21T06:29:22.837-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nit would be helpful to have the provided Information URLs for updates to be clickable (or at least selectable). See screenshot.\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1309.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-09-16T23:47:43.03-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "clickable URLs",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 116
+  },
+  "FileAttachments": [
+    {
+      "FileId": 731150,
+      "FileName": "17-09-2013 08-45-25.png",
+      "DownloadUrl": ".\\731150"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "> Wpp now display \"Additionnal Info URL\", \"Folder\" and \"Id\" as clickable link.\n\nGrerat, thank you for your work. ;)",
+      "PostedDate": "2013-09-21T06:56:39.62-07:00",
+      "Id": 115233
+    }
+  ]
+}

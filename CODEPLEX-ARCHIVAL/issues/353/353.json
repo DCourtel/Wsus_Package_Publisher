@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:52.9-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "I have 23gb of files associated with WPP in my profile.  Specifically, they are in the C:\\Users\\*****\\AppData\\Local\\Temp\\WPP directory.  C: is getting a little short on space.  4gb dates back to prior to 2016.  Are all these files still in use by the system or can some be cleaned up?  Is there an easy way to relocate these files to another drive?",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1603.29",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-01-11T12:37:58.8-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "disk space question",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 353
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "You can safely delete these files. I have already notice that WPP didn't delete temporary files. I will look at this issue shortly.",
+      "PostedDate": "2017-01-11T21:38:09.333-08:00",
+      "Id": 205996
+    }
+  ]
+}

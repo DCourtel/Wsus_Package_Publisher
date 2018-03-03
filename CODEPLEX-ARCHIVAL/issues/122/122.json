@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Install This Update",
+      "DisplayName": "Install This Update"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-09-28T09:49:53.227-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Add a button to abort the \"Install This Update\" wizard.\r\n\r\n![Image](http://i.imgur.com/VmlTCZK.png)",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1309.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-09-28T09:49:15.117-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Allow to abort \"Install This Update\" wizard",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 122
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

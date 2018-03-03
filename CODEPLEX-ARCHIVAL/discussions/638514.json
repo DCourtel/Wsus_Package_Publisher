@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1426853",
+    "ThreadId": "638514",
+    "Html": "Hi,<br />\n<br />\nI'm actually looking to <strong>update</strong> Java on the client.<br />\nI noticed if Java is not installed, the folder C:\\Program Files\\Java don't exist, same thing for the registry key HKLM/SOFTWARE/JavaSoft/Java Runtime Environment/CurrentVersion<br />\n<br />\nI want to test the presence before to install a new version on the client. I want to do one of this tests:<br />\n<ul>\n<li>check if the folder exist (is it possible with the rule file exist ? this do not work for me...)</li>\n<li>\ncheck if the registry key (is there an issue if the link contains spaces ? (&quot;Java Runtime Environement&quot;)<br />\n</li>\n</ul>\nIf you have another method to check if Java is installed, do not hesitate to share it =)<br />\n<br />\nBest regards<br />\n<br />\nFlo17<br />\n<br />\nEdit :<br />\nI think I found the solution for the rules, I have to test it.<br />\n<br />\nOther problem, I did not found the solution to run Powershell script<br />\n<br />\nMy Powershell code :<br />\n<pre><code>date &gt;&gt; C:\\test.txt\n$app = Get-WmiObject -Class Win32_Product | Where-Object {\n    $_.Name -match &quot;Java&quot;\n} | Where-Object { !($_.Name -match &quot;Development&quot;)} \n\nforeach ($a in $app) {$a.Uninstall()}</code></pre>\n\nMy 3 tests :<br />\ntest4<br />\n<pre><code>&lt;CustomUpdate&gt;\n&lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.ScriptElement&lt;/ElementType&gt;\n&lt;ScriptType&gt;Powershell&lt;/ScriptType&gt;\n&lt;Filename&gt;.\\uninstallJRE.ps1&lt;/Filename&gt;\n&lt;Arguments&gt;&lt;/Arguments&gt;\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;\n&lt;Variable/&gt;\n&lt;/Action&gt;\n&lt;/CustomUpdate&gt;</code></pre>\n\ntest5<br />\n<pre><code>&lt;CustomUpdate&gt;\n&lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.ScriptElement&lt;/ElementType&gt;\n&lt;ScriptType&gt;Powershell&lt;/ScriptType&gt;\n&lt;Filename&gt;%windir%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe&lt;/Filename&gt;\n&lt;Arguments&gt;-File uninstallJRE.ps1&lt;/Arguments&gt;\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;\n&lt;Variable/&gt;\n&lt;/Action&gt;\n&lt;/CustomUpdate&gt;</code></pre>\n\ntest6<br />\n<pre><code>&lt;CustomUpdate&gt;\n&lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;\n&lt;PathToExecutable&gt;%windir%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe&lt;/PathToExecutable&gt;\n&lt;Parameters&gt;-File uninstallJRE.ps1&lt;/Parameters&gt;\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;\n&lt;Variable/&gt;\n&lt;/Action&gt;\n&lt;/CustomUpdate&gt;</code></pre>\n\nAny idea why it does not work?<br />\n",
+    "PostedDate": "2015-05-21T06:08:50.63-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1426940",
+    "ThreadId": "638514",
+    "Html": "How is set the ExecutionPolicy ? \r<br />\nGet-ExecutionPolicy<br />\n",
+    "PostedDate": "2015-05-21T12:20:57.947-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-05-22T00:39:44.643-07:00"
+  },
+  {
+    "Id": "1426952",
+    "ThreadId": "638514",
+    "Html": "If you understand a little german, you can read this HowTo: <a href=\"http://www.wsus.de/chrome_per_wpp\" rel=\"nofollow\">http://www.wsus.de/chrome_per_wpp</a><br />\n",
+    "PostedDate": "2015-05-21T13:45:34.13-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1427026",
+    "ThreadId": "638514",
+    "Html": "<strong>WinfriedSonntag wrote:</strong><br />\n<blockquote>\nIf you understand a little german, you can read this HowTo: <a href=\"http://www.wsus.de/chrome_per_wpp\" rel=\"nofollow\">http://www.wsus.de/chrome_per_wpp</a><br />\n</blockquote>\nThank you for the links.\r<br />\nI thought about this rules but we install java in the default folder. The problem is that Java installe each version in separate folders. \r<br />\nI have to discuss if we change the default folder installation for all the clients or not. We actually works with different java versions.<br />\n",
+    "PostedDate": "2015-05-22T00:45:13.4-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

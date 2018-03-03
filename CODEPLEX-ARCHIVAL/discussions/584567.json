@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1359713",
+    "ThreadId": "584567",
+    "Html": "Hello,\r<br />\nI used WPP last year in AD environment with CA signed publisher certificate successfully.\r<br />\nBut now this certificate is expired and I've got the new one.\r<br />\n<br />\nUnfortunately all of my updates, created with WPP, stopped working.\r<br />\n<br />\nI suppose the cause is that these updates are signed with old certificate. How I can resign they?\r<br />\n<br />\nI tried to revise an update, but have got this error:<br />\n<pre><code>Verification of the signature failed for file: \\\\wsusserver.domain.ru\\Update Service Packages\\...._1.cab</code></pre>\n\n",
+    "PostedDate": "2015-03-03T23:45:02.527-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1359757",
+    "ThreadId": "584567",
+    "Html": "Hello, try to right-click on an update and select resign<br />\n",
+    "PostedDate": "2015-03-04T02:52:42.49-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-03-04T03:12:54.423-08:00"
+  },
+  {
+    "Id": "1359763",
+    "ThreadId": "584567",
+    "Html": "Thank you very much!\r<br />\nThis is my mistake - I cannot find this menu...<br />\n",
+    "PostedDate": "2015-03-04T03:12:45.86-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1489507",
+    "ThreadId": "584567",
+    "Html": "Do you have to do each update individually or is there a bulk way to resign &quot;ALL&quot; updates created with WPP?<br />\n",
+    "PostedDate": "2016-12-08T13:23:45.56-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

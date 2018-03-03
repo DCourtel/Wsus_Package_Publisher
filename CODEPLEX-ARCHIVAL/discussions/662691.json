@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1495780",
+    "ThreadId": "662691",
+    "Html": "Hi All,\r<br />\n<br />\nI've tried configuring the WPP and it seems to work fine for the first round. Pushing out updates like Java, Flash etc.\r<br />\n<br />\nBut when I tried to add in new versions of those software over time. I removed the old software for example Java Update 121 from the WPP console. Added in Java Update 131 into the console. Approved the updates. WPP console shows installed on those computers. But when I go around checking those computers that was showing installed. The Java is still on the old Java update 121.\r<br />\n<br />\nDoes anyone have any ideas or a proper documentation on how to add in updates so that these updates gets installed? I am suspecting that the msi product code are the same on both java update 121 and 131 thus WPP believed that the updates was installed when it wasn't. Thanks.<br />\n",
+    "PostedDate": "2017-04-25T09:29:28.65-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

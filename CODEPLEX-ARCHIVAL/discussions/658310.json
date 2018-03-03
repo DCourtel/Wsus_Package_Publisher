@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1484840",
+    "ThreadId": "658310",
+    "Html": "Hello,\r<br />\nsince LUP was not update for some years and is not compatible with WSUS 4.0 and Server 2k12 we want to move on and migrate our system to WPP.\r<br />\n<br />\nAre there some things I should consider?\r<br />\nWill I be able to see the updates which were published by LUP?\r<br />\n<br />\nThank you in advance.<br />\n",
+    "PostedDate": "2016-09-28T01:57:17.303-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1485087",
+    "ThreadId": "658310",
+    "Html": "Hi,<br />\n<blockquote>\nAre there some things I should consider? <br />\n</blockquote>\nNothing special.<br />\n<blockquote>\nWill I be able to see the updates which were published by LUP?<br />\n</blockquote>\nYes. If you have used a trigger to make yours package visible in the Wsus console, remenber to tick the option &quot;Show Locally-Published updates that are also visible in Wsus Console&quot; in the &quot;Updates&quot; tab.<br />\n",
+    "PostedDate": "2016-10-02T02:12:04.557-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

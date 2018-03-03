@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Certificate Managment",
+      "DisplayName": "Certificate Managment"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-11-10T10:47:35.947-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "I accidentally clicked the \"Generate the certificate\" option today. It made a certificate and with no other options I saved it locally.\r\n\r\nI suggest an enhancement __request to confirm the generating of a certificate when one is already in place__",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "release v1.3.1407.29",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-08-22T12:41:10.813-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "Accidentally clicked on \"Generate the Certificate\" again",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 2,
+    "Id": 215
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "WPP will now ask the user to confirm his intention when a valid certificate is already in use ?",
+      "PostedDate": "2014-11-08T09:38:19.253-08:00",
+      "Id": 164198
+    }
+  ]
+}

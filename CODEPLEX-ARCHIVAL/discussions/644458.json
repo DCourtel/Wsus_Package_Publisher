@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1442764",
+    "ThreadId": "644458",
+    "Html": "Hi everyone,\r<br />\n<br />\nSo I've only started using WPP in the last 1 month or so and am making great progress with Java and Flash deployments but I seem to be having issues with Custom updates and Windows 10. Has anyone got any custom updates deploying yet to any?\r<br />\n<br />\nI get &quot;Error 0x80070643&quot; for 2 custom updates that work fine for Windows 7 SP1 , 2008 R2 and 2012 R2. The custom updates are just making registry and service changes.\r<br />\n<br />\nFor now I'm going to validate the target Windows version for the installed/installable rules but I will need to find a fix at some point as we start getting more machines with this OS.\r<br />\n<br />\nThanks\r<br />\nMark<br />\n",
+    "PostedDate": "2015-09-01T21:18:25.047-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1442878",
+    "ThreadId": "644458",
+    "Html": "Please, ensure that .Net 3.5 is installed on the target computer.<br />\n",
+    "PostedDate": "2015-09-02T11:49:58.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-09-08T19:14:35.51-07:00"
+  },
+  {
+    "Id": "1443677",
+    "ThreadId": "644458",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nPlease, ensure that .Net 3.5 is installed on the target computer.<br />\n</blockquote>\nHi sorry for not getting back to you before. \r<br />\n<br />\nI see that both Windows 8 / 8.1 and 10 no longer have .net 3.5 included - I guess this goes for server too but I have yet to roll out as far as servers.\r<br />\n<br />\nI ended up using some group policy &quot;Computer Config&gt;Polices&gt;Windows Settings&gt;Scripts&gt;Startup pointing to a pair of BAT files on a UNC share path - note that the bat file must have security set for read/execute &quot;Authenticated Users&quot; so the client machines can run it as &quot;System&quot;. The GP then has some WMI filtering enabled so it only runs on the correct machines:\r<br />\n<br />\n<strong>For windows 10</strong>\r<br />\nroot\\CIMv2\r<br />\nselect * from Win32_OperatingSystem where Version like &quot;10.%&quot;\r<br />\n<strong>Windows 8.1</strong>\r<br />\nselect * from Win32_OperatingSystem where Version like &quot;6.3%&quot;\r<br />\n<br />\n The BAT file's for us one for 8.1 and one for windows 10 had the following commands which point to the extracted sxs folder for each source ISO:\r<br />\n<br />\n<strong>Windows 10</strong>\r<br />\nDism /online /enable-feature /featurename:NetFX3 /All /Source:&quot;\\SERVER\\ISO\\OperatingSystems\\Windows10 Enterprise x64\\SW_DVD5_WIN_ENT_10_64BIT_English_MLF_X20-26061\\sources\\sxs&quot; /LimitAccess\r<br />\n<br />\n<strong>Windows 8.1</strong>\r<br />\nDism /online /enable-feature /featurename:NetFX3 /All /Source:&quot;\\SERVER\\ISO\\OperatingSystems\\Windows 8.1\\SW_DVD9_SA_Win_Ent_8.1_64BIT_English_-3_MLF_X19-84068\\sources\\sxs&quot; /LimitAccess\r<br />\n<br />\nThen on login the missing feature is installed and like magic the custom WPP updates will work a treat.\r<br />\n<br />\nI hope this is of some use to other newbs to WPP like me setting this up for the first time,\r<br />\n<br />\nThanks\r<br />\nMark<br />\n",
+    "PostedDate": "2015-09-08T18:18:04.057-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1443681",
+    "ThreadId": "644458",
+    "Html": "Take care within Installation .net Framework. There is a GPO with a setting you can set it: <a href=\"https://support.microsoft.com/en-us/kb/2734782\" rel=\"nofollow\">https://support.microsoft.com/en-us/kb/2734782</a><br />\n",
+    "PostedDate": "2015-09-08T21:52:18.333-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1443682",
+    "ThreadId": "644458",
+    "Html": "<strong>WinfriedSonntag wrote:</strong><br />\n<blockquote>\nTake care within Installation .net Framework. There is a GPO with a setting you can set it: <a href=\"https://support.microsoft.com/en-us/kb/2734782\" rel=\"nofollow\">https://support.microsoft.com/en-us/kb/2734782</a><br />\n</blockquote>\nThanks for the heads up Winfried, did you encounter many issues with the .net install on your machines? I've only had to deploy it to half a dozen so far using the above command and only this morning did it get enabled in GP for what must be another dozen machines. I think any servers that we need to do we will do manually etc.\r<br />\n<br />\nThanks\r<br />\nMark<br />\n",
+    "PostedDate": "2015-09-08T21:59:05.307-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1443686",
+    "ThreadId": "644458",
+    "Html": "No, we have not many issues. But if you have a WSUS, you can have a issue with installation from .net Framework. This is the reason for posting the KB-Article.<br />\n",
+    "PostedDate": "2015-09-08T23:18:09.087-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

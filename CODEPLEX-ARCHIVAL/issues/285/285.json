@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-08-17T02:42:14.78-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nThis must be an easy one but I couldn't find the answer in threads and docs.\r\nWhen I open WPP then there is a window pops up stating that there is a new version to install. I downloaded the new version but can't find any documentation how to do the update.\r\nIs it as simple like just overwrite the old files with the new ones? Will it retain all my deployed packages, groups, catalog subscriptions, etc...?\r\n\r\nThx,\r\nImre\r\n\r\n",
+    "LastUpdatedDate": "2015-08-17T02:42:14.78-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-08-13T15:23:47.373-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "WPP update process",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 285
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi, Yes simply overwrite old files with newer.",
+      "PostedDate": "2015-08-14T00:38:12.36-07:00",
+      "Id": 189298
+    },
+    {
+      "Message": "Thank you.",
+      "PostedDate": "2015-08-16T16:07:50.263-07:00",
+      "Id": 189330
+    }
+  ]
+}

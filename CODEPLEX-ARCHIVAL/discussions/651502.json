@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1463710",
+    "ThreadId": "651502",
+    "Html": "Unable to configure the catalog through subscribe to catalog option . Its getting failed.\r<br />\n<br />\nSteps : \r<br />\nAddress: <a href=\"http://armmf.adobe.com/arm-manifests/win/SCUP\" rel=\"nofollow\">http://armmf.adobe.com/arm-manifests/win/SCUP</a>\r<br />\nFile Name: Acrobat10_Catalog.cab <br />\nThen press test connectivity .<br />\n \r<br />\nResult: Failed. <br />\n",
+    "PostedDate": "2016-02-19T04:51:40.943-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1463894",
+    "ThreadId": "651502",
+    "Html": "<a href=\"http://armmf.adobe.com/arm-manifests/win/SCUP/Acrobat10_Catalog.cab\" rel=\"nofollow\">http://armmf.adobe.com/arm-manifests/win/SCUP/Acrobat10_Catalog.cab</a> I'm able to download the CAB.<br />\n",
+    "PostedDate": "2016-02-21T11:37:07.133-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

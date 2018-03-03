@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Behavior changed.",
+    "ClosedDate": "2013-10-20T03:09:18.983-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "If a user connect to a Wsus server and the Server version is not equal to the Console version, WPP should not allows the user to revise or create a custom update.\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1310.12",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-20T03:08:51.87-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "WPP wrongly allows to revise an update while Console Version and Server Version differ",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 143
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

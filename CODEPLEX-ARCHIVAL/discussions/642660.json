@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1439407",
+    "ThreadId": "642660",
+    "Html": "Bonjour,\r<br />\n<br />\nJe cherche à déployer NxLog-CE en msi au moyen de WPP. Du fait que j'ai besoin de lancer un script immédiatement après l'installation j'utilise un Custom Update.\r<br />\n<br />\nMon problème est le suivant : l’installation se fait correctement sur les postes ciblés et le statut passe bien à installer dans la console mais la mise à jour est toujours détectée par les clients.\r<br />\n<br />\nJ'ai essayé à tour de rôle d'utiliser les types de règles suivants : MsiProduct Installed / Wmi Query / Registry Key Exists / Reg_Sz Registry Key mais sans succès jusqu'à présent.\r<br />\n<br />\nAuriez vous une idée d'ou pourrait provenir le problème ? Éventuellement une solution pour logguer ce qui se passe lors de la détection par le client?\r<br />\n<br />\nMerci d'avance,\r<br />\n<br />\nCordialement<br />\n",
+    "PostedDate": "2015-08-13T07:00:41.017-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1439414",
+    "ThreadId": "642660",
+    "Html": "Bonjour, en générale une règle basé sur 'MSI Product Installed' fonction très bien. Les 'Registry Key' et 'RegToVersion' fonction bien aussi. \r<br />\nIl faut comparer se qui a été mis dans la règle et le contenu réel de la base de registre sur un client pour voir où sa coince.\r<br />\nSinon, pour activer le Debug Log sur le client Windows Update :<br />\n<pre><code>Windows Registry Editor Version 5.00\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\WindowsUpdate\\Trace]\n&quot;Flags&quot;=dword:00000016\n&quot;LogFile&quot;=&quot;WindowsUpdate.log&quot;\n&quot;Level&quot;=dword:00000004\n [HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\WindowsUpdate\\Trace\\Datastore]\n&quot;Flags&quot;=dword:00000016\n&quot;Level&quot;=dword:00000003</code></pre>\n\n",
+    "PostedDate": "2015-08-13T07:37:07.64-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1441579",
+    "ThreadId": "642660",
+    "Html": "bonjour, j'ai le même type de problème avec des packages. Je pense que j'ai du oublié quelque chose car les installations se font parfaitement sur les postes clients et le statut passe en &quot;installé&quot; sur WPP, mais les réinstallations recommence sans cesse.\r<br />\nDCourtel, pouvez vous donner plus informations sur la règle basé sur &quot;MSI product Installed&quot; lors de la création du package.\r<br />\nDésolé je suis novice avec WPP\r<br />\n<br />\nMerci pour les précisions\r<br />\nCordialement<br />\n",
+    "PostedDate": "2015-08-24T00:41:34.533-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1441627",
+    "ThreadId": "642660",
+    "Html": "<blockquote>\nDCourtel, pouvez vous donner plus informations sur la règle basé sur &quot;MSI product Installed&quot; lors de la création du package. <br />\n</blockquote>\nL'agent Windows Update recherche le code MSI fournit, dans la base local des Produits MSI installé.<br />\n",
+    "PostedDate": "2015-08-24T02:39:15.19-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

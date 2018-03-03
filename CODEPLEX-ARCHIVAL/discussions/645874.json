@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1447289",
+    "ThreadId": "645874",
+    "Html": "Bonjour, Hi everyone,\r<br />\n<br />\nPourriez-vous me dire ce que veut dire le &quot;Statut - Non applicable&quot;, que doit-on comprendre?\r<br />\n<br />\nCan you tell me, explain me, &quot;Statut Non applicable&quot;?\r<br />\n<br />\nMerci, thank you.\r<br />\n<br />\nFrederic C<br />\n",
+    "PostedDate": "2015-10-06T07:14:37.64-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1447319",
+    "ThreadId": "645874",
+    "Html": "Bonjour, cela signifie que la mise à jour ne s'applique pas à cette machine (au regard des règles que vous avez définie lors de la création de la mise à jour).\r<br />\nC'est exactement la même signification qu'une mise à jour Microsoft dans Wsus.<br />\n",
+    "PostedDate": "2015-10-06T10:25:48.547-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1447398",
+    "ThreadId": "645874",
+    "Html": "Bonjour,Merci pour cette réponse.\r<br />\nCe que je ne comprends pas c'est que c'est la MAJ de Flash, celle que l'on récupère depuis le catalogue. Et les postes n'ont rien de spécifique...\r<br />\nY a t'il des choses que je puisse faire pour comprendre pour cela ne passe pas?\r<br />\nMerci et merci pour votre travail.<br />\n",
+    "PostedDate": "2015-10-07T01:36:57.113-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1447938",
+    "ThreadId": "645874",
+    "Html": "Vous pouvez réviser la mise à jour et regarder qu'elle sont les règles définis. Puis les évaluer manuellement pour un poste à problème <br />\n",
+    "PostedDate": "2015-10-09T14:47:41.813-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1448605",
+    "ThreadId": "645874",
+    "Html": "I had this happen once.  I created a GPO to setup the computers to use WSUS to include adding WPP's certificate.  For some reason, one of the computers was moved out of the container assigned the GPO so it did not have the settings any more.  When I used WPP to check the status of the computers, one kept showing 'Not Applicable'.  After I discovered this, I moved it back and the group policy settings were re-applied.  If you used local policy, check and make sure the certificate and relevant policy settings are still intact.  In any case, just passing this along.<br />\n",
+    "PostedDate": "2015-10-15T02:09:24.2-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

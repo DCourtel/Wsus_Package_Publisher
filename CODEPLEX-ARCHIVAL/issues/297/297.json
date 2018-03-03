@@ -1,0 +1,106 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-11T22:19:24.97-08:00",
+    "CommentCount": 11,
+    "Custom": null,
+    "Description": "Bonjour,\r\n\r\nAu moment de publier un update (TightVNC en suivant le tuto PDF) j'ai un message d'erreur CreateDirectory Failed et la publication échoue.\r\n\r\nQue faut il faire ?\r\n\r\nMerci.",
+    "LastUpdatedDate": "2015-11-11T22:19:24.97-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-10-02T05:27:45.837-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Message d'erreur CreateDirectory Failed",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 297
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1493975,
+      "FileName": "WPP.jpeg",
+      "DownloadUrl": ".\\1493975"
+    },
+    {
+      "FileId": 1494379,
+      "FileName": "wpp2.JPG",
+      "DownloadUrl": ".\\1494379"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Salut Benjamin, ce message d'erreur apparaît, lorsque Wsus essai de créer un sous-répertoire pour la mise à jour, dans F:\\Wsus\\UpdateServicesPackages, et qu'il n'y arrive pas. Vérifie que le répertoire racine existe et que les droits NTFS sont OK.",
+      "PostedDate": "2015-10-03T01:00:06.543-07:00",
+      "Id": 191042
+    },
+    {
+      "Message": "Salut David :D\n\nMon répertoire WSUS se trouve sur D: et non F:\n\nDoit il forcément être en France ?",
+      "PostedDate": "2015-10-03T02:05:25.88-07:00",
+      "Id": 191044
+    },
+    {
+      "Message": "Doit il être forcément en F (France corrigé auto par IOS :))?",
+      "PostedDate": "2015-10-03T02:07:01.797-07:00",
+      "Id": 191045
+    },
+    {
+      "Message": "Non, peu importe le lecteur, c'est le répertoire qui compte.",
+      "PostedDate": "2015-10-03T07:41:04.853-07:00",
+      "Id": 191049
+    },
+    {
+      "Message": "Je viens de vérifier, je n'ai pas de dossier UpdateServicesPackages.\nJ'ai juste un dossier Wsus avec dedans WsusContent et dedans des dossiers auto-incrémenté en hexadécimale (00, 0A, 0B.....).\n\nMon Wsus est un 2012.",
+      "PostedDate": "2015-10-04T23:11:21.63-07:00",
+      "Id": 191086
+    },
+    {
+      "Message": "Alors, il faut le créer manuellement.\n",
+      "PostedDate": "2015-10-05T09:11:36.203-07:00",
+      "Id": 191121
+    },
+    {
+      "Message": "J'ai créé le dossier manuellement mais l'erreur reviens quand même :(\r\n\r\nY a t'il un log plus précis que je peux te donner pour en savoir plus ?\r\n\r\nJ'ai mis en attachement une capture.",
+      "PostedDate": "2015-10-05T23:24:01.607-07:00",
+      "Id": 191160
+    },
+    {
+      "Message": "Il y a bien un log, ici : C:\\Program Files\\Update Services\\LogFiles\nSinon, regarder les droits NTFS :\nSystème : Full\nService réseau : Full\nWsus Administrators : Full\nAdministrateurs : Full\nUtilisateurs : Lecture & Exécution",
+      "PostedDate": "2015-10-06T10:19:30.61-07:00",
+      "Id": 191189
+    },
+    {
+      "Message": "Pour tester j'ai mis Tout le monde en full access sur le dossier.\r\n\r\nEt cela ne change rien :( Voir Wpp2.jpg",
+      "PostedDate": "2015-10-06T22:58:04.183-07:00",
+      "Id": 191207
+    },
+    {
+      "Message": "Log dans le fichier SoftwareDistribution.log :\n2015-10-07 05:56:28.969 UTC\tError\tWsus Package Publisher.1\tPublisher.PublishPackage\tPublishPackage(): Operation Failed with Error: CreateDirectory failed\n   à Microsoft.UpdateServices.Internal.BaseApi.Publisher.PublishPackage(String sourcePath, String additionalSourcePath, String packageDirectoryName, Boolean dualSign, String httpTimeStamp)\n   à Microsoft.UpdateServices.Internal.BaseApi.Publisher.PublishPackage(String sourcePath, String additionalSourcePath, String packageDirectoryName)\n   à Wsus_Package_Publisher.WsusWrapper.PublishUpdate(FrmUpdateFilesWizard filesWizard, FrmUpdateInformationsWizard informationsWizard, FrmUpdateRulesWizard isInstalledRulesWizard, FrmUpdateRulesWizard isInstallableRulesWizard, FrmUpdateApplicabilityMetadata updateApplicabilityMetadata)\n   à Wsus_Package_Publisher.FrmUpdatePublisher.Publish()\n   à Wsus_Package_Publisher.FrmUpdateWizard.updateApplicabilityMetadata_btnPublish_Click(Object sender, EventArgs e)\n   à System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)\n   à System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)\n   à System.Windows.Forms.Control.WndProc(Message& m)\n   à System.Windows.Forms.ButtonBase.WndProc(Message& m)\n   à System.Windows.Forms.Button.WndProc(Message& m)\n   à System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)\n   à System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)\n   à System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)\n   à System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)\n   à System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)\n   à System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)\n   à System.Windows.Forms.Form.ShowDialog(IWin32Window owner)\n   à Wsus_Package_Publisher.FrmWsusPackagePublisher.CreateNewUpdate(String xmlActions)\n   à System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)\n   à System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)\n   à System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)\n   à System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)\n   à System.Windows.Forms.ToolStripDropDown.OnMouseUp(MouseEventArgs mea)\n   à System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)\n   à System.Windows.Forms.Control.WndProc(Message& m)\n   à System.Windows.Forms.ToolStrip.WndProc(Message& m)\n   à System.Windows.Forms.ToolStripDropDown.WndProc(Message& m)\n   à System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)\n   à System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)\n   à System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)\n   à System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)\n   à System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)\n   à System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)\n   à Wsus_Package_Publisher.Program.Main()",
+      "PostedDate": "2015-10-06T23:00:20.84-07:00",
+      "Id": 191208
+    },
+    {
+      "Message": "[Voir le dernier message](https://wsuspackagepublisher.codeplex.com/discussions/639003)",
+      "PostedDate": "2015-10-09T14:54:41.14-07:00",
+      "Id": 191363
+    }
+  ]
+}

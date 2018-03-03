@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Show Pending Updates",
+      "DisplayName": "Show Pending Updates"
+    },
+    "ClosedComment": "Created a neutral default Resources file (with English strings).",
+    "ClosedDate": "2014-04-09T12:59:01.117-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Opening \"show pending updates\" on the popup menu I get the following error:\r\n\r\n> Could not find any resources appropriate for the specified culture or the neutral culture.  Make sure \"ShowPendingUpdates.Resources.Resources.resources\" was correctly embedded or linked into assembly \"ShowPendingUpdates\" at compile time, or that all the satellite assemblies required are loadable and fully signed.\r\n\r\nMy setup is the following:\r\nWsus 3.0 sp2 on Windows 2008 R2, .net framework 4.0 full.\r\nMy culture is it-it.\r\n\r\nThe error is the same for every client computer with different configurations and operative systems (Xp, seven, 2003).\r\n\r\n ",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1401.04",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-04-04T02:16:23.877-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Error message opening ShowPendingUpdates",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 186
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Can you send me an email to package.publisher@free.fr \r\nI will send you a fixed release, you will able to test it on your computer.",
+      "PostedDate": "2014-04-04T11:20:53.153-07:00",
+      "Id": 140576
+    }
+  ]
+}

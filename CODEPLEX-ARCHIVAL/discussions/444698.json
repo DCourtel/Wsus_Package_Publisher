@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1047537",
+    "ThreadId": "444698",
+    "Html": "Hello,\r<br />\n<br />\nare there plans to implement &quot;save / load&quot; of rules and &quot;export / import&quot; of updates?\r<br />\n<br />\nThese features would be very helpful.\r<br />\n<br />\nKind regards\r<br />\nMichael<br />\n",
+    "PostedDate": "2013-05-22T23:53:55.457-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1047620",
+    "ThreadId": "444698",
+    "Html": "Hello SGK1,\r<br />\n<br />\n&quot;Save/Load&quot; set of rules will be in the next release. I'm testing it for now.\r<br />\nCan you tell me more on &quot;Export/Import&quot; of updates ?\r<br />\n<br />\nThanks.<br />\n",
+    "PostedDate": "2013-05-23T03:27:51.823-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1047624",
+    "ThreadId": "444698",
+    "Html": "Thank you!<br />\n<br />\n<strong>DCourtel wrote:</strong><br />\n<blockquote>\nCan you tell me more on &quot;Export/Import&quot; of updates ?<br />\n<br />\nThanks.<br />\n</blockquote>\nI found this useful feature in LUP - so it will be possible to transfer a complete (all files, all rules) an tested update in *.cab-format (contains the update in cab- and the other informations in xml-format) from one WSUS to an other (... with the same certificate).<br />\n",
+    "PostedDate": "2013-05-23T03:37:10.76-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1078886",
+    "ThreadId": "444698",
+    "Html": "Hi SGK1, I have found the time to add this feature : Import/Export Updates. It will be in the next release.<br />\n",
+    "PostedDate": "2013-08-09T13:56:35.197-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:26:49.007-07:00"
+  }
+]

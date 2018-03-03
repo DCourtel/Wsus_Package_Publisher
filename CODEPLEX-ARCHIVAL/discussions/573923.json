@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1328443",
+    "ThreadId": "573923",
+    "Html": "Has anybody had any experience with using 3rd party catalogs from companies publishing them for use in SCUP or SCCM 2012? Will WPP accept these updates? I am specifically interested if it with work with Shavlik Patch.<br />\n",
+    "PostedDate": "2014-12-03T08:49:58.793-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1328451",
+    "ThreadId": "573923",
+    "Html": "I use the catalogs within WPP from Adobe for FlashPlayer and the Adobe Reader. WPP comes with Catalogs for HP, Fujitsu, DELL and HP. Do you have other catalogs for free?<br />\n",
+    "PostedDate": "2014-12-03T09:12:37.363-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1328461",
+    "ThreadId": "573923",
+    "Html": "Hi mcgeornc, if catalogs made by shavlik are made to work with SCUP and SCCM, they will works with WPP too.<br />\n<br />\nYou can certainly download free catalogs from Shavlik to test them.<br />\n",
+    "PostedDate": "2014-12-03T09:33:28.06-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1328473",
+    "ThreadId": "573923",
+    "Html": "Thanks! I will do that. Shavlik is not free but I can get a demo set to work with. <br />\n",
+    "PostedDate": "2014-12-03T10:05:59.127-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-12-03T10:06:05.867-08:00"
+  },
+  {
+    "Id": "1328495",
+    "ThreadId": "573923",
+    "Html": "To download a free trial of the catalog, go to : <a href=\"http://www.shavlik.com/downloads/scupdate-free-trial/\" rel=\"nofollow\">Here</a>\r<br />\nTo view full catalog : <a href=\"https://community.shavlik.com/docs/DOC-2285\" rel=\"nofollow\">Full Catalog</a><br />\n",
+    "PostedDate": "2014-12-03T11:03:09.703-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-07-03T14:30:01.03-07:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nif i approve a update in WPP i have to click twice. See the Screenshot. Is it possible to get the dropdown with one click?\r\n\r\nThanks and Regards\r\nWinfried\r\n",
+    "LastUpdatedDate": "2014-07-03T14:30:01.03-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-11-25T06:47:17.647-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Postponed"
+    },
+    "Summary": "Double-Click for Approval",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 155
+  },
+  "FileAttachments": [
+    {
+      "FileId": 761950,
+      "FileName": "ApproveUpdate.png",
+      "DownloadUrl": ".\\761950"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Yes, I have already noticed this behavior. I don't know why it act like this. That annoys me a lot too.\nI don't know how to work around this, for now.",
+      "PostedDate": "2013-11-25T13:18:27.847-08:00",
+      "Id": 124211
+    },
+    {
+      "Message": "I have over 100 groups of computers (departments on a university campus). It would be nice if I didn't have to approve each one...if I could do like in WSUS and approve the group and its children.",
+      "PostedDate": "2014-05-13T10:36:04.433-07:00",
+      "Id": 146454
+    },
+    {
+      "Message": ">I have over 100 groups of computers (departments on a university campus). It would be nice if I didn't >have to approve each one...if I could do like in WSUS and approve the group and its children.\n\nIf you create the update, you can set 'show update in WSUS Console'. If you select yes, you can approve in WSUS a lot of updates at one.",
+      "PostedDate": "2014-05-13T12:58:00.65-07:00",
+      "Id": 146478
+    },
+    {
+      "Message": "Hi, you can Ctrl+Click on computer group to select more than one group and then assigning an approbation to these selected groups.",
+      "PostedDate": "2014-05-14T13:22:30.727-07:00",
+      "Id": 146608
+    }
+  ]
+}

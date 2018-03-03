@@ -1,0 +1,76 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 6,
+    "Custom": null,
+    "Description": "Hallo wir haben bei uns in der Domäne 2 Windows 2012 R2 Server die per WSUS die Updates für Flash, Java und Adobe Reader verteilen. Seit Java version 71 taucht nun beim Veröffentlichen folgender Fehler auf \"Timeout abgelaufen. Das Zeitlimit wurde vor dem Beenden des Vorgangs überschritten oder der Server reagiert nicht. Warning: The join order has been enforced because a local join hint is used.\"\r\nEin Neustart des Servers brachte das selbe Ergebnis. Hat jemand schonmal diesen Fehler gehabt und weis wie er zu beseitigen ist?\r\n\r\nHello we have two Windows Server 2012 R2 Servers in our Domain wich provide the Updates for Flash, Java and Adobe Reader via WSUS. Since Update 71 in Java the WPP shows the following error Message: \"Timeout abgelaufen. Das Zeitlimit wurde vor dem Beenden des Vorgangs überschritten oder der Server reagiert nicht. Warning: The join order has been enforced because a local join hint is used.\"\r\nHas someone seen this Error befor and can provide any help? I already restartet the Servers but it didnt help.\r\n",
+    "LastUpdatedDate": "2016-02-15T03:39:52.127-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-02-08T04:00:38.45-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Java Veröffentlichung schlägt fehl / Java publishing fails",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 321
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1546469,
+      "FileName": "WSUS WPP - Fehler.jpg",
+      "DownloadUrl": ".\\1546469"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Dann kann der WPP vom WSUS aus nicht auf die Dateien für den Download zugreifen. Hast Du die benötigten Dateien über ein Netzlaufwerk eingebunden? Hast Du den WPP mit Rechtsklick > Ausführen als Administrator gestartet? Wenn zweimal ja, dann kann das nicht funktionieren.\n\nLeg die Dateien für Java 8 Update 73 am besten lokal auf den Server in einem Verzeichnis auf der Root direkt ab. Und jetzt das Spiel nochmal mit diesen Dateien.",
+      "PostedDate": "2016-02-08T05:34:04.227-08:00",
+      "Id": 196325
+    },
+    {
+      "Message": "Also die Dateien fürs Update liegen lokal auf dem jeweiligen Server (beide verteilen Ihre updates getrennt da sie an verschiedenen Standorten stehen), WPP habe ich als Admin ausgeführt. Der genaze Update erstellen Vorgang läuft auch soweit bis zum Schluss, zumindest kann man den Fortschrittsbalken für die Verschiedenen Prozesse sehen. CreateCab läuft durch, SignCab geht, Publish Package dauert sehr lange und bleibt dann hängen.",
+      "PostedDate": "2016-02-08T05:51:59.373-08:00",
+      "Id": 196326
+    },
+    {
+      "Message": "Lass auf den dazugehörenden SQL Server Instanzen das Reindexierungsscript laufen. https://gallery.technet.microsoft.com/scriptcenter/90ca6976-d441-4a10-89b0-30a7103d55db\n\nBTW: Der WSUS verteilt nichts, der steht nur da und stellt Updates zur Verfügung. ;)",
+      "PostedDate": "2016-02-08T06:29:39.677-08:00",
+      "Id": 196328
+    },
+    {
+      "Message": "Wunderbar das Skript war die Lösung. \nDankeschön.",
+      "PostedDate": "2016-02-09T23:51:34.933-08:00",
+      "Id": 196409
+    },
+    {
+      "Message": "Na wunderbar! ;)\nLass das Script bitte unbedingt einmal pro Woche laufen, das hilft dem WSUS ungemein. Zusätzlich solltest Du eines der beiden Bereinigungsscripte täglich laufen lassen. http://wsus.de/scripts Das zweite verschickt auch Mails.",
+      "PostedDate": "2016-02-10T01:13:20.177-08:00",
+      "Id": 196412
+    },
+    {
+      "Message": "Das Problem ist wieder da. :(\nDiesmal beim FlashPlayer 20.0.0.306 ActiveX. Ich versuche diesen aus dem Katalog einzubinden und es kommt die gleiche Fehlermeldung wie beim manuellen erstellen der Updates.  Das Skript zeigt diesmal keine Wirkung. Die Serverbereinigungsskripte laufen mittlerweile (hatte anfangs ein paar Startschwierigkeiten).\nGibt es noch andere mittel und wege WPP wieder zum laufen zu bekommen?",
+      "PostedDate": "2016-02-15T03:39:52.127-08:00",
+      "Id": 196676
+    }
+  ]
+}

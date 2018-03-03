@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-11T22:32:39.94-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The source code is out of date on the repository and attempts to get a copy of the source code have failed (at least for me). This software is licensed under the GPL v2, and as a user of this software distributed under this license, I have the right to access the source code.",
+    "LastUpdatedDate": "2015-11-11T22:32:39.94-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-07-02T11:10:50.967-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "Not updating the source code or providing it when requested violates the GPL license that this software is licensed under",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 201
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

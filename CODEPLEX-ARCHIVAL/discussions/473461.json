@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1135356",
+    "ThreadId": "473461",
+    "Html": "Hello everyone,\r<br />\n<br />\nJust started testing out this nifty application in our environment and it seems to be fairly straight forward and powerful, definitely will cut down the time taken to apply updates in the future.\r<br />\n<br />\nOne question posed to me by a colleague is if there are any methods to limit the installation/update of Adobe Reader only to computers which already have the older version of the software installed? \r<br />\n<br />\nSome staff members choose not to use Adobe Reader but instead have other PDF applications such as FOXIT, so they would not like to receive the Adobe Reader update.\r<br />\n<br />\nI've only deployed applications via &quot;Create an Update....&quot; so I'm suspecting &quot;Create a Custom Update...&quot; might have some options that allow me to achieve this?\r<br />\n<br />\nAny assistance would be appreciated.\r<br />\n<br />\nAnthony<br />\n",
+    "PostedDate": "2013-12-12T22:19:37.173-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1135411",
+    "ThreadId": "473461",
+    "Html": "Hello,\r<br />\n<br />\nyou can achieve this by several ways.\r<br />\n<br />\nIf you publish MSP files, these files will only apply to already existing installation. For example Adobe-reader 11.0.04.msp will only apply to computers where Adobe reader 11.0.03 is already installed.\r<br />\n<br />\nIf you are publishing MSI or EXE files, you have to add a rule in the &quot;IsInstallable&quot; pane to detect oldest installation. For example :<br />\n<ul>\n<li>C:\\Program Files\\Adobe\\Reader 11.0\\Reader\\AcroRd32.exe</li>\n<li>\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Adobe\\Acrobat Reader\\11.0<br />\n</li>\n</ul>\nAnd so on.<br />\n",
+    "PostedDate": "2013-12-13T02:02:47.403-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T08:09:30.14-08:00"
+  },
+  {
+    "Id": "1136961",
+    "ThreadId": "473461",
+    "Html": "Thanks for your advice Dcourtel. \r<br />\n<br />\nWe're publishing the MSI file so will attempt the method of using the rules.\r<br />\n<br />\nAnthony<br />\n",
+    "PostedDate": "2013-12-16T19:12:53.763-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

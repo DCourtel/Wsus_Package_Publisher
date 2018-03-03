@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "1258210",
+    "ThreadId": "549215",
+    "Html": "Hello,<br />\n<br />\ni have problems with deploying Adobe Reader XI 11.0.07 with customized setting.<br />\n<br />\nMy method is similar to this thread <a href=\"http://wsuspackagepublisher.codeplex.com/discussions/524512\" rel=\"nofollow\">Republishing Adobe Reader with customized settings</a> from Jan, 2014.<br />\n<ol>\n<li>\nI create a custom update<br />\n<img src=\"http://i.imgur.com/4Fr4Hpu.jpg\" alt=\"Image\" /><br />\n</li>\n<li>\nAdding all available files<br />\n<img src=\"http://i.imgur.com/D6oxlJS.jpg\" alt=\"Image\" /><br />\n</li>\n<li>\nPublish the Update with a useful ruleset (not final yet but this is not the problem i think)<br />\nis installed<br />\n</li>\n</ol>\n<pre><code>&lt;lar:Or&gt;\n&lt;bar:FileVersion Path=&quot;C:\\Program Files (x86)\\Adobe\\Adobe Reader XI\\Reader\\AcroRd32.exe&quot; Comparison=&quot;EqualTo&quot; Version=&quot;11.0.7.79&quot;/&gt;\n&lt;bar:FileVersion Path=&quot;C:\\Program Files\\Adobe\\Adobe Reader XI\\Reader\\AcroRd32.exe&quot; Comparison=&quot;EqualTo&quot; Version=&quot;11.0.7.79&quot;/&gt;\n&lt;/lar:Or&gt;</code></pre>\n\nis installable<br />\n<pre><code>&lt;lar:Or&gt;\n&lt;lar:Not&gt;&lt;msiar:MsiProductInstalled ProductCode=&quot;{ac76ba86-7ad7-1031-7b44-ab0000000001}&quot;/&gt;&lt;/lar:Not&gt;\n    &lt;lar:And&gt;\n    &lt;msiar:MsiProductInstalled ProductCode=&quot;{ac76ba86-7ad7-1031-7b44-ab0000000001}&quot;/&gt;\n        &lt;lar:Or&gt;\n        &lt;lar:Not&gt;&lt;bar:FileVersion Path=&quot;C:\\Program Files (x86)\\Adobe\\Adobe Reader XI\\Reader\\AcroRd32.exe&quot; Comparison=&quot;EqualTo&quot; Version=&quot;11.0.7.79&quot;/&gt;&lt;/lar:Not&gt;\n        &lt;lar:Not&gt;&lt;bar:FileVersion Path=&quot;C:\\Program Files\\Adobe\\Adobe Reader XI\\Reader\\AcroRd32.exe&quot; Comparison=&quot;EqualTo&quot; Version=&quot;11.0.7.79&quot;/&gt;&lt;/lar:Not&gt;\n        &lt;/lar:Or&gt;\n    &lt;/lar:And&gt;\n&lt;/lar:Or&gt;</code></pre>\n\n<ol>\n<li>\nCreating the Update takes a while with this result<br />\n<img src=\"http://i.imgur.com/F0NdXsU.jpg\" alt=\"Image\" /><br />\n</li>\n<li>\nAfter Approving for my two test clients the ones which need it are getting them provided.<br />\nThe uninstallation works fine, but the second task for installing issues a failure after about ten minutes <br />\n</li>\n</ol>\n<pre><code>{2D20FD5A-76C4-4D5C-9AE6-B17DCA5791E6}  2014-06-20 13:28:08:598+0200    1   147 101 {00000000-0000-0000-0000-000000000000}  0   0   AutomaticUpdates    Success Software Synchronization    Windows Update Client successfully detected 1 updates.\n{C54F5E46-367B-45FA-82AB-3CB90D50FC50}  2014-06-20 13:28:08:598+0200    1   156 101 {00000000-0000-0000-0000-000000000000}  0   0   AutomaticUpdates    Success Pre-Deployment Check    Reporting client status.\n{F6B4A13E-E0F3-46A2-B1BB-A6A3341D86F0}  2014-06-20 13:28:21:229+0200    1   147 101 {00000000-0000-0000-0000-000000000000}  0   0   AutomaticUpdates    Success Software Synchronization    Windows Update Client successfully detected 1 updates.\n{211568CA-334C-46D2-8EAC-DF0CA3307CD7}  2014-06-20 13:28:21:229+0200    1   156 101 {00000000-0000-0000-0000-000000000000}  0   0   AutomaticUpdates    Success Pre-Deployment Check    Reporting client status.\n{B8498456-8BDF-48DB-9CF5-F9944F398C17}  2014-06-20 13:28:50:343+0200    1   147 101 {00000000-0000-0000-0000-000000000000}  0   0   AutomaticUpdates    Success Software Synchronization    Windows Update Client successfully detected 1 updates.\n{CE6872DC-ED50-4523-AA21-C33292D9EB55}  2014-06-20 13:28:50:344+0200    1   156 101 {00000000-0000-0000-0000-000000000000}  0   0   AutomaticUpdates    Success Pre-Deployment Check    Reporting client status.\n{2B392999-4411-4FB1-91BE-7224B2BFDCEA}  2014-06-20 13:40:38:396+0200    1   182 101 {9C7482D5-707E-49E7-8731-E58ADD05037A}  2   80070643    AutomaticUpdates    Failure Content Install Installation Failure: Windows failed to install the following update with error 0x80070643: Adobe Reader XI 11.0.07 - Deutsch.\n{3E15515C-42DC-49F8-B46E-AC95414FB953}  2014-06-20 13:40:46:650+0200    1   189 102 {00000000-0000-0000-0000-000000000000}  0   0   AutomaticUpdates    Success Content Install Installation Ready: The following updates are downloaded and ready for installation. To install the updates, an administrator should log on to this computer and Windows will prompt with further instructions:  - Adobe Reader XI 11.0.07 - Deutsch</code></pre>\n\nThe WSUS Update Files are all downloaded to the client look like correct<br />\n<img src=\"http://i.imgur.com/G4J3iKO.jpg\" alt=\"Image\" /><br />\n<br />\nDo you see my mistake?<br />\n",
+    "PostedDate": "2014-06-20T04:47:58.07-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1258275",
+    "ThreadId": "549215",
+    "Html": "You don't need to create a custom update. Pls look at this small howto:\r<br />\n<a href=\"http://www.mysysadmintips.com/windows/active-directory/24-deploy-adobe-reader-using-group-policy\" rel=\"nofollow\">http://www.mysysadmintips.com/windows/active-directory/24-deploy-adobe-reader-using-group-policy</a>\r<br />\n<br />\nDownload the EXE, extract the EXE, pick up every file incl. MSI in a download folder. After this create a 'nomal' update in WPP like this: <a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=663365\" rel=\"nofollow\">https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=663365</a> You don't need to create a custom update, Registry settings you can deploy with Group Policy Preferences.<br />\n",
+    "PostedDate": "2014-06-20T07:00:38.643-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1258292",
+    "ThreadId": "549215",
+    "Html": "Hello Winfried,\r<br />\n<br />\nyes i need to because of my starting situation.\r<br />\n<br />\nI have appropriated Adobe Reader XI 11.0.06 per GPO to all clients in our company. Therefor i made patched Package of Adobe Reader XI 11.0.00 with the command\r<br />\no\tmsiexec /a “C:\\AdobeReader\\AdbeRdr11000_AIP\\AcroRead.msi“ /p “C:\\AdobeReader\\AdbeRdr11006_de_DE\\ AdbeRdrUpd11006.msp”\r<br />\n<br />\nThis worked fine till to the clients in our stores which are connected through a slow VPN to our company. \r<br />\nAn other disadvantage is that there is no report which clients have installed the software and which have not.\r<br />\n<br />\nNow i cannot install the AdbeRdrUpd11007.msp without uninstalling the Adobe Reader XI 11.0.06. I tried it manually und it failed.\r<br />\n<br />\nThe only one that works is to uninstall it first (like my first cue in the custom update) and then install it again with the patch. I try to connect this steps in one update. And it works till the installation on my test clients.<br />\n",
+    "PostedDate": "2014-06-20T07:46:30.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1258303",
+    "ThreadId": "549215",
+    "Html": "<blockquote>\nThe following updates are downloaded and ready for installation. To install the updates, an administrator should log on to this computer and Windows will prompt &gt;with further instructions:  - Adobe Reader XI 11.0.07 - Deutsch<br />\n</blockquote>\nMaybe you need to reboot after uninstall. Try 2 updates, one for uninstall and the second one for install only.<br />\n",
+    "PostedDate": "2014-06-20T08:06:45.25-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1258405",
+    "ThreadId": "549215",
+    "Html": "This is because you have write twice 'msiexec'. Once in the 'Path to the file' and second in the 'parameters' field !!!<br />\n",
+    "PostedDate": "2014-06-20T13:11:43.377-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1259181",
+    "ThreadId": "549215",
+    "Html": "Thx, now i have fine working updates.<br />\n<br />\nMy solution:<br />\n<ul>\n<li>Create a custom update with uninstalling Adobe Reader XI with </li>\n</ul>\n<pre><code>msiexec /x {AC76BA86-7AD7-1031-7B44-AB0000000001} /qn</code></pre>\n\nand at next install Adobe Reader XI 11.0.00 with customized settings <br />\n<pre><code>msiexec -i AcroRead.msi TRANSFORMS=AcroRead.mst /qn</code></pre>\n\n<ul>\n<li>\nUsing following Ruleset for this Update<br />\n</li>\n<li>\ninstalled <br />\n</li>\n</ul>\n<pre><code>&lt;lar:And&gt;\n    &lt;msiar:MsiProductInstalled ProductCode=&quot;{ac76ba86-7ad7-1031-7b44-ab0000000001}&quot;/&gt;\n        &lt;lar:Or&gt;\n            &lt;lar:And&gt;\n                &lt;bar:Processor Architecture=&quot;0&quot;/&gt;\n                &lt;bar:FileExists Path=&quot;Adobe\\Adobe Reader 11\\Reader\\AcroRd32.exe&quot; Csidl=&quot;38&quot;/&gt;\n            &lt;/lar:And&gt;\n            &lt;lar:And&gt;\n                &lt;bar:Processor Architecture=&quot;9&quot;/&gt;\n                &lt;bar:FileExists Path=&quot;Adobe\\Adobe Reader 11\\Reader\\AcroRd32.exe&quot; Csidl=&quot;42&quot;/&gt;\n            &lt;/lar:And&gt;\n        &lt;/lar:Or&gt;\n&lt;/lar:And&gt;</code></pre>\n\n<ul>\n<li>\ninstallable<br />\n</li>\n</ul>\n<pre><code>&lt;lar:Or&gt;\n    &lt;lar:Not&gt;&lt;msiar:MsiProductInstalled ProductCode=&quot;{ac76ba86-7ad7-1031-7b44-ab0000000001}&quot;/&gt;&lt;/lar:Not&gt;\n        &lt;lar:And&gt;\n            &lt;msiar:MsiProductInstalled ProductCode=&quot;{ac76ba86-7ad7-1031-7b44-ab0000000001}&quot;/&gt;\n                &lt;lar:Or&gt;\n                    &lt;lar:And&gt;\n                        &lt;bar:Processor Architecture=&quot;0&quot;/&gt;\n                        &lt;lar:Not&gt;&lt;bar:FileExists Path=&quot;Adobe\\Adobe Reader 11\\Reader\\AcroRd32.exe&quot; Csidl=&quot;38&quot;/&gt;&lt;/lar:Not&gt;\n                    &lt;/lar:And&gt;\n                    &lt;lar:And&gt;\n                        &lt;bar:Processor Architecture=&quot;9&quot;/&gt;\n                        &lt;lar:Not&gt;&lt;bar:FileExists Path=&quot;Adobe\\Adobe Reader 11\\Reader\\AcroRd32.exe&quot; Csidl=&quot;42&quot;/&gt;&lt;/lar:Not&gt;\n                    &lt;/lar:And&gt;\n                &lt;/lar:Or&gt;\n        &lt;/lar:And&gt;\n&lt;/lar:Or&gt;</code></pre>\n\n<ul>\n<li>Create an update for Adobe Reader XI 11.0.07 AdbeRdrUpd11007.msp which requires the Adobe Reader XI 11.0.00 Update without any rules</li>\n<li>\nDeployment works on my Windows 7 32/64Bit fine and the Report in WPP shows the installed packages and instalable packages correctly<br />\n</li>\n</ul>\nBut there is another problem.<br />\nIf i install Adobe Reader with the script with the same files in the published Package,<br />\nWPP shows me that the published Update is not applicable instead of is installed<br />\n<pre><code>msiexec -i &quot;\\\\[SHARE]\\AcroRead.msi&quot; PATCH=&quot;\\\\[SHARE]\\AdbeRdrUpd11007.msp&quot; TRANSFORMS=&quot;[SHARE]\\AcroRead.mst&quot; /qn</code></pre>\n\nHas someone else a similar problem?<br />\n",
+    "PostedDate": "2014-06-24T03:36:51.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-06-26T00:26:34.257-07:00"
+  },
+  {
+    "Id": "1259313",
+    "ThreadId": "549215",
+    "Html": "Please, check the path for the installation of Adobe Reader. For me it is : C:\\Program Files (x86)\\Adobe\\Reader <strong>11.0</strong> \\Reader<br />\n",
+    "PostedDate": "2014-06-24T10:35:57.38-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1259524",
+    "ThreadId": "549215",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nPlease, check the path for the installation of Adobe Reader. For me it is : C:\\Program Files (x86)\\Adobe\\Reader <strong>11.0</strong> \\Reader<br />\n</blockquote>\nI have changed the install path to C:\\Program Files\\Adobe\\Adobe Reader 11\\ and saved it in the AcroRead.mst so that the result of the prove after updating with the published package works right.\r<br />\n<br />\nI really do not understand why WPP shows me that the update is not applicable if i install these package manually with script.\r<br />\n<br />\nNext phenomenon located: \r<br />\nAfter installing published package correctly the WPP shows that the published package is installed;\r<br />\nafter uninstalling it with script on the local client<br />\n<pre><code>msiexec /x {AC76BA86-7AD7-1031-7B44-AB0000000001} /qn</code></pre>\n\nand installing it again manually with the script below the WPP shows again that the update is installed<br />\n<pre><code>msiexec -i &quot;\\\\[SHARE]\\AcroRead.msi&quot; PATCH=&quot;\\\\[SHARE]\\AdbeRdrUpd11007.msp&quot; TRANSFORMS=&quot;[SHARE]\\AcroRead.mst&quot; /qn</code></pre>\n\nCan i check the parts of my rules manually to differ the results?<br />\n",
+    "PostedDate": "2014-06-25T01:04:05.13-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1259805",
+    "ThreadId": "549215",
+    "Html": "<blockquote>\nI really do not understand why WPP shows me that the update is not applicable if i install these package manually with script. <br />\n</blockquote>\nWPP shows you what it see in the Wsus server. Clients computers evaluate the 'Isinstalled' rule and the 'IsInstallable' rule and report their state to the Wsus server. Wpp query the Wsus server and show the result.<br />\n<blockquote>\nCan i check the parts of my rules manually to differ the results?<br />\n</blockquote>\nI never found a way to do that.<br />\n",
+    "PostedDate": "2014-06-25T12:25:29.267-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1259939",
+    "ThreadId": "549215",
+    "Html": "OK\r<br />\n<br />\nthx a lot for your help.\r<br />\n<br />\nI think i can handle it.<br />\n",
+    "PostedDate": "2014-06-26T00:26:17.427-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1259983",
+    "ThreadId": "549215",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nPlease, check the path for the installation of Adobe Reader. For me it is : C:\\Program Files (x86)\\Adobe\\Reader <strong>11.0</strong> \\Reader<br />\n</blockquote>\nThis is only the correct path on 64-Bit Windows. In a 32-Bit Windows it is C:\\Program Files = %PROGRAMFILES%. ;)<br />\n",
+    "PostedDate": "2014-06-26T04:07:54.89-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

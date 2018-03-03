@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1129811",
+    "ThreadId": "471364",
+    "Html": "Hi,\r<br />\n<br />\nWe are playing about with WSUS Package Publisher and so far everything is great. But we want to make sure that if a user has manually installed a NEWER version of a program \r<br />\n<br />\nFor example, our users are running Adobe Reader Ver 7. I create a Package to install Ver 8, however, some users have manually installed Ver 9. Will the package fail on the machines that are running version 9, or will it remove version 9 and put version 8 on instead?\r<br />\n<br />\nI did a quick test and noticed that the package appears on my install list, but whenever i do the install i get the error 80070643\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2013-11-27T16:00:48.673-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1130071",
+    "ThreadId": "471364",
+    "Html": "Hi,<br />\nYou need to make rules to ensure that older versions appears as 'Non Applicable'.<br />\nIf you are publishing MSI/MSP files, this should be already the case.<br />\nIf you are publishing EXE files, you can use rules based on registry key to achieve this.<br />\n",
+    "PostedDate": "2013-11-28T12:09:47.833-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T07:57:28.327-08:00"
+  }
+]

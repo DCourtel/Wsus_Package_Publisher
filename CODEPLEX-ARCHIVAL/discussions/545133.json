@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1244504",
+    "ThreadId": "545133",
+    "Html": "Greetings!\r<br />\n<br />\nOur infrastructure grouping in WSUS is in below structure \r<br />\n<br />\nDesktop<br />\n<ol>\n<li>Desktop1</li>\n<li>Desktop2</li>\n<li>\nDesktop3<br />\n</li>\n</ol>\nServer<br />\n<ol>\n<li>Server1</li>\n<li>Server2</li>\n<li>\nServer3<br />\n</li>\n</ol>\nNotebook<br />\n<ol>\n<li>Notebook1</li>\n<li>Notebook2</li>\n<li>\nNotebook3<br />\n</li>\n</ol>\nWe have few software’s which needs to pushed/updated only on selected machines (for ex: Desktop1, Server3) but not onto the complete computer groups. \r<br />\n<br />\nIs there any possibility that I can get this in achieved?\r<br />\n<br />\nAt present, I am doing this by identifying machine names via registry and customizing the installable rule, but this is very cumbersome process which involves risks.<br />\n",
+    "PostedDate": "2014-05-12T11:31:34.423-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1244507",
+    "ThreadId": "545133",
+    "Html": "Hi,\r<br />\n<br />\nyou can create a special Group in WSUS. Then right click on a machine &gt; change membership. Each Client/Server can be a member in more then one group. At this group you can publish the special software.<br />\n",
+    "PostedDate": "2014-05-12T11:35:13.007-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1244546",
+    "ThreadId": "545133",
+    "Html": "I know that some Wsus administrators create &quot;Software group&quot; instead of Computers group. For example, they create a group named &quot;Flash Player&quot;, and another named &quot;Adobe Reader&quot; and so on...\r<br />\nThen, they add computer to these groups. If a computer needs to be keep up to date with Flash player but not Adobe Reader, they add this computer to &quot;Flash Player&quot; group but not &quot;Adobe Reader&quot;.\r<br />\nFor doing this, you need to desactivate &quot;Client side targeting&quot; via GPO on clients computers and set the Wsus server to allow assigning computer manually (Options -&gt; Computers -&gt; &quot;Use Update Service Console&quot;)<br />\n",
+    "PostedDate": "2014-05-12T13:17:54.943-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-06-05T12:54:58.957-07:00"
+  },
+  {
+    "Id": "1245379",
+    "ThreadId": "545133",
+    "Html": "Thanks for the excellent suggestions, never thought of such structure.\r<br />\n<br />\nIs there any possibility that I can create these groups in our Package Publisher than in WSUS (not in WSUS), as restructuring current WSUS grouping structure is very cumbersome process at my end.<br />\n",
+    "PostedDate": "2014-05-14T09:51:55.527-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1245481",
+    "ThreadId": "545133",
+    "Html": "No sorry, creating computers group can only be done in Wsus console.<br />\n",
+    "PostedDate": "2014-05-14T13:09:39.043-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-06-05T12:55:01.297-07:00"
+  }
+]

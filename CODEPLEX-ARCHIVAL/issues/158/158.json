@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "CustomUpdateEngine",
+      "DisplayName": "CustomUpdateEngine"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:07.333-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Registry actions in Custom updates should be able to detect x64 system and then 'Translate' Registry Keys to the \"Wow6432Node\" if asked by the user.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1311.24",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-11-25T13:00:02.493-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Allow Custom Updates to work in the \"Wow6432Node\"",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 2,
+    "Id": 158
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Are you trying to avoid or use registry redirection?\nHave you read [this](http://msdn.microsoft.com/en-us/library/windows/desktop/aa384253(v=vs.85).aspx)?\nI'd recommend using a script to accomplish this, or setting up two different custom updates, one targeted for x64 and one targeted for x86 systems.",
+      "PostedDate": "2014-06-27T07:16:52.267-07:00",
+      "Id": 150938
+    }
+  ]
+}

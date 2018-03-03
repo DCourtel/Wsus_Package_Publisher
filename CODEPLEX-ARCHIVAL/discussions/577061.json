@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1339690",
+    "ThreadId": "577061",
+    "Html": "Hi,\r<br />\n<br />\nwe try to publish a (3rd party) msp, but we get the error \r<br />\n<br />\n__An error occurred while checking the meta data of the file you are trying to publish. This problem occurs mostly in publishing invalid MSI or MSP files.\r<br />\n_\r<br />\n<br />\nIt is no problem to install the msp manually. The msp can be opened in Orca and browsed through properties without any error.\r<br />\n<br />\nIs this a known problem / what can we do? Thank you!\r<br />\n<br />\nPP Version: 1.3.1411.9\r<br />\nServer: 6.3.9600.16384<br />\n",
+    "PostedDate": "2015-01-07T02:49:02.743-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1339773",
+    "ThreadId": "577061",
+    "Html": "Hi, when you publish a MSI or MSP file, wsus check the integrity of metadata against the XML definition for this file. If this error occurs, that mean that metadata Embedded in the MSP file doesn't respect the <a href=\"http://msdn.microsoft.com/en-us/library/bb972753%28v=vs.85%29.aspx\" rel=\"nofollow\">PatchApplicability Schema</a>\r<br />\n<br />\nWhen publishing, WPP shows you metadata (just before clicking on 'Publish'), so you can check it. Once you have tick the checkbox 'Edit Applicability Metadata', you can click on the 'Validate' button and see if any error is presented to you.<br />\n",
+    "PostedDate": "2015-01-07T08:38:46.197-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-01-07T23:28:33.863-08:00"
+  },
+  {
+    "Id": "1339945",
+    "ThreadId": "577061",
+    "Html": "Hi,\r<br />\n<br />\nthank you, you helped me a lot. \r<br />\n<br />\nFor TargetLanuage is Integer needed and there was 0,1033,1031 - I changed it to 1031 only and then it worked.<br />\n",
+    "PostedDate": "2015-01-07T23:28:30.523-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1340101",
+    "ThreadId": "577061",
+    "Html": "Usually, 'TargetLanguage' is the faulty node.<br />\n",
+    "PostedDate": "2015-01-08T08:53:14.127-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

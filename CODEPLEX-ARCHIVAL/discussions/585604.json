@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1361673",
+    "ThreadId": "585604",
+    "Html": "Hey\r<br />\n<br />\nCan some help me with the known firewall ports that WSUS Publisher uses other than 8531 and 8530\r<br />\n<br />\nEG. Reporting / Send a restart comand / force to install ... Ect ect<br />\n",
+    "PostedDate": "2015-03-09T11:18:17.92-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1361683",
+    "ThreadId": "585604",
+    "Html": "Did you read the documentation? <a href=\"https://wsuspackagepublisher.codeplex.com/documentation\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/documentation</a>\r<br />\n<br />\n<a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=905459\" rel=\"nofollow\">https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=905459</a><br />\n",
+    "PostedDate": "2015-03-09T11:25:34.173-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1361968",
+    "ThreadId": "585604",
+    "Html": "Yes I did thanks but were not using a windows firewall trying to set it up with a fortigate firewall<br />\n",
+    "PostedDate": "2015-03-09T15:03:42.903-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1361970",
+    "ThreadId": "585604",
+    "Html": "WSUS use Port 80, 443, 8530 and 8531.\r<br />\n<br />\nFor all other you find the infos in the documentation i posted.<br />\n",
+    "PostedDate": "2015-03-09T15:09:53.79-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362044",
+    "ThreadId": "585604",
+    "Html": "I've also seen \r<br />\n<br />\nSMB, TCP Port 445\r<br />\nMSRPC, TCP Port 135\r<br />\nDCOM, TCP Port .......?\r<br />\nWMI, TCP Port .......?\r<br />\n<br />\nNot sure the of the meaning -Dynamic Port when using Fortigate <br />\n",
+    "PostedDate": "2015-03-10T00:30:28.777-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362064",
+    "ThreadId": "585604",
+    "Html": "Hi,\r<br />\nWPP is not aware of the firewall you are using. It always uses the same Protocols/Ports. You need to refer to Fortigate's documentation to set the policy.\r<br />\nIf another Fortigate's user reads this post, he may help you to set it properly.<br />\n",
+    "PostedDate": "2015-03-10T02:24:44.077-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362143",
+    "ThreadId": "585604",
+    "Html": "Someone in the forums on here commented on these ports for use with WPP for EG. Reporting / Send a restart comand / force to install is this correct ? But wasn't clear with the answer if they have any benefits to adding them in addition to WPP use Port 80, 443, 8530 and 8531. <br />\n<br />\n<br />\n<br />\nSMB, TCP Port 445 ?<br />\nMSRPC, TCP Port 135 ?<br />\nDCOM, TCP Port .......? <br />\nWMI, TCP Port .......? <br />\n",
+    "PostedDate": "2015-03-10T06:40:54.22-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362177",
+    "ThreadId": "585604",
+    "Html": "Ports 80, 443, 8530 and 8531 are used by WPP to communicate with you Wsus server (only one of this port is used). The port used depend of your Wsus configuration.\r<br />\nWpp can't work without these ports.\r<br />\n<br />\nOther ports, are used for extra features like sending command. it's not mandadory to open it in your firewall.<br />\n",
+    "PostedDate": "2015-03-10T07:30:08.977-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

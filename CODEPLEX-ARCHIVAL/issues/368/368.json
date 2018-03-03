@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hi there,\r\n\r\nI would like to know how to clean products entries.\r\n\r\n![Image](http://i.imgur.com/DkbL4Jn.jpg)\r\n\r\nI have many entries from my test and i can't clean it correctly.\r\n\r\nCan you explain how to ? If you can create entries, you should delete it ?\r\n\r\nThanks a lot",
+    "LastUpdatedDate": "2017-03-24T07:07:07.267-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-03-23T08:19:00.84-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Delete products entries",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 368
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Yes, you can. Rightclick > delete. If it greaed out, change to another product and change back. And yes, it works. ;)",
+      "PostedDate": "2017-03-23T10:01:21.837-07:00",
+      "Id": 207892
+    },
+    {
+      "Message": "Pushed \"wsusutil.exe reset\" before and it was fixed somes entries. Now i can delete it, thanks for the trick to change to another product and change back to have the option.\n\nThanks a lot !",
+      "PostedDate": "2017-03-24T07:07:07.267-07:00",
+      "Id": 207896
+    }
+  ]
+}

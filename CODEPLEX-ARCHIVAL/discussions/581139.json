@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1353191",
+    "ThreadId": "581139",
+    "Html": "Hi all,\r<br />\nI'm new to WSUS WPP and I managed to configure install and uninstall of well known products in this forum. \r<br />\n<br />\nHowever, I'm trying to do a custom uninstall of a program using msiexec since I don't have msi files for the software to do a regular uninstall using WSUS publish update option\r<br />\n<br />\nI tried adding registry product code and do a custom uninstall using msiexec /X{Productcode} and follow the same step for uninstalling Java. I also added Msi Productcode manually, but when I publish and go to approval view, I don't have option to &quot;Approve for uninstall&quot;.\r<br />\n<br />\nAnyone have any ideas as to going about uninstalling software with product codes only?\r<br />\n<br />\nI forgot to mention, if I do \r<br />\n<br />\nmsiexec /X{productcode} /qn\r<br />\n<br />\nin cmd, I'm able to uninstall the software fine. <br />\n",
+    "PostedDate": "2015-02-16T14:01:25.2-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353351",
+    "ThreadId": "581139",
+    "Html": "<blockquote>\nI tried adding registry product code and do a custom uninstall using msiexec /X{Productcode} and follow the same step for uninstalling Java. I also added Msi Productcode manually, but when I publish and go to approval view, I don't have option to &quot;Approve for uninstall&quot;. <br />\n</blockquote>\nYou are creating a Custom Update, which use CustomeUpdateEngine.exe to perform. Wsus can only uninstall MSI/MSP updates. \r<br />\nBy the way, you don't need to approve for uninstallation, because your script launch an uninstallation (/X). So approve the custom update for installation to uninstall the program !<br />\n",
+    "PostedDate": "2015-02-17T03:19:15.72-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353524",
+    "ThreadId": "581139",
+    "Html": "Thanks for the reply. I actually took a look at my package, I actually set the rule so that if the product code exists, do not run it. Do I checked &quot;reverse rule&quot; to flip the condition. Now it works perfectly.<br />\n",
+    "PostedDate": "2015-02-17T12:08:19.863-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-02-17T21:34:25.217-08:00"
+  }
+]

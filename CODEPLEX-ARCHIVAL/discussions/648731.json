@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1455830",
+    "ThreadId": "648731",
+    "Html": "Hello,\r<br />\n<br />\nI'm using WPB since some months and I need help in my tasks.\r<br />\n<br />\nI have to deploy atempo using WSUS (it does not work well by GPO).\r<br />\nThe problem is that the software is in TWO parts.\r<br />\n1 - The MSI Files\r<br />\n2 - The software files and folders.\r<br />\n<br />\nThe installation process work like this.\r<br />\nThe MSI should be in the same folder as the files (2).\r<br />\nWhen the msi is executed, it will get files and folders from and make the install with that + some others changes written  in the msi.\r<br />\n<br />\nI would like to deploy atempo using WSUS but I have no idea how to do it, regarding of the installation process.<br />\n",
+    "PostedDate": "2015-12-14T02:39:40.427-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1455863",
+    "ThreadId": "648731",
+    "Html": "Difficult.\r<br />\n<br />\nFirst - if you configure your Update, in the first step, you can attach files to your installation. Maybee its helpfull.\r<br />\n<br />\nIf this dont help, because you must create special folders.... you must create two updates:\r<br />\n<br />\n1.) a userdefined update ( Update/ userdefined update ) to create folders ans files,\r<br />\n2.) your .msi update\r<br />\n<br />\nmaybee this is helpfull......\r<br />\n<br />\nPö<br />\n",
+    "PostedDate": "2015-12-14T07:20:41.643-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1455865",
+    "ThreadId": "648731",
+    "Html": "Ok that's what I thought.\r<br />\n<br />\nIs it possible to run the MSI and copy all files in the install dir because, the folder content (2) is just the files of the software.<br />\n",
+    "PostedDate": "2015-12-14T08:00:21.563-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1455979",
+    "ThreadId": "648731",
+    "Html": "Im not sure about your installation description and your exact problem configuring the update. Normaly, a xyz.MSI installs the software. So what you mean with: you have the .msi  AND the software files and folders? Is there a Installation folder including a .msi or ????\r<br />\n<br />\n<br />\nDo you have test the options &quot; add folders / add files in Update Assistent Step 1  or the posibillity to create custom Updates and use file/folder - copy options.\r<br />\nThis option was typical used for deployment the old version of JAVA 6, because JAVA comes with a .msi and .mst. and .cab .....\r<br />\n<br />\nIf you use this, WPP put all files /folders and the msi in a Update Container file for transfering to the Clients, there it will be extracted and the msi Installation start. You CANT define the folder place of extracting in this way, or the place of installation. This informations must be inside the .msi.\r<br />\n<br />\nIf you want to copy  files and folders to a self-defined place, e. : C:\\HomerSimpson\\Atempo\\ - use Custom Updates, and than runs the install.msi in a second step of yout update.\r<br />\n<br />\n?\r<br />\nYou must copy the install.msi and any files and folders more ( nessasary for installation ) to the Client-PC's.\r<br />\nThen you must start the install.msi to install the software.\r<br />\nIs this correct?\r<br />\n<br />\nNormaly you can simply use GPO with the right switches for creating folders and copy files, and run msi., but ofcourse you can use WPP.\r<br />\n<br />\n<br />\nOfftopic: If you paid for - what is the Atempo support statement for deploying her software? <br />\n",
+    "PostedDate": "2015-12-15T03:03:09.683-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1456002",
+    "ThreadId": "648731",
+    "Html": "To say it clearly.<br />\n<br />\nThere is install.msi (12MB) and a folder named sources which contains all files the software needs.<br />\nDuring the installation process, the msi will copy the files from the source to the install destination folder.<br />\n<br />\nAtempo has no statement for deploying the app using WPP.<br />\n",
+    "PostedDate": "2015-12-15T06:13:30.797-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1456240",
+    "ThreadId": "648731",
+    "Html": "If there is no problem with the physical/organisation structure between the .msi and the folder,  the &quot;normal&quot; update will working.\r<br />\n<br />\nI think, structure must be simple:\r<br />\n<br />\ninstall.msi\r<br />\n&lt;Folder&gt;\r<br />\n<br />\nIn Update Assistent Step 1: Use the .msi, AND add the folder with the source files! Than create rules and so on, and test it.\r<br />\n<br />\nDont forget to use switches for silent installation if availible, you cant deploy updates with unser interaction well.\r<br />\n<br />\nIf it does not work correctly, first check the Error Logs to investigate the problem.\r<br />\nLocalize and switch to the update folder on the client, ( Windows /Software Distribution/..........) start the Installation manual, and check if it runs correctly.\r<br />\n<br />\ngood luck and happy christmas, \r<br />\nnow its holiday...\r<br />\n<br />\n Pö<br />\n",
+    "PostedDate": "2015-12-17T00:31:48.56-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "1467628",
+    "ThreadId": "652799",
+    "Html": "Hello,\r<br />\n<br />\nI try to published a custom update on windows server 2012R2 64 bits. But having error 80131700 on the windows update. \r<br />\nOn the wsus server (win2012R2 too), I've install the last version of WSUS package publisher (v1.3.1511.15).\r<br />\nThe problem seems to come from CustomUpdateEngine.exe, that was deployed by the WSUS publisher for a custom update. I can see signature is ok, package downloaded ok, but install fail, in the file WindowsUpdate.log.\r<br />\n<br />\nI execute the update manually by the windows update GUI on the &quot;client&quot; server, and I can see a message about an error to install windows .NET framework 3.5... And the server have .NET framework 4.5\r<br />\nI try to run the CustomUpdateEngine.exe directly from  C:\\Windows\\SoftwareDistribution\\Download\\Install, same request , CustomUpdateEngine.exe seems to need tu install framework3.5...\r<br />\n<br />\n<img src=\"http://img15.hostingpics.net/pics/689820GPOimporttrstedwsuspublisher3.png\" alt=\"Image\" /> \r<br />\nHere the link full image <a href=\"http://hpics.li/bf3d1f1\" rel=\"nofollow\">http://hpics.li/bf3d1f1</a>\r<br />\n<br />\nCan anyone have an idea ?\r<br />\n<br />\nThanks a lot!\r<br />\nGaëtan<br />\n",
+    "PostedDate": "2016-03-22T07:05:01.6-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2016-04-22T08:03:06.993-07:00"
+  },
+  {
+    "Id": "1467654",
+    "ThreadId": "652799",
+    "Html": "CustomUpdateEngine is compiled for .Net Framework 2.0, so yes, you need to have, at least, .Net 2.0 on the server.<br />\n",
+    "PostedDate": "2016-03-22T10:03:10.8-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1467661",
+    "ThreadId": "652799",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nCustomUpdateEngine is compiled for .Net Framework 2.0, so yes, you need to have, at least, .Net 2.0 on the server.<br />\n</blockquote>\nDavid,\r<br />\ni think it is a good idea, to compile CustomUpdateEngine with .Net Framework 4.0 in next Version of WPP. On W2012 and newer is not .Net Framework 2.0 and/or 3.5 installed out of the Box. ;)\r<br />\n<br />\nThanks and Regards\r<br />\nWinfried<br />\n",
+    "PostedDate": "2016-03-22T10:39:50.74-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1467667",
+    "ThreadId": "652799",
+    "Html": "That will be the case.<br />\n",
+    "PostedDate": "2016-03-22T11:40:50.333-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1467751",
+    "ThreadId": "652799",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nCustomUpdateEngine is compiled for .Net Framework 2.0, so yes, you need to have, at least, .Net 2.0 on the server.<br />\n</blockquote>\nHello DCourtel,\r<br />\n<br />\nI have .NET Framework 4.5 on windows 2012, so It's bigger version than .NET 2.0.\r<br />\n<br />\nLike WinfriedSonntag said, there is no version of .NET framework 2.0 or 3.5 for Windows 2012R2.\r<br />\n<br />\nYou plan to recompile CustomUpdateEngine closely ? I can be a betatester if needed ;)\r<br />\n<br />\nIf not I can try to do this with the sources, but basically I'm only a network/linux sysadmin :p (and windows now, no choice :p). I can try to document about .NET framework.\r<br />\n<br />\nRegards,\r<br />\nGaëtan<br />\n",
+    "PostedDate": "2016-03-23T01:39:33.09-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1467764",
+    "ThreadId": "652799",
+    "Html": "<strong>gaetan1105 wrote:</strong><br />\n<blockquote>\nI have .NET Framework 4.5 on windows 2012, so It's bigger version than .NET 2.0.<br />\n</blockquote>\nIf you want to use this now, you have to add the feature .Net Framework 3.5.<br />\n",
+    "PostedDate": "2016-03-23T05:01:38.8-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1467873",
+    "ThreadId": "652799",
+    "Html": "<strong>WinfriedSonntag wrote:</strong><br />\n<blockquote>\nIf you want to use this now, you have to add the feature .Net Framework 3.5.<br />\n</blockquote>\nYes but there is a knowed problem with feature 3.5 and windows 2012R2. Here my trace for others :<br />\n<blockquote>\ndism /online /enable-feature:NetFx3ServerFeatures<br />\ndism /online /enable-feature:NetFx3<br />\n</blockquote>\nDeployment Image Servicing and Management tool\r<br />\nVersion: 6.3.9600.17031\r<br />\n<br />\nImage Version: 6.3.9600.17031\r<br />\n<br />\nEnabling feature(s)\r<br />\n[==========================100.0%==========================]\r<br />\nThe operation completed successfully.\r<br />\n<br />\nDeployment Image Servicing and Management tool\r<br />\nVersion: 6.3.9600.17031\r<br />\n<br />\nImage Version: 6.3.9600.17031\r<br />\n<br />\nEnabling feature(s)\r<br />\n[===========================66.6%======                    ]\r<br />\n<br />\nError: 0x800f0906\r<br />\n<br />\nThe source files could not be downloaded.\r<br />\nUse the &quot;source&quot; option to specify the location of the files that are required t\r<br />\no restore the feature. For more information on specifying a source location, see\r<br />\n <a href=\"http://go.microsoft.com/fwlink/?LinkId=243077\" rel=\"nofollow\">http://go.microsoft.com/fwlink/?LinkId=243077</a>.\r<br />\n<br />\nThe DISM log file can be found at C:\\Windows\\Logs\\DISM\\dism.log\r<br />\n<br />\nYou can try this... But fail for me : <br />\n<blockquote>\ndism /online /cleanup-image /restoreHealth<br />\nDeployment Image Servicing and Management tool<br />\nVersion: 6.3.9600.17031<br />\n</blockquote>\nImage Version: 6.3.9600.17031\r<br />\n<br />\nThe restore operation completed successfully. The component store corruption was repaired.\r<br />\nThe operation completed successfully.\r<br />\n<br />\nThis operation takes a lot of time ~40min\r<br />\n<br />\n--&gt;\tIt's a problem with windows update : \r<br />\n<a href=\"https://support.microsoft.com/en-us/kb/3002547\" rel=\"nofollow\">https://support.microsoft.com/en-us/kb/3002547</a>\r<br />\nAfter you install security update 2966827 or 2966828 (described in Microsoft Security Bulletin MS14-046) for the Microsoft .NET Framework 3.5 and then try to enable the optional Microsoft .NET Framework 3.5 feature in Windows Features for the first time, the feature may not be enabled.\r<br />\n<br />\n--&gt;\tThe problem seems resolved by this update :  <a href=\"https://support.microsoft.com/en-us/kb/3002547\" rel=\"nofollow\">https://support.microsoft.com/en-us/kb/3002547</a>\r<br />\nBut in my case, I've always got the problem....\r<br />\n<br />\nI'll try to get framework 3.5 from another source (from cd) and I'll post my test ;)<br />\n",
+    "PostedDate": "2016-03-24T04:07:14.237-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1467909",
+    "ThreadId": "652799",
+    "Html": "OK, the short way to get .Net Framework:\r<br />\n<br />\nCreate a Folder: c:_source &gt; copy sources\\SxS from install DVD/Source.\r<br />\n<br />\nDelete on the target machine all Registry Settings from WSUS:\r<br />\n<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\r<br />\n<br />\nRestart WUAUSERV.\r<br />\n<br />\nNow add Feature .Net Framework and tell the Wizard the alternate Path c:_source\\Sources\\sxs Now it will work. After this, restart the whole server.<br />\n",
+    "PostedDate": "2016-03-24T10:40:17.89-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2016-04-22T08:03:21.64-07:00"
+  },
+  {
+    "Id": "1471034",
+    "ThreadId": "652799",
+    "Html": "Hello, <br />\nSorry for this long absence.<br />\n<br />\nThanks WinfriedSonntag for the idea. I've write a PowerShell script to deploy any feature from the cloud or another source. And I write a bat script to install framework3.5 by a GPO at the strating of Windows.<br />\n<br />\nThis is my little contribution ^^<br />\n<br />\nHere is the enable_feature.ps1<br />\n<pre><code># author : \n# version : 1.3\n# date : 31/03/2016\n# description : Enable feature for windows 2012 by GPO\n# Warning you can't use the c$ or d$ for the source, it fail because of the '$' caracter\n\nParam([string]$feature,[string]$source)\n\n$logfile=$env:temp+&quot;/enable_feature_$feature.log&quot;\n#$virtual_drive=&quot;S:&quot;\n\n# Import ServerManager Module\nImport-Module ServerManager\n$returnCode=0\n\ntry {\n    $checkFeature = Get-WindowsFeature | Where-Object {$_.Name -eq $feature}\n}\ncatch [System.Exception] {\n    &quot;Error to get windows feature $_.Exception.Message&quot; | Out-File -Append $logfile\n    $exitCode=2\n}\n\n#check and instal feature\nIf ($checkFeature.Installed -ne &quot;True&quot; )  {  \n    if ($source -ne &quot;&quot;) {\n        try {\n            &quot;Adding $feature&quot; | Out-File -Append $logfile\n            # Add-WindowsFeature $feature -source $virtual_drive+&quot;\\sxs&quot; | Out-File -Append $logfile\n            Add-WindowsFeature $feature -source $source | Out-File -Append $logfile\n        }\n        catch [System.Exception] {\n            &quot;Error to add Windows feature with alternative source $virtual_drive - $_.Exception.Message&quot; | Out-File -Append $logfile\n            $exitCode=22\n        }\n    }\n    else {\n        try {\n            Add-WindowsFeature $feature | Out-File -Append $logfile\n        }\n        catch [System.Exception] {\n            &quot;Error to add Windows feature $_.Exception.Message&quot; | Out-File -Append $logfile\n            $exitCode=24\n        }\n    }\n    #check if install correct\n    $checkFeature = Get-WindowsFeature | Where-Object {\n        $_.Name -eq &quot;$feature&quot;\n    }\n    If ($checkFeature.Installed -ne &quot;True&quot;) {\n        &quot;Error to install $feature&quot; | Out-File -Append $logfile\n        $returnCode=1\n    }\n}\nelse {\n    &quot;$feature always installed!&quot; | Out-File -Append $logfile\n}\n\nexit $returnCode</code></pre>\n\nAnd here is the bat script to specified which feature to install : framework 3.5<br />\n<pre><code>@echo off\ncopy /Y \\\\YOUR DOMAIN\\sysvol\\YOUR DOMAIN\\scripts\\enable_feature.ps1 c:\\\npowershell c:\\enable_feature.ps1 -feature &quot;NET-Framework-Features&quot; -source &quot;\\\\YOURWSUS.YOUR DOMAIN\\Windows-2012R2x64-sxs\\sxs&quot;\nrem powershell c:\\enable_feature.ps1 -feature &quot;NET-Framework-Core&quot; -source &quot;\\\\YOURWSUS.YOUR DOMAIN\\d$\\Windows-2012R2x64-sxs\\sxs&quot;\ndel c:\\enable_feature.ps1</code></pre>\n\nAnd I've add a &quot;fake&quot; custom update, only to see if framework3.5 is correctly installed by the GPO :<br />\nI check the same registry value in the &quot;installed&quot; and in the &quot;installable&quot; :<br />\nSOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v3.5\\Install<br />\n1<br />\nREG_DWORD<br />\n<br />\nResult :<br />\n<ul>\n<li>when framework3.5 is not installed, the wsus publisher said &quot;not applicable&quot;</li>\n<li>\nwhen framework3.5 is installed, the wsus publisher said &quot;installed&quot;<br />\n</li>\n</ul>\nHere the screenshots :<br />\n<img src=\"http://img11.hostingpics.net/pics/515952wsuspublisher10.png\" alt=\"Image\" /><br />\n<img src=\"http://img11.hostingpics.net/pics/359494wsuspublisher11.png\" alt=\"Image\" /><br />\n<img src=\"http://img11.hostingpics.net/pics/980602wsuspublisher12.png\" alt=\"Image\" /><br />\n<img src=\"http://img11.hostingpics.net/pics/570690wsuspublisher14.png\" alt=\"Image\" /><br />\n<br />\nRegards,<br />\nGaëtan<br />\n<br />\nPS : I see CustomUpdateEngine is compiled in .Net Framework 4.0 in next Version of WPP, thanks to the author!<br />\n",
+    "PostedDate": "2016-04-22T07:52:11.62-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1471109",
+    "ThreadId": "652799",
+    "Html": "Thanks Gaëtan for your Posting and your Solution! :)<br />\n",
+    "PostedDate": "2016-04-23T07:08:16.193-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

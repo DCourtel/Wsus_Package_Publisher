@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Custom Update Creator",
+      "DisplayName": "Custom Update Creator"
+    },
+    "ClosedComment": "Added a button to clear the combobox.",
+    "ClosedDate": "2014-07-29T09:56:03.307-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "After adding a return code to a \"Allow to execute a file\" element, the return code cannot be removed. The element must be removed and added again as a workaround.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-07-17T12:22:35.427-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Cannot remove return code from a \"Allow to execute a file\" element",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 207
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

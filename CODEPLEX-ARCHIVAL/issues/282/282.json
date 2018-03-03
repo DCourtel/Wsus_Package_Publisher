@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-08-11T08:59:39.433-07:00",
+    "CommentCount": 6,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nIf I choose shown pending updates in the context menu of a shown client in WPP and type in the username and Password of the Client machine I get the answer \"Wrong username or Password\" and the pending updates window does not open.\r\n\r\nIf I enter the username  and Password  of the local Server the window of pending updates open and I get the failure \"Unauthorized Access exetption! Ensure you have admin previleges on the remote computer\".\r\n\r\nI do not have a Domain!\r\n\r\nBest regards,\r\n\r\nTobias",
+    "LastUpdatedDate": "2015-08-11T08:59:39.433-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-08-10T07:10:06.397-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Show pending updates",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 282
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi Tobias,\n\ndo you enter PC-Name\\Administrator and Password into the Dialog or just Administrator?\n\nRegards\nNorbert",
+      "PostedDate": "2015-08-10T07:49:09.853-07:00",
+      "Id": 188197
+    },
+    {
+      "Message": "Hello Norbert,\n\nI tried the following:\n\nServer credentials - username: Administrator Password: xyz hostname: server\nClient credentials - username:Admin Password:abc hostname:client\n\nFailure message \"The username or Password is incorrect\"\nclient\\admin abc\n.\\admin abc\nadmin abc\n\nFailure message  \"Unauthorized Access exetption! Ensure you have admin previleges on the remote computer\"\n\nclient\\Administrator blank\n.\\Administrator blank\nclient\\Administrator xyz\n.\\Administrator xyz\nAdministrator xyz\nAdministrator blank\nblank blank\n\nIt seems like the WPP tests the credentials with the ones of the server and if they not correct it will not open the pending update window. If the Server credentials not correct it does not try a Connection to the client.\n\nBest Regards,\n\nTobias\n\n",
+      "PostedDate": "2015-08-10T22:30:46.167-07:00",
+      "Id": 188217
+    },
+    {
+      "Message": "Look in Einstellungen > Authentifizierungsdaten (if you have German selected). What you have selected in Authentifizierungsdaten?",
+      "PostedDate": "2015-08-10T23:39:01.967-07:00",
+      "Id": 188221
+    },
+    {
+      "Message": "Hello Winfried,\n\nI checked \"Ask each time\".\n\nBest Regards,\n\nTobias",
+      "PostedDate": "2015-08-11T01:42:23.477-07:00",
+      "Id": 188227
+    },
+    {
+      "Message": "Hi,\n\n> I do not have a Domain! \n\nAnd therein lies the problem !\nWhen you choose this feature, WPP spawns a new process using the credential you have provided. These credentials need to have administrative rights on the remote computer.\nAs you are not in a domain :\n - If you use local credentials, you can launch the process but don't have admin rights on the remote computer.\n - If you use the remote administrator account, you can't launch the process on the local computer.\n\nThe workaround is to create the same account on the local computer and the remote computer. This account must have admin rights on the remote computer.",
+      "PostedDate": "2015-08-11T03:15:21.57-07:00",
+      "Id": 188228
+    },
+    {
+      "Message": "Hello DCourtel,\n\nThank you very much for the reply! This was the Problem and it works now.\n\nBest regards,\n\nTobias\n",
+      "PostedDate": "2015-08-11T04:50:13.607-07:00",
+      "Id": 188229
+    }
+  ]
+}

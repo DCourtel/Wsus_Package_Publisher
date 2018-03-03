@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-04-13T11:33:23.747-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Bonjour,\r\n\r\nAvec la nouvelle version, la création d'une maj depuis un fichier msi n'ajoute plus automatiquement les règles\r\n<msiar:MsiProductInstalled ProductCode=\"{LE-GUID-DU-MSI}\"/>\r\nNormal ?",
+    "LastUpdatedDate": "2015-04-15T05:06:06.61-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-04-13T04:43:09.77-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Création règles automatique sur fichier MSI",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 258
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Voir le thread : [https://wsuspackagepublisher.codeplex.com/workitem/255](https://wsuspackagepublisher.codeplex.com/workitem/255)\n",
+      "PostedDate": "2015-04-13T11:33:08.147-07:00",
+      "Id": 182109
+    },
+    {
+      "Message": "Merci",
+      "PostedDate": "2015-04-15T05:06:06.61-07:00",
+      "Id": 182896
+    }
+  ]
+}

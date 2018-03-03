@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-07-28T13:44:27.123-07:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Good Morning.\r\n\r\nI have built a custom Update for the New Adobe Acrobat Reader DC version..  I do have a issue which may be a setting I did not know about since this is the first .msp I have pushed.  Our Test PC's see the package, install it, but then it will keep seeing it and install it again..  Is there a setting that needs to be done for a .msp that after it is installed, it will not try to keep downloading as an update..\r\n\r\nAny advice is appreciated..\r\n\r\nThanks\r\n\r\n~J",
+    "LastUpdatedDate": "2015-07-28T13:44:27.123-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-07-27T08:17:41.483-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Settings for Adobe Acrobat Reader DC .msp Patch",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 277
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi, First why do you create a Custom Update instead of a classic update ? What \"Actions' do you have set in this Custom Update ?\nSecondly, if clients computers try to install again, that means they have evalued the \"IsInstalled\" rule to False and the \"IsInstallable\" to True. So, what do you have set as \"IsInstalled\"/\"IsInstallable\" rules ?",
+      "PostedDate": "2015-07-27T11:33:05.443-07:00",
+      "Id": 187763
+    },
+    {
+      "Message": "I have always used Custom Update which I got from documentation on here..  I do not know where the \"isinstall\" rule and isinstallable\" rule exists...  This may be my issue..  Can you let me know where this exist.. This is my first .msp package I have built and rest have been .msi packages..  Thanks",
+      "PostedDate": "2015-07-27T12:17:09.357-07:00",
+      "Id": 187765
+    },
+    {
+      "Message": "This has been resolved...  Looking at the settings, I needed to add the MSI Patched Installed for Product Ruled.  Here I needed to define the Patch Revision number and the original .msi product code..  Once adding true and adding false, the update installed and did not re-install after...  I have made notes for future use.. Thanks again!",
+      "PostedDate": "2015-07-28T12:52:35.55-07:00",
+      "Id": 187822
+    }
+  ]
+}

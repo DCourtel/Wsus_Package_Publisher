@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1480099",
+    "ThreadId": "656799",
+    "Html": "Hi, I was wondering, if I use WSUS downstream servers, is WPP will push his package to the downstream servers or It will push the update individually from the upstream to each target?\r<br />\n<br />\nThank you<br />\n",
+    "PostedDate": "2016-07-29T07:14:21.79-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1480102",
+    "ThreadId": "656799",
+    "Html": "Hi, WPP publish updates, only on the server where it is connected to.\r<br />\nYour downstream servers will synchronise these updates and download it if they trust the code signing certificat. If the downstream server is not a replica, then you will have to approve these updates on this server too.<br />\n",
+    "PostedDate": "2016-07-29T07:45:23.99-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1480161",
+    "ThreadId": "656799",
+    "Html": "I use WPP on both our top level and lower level server (not a replica) in a manor used for testing then production and it works great. Once you've run a sync you just need to approve the update on the downstream server. Been using it for years like this and it works great.<br />\n",
+    "PostedDate": "2016-07-31T14:59:10.81-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1491839",
+    "ThreadId": "656799",
+    "Html": "Hi,<br />\nim wondering why it's not working here...<br />\nI had installed my 1st replica WSUS, and all MS-Updates are available on the replica server.<br />\nBut all self-created packages arte not visible.<br />\nAnd: The master WSUS say 1800 of 9200 updates visible (in &quot;all Updates&quot;)<br />\nThe replica WSUS only knows about 9096, means all of my self created pacages are not syncronized.<br />\nAlso I cant create an update view that only shows up my self desinged updates, 'cause the the list of my products (frm in WPP) are not avcailable in replica WSUS.<br />\n<br />\nIs it an issue of WSUS or WPP? <br />\n<br />\nCan anyone give a hint please?<br />\n<br />\nEDIT: the WPP Certs are installed...<br />\n",
+    "PostedDate": "2017-01-29T00:45:04.913-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1491849",
+    "ThreadId": "656799",
+    "Html": "Did you see the Updates not in the Downstream-WSUS-Console? Or the clients didn't install the updates? Did you see the WPP-Updates in the WSUS-Console at your Master-WSUS?<br />\n<br />\nYou never will SEE the update published from WPP in your Downstream-WSUS-Console. <br />\n",
+    "PostedDate": "2017-01-29T08:01:21.3-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1491880",
+    "ThreadId": "656799",
+    "Html": "Hello Winfried,<br />\n<br />\nwell, meanwhile the updates are available and installed by the client computers (3 days after replication...)<br />\n<br />\nThe WPP-Updates are visible in directory (same path as Master-WSUS), but not visible in Downstream-WSUS (in Master-WSUS I see them).<br />\n<br />\nHow can I be sure that all clients install the WPP-Updates well if I don't see anything.<br />\n<br />\nIs there a way to make them visible in Downstream-WSUS (I guess not...)<br />\n<br />\nEDIT: Typo<br />\n",
+    "PostedDate": "2017-01-30T00:53:16.027-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1492116",
+    "ThreadId": "656799",
+    "Html": "Our Downstream-WSUS will replicate 24 times a day with the mainstream. I know very fast if the WPP-Update is installed. I don't want to see the WPP-Updates on the Downstream Server, it is enough for me to see it at the Mainstream WSUS.<br />\n<br />\nI think you make the WPP-Updates visible at the Downstream, the same way like WPP is going. You can run this Query at the Downstream:<br />\n<br />\nSET QUOTED_IDENTIFIER ON<br />\nGO<br />\nUSE SUSDB;<br />\nUPDATE [SUSDB].[dbo].[tbUpdate] SET [IsLocallyPublished] = 0 WHERE [IsLocallyPublished] &lt;&gt; 0<br />\n<br />\nEDIT: After running this Query you must create a new View with the new Products to see the WPP-Updates in WSUS.MSC.<br />\n<br />\n<a href=\"https://www.wsus.de/images/content/lup/26_Updateansicht_Anwendungen.png\" rel=\"nofollow\">https://www.wsus.de/images/content/lup/26_Updateansicht_Anwendungen.png</a><br />\n<a href=\"https://www.wsus.de/images/content/lup/27_Updateansicht_Anwendungen.png\" rel=\"nofollow\">https://www.wsus.de/images/content/lup/27_Updateansicht_Anwendungen.png</a><br />\n<br />\nBut! Never delete a Update within WPP, only decline a WPP-Update and run the cleanup Wizard every day on all Servers. If you delete it, WSUS will not replicate this information, after a couple of months you have a lot of WPP-Updates they are deleted on the Mainstream, but not at the Downstream-WSUS Servers.<br />\n",
+    "PostedDate": "2017-02-02T12:20:37.237-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

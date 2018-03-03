@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1441570",
+    "ThreadId": "644100",
+    "Html": "Hello everyone, everything and set correctly , and updates are done correctly on clients. The information fit well in status &quot;installed&quot; , but the procedure for new updates and installation begins continuously .\r<br />\nWhat is forgotten parameterization ??????\r<br />\nThanks for your help<br />\n",
+    "PostedDate": "2015-08-24T00:26:26.38-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1441626",
+    "ThreadId": "644100",
+    "Html": "Bonjour, je ne vois pas comment cela est possible. Une fois qu'une mise à jour est reporté comme 'Installé', le client ne cherche pas à réinstallé cette mise à jour. Eventuellement, une autre mise à jour, plus ancienne, peut chercher à s'installer. Dans ce cas, il y a un problème avec les règles &quot;EstInstallable&quot;<br />\n",
+    "PostedDate": "2015-08-24T02:37:33.26-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1441653",
+    "ThreadId": "644100",
+    "Html": "Merci pour votre réponse rapide.\r<br />\nJ'ai essayé avec plusieurs packages différents pour faire des tests. Je reste persuadé que c'est une petite bricole de paramètrage.\r<br />\n-le certif est ok sur le client et serveur.\r<br />\n-le client télécharge bien la mise à jour.\r<br />\n-L'installation se fait bien à l'extinction de la machine comme demandé par la gpo\r<br />\n-Mais dès que je refais un detectnow ou après quelques minutes, la machine reprends et veux réinstaller les mises à jours qui sont les mêmes. J'ai pu le vérifier en faisant un click droit sur le client 'montrer les mises à jours en attentes'.\r<br />\n<br />\nJ'ai suivi la procédure de base en tuto sur le site pour créer des packages.\r<br />\n<br />\nJe ne sais pas à quel moment je butte.\r<br />\n<br />\nOu se trouve les règles ou le paramètres de 'est installable'.\r<br />\nMerci de votre aide et de votre réponse<br />\n",
+    "PostedDate": "2015-08-24T05:08:40.533-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1441831",
+    "ThreadId": "644100",
+    "Html": "<blockquote>\nOu se trouve les règles ou le paramètres de 'est installable'. <br />\n</blockquote>\nLe mieux serait de lire la doc<br />\n",
+    "PostedDate": "2015-08-25T06:32:11.427-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1441832",
+    "ThreadId": "644100",
+    "Html": "Merci pour l'information. J'ai compris'le mécanisme et je suis en plein test. Je vous tiens au courant de mes résultat. <br />\n",
+    "PostedDate": "2015-08-25T06:33:48.227-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1441962",
+    "ThreadId": "644100",
+    "Html": "Je viens de finir mes tests qui sont concluants. Effectivement le problème venait bien de moi. Je ne renseignais pas correctement les champs des conditions.\r<br />\nJe n'ai pas vu l'endroit ou l'on pouvait trouver la documentation complète, mais ce n'est pas grave. Maintenant que j'ai trouvé le mécanisme correcte. Encore un grand merci pour la réactivité des réponses. <br />\n",
+    "PostedDate": "2015-08-26T02:55:32.173-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Rules Update Wizard",
+      "DisplayName": "Rules Update Wizard"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-11-10T10:47:25.01-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "When running this rule to check if product is already installed for .NET 4.5.2.\r\nIt correctly detects the product as not installed when Reg Value is set to:\r\n-\"4.5.51208\" or below\r\n\r\nIt correctly detects the product as installed when Reg Value is set to:\r\n-\"4.5.51209\"\r\n-\"4.5.60000\"\r\n\r\nIt INCORRECTLY detects the product as NOT Installed when Reg Value is set to:\r\n-\"4.5.70000\" or higher\r\n\r\n<bar:RegSzToVersion Key=\"HKEY_LOCAL_MACHINE\" Subkey=\"SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full\" Value=\"Version\" Comparison=\"GreaterThanOrEqualTo\" Data=\"4.5.51209.0\"/>",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "release v1.3.1407.29",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-09-25T10:36:13.217-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Reg Sz To Version Registry Key Rule not working properly",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 220
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi, I can confirm that, despite the documentation of the \"RegSzToVersion\", if one of the four-part version string is greater than 65535, the rule is not properly evaluate.\nThis is in total contradiction with the definition schema. It's a bug in the Windows Update Agent implementation, and I can't fix it. I will update the documentation of WPP.\nYou will have to base your detection on another rule.",
+      "PostedDate": "2014-10-17T12:23:22.417-07:00",
+      "Id": 162560
+    }
+  ]
+}

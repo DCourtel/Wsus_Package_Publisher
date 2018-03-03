@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1006485",
+    "ThreadId": "434451",
+    "Html": "I followed the instructions to add the Adobe Reader XI.  The CAB file is created with the setup.exe file only.  The additional files specified are not included.<br />\n",
+    "PostedDate": "2013-02-25T11:28:40.567-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1006534",
+    "ThreadId": "434451",
+    "Html": "Hi mbelcher, thank you for your interess for Wsus Package Publisher.\r<br />\n<br />\nCan you tell me which version of the WPP you are using please ?\r<br />\nI will check this behavior as soon as possible.<br />\n",
+    "PostedDate": "2013-02-25T13:30:00.247-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1006554",
+    "ThreadId": "434451",
+    "Html": "I just downloaded and installed it today.  The version is 1.1.1302.22 running on WIndows 2012 64 bit under VMWare ESXi 5.1<br />\n",
+    "PostedDate": "2013-02-25T13:56:15.47-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1007258",
+    "ThreadId": "434451",
+    "Html": "I have take a look at what exactly happens when publishing a multi-file update on Server 2008 and Server 2012. In both case, WPP detect correctly the additionnal files, but Wsus API seem ignore them when publishing on Server 2012. On Server 2003, the update's CAB is well formed.\r<br />\nI have modified the way WPP handle multi-file updates, so that now all files are in the same folder instead having the principal file in a folder and additionnal files in another.\r<br />\nThis is not, in my opinion, the logic way to proceed. But Wsus 4.0 seems to change the process of publishing multi-file update.\r<br />\nI need to test the new release on Server 2003, 2008 and 2012, to ensure that this correction didn't brings other bugs.\r<br />\nI hope I can achieve this tomorrow.<br />\n",
+    "PostedDate": "2013-02-26T14:47:26.483-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-08T11:29:23.543-07:00"
+  },
+  {
+    "Id": "1007262",
+    "ThreadId": "434451",
+    "Html": "Great!  Leave it to Microsoft to change things.  I appreciate your work on this project.  I can see many uses for it.<br />\n",
+    "PostedDate": "2013-02-26T15:17:03.96-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1007847",
+    "ThreadId": "434451",
+    "Html": "Please, find the correction of this bug in the latest release.\r<br />\nDon't hesitate to let me know if you find another bug or if you have new features' requests.<br />\n",
+    "PostedDate": "2013-02-27T13:08:38.227-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

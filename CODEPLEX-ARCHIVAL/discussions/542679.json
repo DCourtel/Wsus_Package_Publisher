@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1235554",
+    "ThreadId": "542679",
+    "Html": "Hello,\r<br />\nwe have depoly adobe reader 11.0.6 for few months with a mst file.\r<br />\nFor a new days we have done some changes in the mst file. \r<br />\n<br />\nNow we search a method to deploy the new mst file.  I don't found a function like &quot;reinstall&quot;.\r<br />\nHow did you solved the problem?<br />\n",
+    "PostedDate": "2014-04-18T14:52:59.467-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1236100",
+    "ThreadId": "542679",
+    "Html": "Hi,\r<br />\n<br />\nyou can deploy the Registry Settings with Group Policy Preferences. I think it is the easiest way in this case.\r<br />\nSince Version 11 Adobe will provide ADMX-Files for creating GPOs.<br />\n",
+    "PostedDate": "2014-04-21T03:57:07.64-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1236475",
+    "ThreadId": "542679",
+    "Html": "Hi,\r<br />\nthe admx file contains only a few options. \r<br />\nI don't found the registry key to set protection view -&gt; off.<br />\n",
+    "PostedDate": "2014-04-22T02:43:08.13-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1236482",
+    "ThreadId": "542679",
+    "Html": "Here you will find a Solution:\r<br />\n<br />\n<a href=\"http://forums.adobe.com/message/4920455\" rel=\"nofollow\">http://forums.adobe.com/message/4920455</a>\r<br />\n<br />\n<a href=\"http://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/protectedmode.html\" rel=\"nofollow\">http://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/protectedmode.html</a>\r<br />\n<br />\n<a href=\"http://www.faq-o-matic.net/2010/11/23/terminalserver-den-protected-mode-des-adobe-reader-x-abschalten/\" rel=\"nofollow\">http://www.faq-o-matic.net/2010/11/23/terminalserver-den-protected-mode-des-adobe-reader-x-abschalten/</a><br />\n",
+    "PostedDate": "2014-04-22T03:05:00.673-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:33:04.323-07:00"
+  },
+  {
+    "Id": "1256497",
+    "ThreadId": "542679",
+    "Html": "We have decided to uninstall the complete Adobe Reader and install it again with the mst file.\r<br />\nI read your links, but i don't found the right way.<br />\n",
+    "PostedDate": "2014-06-15T10:50:45.837-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1256511",
+    "ThreadId": "542679",
+    "Html": "<strong>badwurzach wrote:</strong><br />\n<blockquote>\nI read your links, but i don't found the right way.<br />\n</blockquote>\nHmm, you can use ProcessMonitor from Sysinterals to see which registry keys/settings will be changed if you set in the GUI some settings.<br />\n",
+    "PostedDate": "2014-06-15T12:08:09.297-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1273903",
+    "ThreadId": "542679",
+    "Html": "To late... we have done a complete reinstall of it.<br />\n",
+    "PostedDate": "2014-07-18T04:13:10.613-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

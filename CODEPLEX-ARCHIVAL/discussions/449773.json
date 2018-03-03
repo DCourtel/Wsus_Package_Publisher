@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1067387",
+    "ThreadId": "449773",
+    "Html": "Hi, it's possible to import *.CAB catalogs from Internet?<br />\n",
+    "PostedDate": "2013-07-11T23:54:09.007-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1067396",
+    "ThreadId": "449773",
+    "Html": "Hi aadell, Importing Catalog is not supported for now in WPP. I should add this feature in future release.<br />\n",
+    "PostedDate": "2013-07-12T00:16:47.027-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:31:20.98-07:00"
+  },
+  {
+    "Id": "1067410",
+    "ThreadId": "449773",
+    "Html": "Hello DCourtel. Have you thought some day for the new release?\r<br />\nIn my organization we are looking for this type of software to distribute Adobe updates.\r<br />\nI have tested other software like WPP, but I think the WPP UI is the better than others.\r<br />\nThank you.<br />\n",
+    "PostedDate": "2013-07-12T01:00:21.483-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1067444",
+    "ThreadId": "449773",
+    "Html": "You do not have to deploy Flash player by using catalog. You can publish the msi directly :\r<br />\n<br />\n<a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=663365\" rel=\"nofollow\">How To Deploy Adobe Flash Player</a><br />\n",
+    "PostedDate": "2013-07-12T02:40:18.913-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1067470",
+    "ThreadId": "449773",
+    "Html": "I wish to import catalog of adobe products to make only &quot;Approve&quot;, without having to download, create an update package,..\r<br />\nThanks.<br />\n",
+    "PostedDate": "2013-07-12T03:47:37.287-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1067524",
+    "ThreadId": "449773",
+    "Html": "Hum, ok. I see your point of view.<br />\n",
+    "PostedDate": "2013-07-12T07:11:24.803-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

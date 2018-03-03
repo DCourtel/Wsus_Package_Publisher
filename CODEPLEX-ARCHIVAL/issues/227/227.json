@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "CustomUpdateEngine",
+      "DisplayName": "CustomUpdateEngine"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-11-10T10:47:24.883-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hello,\r\nthanks for this great tool first.\r\nI've got a question to the \"rename folders\"-function in the cutom updates generator of the WPP.\r\nI was trying to use the path variable %programfiles(x86)%\\folder\\folder to rename a folder, but this doesn't seem to work. If i use the absolute path c:\\program files (x86) it worked. I saw a using of variables like this in some WPP-pdf-document for the \"execute a file\"-function and so i thought they can be used to renam directorys too.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "release v1.3.1407.29",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-11-06T13:35:35-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "%ProgramFiles(x86)% is not properly expand",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 227
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Modified the method to properly expand the path %ProgramFiles(x86)%",
+      "PostedDate": "2014-11-06T13:38:25.353-08:00",
+      "Id": 164096
+    }
+  ]
+}

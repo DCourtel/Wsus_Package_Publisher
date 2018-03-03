@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1255253",
+    "ThreadId": "548324",
+    "Html": "Hi<br />\n<br />\nI noticed in the CustomUpdateEngine.exe xml parsing of '&amp;' fails. I'm not sure why but here's the details:<br />\n<blockquote>\n===========================================================<br />\n6/11/2014 11:29:50 AM\tStarting CustomUpdateEngine with ActionFile : 805bdb03-a762-4a18-b6e8-b5f579f0fad5.xml<br />\n6/11/2014 11:29:50 AM\tStarting parsing ActionFile.<br />\n6/11/2014 11:29:50 AM\tGet Element from : &lt;Action&gt;<br />\n&lt;ElementType&gt;CustomUpdateElements.VariableElement&lt;/ElementType&gt;<br />\n&lt;Name&gt;ProPlus2007&lt;/Name&gt;<br />\n&lt;Type&gt;Int&lt;/Type&gt;<br />\n&lt;ID&gt;6d844172-22be-4b86-8d4c-a70c63cf14be&lt;/ID&gt;<br />\n&lt;/Action&gt;<br />\n6/11/2014 11:29:50 AM\tGet VariableElement from : &lt;Action&gt;<br />\n&lt;ElementType&gt;CustomUpdateElements.VariableElement&lt;/ElementType&gt;<br />\n&lt;Name&gt;ProPlus2007&lt;/Name&gt;<br />\n&lt;Type&gt;Int&lt;/Type&gt;<br />\n&lt;ID&gt;6d844172-22be-4b86-8d4c-a70c63cf14be&lt;/ID&gt;<br />\n&lt;/Action&gt;<br />\n6/11/2014 11:29:50 AM\tGet Element from : &lt;Action&gt;<br />\n&lt;ElementType&gt;CustomUpdateElements.VariableElement&lt;/ElementType&gt;<br />\n&lt;Name&gt;Proplus2010&lt;/Name&gt;<br />\n&lt;Type&gt;Int&lt;/Type&gt;<br />\n&lt;ID&gt;d4ba7895-1856-41b1-bbea-2a1cfbd238d4&lt;/ID&gt;<br />\n&lt;/Action&gt;<br />\n6/11/2014 11:29:50 AM\tGet VariableElement from : &lt;Action&gt;<br />\n&lt;ElementType&gt;CustomUpdateElements.VariableElement&lt;/ElementType&gt;<br />\n&lt;Name&gt;Proplus2010&lt;/Name&gt;<br />\n&lt;Type&gt;Int&lt;/Type&gt;<br />\n&lt;ID&gt;d4ba7895-1856-41b1-bbea-2a1cfbd238d4&lt;/ID&gt;<br />\n&lt;/Action&gt;<br />\n6/11/2014 11:29:50 AM\tError when parsing ActionFile : An error occurred while parsing EntityName. Line 17, position 290.<br />\n</blockquote>\nThe XML action file (portion of it):<br />\n&lt;Action&gt;<br />\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;<br />\n&lt;PathToExecutable&gt;c:\\windows\\system32\\cmd.exe&lt;/PathToExecutable&gt;<br />\n&lt;Parameters&gt;/c if exist &quot;c:\\MSOCache\\All Users{90120000-0030-0000-0000-0000000FF1CE}-C\\setup.exe&quot; ( &quot;c:\\MSOCache\\All Users{90120000-0030-0000-0000-0000000FF1CE}-C\\setup.exe&quot; /uninstall Enterprise /config &quot;C:\\Windows\\SoftwareDistribution\\Download\\Install\\OfficeUninstall\\Enterprise.xml&quot; &amp;&amp; rmdir /s /q &quot;c:\\MSOCache\\All Users{90120000-0030-0000-0000-0000000FF1CE}-C&quot;)&lt;/Parameters&gt;<br />\n&lt;KillProcess&gt;False&lt;/KillProcess&gt;<br />\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;<br />\n&lt;Variable&gt;6d844172-22be-4b86-8d4c-a70c63cf14be&lt;/Variable&gt;<br />\n&lt;/Action&gt;<br />\n<br />\nI'm doing this action to look for the office 2007 install, uninstall it then if successful (the double ampersand &amp;&amp;) remove the directory once complete as it's left over after the uninstall. I could break it out however I'd run the risk of the uninstall failing then having the next sequence purging the setup so I can't uninstall it after I fix the initial issue.<br />\n",
+    "PostedDate": "2014-06-11T08:46:21.153-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1255289",
+    "ThreadId": "548324",
+    "Html": "ExecutableElement is not made to be used like this.\r<br />\n<br />\nYou can either :<br />\n<ul>\n<li>Write a VbScript and launch it.</li>\n<li>Try to copy lines in your &quot;Parameters&quot; field into a file and execcute it with cmd.exe</li>\n</ul>\n",
+    "PostedDate": "2014-06-11T10:20:09.497-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1255295",
+    "ThreadId": "548324",
+    "Html": "I forgot about placing the parameters in cmd file. \r<br />\n<br />\nI ended up breaking out the execution. Since I knew only the setup.exe and setup.xml would exist at the end of a successful uninstall, I placed this into the paramerters section: &quot;IF NOT EXIST <em>.cab IF NOT EXIST </em>.MSI rmdir /s /q &quot;c:\\MSOCache\\All Users{90120000-0030-0000-0000-0000000FF1CE}-C&quot;&quot; of the execution after the uninstallation of that ProductCode.<br />\n",
+    "PostedDate": "2014-06-11T10:33:11.34-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-01T01:02:36.037-07:00"
+  }
+]

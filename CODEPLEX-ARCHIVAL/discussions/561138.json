@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1289931",
+    "ThreadId": "561138",
+    "Html": "Hi,<br />\ni used WPP to deploy Adobe Air to some of our PCs since a few months but this time i have problems installing the actual Version 14.0.0.178.<br />\n<br />\nI extract the installaer package, create an update in wpp and provide it to my wsus. Usually this works but this time the installation fails.<br />\n<br />\nOne other problem is that the product code from this version is the same as the version before, so i tried a package with empty rules and also a package that compares REG_SZ Values, both without success.<br />\n<br />\nHere is an excerpt from the WindowsUpdateLog:<br />\n<pre><code>2014-08-14  10:36:59:519     708    15d0    Agent   ** START **  Agent: Installing updates [CallerId = InstallPendingUpdates]\n2014-08-14  10:36:59:519     708    15d0    Agent   *********\n2014-08-14  10:36:59:519     708    15d0    Agent     * Updates to install = 1\n2014-08-14  10:36:59:519     708    15d0    Agent     *   Title = Adobe AIR 14.0.0.178\n2014-08-14  10:36:59:519     708    15d0    Agent     *   UpdateId = {0B3D8A69-5CB6-4302-BD85-9AA7699C8460}.1\n2014-08-14  10:36:59:529     708    3084    Handler MSP download: file b07518b7-6afa-40a8-8999-0bb6da49621b_1.cab already exists in sandbox directory (C:\\Windows\\SoftwareDistribution\\Download\\ab78e5d73d9f2473c13a5b0b058208ec)\n2014-08-14  10:36:59:589     708    3084    DnldMgr ***********  DnldMgr: New download job [UpdateId = {0B3D8A69-5CB6-4302-BD85-9AA7699C8460}.1]  ***********\n2014-08-14  10:36:59:599     708    3084    DnldMgr   * All files for update were already downloaded and are valid.\n2014-08-14  10:36:59:599     708    3084    Agent   *********\n2014-08-14  10:36:59:599     708    3084    Agent   **  END  **  Agent: Downloading updates [CallerId = InstallPendingUpdates]\n2014-08-14  10:36:59:599     708    3084    Agent   *************\n2014-08-14  10:36:59:760    5224    2cf8    COMAPI  FATAL: Unable to perform synchronous installation successfully. (hr=80240016)\n2014-08-14  10:37:02:722     708    3084    Report  Uploading 1 events using cached cookie, reporting URL = http://dc01/ReportingWebService/ReportingWebService.asmx\n2014-08-14  10:37:02:722     708    3084    Report  Reporter successfully uploaded 1 events.\n2014-08-14  10:37:05:162     708    15d0    DnldMgr Preparing update for install, updateId = {0B3D8A69-5CB6-4302-BD85-9AA7699C8460}.1.\n2014-08-14  10:37:05:162    2940    2034    Misc    ===========  Logging initialized (build: 7.6.7600.256, tz: +0200)  ===========\n2014-08-14  10:37:05:162    2940    2034    Misc      = Process: C:\\Windows\\system32\\wuauclt.exe\n2014-08-14  10:37:05:162    2940    2034    Misc      = Module: C:\\Windows\\system32\\wuaueng.dll\n2014-08-14  10:37:05:162    2940    2034    Handler :::::::::::::\n2014-08-14  10:37:05:162    2940    2034    Handler :: START ::  Handler: MSI Install\n2014-08-14  10:37:05:162    2940    2034    Handler :::::::::\n2014-08-14  10:37:05:162    2940    2034    Handler   : Updates to install = 1\n2014-08-14  10:37:05:162    2940    2034    Handler MSI update {00000000-0000-0000-0000-000000000000}.0 using source image from 1 CABs.\n2014-08-14  10:37:05:553    2940    2034    Handler   : Batch installing 1 updates\n2014-08-14  10:37:05:553    2940    2034    Handler   : WARNING: Operation failed at update 0, Exit code = 0x80240017\n2014-08-14  10:37:05:553    2940    2034    Handler :::::::::\n2014-08-14  10:37:05:553    2940    2034    Handler ::  END  ::  Handler: MSI Install\n2014-08-14  10:37:05:553    2940    2034    Handler :::::::::::::\n2014-08-14  10:37:05:573     708    15d0    Agent   *********\n2014-08-14  10:37:05:573     708    2814    AU  Triggering Offline detection (non-interactive)\n2014-08-14  10:37:05:573     708    15d0    Agent   **  END  **  Agent: Installing updates [CallerId = InstallPendingUpdates]\n2014-08-14  10:37:05:573     708    2814    AU  #############\n2014-08-14  10:37:05:573     708    15d0    Agent   *************\n2014-08-14  10:37:05:573     708    2814    AU  ## START ##  AU: Search for updates\n2014-08-14  10:37:05:573     708    2814    AU  #########\n2014-08-14  10:37:05:573    4696    2044    COMAPI  &gt;&gt;--  RESUMED  -- COMAPI: Install [ClientId = InstallPendingUpdates]\n2014-08-14  10:37:05:573    4696    2044    COMAPI    - Install call complete (succeeded = 0, succeeded with errors = 0, failed = 1, unaccounted = 0)\n2014-08-14  10:37:05:573    4696    2044    COMAPI    - Reboot required = No\n2014-08-14  10:37:05:573    4696    2044    COMAPI    - WARNING: Exit code = 0x00000000; Call error code = 0x80240022\n2014-08-14  10:37:05:573    4696    2044    COMAPI  ---------\n2014-08-14  10:37:05:573    4696    2044    COMAPI  --  END  --  COMAPI: Install [ClientId = InstallPendingUpdates]</code></pre>\n\n",
+    "PostedDate": "2014-08-14T02:12:40.447-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1290171",
+    "ThreadId": "561138",
+    "Html": "Hi, what is the type of the file you have publish (MSI, MSP or EXE) ?\r<br />\n<br />\nThe error code : 2014-08-14  10:37:05:553    2940    2034    Handler   : WARNING: Operation failed at update 0, Exit code = <strong>0x80240017</strong>\r<br />\nMean : <em>install is not needed because no updates are applicable</em>\r<br />\n<br />\nWhat happen if you run manually the file on the client computer ?<br />\n",
+    "PostedDate": "2014-08-14T13:26:46.317-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1290268",
+    "ThreadId": "561138",
+    "Html": "Its a MSI file and it says that there is another version of this product already installed on this computer.<br />\nI always tried to install manually from the exe file and with that it works flawlessly.<br />\n<br />\nI saw the explanation for the error code in an other thread here in the forums and i think it has something to do with the equal product codes of the two versions.<br />\nThats why i tried to build the package without rules but it didn`t work out.<br />\n",
+    "PostedDate": "2014-08-14T22:54:08.537-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1290345",
+    "ThreadId": "561138",
+    "Html": "<blockquote>\nIts a MSI file and it says that there is another version of this product already installed on this computer.<br />\n</blockquote>\nMSI files have their own validation rules. This means that you have already this version installed on the computer or MSI file has been badly created (Which happen frequently in Adobe Product :-( )\r<br />\n<br />\nYou can post on Adobe forum to tell them the error. They will probably release another MSI file (try to re-download it in few days)<br />\n",
+    "PostedDate": "2014-08-15T02:53:38.367-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:26:20.55-07:00"
+  },
+  {
+    "Id": "1290347",
+    "ThreadId": "561138",
+    "Html": "ok, i will try that. Thank you for your help and have a nice weekend<br />\n",
+    "PostedDate": "2014-08-15T02:57:17.097-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1290415",
+    "ThreadId": "561138",
+    "Html": "Did you verify that the file you downloaded indeed contained the installer for 14.0.0.178? There were some issues with the CDN earlier this week where it was distributing the old version for some users.<br />\n",
+    "PostedDate": "2014-08-15T05:49:17.897-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1290454",
+    "ThreadId": "561138",
+    "Html": "Yes, it installs the correct version if you use the containing exe<br />\n",
+    "PostedDate": "2014-08-15T07:33:27.67-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1322431",
+    "ThreadId": "561138",
+    "Html": "Not for the faint of heart .......\r<br />\nHere's how I publish Air updates when dealing with point updates like going from Adobe Air 15.0.0.293 to 15.0.0.356. I've been successful with this method with versions 13 through 15.\r<br />\n<br />\nAs others have discovered in this thread, Adobe does a piss poor job of creating MSI's that will upgrade or install over the existing version, primarily because they are using the same product code in the setup.msi. In that regard, the windows installer will think you're trying to perform a reinstall and will end up telling you that the update is not needed.\r<br />\n<br />\nThe latest version of Air (15.0.0.356) has a product code in the MSI = {7BBAEC47-1CC0-4CB8-ADB4-531B78DBD1DD}. The problem is that is the product code for all 15 versions. To get around this do the following:\r<br />\n<br />\nOpen the setup.msi using Orca, navigate to the Property Table and modify the product code by one letter, in this case changing the <strong>last letter</strong> from D to E {7BBAEC47-1CC0-4CB8-ADB4-531B78DBD1DE}, then save the setup.msi\r<br />\n<br />\nOnce that is complete, create the update. You need the setup.msi and the Adobe Air folder. Creating the update is realtively easy.\r<br />\nHere I've had plenty of trouble getting the Windows Update client to detect the update unless I make sure the <strong>Package Level rules are deleted</strong>. I do not use the MSI Product Installed detection method but rather <strong>file version</strong>.\r<br />\n<br />\n<strong>Update already installed?</strong>\r<br />\n&lt;bar:FileVersion Path=&quot;Adobe AIR\\Versions\\1.0\\Adobe AIR.dll&quot; Comparison=&quot;GreaterThanOrEqualTo&quot; Version=&quot;15.0.0.356&quot; Csidl=&quot;44&quot;/&gt;\r<br />\n<br />\n<strong>Update is installable?</strong>\r<br />\n&lt;bar:FileVersion Path=&quot;Adobe AIR\\Versions\\1.0\\Adobe AIR.dll&quot; Comparison=&quot;LessThan&quot; Version=&quot;15.0.0.356&quot; Csidl=&quot;44&quot;/&gt;<br />\n",
+    "PostedDate": "2014-11-14T19:26:56.51-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:42:48.407-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello,\r\ni have Problems with importing a Certificate for the use with WPP/WSUS. I have generated a Certificate with the same attributes then the self-signed Cert, but WPP will not import this PFX-File and gives only a failure Message \"Failed to load the certificate - Check the File\". Import of the same pfx-file directly in the Certification-store with MMC works without failures.",
+    "LastUpdatedDate": "2017-02-03T11:42:48.407-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-11-23T02:58:14.023-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Import of Certificate does not work",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 312
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

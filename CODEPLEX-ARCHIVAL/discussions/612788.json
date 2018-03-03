@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1394893",
+    "ThreadId": "612788",
+    "Html": "Hello,<br />\nIf i want to use instructions from Client Context-Menue, like &quot;Detect now&quot; , &quot;Report now&quot; and so on, it does not work.  ( Error: no ping)<br />\nI think its a problem of GPO-Windows Firewall configuration and the clients block the connections, but im not sure about exactly configuration.<br />\nI think I must go to <em>ComputerConfig/../AdministrativTemplates/Network/NetworkConnections/Windows Firewall/Dom-Profile /</em> <br />\nand must config what? ICMP ? incomming remote..? <br />\n",
+    "PostedDate": "2015-03-25T02:04:57.79-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1394927",
+    "ThreadId": "612788",
+    "Html": "Here you find a Documentation for ports that needed open: \r<br />\n<br />\n<a href=\"http://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=905459\" rel=\"nofollow\">http://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=905459</a>\r<br />\n<br />\n<a href=\"http://wsuspackagepublisher.codeplex.com/documentation:\" rel=\"nofollow\">http://wsuspackagepublisher.codeplex.com/documentation:</a>\r<br />\nOpening Firewall Ports for Remote Administration : Firewall Rules for Remote Administration.pdf<br />\n",
+    "PostedDate": "2015-03-25T02:17:31.793-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-03-25T03:12:48.447-07:00"
+  },
+  {
+    "Id": "1395075",
+    "ThreadId": "612788",
+    "Html": "I read the first document yesterday, but it was my opinion that \r<br />\nComputerConfig/../AdministrativTemplates/Network/NetworkConnections/Windows Firewall/Dom-Profile / \r<br />\n does the same if you use the correct rule ( not sure about that )\r<br />\n<br />\nok, set the Firewall as described. :-) So happy to follow &quot;instructions france&quot; har har...\r<br />\n<br />\nTest it.... yes, worked well! Thank you Winfried!<br />\n",
+    "PostedDate": "2015-03-25T03:10:13.397-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1395082",
+    "ThreadId": "612788",
+    "Html": "Fine, thanks for response. ;)\r<br />\n<br />\nYou can write a documention in english or in german and send it to the developer, i know he will publish it. ;)<br />\n",
+    "PostedDate": "2015-03-25T03:12:40.633-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1395477",
+    "ThreadId": "612788",
+    "Html": "<blockquote>\nSo happy to follow &quot;instructions france&quot; har har... <br />\n</blockquote>\nThe documentation is in English, only screenshots are from a French server. This is for two reasons :<br />\n<ul>\n<li>Mainly, because French screenshots are nicer.</li>\n<li>\nAnd more seriously, I don't have English servers.<br />\n</li>\n</ul>\nIf you can take screen captures from your own servers, you can send it to me : <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a><br />\n",
+    "PostedDate": "2015-03-25T05:32:24.71-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1395533",
+    "ThreadId": "612788",
+    "Html": "Hi,\r<br />\nit was no problem, only funny, because I see not so much documentations with france screenshots.\r<br />\nIf I make screenshots from my server, its the same problem, because my server speak german, an so all other people in the world smirk har har har :-) :-) \r<br />\n<br />\ncordialement, Sirko<br />\n",
+    "PostedDate": "2015-03-25T05:50:13.263-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

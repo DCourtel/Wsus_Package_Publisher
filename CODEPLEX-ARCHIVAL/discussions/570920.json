@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1317648",
+    "ThreadId": "570920",
+    "Html": "Hi,\r<br />\n<br />\ntoday I started WSUS Package Publisher. Everything works, but my updates are no longer displayed.<br />\n",
+    "PostedDate": "2014-10-30T05:35:53.767-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1317670",
+    "ThreadId": "570920",
+    "Html": "<strong>cvetters wrote:</strong><br />\n<blockquote>\ntoday I started WSUS Package Publisher. Everything works, but my updates are no longer displayed.<br />\n</blockquote>\nDid you connect to the WSUS? What you have selected in Tools &gt; Settings &gt; Servers &gt; [X] Connect to local Server. Is the port correct?<br />\n",
+    "PostedDate": "2014-10-30T06:53:36.527-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1317672",
+    "ThreadId": "570920",
+    "Html": "Yes, I already set Java, Firefox and Adobe Reader to install it.<br />\n<br />\nBut I cannot see them anymore <br />\n",
+    "PostedDate": "2014-10-30T06:56:59.157-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1317709",
+    "ThreadId": "570920",
+    "Html": "OK, next try.\r<br />\n<br />\nTools &gt; Settings &gt; Updates &gt; [X] Show locally published Updates that are also visible in WSUS-Console.\r<br />\nMisc. &gt; [X] Whenn starting, connect to the last used server.\r<br />\nAre WPP direct on the WSUS?<br />\n",
+    "PostedDate": "2014-10-30T08:33:45.81-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-12-03T13:42:51.123-08:00"
+  },
+  {
+    "Id": "1317715",
+    "ThreadId": "570920",
+    "Html": "Okay thank you, I will try it in 2 weeks. \r<br />\n<br />\nYes wpp is direct on the server <br />\n",
+    "PostedDate": "2014-10-30T08:38:14.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

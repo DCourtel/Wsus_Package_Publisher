@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1480312",
+    "ThreadId": "656890",
+    "Html": "We have an issue where all our clients are public IP's, but our internal domain name is different from the external DNS record, which puts all clients in a offline status for remote commands.\r<br />\n<br />\nFor example domain name for client1 is client1.domain.local.  External DNS is client1.university.edu.\r<br />\n<br />\nIf I change the hosts file on the WSUS server to represent the external DNS record of a client the remote commands work.  Obviously, this is a workaround.\r<br />\n<br />\nIs it possible to have WPP detect the external DNS record of the IP Address versus the internal domain name of the Computer Name?<br />\n",
+    "PostedDate": "2016-08-03T05:20:54.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1480335",
+    "ThreadId": "656890",
+    "Html": "Hi, Are you saying that you have WMI access etc enabled to the remote machines via their Public IP and a Firewall rule &amp; NAT? I take it you don't have VPN's to those remote machines and they are accessing WSUS via a public DNS record and NAT also?\r<br />\n<br />\nJust trying to get an understanding of your setup.<br />\n",
+    "PostedDate": "2016-08-03T14:40:12.073-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1481379",
+    "ThreadId": "656890",
+    "Html": "We only use the Public IP.  NAT is not involved at all.  The issue is the Active Directory domain has an internal name which is accessible as long as you are within a certain IP range, but from the outside world the FQDN of the DNS record is different.<br />\n",
+    "PostedDate": "2016-08-17T10:19:33.673-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

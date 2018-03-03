@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2016-09-21T09:54:42.613-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Attempting to publish a package and Wsus Package Publisher (latest version and prior revision both) is giving error: \"Failed to sign package; error was: 2147942432\"\r\n\r\nAlso noted that in the Information tab of a prior package the Folder field is highlighted in red as if the URL for the WSUS server can't be reached.  I was having an issue with another application that involved the IIS Manager yesterday, but to my best recollection, I didn't make changes to the WSUS portion.  Can someone shed some light on what error 2147942432 is?  Thanks!",
+    "LastUpdatedDate": "2016-09-21T09:54:42.613-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-07-22T12:10:06.333-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Failed to sign package; error was: 2147942432",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 345
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I contacted DCourtel via a private message and he responded that \"usually this is due to a certificate issue.  Can you check that certificates are in the right places on the Wsus server and client.\"",
+      "PostedDate": "2016-09-06T12:30:54.53-07:00",
+      "Id": 203927
+    },
+    {
+      "Message": "Resolved this by temporarily disabling the Trend Micro anti-virus program.  Coincidentally, did not run into this issue with McAfee, only Trend Micro.",
+      "PostedDate": "2016-09-21T06:06:44.823-07:00",
+      "Id": 204205
+    }
+  ]
+}

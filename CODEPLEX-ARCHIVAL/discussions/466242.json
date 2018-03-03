@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1118809",
+    "ThreadId": "466242",
+    "Html": "If you have a large Catalog (like the Dell-Catalogs) we currently need to Import all Updates with all of it's data, without knowing which one we really need.\r<br />\n<br />\nIf we would have the Option to Import only the Metadata of these updates, then the Agents could report which update they needed and the download of the needed files could only occur after the update is approved. This would save a lot of space and also time for Publishing a large catalog.\r<br />\n<br />\nWSUS does also handle the Windows-Updates like this, if you have configured WSUS to do so.\r<br />\n<br />\nBest regards\r<br />\nIngo<br />\n",
+    "PostedDate": "2013-11-06T03:39:55.12-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1119219",
+    "ThreadId": "466242",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"https://wsuspackagepublisher.codeplex.com/workitem/149\" rel=\"nofollow\">here</a> to go to the work item and continue the discussion.<br />\n",
+    "PostedDate": "2013-11-06T11:46:33.94-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T08:13:38.053-08:00"
+  }
+]

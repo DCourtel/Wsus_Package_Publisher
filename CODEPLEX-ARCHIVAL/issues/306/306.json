@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-27T10:27:31.107-08:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "After a successful import of a custom package file the corresponding 'vendor' entry under the updates tree disappeared and the update is not displayed.  When i try to import this package again the message \"There's already an update with this Package ID. No import will be perform.\" is displayed.\r\nIs there a way to cleanup this invisible package and restore the vendor group? ",
+    "LastUpdatedDate": "2015-11-27T10:27:31.28-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-11-01T11:02:12.293-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Invisible Update after import",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 306
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi,\ncan you check if \"Show locally published updates...\" is enabled in \"Settings\"\n\nRegards\nNorbert",
+      "PostedDate": "2015-11-06T14:39:38.047-08:00",
+      "Id": 193331
+    },
+    {
+      "Message": "This setting is unchecked. The updates should not show up in the wsus console.",
+      "PostedDate": "2015-11-08T11:32:13.613-08:00",
+      "Id": 193358
+    },
+    {
+      "Message": "Please, go to : Tools -> Settings -> Updates Tab and tick the option «Show locally-published upsates…»",
+      "PostedDate": "2015-11-10T12:07:27.753-08:00",
+      "Id": 193405
+    },
+    {
+      "Message": "After changing this setting the vendor group is now back,  that|s nice because I now can see that imported update that i had declined directly in the database. Thanks for your help.",
+      "PostedDate": "2015-11-23T15:06:20.803-08:00",
+      "Id": 193981
+    }
+  ]
+}

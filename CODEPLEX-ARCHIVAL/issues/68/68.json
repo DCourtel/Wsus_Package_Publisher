@@ -1,0 +1,116 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-21T14:00:12.543-07:00",
+    "CommentCount": 13,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nI configured Package Publisher in a test environment. Everything worked fine (I created updates, for example Adobe Flash, the updates appear in WSUS, I approve them and the clients are able to install them). But after I created an update for Acrobat 10 Pro (10.1.7 - which worked fine) I failed to create other Acrobat-updates: at least it seems so, I can create and publish the update, but in the Package Publisher there is no update available (in the tree under \"Updates\" there is \"Adobe\" but with \"(0)\" in the end and on the right side is no update). Also in WSUS doesn't appear the update.\r\nI tried it several times, always with the same result, only the first Acrobat update I created (10.1.7) cann still be created. I did a reboot but no success.\r\nPackage Publisher (1.2.1305.26) and WSUS are running on a Windows Server 2008.\r\nI would be glad for any help.\r\n\r\nMichael\r\n ",
+    "LastUpdatedDate": "2013-06-21T14:00:12.543-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-19T05:08:20.01-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Updates don't appear anymore after creation and publishing",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 68
+  },
+  "FileAttachments": [
+    {
+      "FileId": 694825,
+      "FileName": "PackagePublisher_Problem.jpg",
+      "DownloadUrl": ".\\694825"
+    },
+    {
+      "FileId": 694998,
+      "FileName": "ShowLocallyPublished.png",
+      "DownloadUrl": ".\\694998"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Pls use the latest Release: https://wsuspackagepublisher.codeplex.com/releases/view/108130 It is Version v1.2.1306.16",
+      "PostedDate": "2013-06-19T06:15:43.873-07:00",
+      "Id": 103417
+    },
+    {
+      "Message": "Thanks for your answer, alright, I will try that version.",
+      "PostedDate": "2013-06-19T06:18:53.953-07:00",
+      "Id": 103419
+    },
+    {
+      "Message": "Please, ensure the checkbox 'Show Locally-Published updates that are also visible in Wsus Console' is checked. (See my screenshot)",
+      "PostedDate": "2013-06-19T12:08:30.607-07:00",
+      "Id": 103511
+    },
+    {
+      "Message": "Okay, seems to work now, I tried the new version and checked the checkbox, thank you very much!\n\nUnfortunately I have another problem, deploying updates for Acrobat works well now, but Java not really: \nfor example I publish version 7 update 21 and install it on the clients. After that I publish and install a newer version, for example version 7 update 25. As soon as this installation is completed, WSUS pushs the version 7 update 21 again to the clients. How can I change that behaviour? Is there a rule I can use when I create the updates (if so I didn't found an appropriated one)?\nI would be really glad if you could help me again..\n\nMichael",
+      "PostedDate": "2013-06-20T04:19:47.657-07:00",
+      "Id": 103594
+    },
+    {
+      "Message": "You have to configure update 25 superseding update 21. Just revise update 25 and select the option.",
+      "PostedDate": "2013-06-20T05:09:19.8-07:00",
+      "Id": 103597
+    },
+    {
+      "Message": "I already tried it but the drop-down-menu was not editable. But thanks to your hint I revised the update after creation and then this option was available.\nThanks again for your fast and effective help!",
+      "PostedDate": "2013-06-20T05:22:35.62-07:00",
+      "Id": 103598
+    },
+    {
+      "Message": "OK, the Problem is solved, but i have one question. Are you using the EXE or the MSI for publishing? If you are using the MSI, then you will not have this problem. Here you find a small howto for getting MSI: http://www.klaus-hartnegg.de/gpo/msi_java.html",
+      "PostedDate": "2013-06-20T05:29:52.043-07:00",
+      "Id": 103600
+    },
+    {
+      "Message": "Actually I am using the MSI-file (and the CAB-file as additional file) for publishing Java...",
+      "PostedDate": "2013-06-20T06:06:31.8-07:00",
+      "Id": 103604
+    },
+    {
+      "Message": "OK, don't vergot the MST File.",
+      "PostedDate": "2013-06-20T06:34:20.353-07:00",
+      "Id": 103607
+    },
+    {
+      "Message": "Winfried, don't you have installation failures with the MSI package. What happen if IE run when installation start ?",
+      "PostedDate": "2013-06-20T06:59:06.06-07:00",
+      "Id": 103613
+    },
+    {
+      "Message": "David, installation fail if Firefox is open or a Application is using Java. I don't use IE, i can not tell you if installation fail if IE is open. ;)",
+      "PostedDate": "2013-06-20T08:08:56.6-07:00",
+      "Id": 103619
+    },
+    {
+      "Message": "I think it fail too. This is why I did'nt use the MSI file. I prefere the EXE file in a cutom update, which uninstall the Java Auto-Update component just after. I have wrote a documentation about this.",
+      "PostedDate": "2013-06-20T10:56:43.897-07:00",
+      "Id": 103640
+    },
+    {
+      "Message": "I never used the EXE, allways i use the MSI after editing the MSI. ;)",
+      "PostedDate": "2013-06-20T12:19:49.59-07:00",
+      "Id": 103649
+    }
+  ]
+}

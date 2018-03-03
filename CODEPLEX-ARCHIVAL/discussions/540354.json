@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1227461",
+    "ThreadId": "540354",
+    "Html": "Hi,\r<br />\nI see that CustomUpdateEngine don't work on Windows Server 2012.\r<br />\nIt needs .NET Framework 3.5, that have not present in Windows 2012.\r<br />\n<br />\nIs there any way to make Custom Update work on Windows Server 2012 without .NET Framework 3.5 installing?<br />\n",
+    "PostedDate": "2014-03-27T10:03:06.973-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1227475",
+    "ThreadId": "540354",
+    "Html": "No sorry, for now CustomUpdate only target the .Net 2.0 (.Net 3.5 can run it). The only way to solve your problem, at short term, is to install .Net 3.5 on the server.<br />\n",
+    "PostedDate": "2014-03-27T10:35:40.213-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:41:34.927-07:00"
+  },
+  {
+    "Id": "1303918",
+    "ThreadId": "540354",
+    "Html": "Hello again,\r<br />\n<br />\nIs there any news about this issue?<br />\n",
+    "PostedDate": "2014-09-12T00:10:52.97-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

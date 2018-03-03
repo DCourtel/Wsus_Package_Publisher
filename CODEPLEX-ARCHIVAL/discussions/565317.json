@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1299311",
+    "ThreadId": "565317",
+    "Html": "Hi, \r<br />\n<br />\nI want to delete the old item in tree view and also the root . \r<br />\nWhen i selected the deleted old item , i go to the &quot;Tools -&gt; Setting -&gt; Update -&gt;\r<br />\nand i found that the Delete product is dim how can i get it works?\r<br />\nAnd also how can i Delete it in root level?\r<br />\nmy WPP is running on the Wsus Server \r<br />\n<br />\nthanks<br />\n",
+    "PostedDate": "2014-09-04T19:15:12.967-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1299610",
+    "ThreadId": "565317",
+    "Html": "Please see this post : <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/471290\" rel=\"nofollow\">Not able to Delete Update Group</a><br />\n",
+    "PostedDate": "2014-09-05T03:33:32.813-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1302984",
+    "ThreadId": "565317",
+    "Html": "hello,\r<br />\nthis is not working by me. Strange... <br />\n",
+    "PostedDate": "2014-09-09T12:19:24.623-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1304421",
+    "ThreadId": "565317",
+    "Html": "Note that it works only in 99% of cases. There is no API to do that. Categories are fully managed by Wsus.<br />\n",
+    "PostedDate": "2014-09-13T12:02:47.373-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:07.74-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nI set an update as prerequisite for another update. To be exactly I set NET.Framework as prerequisite for paint.net, mainly for testing purposes.\r\n\r\nUnfortunately the NET.Framework update had a small bug. The package installed correctly and NET.Framework also worked. But in Windows Update the Update was displayed in some cases as failed. So I wanted to fix this issue what meaned that I had to create the update new from the beginning.\r\n\r\nI removed the prerequisite setting in the paint.net update. But i still could not delete the NET.Framework update. WPP stated that the NET.Framework package is still added as prerequisite in another package.\r\n\r\nWhen I tried to display that particular package WPP showed me only an emtpy list. I also verified that the paint.net package has not set any prerequisite.\r\n\r\nTo fix this I firstly had to delete the paint.net package. Afterwards it was possible to delete the NET.Framework package and create it new.\r\n\r\n\r\nGreetings\r\n\r\nwilly",
+    "LastUpdatedDate": "2017-02-03T11:50:07.74-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-08-06T01:11:06.537-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Error when setting an update as prerequisite for another update",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 280
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,76 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Computer Detail Viewer",
+      "DisplayName": "Computer Detail Viewer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-09-21T06:29:56.97-07:00",
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI have looked into the \"Last Installed\" section under the Clients. If you change the language to german there are the datefileds transposed, see attachment.\r\nPlease can you correct this.\r\n\r\nbr,\r\nKarsten",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1309.08",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-09-12T03:53:56.183-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Report Datefields transposed",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 112
+  },
+  "FileAttachments": [
+    {
+      "FileId": 727476,
+      "FileName": "Screenshot.pdf",
+      "DownloadUrl": ".\\727476"
+    },
+    {
+      "FileId": 731466,
+      "FileName": "error.pdf",
+      "DownloadUrl": ".\\731466"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Hi,\r\n\r\ntoday i have updated to the new version and still there is the transpose of the date fields, see attachment",
+      "PostedDate": "2013-09-18T02:43:28.913-07:00",
+      "Id": 114884
+    },
+    {
+      "Message": "Setting combox to the right place.\n\r\n\r** Closed by DCourtel 09/14/2013 11:55AM",
+      "PostedDate": "2013-09-14T11:55:14.837-07:00",
+      "Id": 114885
+    },
+    {
+      "Message": "Fantastic !!!",
+      "PostedDate": "2013-09-18T13:46:32.9-07:00",
+      "Id": 114951
+    },
+    {
+      "Message": "Hi,\n\nI guess we will have to alter the translations. I'll take a Look later.",
+      "PostedDate": "2013-09-22T04:58:34.207-07:00",
+      "Id": 115280
+    },
+    {
+      "Message": "No, it's just as Karsten said. Switching to German language results in wrong Dates. Just take a look at the screenshots again.",
+      "PostedDate": "2013-09-22T10:21:11.973-07:00",
+      "Id": 115290
+    }
+  ]
+}

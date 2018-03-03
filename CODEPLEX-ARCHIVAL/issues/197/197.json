@@ -1,0 +1,80 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Wsus Wrapper",
+      "DisplayName": "Wsus Wrapper"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-07-11T11:23:24.06-07:00",
+    "CommentCount": 8,
+    "Custom": null,
+    "Description": "To address an issue with the Export of metadata on the WSUS server, we installed a hotfix from MS per article 2819484. Now the WPP console gives an error of \"Server Version different from console version, you won't  be able to publish any updates\" when it is started. This happens with the latest WPP download. Is there a way to fix this?",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1405.30",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "High",
+      "Severity": 150,
+      "Id": 3
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-06-12T11:41:13.45-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Server Version different from console version",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 197
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Interesting. Can you start WPP, connect to the server, and go to 'Help' -> 'About' and give us the Server Version number and the Console Version number.\n\nAlso, did you run WPP on the Wsus server or on an administrative computer ?",
+      "PostedDate": "2014-06-12T12:36:14.663-07:00",
+      "Id": 149560
+    },
+    {
+      "Message": "Server Version: 6.2.9200.16553\nConsole Version: 6.2.9200.16384\n \nWe run WPP on the Wsus server directly.",
+      "PostedDate": "2014-06-13T09:35:49.697-07:00",
+      "Id": 149660
+    },
+    {
+      "Message": "KB2819484 is an HotFix (MSU file) that Microsoft released to fix an issue when exporting updates. This kb doesn't create usual keys in registry, so hard to detect. Files version for the API dll are not updated accordingly to the console version ! So cannot rely on this to detect console version.\r\n\r\nThe best way to fix this, is to assume that the console have always the same version than the server (when WPP run directly on the Wsus server). But when WPP run on an administrative computer, if this hotfix is installed, I won't be able to detect it.",
+      "PostedDate": "2014-06-14T07:50:06.127-07:00",
+      "Id": 149743
+    },
+    {
+      "Message": "We are able to publish updates even though the message comes up so this does not seem to be a operational issue.",
+      "PostedDate": "2014-06-17T06:13:24.003-07:00",
+      "Id": 149906
+    },
+    {
+      "Message": "I was wrong. We now cannot Revise or Create any custom updates. The catalog imports work so I thought is was thought is was OK. Any way to get this working again?",
+      "PostedDate": "2014-06-17T07:51:30.187-07:00",
+      "Id": 149918
+    },
+    {
+      "Message": "Could you send me an email at package.publisher@free.fr\nI will reply with a fixed release of WPP.",
+      "PostedDate": "2014-06-17T09:21:42.693-07:00",
+      "Id": 149928
+    },
+    {
+      "Message": "Thanks, the new version works. One issue we now have is that when revising a custom update in the Update Creation Wizard we add a Return Code Value of 0 and next and next, it shows as revising the update, but when we re-open it, there is no Return Code Value showing.\n",
+      "PostedDate": "2014-06-25T10:06:53.383-07:00",
+      "Id": 150704
+    },
+    {
+      "Message": "This is the normal behavior. You can only specify 'Return Codes' for EXE files, not for MSI or MSP.\nWindowsInstaller have his own list of Return Codes. See [This Link](http://msdn.microsoft.com/en-us/library/aa376931(v=vs.85).aspx)\nNote that 0 is the default return code, and mean \"Success\"",
+      "PostedDate": "2014-06-25T12:41:27.427-07:00",
+      "Id": 150723
+    }
+  ]
+}

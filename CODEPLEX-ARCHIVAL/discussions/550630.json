@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1262823",
+    "ThreadId": "550630",
+    "Html": "Is it possible to deploy a transform when the update for Adobe Reader is imported into WPP from the SCUP catalog?\r<br />\n<br />\nI can certainly do it with a regular update, but it would be nice to be able to apply the transforms to SCUP imports.\r<br />\n<br />\n<br />\nThanks,\r<br />\n<br />\nBill<br />\n",
+    "PostedDate": "2014-07-04T12:41:09.373-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1263281",
+    "ThreadId": "550630",
+    "Html": "Hi,\r<br />\n<br />\nno, for instance, you can't modify anything when you publish updates from a catalog. In WPP V2, I will change that.<br />\n",
+    "PostedDate": "2014-07-07T08:05:54.817-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-01T00:56:21.34-07:00"
+  },
+  {
+    "Id": "1263362",
+    "ThreadId": "550630",
+    "Html": "Awesome, looking forward to it.\r<br />\n<br />\nThanks.<br />\n",
+    "PostedDate": "2014-07-07T11:06:27.997-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

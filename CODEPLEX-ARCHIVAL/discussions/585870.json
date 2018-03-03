@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "1362066",
+    "ThreadId": "585870",
+    "Html": "Ok, also es geht um die erste Seite mit den Regeln wenn man ein eigenes Update erstellt.\r<br />\nZum einen ist da die Übersetzung noch unvollständig ( Update Level Rules / Edit this group )\r<br />\n<br />\nDann.... wenn man eine Regel hinzufügt, und den TYP &quot;REG_SZ WERT&quot; wählt, dann ist die Beschreibung im sich öffnenden Fenster falsch, da steht dann plötzlich REG_EXPAND_SZ . \r<br />\n<br />\nUnd noch was allgemeines zu dem Bereich &quot;Regeln&quot;. Ich hab ja schon viele Jahre mit LUP gearbeitet, und natürlich ist WPP deutlich leistungsfähiger und alles, aber die Übersichtlichkeit im Bereich Regeln ist ziemlich übel. Ich hab hier eine Ineinaderschachtelung vom Feldern mit seitlichen Scrollbalken, selbst wenn nur ein Wert drin steht. Es ist auch ziemlich schwer die Reglen sauber zu markieren um sie zum bearbeiten auszuwählen,genau so wie es sehr unübersichtlich ist wenn man mit UND/ODER Verknüpfungen arbeitet. \r<br />\nHier würde ich die Programmierer bitten das ganze etwas besser bedienbar zu machen.  \r<br />\n",
+    "PostedDate": "2015-03-10T02:32:08.6-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362072",
+    "ThreadId": "585870",
+    "Html": "Im kommenden Release ändert sich nochmal in Sachen Übersetzung etwas.\r<br />\nTrotzdem kannst Du gerne mit Screenshots und Übersetzungen den Entwickler vom WPP hier etwas unterstützen.\r<br />\n<br />\nBezüglich Handling der Regeln weiß der Entwickler Bescheid. Es soll sich in der Vers 2.x vieles ändern. Wann es allerdings eine Version 2.x geben wird, ist noch nicht klar. Bedenke aber: Es ist ein freiwilliges Projekt das auch noch kostenlos angeboten wird. Der Enwickler arbeitet in seiner Freizeit daran. Ich weiß, Du forderst nicht, aber man darf diese Aspekte nie ausser Acht lassen. ;)<br />\n",
+    "PostedDate": "2015-03-10T02:45:19.477-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362082",
+    "ThreadId": "585870",
+    "Html": "Hi all,\r<br />\nNote that I'm not very good at English speaking/Writing, but I'm worse at German !\r<br />\nWinfried and Norbert help me a lot for German Translation. But there is a lot of text, options, window in WPP, so it's not easy to see all.\r<br />\nEvery user of WPP can help, by pointing me translation's errors. And providing the correct translation.<br />\n",
+    "PostedDate": "2015-03-10T03:18:02.923-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362643",
+    "ThreadId": "585870",
+    "Html": "Hi,\r<br />\n<br />\nkorrekt, das Regelverhalten/-design ist definitiv eine Schwachstelle der aktuellen Version. Deswegen steht das hier auch schon seit auf der Wishlist. ;)\r<br />\n<a href=\"https://wsuspackagepublisher.codeplex.com/workitem/109\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/workitem/109</a>\r<br />\n<br />\nZum Thema Übersetzung: Winfried und ich sind immer mal wieder dran, aber ggf. einfach hier ins Forum posten, dann wird das auch &quot;irgendwann&quot; Berücksichtigung finden. \r<br />\n<br />\nHi,\r<br />\n<br />\nthat's a fact. The current version's rule handling is it's weak spot. That's why ist on the wishlist since 2013. <a href=\"https://wsuspackagepublisher.codeplex.com/workitem/109\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/workitem/109</a>\r<br />\n<br />\nRegarding the Translation: Winfried and I are doing some of it from time to time. But you can always post to the forum, and it will probably be considered in future releases. \r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2015-03-11T15:41:11.57-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362748",
+    "ThreadId": "585870",
+    "Html": "Vielen Dank für das Feedback, and Thank you DCourtel,\r<br />\nund wie ich sehe sind ja hier namhafte ITler mit der Sache beschäftigt :-) die mir mit ihren Blogs und Postings schon öfters weitergeholfen haben :-)\r<br />\nIch stehe gerne für Unterstützung bereit, wie gesagt bringe ich schon ein bischen Erfahrung von LUP mit. Allerdings bin ich kein gelernter Admin, nur SelfMade, also stoßen die Fähigkeiten irgendwo an Grenzen.\r<br />\n<br />\nIch musste die Fehlerbeschreibung hier leider in Textform abliefern da hier kein Upload möglich ist. \r<br />\n<br />\nWie genau kann man bei der Übersetzung helfen? Ich meine gibts irgendwo ein Language-Datei oder Zeilennummer wo man was eintragen kann? Das würde die Sache vereinfachen.\r<br />\n<br />\nAuch wenn es nichts mit Übersetzung zu tun hat - ich habe unter Misc ein Problem mit dem Adobe Katalog gepostet welches bei mir nur auftrat wenn ich das Programm deutsch lokalisiert habe - kann das jemand mal versuchen zu reproduzieren ?\r<br />\n<br />\nSirko<br />\n",
+    "PostedDate": "2015-03-12T03:20:53.85-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362778",
+    "ThreadId": "585870",
+    "Html": "Ein Release vor der Veröffentlichung testen kannst Du sicherlich auch, Du benutzt ihn schon, also sollte das kein Problem sein. Und verschiedene Umgebungen oder Arbeitsweisen haben auch noch nie geschadet.\r<br />\n<br />\nBei der Übersetzung gibt es sog. *.res-Dateien, das sind die einzelnen Formular im WPP, die gibt es für jede Sprache. Zusätzlich noch eine Excel Tabelle. Das wird von David je nach Anforderung per Mail an uns verschickt. Wenn Du jetzt noch konkrete Sachen hast, dann einfach hier rein. Wenn möglich als Text und evtl. einen Screenshot anhängen.\r<br />\n<br />\nDein Problem mit dem Adobe Katalog kann ich nicht nachvollziehen, werde das aber im Thread noch posten.<br />\n",
+    "PostedDate": "2015-03-12T05:07:15.473-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362814",
+    "ThreadId": "585870",
+    "Html": "ok also nicht so simpel aka -&gt; \r<br />\nFile: de.lang -&gt; \r<br />\nZeile xyz \r<br />\nFalse: Widnows \r<br />\ncorrect: Windows. \r<br />\n<br />\nNa gut. Dann bleibt mir hier erst mal nur der Verweis auf den Fehler entsprechend meines Eingangspostings.\r<br />\n<br />\nBy the way, Herr Sonntag :-):\r<br />\nich hab auf Gruppenrichtlinien.de den Beitrag zum WPP gelesen und ein paar Dinge mitbekommen die ich noch gar nicht gesehen hatte ( die ganzen coolen Möglichkeiten im Kontextmenü des Computers - detect now anweisen usw., das hab ich mir immer gewünscht ohne es zu wissen :-)- das würde man sich eigentlich auch für den WSUS wünschen... ). \r<br />\n.....aber das letzte &quot;neue&quot; Feature im Artikel verstehe ich nicht. Angelegte APP-Updates löschen ging doch auch mit dem LUP. Was ist da jetzt anders ?\r<br />\n<br />\nok, cool hier, macht Spaß,\r<br />\nSirko<br />\n",
+    "PostedDate": "2015-03-12T07:09:55.627-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362826",
+    "ThreadId": "585870",
+    "Html": "<strong>GMBU wrote:</strong><br />\n<blockquote>\nok also nicht so simpel aka -&gt; <br />\nFile: de.lang -&gt; <br />\nZeile xyz <br />\nFalse: Widnows <br />\ncorrect: Windows. <br />\n<br />\nNa gut. Dann bleibt mir hier erst mal nur der Verweis auf den Fehler entsprechend meines Eingangspostings.<br />\n</blockquote>\nWie wäre es mit einem Screenshot? Alternativ kannst Du den Screenshot auf dein OneDrive ablegen, sofern du eines hast, und den Link hier posten. <a href=\"http://social.answers.microsoft.com/Forums/de-DE/w7networkde/thread/af6c55f1-0e82-460e-babb-794ff26e5698\" rel=\"nofollow\">http://social.answers.microsoft.com/Forums/de-DE/w7networkde/thread/af6c55f1-0e82-460e-babb-794ff26e5698</a> Oder natürlich bei jedem anderen Filehoster.<br />\n<blockquote>\nBy the way, Herr Sonntag :-):<br />\nich hab auf Gruppenrichtlinien.de den Beitrag zum WPP gelesen und ein paar Dinge mitbekommen die ich noch gar nicht gesehen hatte ( die ganzen coolen Möglichkeiten im Kontextmenü des Computers - detect now anweisen usw., das hab ich mir immer gewünscht ohne es zu wissen :-)- das würde man sich eigentlich auch für den WSUS wünschen... ). <br />\n.....aber das letzte &quot;neue&quot; Feature im Artikel verstehe ich nicht. Angelegte APP-Updates löschen ging doch auch mit dem LUP. Was ist da jetzt anders ?<br />\n</blockquote>\nIm WPP war das Feature neu. Der LUP hatte so manches voraus, aber die fehlende Unterstützung für w2012 und höher ist im Jahr 2013 und später ein Killerfeature.\r<br />\n<br />\nUnd wegen Kontextmenü, einfach mal 'ausprobieren', überall rechts klicken und prüfen was es gibt.<br />\n",
+    "PostedDate": "2015-03-12T07:32:08.7-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362866",
+    "ThreadId": "585870",
+    "Html": "Ich sag doch - ich nix OneDrive, nix Filehoster :-).  Ich muss mal den privaten Webspace bemühen - am Montag ..... jetzt reichts für die Woche...\r<br />\n<br />\nSirko<br />\n",
+    "PostedDate": "2015-03-12T09:17:27.567-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

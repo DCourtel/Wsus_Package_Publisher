@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1088431",
+    "ThreadId": "455528",
+    "Html": "I am subscribed to the Adobe Flash and Adobe Reader 11 catalogs.\r<br />\n<br />\nCouple of issues:<br />\n<ol>\n<li>\nWhen I import the latest Adobe Flash 11.8 the update does not have any information under the rules to check if the update was already installed or if it should be installed.   Is this normal?  I thought you needed this information for WSUS to work correctly.<br />\n</li>\n<li>\nThe Adobe Reader catalog shows nothing when I choose import updates and then open catalog.   Is this a bug?<br />\n</li>\n</ol>\n",
+    "PostedDate": "2013-09-04T13:37:24.857-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1088562",
+    "ThreadId": "455528",
+    "Html": "Hi DDskier,<br />\n<blockquote>\nWhen I import the latest Adobe Flash 11.8 the update does not have any information under the rules to check if the update was already installed or if it should be installed. <br />\n</blockquote>\nThis is because, the editor has set rules at package level, which is not shown in WPP. I will see to add this feature later.<br />\n<blockquote>\nThe Adobe Reader catalog shows nothing when I choose import updates and then open catalog. <br />\n</blockquote>\nThis is because, the editor has set prerequisiste into each update of the catalog. Prerequisites are not supported for now in WPP. It will be in a later release.<br />\n",
+    "PostedDate": "2013-09-04T21:48:13.12-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1088762",
+    "ThreadId": "455528",
+    "Html": "Thanks for the update.\r<br />\n<br />\nQuestion:   I have a mix environment of Windows 7 and Windows 8.   Windows 8 only gets its Adobe Flash update through Microsoft Update, so I have been using a WMI filter to ensure that Adobe Flash is only applied to the Windows 7 machines.\r<br />\n<br />\nConsidering the package level rules that come from the Adobe Catalog, can I still apply WMI filters?   Will it still work?<br />\n",
+    "PostedDate": "2013-09-05T07:15:14.39-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1089944",
+    "ThreadId": "455528",
+    "Html": "<blockquote>\nConsidering the package level rules that come from the Adobe Catalog, can I still apply WMI filters? Will it still work?<br />\n</blockquote>\nYes, you can add your own rules. These rules will be merge with Package level rules by a &quot;AND&quot; operator. I recommend to use &quot;Windows Version&quot; rules rather than Wmi Query.\r<br />\n<br />\n<img src=\"http://i.imgur.com/PLmv2jL.png\" alt=\"NotWindows8\" />\r<br />\n<br />\n<img src=\"http://i.imgur.com/bP9T5wP.png\" alt=\"NotWindowsServer2012\" /><br />\n",
+    "PostedDate": "2013-09-08T14:08:42.847-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-12T08:46:22.853-07:00"
+  },
+  {
+    "Id": "1090248",
+    "ThreadId": "455528",
+    "Html": "Great, so it seems that I can combine package level rules and my own rules within WSUS.\r<br />\n<br />\nI look forward to the WPP update so that I can begin using the Adobe Reader Catalog.\r<br />\n<br />\n<br />\nThanks.<br />\n",
+    "PostedDate": "2013-09-09T09:18:00.27-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

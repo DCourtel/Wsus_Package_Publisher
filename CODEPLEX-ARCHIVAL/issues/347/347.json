@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "WPP can't be run on Windows Server Core.",
+    "ClosedDate": "2016-08-22T21:59:18.713-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Server Core 2012 R2 with WSUS role installed.\r\nAccess via RDP, mlogged in as Domain Administrator.\r\n\r\nJust extracted to c:\\Program Files\\WPP and started \"Wsus Package Puublischer.exe\" from powershell\r\n\r\nCreated a self signed certificate.\r\nRestarted the server. Now the \"save the certificate\" Button is not greyed any more.\r\n\r\nAs soon as click on the \"Save the certificate\" button, the application crashes  (every time, tried 4 time, 4 times it crashed)\r\n\r\nSolutions tried:\r\nrestart server\r\n\r\nsee sreenshot for error-message\r\n",
+    "LastUpdatedDate": "2016-08-22T21:59:18.713-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-08-22T07:14:00.417-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Wsus Package Publisher crahes when saving certificate to file",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 347
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1602514,
+      "FileName": "WSUS-WPP-Certificate-save-crash.png",
+      "DownloadUrl": ".\\1602514"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Hi, WPP is not compatible with Core installation of Windows Server. This type of installation doesn't have required component to display the «Save as» dialogue box.\nYou will have to manage your wsus server remotely.",
+      "PostedDate": "2016-08-22T21:58:26.78-07:00",
+      "Id": 203717
+    }
+  ]
+}

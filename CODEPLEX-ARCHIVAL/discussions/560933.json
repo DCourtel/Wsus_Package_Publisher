@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1289165",
+    "ThreadId": "560933",
+    "Html": "Hi everyone! Because some software updates need to kill iexplorer or whatever programs to install correctly, i would like for some of them be installed on starting up/shutting down or logging on/logging off. Is it possible?\r<br />\n<br />\nIn ordinary Windows Updates it sometimes does background updates when starting up and so. I would not like to use a custom-created update with scripts and bells and whistles - i'd like to use the ordinary updates.<br />\n",
+    "PostedDate": "2014-08-12T02:04:04.623-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1289209",
+    "ThreadId": "560933",
+    "Html": "<strong>EvarRing wrote:</strong><br />\n<blockquote>\nHi everyone! Because some software updates need to kill iexplorer or whatever programs to install correctly, i would like for some of them be installed on starting up/shutting down or logging on/logging off. Is it possible?<br />\n</blockquote>\nYes, it is possible. You can use CostumUpdates. Have a look in documentation: <a href=\"https://wsuspackagepublisher.codeplex.com/documentation\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/documentation</a><br />\n",
+    "PostedDate": "2014-08-12T04:22:11.187-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1289432",
+    "ThreadId": "560933",
+    "Html": "Unfortunately, I never found any solution to ensure that an update only install at shutdown. I still search a trick.<br />\n",
+    "PostedDate": "2014-08-12T13:11:38.793-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-19T12:49:12.85-07:00"
+  }
+]

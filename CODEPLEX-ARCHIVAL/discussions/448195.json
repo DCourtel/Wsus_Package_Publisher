@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1061009",
+    "ThreadId": "448195",
+    "Html": "Has anyone successfully deployed .NET 4.5 framework using the WSUS package publisher? <br />\n<br />\nIf so, what options/setup did you use?<br />\n",
+    "PostedDate": "2013-06-25T10:10:39.307-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1061137",
+    "ThreadId": "448195",
+    "Html": "hi DDSkier,\r<br />\n<br />\nI have attempted to deploy this today to a few Windows 7 clients (using the original redistributable EXE with the following switches, /q /norestart /ChainingPackage ADMINDEPLOYMENT). It does install correctly however on Windows 7 it says the update failed with code BC2 and then it will want to try install again.\r<br />\n<br />\nThis way works perfectly fine though on Windows 08R2 servers from my testing so far.\r<br />\n<br />\nHas anyone managed to successfully deploy this in a Windows 7 environment without the BC2 error?\r<br />\n<br />\n<br />\n-Bobby<br />\n",
+    "PostedDate": "2013-06-25T16:44:47.387-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1065889",
+    "ThreadId": "448195",
+    "Html": "BC2 (3010 in decimal) is not an error. It means that .NET install is successful and needs machine restart to complete installation. \r<br />\n<br />\nYou can see .NET setup return codes @ <a href=\"http://msdn.microsoft.com/en-us/library/ee390831.aspx\" rel=\"nofollow\">http://msdn.microsoft.com/en-us/library/ee390831.aspx</a><br />\n",
+    "PostedDate": "2013-07-08T19:09:13.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:29:26.693-07:00"
+  },
+  {
+    "Id": "1072885",
+    "ThreadId": "448195",
+    "Html": "Note that you add the &quot;3010&quot; return code as a successful result within the &quot;Update Creation Wizard&quot; of the WSUS Package Publishers.\r<br />\n<br />\nAfter adding that return code, the WSUS clients will show a successful installation.<br />\n",
+    "PostedDate": "2013-07-25T10:05:04.72-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:29:29.267-07:00"
+  }
+]

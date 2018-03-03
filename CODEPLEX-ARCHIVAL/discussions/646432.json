@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1449188",
+    "ThreadId": "646432",
+    "Html": "We have Greenshot installed for our users as a replacement for the sniping tool, and it works very well.\r<br />\n<br />\nI'm having some trouble deploying an update, however. \r<br />\n<br />\nGreenshot is running in the test user profile and I can't seem to turn it off from the WPP package. I've tried with bundling or calling a simple powershell script from a custom update and it doesn't seem to do anything. If I run the script manually from the test user it shuts down like I expect.\r<br />\n<br />\n&quot;Get-Process Greenshot | Stop-Process -Force&quot;\r<br />\n<br />\nDoes anyone have any pointers?<br />\n",
+    "PostedDate": "2015-10-20T12:50:19.437-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1449749",
+    "ThreadId": "646432",
+    "Html": "Finally resorted to manually killing it\r<br />\n<br />\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;\r<br />\n&lt;PathToExecutable&gt;c:\\Windows\\System32\\taskkill.exe&lt;/PathToExecutable&gt;\r<br />\n&lt;Parameters&gt;/F /IM greenshot.exe /T&lt;/Parameters&gt;<br />\n",
+    "PostedDate": "2015-10-26T09:46:26.1-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1462872",
+    "ThreadId": "646432",
+    "Html": "I am having an issue getting this to work for me. \r<br />\n<br />\nLooks like I can get the taskkill to work but then my update fails after that.\r<br />\n<br />\nIt runs OK from a batch file in the following format.\r<br />\n<br />\n@echo off<br />\n<pre><code>echo Checking file existence on %computername%\n\nif exist &quot;C:\\Program Files\\Greenshot\\unins000.exe&quot; (\n echo File exist on %computername%\n\n\n echo Stopping greenshot.exe on computer %%i\n c:\\Windows\\System32\\taskkill.exe /F /IM greenshot.exe /T</code></pre>\n\nPause<br />\n<pre><code> echo Installing Greenshot on %computername%\n</code></pre>\n\n\\shared\\files\\Techdownload\\Greenshot\\Greenshot-INSTALLER-1.2.8.12-RELEASE.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-<br />\n<pre><code>) else (\n    echo File does NOT exist on %computername%\n\n)\n</code></pre>\n\n)\r<br />\nPause\r<br />\n<br />\nIn WPP I did custom update. I added two different &quot;Allow to execute a file&quot;.\r<br />\n<br />\nOne with what Bill_T had above which kills the running exe of greenshot:\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;\r<br />\n&lt;PathToExecutable&gt;c:\\Windows\\System32\\taskkill.exe&lt;/PathToExecutable&gt;\r<br />\n&lt;Parameters&gt;/F /IM greenshot.exe /T&lt;/Parameters&gt;\r<br />\n<br />\n<br />\nThe other to install the program: \r<br />\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt; \r<br />\n  &lt;PathToExecutable&gt;C:\\PackageContent\\Greenshot\\Greenshot-INSTALLER-1.2.8.12-RELEASE.exe&lt;/PathToExecutable&gt; \r<br />\n  &lt;Parameters&gt;/VERYSILENT /SUPPRESSMSGBOXES /NORESTART&lt;/Parameters&gt; \r<br />\n  &lt;KillProcess&gt;True&lt;/KillProcess&gt; \r<br />\n  &lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt; \r<br />\n<br />\nIn the &quot; if the update is already installed.&quot; I have it look for a registry key to see if current version already exists.\r<br />\n&lt;bar:RegSz Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Greenshot_is1&quot; Value=&quot;DisplayVersion&quot; Comparison=&quot;EqualTo&quot; Data=&quot;1.2.8.12&quot;/&gt;\r<br />\n<br />\nIn the &quot;Allow clients computer to determine if the update is installable.&quot;\r<br />\n<br />\nI have it make sure the machine is running windows 7 or Windows 8.1.\r<br />\n<br />\nWhat am I missing?<br />\n",
+    "PostedDate": "2016-02-11T09:07:14.707-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1462915",
+    "ThreadId": "646432",
+    "Html": "Also I can get it to install if greenshot isn't running doing a &quot;Create Update&quot;\r<br />\n<br />\nbasically using all same info as listed in previous post excluding the killtask part.\r<br />\n<br />\nThough after it installs I see two errors in the Application event viewer\r<br />\n1) .NET Runtime error, eventID: 1026\r<br />\n<br />\n2) Appilcation error - EventID: 1000 Faulting application path: C:\\Program Files\\Greenshot\\Greenshot.exe, Faulting module path: C:\\windows\\system32\\KERNALBASE.dll<br />\n",
+    "PostedDate": "2016-02-11T13:40:39.593-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

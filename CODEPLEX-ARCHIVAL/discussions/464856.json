@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1115026",
+    "ThreadId": "464856",
+    "Html": "So it seems that I can effectively push my content out to systems.  However, that is all.  They just sit there in the Windows Update space waiting to be manually installed and if you do that, you have to enter an admin account to install.  I'm trying to find a way to silently install the packages without the user needing to be an admin and without any user intervention.  Is this possible?<br />\n",
+    "PostedDate": "2013-10-31T07:19:35.877-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1115046",
+    "ThreadId": "464856",
+    "Html": "Actually you do not push ;) And installing is solely handled by the Windows Update Agent Settings (defined usually via GPO). So you have to check those Settings.\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-10-31T08:23:52.717-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1115054",
+    "ThreadId": "464856",
+    "Html": "All other Windows Updates install automatically when the user does a Shut Down.  Are you suggesting that there is a different set of policies to handle the installs coming from WPP?<br />\n",
+    "PostedDate": "2013-10-31T08:37:59.163-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1115081",
+    "ThreadId": "464856",
+    "Html": "No, there's no other set. So the question is, what updates are you deploying and whats logged in windowsupdate.log?\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-10-31T09:02:41.927-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1115160",
+    "ThreadId": "464856",
+    "Html": "\r\n<div dir=\"ltr\">Right now I am just trying to deploy Java Msi updates. I am seeing this error in the windowsupdate.log: WARNING: CSerializationHelper:: InitSerialize failed : 0x80070002</div>\r\n<div><br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-10-31T10:04:19.7-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1115287",
+    "ThreadId": "464856",
+    "Html": "Can you send me the C:\\Windows\\WindowsUpdate.log file at <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a><br />\n",
+    "PostedDate": "2013-10-31T12:23:23.347-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1117304",
+    "ThreadId": "464856",
+    "Html": "It's working now.<br />\n",
+    "PostedDate": "2013-11-04T10:10:50.77-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-11-04T10:11:02.423-08:00"
+  }
+]

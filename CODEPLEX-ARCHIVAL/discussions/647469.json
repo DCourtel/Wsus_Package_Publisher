@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1452119",
+    "ThreadId": "647469",
+    "Html": "I have set up wsus server with package publisher installed, I have got adobe reader and java updates assigned and approved and the wsus clients are still not seeing then available updates.\r<br />\n<br />\nI have put in the required certificate into a gpo to install on the client, not errors are reported. the software sees the clients ok, can do other admin tasks e.g reboot client, and view update status but is still refusing to have the updates acknowledge by the client desipate the published updating being in the UpdateServicesPackages folder on the wsus server.\r<br />\n<br />\nany help would be great.<br />\n",
+    "PostedDate": "2015-11-12T08:39:17.733-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452200",
+    "ThreadId": "647469",
+    "Html": "Pls read the documentation: <a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=663365\" rel=\"nofollow\">https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=663365</a>\r<br />\nDo you have publish the Update in WPP for the right group? Whiich rules you are using?<br />\n",
+    "PostedDate": "2015-11-12T23:03:05.76-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452214",
+    "ThreadId": "647469",
+    "Html": "i have now found the catalogue option for adobe reader and standard updates are now working, just java now not working and I am not able to find the catalogue to do this. I also need to find catalogues for Java and shockwave and air.<br />\n",
+    "PostedDate": "2015-11-13T01:46:21.907-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452228",
+    "ThreadId": "647469",
+    "Html": "There are no catalogs for Java or other.\r<br />\n<br />\nWhat is not working with Java Updates?<br />\n",
+    "PostedDate": "2015-11-13T03:27:47.4-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452235",
+    "ThreadId": "647469",
+    "Html": "the client is not seeing the updates that I create that are not catalogs, even though I have followed the documentation here., doesn't matter if .msi or msp. Just says windows is up to date.<br />\n",
+    "PostedDate": "2015-11-13T05:10:27.197-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452238",
+    "ThreadId": "647469",
+    "Html": "OK, once again: Which rules you are using? Do you have publish the Update in WPP for the right Group in WSUS?<br />\n",
+    "PostedDate": "2015-11-13T05:21:01.66-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452240",
+    "ThreadId": "647469",
+    "Html": "Go it working now, I needed to extracted the msi from the execuable I downloaded. I just need to customise it to remove the old version and turn off autoupdate.  Tested with other programs I had issues with and this is now working too, as rules were not being configured at all in the wizard until I extracted them.<br />\n",
+    "PostedDate": "2015-11-13T05:53:55.85-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

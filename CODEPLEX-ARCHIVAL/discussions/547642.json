@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1253237",
+    "ThreadId": "547642",
+    "Html": "I have prepared my local environment with below details:\r<br />\nOS : Windows Server 2008 R2\r<br />\nWSUS : 3.2.7600.xxx\r<br />\nWsusPackagePublisher_Release v1.3.1405.17\r<br />\n<br />\nI followed &quot;Installation Guide&quot; for setup bundled with WPP.\r<br />\nI have both WSUS and WPP on same machine. I created certificated using WPP and similar certs are visible under mmc's:<br />\n<pre><code>  * (Local Computer)\\Wsus certificate folder.\n  * (Local Computer)\\Trusted Publisher.\n  * (Local Computer)\\Trusted Root Certification Authority.</code></pre>\n\nalso enabled check box for &quot;Ignore Code-Signing Certification validation errors&quot; under WPP's Settings.\r<br />\n<br />\nAfter certificate creation I restarted machine and then tried to import catalog file for Adobe reader 10, 11 &amp; mozilla as well but it says that &quot;Verification of file signature failed for file&quot;.\r<br />\nKB2661254 is also not installed on WSUS server machine.\r<br />\n<br />\nI also revised steps mentioned in one post as below:\r<br />\n_Open mmc =&gt; certificate =&gt; local computer.\r<br />\ndelete &quot;WSUS Publishers Self-signed&quot; certificate from &quot;Wsus&quot; store, &quot;Trusted Root Authorithies&quot; store and &quot;Trusted Publisher&quot; store. Reboot your server.\r<br />\nLaunch WPP and generate a new self-signed certificate. Import it in &quot;Trusted Root Authorithies&quot; store and &quot;Trusted Publisher&quot; store. Reboot server.\r<br />\nTry to publish a new update._\r<br />\n<br />\nbut issue not resolved.\r<br />\none thing more, under WPP &quot;Open Catalog&quot; button is not unable even after browsing catalog file.\r<br />\nPlease let me know what can be issue here.\r<br />\nThanks in advance.<br />\n",
+    "PostedDate": "2014-06-05T04:07:26.973-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1253430",
+    "ThreadId": "547642",
+    "Html": "<strong>neerajy wrote:</strong><br />\n<blockquote>\nI have prepared my local environment with below details:<br />\nOS : Windows Server 2008 R2<br />\nWSUS : 3.2.7600.xxx<br />\n</blockquote>\nFirst, what exact version is your WSUS?\r<br />\nHere you can find the place where you have to look: <a href=\"http://www.wsus.de/images/wsus-version.png\" rel=\"nofollow\">http://www.wsus.de/images/wsus-version.png</a>\r<br />\nIf the version is lower then .262 pls install the updates for coming up to version .262.\r<br />\n<br />\nWSUS 3.0 (SP2) + KB2720211: \tBuild 3.2.7600.251\r<br />\nWSUS 3.0 (SP2) + KB2734608: \tBuild 3.2.7600.256\r<br />\nWSUS 3.0 (SP2) + KB2828185: \tBuild 3.2.7600.262\r<br />\n<br />\nAfter this you have to create a new certificate in WPP and then try it again.<br />\n",
+    "PostedDate": "2014-06-05T12:03:19.793-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1253454",
+    "ThreadId": "547642",
+    "Html": "Hi, \r<br />\nIn WPP, go to 'Help' -&gt; 'About'\r<br />\nLook at the certificate status and Key Length\r<br />\n<br />\nWhat is your exact Wsus Version ?\r<br />\n<br />\nThe button 'Open Catalog' is enable if : The textbox 'FilePath' is filled with the full path to a .xml or .cab \r<br />\nIf you click on the 'Browse' button and then point to a .xml or .cab file, this file is automatically opened. You don't have to click on the 'Open catalog'.<br />\n",
+    "PostedDate": "2014-06-05T12:41:03.913-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1253627",
+    "ThreadId": "547642",
+    "Html": "Thanks for sharing details.\r<br />\nI have installed &quot;WSUS 3.0 (SP2) + KB2828185: Build 3.2.7600.262&quot; and created new certificates.\r<br />\nNow I am able to publish catalog file to WSUS also. (Earlier cert Key length was 512, now its 2048.)\r<br />\n<br />\nI have below queries, please let me know if these are due to some configuration issue:\r<br />\n1.) now 'Updates' node (under WPP) doesn't has entries of published catalog, it cleans when I go for connect/reload option.\r<br />\n2.) after browsing catalog file under WPP, it fills full path under text-box, list down available updates under catalog but 'Open Catalog' button is still not enabled. I know it's not imp but I am sharing my inputs when I followed steps in &quot;Importing Updates from Vendor's Catalog&quot;.<br />\n",
+    "PostedDate": "2014-06-06T01:56:09.05-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1253903",
+    "ThreadId": "547642",
+    "Html": "<blockquote>\n1.) now 'Updates' node (under WPP) doesn't has entries of published catalog, it cleans when I go for connect/reload option.<br />\n</blockquote>\nYou need to create updates to see them Under this node. Please, read the documentation to learn how to create an update.<br />\n<blockquote>\n2.) after browsing catalog file under WPP, it fills full path under text-box, list down available updates under catalog but 'Open Catalog' button is still not enabled.<br />\n</blockquote>\nAs I said in my previous post, you don't have to click on &quot;Open Catalog&quot; button when you browse to a .xml or a .cab file. WPP open automatically the file. The button &quot;Open Catalog&quot; become available only if you manually change the full path to the file and if the file really exist and is a .xml or a .cab<br />\n",
+    "PostedDate": "2014-06-06T14:58:14.95-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-14T13:33:27.223-07:00"
+  }
+]

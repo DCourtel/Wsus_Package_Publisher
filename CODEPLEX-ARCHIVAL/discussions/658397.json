@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1485042",
+    "ThreadId": "658397",
+    "Html": "Yes, I have a replica server in my WSUS setup and I can approve updates using the upstream server, but when accessing the same updates using the downstream replica the URL is highlighted red.<br />\nAnd the path also does not exist on the replica server, even though the update will show as approved. Wondering what could be causing that.<br />\nI am using SSL as well for both servers.<br />\n",
+    "PostedDate": "2016-09-30T12:31:41.227-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1485647",
+    "ThreadId": "658397",
+    "Html": "I wound up fixing this by dragging the .cab file to the correct directory in the wsus content folder. Kind of a pain, but it works after sync's and things of that nature.<br />\n",
+    "PostedDate": "2016-10-09T09:17:11.803-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

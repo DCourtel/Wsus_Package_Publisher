@@ -1,0 +1,138 @@
+[
+  {
+    "Id": "1085459",
+    "ThreadId": "454675",
+    "Html": "Hi Guys,\r<br />\ni want to copy the file saplogon.ini to the C:\\windows. I write one line for powershell and save it to copyinit.ps1:<br />\n<pre><code>Copy-Item &quot;saplogon.ini&quot; &quot;$env:windir&quot; -Recurse</code></pre>\n\nWindows update process show's me that alle update installed successfully. but i can't found the saplogon.ini in %windir%.\r<br />\n<br />\ni created a customer update and a the powershell task and return code static &quot;0&quot;.\r<br />\nIn the rule set i check only if the file exist with a special modified date - not more.\r<br />\n<br />\nIs something special with customer updates?\r<br />\n<br />\nRegards,\r<br />\nDaniel<br />\n",
+    "PostedDate": "2013-08-27T09:17:06.59-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1085491",
+    "ThreadId": "454675",
+    "Html": "Hi Daniel,<br />\n<blockquote>\ni created a customer update and a the powershell task and return code static &quot;0&quot;. <br />\n</blockquote>\nIf you return a static code, this mean that the CustomUpdate Engine will always return this code. '0' mean that  all is fine. You should set the 'Script-Item' to store the return code into a variable and return this variable at the end of the custom update.\r<br />\n<br />\n<img src=\"http://i.imgur.com/2P4Kkj7.png\" alt=\"Return Code\" />\r<br />\n<br />\nIn your ps1 script, you have to manage the return code or it will always return '0'.<br />\n<blockquote>\nbut i can't found the saplogon.ini in %windir%.<br />\n</blockquote>\nMany things can explain this :<br />\n<ul>\n<li>You may have forgot to add the 'SapLogon.ini' file to the additional file when you create the update :\r<br />\n<img src=\"http://i.imgur.com/pjLHkWA.png\" alt=\"Additionnal File\" /></li>\n<li>Computers may not be allowed to execute Powershell Script. See <a href=\"http://technet.microsoft.com/en-us/library/ee176961.aspx\" rel=\"nofollow\">Set-ExecutionPolicy</a></li>\n<li>The Powershell script may not be able to translate the environement variable that you are using &quot;$env:windir&quot;. If you don't have check the option &quot;Can request user input&quot;, the update is deploy with the 'System' Account, so environnement variable have no meaning. Try to check this option.</li>\n</ul>\n",
+    "PostedDate": "2013-08-27T11:37:58.193-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1085510",
+    "ThreadId": "454675",
+    "Html": "Your first screenshot is a different to me:<br />\n<a href=\"https://ajax.wurzach-it.de/data/public/545c61\" rel=\"nofollow\">https://ajax.wurzach-it.de/data/public/545c61</a><br />\n<blockquote>\nYou may have forgot to add the 'SapLogon.ini' file to the additional file when you create the update<br />\n</blockquote>\nFile is added. i controlled it on the share.<br />\n<blockquote>\nComputers may not be allowed to execute Powershell Script. See Set-ExecutionPolicy<br />\n</blockquote>\nActivated via GPO. <br />\n<blockquote>\nThe Powershell script may not be able to translate the environement variable that you are using &quot;$env:windir&quot;. <br />\n</blockquote>\nManully the script work on the vm.<br />\n<blockquote>\nIf you don't have check the option &quot;Can request user input&quot;, the update is deploy with the 'System' Account, so environnement variable have no meaning. Try to check this option.<br />\n</blockquote>\nSee: <a href=\"https://ajax.wurzach-it.de/data/public/1c48a2\" rel=\"nofollow\">https://ajax.wurzach-it.de/data/public/1c48a2</a><br />\n<h3></h3>\nA other question: can i use env variables direct in WPP?<br />\n",
+    "PostedDate": "2013-08-27T12:26:58.747-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1085644",
+    "ThreadId": "454675",
+    "Html": "Look at %temp%\\CustomUpdateEngine.log to see if there is anything interesting.<br />\n",
+    "PostedDate": "2013-08-27T22:32:52.047-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1085650",
+    "ThreadId": "454675",
+    "Html": "<pre><code>08.2013 21:22:40    Starting CustomUpdateEngine with ActionFile : 429548fb-6f72-40e6-b58e-c89d39d0f25d.xml\n27.08.2013 21:22:40 Starting parsing ActionFile.\n27.08.2013 21:22:40 Get Element from : &lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.VariableElement&lt;/ElementType&gt;\n&lt;Name&gt;Return Code&lt;/Name&gt;\n&lt;Type&gt;Int&lt;/Type&gt;\n&lt;ID&gt;3031d108-d3d6-4dd8-8a42-d0f9c6000f5a&lt;/ID&gt;\n&lt;/Action&gt;\n27.08.2013 21:22:40 Get VariableElement from : &lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.VariableElement&lt;/ElementType&gt;\n&lt;Name&gt;Return Code&lt;/Name&gt;\n&lt;Type&gt;Int&lt;/Type&gt;\n&lt;ID&gt;3031d108-d3d6-4dd8-8a42-d0f9c6000f5a&lt;/ID&gt;\n&lt;/Action&gt;\n27.08.2013 21:22:40 Get Element from : &lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.ScriptElement&lt;/ElementType&gt;\n&lt;ScriptType&gt;Powershell&lt;/ScriptType&gt;\n&lt;Filename&gt;copyini.ps1&lt;/Filename&gt;\n&lt;Arguments&gt;&lt;/Arguments&gt;\n&lt;/Action&gt;\n27.08.2013 21:22:40 Get ScriptElement from : &lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.ScriptElement&lt;/ElementType&gt;\n&lt;ScriptType&gt;Powershell&lt;/ScriptType&gt;\n&lt;Filename&gt;copyini.ps1&lt;/Filename&gt;\n&lt;Arguments&gt;&lt;/Arguments&gt;\n&lt;/Action&gt;\n27.08.2013 21:22:40 End of Initializing of ScriptElement.\n27.08.2013 21:22:40 Get Element from : &lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.ReturnCodeElement&lt;/ElementType&gt;\n&lt;ReturnCodeMethod&gt;Variable&lt;/ReturnCodeMethod&gt;\n&lt;StaticReturnCode&gt;0&lt;/StaticReturnCode&gt;\n&lt;Variable&gt;3031d108-d3d6-4dd8-8a42-d0f9c6000f5a&lt;/Variable&gt;\n&lt;/Action&gt;\n27.08.2013 21:22:40 Initializing ReturnCodeElement with : &lt;Action&gt;\n&lt;ElementType&gt;CustomUpdateElements.ReturnCodeElement&lt;/ElementType&gt;\n&lt;ReturnCodeMethod&gt;Variable&lt;/ReturnCodeMethod&gt;\n&lt;StaticReturnCode&gt;0&lt;/StaticReturnCode&gt;\n&lt;Variable&gt;3031d108-d3d6-4dd8-8a42-d0f9c6000f5a&lt;/Variable&gt;\n&lt;/Action&gt;\n27.08.2013 21:22:40 Running 2 Elements.\n27.08.2013 21:22:40 Running CustomUpdateEngine.ScriptElement\n27.08.2013 21:22:40 Running ScriptElement.\n27.08.2013 21:22:40 Will run Powershell.exe with arguments : Powershell.exe &quot;copyini.ps1&quot; \n27.08.2013 21:22:40 Script launched.\n27.08.2013 21:22:40 End of ScriptElement.\n27.08.2013 21:22:40 Running CustomUpdateEngine.ReturnCodeElement\n27.08.2013 21:22:40 Return Code Method is : Variable\n27.08.2013 21:22:40 Returning :  0</code></pre>\n\nI see no interesting message. You?<br />\n",
+    "PostedDate": "2013-08-27T22:56:39.96-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1085690",
+    "ThreadId": "454675",
+    "Html": "No, nothing abnormal in the log. But, unfortunately, your Powershell script don't managed errors. you should add a try/catch block to catch possible errors.\r<br />\n<a href=\"http://blogs.technet.com/b/heyscriptingguy/archive/2010/03/11/hey-scripting-guy-march-11-2010.aspx\" rel=\"nofollow\">Try/catch Bloc</a>\r<br />\n<br />\nand manage errors in your script :\r<br />\n<a href=\"http://rkeithhill.wordpress.com/2009/08/03/effective-powershell-item-16-dealing-with-errors/\" rel=\"nofollow\">Dealing with Errors</a><br />\n",
+    "PostedDate": "2013-08-28T01:29:50.39-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1086245",
+    "ThreadId": "454675",
+    "Html": "Hi DCourtel,\r<br />\ni do a other test. I copy manually the saplogon.ini in C:\\Windows\\saplogon.ini. \r<br />\n<a href=\"https://ajax.wurzach-it.de/data/public/a87b08\" rel=\"nofollow\">https://ajax.wurzach-it.de/data/public/a87b08</a>\r<br />\n<a href=\"https://ajax.wurzach-it.de/data/public/bcefda\" rel=\"nofollow\">https://ajax.wurzach-it.de/data/public/bcefda</a>\r<br />\n<br />\nThan i go to wpp and create follow rule to check if the file with the specific modified date exist.\r<br />\n<a href=\"https://ajax.wurzach-it.de/data/public/b79d9c\" rel=\"nofollow\">https://ajax.wurzach-it.de/data/public/b79d9c</a>\r<br />\n<br />\nI published the package with this rule and starts on my testclient a windows update. although the saplogon.ini exist in the windows dir, windows update show's me the package as update. What am I doing wrong?<br />\n",
+    "PostedDate": "2013-08-29T09:06:53.543-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1086256",
+    "ThreadId": "454675",
+    "Html": "\r\n<div>\r\n<p><span lang=\"EN-GB\">This may be related with UTC time. Try to revise the rule, and convert 13h27:20 into UTC time.</span></p>\r\n</div>\r\n",
+    "PostedDate": "2013-08-29T09:27:53.767-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1086263",
+    "ThreadId": "454675",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nThis may be related with UTC time. Try to revise the rule, and convert 13h27:20 into UTC time.<br />\n</blockquote>\nIt's possible, that the next release of wpp use the time zone auf the server/pc?!<br />\n",
+    "PostedDate": "2013-08-29T09:44:14.573-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1086612",
+    "ThreadId": "454675",
+    "Html": "So i modified the script:<br />\n<pre><code>Copy-Item &quot;saplogon.ini&quot; &quot;c:\\windows&quot; -Recurse -PassThru -ErrorVariable +errors -ErrorAction SilentlyContinue | Out-File &quot;c:\\temp\\log.txt&quot; -append\n$errors | Out-File -FilePath &quot;c:\\temp\\log.txt&quot; -append</code></pre>\n\nThe setup runs but no logfile was be created. So what goes wrong mit dem script?!<br />\n<br />\nWindows update log:<br />\n<pre><code>2013-08-30  15:10:31:678     304    888 Agent     * Added update {3577EAB3-751B-4FD3-AA17-FE84390F6092}.1 to search result\n2013-08-30  15:10:31:678     304    888 Agent     * Found 1 updates and 119 categories in search; evaluated appl. rules of 603 out of 1076 deployed entities\n2013-08-30  15:10:31:678     304    888 Agent   *********\n2013-08-30  15:10:31:678     304    888 Agent   **  END  **  Agent: Finding updates [CallerId = AutomaticUpdates]\n2013-08-30  15:10:31:678     304    888 Agent   *************\n2013-08-30  15:10:31:689     304    888 Report  REPORT EVENT: {F88C7E03-E9A7-45CF-AC10-00D84735D67E}    2013-08-30 15:10:25:264+0200    1   183 101 {3577EAB3-751B-4FD3-AA17-FE84390F6092}  1   0   AutomaticUpdates    Success Content Install Installation Successful: Windows successfully installed the following update: test2\n2013-08-30  15:10:31:689     304    888 Report  CWERReporter finishing event handling. (00000000)\n2013-08-30  15:10:31:689     304    d68 AU  &gt;&gt;##  RESUMED  ## AU: Search for updates [CallId = {E214BE18-1AF3-41DD-8191-6C0C73362533}]\n2013-08-30  15:10:31:689     304    d68 AU    # 1 updates detected\n2013-08-30  15:10:31:690     304    d68 AU  #########\n2013-08-30  15:10:31:690     304    d68 AU  ##  END  ##  AU: Search for updates [CallId = {E214BE18-1AF3-41DD-8191-6C0C73362533}]\n2013-08-30  15:10:31:690     304    d68 AU  #############\n2013-08-30  15:10:31:690     304    d68 AU  Featured notifications is disabled.\n2013-08-30  15:10:31:690     304    d68 AU  Setting AU scheduled install time to 2013-08-31 00:00:00\n2013-08-30  15:10:31:690     304    d68 AU  Successfully wrote event for AU health state:0\n2013-08-30  15:10:31:690     304    d68 AU  Auto-approving update for download, updateId = {3577EAB3-751B-4FD3-AA17-FE84390F6092}.1, ForUx=0, IsOwnerUx=0, HasDeadline=0, IsMinor=0\n2013-08-30  15:10:31:690     304    d68 AU  Auto-approved 1 update(s) for download (NOT for Ux)\n2013-08-30  15:10:31:690     304    d68 AU  #############\n2013-08-30  15:10:31:690     304    d68 AU  ## START ##  AU: Download updates\n2013-08-30  15:10:31:690     304    d68 AU  #########\n2013-08-30  15:10:31:690     304    d68 AU    # Approved updates = 1\n2013-08-30  15:10:31:693     304    d68 AU  AU initiated download, updateId = {3577EAB3-751B-4FD3-AA17-FE84390F6092}.1, callId = {B17D1105-4A4B-4B5D-9376-AF4AB24AF028}\n2013-08-30  15:10:31:693     304    d68 AU  Setting AU scheduled install time to 2013-08-31 00:00:00\n2013-08-30  15:10:31:693     304    d68 AU  Successfully wrote event for AU health state:0\n2013-08-30  15:10:31:693     304    d68 AU  AU setting pending client directive to 'Download Progress'\n2013-08-30  15:10:31:693     304    d68 AU  Changing existing AU client directive from 'Install Complete Ux' to 'Download Progress', session id = 0x3\n2013-08-30  15:10:31:697     304    d68 AU  Successfully wrote event for AU health state:0\n2013-08-30  15:10:31:697     304    d68 AU    # Pending download calls = 1\n2013-08-30  15:10:31:697     304    d68 AU  &lt;&lt;## SUBMITTED ## AU: Download updates\n2013-08-30  15:10:31:699     304    d68 AU  Successfully wrote event for AU health state:0\n2013-08-30  15:10:31:700     304    888 DnldMgr *************\n2013-08-30  15:10:31:700     304    888 DnldMgr ** START **  DnldMgr: Downloading updates [CallerId = AutomaticUpdates]\n2013-08-30  15:10:31:700     304    888 DnldMgr *********\n2013-08-30  15:10:31:700     304    888 DnldMgr   * Call ID = {B17D1105-4A4B-4B5D-9376-AF4AB24AF028}\n2013-08-30  15:10:31:700     304    888 DnldMgr   * Priority = 2, Interactive = 0, Owner is system = 1, Explicit proxy = 0, Proxy session id = -1, ServiceId = {3DA21691-E39D-4DA6-8A4B-B43877BCB1B7}\n2013-08-30  15:10:31:700     304    888 DnldMgr   * Updates to download = 1\n2013-08-30  15:10:31:700     304    888 Agent     *   Title = test2\n2013-08-30  15:10:31:700     304    888 Agent     *   UpdateId = {3577EAB3-751B-4FD3-AA17-FE84390F6092}.1\n2013-08-30  15:10:31:700    3484    1320    CltUI   AU client got new directive = 'Download Progress', serviceId = {3DA21691-E39D-4DA6-8A4B-B43877BCB1B7}, return = 0\n2013-08-30  15:10:31:715     304    888 DnldMgr ***********  DnldMgr: New download job [UpdateId = {3577EAB3-751B-4FD3-AA17-FE84390F6092}.1]  ***********\n2013-08-30  15:10:31:716     304    888 DnldMgr   * All files for update were already downloaded and are valid.\n2013-08-30  15:10:31:721     304    888 Agent   *********\n2013-08-30  15:10:31:721     304    888 Agent   **  END  **  Agent: Downloading updates [CallerId = AutomaticUpdates]\n2013-08-30  15:10:31:721     304    888 Agent   *************\n2013-08-30  15:10:31:721     304    d68 AU  &gt;&gt;##  RESUMED  ## AU: Download update [UpdateId = {3577EAB3-751B-4FD3-AA17-FE84390F6092}, succeeded]\n2013-08-30  15:10:31:721     304    d68 AU  #########\n2013-08-30  15:10:31:721     304    d68 AU  ##  END  ##  AU: Download updates\n2013-08-30  15:10:31:721     304    d68 AU  #############\n2013-08-30  15:10:31:722     304    d68 AU  Setting AU scheduled install time to 2013-08-31 00:00:00\n2013-08-30  15:10:31:722     304    d68 AU  Successfully wrote event for AU health state:0\n2013-08-30  15:10:31:722     304    d68 AU  AU setting pending client directive to 'Install Approval'\n2013-08-30  15:10:31:722     304    d68 AU  Changing existing AU client directive from 'Download Progress' to 'Install Approval', session id = 0x3\n2013-08-30  15:10:31:724     304    d68 AU  Successfully wrote event for AU health state:0\n2013-08-30  15:10:31:726    3484    1320    CltUI   AU client got new directive = 'Install Approval', serviceId = {3DA21691-E39D-4DA6-8A4B-B43877BCB1B7}, return = 0\n2013-08-30  15:10:31:766     304    850 AU  Getting featured update notifications.  fIncludeDismissed = true\n2013-08-30  15:10:31:766     304    850 AU  No featured updates available.\n2013-08-30  15:10:31:772     304    850 AU  Getting featured update notifications.  fIncludeDismissed = true\n2013-08-30  15:10:31:772     304    850 AU  No featured updates available.\n2013-08-30  15:10:31:778     304    850 AU  Getting featured update notifications.  fIncludeDismissed = true\n2013-08-30  15:10:31:778     304    850 AU  No featured updates available.\n2013-08-30  15:10:36:689     304    888 Report  REPORT EVENT: {A357F897-5DAB-4E1B-B883-A1933F370965}    2013-08-30 15:10:31:722+0200    1   188 102 {00000000-0000-0000-0000-000000000000}  0   0   AutomaticUpdates    Success Content Install Installation Ready: The following updates are downloaded and ready for installation. This computer is currently scheduled to install these updates on ‎Samstag, ‎31. ‎August ‎2013 at 02:00:  - test2\n2013-08-30  15:10:36:689     304    888 Report  CWERReporter finishing event handling. (00000000)</code></pre>\n\n",
+    "PostedDate": "2013-08-30T06:11:48.903-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1086679",
+    "ThreadId": "454675",
+    "Html": "<blockquote>\nThe setup runs but no logfile was be created. So what goes wrong mit dem script?!<br />\n</blockquote>\nYou will certainly find more help on a Powershell forum.\r<br />\n<br />\n<a href=\"http://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=winserverpowershell\" rel=\"nofollow\">Forum Powershell Technet</a><br />\n",
+    "PostedDate": "2013-08-30T07:56:01.103-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1086682",
+    "ThreadId": "454675",
+    "Html": "Manually the script work's perfect. Only in wpp it don't work. \r<br />\nHave anyone managed that a script (powershell, batch, vbscript) runs with wpp successfully?<br />\n",
+    "PostedDate": "2013-08-30T08:02:06.47-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1086700",
+    "ThreadId": "454675",
+    "Html": "I'm using vbscipt.<br />\n",
+    "PostedDate": "2013-08-30T08:30:39.783-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1086732",
+    "ThreadId": "454675",
+    "Html": "Can you post a example script, please? vbscript isn't my language.<br />\n",
+    "PostedDate": "2013-08-30T09:44:07.36-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1086772",
+    "ThreadId": "454675",
+    "Html": "This is a VbScript to copy a file to C:\\Windows\\<br />\n<pre><code>On Error Resume next\nDim fso\nSet fso = WScript.CreateObject(&quot;Scripting.Filesystemobject&quot;)\n\nErr = 0\nCall fso.CopyFile(&quot;saplogon.ini&quot;, &quot;c:\\windows\\saplogon.ini&quot;, True)\n\nWScript.Quit(Err)</code></pre>\n\nAnd this is the CustomeUpdate you should make : (in this example, the VbScript is named CopyFile.vbs)\r<br />\n<br />\n<img src=\"http://i.imgur.com/VcI1aiX.png\" alt=\"CustomUpdate CopyFile\" />\r<br />\n<br />\nDo not forget to add the VbScript and the SapLogon.ini as additionnal files :\r<br />\n<br />\n<img src=\"http://i.imgur.com/RU3wGQt.png\" alt=\"Additionnal Files\" />\r<br />\n<br />\nIf you don't have the return code feature in the ScriptElement, send me a mail to <a href=\"mailto:package.publisher@free.fr,\" rel=\"nofollow\">package.publisher@free.fr,</a> I will send you the latest compiled release with this feature.<br />\n",
+    "PostedDate": "2013-08-30T11:43:28.123-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:14:00.267-07:00"
+  },
+  {
+    "Id": "1086900",
+    "ThreadId": "454675",
+    "Html": "Hi!\r<br />\nThank you ver much for the beta verrsion and this short how to. Now it work's successfully.<br />\n",
+    "PostedDate": "2013-08-31T06:31:48.143-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1087836",
+    "ThreadId": "454675",
+    "Html": "\r\n<div>\r\n<p><i><span lang=\"EN-GB\" style=\"font-size:9.0pt; font-family:\">“It's possible, that the next release of wpp use the time zone auf the server/pc?! “ :\r\n</span></i><span lang=\"EN-GB\" style=\"font-size:9.0pt; font-family:\">The V1.3.1309.01 do so.</span></p>\r\n<p><span lang=\"EN-GB\" style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<p><span lang=\"EN-GB\" style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<p><b><span lang=\"EN-GB\" style=\"font-size:11.0pt; font-family:\">David COURTEL</span></b></p>\r\n<p><span lang=\"EN-GB\" style=\"font-size:10.0pt; font-family:\">IT Technician</span></p>\r\n<p><span lang=\"EN-GB\" style=\"font-size:10.0pt; font-family:\"></span></p>\r\n<p><span style=\"font-size:11.0pt; font-family:\"><img width=\"64\" height=\"64\" id=\"Image_x0020_1\" src=\"cid:image001.jpg@01CEA8E0.1153D350\" alt=\"Logo Wsus Package Publisher 64x64\"></span><span style=\"font-size:10.0pt; font-family:\"><a href=\"https://wsuspackagepublisher.codeplex.com/\"><span lang=\"EN-GB\" style=\"color:blue\">Wsus\r\n Package Publisher</span></a></span><span lang=\"EN-GB\" style=\"font-size:10.0pt; font-family:\"></span></p>\r\n</div>\r\n<p><span lang=\"EN-GB\" style=\"font-size:11.0pt; font-family:\"></span></p>\r\n<div>\r\n<div style=\"border:none; border-top:solid #B5C4DF 1.0pt; padding:3.0pt 0cm 0cm 0cm\">\r\n<p><b><span style=\"font-size:10.0pt; font-family:\">De :</span></b><span style=\"font-size:10.0pt; font-family:\"> badwurzach [email removed]\r\n<br>\r\n<b>Envoyé :</b> jeudi 29 août 2013 18:44<br>\r\n<b>À :</b> [email removed]<br>\r\n<b>Objet :</b> Re: Copy a file to windows dir [WsusPackagePublisher:454675]</span></p>\r\n</div>\r\n</div>\r\n<p></p>\r\n<p><span style=\"font-size:9.0pt; font-family:\">From: badwurzach</span></p>\r\n<div id=\"ThreadNotificationPostBody\" style=\"margin-bottom:24.0pt\">\r\n<p><strong><span style=\"font-size:9.0pt; font-family:\">DCourtel wrote:</span></strong><span style=\"font-size:9.0pt; font-family:\"></span></p>\r\n<p><span style=\"font-size:9.0pt; font-family:\">This may be related with UTC time. Try to revise the rule, and convert 13h27:20 into UTC time.<br>\r\nIt's possible, that the next release of wpp use the time zone auf the server/pc?!</span></p>\r\n</div>\r\n</div>\r\n",
+    "PostedDate": "2013-09-03T10:59:25.667-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

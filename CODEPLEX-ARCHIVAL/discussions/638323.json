@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1426391",
+    "ThreadId": "638323",
+    "Html": "Hi,<br />\n<br />\nI want to deploy Flash Player 17.0.0.188.<br />\nI have downloaded the MSI package here : <a href=\"https://www.adobe.com/fr/products/flashplayer/distribution3.html\" rel=\"nofollow\">https://www.adobe.com/fr/products/flashplayer/distribution3.html</a>.<br />\n<br />\nIn WPP, I select Updates/Create update. I browse to the MSI, then next. According to the documentation <a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=663365\" rel=\"nofollow\">https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=663365</a>, the field &quot;Product Name&quot; should be automatically filled but it's not the case. Does this &quot;howto&quot; apply only to Flash Player V 11.x.x.x?<br />\n<br />\nThank you,<br />\n<br />\nChris<br />\n",
+    "PostedDate": "2015-05-19T07:49:40.53-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1426517",
+    "ThreadId": "638323",
+    "Html": "Yes and no.\r<br />\nIf it is your first Adobe Flash update, then the field is empty. so you can give a own name.  If you use the adabe catalog import, the product name is &quot; Adobe Flash Player&quot;, so it is the best name ever :-)\r<br />\nIf you have to create following updates in the next months, the field is filled, or you can select a name from drop down list.\r<br />\nThe howto is also ok for actual AFPs.<br />\n",
+    "PostedDate": "2015-05-20T01:45:11.277-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-05-20T03:13:16.44-07:00"
+  },
+  {
+    "Id": "1431788",
+    "ThreadId": "638323",
+    "Html": "Hi Chris,\r<br />\n<br />\n Are you able to published?\r<br />\n<br />\nAs<br />\n",
+    "PostedDate": "2015-06-24T20:43:40.157-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1431803",
+    "ThreadId": "638323",
+    "Html": "Hi,\r<br />\n<br />\nYes I am.\r<br />\n<br />\nChris<br />\n",
+    "PostedDate": "2015-06-25T01:57:02.363-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

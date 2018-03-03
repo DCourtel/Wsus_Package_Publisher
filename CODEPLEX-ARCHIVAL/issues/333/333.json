@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Be aware of the Windows update agent is TOTALLY BROKEN in Windows 10 when it is set to check against a Wsus Server !!!!. Update Windows 10 to, at least, build 576.",
+    "ClosedDate": "2017-01-27T23:16:48.2-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I'm trying to update a client PC (Windows 10) through our 2012R2 WSUS server and I keep getting this error when trying to install a non-microsoft software using WSUS Local Publisher. \r\n\r\nJava installs but technesis doesn't.\r\n\r\nAnyone got any suggestions?  Client PC is Windows 10.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-03-23T10:09:58.837-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Win 10 Update - Error 0x8024000b",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 333
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1558032,
+      "FileName": "Update Error.jpg",
+      "DownloadUrl": ".\\1558032"
+    }
+  ],
+  "Comments": []
+}

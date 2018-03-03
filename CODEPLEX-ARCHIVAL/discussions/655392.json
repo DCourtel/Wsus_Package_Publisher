@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1475647",
+    "ThreadId": "655392",
+    "Html": "I deployed (using the &quot;Create an update&quot; option) Java using exe with command switches instead of msi files.\r<br />\n<br />\nAfter deployed, it cannot be installed. Checked event viewer that the installation require administrator login to run.<br />\n",
+    "PostedDate": "2016-06-10T02:12:45.697-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

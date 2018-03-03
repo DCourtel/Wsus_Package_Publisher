@@ -1,0 +1,86 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-01-27T23:21:23.923-08:00",
+    "CommentCount": 8,
+    "Custom": null,
+    "Description": "Hi all, \r\n\r\nI have the same situation as Christoph in [http://wsuspackagepublisher.codeplex.com/workitem/315](http://wsuspackagepublisher.codeplex.com/workitem/315).\r\n\r\nWhy the WSUS (2008r2) doesn't get the necessary patches automatically?\r\n\r\nOK, I installed the 3 patches manually and restart the server, so WSUS is now on .274.\r\n\r\nI renamed the %windir%\\SoftwareDistribution folder on my two Win10-Clients + restart.\r\n\r\nBut the Win10-Clients still can't update Adobe Reader DC Updates from the catalog, which works fine on Win7 and Server 2008r2.\r\n\r\nAny idea?\r\n\r\nbest regards",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-03-16T05:16:59.163-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "WPP does not work for Win 10",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 332
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1556857,
+      "FileName": "udpate-setting.PNG",
+      "DownloadUrl": ".\\1556857"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "This patches are Hotfixes, no Server or Client get a Hotfix automatically. A Hotfix must download and install allways manually.\n\nYou have to redeploy Adobe Reader DC Updates, after this run Windows Update on your W10 Client, search for new Updates and try again.\n\n",
+      "PostedDate": "2016-03-16T05:35:07.89-07:00",
+      "Id": 197945
+    },
+    {
+      "Message": "ok, how can I redeploy Adobe Reader DC Updates?\nthe update 15.010.20060 is already in WSUS, so I can't deploy this update twice or is there a trick?\n",
+      "PostedDate": "2016-03-16T07:15:27.62-07:00",
+      "Id": 197949
+    },
+    {
+      "Message": "Edit the Update in WPP and got through with ENTER, ENTER, ready.\n\nOn the client you should delete %windir%\\SoftwareDistribution and run windows update again. New search, try to install now. If this is not working, create a new update for Reader.",
+      "PostedDate": "2016-03-16T08:38:58.28-07:00",
+      "Id": 197950
+    },
+    {
+      "Message": "hmm, how can I edit the Update in WPP, when the Update is only in WSUS?\n\nWhen I import an Update from the WPP Catalog, the Update is only in WSUS an not in WPP.\n\nSo I have to wait for the next Adobe Update in the catalog?",
+      "PostedDate": "2016-03-18T00:57:22.547-07:00",
+      "Id": 197999
+    },
+    {
+      "Message": "Just take a look in the settings. It should be obvious what checkbox to use. ;)",
+      "PostedDate": "2016-03-18T01:45:34.147-07:00",
+      "Id": 198001
+    },
+    {
+      "Message": "[http://www.faq-o-matic.net/2013/06/10/wsus-package-publisher-installieren-und-konfigurieren/](http://www.faq-o-matic.net/2013/06/10/wsus-package-publisher-installieren-und-konfigurieren/)\n\nAchtung! Beim WSUS Package Publisher kann man leider noch nicht zwischen den Updates von Microsoft und den Updates, die über den WSUS Package Publisher hinzugefügt worden sind, umschalten. Sobald also der Trigger oder das Update-Query gelaufen sind, sind die Updates/Anwendungen im WSUS Package Publisher nicht mehr zu sehen!",
+      "PostedDate": "2016-03-18T02:23:05.31-07:00",
+      "Id": 198002
+    },
+    {
+      "Message": "Danke, die Update-Einstellung „Local-published Updates anzeigen“ war mit bis dato nicht bekannt.\r\n\r\nNun konnte ich das Update erneut bereitstellen und somit funktioniert nun das Update auch mit Win10.\r\n\r\nVielleicht kann die Docu mit den Hinweisen zu den Hotfixes (Win10 Support) ergänzt werden.\r\n",
+      "PostedDate": "2016-03-18T02:38:53.243-07:00",
+      "Id": 198003
+    },
+    {
+      "Message": "Be aware of the Windows update agent is TOTALLY BROKEN in Windows 10 when it is set to check against a Wsus Server !!!!. Update Windows 10 to, at least, build 576.",
+      "PostedDate": "2017-01-27T23:14:57.34-08:00",
+      "Id": 206277
+    }
+  ]
+}

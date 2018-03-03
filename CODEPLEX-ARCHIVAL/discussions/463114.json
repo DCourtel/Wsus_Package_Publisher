@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1110507",
+    "ThreadId": "463114",
+    "Html": "J'ai un comportement extrêmement bizarre depuis que j'ai coché &quot;Always make this update visible in the WSUS Console&quot; dans les options de WPP. \r<br />\n<br />\nDans ma console, tous les ordinateurs (sauf le mien - unique exception) qui sont installés à 100% n'apparaissent plus en vert (Computers installes/not applicable) dans les &quot;pie charts&quot; de la console WSUS mais en gris (Computers with no status).\r<br />\n<br />\nJ'utilise &quot;Client Side targeting via GPO&quot;. Si je vais par contre dans un &quot;Computer Group&quot; et que je choisis &quot;No Status&quot; dans la liste déroulante, aucun n'apparaît. Je dois choisir &quot;Installed/Not Applicable&quot; pour voir mes PC à jour. Donc c'est ok via ce biais.\r<br />\n<br />\nLe problème se situe uniquement dans les pie charts mais c'est un peu chiant quand je veux juste avoir une overview. Ce problème pourrait-il être lié à la modification de la DB lorsque j'ai choisi l'option &quot;Always make this update visible in the WSUS Console&quot; ?\r<br />\n<br />\nMerci d'avance !!!<br />\n",
+    "PostedDate": "2013-10-22T05:30:19.16-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111205",
+    "ThreadId": "463114",
+    "Html": "Bonjour,\r<br />\n<br />\nHonnêtement, je n'utilise pas cette option sur mes serveurs de Prod. Microsoft recommande de ne pas toucher à la base de données. Par contre je sais que de nombreux administrateurs Wsus le font, notamment avec un trigger dans la db. \r<br />\nNorbertFe et Winnfried utilisait un trigger pour cela, lorsqu'ils utilisaient LUP. Maintenant ils passent par cette option. Je leur poserait la question. Peux-tu faire des captures d'écran des pie-charts ainsi que de l'état où tu vois les ordinateurs en installed/Not Applicable ? envoi les à <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a>. Merci.\r<br />\nEn quelle version est ton serveur Wsus ?\r<br />\n<br />\nJe doute que le problème vienne de cette option. Elle ne fait que modifier un champs de la base pour chaque update publié et beaucoup de monde le faisait à la main ou par trigger avant.<br />\n",
+    "PostedDate": "2013-10-23T11:52:44.473-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:45:33.573-07:00"
+  }
+]

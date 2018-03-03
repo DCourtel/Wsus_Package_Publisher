@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1231879",
+    "ThreadId": "541602",
+    "Html": "Bonjour,\r<br />\n<br />\nJ'ai 1 serveur principal et 1 serveur secondaire (Replica), j'ai bien coché &quot;toujours rendre visible la mise à jour dans la console WSUS&quot; et &quot;montrer les mises à jour localement et également visible dans la console WSUS&quot;.\r<br />\n<br />\nSur le serveur principal tout est OK je vois les MAJ dans la console WSUS et dans WPP\r<br />\nSur le serveur replica je vois bien les MAJ dans WPP mais pas dans la console WSUS, pourtant mes PC rattachés à ce serveur se mettent bien à jour avec les MAJ non visibles ?\r<br />\n<br />\nAvez vous une idée ?\r<br />\n<br />\nMerci d'avance<br />\n",
+    "PostedDate": "2014-04-08T06:55:46.94-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1232523",
+    "ThreadId": "541602",
+    "Html": "Oui effectivement, les mises à jour publiées localement n'apparaissent pas sur le serveur réplica. Il semblerait que lors de la synchro, l'attribut 'IsLocallyPublished' soit remis à 1. Comme c'est du pur Wsus, je ne pourrais rien y changer.\r<br />\nPar contre je peux modifier WPP pour que vous puissiez utiliser l'option &quot;Rentre visible dans la console Wsus&quot; sur le serveur réplica. Cela oblige à repasser sur toutes les mises à jour déjà publiées et les suivantes, mais c'est une solution de contournement efficace.<br />\n",
+    "PostedDate": "2014-04-09T12:45:35.603-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-04-09T12:45:41.793-07:00"
+  },
+  {
+    "Id": "1232694",
+    "ThreadId": "541602",
+    "Html": "Bonjour,\r<br />\n<br />\nnon c'est très bien comme ça, je vais tout gérer par le serveur maître, je vais juste attendre que le replica se synchronise pour la remontée de mes PC.\r<br />\n<br />\nMerci<br />\n",
+    "PostedDate": "2014-04-10T00:12:51.493-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

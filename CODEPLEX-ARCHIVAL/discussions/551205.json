@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1264652",
+    "ThreadId": "551205",
+    "Html": "Hello<br />\n<br />\nI am using Wsus Package Publisher form the server where Wsus 3.0 SP2 is installed. I installed update KB2938066 to server and after that Wsus Package Publisher started giving &quot;server version is different from console version&quot; errors. <br />\nWhen i open the WPP App and went to Help-&gt;About there i see those Versions:<br />\n<br />\nServer version 3.2.7600.274<br />\nConsole version 3.2.7600.262<br />\n<br />\nIt looks like i cant get the console updated, i did install the patch in the same server where i use WPP from.<br />\nAny ideas how to fix this?<br />\n",
+    "PostedDate": "2014-07-10T19:55:22.103-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264671",
+    "ThreadId": "551205",
+    "Html": "Hi, send me a mail at <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a> , I will send you a fix version of WPP.<br />\n",
+    "PostedDate": "2014-07-10T22:22:37.397-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264674",
+    "ThreadId": "551205",
+    "Html": "Email sent.<br />\n",
+    "PostedDate": "2014-07-10T22:31:48.92-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1264928",
+    "ThreadId": "551205",
+    "Html": "Please download WPP release v1.3.1407.11 which fix this issue.<br />\n",
+    "PostedDate": "2014-07-11T11:24:27.627-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-07-11T11:24:32.983-07:00"
+  },
+  {
+    "Id": "1265017",
+    "ThreadId": "551205",
+    "Html": "Problem solved.<br />\n<br />\nThank you very much.<br />\n",
+    "PostedDate": "2014-07-11T18:04:25.537-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1265127",
+    "ThreadId": "551205",
+    "Html": "<strong>ATUC2 wrote:</strong><br />\n<blockquote>\nServer version 3.2.7600.274<br />\nConsole version 3.2.7600.262<br />\n</blockquote>\nIs WSUS and WPP running on the same machine?<br />\n",
+    "PostedDate": "2014-07-12T08:17:13.65-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1259561",
+    "ThreadId": "549623",
+    "Html": "Our current setup consists out of a windows 2012 r2 server with essentials roles only (VPN method) installed.\r<br />\nWsus has been configured on the same server to sync from microsoft and only approve them, not downloading them locally.\r<br />\n<br />\nThe clients are correctly configured (GPO) to connect to my windows server over VPN, obtain the approved updates and download/install them from microsoft update services. DNS has been verified to work properly.\r<br />\n<br />\nNow the issue resides in obtaining the custom pushed packages. Whenever a package is published to one of the clients (manually or auto) the client tries to obtain the package, but seems to be timing out after 30 seconds. \r<br />\n<br />\nThe vpn clients do have a stable VPN aswell as up to 1MB down connection over the VPN.\r<br />\n<br />\nIs there a possibility that the clients are searching for the custom package on the microsoft website, due to WSUS being configured this way? Any other suggestions regarding this issue?\r<br />\n<br />\nThanks in advance.<br />\n",
+    "PostedDate": "2014-06-25T02:46:36.07-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1259793",
+    "ThreadId": "549623",
+    "Html": "Some Wpp's users have already try this configuration and it works for them. The fact that the Wsus server doesn't host binary files shouldn't make any problems.\r<br />\n<br />\nHave you checked the C:\\Windows\\WindowsUpdate.log on a client to see if there's any useful informations ?<br />\n",
+    "PostedDate": "2014-06-25T11:41:20.937-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-01T00:57:46.263-07:00"
+  }
+]

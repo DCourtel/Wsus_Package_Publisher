@@ -1,0 +1,56 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-04-14T13:24:43.967-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "I know this has been talked about several times, but none of the other posts seem to be able to resolve my issue.  I have the update made, approved and it shows up on my machines, however it will not install.  In my custom update, I have it uninstalling several older versions of Java and then installing 8update40 via the exe file.  When Windows Update gets to that point, it fails with code fffc -which from what I've seen online means that a file couldn't be found.  However, the files are there, so I'm really not sure what's happening. \r\n\r\nThis seems like a great product, but I need help.  I have included my xml file as that was requested on another person's issue.\r\n\r\nAlso, is there a way to modify an update package rather than deleting it and starting over from scratch?\r\n\r\nThanks,\r\n\r\nDoug",
+    "LastUpdatedDate": "2015-04-14T13:24:43.967-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-04-13T09:31:06.933-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Trying to update Java",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 261
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1448396,
+      "FileName": "103341aa-bc83-4291-9216-28e9ba178cb6.xml",
+      "DownloadUrl": ".\\1448396"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Can you look at CustomUpdateEngine.log to get more informations on what happen.\nyou will find this file at \nC:\\Windows\\temp\nor\nC:\\Users\\UserName\\AppData\\Local\\Temp\n\nAlso, can you try to put jre-8u40-windows-i586 __.exe__  in the script\n",
+      "PostedDate": "2015-04-13T11:23:41.157-07:00",
+      "Id": 182107
+    },
+    {
+      "Message": "Yup, that's exactly what the problem was.  I completely missed that one.  I did convert to using the msi file instead, as it's a bit easier to create the update IMO. \n\nNow I'm on to figure out adding Adobe Reader updates...",
+      "PostedDate": "2015-04-14T05:38:54.843-07:00",
+      "Id": 182848
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Computer List Viewer",
+      "DisplayName": "Computer List Viewer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-05-16T10:02:26.863-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "In the Computers view, highlight IPAdress of computers that are online. And allow to filter out on 'online'",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1305.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-16T09:56:24.137-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Show which computer is online",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 44
+  },
+  "FileAttachments": [
+    {
+      "FileId": 681031,
+      "FileName": "online computers.png",
+      "DownloadUrl": ".\\681031"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "IPAdress is now colored in green when the computer answer to ping and in Orange otherwise. A checkbox has been add to filter out on this criteria.",
+      "PostedDate": "2013-05-16T10:02:12.98-07:00",
+      "Id": 100366
+    }
+  ]
+}

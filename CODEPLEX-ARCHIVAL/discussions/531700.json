@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1207846",
+    "ThreadId": "531700",
+    "Html": "Installed application this morning without issue and created package from the document 'Adobe Reader XI Deployment with Custom Settings'.  Package creation was successful, and the update shows up on test pc (Win 8.1).<br />\n\r<br />\nWhen ready to install - I get error: \r<br />\n<br />\nFailed 1 update\r<br />\nCode 800B0109 - Windows Update ran into a problem.\r<br />\n<br />\nWhen I look at WPP - show update event history - Error Message is Error: Download failed.  Status is 'DownloadFailed'.<br />\n\r<br />\nAny assistance in troubleshooting would be appreciated.<br />\n",
+    "PostedDate": "2014-02-13T04:31:28.513-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1207907",
+    "ThreadId": "531700",
+    "Html": "I solved the issue.  The user on the test pc had installed certificates as the user account - not the computer.  Once certs were in correct location - install was perfect.<br />\n",
+    "PostedDate": "2014-02-13T06:19:15.667-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-02-13T06:19:23.28-08:00"
+  }
+]

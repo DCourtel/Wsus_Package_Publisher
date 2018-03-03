@@ -1,0 +1,105 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Settings",
+      "DisplayName": "Settings"
+    },
+    "ClosedComment": "Adding ability for WPP to issue his own Self-Signed Certificate when running on Windows Server 2012R2.",
+    "ClosedDate": "2013-09-01T10:54:51.447-07:00",
+    "CommentCount": 13,
+    "Custom": null,
+    "Description": "Windows Server 2012 R2, Preview, virtualized as a Domain Controller with WSUS Role:\r\nRunning \"Wsus Package Publisher.exe\" elevated, connnect to WSUS successful.\r\n\r\nMessage Popup: No Certificate\r\nMenu -> Extra -> Certificate -> create certificate ---> application crashes directly\r\n\r\nProblem not depending on the language (tested english and german)\r\n\r\nServer 2012 is running .NET 3.5 and 4.5 \r\n4.5 is officially backwards compatible, but probably not? ;-)\r\nhttp://msdn.microsoft.com/en-us/library/ff602939.aspx\r\n\r\nI Send a crash report aswell.\r\n\r\nTHX,\r\nMark",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1307.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-08-13T03:42:13.867-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Server 2012 R2 Preview - Create Certificate - Application crash",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 96
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Remove .NET 45 and install 4.0 is not possible, because of depending features -> AD-Domain-Services-Feature",
+      "PostedDate": "2013-08-13T04:07:02.09-07:00",
+      "Id": 109584
+    },
+    {
+      "Message": "Hi Mark,\n\nas far as I know David's still onto this problem.  ;)",
+      "PostedDate": "2013-08-13T04:42:52.847-07:00",
+      "Id": 109589
+    },
+    {
+      "Message": "I have seen some Crash Report with this problem. The error message say that Wsus can not issue a Self-Signed certificate and suggest to import a already generate certificate. \nProviding a Home-Made Certificate may works (you need your own Private Root Authority).\nI don't know if this is because it's a preview edition or a change in the Microsoft policy regarding self-signed certificate.\nI hope it's because of the edition type. \nI don't test other features of WPP on Server 2012R2 prev.\nI hope to have some time to do it this week-end.\n\nFor instance, I recommend to use Server 2012 but not 2012R2 prev.\n\nP.S. : It's not best practices to install Wsus on Domain Controller.\n[Wsus Best Practices](http://technet.microsoft.com/en-us/library/ff646928(WS.10).aspx)",
+      "PostedDate": "2013-08-13T07:34:24.633-07:00",
+      "Id": 109600
+    },
+    {
+      "Message": "Hi David,\n\n> P.S. : It's not best practices to install Wsus on Domain Controller.\n\nhave a look at all Small Business Servers, they all are DCs and every DC have installed a Exchange Server AND a WSUS AND a Sharepoint AND a SQL Server. MSFT sell this Products, its the same, not best Praxis. :)\n\nWinfried",
+      "PostedDate": "2013-08-13T07:58:33.577-07:00",
+      "Id": 109603
+    },
+    {
+      "Message": "Ok, it's not Best Practices, except for SBS :-)",
+      "PostedDate": "2013-08-13T11:12:16.38-07:00",
+      "Id": 109647
+    },
+    {
+      "Message": "Looks like Microsoft has change their policy regarding issuing Self-Signed certificate : [Forum Wsus](http://social.technet.microsoft.com/Forums/windowsserver/en-US/3e416512-2add-411b-a553-e4716b136731/server-2012r2-preview-this-wsus-server-cannot-issue-a-selfsigned-certificate)\n\nWinfried, Norbert, Mark, can you see with your contacts at Microsoft, to have some explaination on that decision ?",
+      "PostedDate": "2013-08-14T02:50:12.55-07:00",
+      "Id": 109835
+    },
+    {
+      "Message": "Ben Herila has answered to my post in the Technet forum. It's confirmed, Microsoft has totally disable ability for Wsus to generate Self-Signed certificate. This is for security reasons.\n\nThe good new is that, if they don't change anything else, so other WPP features will work as expected.",
+      "PostedDate": "2013-08-15T01:06:20.173-07:00",
+      "Id": 109989
+    },
+    {
+      "Message": "I think it is easy for you to disable the function create a self signed certifcate in W2012R2. If every other feature working in W2012R2 WPP is ready for W2012R2. ;)",
+      "PostedDate": "2013-08-15T01:53:15.31-07:00",
+      "Id": 109994
+    },
+    {
+      "Message": "That's the easiest way get rid of this problem :-)\nBut I think that W2012R2's users will not appreciate ;-)",
+      "PostedDate": "2013-08-15T13:28:02.523-07:00",
+      "Id": 110074
+    },
+    {
+      "Message": "> But I think that W2012R2's users will not appreciate ;-)\n\nIt is not a problem for WPP. ;)\n\n",
+      "PostedDate": "2013-08-15T13:34:50.313-07:00",
+      "Id": 110075
+    },
+    {
+      "Message": "Now, WPP is able to issue his own Self-Signed Certificate when running on Windows Server 2012R2.",
+      "PostedDate": "2013-09-01T10:53:58.393-07:00",
+      "Id": 111808
+    },
+    {
+      "Message": "> Now, WPP is able to issue his own Self-Signed Certificate when running on Windows Server 2012R2.\n\nWow, cool. ;)",
+      "PostedDate": "2013-09-01T11:41:40.39-07:00",
+      "Id": 111809
+    },
+    {
+      "Message": "Hi,\n\nit seems, that the old behaviour can be restored by activating a registry value:\n create Reg Values EnableSelfSignedCertificates=1 at HKLM\\Software\\Microsoft\\Update Services\\Server\\Setup\\\n\nMaybe it's good to know. ;)\n\nBye\nNorbert",
+      "PostedDate": "2013-10-29T06:03:18.463-07:00",
+      "Id": 120019
+    }
+  ]
+}

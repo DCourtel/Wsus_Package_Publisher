@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hello and good morning,\r\n\r\nWe have a problem with server 2016 (WSUS).\r\n\r\nServer version is different from console version. You won't be able to publish/review updates.",
+    "LastUpdatedDate": "2017-07-05T09:43:42.967-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-07-04T22:00:49.083-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "WSUS 2016",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 378
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1669510,
+      "FileName": "WSUS WPP error.png",
+      "DownloadUrl": ".\\1669510"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "I am currently running WSUS on Server 2016\n\nWPP release 1.3.1702.10\nServer Version 10.0.14393.1358\nConsol Version  10.0.14393.0\n\nI have checked the box in settins:  Ignore consol and server version mismatch.\n\nEverything has been working fine for months.\n\nSteve",
+      "PostedDate": "2017-07-05T09:43:42.967-07:00",
+      "Id": 208658
+    }
+  ]
+}

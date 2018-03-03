@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1331821",
+    "ThreadId": "574928",
+    "Html": "Hello again,<br />\nI was trying to create a WPP update which deploys Adobe Reader 11.0.0 and the newest msp patch file for this, the Version 11.0.10.<br />\nI added the AdbeRdr11000_de_DE.msi as the main file, than added an .mst and the AdbeRdrUpd11010.msp files to the update.<br />\nAfter Publishing this update with this command line: TRANSFORMS=&quot;reader11.mst&quot; PATCH=&quot;AdbeRdrUpd11010.msp&quot;, the update fails. Next I was trying to manually install this package on the Client with the command line executed in the Directory where the three files are: msiexec.exe /i &quot;AdbeRdr11000_de_DE.msi&quot; TRANSFORMS=&quot;reader11.mst&quot; PATCH=&quot;AdbeRdrUpd11010.msp&quot;<br />\nThis has failed also with a message that the patch files was not found.<br />\nI did some goolge searching with the disappointing result, that msp files must have the FULL path in the command line to get this to work.<br />\nIs there a way to manage this problem with the WPP update creator?<br />\nWhat is the full path at the Moment, the updates are applied on the client?<br />\n",
+    "PostedDate": "2014-12-14T10:12:37.353-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1331840",
+    "ThreadId": "574928",
+    "Html": "A Workaround is to use a network share (e. g. the wsus content share) to store the .msp files. In this case they must not be added to the wpp update.<br />\nIt works with a command line like this: TRANSFORMS=&quot;reader11.mst&quot; PATCH=&quot;\\\\server1\\wsuscontent\\share\\patches\\AdbeRdrUpd11010.msp&quot;<br />\n<br />\nBut what about the Support of some variables for the command line of the wpp updates? In my tests from cmd it worked with PATCH=&quot;%CD%\\AdbeRdrUpd11010.msp&quot; so why can't this work with the wpp updates too???<br />\n",
+    "PostedDate": "2014-12-14T13:05:16.653-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1331849",
+    "ThreadId": "574928",
+    "Html": "What %cd% mean ? How it is translate on your system ?<br />\n",
+    "PostedDate": "2014-12-14T13:51:10.823-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1331858",
+    "ThreadId": "574928",
+    "Html": "In a cmd cli this variable represents the current directory. example: echo %cd% c:\\users\\Username<br />\n",
+    "PostedDate": "2014-12-14T15:00:36.093-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1334637",
+    "ThreadId": "574928",
+    "Html": "I suspect that %cd% can only be translate in a 'User Context' and not in a 'System Context'. try to revise the update and check the option &quot;Can request user input&quot;. This will allows  to install the update in a user context.<br />\n",
+    "PostedDate": "2014-12-18T11:42:05.1-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1335630",
+    "ThreadId": "574928",
+    "Html": "A system context variable path that may work is the following:<br />\n<pre><code>%windir%\\SoftwareDistribution\\Download\\Install\\</code></pre>\n\nThis is the folder that WPP unpacks custom updates to for installation, at least in my experience.<br />\n",
+    "PostedDate": "2014-12-22T14:44:12.327-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1337325",
+    "ThreadId": "574928",
+    "Html": "It's Windows Update Agent that unpack updates on the client computer.\r<br />\nOnce the update have been published in Wsus, WPP is not involve anymore in the process of updating clients.<br />\n",
+    "PostedDate": "2014-12-26T11:44:20.383-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1337617",
+    "ThreadId": "574928",
+    "Html": "You're correct. I meant to say that this is where customupdateengine.exe and the included files usually gets unpacked to this location on my systems, though this is anecdotal, and not authoritative.\r<br />\n<br />\nInterestingly enough, I don't have this issue with the MSP files, though, I just came up with a better idea altogether:\r<br />\n<br />\nIn your updater, you can move the files out of the unpacked directory to a directory that you define, so move files from .*.msp to PATH_TO_INSTALL_FOLDER, then install the MSP files from there, then delete them or move them back into the current working directory and delete the folder if it's empty afterwards.\r<br />\n<br />\nAnother thing that you could do is use a VBScript to copy the installer to a known working directory and call msiexec from there, then clean up the working directory afterwards, or just use VBScript to get the full current path, and use that to call MSIExec.<br />\n",
+    "PostedDate": "2014-12-29T05:43:07.333-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

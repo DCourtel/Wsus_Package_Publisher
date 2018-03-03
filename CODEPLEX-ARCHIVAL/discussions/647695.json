@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1452724",
+    "ThreadId": "647695",
+    "Html": "Is there a possibility to implement Support for .msu files ?\r<br />\nThese files are used for Hotfixes, but also for the new Windows UPGRADES ( 1511 ), if you download online via  Windows Update Service.\r<br />\nBecause there are undefined situations for these Upgrades in Domain areas and Wsus, a sideloading WPP to WSUS will be a good idea. \r<br />\nIt is not possible to import it these files in WSUS directly. There are a Workaround to prepare a Update with netECM:MsuToExe, for using with SCUP.\r<br />\nIs there a recommandation for WPP to handle .msu files ?<br />\n",
+    "PostedDate": "2015-11-17T02:13:24.867-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452801",
+    "ThreadId": "647695",
+    "Html": "Yes, you can use a Batchfile with this Content:\r<br />\n<br />\n%windir%\\System32\\wusa.exe Name_of_your_Package AND PARAMETERS\r<br />\n<br />\nFor exact Syntax run: wusa.exe /? and try one or two times for getting the correct Syntax. \r<br />\n<br />\nBut: How you will check if the update is installed? Otherwise WU-Agent will install many times the Hotfix.<br />\n",
+    "PostedDate": "2015-11-17T09:33:41.39-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452909",
+    "ThreadId": "647695",
+    "Html": "Dont know,   for hotfixes :-) .\r<br />\nBut for Windows Upgrades - simple check the build number.\r<br />\n<br />\nOk hope I understand....... the workaround ist:\r<br />\n1 Create a Scipt in servers Software Deployment Folder\r<br />\n2 Create a Custom Update in WPP, including:\r<br />\n2a use &quot;Allow to Copy, Delete, Rename a file&quot;, use action &quot;Copy&quot;&quot; to transfer the *.msu to a clients folder, eg %windir%\\temp \r<br />\n2b use &quot;Allow to Copy, Delete, Rename a file&quot;, use action &quot;Copy&quot;&quot; to transfer the Batch file to a clients folder, eg %windir%\\temp\r<br />\n3  use &quot; Allow to execute Vb Script, PowerShell Script &quot; and run the batch file.\r<br />\n4 ......\r<br />\nCheck return codes ??.........\r<br />\n<br />\nREALY ? A little bit....difficult...\r<br />\n<br />\nI think a repackaging, to generate a exe. is easyer to handle ? I can use the WPP standard updat creating process with rules. Ok, I lost the WPP deinstallation option with  .exe files.\r<br />\n<br />\nWPP support &quot;native&quot; .exe, .msi, .msp,  What is the (technical or logic) problem with .mus ?<br />\n",
+    "PostedDate": "2015-11-18T00:12:57.617-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452985",
+    "ThreadId": "647695",
+    "Html": "<blockquote>\nWPP support &quot;native&quot; .exe, .msi, .msp, What is the (technical or logic) problem with .mus ?<br />\n</blockquote>\nIt is a limitation on the Wsus API : <a href=\"https://msdn.microsoft.com/en-us/library/microsoft.updateservices.administration.softwaredistributionpackage_methods(v=vs.85).aspx\" rel=\"nofollow\">See PopulatePackage methods</a><br />\n",
+    "PostedDate": "2015-11-18T07:27:20.757-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

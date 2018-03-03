@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1360397",
+    "ThreadId": "584751",
+    "Html": "Hello, \r<br />\n<br />\nI've been playing around with WPP for the past week or so on a 2012 R2 WSUS server and have had some great success with deploying Adobe Reader, Chrome and a few other applications out to Windows 7 and 8.1 client PCs. \r<br />\n<br />\nBut, I can't get the updates to show in the WSUS Console itself at all. Previously, when right clicking on an update and choosing &quot;Make visible in WSUS Console&quot; I was getting an error of &quot;Login failed for Domain\\MyUsername&quot;. This is despite me being a domain admin and also having my account in the WSUS Administrators group locally on the server. \r<br />\n<br />\nI've since reinstalled WPP to see if that will make any difference and now the options to &quot;Make visible in WSUS Console&quot; or &quot;Hide in WSUS Console&quot; are both greyed out. \r<br />\n<br />\nOtherwise things are working great with our third party updates but I would like to see them in the WSUS console to be able to report on them more easily. \r<br />\n<br />\nAnyone have any thoughts or experienced this themselves?\r<br />\n<br />\nLet me know, thanks\r<br />\n<br />\nMartin<br />\n",
+    "PostedDate": "2015-03-06T05:28:07.443-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1360440",
+    "ThreadId": "584751",
+    "Html": "Hello, \r<br />\nThere is two prerequisites to have this option enable :<br />\n<ul>\n<li>In Settings -&gt; Server Tab : The option &quot;When publishing a new update&quot;, must not be set to &quot;Never...&quot;</li>\n<li>\nIn Settings -&gt; Server Tab : &quot;Connect to local server&quot; must be tick. That mean, you must run WPP directly on the Wsus server.<br />\n</li>\n</ul>\nNow, why have you this error message (Login failed...).<br />\n<ul>\n<li>Are you using the Windows Internal Database (defualt Wsus installation) or a SQL database ?</li>\n<li>If you use a SQL DB, is it on the Wsus server or another server ?</li>\n</ul>\n",
+    "PostedDate": "2015-03-06T08:44:41.5-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1360478",
+    "ThreadId": "584751",
+    "Html": "Thanks but I actually figured it out just after my original post!\r<br />\n<br />\nAll the options were correct, it just needed me to be logged in under the same account that WSUS was installed with.\r<br />\n<br />\nI had to grant local admin rights to the WSUS server to that account just to get WPP to launch but once that was done I was able to publish updates to the WSUS Console no problem. \r<br />\n<br />\nCheers!<br />\n",
+    "PostedDate": "2015-03-06T10:29:14.703-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-03-06T11:11:42.42-08:00"
+  }
+]

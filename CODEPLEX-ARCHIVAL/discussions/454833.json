@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1086103",
+    "ThreadId": "454833",
+    "Html": "Hi Guys,\r<br />\ni must install oracle java 7.25 (32bit) and 7.25 (64bit) on windows 7 64bit. Both programs have a msi setup, but the product code is always 26a24ae4-039d-4ca4-87b4-2f86417025ff.\r<br />\n<br />\nHow can i setup the packages in wpp that the operating system can differentiate which package is installed.\r<br />\n<br />\nRegards,\r<br />\nDaniel<br />\n",
+    "PostedDate": "2013-08-29T04:21:31.303-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1086107",
+    "ThreadId": "454833",
+    "Html": "<blockquote>\nbut the product code is always 26a24ae4-039d-4ca4-87b4-2f86417025ff<br />\n</blockquote>\nIn fact, no.\r<br />\nThe MSI Product Code for 32bit is :\r<br />\n26a24ae4-039d-4ca4-87b4-2f8 <strong>32</strong> 17025ff\r<br />\n<br />\nAnd for 64bit it is :\r<br />\n26a24ae4-039d-4ca4-87b4-2f8 <strong>64</strong> 17025ff<br />\n",
+    "PostedDate": "2013-08-29T04:32:02.423-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:18:20.38-07:00"
+  },
+  {
+    "Id": "1086135",
+    "ThreadId": "454833",
+    "Html": "Hmpf... my fault. I imported the last night the same msi file for 32 and 64bit.<br />\n",
+    "PostedDate": "2013-08-29T05:37:22.523-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1488651",
+    "ThreadId": "659652",
+    "Html": "Hi,\r<br />\n<br />\ni just noticed that the WPP Console not showing all PC's thats shown in the WSUS, and i cant see the reason why. Ive tried to find the missing one with the filter option without any result. I am not filtering the offline pc's.<br />\n",
+    "PostedDate": "2016-11-23T05:49:37.23-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1488834",
+    "ThreadId": "659652",
+    "Html": "In WSUS-Console you see all clients? Including missing Clients in WPP-Console?<br />\n",
+    "PostedDate": "2016-11-27T05:41:57.09-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1489144",
+    "ThreadId": "659652",
+    "Html": "Hi,\r<br />\n<br />\nits a little bit strange. On the next day the missing pc was showing in the WPP-Console. But now, i am missing that client in the WPP and WSUS Console...ive asked our customer already what happen to that client, but got no respons yet.<br />\n",
+    "PostedDate": "2016-12-02T01:42:17.763-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1489250",
+    "ThreadId": "659652",
+    "Html": "Try Methode 1 on the effected Client: <a href=\"https://support.microsoft.com/en-us/kb/903262\" rel=\"nofollow\">https://support.microsoft.com/en-us/kb/903262</a><br />\n",
+    "PostedDate": "2016-12-04T13:56:21.947-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

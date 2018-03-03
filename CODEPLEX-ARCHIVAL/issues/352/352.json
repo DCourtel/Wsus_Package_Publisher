@@ -1,0 +1,85 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-01-10T13:26:56.827-08:00",
+    "CommentCount": 9,
+    "Custom": null,
+    "Description": "it seems Adobe changed or removed the uri located in the WPP catalog file:\r\n\r\nhttp://fpdownload.adobe.com/get/flashplayer/current/licensing/win\r\n\r\nIs there any update available on this?",
+    "LastUpdatedDate": "2017-01-10T13:26:56.827-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-12-16T05:39:09.55-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Flash Update via Catalog no longer working",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 352
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi,\n\njust tested and successfully downloaded Version 24.0.0.186\nDo you get any errormessages?\n\nRegards\nNorbert",
+      "PostedDate": "2016-12-16T13:20:07.153-08:00",
+      "Id": 205618
+    },
+    {
+      "Message": "the error is:\ndownload failed. Underlaying connection was closed",
+      "PostedDate": "2016-12-17T02:42:25.247-08:00",
+      "Id": 205632
+    },
+    {
+      "Message": "I wanted to look into the source and debug the error, but the current version ist not checked into the master. .-(\nHow is the code managed now?\n",
+      "PostedDate": "2016-12-17T07:40:30.383-08:00",
+      "Id": 205633
+    },
+    {
+      "Message": "ok, now I know what's the problem:\nI used WPP on SBS2003R2 which seems to use http/s connection using old DLL which is cut when connecting. I tried with IE8 installed on SBS2003R2 which results in a disconnect.\n",
+      "PostedDate": "2016-12-17T13:22:51.387-08:00",
+      "Id": 205636
+    },
+    {
+      "Message": "So anyone really is using 2003 Server? :/ ;)",
+      "PostedDate": "2016-12-17T14:29:16.677-08:00",
+      "Id": 205637
+    },
+    {
+      "Message": "HI,\n\nI just checked out. The latest update for Flash is 24.0.0.194\nIt seems that Adobe changed the catalog link to https://....\nI tried to change this in WPP, however I was not successfull.\nMay it be that WPP can only download http catalogs ?\n\n",
+      "PostedDate": "2017-01-10T11:03:40.873-08:00",
+      "Id": 205957
+    },
+    {
+      "Message": "You can try to change http to https in the CAB-File. The Cab is in programfiles from WPP.",
+      "PostedDate": "2017-01-10T11:31:24.31-08:00",
+      "Id": 205959
+    },
+    {
+      "Message": "You can get a link to the catalog after signing in to your Adobe account. This link works with wpp. But there's currently now newer Version than 24.0.0.194\n\nI shared the catalog. Hopefully it gets pushed down to you sometime. ;)\n\nRegards\nNorbert",
+      "PostedDate": "2017-01-10T12:55:41.213-08:00",
+      "Id": 205963
+    },
+    {
+      "Message": "The new URL is : https://fpdownload.adobe.com/get/flashplayer/distribution/win/AdobeFlashPlayerCatalog_SCUP.cab\n\nOpen WPP, connect to your Wsus, go to «Updates», «Manage Catalog Subscriptions…»\nIn the new window, select the line for Adobe Flash Player, in the Address textbox, copy the URL that I have provided.\nClick on the «modify» buton. Check for update and if there is one, double-click on the line for Adobe Flash Player to open this catalog.\nWPP can download updates from catalog in Http and Https.",
+      "PostedDate": "2017-01-10T13:17:42.797-08:00",
+      "Id": 205964
+    }
+  ]
+}

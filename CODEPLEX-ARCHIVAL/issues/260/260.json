@@ -1,0 +1,71 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-04-14T13:25:08.507-07:00",
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "I am trying to install an Outlook Addin that requires Outlook to be closed for it to install.  I created a custom install and added a Kill Process block for \"OUTLOOK.EXE\" prior to the install but it doesn't seem to kill the process.  If I close Outlook prior to running the update, it works perfectly but if Outlook is open, it just sits there until it times out.\r\n\r\nTask Manager shows the process as \"OUTLOOK.EXE *32\".  I have tried \"OUTLOOK.EXE\", \"OUTLOOK\", and \"OUTLOOK.EXE *32\" and nothing seems to want to kill the process.\r\n\r\nIs there something I am doing wrong?\r\n\r\nAlso, is it safe to just edit the associated .xml file in the AppData\\Local\\Temp folder to make changes to the custom update rather than recreating the custom update each time?  If so, that would make changes a LOT easier and quicker short of adding a custom update editor option to the program.",
+    "LastUpdatedDate": "2015-04-15T12:11:20.73-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-04-13T08:56:26.43-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Unable to kill Outlook",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 260
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1448422,
+      "FileName": "dee0d67e-16a3-4245-a36f-c40a90994a11.xml",
+      "DownloadUrl": ".\\1448422"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Can you look at \nC:\\Windows\\Temp\\CustomUpdateEngine.log \nor \nC:\\Users\\UserName\\AppData\\Local\\Temp\\CustomUpdateEngine.log \n\nTo see if there is more informations",
+      "PostedDate": "2015-04-13T11:31:07.297-07:00",
+      "Id": 182108
+    },
+    {
+      "Message": "There was no log file in C:\\Windows\\Temp\\ and the one in AppData\\Local\\Temp\\ was last modified in June of last year.  I did a search and there were no other copy of this log file.  June is around the last time I made a custom update (java according to the log) prior to subscribing to a update catalog so this is the first update to not be written to the log.\r\n\r\nI went ahead and attached the xml file in case that helps.  In the mean time, I will try to create this update again and see if it adds an entry to the log file this time.",
+      "PostedDate": "2015-04-13T13:03:17.697-07:00",
+      "Id": 182115
+    },
+    {
+      "Message": "I recreated the update but this time dropped the \".EXE\" from the Process name and it works fine now.  I went back and checked the CustomUpdateEngine.log file but still no changes since June.\n\nI am satisfied that the update is working but I'm somewhat concerned that the logging is broken.",
+      "PostedDate": "2015-04-13T14:03:24.147-07:00",
+      "Id": 182120
+    },
+    {
+      "Message": "Ensure your computer is able to resolve the environment variable %temp% in user context and System context.",
+      "PostedDate": "2015-04-14T03:16:38.087-07:00",
+      "Id": 182838
+    },
+    {
+      "Message": "When I type \"echo %temp%\" in a command prompt, it returns the path to the temp folder containing the WPP folder with all the update files.",
+      "PostedDate": "2015-04-15T12:11:20.73-07:00",
+      "Id": 182913
+    }
+  ]
+}

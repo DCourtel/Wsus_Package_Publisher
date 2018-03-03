@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1342092",
+    "ThreadId": "577744",
+    "Html": "Hello,\r<br />\n<br />\nThe publisher is working fine. I have done a test upgrading Adobe Reader 11.0.00 to 11.0.10 and it works. Since I want to use the WPP for several customers, I was wondering if there's advanced reporting. At the moment I can see who installed the UPGRADE. But is there a way I can see who actually has installed the SOFTWARE (Adobe Reader in my example case), since I don't want to publish the upgrade to people who don't have the software installed?\r<br />\n<br />\nThanks in advance.\r<br />\n<br />\nJurgen<br />\n",
+    "PostedDate": "2015-01-14T23:56:55.683-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1342121",
+    "ThreadId": "577744",
+    "Html": "Additional questions:\r<br />\nTo deploy other installs (not listed in the documentation), I assume you can only do this with .msi files?\r<br />\nCan I disable update notifications from Adobe or Java in the WPP?<br />\n",
+    "PostedDate": "2015-01-15T01:41:32.84-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1342147",
+    "ThreadId": "577744",
+    "Html": "Hello, upgrade of Adobe Reader is done by MSP file. MSP only apply above already installed MSI applications. So, the upgrade will not be offer to computers that don't have Adobe Reader.\r<br />\nAdditionally, you can write Applicable Rules to ensure that the package is offer to right computers.<br />\n<blockquote>\nI assume you can only do this with .msi files?<br />\n</blockquote>\nNo, you can publish MSI, MSP and EXE file as main file and what ever you want as additional files <br />\n<blockquote>\nCan I disable update notifications from Adobe or Java in the WPP?<br />\n</blockquote>\nYes, you have to know how to disable that feature (generally, it's a registry key to modify), and create a custom update.<br />\n",
+    "PostedDate": "2015-01-15T03:30:04.477-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1342171",
+    "ThreadId": "577744",
+    "Html": "Ok, thanks a lot.\r<br />\nAt the moment I'm having the following problem: I want to install Teamviewer 10 (of which I have an .exe file).\r<br />\nI have made an upgrade in WPP by selecting the .exe file. I have done nothing more.\r<br />\nI see the update on the WSUS client, but I get the error Code 80070020 when I publish this update as &quot;Upgrade&quot;.\r<br />\nWhen I publish it as application, the installation keeps running and never ends. \r<br />\nDid I forget something?<br />\n",
+    "PostedDate": "2015-01-15T05:35:25.427-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1342197",
+    "ThreadId": "577744",
+    "Html": "When WU Agent install package, by default, these packages installs with 'System' Account. So, there is no interaction with the desktop and the user.\r<br />\nDoes Teamviewer.exe able to install silently ? When you manually launch the setup on a computer, is there any UI that show up ? Do you have the command line to force a silent install ?<br />\n",
+    "PostedDate": "2015-01-15T07:16:23.38-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

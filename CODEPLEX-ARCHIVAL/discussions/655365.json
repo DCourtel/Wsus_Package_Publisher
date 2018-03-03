@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1475564",
+    "ThreadId": "655365",
+    "Html": "Hello,\r<br />\n<br />\nit is possible to intergrate the Office 365 updates? They are already in the WSUS-Library but it is not possible to deploy these packages.\r<br />\n<br />\n<a href=\"https://blogs.technet.microsoft.com/wsus/2016/04/13/office-365-client-updates-via-wsus/\" rel=\"nofollow\">https://blogs.technet.microsoft.com/wsus/2016/04/13/office-365-client-updates-via-wsus/</a>\r<br />\n<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2016-06-09T05:42:37.457-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1475575",
+    "ThreadId": "655365",
+    "Html": "What is the extension of the file you want to publish ?<br />\n",
+    "PostedDate": "2016-06-09T08:00:05.15-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1475861",
+    "ThreadId": "655365",
+    "Html": "The Update extensions seems to be .exe<br />\n<br />\nBut how i can download these Updatecatalog from Microsoft? Is there a catalog.xml available?<br />\n",
+    "PostedDate": "2016-06-12T01:15:39.62-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1480778",
+    "ThreadId": "655365",
+    "Html": "You can download these Files via WSUS, but you cant deploy it without a CM? Wow. Funny Microsoft.\r<br />\n<br />\nSo, maybee pick up the downloaded files from WSUS, and deploy it via WPP. \r<br />\n<br />\nThere are no MS download-catalog available like Adobe.<br />\n",
+    "PostedDate": "2016-08-10T07:31:24.353-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

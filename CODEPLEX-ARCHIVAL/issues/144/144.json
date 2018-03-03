@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-12-15T04:44:14.013-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Strange problem, some Java update installation fails , probably due to running IE/Java.exe. Eventviewer on the client reports failure, update eventhistory in WPP reports failure, but status in WPP is set to installed and not Failed as it should i guess?\r\n\r\n![Image](https://www.evernote.com/shard/s3/sh/7d9034ad-1e64-4907-b8be-39074223093a/b43e02c892001f0a1acc058bdf237401/res/1a4cb647-7c82-42cf-bc05-eae14a4c6beb/skitch.jpg?resizeSmall&width=832)\r\n\r\nQuestion is if WPP will try to reinstall the update or stops trying since it thinks everything is ok?\r\n\r\n",
+    "LastUpdatedDate": "2013-12-15T04:44:14.03-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-23T07:38:49.5-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Update fails but WPPstatus set to Installed?",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 144
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi Jerre,\nFirst, you have to be aware that WPP doesn't install anything on client computers. WPP publish the package into your Wsus server and that's all.\nSecond, if WPP shows that the update is installed, that mean that client computers have report this state to the Wsus server, based on the 'IsInstalled' rule in the package.",
+      "PostedDate": "2013-10-23T11:38:37.083-07:00",
+      "Id": 119379
+    },
+    {
+      "Message": "My java deployment has gone through with 100% success at my site so far.\n\nI just followed the guide here (highly recommend it): https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=691788 but changed some steps.\n\nI changed the \"IsInstalled\" rule to \"MSI product code installed\" with a value of:\n* _26A24AE4-039D-4CA4-87B4-2F83217045FF_ for __32bit__ Java 7 Update __45__\n* _26A24AE4-039D-4CA4-87B4-2F86417045FF_ for __64bit__ Java 7 Update __45__\n\nThe general format for Java 7 MSI Product Code is: 26A24AE4-039D-4CA4-87B4-2F8__170__FF\n(replace the first “__” with 32 or 64 depending on architecture, and the second with “45” if it’s Java 7 update 45. The “170” means “Java 1.7.0” which is Java 7)\n\nI changed the \"IsInstallable\" rule to \"OS Architecture = IA64 (reversed to make this rule a \"not\")\" (so it applies to both 32 and 64 bit Windows) for 32bit Java,\nand 64bit only for the 64bit version.\nI changed the second \"IsInstallable\" rule to say that the above above MSI Product codes are __NOT__ installed instead of the one they give (which is Java 7 Update 21 specific).\n\nAlso, make sure you are using the Java __EXE__ installer, and NOT the MSI.\nThe EXE does additional things such as making sure processes are closed, etc. whereas the MSI does not do that and is unsupported by Java/Oracle.",
+      "PostedDate": "2013-10-28T19:04:04.87-07:00",
+      "Id": 119977
+    }
+  ]
+}

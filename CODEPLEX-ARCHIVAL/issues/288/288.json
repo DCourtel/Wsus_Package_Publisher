@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:08.003-08:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Hi,\r\nI don't see anything in the Reports tab and receive no errors.\r\nAny suggestion?\r\nRegards.\r\n\r\nRed.",
+    "LastUpdatedDate": "2017-02-03T11:50:08.003-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-08-24T03:52:04.443-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Report Tab always empty",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 288
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Go to this folder : %temp% and look for a file call WPP-GUID\nSend it to me at : package.publisher@free.fr",
+      "PostedDate": "2015-08-24T04:53:09.013-07:00",
+      "Id": 189513
+    },
+    {
+      "Message": "Done.\nThank You for your time.\n\nRed.",
+      "PostedDate": "2015-08-28T07:38:56.433-07:00",
+      "Id": 189665
+    },
+    {
+      "Message": "Hi,\nIf I start the application with \"Run As\" with appropriate credential I have no errors in the log. Otherwise, if I use the \"credential configuration\" I receive a lot of \"Access Denied\". I suppose that something is not working passing credential.\nAnyway, the reports are empty.\nRegards.\n\nRed.",
+      "PostedDate": "2015-08-31T07:20:53.733-07:00",
+      "Id": 189728
+    }
+  ]
+}

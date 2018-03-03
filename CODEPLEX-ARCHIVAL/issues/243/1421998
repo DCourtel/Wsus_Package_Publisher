@@ -1,0 +1,435 @@
+﻿1/20/2015 3:53:24 PM	=================================================================================================================
+1/20/2015 3:53:24 PM	Starting. Release : 1.3.1411.9
+1/20/2015 3:53:24 PM	Upgrade Settings : False
+1/20/2015 3:53:24 PM	Windows was installed in : en (English)
+1/20/2015 3:53:24 PM	Entering Void .ctor() : FrmSettings
+1/20/2015 3:53:24 PM	Language is : Anglais.
+1/20/2015 3:53:24 PM	Entering Void .ctor()
+1/20/2015 3:53:24 PM	Entering Void .ctor() : UpdateControl
+1/20/2015 3:53:24 PM	Entering Void .ctor() : UpdateListViewer
+1/20/2015 3:53:24 PM	Entering Void .ctor()
+1/20/2015 3:53:24 PM	Entering Void .ctor() : UpdateDetailViewer
+1/20/2015 3:53:24 PM	Entering Wsus_Package_Publisher.Credentials GetInstance()
+1/20/2015 3:53:24 PM	CredentialNotice set to : Features connecting to remote computers will use the same credentials than the application.
+1/20/2015 3:53:24 PM	CredentialNotice set to : Features connecting to remote computers will use the same credentials than the application.
+1/20/2015 3:53:24 PM	Entering Wsus_Package_Publisher.WsusWrapper GetInstance()
+1/20/2015 3:53:24 PM	Entering Void chkCmbBxFilter_SelectionChanged()
+1/20/2015 3:53:24 PM	Entering Void DisplayUpdates(Microsoft.UpdateServices.Administration.UpdateCollection)
+1/20/2015 3:53:24 PM	Entering Void ClearDisplay()
+1/20/2015 3:53:24 PM	Entering Void ClearBeforeConnecting()
+1/20/2015 3:53:24 PM	Entering Void ClearDisplay()
+1/20/2015 3:53:24 PM	Entering Void ResetControl()
+1/20/2015 3:53:24 PM	Entering Void ClearDisplay()
+1/20/2015 3:53:24 PM	Entering Void AdjustSplitterDistance()
+1/20/2015 3:53:24 PM	Entering Void .ctor() : ComputerControl
+1/20/2015 3:53:24 PM	Entering Void .ctor() : ComputerListViewer
+1/20/2015 3:53:24 PM	Entering Wsus_Package_Publisher.Credentials GetInstance()
+1/20/2015 3:53:24 PM	Entering Wsus_Package_Publisher.WsusWrapper GetInstance()
+1/20/2015 3:53:24 PM	Entering Wsus_Package_Publisher.Credentials GetInstance()
+1/20/2015 3:53:24 PM	Entering Void .ctor() : ComputerDetailViewer
+1/20/2015 3:53:24 PM	Entering Void dtpInstalledAfter_ValueChanged(System.Object, System.EventArgs)
+1/20/2015 3:53:24 PM	Entering Void Display(System.Windows.Forms.DataGridViewSelectedRowCollection)
+1/20/2015 3:53:24 PM	Entering Void dtpInstalledAfter_ValueChanged(System.Object, System.EventArgs)
+1/20/2015 3:53:24 PM	Entering Void Display(System.Windows.Forms.DataGridViewSelectedRowCollection)
+1/20/2015 3:53:24 PM	Entering Void .ctor()
+1/20/2015 3:53:24 PM	Entering Void FrmWsusPackagePublisher_Shown(System.Object, System.EventArgs)
+1/20/2015 3:53:24 PM	Entering Void FillServerList()
+1/20/2015 3:53:24 PM	Entering System.Collections.Generic.List`1[Wsus_Package_Publisher.WsusServer] LoadServerSettings()
+1/20/2015 3:53:24 PM	Entering System.Collections.Generic.List`1[Wsus_Package_Publisher.WsusServer] LoadServerSettings()
+1/20/2015 3:53:24 PM	Entering Void set_Name(System.String) : WSUS
+1/20/2015 3:53:24 PM	Name : WSUS
+1/20/2015 3:53:24 PM	Entering Void set_IsLocal(Boolean) : True
+1/20/2015 3:53:24 PM	IsLocal : True
+1/20/2015 3:53:24 PM	Entering Void set_Port(Int32) : 80
+1/20/2015 3:53:24 PM	Port : 80
+1/20/2015 3:53:24 PM	Entering Void set_UseSSL(Boolean) : False
+1/20/2015 3:53:24 PM	UseSSL : False
+1/20/2015 3:53:24 PM	Entering Void set_IgnoreCertificateErrors(Boolean) : False
+1/20/2015 3:53:24 PM	ignoreCertErrors : False
+1/20/2015 3:53:24 PM	Entering Void set_DeadLineDaysSpan(Int32) : 0
+1/20/2015 3:53:24 PM	Entering Void set_DeadLineHour(Int32) : 0
+1/20/2015 3:53:24 PM	Entering Void set_DeadLineMinute(Int32) : 0
+1/20/2015 3:53:24 PM	Entering Void set_VisibleInWsusConsole(MakeVisibleInWsusPolicy) : Never
+1/20/2015 3:53:24 PM	Adding server : WSUS
+1/20/2015 3:53:24 PM	Returning 1 Servers.
+1/20/2015 3:53:24 PM	Entering Void .ctor(System.String, Boolean, Int32, Boolean, Int32, Int32, Int32) : WSUS, True, 80, False, 0, 0, 0
+1/20/2015 3:53:25 PM	Entering Void .ctor(System.String, Boolean, Int32, Boolean, Int32, Int32, Int32) : WSUS
+1/20/2015 3:53:25 PM	Entering Void .ctor(System.String, Boolean, Int32, Boolean, Int32, Int32, Int32) : True
+1/20/2015 3:53:25 PM	Entering Void set_Port(Int32) : 80
+1/20/2015 3:53:25 PM	Entering Void .ctor(System.String, Boolean, Int32, Boolean, Int32, Int32, Int32) : False
+1/20/2015 3:53:25 PM	Entering Void set_DeadLineDaysSpan(Int32) : 0
+1/20/2015 3:53:25 PM	Entering Void .ctor(System.String, Boolean, Int32, Boolean, Int32, Int32, Int32) : 0
+1/20/2015 3:53:25 PM	Entering Void set_DeadLineMinute(Int32) : 0
+1/20/2015 3:53:25 PM	Entering System.Object Clone() : Never
+1/20/2015 3:53:25 PM	Entering System.Object Clone() : False
+1/20/2015 3:53:25 PM	Wsus Server WSUS added to the Combobox
+1/20/2015 3:53:25 PM	WPP is up and ready
+1/20/2015 3:53:28 PM	Entering Void paramètresToolStripMenuItem_Click(System.Object, System.EventArgs)
+1/20/2015 3:53:28 PM	Entering Void FrmSettings_Shown(System.Object, System.EventArgs)
+1/20/2015 3:53:28 PM	Entering Void ClearServerSettings()
+1/20/2015 3:53:28 PM	Entering Void cmbBxServerList_SelectedIndexChanged(System.Object, System.EventArgs)
+1/20/2015 3:53:28 PM	cmbBxServerList has index 0 Selected.WSUS (Local)
+1/20/2015 3:53:28 PM	Entering Void chkBxConnectToLocalServer_CheckedChanged(System.Object, System.EventArgs)
+1/20/2015 3:53:28 PM	chkBxConnectToLocalServeris True
+1/20/2015 3:53:28 PM	Entering Void cmbBxConnectionPort_SelectedIndexChanged(System.Object, System.EventArgs)
+1/20/2015 3:53:28 PM	cmbBxConnectionPort has index 0 Selected.80
+1/20/2015 3:53:39 PM	Entering Void chkBxConnectToLocalServer_CheckedChanged(System.Object, System.EventArgs)
+1/20/2015 3:53:39 PM	chkBxConnectToLocalServeris False
+1/20/2015 3:53:40 PM	Entering Void chkBxConnectToLocalServer_CheckedChanged(System.Object, System.EventArgs)
+1/20/2015 3:53:40 PM	chkBxConnectToLocalServeris True
+1/20/2015 3:54:14 PM	Entering Void btnOk_Click(System.Object, System.EventArgs)
+1/20/2015 3:54:14 PM	Entering Void btnEditServer_Click(System.Object, System.EventArgs)
+1/20/2015 3:54:14 PM	Entering Void set_Port(Int32) : 80
+1/20/2015 3:54:14 PM	Entering Void btnEditServer_Click(System.Object, System.EventArgs) : True
+1/20/2015 3:54:14 PM	Entering Void btnEditServer_Click(System.Object, System.EventArgs) : False
+1/20/2015 3:54:14 PM	Entering Void btnEditServer_Click(System.Object, System.EventArgs) : False
+1/20/2015 3:54:14 PM	Entering Void set_DeadLineDaysSpan(Int32) : 0
+1/20/2015 3:54:14 PM	Entering Void set_DeadLineHour(Int32) : 0
+1/20/2015 3:54:14 PM	Entering Void set_DeadLineMinute(Int32) : 0
+1/20/2015 3:54:14 PM	Entering Void set_VisibleInWsusConsole(MakeVisibleInWsusPolicy) : Never
+1/20/2015 3:54:14 PM	Entering Void cmbBxServerList_SelectedIndexChanged(System.Object, System.EventArgs)
+1/20/2015 3:54:14 PM	cmbBxServerList has index 0 Selected.WSUS (Local)
+1/20/2015 3:54:14 PM	Entering Void SaveSettings()
+1/20/2015 3:54:14 PM	Entering Void SaveSettings(System.Collections.Generic.List`1[Wsus_Package_Publisher.WsusServer]) : 1
+1/20/2015 3:54:14 PM	WSUS
+1/20/2015 3:54:14 PM	Entering Wsus_Package_Publisher.Credentials GetInstance()
+1/20/2015 3:54:14 PM	CredentialNotice set to : Features connecting to remote computers will use the same credentials than the application.
+1/20/2015 3:54:14 PM	Entering Void credentials_AuthentificationMethodChange()
+1/20/2015 3:54:14 PM	Entering Void credentials_AuthentificationMethodChange()
+1/20/2015 3:54:14 PM	lblCredentialNotice has for Text value : Features connecting to remote computers will use the same credentials than the application.
+1/20/2015 3:54:14 PM	Entering Void FillServerList()
+1/20/2015 3:54:14 PM	Entering System.Collections.Generic.List`1[Wsus_Package_Publisher.WsusServer] LoadServerSettings()
+1/20/2015 3:54:14 PM	Entering System.Collections.Generic.List`1[Wsus_Package_Publisher.WsusServer] LoadServerSettings()
+1/20/2015 3:54:14 PM	Entering Void set_Name(System.String) : WSUS
+1/20/2015 3:54:14 PM	Name : WSUS
+1/20/2015 3:54:14 PM	Entering Void set_IsLocal(Boolean) : True
+1/20/2015 3:54:14 PM	IsLocal : True
+1/20/2015 3:54:14 PM	Entering Void set_Port(Int32) : 80
+1/20/2015 3:54:14 PM	Port : 80
+1/20/2015 3:54:14 PM	Entering Void set_UseSSL(Boolean) : False
+1/20/2015 3:54:14 PM	UseSSL : False
+1/20/2015 3:54:14 PM	Entering Void set_IgnoreCertificateErrors(Boolean) : False
+1/20/2015 3:54:14 PM	ignoreCertErrors : False
+1/20/2015 3:54:14 PM	Entering Void set_DeadLineDaysSpan(Int32) : 0
+1/20/2015 3:54:14 PM	Entering Void set_DeadLineHour(Int32) : 0
+1/20/2015 3:54:14 PM	Entering Void set_DeadLineMinute(Int32) : 0
+1/20/2015 3:54:14 PM	Entering Void set_VisibleInWsusConsole(MakeVisibleInWsusPolicy) : Never
+1/20/2015 3:54:14 PM	Adding server : WSUS
+1/20/2015 3:54:14 PM	Returning 1 Servers.
+1/20/2015 3:54:14 PM	Entering Void .ctor(System.String, Boolean, Int32, Boolean, Int32, Int32, Int32) : WSUS, True, 80, False, 0, 0, 0
+1/20/2015 3:54:14 PM	Entering Void .ctor(System.String, Boolean, Int32, Boolean, Int32, Int32, Int32) : WSUS
+1/20/2015 3:54:14 PM	Entering Void .ctor(System.String, Boolean, Int32, Boolean, Int32, Int32, Int32) : True
+1/20/2015 3:54:14 PM	Entering Void set_Port(Int32) : 80
+1/20/2015 3:54:14 PM	Entering Void .ctor(System.String, Boolean, Int32, Boolean, Int32, Int32, Int32) : False
+1/20/2015 3:54:14 PM	Entering Void set_DeadLineDaysSpan(Int32) : 0
+1/20/2015 3:54:14 PM	Entering Void .ctor(System.String, Boolean, Int32, Boolean, Int32, Int32, Int32) : 0
+1/20/2015 3:54:14 PM	Entering Void set_DeadLineMinute(Int32) : 0
+1/20/2015 3:54:14 PM	Entering System.Object Clone() : Never
+1/20/2015 3:54:14 PM	Entering System.Object Clone() : False
+1/20/2015 3:54:14 PM	Wsus Server WSUS added to the Combobox
+1/20/2015 3:54:14 PM	Old selected server were : WSUS
+1/20/2015 3:54:14 PM	Reselecting the old server
+1/20/2015 3:54:17 PM	Entering Void ConnectToServer(System.Object, System.EventArgs)
+1/20/2015 3:54:17 PM	Entering Void ClearBeforeConnecting()
+1/20/2015 3:54:17 PM	Entering Void ClearDisplay()
+1/20/2015 3:54:17 PM	Entering Void ResetControl()
+1/20/2015 3:54:17 PM	Entering Void ClearDisplay()
+1/20/2015 3:54:17 PM	Entering Void AdjustSplitterDistance()
+1/20/2015 3:54:17 PM	Entering Void .ctor() : ComputerControl
+1/20/2015 3:54:17 PM	Entering Void .ctor() : ComputerListViewer
+1/20/2015 3:54:17 PM	Entering Wsus_Package_Publisher.Credentials GetInstance()
+1/20/2015 3:54:17 PM	Entering Wsus_Package_Publisher.WsusWrapper GetInstance()
+1/20/2015 3:54:17 PM	Entering Wsus_Package_Publisher.Credentials GetInstance()
+1/20/2015 3:54:17 PM	Entering Void .ctor() : ComputerDetailViewer
+1/20/2015 3:54:17 PM	Entering Void dtpInstalledAfter_ValueChanged(System.Object, System.EventArgs)
+1/20/2015 3:54:17 PM	Entering Void Display(System.Windows.Forms.DataGridViewSelectedRowCollection)
+1/20/2015 3:54:17 PM	Entering Void dtpInstalledAfter_ValueChanged(System.Object, System.EventArgs)
+1/20/2015 3:54:17 PM	Entering Void Display(System.Windows.Forms.DataGridViewSelectedRowCollection)
+1/20/2015 3:54:17 PM	Entering Void .ctor()
+1/20/2015 3:54:17 PM	Try connecting to : WSUS
+1/20/2015 3:54:17 PM	Entering Void StartWaitingForm(System.String)
+1/20/2015 3:54:17 PM	Entering Boolean Connect(Wsus_Package_Publisher.WsusServer, System.String) : WSUS (Local), en
+1/20/2015 3:54:19 PM	Connected to local Wsus
+1/20/2015 3:54:21 PM	Entering System.Version GetConsoleVersion()
+1/20/2015 3:54:21 PM	Entering Boolean Connect(Wsus_Package_Publisher.WsusServer, System.String) : Administrator
+1/20/2015 3:54:21 PM	Entering CertificateStatus CheckCertificateStatus(Microsoft.UpdateServices.Administration.IUpdateServerConfiguration)
+1/20/2015 3:54:21 PM	Entering System.String GetTempFolder()
+1/20/2015 3:54:21 PM	Will return : C:\Users\VSECUA~1\AppData\Local\Temp\2\WPP\2282df38-c9a8-4af8-a918-5a2f3a019f7f\
+1/20/2015 3:54:21 PM	Trying to get certificate from server.
+1/20/2015 3:54:21 PM	Successfuly got certificate from server.
+1/20/2015 3:54:21 PM	EffectiveDate : 1/20/2015 10:43:38 AM / ExpirationDate : 1/19/2020 10:43:38 AM
+1/20/2015 3:54:21 PM	Valid
+1/20/2015 3:54:21 PM	Entering Boolean Connect(Wsus_Package_Publisher.WsusServer, System.String) : Valid
+1/20/2015 3:54:21 PM	Entering Int32 CheckCertificateKeyLength(Microsoft.UpdateServices.Administration.IUpdateServerConfiguration)
+1/20/2015 3:54:21 PM	Entering System.String GetTempFolder()
+1/20/2015 3:54:21 PM	Will return : C:\Users\VSECUA~1\AppData\Local\Temp\2\WPP\56cd2274-a82a-44c6-aca7-7396bb028155\
+1/20/2015 3:54:21 PM	Entering Int32 GetCertificateKeyLength(System.String) : C:\Users\VSECUA~1\AppData\Local\Temp\2\WPP\56cd2274-a82a-44c6-aca7-7396bb028155\certificate.cer
+1/20/2015 3:54:21 PM	Will return 2048
+1/20/2015 3:54:21 PM	Will return : 2048
+1/20/2015 3:54:21 PM	Entering Boolean Connect(Wsus_Package_Publisher.WsusServer, System.String) : 2048
+1/20/2015 3:54:21 PM	Successfuly connected to Wsus server.
+1/20/2015 3:54:21 PM	This is not a Replica server.
+1/20/2015 3:54:21 PM	Entering PopulateTreeviewWithComputerGroups. With group : All Computers And node : All Computers
+1/20/2015 3:54:21 PM	Entering PopulateTreeviewWithComputerGroups. With group : Unassigned Computers And node : Unassigned Computers
+1/20/2015 3:54:21 PM	Entering PopulateTreeviewWithComputerGroups. With group : Servers Member And node : Servers Member
+1/20/2015 3:54:21 PM	Entering PopulateTreeviewWithComputerGroups. With group : Servers Core Production And node : Servers Core Production
+1/20/2015 3:54:21 PM	Entering PopulateTreeviewWithComputerGroups. With group : Servers Exchange And node : Servers Exchange
+1/20/2015 3:54:21 PM	Entering PopulateTreeviewWithComputerGroups. With group : Servers Test And node : Servers Test
+1/20/2015 3:54:21 PM	Entering PopulateTreeviewWithComputerGroups. With group : Workstations And node : Workstations
+1/20/2015 3:54:21 PM	Entering PopulateTreeviewWithComputerGroups. With group : Servers Branch And node : Servers Branch
+1/20/2015 3:54:21 PM	Entering PopulateTreeviewWithComputerGroups. With group : Servers Telecom And node : Servers Telecom
+1/20/2015 3:54:21 PM	Entering PopulateTreeviewWithComputerGroups. With group : Servers Domain Controllers And node : Servers Domain Controllers
+1/20/2015 3:54:21 PM	Entering PopulateTreeviewWithComputerGroups. With group : Testing And node : Testing
+1/20/2015 3:54:21 PM	Entering PopulateComputerGroups. With node : All Computers And computersGroup : All Computers
+1/20/2015 3:54:21 PM	Entering PopulateComputerGroups. With node : Servers Branch And computersGroup : Servers Branch
+1/20/2015 3:54:21 PM	Entering PopulateComputerGroups. With node : Servers Core Production And computersGroup : Servers Core Production
+1/20/2015 3:54:21 PM	Entering PopulateComputerGroups. With node : Servers Domain Controllers And computersGroup : Servers Domain Controllers
+1/20/2015 3:54:21 PM	Entering PopulateComputerGroups. With node : Servers Exchange And computersGroup : Servers Exchange
+1/20/2015 3:54:21 PM	Entering PopulateComputerGroups. With node : Servers Member And computersGroup : Servers Member
+1/20/2015 3:54:21 PM	Entering PopulateComputerGroups. With node : Servers Telecom And computersGroup : Servers Telecom
+1/20/2015 3:54:21 PM	Entering PopulateComputerGroups. With node : Servers Test And computersGroup : Servers Test
+1/20/2015 3:54:21 PM	Entering PopulateComputerGroups. With node : Testing And computersGroup : Testing
+1/20/2015 3:54:21 PM	Entering PopulateComputerGroups. With node : Unassigned Computers And computersGroup : Unassigned Computers
+1/20/2015 3:54:21 PM	Entering PopulateComputerGroups. With node : Workstations And computersGroup : Workstations
+1/20/2015 3:54:21 PM	Entering Void FillMetaGroups()
+1/20/2015 3:54:21 PM	Entering InitializeMetaGroups. With wsusServer : WSUS
+1/20/2015 3:54:21 PM	Entering InitializeComputerGroups With WsusServer : WSUS
+1/20/2015 3:54:21 PM	Entering Void PopulateMetaGroupNode()
+1/20/2015 3:54:21 PM	Entering Void CollectUpdates()
+1/20/2015 3:54:21 PM	Entering Void CreateNewCompany(Microsoft.UpdateServices.Administration.IUpdateCategory, Boolean)
+1/20/2015 3:54:21 PM	Adding : Adobe Systems, Inc. With ID : 94d731de-22a6-4458-dc4d-b5267de026fc
+1/20/2015 3:54:21 PM	Entering GetProductNode. For Company : Adobe Systems, Inc. and Category : Adobe Acrobat
+1/20/2015 3:54:21 PM	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : 3b36fcfd-0384-ea97-2d49-1349ae748647, Adobe Acrobat From Adobe Systems, Inc.
+1/20/2015 3:54:21 PM	Entering Void set_ProductName(System.String) : Adobe Acrobat
+1/20/2015 3:54:21 PM	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : Adobe Systems, Inc.
+1/20/2015 3:54:21 PM	Adding update : Acrobat 11.0.06 Update
+1/20/2015 3:54:21 PM	Entering GetProductNode. For Company : Adobe Systems, Inc. and Category : Adobe Reader
+1/20/2015 3:54:21 PM	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : e1d507be-497c-d8fd-61d7-b0d93ee399ca, Adobe Reader From Adobe Systems, Inc.
+1/20/2015 3:54:21 PM	Entering Void set_ProductName(System.String) : Adobe Reader
+1/20/2015 3:54:21 PM	Entering Void .ctor(System.Guid, System.String, Wsus_Package_Publisher.Company) : Adobe Systems, Inc.
+1/20/2015 3:54:22 PM	Adding update : Adobe Reader 11.0.07
+1/20/2015 3:54:22 PM	Adding update : Reader 11.0.06 Update
+1/20/2015 3:54:22 PM	Entering Void SetComputerGroups(Wsus_Package_Publisher.ComputerGroup, System.Windows.Forms.TreeNode)
+1/20/2015 3:54:22 PM	Entering Void SetComputerGroups(Wsus_Package_Publisher.ComputerGroup, System.Windows.Forms.TreeNode)
+1/20/2015 3:54:22 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : All Computers
+1/20/2015 3:54:22 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Servers Branch
+1/20/2015 3:54:22 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Servers Core Production
+1/20/2015 3:54:22 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Servers Domain Controllers
+1/20/2015 3:54:22 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Servers Exchange
+1/20/2015 3:54:22 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Servers Member
+1/20/2015 3:54:22 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Servers Telecom
+1/20/2015 3:54:22 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Servers Test
+1/20/2015 3:54:22 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Testing
+1/20/2015 3:54:22 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Unassigned Computers
+1/20/2015 3:54:22 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Workstations
+1/20/2015 3:54:22 PM	Entering Void StopWaitingForm()
+1/20/2015 3:54:22 PM	Entering Void CheckSubscriptions()
+1/20/2015 3:54:22 PM	Entering Void trvWsus_AfterSelect(System.Object, System.Windows.Forms.TreeViewEventArgs)
+1/20/2015 3:54:22 PM	Server
+1/20/2015 3:54:22 PM	Entering Void InitializeContextMenuForServer()
+1/20/2015 3:54:22 PM	Server Version is : 6.2.9200.16384
+1/20/2015 3:54:22 PM	Console Version is : 6.2.9200.16384
+1/20/2015 3:54:22 PM	Local OS is : Microsoft Windows NT 6.2.9200.0
+1/20/2015 3:54:24 PM	Entering Void trvWsus_NodeMouseClick(System.Object, System.Windows.Forms.TreeNodeMouseClickEventArgs)
+1/20/2015 3:54:25 PM	Entering Void trvWsus_NodeMouseClick(System.Object, System.Windows.Forms.TreeNodeMouseClickEventArgs)
+1/20/2015 3:54:25 PM	Entering Void trvWsus_AfterSelect(System.Object, System.Windows.Forms.TreeViewEventArgs)
+1/20/2015 3:54:25 PM	Product
+1/20/2015 3:54:25 PM	Entering Void AdjustSplitterDistance()
+1/20/2015 3:54:25 PM	Entering Void set_Product(Wsus_Package_Publisher.Product) : Adobe Acrobat
+1/20/2015 3:54:25 PM	Entering Void set_ViewedProduct(Wsus_Package_Publisher.Product) : Adobe Acrobat
+1/20/2015 3:54:25 PM	Entering Void AdjustSplitterDistance()
+1/20/2015 3:54:25 PM	Entering Void UpdateDisplay()
+1/20/2015 3:54:25 PM	Entering Void AdjustSplitterDistance()
+1/20/2015 3:54:25 PM	Adding Acrobat 11.0.06 Update
+1/20/2015 3:54:25 PM	Entering System.String GetUpdateStatus(Microsoft.UpdateServices.Administration.IUpdate) : Acrobat 11.0.06 Update
+1/20/2015 3:54:25 PM	Entering Void dgvUpdateList_SelectionChanged(System.Object, System.EventArgs)
+1/20/2015 3:54:25 PM	Entering Boolean HasSomeApprove(Microsoft.UpdateServices.Administration.UpdateCollection)
+1/20/2015 3:54:25 PM	update : Acrobat 11.0.06 Update
+1/20/2015 3:54:25 PM	Returning True
+1/20/2015 3:54:25 PM	Entering Boolean HasSomeExpired(Microsoft.UpdateServices.Administration.UpdateCollection)
+1/20/2015 3:54:25 PM	update : Acrobat 11.0.06 Update
+1/20/2015 3:54:25 PM	Returning False
+1/20/2015 3:54:25 PM	Entering Void AdjustSplitterDistance()
+1/20/2015 3:54:25 PM	Entering Void dgvUpdateList_SelectionChanged(System.Object, System.EventArgs)
+1/20/2015 3:54:25 PM	Entering Boolean HasSomeApprove(Microsoft.UpdateServices.Administration.UpdateCollection)
+1/20/2015 3:54:25 PM	update : Acrobat 11.0.06 Update
+1/20/2015 3:54:25 PM	Returning True
+1/20/2015 3:54:25 PM	Entering Boolean HasSomeExpired(Microsoft.UpdateServices.Administration.UpdateCollection)
+1/20/2015 3:54:25 PM	update : Acrobat 11.0.06 Update
+1/20/2015 3:54:25 PM	Returning False
+1/20/2015 3:54:25 PM	Entering Void UpdateSelectionChanged(System.Windows.Forms.DataGridViewSelectedRowCollection) : 1
+1/20/2015 3:54:25 PM	Adding : Acrobat 11.0.06 Update
+1/20/2015 3:54:25 PM	Entering Void set_ViewedUpdates(Microsoft.UpdateServices.Administration.UpdateCollection)
+1/20/2015 3:54:25 PM	Entering Void DisplayUpdates(Microsoft.UpdateServices.Administration.UpdateCollection)
+1/20/2015 3:54:25 PM	Entering Void ClearDisplay()
+1/20/2015 3:54:25 PM	updates count : 1
+1/20/2015 3:54:25 PM	Entering System.Windows.Forms.CheckState GetApproveState(Microsoft.UpdateServices.Administration.UpdateCollection)
+1/20/2015 3:54:25 PM	Update : Acrobat 11.0.06 Update is Approved
+1/20/2015 3:54:25 PM	nbrTrue : 1 / nbrFalse : 0
+1/20/2015 3:54:25 PM	Entering System.Windows.Forms.CheckState GetDeclineState(Microsoft.UpdateServices.Administration.UpdateCollection)
+1/20/2015 3:54:25 PM	Acrobat 11.0.06 Update is not declined
+1/20/2015 3:54:25 PM	nbrTrue : 0 / nbrFalse : 1
+1/20/2015 3:54:25 PM	Entering System.Windows.Forms.CheckState GetExpireState(Microsoft.UpdateServices.Administration.UpdateCollection)
+1/20/2015 3:54:25 PM	Acrobat 11.0.06 Update is not Expired
+1/20/2015 3:54:25 PM	nbrTrue : 0 / nbrFalse : 1
+1/20/2015 3:54:25 PM	Acrobat 11.0.06 Update is not superseded
+1/20/2015 3:54:25 PM	nbrTrue : 0 / nbrFalse : 1
+1/20/2015 3:54:25 PM	Entering System.String GetPathFromUrl(System.String) : http://wsus:8530/Content/A6/9D1B979B71C95C53CB8CAC1600542E0296A9E6A6.cab
+1/20/2015 3:54:25 PM	Returning \\wsus\WsusContent\A6\9D1B979B71C95C53CB8CAC1600542E0296A9E6A6.cab
+1/20/2015 3:54:25 PM	Entering Boolean IsUpdateServicesPackagesFolderExists(System.String) : bb352485-ab1c-4e6f-8c00-d4373f94ab9a
+1/20/2015 3:54:25 PM	Returing False
+1/20/2015 3:54:25 PM	Entering Void HighLightOnLineComputers()
+1/20/2015 3:54:25 PM	Entering InitializeContextMenuForProduct. With allowDeleteProduct = False
+1/20/2015 3:54:30 PM	Entering Void lnkLblFolder_LinkClicked(System.Object, System.Windows.Forms.LinkLabelLinkClickedEventArgs)
+1/20/2015 3:54:30 PM	Entering System.String GetPathFromUrl(System.String) : http://wsus:8530/Content/A6/9D1B979B71C95C53CB8CAC1600542E0296A9E6A6.cab
+1/20/2015 3:54:30 PM	Returning \\wsus\WsusContent\A6\9D1B979B71C95C53CB8CAC1600542E0296A9E6A6.cab
+1/20/2015 3:54:30 PM	\\wsus\WsusContent\A6\9D1B979B71C95C53CB8CAC1600542E0296A9E6A6.cab
+1/20/2015 4:01:23 PM	Entering Void createUpdatetoolStripMenuItem_Click(System.Object, System.EventArgs)
+1/20/2015 4:01:23 PM	Entering CreateNewUpdate with xmlAction : 
+1/20/2015 4:01:23 PM	Entering Void .ctor() : FrmUpdateRulesWizard
+1/20/2015 4:01:24 PM	Entering Void grpDsp1_SelectionChange(Wsus_Package_Publisher.GroupDisplayer)
+1/20/2015 4:01:24 PM	Entering Void grpDsp1_SelectionChange(Wsus_Package_Publisher.GroupDisplayer)
+1/20/2015 4:01:24 PM	Entering Void grpDsp1_SelectionChange(Wsus_Package_Publisher.GroupDisplayer)
+1/20/2015 4:01:24 PM	Entering Void grpDsp1_SelectionChange(Wsus_Package_Publisher.GroupDisplayer)
+1/20/2015 4:01:24 PM	Entering Void .ctor() : FrmUpdateFilesWizard
+1/20/2015 4:01:24 PM	Entering Void .ctor() : FrmUpdateRulesWizard
+1/20/2015 4:01:24 PM	Entering Void grpDsp1_SelectionChange(Wsus_Package_Publisher.GroupDisplayer)
+1/20/2015 4:01:24 PM	Entering Void grpDsp1_SelectionChange(Wsus_Package_Publisher.GroupDisplayer)
+1/20/2015 4:01:24 PM	Entering Void grpDsp1_SelectionChange(Wsus_Package_Publisher.GroupDisplayer)
+1/20/2015 4:01:24 PM	Entering Void grpDsp1_SelectionChange(Wsus_Package_Publisher.GroupDisplayer)
+1/20/2015 4:01:24 PM	Entering Void .ctor(System.Collections.Generic.Dictionary`2[System.Guid,Wsus_Package_Publisher.Company], Wsus_Package_Publisher.Company, Wsus_Package_Publisher.Product) : FrmUpdateWizard
+1/20/2015 4:01:24 PM	Entering Void InitializeComponent(System.Collections.Generic.Dictionary`2[System.Guid,Wsus_Package_Publisher.Company], Wsus_Package_Publisher.Company, Wsus_Package_Publisher.Product, Microsoft.UpdateServices.Administration.SoftwareDistributionPackage)
+1/20/2015 4:01:24 PM	Entering Void .ctor(System.Collections.Generic.Dictionary`2[System.Guid,Wsus_Package_Publisher.Company], Wsus_Package_Publisher.Company, Wsus_Package_Publisher.Product, Microsoft.UpdateServices.Administration.SoftwareDistributionPackage)
+1/20/2015 4:01:24 PM	Entering Void .ctor(System.Collections.Generic.Dictionary`2[System.Guid,Wsus_Package_Publisher.Company], Wsus_Package_Publisher.Company, Wsus_Package_Publisher.Product, Microsoft.UpdateServices.Administration.SoftwareDistributionPackage) : FrmUpdateInformationsWizard
+1/20/2015 4:01:24 PM	Entering Void FillPrerequisites()
+1/20/2015 4:01:24 PM	Entering Void InitializeComponent(Wsus_Package_Publisher.Company, Wsus_Package_Publisher.Product, Microsoft.UpdateServices.Administration.SoftwareDistributionPackage)
+1/20/2015 4:01:24 PM	Adobe Systems, Inc.
+1/20/2015 4:01:24 PM	Entering Void cmbBxVendorName_TextChanged(System.Object, System.EventArgs)
+1/20/2015 4:01:24 PM	cmbBxVendorName has index 0 Selected.Adobe Systems, Inc.
+1/20/2015 4:01:24 PM	Entering Void set_VendorName(System.String) : Adobe Systems, Inc.
+1/20/2015 4:01:24 PM	Entering Void cmbBxVendorName_SelectedIndexChanged(System.Object, System.EventArgs)
+1/20/2015 4:01:24 PM	cmbBxVendorName has index 0 Selected.Adobe Systems, Inc.
+1/20/2015 4:01:24 PM	Entering Wsus_Package_Publisher.Company GetCompanyFromName(System.String) : Adobe Systems, Inc.
+1/20/2015 4:01:24 PM	Returning : Adobe Systems, Inc.
+1/20/2015 4:01:24 PM	Entering Void set_VendorName(System.String) : Adobe Systems, Inc.
+1/20/2015 4:01:24 PM	Adobe Acrobat
+1/20/2015 4:01:24 PM	cmbBxProductName has index 0 Selected.Adobe Acrobat
+1/20/2015 4:01:24 PM	Entering Void set_ProductName(System.String) : Adobe Acrobat
+1/20/2015 4:01:24 PM	Entering Void EnableSupersedesControl()
+1/20/2015 4:01:24 PM	Entering Wsus_Package_Publisher.Company GetCompanyFromName(System.String) : Adobe Systems, Inc.
+1/20/2015 4:01:24 PM	Returning : Adobe Systems, Inc.
+1/20/2015 4:01:24 PM	cmbBxProductName has index 0 Selected.Adobe Acrobat
+1/20/2015 4:01:24 PM	Entering Void set_ProductName(System.String) : Adobe Acrobat
+1/20/2015 4:01:24 PM	Entering Void EnableSupersedesControl()
+1/20/2015 4:01:24 PM	Entering Wsus_Package_Publisher.Company GetCompanyFromName(System.String) : Adobe Systems, Inc.
+1/20/2015 4:01:24 PM	Returning : Adobe Systems, Inc.
+1/20/2015 4:01:24 PM	Entering Void InitializeUpdateFilesWizard()
+1/20/2015 4:01:24 PM	Entering Void FrmUpdateWizard_Shown(System.Object, System.EventArgs)
+1/20/2015 4:01:24 PM	CurrentDirectory is : C:\Program Files (x86)\WSUS Package Publisher
+1/20/2015 4:01:25 PM	Entering Void btnBrowseUpdateFile_Click(System.Object, System.EventArgs)
+1/20/2015 4:01:27 PM	Entering Void txtBxUpdateFile_TextChanged(System.Object, System.EventArgs)
+1/20/2015 4:01:27 PM	Setting UpdateFileName : C:\Users\*******\Desktop\Java 7 Update 72\jre1.7.0_72.msi
+1/20/2015 4:01:27 PM	Entering Void SetFileType(System.String) : .msi
+1/20/2015 4:01:27 PM	Setting File Type : WindowsInstaller
+1/20/2015 4:01:27 PM	Update File : C:\Users\******\Desktop\Java 7 Update 72\jre1.7.0_72.msi
+1/20/2015 4:01:29 PM	Entering Void updateFilesWizard_btnNext_Click(System.Object, System.EventArgs)
+1/20/2015 4:01:29 PM	Msi Code : {26A24AE4-039D-4CA4-87B4-2F03217072FF}
+1/20/2015 4:01:29 PM	Msi Vendor : Oracle
+1/20/2015 4:01:29 PM	MSi Product : Java 7 Update 72
+1/20/2015 4:01:29 PM	Entering Void InitializeUpdateLevelwithXml(System.String)
+1/20/2015 4:01:29 PM	XML at UpdateLevel : <msiar:MsiProductInstalled ProductCode="{26A24AE4-039D-4CA4-87B4-2F03217072FF}"/>
+1/20/2015 4:01:29 PM	Entering Wsus_Package_Publisher.RulesGroup ParseXml(Wsus_Package_Publisher.RulesGroup, System.String, Boolean) : <msiar:MsiProductInstalled ProductCode="{26A24AE4-039D-4CA4-87B4-2F03217072FF}"/>
+1/20/2015 4:01:29 PM	Entering Wsus_Package_Publisher.GenericRule GetSelectedForm(System.Object) : Msi Product Installed
+1/20/2015 4:01:29 PM	Rule Type : Wsus_Package_Publisher.RuleMsiProductInstalled
+1/20/2015 4:01:29 PM	Entering System.Collections.Generic.Dictionary`2[System.String,System.String] GetAttributes(System.Xml.XmlTextReader)
+1/20/2015 4:01:29 PM	Adding Attributes : ProductCode = {26A24AE4-039D-4CA4-87B4-2F03217072FF}
+1/20/2015 4:01:29 PM	Entering Void grpDsp1_SelectionChange(Wsus_Package_Publisher.GroupDisplayer)
+1/20/2015 4:01:29 PM	Entering Void grpDsp1_SelectionChange(Wsus_Package_Publisher.GroupDisplayer)
+1/20/2015 4:01:29 PM	Entering Void InitializeUpdateLevelwithXml(System.String)
+1/20/2015 4:01:29 PM	XML at UpdateLevel : <lar:Not><msiar:MsiProductInstalled ProductCode="{26A24AE4-039D-4CA4-87B4-2F03217072FF}"/></lar:Not>
+1/20/2015 4:01:29 PM	Entering Wsus_Package_Publisher.RulesGroup ParseXml(Wsus_Package_Publisher.RulesGroup, System.String, Boolean) : <lar:Not><msiar:MsiProductInstalled ProductCode="{26A24AE4-039D-4CA4-87B4-2F03217072FF}"/></lar:Not>
+1/20/2015 4:01:29 PM	Entering Wsus_Package_Publisher.GenericRule GetSelectedForm(System.Object) : Msi Product Installed
+1/20/2015 4:01:29 PM	Rule Type : Wsus_Package_Publisher.RuleMsiProductInstalled
+1/20/2015 4:01:29 PM	Entering System.Collections.Generic.Dictionary`2[System.String,System.String] GetAttributes(System.Xml.XmlTextReader)
+1/20/2015 4:01:29 PM	Adding Attributes : ProductCode = {26A24AE4-039D-4CA4-87B4-2F03217072FF}
+1/20/2015 4:01:29 PM	Entering Void grpDsp1_SelectionChange(Wsus_Package_Publisher.GroupDisplayer)
+1/20/2015 4:01:29 PM	Entering Void grpDsp1_SelectionChange(Wsus_Package_Publisher.GroupDisplayer)
+1/20/2015 4:01:29 PM	Entering Void InitializeVendorName(System.String) : Oracle
+1/20/2015 4:01:29 PM	Not found : Oracle
+1/20/2015 4:01:29 PM	Entering Void cmbBxVendorName_TextChanged(System.Object, System.EventArgs)
+1/20/2015 4:01:29 PM	cmbBxVendorName has index -1 Selected.
+1/20/2015 4:01:29 PM	cmbBxProductName has index 0 Selected.Adobe Acrobat
+1/20/2015 4:01:29 PM	Entering Void set_ProductName(System.String) : 
+1/20/2015 4:01:29 PM	Entering Void set_VendorName(System.String) : 
+1/20/2015 4:01:29 PM	Entering Void cmbBxVendorName_SelectedIndexChanged(System.Object, System.EventArgs)
+1/20/2015 4:01:29 PM	cmbBxVendorName has index -1 Selected.
+1/20/2015 4:01:29 PM	Entering Void cmbBxVendorName_TextChanged(System.Object, System.EventArgs)
+1/20/2015 4:01:29 PM	cmbBxVendorName has index -1 Selected.
+1/20/2015 4:01:29 PM	Entering Void set_VendorName(System.String) : Oracle
+1/20/2015 4:01:29 PM	Entering Void set_Title(System.String) : Java 7 Update 72
+1/20/2015 4:01:29 PM	Entering Void RemoveTransformsCommand()
+1/20/2015 4:01:29 PM	Entering Void InitializeInformationsWizard() : False
+1/20/2015 4:01:31 PM	cmbBxProductName has index -1 Selected.
+1/20/2015 4:01:31 PM	Entering Void set_ProductName(System.String) : j
+1/20/2015 4:01:31 PM	Entering Void EnableSupersedesControl()
+1/20/2015 4:01:31 PM	cmbBxProductName has index -1 Selected.
+1/20/2015 4:01:31 PM	Entering Void set_ProductName(System.String) : ja
+1/20/2015 4:01:31 PM	Entering Void EnableSupersedesControl()
+1/20/2015 4:01:32 PM	cmbBxProductName has index -1 Selected.
+1/20/2015 4:01:32 PM	Entering Void set_ProductName(System.String) : jav
+1/20/2015 4:01:32 PM	Entering Void EnableSupersedesControl()
+1/20/2015 4:01:33 PM	cmbBxProductName has index -1 Selected.
+1/20/2015 4:01:33 PM	Entering Void set_ProductName(System.String) : java
+1/20/2015 4:01:33 PM	Entering Void EnableSupersedesControl()
+1/20/2015 4:01:35 PM	Entering Void updateInformationsWizard_btnNext_Click(System.Object, System.EventArgs)
+1/20/2015 4:01:35 PM	Entering Void InitializeUpdateIsInstalledRulesWizard()
+1/20/2015 4:01:37 PM	Entering Void updateIsInstalledRulesWizard_btnNext_Click(System.Object, System.EventArgs)
+1/20/2015 4:01:37 PM	Entering Void InitializeUpdateIsInstallableRulesWizard()
+1/20/2015 4:01:39 PM	Entering Void updateIsInstallableRulesWizard_btnNext_Click(System.Object, System.EventArgs)
+1/20/2015 4:01:39 PM	Entering Void InitializeUpdateApplicabilityMetadata()
+1/20/2015 4:01:39 PM	Entering Void InitializeUpdateApplicabilityMetadata()
+1/20/2015 4:01:39 PM	Entering System.String GetApplicabilityMetadata(Wsus_Package_Publisher.FrmUpdateFilesWizard)
+1/20/2015 4:01:40 PM	Entering Void .ctor(Wsus_Package_Publisher.FrmUpdateFilesWizard, Wsus_Package_Publisher.FrmUpdateInformationsWizard, Wsus_Package_Publisher.FrmUpdateRulesWizard, Wsus_Package_Publisher.FrmUpdateRulesWizard, Wsus_Package_Publisher.FrmUpdateApplicabilityMetadata) : FrmUpdatePublisher
+1/20/2015 4:01:40 PM	Entering Void .ctor(Wsus_Package_Publisher.FrmUpdateFilesWizard, Wsus_Package_Publisher.FrmUpdateInformationsWizard, Wsus_Package_Publisher.FrmUpdateRulesWizard, Wsus_Package_Publisher.FrmUpdateRulesWizard, Wsus_Package_Publisher.FrmUpdateApplicabilityMetadata)
+1/20/2015 4:01:40 PM	Entering Void Publish()
+1/20/2015 4:01:40 PM	Entering Void PresetVisibleInWsusConsoleChkBx()
+1/20/2015 4:01:40 PM	Wsus Is Local : True
+1/20/2015 4:01:40 PM	chkBxVisibleInWsusConsoleis False
+1/20/2015 4:01:40 PM	Entering Microsoft.UpdateServices.Administration.IUpdate PublishUpdate(Wsus_Package_Publisher.FrmUpdateFilesWizard, Wsus_Package_Publisher.FrmUpdateInformationsWizard, Wsus_Package_Publisher.FrmUpdateRulesWizard, Wsus_Package_Publisher.FrmUpdateRulesWizard, Wsus_Package_Publisher.FrmUpdateApplicabilityMetadata)
+1/20/2015 4:01:40 PM	File Type : WindowsInstaller
+1/20/2015 4:01:40 PM	Entering Microsoft.UpdateServices.Administration.SoftwareDistributionPackage InitializeSdp(Microsoft.UpdateServices.Administration.SoftwareDistributionPackage, Wsus_Package_Publisher.FrmUpdateFilesWizard, Wsus_Package_Publisher.FrmUpdateInformationsWizard, Wsus_Package_Publisher.FrmUpdateRulesWizard, Wsus_Package_Publisher.FrmUpdateRulesWizard)
+1/20/2015 4:01:40 PM	Entering System.String GetXmlFormattedUpdateLevelRule()
+1/20/2015 4:01:40 PM	Entering System.String GetXmlFormattedUpdateLevelRule()
+1/20/2015 4:01:40 PM	Entering System.String GetXmlFormattedPackageLevelRule()
+1/20/2015 4:01:40 PM	Entering System.String GetXmlFormattedPackageLevelRule()
+1/20/2015 4:01:40 PM	Entering Boolean IsValideURL(System.String) : 
+1/20/2015 4:01:40 PM	Returning false
+1/20/2015 4:01:40 PM	Entering Boolean IsValideURL(System.String) : 
+1/20/2015 4:01:40 PM	Returning false
+1/20/2015 4:01:40 PM	Entering System.Collections.Generic.List`1[System.Guid] GetSupersedes()
+1/20/2015 4:01:40 PM	Entering System.Collections.Generic.List`1[System.Guid] GetPrerequisites()
+1/20/2015 4:01:40 PM	Entering System.String GetTempFolder()
+1/20/2015 4:01:40 PM	Will return : C:\Users\VSECUA~1\AppData\Local\Temp\2\WPP\cd2da40b-045b-426c-9145-bb2b7111ef84\
+1/20/2015 4:01:40 PM	Entering Void CheckMaxFileSize(System.String)
+1/20/2015 4:01:40 PM	Saving Sdp : <sdp:SoftwareDistributionPackage 
+ xmlns="http://www.w3.org/2001/XMLSchema"
+ xmlns:bar="http://schemas.microsoft.com/wsus/2005/04/CorporatePublishing/BaseApplicabilityRules.xsd"
+ xmlns:bt="http://schemas.microsoft.com/wsus/2005/04/CorporatePublishing/BaseTypes.xsd"
+ xmlns:cmd="http://schemas.microsoft.com/wsus/2005/04/CorporatePublishing/Installers/CommandLineInstallation.xsd"
+ xmlns:lar="http://schemas.microsoft.com/wsus/2005/04/CorporatePublishing/LogicalApplicabilityRules.xsd"
+ xmlns:msi="http://schemas.microsoft.com/wsus/2005/04/CorporatePublishing/Installers/MsiInstallation.xsd"
+ xmlns:msiar="http://schemas.microsoft.com/wsus/2005/04/CorporatePublishing/MsiApplicabilityRules.xsd"
+ xmlns:msp="http://schemas.microsoft.com/wsus/2005/04/CorporatePublishing/Installers/MspInstallation.xsd"
+ xmlns:sdp="http://schemas.microsoft.com/wsus/2005/04/CorporatePublishing/SoftwareDistributionPackage.xsd"
+ xmlns:uei="http://schemas.microsoft.com/wsus/2005/04/CorporatePublishing/Installers/UpdateExeInstallation.xsd"
+ xmlns:usp="http://schemas.microsoft.com/wsus/2005/04/CorporatePublishing/UpdateServicesPackage.xsd"
+ xmlns:drv="http://schemas.microsoft.com/wsus/2005/04/CorporatePublishing/Installers/WindowsDriver.xsd"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  SchemaVersion="1.2"><sdp:Properties PackageID="0cd60efd-d864-409e-9712-2563c6270d6d" CreationDate="2015-01-20T21:01:40.654Z" VendorName="Oracle" PublicationState="Published" CanSourceBeRequired="false" UpdateType="Software"><sdp:ProductName>java</sdp:ProductName></sdp:Properties><sdp:LocalizedProperties><sdp:Language>en</sdp:Language><sdp:Title>Java 7 Update 72</sdp:Title><sdp:Description>No description available.</sdp:Description></sdp:LocalizedProperties><sdp:ApplicationSpecificData /><sdp:IsInstallable><lar:Not>
+<msiar:MsiProductInstalled ProductCode="{26a24ae4-039d-4ca4-87b4-2f03217072ff}"/>
+</lar:Not></sdp:IsInstallable><sdp:IsInstalled><msiar:MsiProductInstalled ProductCode="{26a24ae4-039d-4ca4-87b4-2f03217072ff}"/></sdp:IsInstalled><sdp:InstallableItem ID="d459ae60-17b9-414c-97a6-5bbf947e63cc" ><sdp:ApplicabilityRules><sdp:IsInstalled><msiar:MsiApplicationInstalled /></sdp:IsInstalled><sdp:IsSuperseded><msiar:MsiApplicationSuperseded /></sdp:IsSuperseded><sdp:IsInstallable><msiar:MsiApplicationInstallable /></sdp:IsInstallable><sdp:Metadata><msiar:MsiApplicationMetadata><msiar:ProductCode>{26a24ae4-039d-4ca4-87b4-2f03217072ff}</msiar:ProductCode></msiar:MsiApplicationMetadata></sdp:Metadata></sdp:ApplicabilityRules><sdp:InstallProperties CanRequestUserInput="false" RequiresNetworkConnectivity="false" Impact="Normal" RebootBehavior="CanRequestReboot" /><sdp:UninstallProperties CanRequestUserInput="false" RequiresNetworkConnectivity="false" Impact="Normal" RebootBehavior="CanRequestReboot" /><msi:MsiInstallerData ProductCode="{26a24ae4-039d-4ca4-87b4-2f03217072ff}" MsiFile="jre1.7.0_72.msi"/></sdp:InstallableItem></sdp:SoftwareDistributionPackage>
+
+1/20/2015 4:01:40 PM	**** System.ComponentModel.Win32Exception : CreateDirectory failed
+1/20/2015 4:02:43 PM	Entering Void btnOk_Click(System.Object, System.EventArgs)
+1/20/2015 4:02:43 PM	Entering Void Close(System.Object, System.EventArgs)
+1/20/2015 4:02:45 PM	Entering Void .ctor() : FrmSendDebugInfo
+1/20/2015 4:02:47 PM	Entering Void lnkLblShowInformations_LinkClicked(System.Object, System.Windows.Forms.LinkLabelLinkClickedEventArgs)

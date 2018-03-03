@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1470085",
+    "ThreadId": "653563",
+    "Html": "We just implementet the Newest Flash Player PlugIns into WPP and WSUS. Some Clients have problems with the instllations of the packages and some not.\r<br />\nHere are the some entries from the Windows Update Log:\r<br />\n2016-04-13\t14:47:11:624\t1116\t1af8\tReport\tREPORT EVENT: {EA9CB91B-04B9-444B-8ADA-DCB5A46A3925}\t2016-04-13 14:46:43:035+0200\t1\t181\t101\t{5AA1188A-9903-4644-AF95-19CD9BC80A6B}\t1\t0\tAutomaticUpdates\tSuccess\tContent Install\tInstallation Started: Windows successfully started the following update: Adobe Flash Player 21 NPAPI\r<br />\n2016-04-13\t14:47:11:624\t1116\t1af8\tReport\tREPORT EVENT: {1D536A08-0FEF-4C37-B5DA-CC3618F625DB}\t2016-04-13 14:46:43:790+0200\t1\t182\t101\t{5AA1188A-9903-4644-AF95-19CD9BC80A6B}\t1\t80070643\tAutomaticUpdates\tFailure\tContent Install\tInstallation Failure: Windows failed to install the following update with error 0x80070643: Adobe Flash Player 21 NPAPI.\r<br />\n2016-04-13\t14:47:11:624\t1116\t1af8\tReport\tREPORT EVENT: {FE0F30C8-8021-45E9-8C96-7C917927D17A}\t2016-04-13 14:46:43:792+0200\t1\t181\t101\t{833E96C4-D6DC-466A-BEC9-1B7EC73C66D8}\t1\t0\tAutomaticUpdates\tSuccess\tContent Install\tInstallation Started: Windows successfully started the following update: Adobe Flash Player 21 ActiveX\r<br />\n2016-04-13\t14:47:11:624\t1116\t1af8\tReport\tREPORT EVENT: {A4F14476-DBFE-47AC-982B-C40F1331B9BB}\t2016-04-13 14:46:44:455+0200\t1\t182\t101\t{833E96C4-D6DC-466A-BEC9-1B7EC73C66D8}\t1\t80070643\tAutomaticUpdates\tFailure\tContent Install\tInstallation Failure: Windows failed to install the following update with error 0x80070643: Adobe Flash Player 21 ActiveX.\r<br />\n<br />\nWe also tried first to uninstall the existing old Flash Player Version and install then the packages, but the result is the same.<br />\n",
+    "PostedDate": "2016-04-14T00:07:30.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1470088",
+    "ThreadId": "653563",
+    "Html": "Maybe there is a browser Session open? Then installation will failed.\r<br />\n<br />\nTry to install manually, it failed too?<br />\n",
+    "PostedDate": "2016-04-14T00:35:35.533-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1470144",
+    "ThreadId": "653563",
+    "Html": "Hi,\r<br />\n<br />\nat the installation time wasnt any browser open. Tried now to install the msi files manually but it failed also. At the manually install try the installer tries to deinstall the previous version, but this version is already deinstalled. So we tried to run the deinstaller from Adobe. But it looks like that still some data from the previous version are there. The installer show the error 6B2.<br />\n",
+    "PostedDate": "2016-04-14T07:17:56.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1470155",
+    "ThreadId": "653563",
+    "Html": "We had the same problem with one client, we did a new install from OS with all prgrams. <br />\n",
+    "PostedDate": "2016-04-14T08:11:20.63-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "Id": "1250449",
+    "ThreadId": "546816",
+    "Html": "I have followed all guides setup software deployments etc. &amp; everything seems good until i start to deploy any updates to the client machines.  I get an error 'Failed to copy this file'.  I can confirm the windows Firewall service is disabled on both the target machine and server and there is no corporate firewall between the machine and the server.<br />\n",
+    "PostedDate": "2014-05-28T06:34:15.827-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1250464",
+    "ThreadId": "546816",
+    "Html": "Pls tell us step by step what you are doing. \r<br />\n<br />\nDid you got the error if you are click on publish the update or before or after or on the client?<br />\n",
+    "PostedDate": "2014-05-28T06:58:03.173-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1250474",
+    "ThreadId": "546816",
+    "Html": "The updates as far as i can tell are published successfully and seemed to be approved ok when i carried out the action to approve to the relevant machine groups. \r<br />\nI noticed that the updates were showing as failed when checking the report even though the clients were online and scheduled to get the updates today.\r<br />\n<br />\nThe operation that reports the error is as follows:\r<br />\nUnder updates for flash i navigate to the relevant update for Flash Plugin, in right hand window I select the status tab, find a machine that is online (a colleague next to me) the status shows as failed.  I right click the machine and select install this update, the wizard appears and at that point i get <strong>Failed to copy this file</strong> error.  If required i can provide screenshots etc. thanks<br />\n",
+    "PostedDate": "2014-05-28T07:17:42.183-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1250531",
+    "ThreadId": "546816",
+    "Html": "<strong>Mewes wrote:</strong><br />\n<blockquote>\nThe updates as far as i can tell are published successfully and seemed to be approved ok when i carried out the action to approve to the relevant machine groups. <br />\nI noticed that the updates were showing as failed when checking the report even though the clients were online and scheduled to get the updates today.<br />\n</blockquote>\nTry on a machine to run windows update and try to install the published update. If it fail, look in %windir%\\WindowsUpdate.log for error messages.<br />\n<blockquote>\nThe operation that reports the error is as follows:<br />\nUnder updates for flash i navigate to the relevant update for Flash Plugin, in right hand window I select the status tab, find a machine that is online (a colleague next &gt; to me) the status shows as failed.  I right click the machine and select install this update, the wizard appears and at that point i get <strong>Failed to copy this file</strong> error.  If &gt; required i can provide screenshots etc. thanks<br />\n</blockquote>\nDid you use the MSI from the flash player from adobe or are you using the exe?<br />\n",
+    "PostedDate": "2014-05-28T09:07:26.48-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1250592",
+    "ThreadId": "546816",
+    "Html": "Hi, there is two problems here :<br />\n<ul>\n<li>\nFirst, updates didn't install on clients computers. This can be due to certificate issue. Please, on a client computer that didin't install updates, go to C:\\Windows\\ and open the file WindowsUpdate.log. Look for error message (or copy/paste the last update session here)<br />\n</li>\n<li>\nSecond, you can't use the option &quot;install this update&quot;. The error message can mean that you don't have administrative privileges on remote computer. Which credential are you using to run WPP ? Do you have specified credentials in the Tools - &gt;Settings -&gt; Authentifiaction settings ?<br />\n</li>\n</ul>\n",
+    "PostedDate": "2014-05-28T12:04:58.813-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1250762",
+    "ThreadId": "546816",
+    "Html": "To answer the questions posted.\r<br />\n<br />\nI used the Catalog function to get updates from Adobe then imported them into the Publishing Software, to be honest i am not quite sure how this pulls in the install files best guess would be it uses the MSI although i cannot be sure, i will check and get back to you.\r<br />\n<br />\nI didnt use the certificate funtion as our domain doesn't completely use these at present although we are planning to lock everything down to certificates using the CA very soon as part of a major overhaul.\r<br />\n<br />\nfollowing is the update log from a failed client. \r<br />\n<br />\n2014-05-29\t08:43:48:206\t1080\t11e0\tDnldMgr\t** START **  DnldMgr: Downloading updates [CallerId = AutomaticUpdates]\r<br />\n2014-05-29\t08:43:48:206\t1080\t11e0\tDnldMgr\t*********\r<br />\n2014-05-29\t08:43:48:206\t1080\t11e0\tDnldMgr\t  * Call ID = {9FC73A8B-9516-4FF9-A807-25E952C5FF32}\r<br />\n2014-05-29\t08:43:48:206\t1080\t11e0\tDnldMgr\t  * Priority = 2, Interactive = 0, Owner is system = 1, Explicit proxy = 0, Proxy session id = -1, ServiceId = {3DA21691-E39D-4DA6-8A4B-B43877BCB1B7}\r<br />\n2014-05-29\t08:43:48:206\t1080\t11e0\tDnldMgr\t  * Updates to download = 1\r<br />\n2014-05-29\t08:43:48:206\t1080\t11e0\tAgent\t  *   Title = Adobe Flash Player 32-bit/64-bit ActiveX 13.0.0.214\r<br />\n2014-05-29\t08:43:48:206\t1080\t11e0\tAgent\t  *   UpdateId = {F2A02435-7F3A-4C84-A399-80CC4603CBBD}.1\r<br />\n2014-05-29\t08:43:48:206\t1080\t11e0\tDnldMgr\t***********  DnldMgr: New download job [UpdateId = {F2A02435-7F3A-4C84-A399-80CC4603CBBD}.1]  ***********\r<br />\n2014-05-29\t08:43:48:206\t1080\t11e0\tDnldMgr\t  * Queueing update for download handler request generation.\r<br />\n2014-05-29\t08:43:48:206\t1080\t11e0\tDnldMgr\tGenerating download request for update {F2A02435-7F3A-4C84-A399-80CC4603CBBD}.1\r<br />\n2014-05-29\t08:43:48:268\t1080\t11e0\tDnldMgr\t***********  DnldMgr: New download job [UpdateId = {F2A02435-7F3A-4C84-A399-80CC4603CBBD}.1]  ***********\r<br />\n2014-05-29\t08:43:48:362\t1080\t11e0\tDnldMgr\t  * BITS job initialized, JobId = {A66AE67E-BCCD-426C-944A-15D8E1A2C73B}\r<br />\n2014-05-29\t08:43:48:518\t1080\t11e0\tDnldMgr\t  * Downloading from <a href=\"http://xxxxxxxxxx.xxxxx.xxxxxxxxx.xxx.xx/Content/D8/C5D1D3E245C7358B811E0A515044496F22A891D8.cab\" rel=\"nofollow\">http://xxxxxxxxxx.xxxxx.xxxxxxxxx.xxx.xx/Content/D8/C5D1D3E245C7358B811E0A515044496F22A891D8.cab</a> to C:\\Windows\\SoftwareDistribution\\Download\\70901396e80ca9466a79b3ec2033eb1d\\80d68140-00e9-4e71-bf93-6bab756a8aad_1.cab (full file).\r<br />\n2014-05-29\t08:43:48:642\t1080\t11e0\tAgent\t*********\r<br />\n2014-05-29\t08:43:48:642\t1080\t11e0\tAgent\t**  END  **  Agent: Downloading updates [CallerId = AutomaticUpdates]\r<br />\n2014-05-29\t08:43:48:642\t1080\t11e0\tAgent\t*************\r<br />\n2014-05-29\t08:43:52:388\t1080\t11e0\tReport\tREPORT EVENT: {8FBB38EC-D604-47EA-BC88-7FCF3F5970BB}\t2014-05-29 08:43:47:379+0100\t1\t147\t101\t{00000000-0000-0000-0000-000000000000}\t0\t0\tAutomaticUpdates\tSuccess\tSoftware Synchronization\tWindows Update Client successfully detected 1 updates.\r<br />\n2014-05-29\t08:43:52:388\t1080\t11e0\tReport\tREPORT EVENT: {422E64A5-853F-4B65-8F77-F73B4CF2335C}\t2014-05-29 08:43:47:379+0100\t1\t156\t101\t{00000000-0000-0000-0000-000000000000}\t0\t0\tAutomaticUpdates\tSuccess\tPre-Deployment Check\tReporting client status.\r<br />\n2014-05-29\t08:43:52:388\t1080\t11e0\tReport\tCWERReporter finishing event handling. (00000000)\r<br />\n2014-05-29\t08:44:02:482\t1080\t16e0\tAU\tWindows Update is disabled by policy for user\r<br />\n2014-05-29\t08:44:02:482\t1080\t16e0\tAU\tWARNING: AU found no suitable session to launch client in\r<br />\n2014-05-29\t08:44:05:961\t1080\t1308\tDnldMgr\tBITS job {A66AE67E-BCCD-426C-944A-15D8E1A2C73B} completed successfully\r<br />\n2014-05-29\t08:44:06:086\t1080\t1308\tMisc\tValidating signature for C:\\Windows\\SoftwareDistribution\\Download\\70901396e80ca9466a79b3ec2033eb1d\\80d68140-00e9-4e71-bf93-6bab756a8aad_1.cab:\r<br />\n2014-05-29\t08:44:06:164\t1080\t1308\tMisc\tWARNING: Error: 0x800b0109 when verifying trust for C:\\Windows\\SoftwareDistribution\\Download\\70901396e80ca9466a79b3ec2033eb1d\\80d68140-00e9-4e71-bf93-6bab756a8aad_1.cab\r<br />\n2014-05-29\t08:44:06:164\t1080\t1308\tMisc\tWARNING: Digital Signatures on file C:\\Windows\\SoftwareDistribution\\Download\\70901396e80ca9466a79b3ec2033eb1d\\80d68140-00e9-4e71-bf93-6bab756a8aad_1.cab are not trusted: Error 0x800b0109\r<br />\n2014-05-29\t08:44:06:164\t1080\t1308\tDnldMgr\tWARNING: File failed postprocessing, error = 800b0109\r<br />\n2014-05-29\t08:44:06:164\t1080\t1308\tDnldMgr\tFailed file: URL = '<a href=\"http://xxxxxxxxxx.xxxxx.xxxxxxxxx.xxx.xx/Content/D8/C5D1D3E245C7358B811E0A515044496F22A891D8.cab\" rel=\"nofollow\">http://xxxxxxxxxx.xxxxx.xxxxxxxxx.xxx.xx/Content/D8/C5D1D3E245C7358B811E0A515044496F22A891D8.cab</a>', Local path = 'C:\\Windows\\SoftwareDistribution\\Download\\70901396e80ca9466a79b3ec2033eb1d\\80d68140-00e9-4e71-bf93-6bab756a8aad_1.cab'\r<br />\n2014-05-29\t08:44:06:164\t1080\t1308\tDnldMgr\tError 0x800b0109 occurred while downloading update; notifying dependent calls.\r<br />\n2014-05-29\t08:44:06:288\t1080\t1524\tAU\t&gt;&gt;##  RESUMED  ## AU: Download update [UpdateId = {F2A02435-7F3A-4C84-A399-80CC4603CBBD}]\r<br />\n2014-05-29\t08:44:06:288\t1080\t1524\tAU\t  # WARNING: Download failed, error = 0x800B0109\r<br />\n2014-05-29\t08:44:06:288\t1080\t1524\tAU\t#########\r<br />\n2014-05-29\t08:44:06:288\t1080\t1524\tAU\t##  END  ##  AU: Download updates\r<br />\n2014-05-29\t08:44:06:288\t1080\t1524\tAU\t#############<br />\n",
+    "PostedDate": "2014-05-29T01:36:28.933-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1250771",
+    "ThreadId": "546816",
+    "Html": "You have to create a certificate and publish the certificate to all clients/Servers. Without certificate = no 3rd Party Updates publishing to clients/servers.\r<br />\n<br />\n<br />\nWARNING: Digital Signatures on file C:\\Windows\\SoftwareDistribution\\Download\\70901396e80ca9466a79b3ec2033eb1d\\80d68140-00e9-4e71-bf93-6bab756a8aad_1.cab <strong>are not trusted: Error 0x800b0109</strong><br />\n",
+    "PostedDate": "2014-05-29T02:16:32.153-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1250779",
+    "ThreadId": "546816",
+    "Html": "Ok.  As this is a domain based machine should i generate a Code Signing Certificate from the software?  I can confirm that we have no Code Signing Certificate on the domain at present.<br />\n\r<br />\nIf this is the case i will follow the instructions for generation of the Code Signing Certificate, restart the WSUS server, add it to the MMC Certificates area then publish it via GPO to the client machines, i will test again tomorrow once the GPOs are fully deployed and then advise of the results. \r<br />\n<br />\nThanks for the help.<br />\n",
+    "PostedDate": "2014-05-29T02:48:04.567-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1250831",
+    "ThreadId": "546816",
+    "Html": "Hi, as Adobe Flash Player has been successfuly publish into your Wsus server, this mean that there is already a code signin certificate on the Wsus server.\r<br />\nThe certificate of the root authority has to be distribute to client computers. Client computers has to be enable to trust 3rd party Publisher :\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AcceptTrustedPublisherCerts should be set to 1\r<br />\nThere is a GPO for this.<br />\n",
+    "PostedDate": "2014-05-29T05:32:08.653-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-29T08:53:28.317-07:00"
+  },
+  {
+    "Id": "1250851",
+    "ThreadId": "546816",
+    "Html": "Thanks for all the help.  I have regenerated the cert, added it to the mmc on the wsus box, amended all the relevant GPOs (Certificate &amp; 3rd party parts) for WSUS as required per guide, i can now see the update in windows update on my client machine for Adboe Reader and from the sub menu on the software for pending updates (flash player is already up to date on my machine)  When i try to install the update it would appear to download it ok but it fails on my client machine at this point.\r<br />\n<br />\nWe have WSUS set for scheduled updates via GPOs at specific times for specific machine OUs etc and mine is one of those that are fixed for a Wednesday only.  Would this be problem?  The log would show that the update is set to install on the 4th June (Wednesday next week)  I have included the log below from the latest attempt at the install.\r<br />\n<br />\n2014-05-29\t14:14:23:765\t1284\tab0\tAU\t#############\r<br />\n2014-05-29\t14:14:23:765\t1284\tab0\tAU\t## START ##  AU: Search for updates\r<br />\n2014-05-29\t14:14:23:765\t1284\tab0\tAU\t#########\r<br />\n2014-05-29\t14:14:23:765\t1284\tab0\tAU\t&lt;&lt;## SUBMITTED ## AU: Search for updates [CallId = {8CA12A9B-D7D7-4A38-B01C-9C076983CD62}]\r<br />\n2014-05-29\t14:14:23:765\t1284\t122c\tAgent\t*************\r<br />\n2014-05-29\t14:14:23:765\t1284\t122c\tAgent\t** START **  Agent: Finding updates [CallerId = AutomaticUpdates]\r<br />\n2014-05-29\t14:14:23:765\t1284\t122c\tAgent\t*********\r<br />\n2014-05-29\t14:14:23:765\t1284\t122c\tAgent\t  * Online = No; Ignore download priority = No\r<br />\n2014-05-29\t14:14:23:765\t1284\t122c\tAgent\t  * Criteria = &quot;IsInstalled=0 and DeploymentAction='Installation' or IsPresent=1 and DeploymentAction='Uninstallation' or IsInstalled=1 and DeploymentAction='Installation' and RebootRequired=1 or IsInstalled=0 and DeploymentAction='Uninstallation' and RebootRequired=1&quot;\r<br />\n2014-05-29\t14:14:23:765\t1284\t122c\tAgent\t  * ServiceID = {3DA21691-E39D-4DA6-8A4B-B43877BCB1B7} Managed\r<br />\n2014-05-29\t14:14:23:765\t1284\t122c\tAgent\t  * Search Scope = {Machine}\r<br />\n2014-05-29\t14:14:26:682\t1284\t122c\tAgent\t  * Added update {C011BB2D-536F-40CF-92EA-EF51C754B8C5}.1 to search result\r<br />\n2014-05-29\t14:14:26:682\t1284\t122c\tAgent\t  * Found 1 updates and 82 categories in search; evaluated appl. rules of 512 out of 1605 deployed entities\r<br />\n2014-05-29\t14:14:26:682\t1284\t122c\tAgent\t*********\r<br />\n2014-05-29\t14:14:26:682\t1284\t122c\tAgent\t**  END  **  Agent: Finding updates [CallerId = AutomaticUpdates]\r<br />\n2014-05-29\t14:14:26:682\t1284\t122c\tAgent\t*************\r<br />\n2014-05-29\t14:14:26:698\t1284\t1b08\tAU\t&gt;&gt;##  RESUMED  ## AU: Search for updates [CallId = {8CA12A9B-D7D7-4A38-B01C-9C076983CD62}]\r<br />\n2014-05-29\t14:14:26:698\t1284\t1b08\tAU\t  # 1 updates detected\r<br />\n2014-05-29\t14:14:26:698\t1284\t1b08\tAU\t#########\r<br />\n2014-05-29\t14:14:26:698\t1284\t1b08\tAU\t##  END  ##  AU: Search for updates [CallId = {8CA12A9B-D7D7-4A38-B01C-9C076983CD62}]\r<br />\n2014-05-29\t14:14:26:698\t1284\t1b08\tAU\t#############\r<br />\n2014-05-29\t14:14:26:698\t1284\t1b08\tAU\tFeatured notifications is disabled.\r<br />\n2014-05-29\t14:14:26:698\t1284\t1b08\tAU\tSetting AU scheduled install time to 2014-06-04 09:00:00\r<br />\n2014-05-29\t14:14:26:698\t1284\t1b08\tAU\tSuccessfully wrote event for AU health state:0\r<br />\n2014-05-29\t14:14:26:698\t1284\t122c\tReport\tREPORT EVENT: {EDB048EC-7AAD-42FF-A106-7192BB692E25}\t2014-05-29 14:14:21:737+0100\t1\t161\t101\t{C011BB2D-536F-40CF-92EA-EF51C754B8C5}\t1\t800b0109\tAutomaticUpdatesWuApp\tFailure\tContent Download\tError: Download failed.\r<br />\n2014-05-29\t14:14:26:698\t1284\t1b08\tAU\tSuccessfully wrote event for AU health state:0\r<br />\n2014-05-29\t14:14:26:698\t1284\tc1c\tAU\tGetting featured update notifications.  fIncludeDismissed = true\r<br />\n2014-05-29\t14:14:26:698\t1284\tc1c\tAU\tNo featured updates available.\r<br />\n2014-05-29\t14:14:26:714\t1284\t122c\tReport\tCWERReporter::HandleEvents - WER report upload completed with status 0x8\r<br />\n2014-05-29\t14:14:26:714\t1284\t122c\tReport\tWER Report sent: 7.6.7600.256 0x800b0109 C011BB2D-536F-40CF-92EA-EF51C754B8C5 Download 101 Managed\r<br />\n2014-05-29\t14:14:26:714\t1284\t122c\tReport\tCWERReporter finishing event handling. (00000000)\r<br />\n2014-05-29\t14:14:31:706\t1284\t122c\tReport\tCWERReporter finishing event handling. (00000000)<br />\n",
+    "PostedDate": "2014-05-29T06:25:43.47-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1250866",
+    "ThreadId": "546816",
+    "Html": "Did you sign the package with the current certificate?\r<br />\n<br />\nIs the current certificate on the client in the two certificates stores? Did you set the registry key which David was posted?<br />\n",
+    "PostedDate": "2014-05-29T07:06:51.083-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1250870",
+    "ThreadId": "546816",
+    "Html": "The relevant entries are all set via a GPOs and after an gpupdate / force the reg entry is now at 1 &amp; the certificates are showing in the correct certificate stores on the client machine i.e. Public Key Policies/Trusted Root Certification Authorities &amp; Public Key Policies/Trusted Publishers Certificates\r<br />\n<br />\nI have rebooted client machine since just to be on safe side.\r<br />\n<br />\nThe packages to distribute were setup before i re-generated the certificate on the WSUS server using the software, so this sounds like it will be the problem.  Do i have to remove all the Adobe updates and set them up again to sign the package?  Or is there another of doing this?<br />\n",
+    "PostedDate": "2014-05-29T07:32:14.967-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1250875",
+    "ThreadId": "546816",
+    "Html": "I have used the resign function on all updates and they are distributing to the client machine.  Thank you very much for all your help with this it has been very helpful and very much appreciated.<br />\n",
+    "PostedDate": "2014-05-29T07:51:40.2-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1250898",
+    "ThreadId": "546816",
+    "Html": "Each time you change the certificate, you need to resign already published package.<br />\n",
+    "PostedDate": "2014-05-29T08:53:06.863-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

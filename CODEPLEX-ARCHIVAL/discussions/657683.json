@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1482942",
+    "ThreadId": "657683",
+    "Html": "Hi, I am connected to a wsus 6.3.9600 server. All OK until I configured the wsus server to use SSL. When I now try to publish I receive a createDirectory failed error. WPP is installed on the WSUS server, and is configured as below:\r<br />\n<br />\n```\r\n&lt;WsusPackagePublisher&gt;\r<br />\n  &lt;Server&gt;<br />\n<pre><code>&lt;Name&gt;wsus.company.i&lt;/Name&gt;\n&lt;IsLocal&gt;True&lt;/IsLocal&gt;\n&lt;Port&gt;8531&lt;/Port&gt;\n&lt;UseSSL&gt;True&lt;/UseSSL&gt;\n&lt;IgnoreCertErrors&gt;False&lt;/IgnoreCertErrors&gt;\n&lt;DeadLineDaysSpan&gt;0&lt;/DeadLineDaysSpan&gt;\n&lt;DeadLineHour&gt;0&lt;/DeadLineHour&gt;\n&lt;DeadLineMinute&gt;0&lt;/DeadLineMinute&gt;\n&lt;VisibleInWsusConsole&gt;Never&lt;/VisibleInWsusConsole&gt;</code></pre>\n\n&lt;/Server&gt;\r<br />\n&lt;/WsusPackagePublisher&gt;\r<br />\n<br />\nI have checked the share and ntfs permissions on \\server\\UpdateServicesPackages and \\server\\wsuscontent and all ok (no problem when wsus is not configured for ssl). The wsus server is using a company generated certificate for it's client ssl connection, and WPP is using a WPP self-signed certificate for the software packages. Both certificates are published in the correct stores.\r<br />\n<br />\nIf I revert the wsus server to non ssl, then all works ok, but non-ssl is not permitted in my organization. Any help greatly appreciated.\r<br />\n<br />\nMany thanks```<br />\n",
+    "PostedDate": "2016-09-05T03:56:34.277-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1483681",
+    "ThreadId": "657683",
+    "Html": "exactly the same for me\r<br />\n<br />\nany one else?<br />\n",
+    "PostedDate": "2016-09-14T07:36:52.903-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1485371",
+    "ThreadId": "657683",
+    "Html": "Slightly similar issue, I can create  the directory (even though it says 8530 and not 8531) I cannot create the directory on my replica server unless I drag the .cab file to the specific folder. Even then, I also cannot get my test comps to see any updates.<br />\n",
+    "PostedDate": "2016-10-05T12:18:52.237-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1485582",
+    "ThreadId": "657683",
+    "Html": "Did you have installed on your Replica the Certificate for your WSUS?<br />\n",
+    "PostedDate": "2016-10-07T12:35:34.57-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1493974",
+    "ThreadId": "657683",
+    "Html": "Hello,\r<br />\n<br />\nusing Server 2012r2 with WSUS installed and SSL configured - all Default WSUS running fine.\r<br />\n<br />\nWhen I use the WUP to publish an Update I also receive the &quot;createDirectory failed&quot; error.\r<br />\n<br />\nDoes anybody use WUP with SSL successfully?\r<br />\n<br />\nI already tried everything (local, remote etc...)\r<br />\n<br />\nMany thanks for for anyone chiming in.<br />\n",
+    "PostedDate": "2017-03-13T04:18:03.22-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1496808",
+    "ThreadId": "657683",
+    "Html": "Hi,\r<br />\n<br />\nsame Problem here. I've activated SSL and now im not able to publish any new Update packages. \r<br />\n<br />\nAny News on this Topic?\r<br />\n<br />\nKind Regards\r<br />\n<br />\nAndreas<br />\n",
+    "PostedDate": "2017-05-30T04:34:38.43-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

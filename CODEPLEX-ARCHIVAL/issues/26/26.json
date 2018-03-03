@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-04-25T10:57:17.663-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Start WPP, expand All Computers, cklick Register Status, activate Checkbox [X] Show Superseded Updates. After this, WPP give me only the option to debug or to close. A Screenshot is attached. ",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "High",
+      "Severity": 150,
+      "Id": 3
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-04-22T14:29:43.733-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "WPP crash after check checkbox",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 26
+  },
+  "FileAttachments": [
+    {
+      "FileId": 667502,
+      "FileName": "CrashWPP.png",
+      "DownloadUrl": ".\\667502"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Ok, I see what happen. I will fix that in the evening after work.",
+      "PostedDate": "2013-04-22T21:57:39.91-07:00",
+      "Id": 97776
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Hi Community,\r\n\r\ni have an issues with the latest version of WPP. If i try to publish a new update, e.g. chrome enterprise msi or frontmotion firefox msi strange behaviour occured. After the file selection, rule deployment and publish screen, the new update becomes a red line under the folder tab and is deleted from the file system without any further interaktion and before approval rules are applied. Older Updates are working but new ones facing this behaviour. The pictures shows. I work long time with WPP and never had an issue or problems.\r\n\r\nThanks in Advanced for helping me. WSUS is hosted on the same machine with Server 2012 R2 fully patched.",
+    "LastUpdatedDate": "2017-04-27T00:18:45.333-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-04-25T03:17:55.887-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "New published Updates getting deleted 20 seconds after publishing",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 370
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1658877,
+      "FileName": "wpp_issue.PNG",
+      "DownloadUrl": ".\\1658877"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Hi, do you have any antivirus on this server ?",
+      "PostedDate": "2017-04-25T09:42:06.503-07:00",
+      "Id": 208202
+    },
+    {
+      "Message": "Yes AV is running but not involved in this process.Procmon shows that the newly published cab file is deleted by WsusService.exe....\n\nAny idea why?",
+      "PostedDate": "2017-04-26T02:55:12.547-07:00",
+      "Id": 208211
+    },
+    {
+      "Message": "Never seen that before. You can try to look into Windows event log or Wsus Log file.\nDo you have the same behavior if you use an older release of WPP ?",
+      "PostedDate": "2017-04-26T08:51:23.13-07:00",
+      "Id": 208214
+    },
+    {
+      "Message": "The issue is solved now..\n\nit was an signing issue. i have redeployed the same signing cert to wpp and resigned all my packets. now it works....thx for all the people trying to help me.\n\nwpp is a great tool, thx to the great developers for giving us this amazing free tool.\n\nbye",
+      "PostedDate": "2017-04-27T00:18:45.333-07:00",
+      "Id": 208228
+    }
+  ]
+}

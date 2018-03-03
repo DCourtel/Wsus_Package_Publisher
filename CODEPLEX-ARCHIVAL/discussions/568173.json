@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1307422",
+    "ThreadId": "568173",
+    "Html": "I have looked around briefly and not found much documentation on using catalogs.  Basically, for flash version  14.0.0.145 I manually created an install package.  I saw someone mention using catalogs so for version 15.0.0.167 (activex) and 15.0.0.152 (plugin), I downloaded the catalog then went to Updates &gt; Import from catalog.  Everything imported fine but it created a new Adobe Systems update section and didn't supersede the old one.\r<br />\n<br />\nMy first question is what would best practice be here? Decline the old updates and approve the new ones?<br />\n\r<br />\nMy second question is if I import from catalog again, would it supersede the updates that were imported from the catalog the first time or am I supposed to decline the old ones and delete them and import the new ones each time?\r<br />\n<br />\nMy third question is how do the catalog subscriptions work?  Is there any documentation for using them with WPP?  How do I find the catalogs to subscribe to?  I would love to have them for Flash, Reader, and Java.<br />\n",
+    "PostedDate": "2014-09-23T07:12:08.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1309331",
+    "ThreadId": "568173",
+    "Html": "<blockquote>\nEverything imported fine but it created a new Adobe Systems update section ...<br />\n</blockquote>\nThis is because packages in Adobe's catalog are published Under &quot;Adobe system, inc.&quot;. And you have probably published your own update Under &quot;Adobe&quot; or &quot;Adobe system Incorporated&quot;. If you have published from a MSI or MSP file, then the company name used is &quot;Adobe system Incorporated&quot;.<br />\n<blockquote>\n...and didn't supersede the old one. <br />\n</blockquote>\nThis is by design. Updates in catalogs are not marked as superseding.<br />\n<blockquote>\nMy first question is what would best practice be here? Decline the old updates and approve the new ones?<br />\n</blockquote>\nYou should apply the same Policy than you apply for Microsoft updates.<br />\n<blockquote>\nMy second question is if I import from catalog again, would it supersede the updates that were imported from the catalog the first time<br />\n</blockquote>\nNo, you have to manage that by your own.<br />\n<blockquote>\nHow do I find the catalogs to subscribe to? I would love to have them for Flash, Reader, and Java.<br />\n</blockquote>\nOpen WPP, go to &quot;Manage Catalog subscriptions...&quot; - &gt; click on &quot;Load a shared catalog..&quot; -&gt; choose your catalog.\r<br />\n<br />\nAs far as I know, there is no catalog for Java.<br />\n",
+    "PostedDate": "2014-09-30T11:31:07.97-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

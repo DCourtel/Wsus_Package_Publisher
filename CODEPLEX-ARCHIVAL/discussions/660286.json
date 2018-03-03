@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1490175",
+    "ThreadId": "660286",
+    "Html": "[EN] Hi there,\r<br />\nI try to deploy Firefox ESR with an Ini-File to skip install of desktop link and &quot;Maintenance Service&quot;. I had success with commandline parameter /ini=&quot;\\UNC-path\\file.ini&quot;. This works for me, but I'd like to share my work with others an then static UNC-Paths won't work of course.\r<br />\n<br />\nTried to use /ini=&quot;%~dp0file.ini&quot; to use full path at runtime, but this did not work (of course ini-file was included into package).\r<br />\n<br />\nIs there a way to make this possible? Is there a variable to get the correct path at runtime? (If not, this could be an &quot;Enhancement Request&quot;)\r<br />\n<br />\n<br />\n<br />\n[DE] Hallo zusammen,\r<br />\n<br />\nversuche gerade Firefox ESR auszurollen und dabei die erweiterten Konfiguationsoptionen der Ini zu nutzen (Kein Updatedienst, kein Desktop Icon). \r<br />\n<br />\nWenn ich die Kommandozeilenparamenter /ini=&quot;\\UNC-path\\file.ini&quot; übergebe, dann klappt es. Wenn ich stattdessen /ini=&quot;%~dp0file.ini&quot; übergeben, um den vollen Pfad bei Ausführung voranzustellen, geht es nicht (bleibt stehen und warten vermutlich im Hintergrund auf Benutzerinteraktion). Würde meine Arbeit gerne mit Kollegen teilen und daher auf statische UNC-Pfade verzichten.\r<br />\n<br />\nGibt es eine Option, den Pfad bei Ausführung zu übergeben (Datei wurde natürlich ins Paket gepackt). Wenn nicht, dann wäre das ggf. eine nette Erweiterung des Funktionsumfangs.\r<br />\n<br />\nOder was mache ich falsch?!<br />\n",
+    "PostedDate": "2016-12-22T03:44:13.707-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

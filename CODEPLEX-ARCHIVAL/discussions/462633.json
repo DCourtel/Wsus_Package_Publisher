@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1108900",
+    "ThreadId": "462633",
+    "Html": "Updates are available and can install from the client through Windows update.\r<br />\n<br />\nWhen I right-click on the client in WPP and choose &quot;Install this update&quot; I get the error message.<br />\n",
+    "PostedDate": "2013-10-17T11:06:22.9-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1109221",
+    "ThreadId": "462633",
+    "Html": "Please check firewall rules on clients machines.<br />\n",
+    "PostedDate": "2013-10-18T07:31:15.03-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T08:02:12.747-08:00"
+  }
+]

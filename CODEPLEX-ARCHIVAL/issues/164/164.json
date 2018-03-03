@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-01-26T12:14:48.99-08:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Currently when you create an update or import a catalog it does a full publish similar to what SCUP would do, and doesn't have any option to make this a Metadata Only publish.\r\n\r\nMetadata only has a number of advantages, primarily being for items you only want to report on but don't want to remediate. ",
+    "LastUpdatedDate": "2014-12-05T11:06:05.473-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-12-04T13:07:19.533-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Postponed"
+    },
+    "Summary": "Metadata Only Publish Option",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 4,
+    "Id": 164
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This item is similar to https://wsuspackagepublisher.codeplex.com/workitem/149, they should be merged.",
+      "PostedDate": "2013-12-31T08:42:42.537-08:00",
+      "Id": 128771
+    },
+    {
+      "Message": "They are similar, which 149 being specific to only importing a catalog while this one is for publishing to WSUS a single update, a group of updates, or importing a catalog.  So as long as they are merged with the intent of providing full Metadata Only publishing across the board that would be be great.",
+      "PostedDate": "2014-01-02T17:36:51.71-08:00",
+      "Id": 128931
+    },
+    {
+      "Message": "Why is this Work-Item closed?",
+      "PostedDate": "2014-12-02T04:26:53.537-08:00",
+      "Id": 167065
+    },
+    {
+      "Message": "Reason Closed: Postponed \n\nYou will have to wait WPP V2.",
+      "PostedDate": "2014-12-05T11:06:05.473-08:00",
+      "Id": 167413
+    }
+  ]
+}

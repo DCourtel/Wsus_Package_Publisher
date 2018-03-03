@@ -1,0 +1,114 @@
+[
+  {
+    "Id": "1140521",
+    "ThreadId": "476799",
+    "Html": "Hello Team,\r<br />\n<br />\nNeed explanation on how to use &quot;AND&quot; &amp; &quot;OR&quot; operators in update installed or update installable window.\r<br />\n<br />\nFor ex: I am installing shockwave with below rule, then how should I write this in WPP\r<br />\n<br />\nInstallable rule:\r<br />\n<br />\nInstall only if \r<br />\nFor 32bit - check for File Version &quot;And&quot; File Exist &quot;And&quot; Processor Arch\r<br />\nOr\r<br />\nFor 64bit - check for File Version &quot;And&quot; File Exist &quot;And&quot; Processor Arch\r<br />\n<br />\nProcessor Arch 32\r<br />\nAnd\r<br />\nFile Version 32\r<br />\nAnd\r<br />\nFile Exist 32\r<br />\n<br />\nOr\r<br />\n<br />\nProcessor Arch 64\r<br />\nAnd\r<br />\nFile Version 64\r<br />\nAnd\r<br />\nFile Exist 64\r<br />\n<br />\nHope the query is understandable.<br />\n",
+    "PostedDate": "2013-12-21T03:19:53.62-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1140545",
+    "ThreadId": "476799",
+    "Html": "This is an example &quot;Is Installable&quot; rule (Change the version number to feet to the release you deploy) :\r<br />\n<br />\n<img src=\"http://i.imgur.com/ztNRul2.jpg\" alt=\"IsInstallableRule\" />\r<br />\n<br />\nThis mean :\r<br />\n<br />\n If\r<br />\n   { Processor is <strong>x86</strong> \r<br />\n <strong>And</strong> \r<br />\n   The file C:\\Program Files (x86)\\Adobe\\Shockwave\\ShockWave.exe <strong>EXIST</strong> \r<br />\n<strong>And</strong> \r<br />\n   The version of the file C:\\Program Files (x86)\\Adobe\\Shockwave\\ShockWave.exe is <strong>LESS</strong> than 11.4.3.486 \r<br />\n   }\r<br />\n<strong>OR</strong>\r<br />\n   { Processor is <strong>x64</strong> \r<br />\n<strong>And</strong> \r<br />\nThe file C:\\Program Files\\Adobe\\Shockwave\\ShockWave.exe <strong>EXIST</strong> \r<br />\n<strong>And</strong> \r<br />\nThe version of the file C:\\Program Files (x86)\\Adobe\\Shockwave\\ShockWave.exe is <strong>LESS</strong>than 11.4.3.486 \r<br />\n   }\r<br />\nEnd If\r<br />\n<br />\n<br />\nYou can, also, copy/paste this text into a new text file :<br />\n<blockquote>\n&lt;lar:Or&gt;<br />\n&lt;lar:And&gt;<br />\n&lt;bar:Processor Architecture=&quot;0&quot;/&gt;&lt;bar:FileExists Path=&quot;C:\\Program Files (x86)\\Adobe\\Shockwave\\ShockWave.exe&quot;/&gt;&lt;bar:FileVersion Path=&quot;C:\\Program Files (x86)\\Adobe\\Shockwave\\ShockWave.exe&quot; Comparison=&quot;LessThan&quot; Version=&quot;11.4.3.486&quot;/&gt;&lt;/lar:And&gt;<br />\n&lt;lar:And&gt;<br />\n&lt;bar:Processor Architecture=&quot;9&quot;/&gt;&lt;bar:FileExists Path=&quot;C:\\Program Files\\Adobe\\ShockWave\\ShockWave.exe&quot;/&gt;&lt;bar:FileVersion Path=&quot;C:\\Program Files\\Adobe\\Shockwave\\ShockWave.exe&quot; Comparison=&quot;LessThan&quot; Version=&quot;11.4.3.486&quot;/&gt;&lt;/lar:And&gt;<br />\n&lt;/lar:Or&gt;<br />\n</blockquote>\nrename the file into : ShockWave.rules, and import it into WPP.<br />\n",
+    "PostedDate": "2013-12-21T06:39:21.393-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T07:47:42.297-08:00"
+  },
+  {
+    "Id": "1140869",
+    "ThreadId": "476799",
+    "Html": "Thanks for the screenshot, but how did you manage to take the complete screenshot.\r<br />\nAs I am not able to move the package level rules to down and couldn't get the complete screen even maximizing the window.\r<br />\n<br />\nIf possible can we have a option to open rules in another window (full screen)<br />\n",
+    "PostedDate": "2013-12-23T06:48:11.053-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1140883",
+    "ThreadId": "476799",
+    "Html": "It is a clever mix of screenshots and MS Paint ;-)<br />\n",
+    "PostedDate": "2013-12-23T07:43:06.383-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1165067",
+    "ThreadId": "476799",
+    "Html": "only way to control this operators is use &quot;Load Rules&quot; and all operators job do in Notepad....\r<br />\n<br />\nIf you try to do this in GUI u will fail...\r<br />\n<br />\nmaybe its possible to fix this?<br />\n",
+    "PostedDate": "2014-01-14T06:12:37.83-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1166082",
+    "ThreadId": "476799",
+    "Html": "<strong>creaton wrote:</strong><br />\n<blockquote>\nIf you try to do this in GUI u will fail...<br />\n</blockquote>\nAs you can see in the screenshot, it's possible.<br />\n<blockquote>\nmaybe its possible to fix this?<br />\n</blockquote>\nWhat do you want to be fix ?<br />\n",
+    "PostedDate": "2014-01-14T12:04:30.69-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1170248",
+    "ThreadId": "476799",
+    "Html": "Adding Rules in current GUI is possible, but a better GUI can be made for ease of adding rules for starters.<br />\n",
+    "PostedDate": "2014-01-15T21:20:47.527-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1170285",
+    "ThreadId": "476799",
+    "Html": "Hi rahulwithu, can you explain what is a 'better GUI' for you ? Can you describe this GUI ? How you imagine/see it ?<br />\n",
+    "PostedDate": "2014-01-16T00:04:32.58-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1172906",
+    "ThreadId": "476799",
+    "Html": "Hey!<br />\nBy the way want to say thank to developers. excellent product.<br />\n<br />\nAbout GUI i get the point how to use it, so must say sorry about my previus post. GUI works but you should spent little bit more time to understand how exactly. :P <br />\n<br />\nThe problem were with choose right area where you want to add your condition.<br />\n<br />\n<br />\n<br />\n<br />\nP.S &quot;EDIT&quot; are u sure is right name for this button? maybe something like &quot;switch mode&quot; &quot;switch OR/AND&quot;<br />\nP.P.S is it possible to add option to choose size of update level area? better to see all of condition.<br />\n<img src=\"http://clip2net.com/clip/m144382/1389946448-clip-38kb.png\" alt=\"Image\" /><br />\n",
+    "PostedDate": "2014-01-17T00:05:27.803-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1198263",
+    "ThreadId": "476799",
+    "Html": "In the V2, IsInstallable Rules and IsInstalled Rules will be in a separate Tab. Help section will be hide et displayed when clicking on a '?' icone.\r<br />\nUsers will toggle between Update Level and Package Level by clicking on a button.<br />\n",
+    "PostedDate": "2014-01-26T12:10:40.777-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1219951",
+    "ThreadId": "476799",
+    "Html": "I think its wrong: if Architecture is 0 (that means x86 - 32 bits) --&gt; the file is in Program Files<br />\n<pre><code>              and if Architecture is 9 (that means x64) - 64 bits) --&gt; the file is in Program Files (x86)\n</code></pre>\n\nIt doesnt matter, because I try to write that rule for developing Firefox and doesnt work. I mean, in one client that doen't have that file, it should appear that update as &quot;Not Apllicable&quot;, but it appeard for downloading. What am I doing wrong?<br />\n",
+    "PostedDate": "2014-03-06T09:10:42.663-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1228202",
+    "ThreadId": "476799",
+    "Html": "Hello,\r<br />\n<br />\nI try to check if a software is already installed today (pdf creator).\r<br />\nI follow your indication with the XML Rules files.\r<br />\n<br />\nEffectivly like say albricia I must switch the architecture (0 and 9).\r<br />\n<br />\nBut I have also another problem (I use latest version) and they not working.\r<br />\nI try to delete C:\\program Files (x86) and use the default folder system instead and this working.\r<br />\n<br />\nI give the Complete XML File :<br />\n<pre><code>&lt;lar:Or&gt;\n&lt;lar:And&gt;\n&lt;bar:Processor Architecture=&quot;9&quot;/&gt;\n&lt;bar:FileExists Path=&quot;\\PDFCreator\\PDFCreator.exe&quot; Csidl=&quot;42&quot;/&gt;\n&lt;/lar:And&gt;\n\n&lt;lar:And&gt;\n&lt;bar:Processor Architecture=&quot;0&quot;/&gt;\n&lt;bar:FileExists Path=&quot;\\PDFCreator\\PDFCreator.exe&quot; Csidl=&quot;38&quot;/&gt;\n&lt;/lar:And&gt;\n&lt;/lar:Or&gt;</code></pre>\n\nThank's to the team for this wonderful application.<br />\n",
+    "PostedDate": "2014-03-29T11:18:11.097-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1239203",
+    "ThreadId": "476799",
+    "Html": "I found this thread because I'm having a general Problem with setting the Operator 'OR' at the beginning of a rule. When I have started the Assistant. on the page where to set the 'Is installed' Rule, it always begins with  'AND' operator and I can't delete it and replace with 'Or'. How can I force the WPP-Update-Assistant to assume &lt;Start OR&gt; or with an empty Rule?<br />\n",
+    "PostedDate": "2014-04-29T02:19:55.737-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1239206",
+    "ThreadId": "476799",
+    "Html": "Ok, just found the solution by myself :D I have to click on Edit and then it asks me to change from 'AND' to 'OR'\r<br />\nSolved<br />\n",
+    "PostedDate": "2014-04-29T02:25:26.347-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

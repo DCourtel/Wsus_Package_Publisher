@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "1294192",
+    "ThreadId": "562315",
+    "Html": "Hi together,<br />\nI've a misterious Problem with my certificate. <br />\nI made a self signed certificate, published it on right stores WSUS/Client. Created updatepackages, published them and everything is fine. But if I make a reboot of the WSUS-Server and start the WPP again, I get the message that no certificate is availible. I can import the cetificate again, restart the the WSUSservice and... everything is &quot;green&quot;. Ok, it works but it's not best practice :).<br />\nThe WSUS is up to date (Build 3.2.7600.274) and WPP is running on the WSUS. Some ideas?<br />\n<br />\nEdit: The WSUS is running on Windows Server 2008R2 (DC) on Port 8530 (THX Winfried for hint).<br />\n",
+    "PostedDate": "2014-08-28T01:53:28.753-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1294333",
+    "ThreadId": "562315",
+    "Html": "Hi,<br />\n<blockquote>\nBut if I make a reboot of the WSUS-Server and start the WPP again, I get the message that no certificate is availible. <br />\n</blockquote>\nFirst, check that the certificate is really missing. Open mmc -&gt; Add 'Certificates' -&gt; 'This Computer&quot; and browse to the Wsus store to see if the certificate is here or not.<br />\n",
+    "PostedDate": "2014-08-28T09:12:16.56-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1294342",
+    "ThreadId": "562315",
+    "Html": "Hi,\r<br />\n<br />\nthe certificate is present on every store. Only WPP miss the certificate. I tested it with another profile, put the certificate in the domain controller and default domain policy. In the log I can't find an note for a problem.<br />\n",
+    "PostedDate": "2014-08-28T09:35:54.707-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1294358",
+    "ThreadId": "562315",
+    "Html": "Once WPP tell you that the certificate is missing, go to Help -&gt; &quot;Send debug info&quot; and click on the &quot;Show informations&quot; link at bottom left. Send me the content of the file at <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a><br />\n",
+    "PostedDate": "2014-08-28T10:33:41.53-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1294996",
+    "ThreadId": "562315",
+    "Html": "Hi, thanks for log files.\r<br />\n<br />\nWhen WPP try to get the certificate from Wsus, this error happen :<br />\n<blockquote>\n29.08.2014 07:22:51\tTrying to get certificate from server.<br />\n29.08.2014 07:22:51\t**** System.ComponentModel.Win32Exception : Das System kann die angegebene Datei nicht finden<br />\n</blockquote>\nIf you confirm that the certificate is really present in the Wsus Store after reboot, then this mean that you don't have the right to extract the certificate from the store.<br />\n",
+    "PostedDate": "2014-08-29T10:05:28.633-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1295635",
+    "ThreadId": "562315",
+    "Html": "Did you connect via RDP with this Command: mstsc /admin [ENTER]. is set on the Server that two admins can work at the same time? If yes, deactivate this, reboot and try with mstsc /admin again.<br />\n",
+    "PostedDate": "2014-08-30T03:09:35.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1295643",
+    "ThreadId": "562315",
+    "Html": "Thanks for reply. I will check it on monday and post the results.\r<br />\nI wish a nice weekend.<br />\n",
+    "PostedDate": "2014-08-30T03:24:33.627-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1297620",
+    "ThreadId": "562315",
+    "Html": "Morning,\r<br />\nthere no change in situation. The certificate is definitely present and I'm connected with dom-admin and there is only one admin allowed. First I think I install WSUS and WPP on another machine this week to see if the problem depends to this special server or if it's an general problem in my environment.<br />\n",
+    "PostedDate": "2014-08-31T22:37:13.57-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1297682",
+    "ThreadId": "562315",
+    "Html": "do you see any error message in the Windows Event Log ?<br />\n",
+    "PostedDate": "2014-09-01T03:04:38.113-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1297741",
+    "ThreadId": "562315",
+    "Html": "Of course :). \r<br />\nI cleared the Logs and made a reboot. But nothing indicates a problem with certificate, WSUS or rights. <br />\n",
+    "PostedDate": "2014-09-01T06:23:39.143-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1298009",
+    "ThreadId": "562315",
+    "Html": "Good news. I moved the WSUS and the WPP to another server, imported the certificate, made a reboot and everything is fine. \r<br />\nThanks to you for this great tool and the support!<br />\n",
+    "PostedDate": "2014-09-02T00:12:25.817-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-02T03:23:44.727-07:00"
+  }
+]

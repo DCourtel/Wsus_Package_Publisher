@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1480638",
+    "ThreadId": "657002",
+    "Html": "I make a winrar sfx package for a software.<br />\n<pre><code>Path=Beebeep\nSavePath\nShortcut=Shortcut=D, %ProgramFiles%\\Beebeep\\beebeep.exe, , BeeBEEP, BeeBEEP, </code></pre>\n\nIf I double click it in 32bit system it will unzip to C:\\Program Files\\Beebeep\\beebeep.exe,and the shortcut on the desktop point to &quot;C:\\Program Files\\Beebeep\\beebeep.exe&quot;.\r<br />\nIf I double click it in 64bit system it will unzip to C:\\Program Files (x86)\\Beebeep\\beebeep.exe,and the shortcut on the desktop point to &quot;C:\\Program Files (x86)\\Beebeep\\beebeep.exe&quot;.\r<br />\n<br />\nBut when I use WPP to do this.\r<br />\nI create a Custom Update,and put this sfx package in the EXE element by the /S paramenter.\r<br />\nThe client computer successfully installed the update.But I found that the shortcut was in the C:\\Program Files\\Beebeep(32bit system),C:\\Program Files (x86)\\Beebeep(64bit system) with the beebeep.exe,DO NOT on the desktop.\r<br />\n<br />\nThen I try to use the shortcut element which in the Custom Update Creator.\r<br />\nTarget: %programfiles%\\Beebeep\\beebeep.exe\r<br />\nIt just put &quot;%programfiles%\\Beebeep\\beebeep.exe&quot; in the shortcut on the desktop.Then the shortcut not working with 64bit system.\r<br />\n<br />\nSo how can I create the shortcut in the right way?<br />\n",
+    "PostedDate": "2016-08-09T05:15:38.93-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1480828",
+    "ThreadId": "657002",
+    "Html": "I make a innosetup exe to solve it.It work.<br />\nBut I find another problem.<br />\nWith double click,the innosetup.exe create an ini file in the %USERPROFILE%\\Documents\\ .<br />\nBut with WPP,It create the ini file in C:\\Windows\\system32\\config\\systemprofile\\Documents.<br />\nWhat's wrong?<br />\n",
+    "PostedDate": "2016-08-10T22:06:50.477-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

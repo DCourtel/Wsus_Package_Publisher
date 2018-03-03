@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "No feed back from the user after e-mail",
+    "ClosedDate": "2015-11-10T12:49:05.59-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Get an \"Object reference not set to an instance of an object\" and application crashes when trying to \"Add Folders...\"  in \"Update Creation Wizard\"",
+    "LastUpdatedDate": "2015-11-10T12:49:05.59-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-10-07T13:38:37.627-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Add Folders...",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 298
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

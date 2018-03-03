@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1215095",
+    "ThreadId": "535621",
+    "Html": "Is there an option that I could see if there are regular MS Updates are finished after I clicked Install Pending Updates ? or I just have to check it via Show Pending Updates ?\r<br />\n<br />\n<br />\n<br />\nBest Regards,\r<br />\nMartin<br />\n",
+    "PostedDate": "2014-02-26T03:56:09.797-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1215158",
+    "ThreadId": "535621",
+    "Html": "When you use the feature 'Install Pending Updates', the installation is launch on the client and all pending updates will be installed (including regulare MS updates). After that, the client workstation needs to do a detection to see if there is more updates available.<br />\n",
+    "PostedDate": "2014-02-26T07:16:33.037-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:54:42.257-07:00"
+  }
+]

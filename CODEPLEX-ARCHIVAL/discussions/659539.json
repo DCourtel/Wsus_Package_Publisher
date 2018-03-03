@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1488337",
+    "ThreadId": "659539",
+    "Html": "So I am trying to implement WPP, and I have a couple of questions. \r<br />\n1) I can't add software via UNC, so I mapped drive to the share but I cannot see the mapping via file browser when trying to add. Is there something I am doing wrong?\r<br />\n2) When I connect to the WSUS server and have the Connect to local server box checked, there is no issue. But if I connect without that checked, it says server version is different from console version. I am running this on the WSUS server, so how can that be correct?<br />\n",
+    "PostedDate": "2016-11-18T11:09:14.407-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1488524",
+    "ThreadId": "659539",
+    "Html": "After mapping the drive, did you restart WPP?\r<br />\n<br />\nIn Extras &gt; Settings &gt; WSUS Server you can activate [X] Ignore Console and Server Console mismatch. Why you don't want connect to local server?<br />\n",
+    "PostedDate": "2016-11-21T23:36:51.793-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1488923",
+    "ThreadId": "659539",
+    "Html": "After mapping the drive, yes I have restarted WPP. I still cannot see any mapped drives.\r<br />\nAs far as connecting local, that IS how I am connecting. It's just something I noticed and wondered why the discrepancy. <br />\n",
+    "PostedDate": "2016-11-28T14:47:56.733-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1489120",
+    "ThreadId": "659539",
+    "Html": "Did you start WPP with extra Admin Rights? Rightclick &gt; Run as Admin? If yes, did you map your drives as Admin too?<br />\n",
+    "PostedDate": "2016-12-01T12:05:46.82-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

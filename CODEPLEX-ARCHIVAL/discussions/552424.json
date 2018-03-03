@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1275106",
+    "ThreadId": "552424",
+    "Html": "I have a question regarding how a function of WPP works. Currently I am in the testing phase of creating/deploying packages. I have a test group of 7 machines that I approve installation of my packages for.<br />\n<br />\nI noticed I can select unassigned computers in a package, which is all of my machines not in the test group, and right click on a computer profile and select, &quot;Install this Update...&quot; and send the command.<br />\n<br />\nMy question is will this install the update immediately, or will it happen on their next restart? I'm also curious if the fact that I haven't approved this update for installation for this group of computers will affect anything, or if my command to install the update will override that and install anyway.<br />\n",
+    "PostedDate": "2014-07-22T07:33:44.65-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1275285",
+    "ThreadId": "552424",
+    "Html": "<strong>Psolberg wrote:</strong><br />\n<blockquote>\nI noticed I can select unassigned computers in a package, which is all of my machines not in the test group, and right click on a computer profile and select, &quot;Install this Update...&quot; and send the command.<br />\n<br />\nMy question is will this install the update immediately, or will it happen on their next restart? I'm also curious if the fact that I haven't approved this update for installation for this group of computers will affect anything, or if my command to install the update will override that and install anyway.<br />\n</blockquote>\nAFAIK the update will install immediately. But, why you don't try? ;)<br />\n",
+    "PostedDate": "2014-07-22T14:35:40.327-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1275286",
+    "ThreadId": "552424",
+    "Html": "I don't know what AFAIK means, but I did try it and the update did not install immediately, or after a restart.<br />\n",
+    "PostedDate": "2014-07-22T14:51:02.753-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1275287",
+    "ThreadId": "552424",
+    "Html": "As far as i know = AFAIK. ;)\r<br />\n<br />\nOK, what errormessages you find in Eventlog on the Client? Errormessages in %windir%\\WindowsUpdate.log?\r<br />\nThe Credentials from you WPP-Login are local admin rights on the clients?\r<br />\n<br />\nLog on as a local admin, will you find the Update via Windows Update? Is the install manually working?<br />\n",
+    "PostedDate": "2014-07-22T14:55:30.027-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1275535",
+    "ThreadId": "552424",
+    "Html": "I see no error messages in the event log on the client. Yes the credentials I use for WPP have admin rights.<br />\n",
+    "PostedDate": "2014-07-23T08:54:14.347-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1275547",
+    "ThreadId": "552424",
+    "Html": "<strong>Psolberg wrote:</strong><br />\n<blockquote>\nI see no error messages in the event log on the client. Yes the credentials I use for WPP have admin rights.<br />\n</blockquote>\nYou look in Eventlog Installation?\r<br />\n<br />\nOK, and what you find in %windir%\\WindowsUpdate.log at the Client? You can attache the file here.<br />\n",
+    "PostedDate": "2014-07-23T09:24:40.027-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1278460",
+    "ThreadId": "552424",
+    "Html": "Hi Psolberg,<br />\n<blockquote>\nI haven't approved this update for installation for this group of computers will affect anything, or if my command to install the update will override that and install anyway.<br />\n</blockquote>\nClient computers will only install approved updates.<br />\n",
+    "PostedDate": "2014-07-28T10:41:07.85-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:26:40.017-07:00"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1204078",
+    "ThreadId": "529552",
+    "Html": "Hi.\r<br />\n<br />\nDoes anyone know what timeouts we have in WSUS/WPP when deploying custom updates?\r<br />\n<br />\nWUAgent?\r<br />\n<br />\nCustomUpdateEngine.exe?<br />\n",
+    "PostedDate": "2014-02-07T00:14:42.2-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1205121",
+    "ThreadId": "529552",
+    "Html": "Hi, can you be more clear when you talk about &quot;Timeouts&quot; ? I don't get your question.<br />\n",
+    "PostedDate": "2014-02-08T14:53:47-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:57:54.95-07:00"
+  }
+]

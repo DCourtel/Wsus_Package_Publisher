@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-04-12T10:29:45.67-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "---------------------------\r\n\r\n---------------------------\r\nYou don't have any certificat. You will not be able to publish updates.\r\n---------------------------\r\nOK   \r\n---------------------------\r\n\r\ncertificat is misspelled (certificate).\r\n\r\n\"You do not have a certificate. You will not be able to publish updates.\" Is a closer translation to the original French error message.\r\n\r\n--\r\n\r\nOn the \"Send Debug Info...\" form, \"information\" is usually both plural and singular in English as a mass noun, all instances of \"informations\" should be changed to \"information\"\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.3.1411.09",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-11-19T10:38:21.117-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "English translation corrections.",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 233
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Thanks for you help.\nIf you see any other translation errors, do not hesitate to notify me.",
+      "PostedDate": "2014-11-19T13:05:12.46-08:00",
+      "Id": 166127
+    }
+  ]
+}

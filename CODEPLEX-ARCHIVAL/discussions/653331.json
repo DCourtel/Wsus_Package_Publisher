@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1469315",
+    "ThreadId": "653331",
+    "Html": "I'm evaluating wsus package publisher to replace local update publisher which seems to be abandoned. However, one simple feature of the latter is that it auto creates a rule in both the installed/installable category with the proper msi product code, which means simple updates like flash can be created without needing to dig up the code in a msi editor.\r<br />\n<br />\nThis feature should be trivial to implement<br />\n",
+    "PostedDate": "2016-04-07T06:16:46.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

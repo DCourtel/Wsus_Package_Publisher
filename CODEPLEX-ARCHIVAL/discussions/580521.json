@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1351586",
+    "ThreadId": "580521",
+    "Html": "Hello everyone,\r<br />\n<br />\nafter migrating (replication) the exisiting WSUS-Server (2003 R2) to a new server (2008 R2) WPP reports that the is any certificate.\r<br />\nThe former certificate was succesfully imported to the new WSUS-Server (Trusted Root Certificates, Trusted Publishers and WSUS) and the WSUS service was restarted.\r<br />\n<br />\nBut WPP still asks for a new certificate. After creating a new certificate WPP starts without error but the 3-party-Updates can not imported/resigned.\r<br />\n<br />\nSo we used both certificates (old and new), imported the 3-party-updates and resigned them. After that we dropped the old certificate.\r<br />\n<br />\nIs there any other options when migrating WSUS to a new machine?\r<br />\n<br />\nBest regards\r<br />\nPetapico.<br />\n<pre><code>Server 2003 R2 Standard\nWSUS 3.2.7600.274\nWPP 1.3.1411.9\n\nServer 2008 R2 Standard\nWSUS 3.2.7600.251\nWPP 1.3.1411.9</code></pre>\n\n",
+    "PostedDate": "2015-02-11T14:54:45.43-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1351636",
+    "ThreadId": "580521",
+    "Html": "In WSUS-FAQ No. 44 you will find needed Updates for your new WSUS: <a href=\"http://wsus.de/faq\" rel=\"nofollow\">http://wsus.de/faq</a>\r<br />\n<br />\nWSUS 3.0 (SP2): \tBuild 3.2.7600.226\r<br />\nWSUS 3.0 (SP2) + KB2720211: \tBuild 3.2.7600.251\r<br />\nWSUS 3.0 (SP2) + KB2734608: \tBuild 3.2.7600.256\r<br />\nWSUS 3.0 (SP2) + KB2828185: \tBuild 3.2.7600.262\r<br />\nWSUS 3.0 (SP2) + KB2938066: \tBuild 3.2.7600.274\r<br />\n<br />\nUpdate your WSUS first, reboot after the last patch and try it again.<br />\n",
+    "PostedDate": "2015-02-11T21:44:15.413-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1351648",
+    "ThreadId": "580521",
+    "Html": "Hello WinfriedSonntag,<br />\n<br />\nthanks for Your quick reply!<br />\n<br />\nUnfortunately the migration is done so we can not test Your suggestion. So I hope that someone else found this BEFORE migrating.<br />\n<br />\nBest regards to the WPP-Team<br />\nPetapico.<br />\n",
+    "PostedDate": "2015-02-11T23:31:27.397-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1352665",
+    "ThreadId": "580521",
+    "Html": "When you need to import a new certificate, it's not enought to put the certificate in the right cert stores. You have to use the option &quot;Import a certificate&quot; in WPP. If you don't use this option, Wsus will not use the cert.\r<br />\n<br />\nIf you use a self-signed cert, this cert is tight to the server and can not be use by another server.<br />\n",
+    "PostedDate": "2015-02-14T12:42:50.577-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-02-16T10:35:31.6-08:00"
+  },
+  {
+    "Id": "1353138",
+    "ThreadId": "580521",
+    "Html": "Hello DCourtel,<br />\n<br />\nthanks for Your reply.<br />\n<br />\nYou are right because the certificate is self-signed. Ok, I keep that in my mind when migrating WSUS again.<br />\n<br />\nBest regards to the WPP-Team<br />\nPetapico.<br />\n",
+    "PostedDate": "2015-02-16T10:35:49.79-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

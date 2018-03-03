@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1490482",
+    "ThreadId": "660418",
+    "Html": "I have a new environment with a 2016 Essentials Server and x86 / amd64 Windows 10 v1607 clients. While WSUS seems to run properly, the Package Publisher is not. <br />\n<br />\nI have done all necessary steps: created and distributed the certificate, opened the Firewall and set the update policies.<br />\n<br />\nI can send &quot;detect now&quot; and &quot;report now&quot; without errors, but nothing happens, the &quot;last updated&quot; value doesn't change - it remains the timestamp from where i locally searched for updates.<br />\n<br />\nIf I publish an update, also no errors are shown, but then also nothing happens. The id from the update doesn't show up in the update log (this function too is broken, you have to command get-windowsupdatelog in powershell to generate the log on the desktop). For some, it even says &quot;installed&quot; in WPP, but it is definitively not. <br />\n<br />\nI tried a custom update with a simple *.exe with doesn't do more than create a &quot;helloworld.txt&quot; in c:\\windows, but on creation i got an &quot;SQL Server error&quot; and and of course, nothing happens. I tried to let it show in WSUS console, but it doesn't show up. The Updates are in the Folder &quot;UpdateServicesPackages&quot; in my WSUS folder, but it looks like they aren't called from the clients.<br />\n<br />\nAs much as I'd like to get it working - and so far that meant a lot of hours trying - it doesn't.<br />\n",
+    "PostedDate": "2016-12-31T03:40:39.503-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1490504",
+    "ThreadId": "660418",
+    "Html": "After further re-thinking, there are three issues here:<br />\n<ul>\n<li>\nfirst, the &quot;show Update Log&quot; - that is definitively broken inside WSUS Package Publisher. That command should be changed to create the log first, and after that command returns display the file - see above.<br />\n</li>\n<li>\nsecond, the RPC commands. This can be an firewall issue, so I'm going to test that again with all firewalls down. I set all the rules I could find and WPP shows &quot;OK&quot; after executing the command, but it's worth a try.<br />\n</li>\n<li>\nthird and most important, why doesn't my Win10 1607 clients don't detect either the custom updates nor the msi updates? This question can be broken up into multiple parts: <br />\n</li>\n<li>is the update really advertised? My version info says Update Services 10.0.14393 - so the &quot;publish&quot; can simply failing. I have all my clients upgraded to that Win10 version, so unfortunately, I can't test it with an earlier Windows version myself. The &quot;publish visible on WSUS console&quot; is broken, there I get that SQL server error.</li>\n<li>\nor is it a question of Win10 - it is advertised, but doesn't get sought out for installation. I don't know how the Windows Update works inside, which side picks what is to update.<br />\n</li>\n</ul>\n",
+    "PostedDate": "2017-01-01T10:47:43.26-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1490934",
+    "ThreadId": "660418",
+    "Html": "Be award that the Wsus Client is broken in Windows 10 1607 if the computer is pointing to a Wsus Server instead Microsoft Update.\r<br />\nInstall KB3213522 and test after.<br />\n",
+    "PostedDate": "2017-01-10T13:33:28.63-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

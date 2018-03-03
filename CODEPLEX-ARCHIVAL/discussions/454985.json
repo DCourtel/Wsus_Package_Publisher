@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1086560",
+    "ThreadId": "454985",
+    "Html": "Hello,<br />\n<br />\nI am having problems with the WSUS Package Publisher installation. I checked that the target machine meets the specifications .NET and WSUS versions, the OS is Server 2012 and I installed WPP onto it. When I then attempt to connect to my WSUS server I get an error 'connection failed : request for principal permission failed', I have tried it with or without the server's admin credentials on all possible ports. Any ideas? <br />\n",
+    "PostedDate": "2013-08-30T03:24:49.707-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1086572",
+    "ThreadId": "454985",
+    "Html": "<strong>jabbche wrote:</strong><br />\n<blockquote>\nHello,<br />\n<br />\nI am having problems with the WSUS Package Publisher installation. I checked that the target machine meets the specifications .NET and WSUS versions, the OS is Server 2012 and I installed WPP onto it. When I then attempt to connect to my WSUS server I get an error 'connection failed : request for principal permission failed', I have tried it with or without the server's admin credentials on all possible ports. Any ideas?<br />\n</blockquote>\nI solved this problem and have now connected! Thanks!<br />\n",
+    "PostedDate": "2013-08-30T04:08:08.093-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:17:50.88-07:00"
+  }
+]

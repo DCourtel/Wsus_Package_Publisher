@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-07-03T14:32:17.517-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hy, \r\n\r\nI'm trying desperately to distribute DWG Design Review through WSUS. \r\n\r\nThe installation works fine. However, the update aborts service, with the error message 8024000B. \r\n\r\nI think I'm doing something wrong with the Return Code !? ... \r\n\r\n\r\nThank you very much for your help and good product.\r\n\r\n```\r\n<CustomUpdate>\r\n<Action>\r\n<ElementType>CustomUpdateElements.ExecutableElement</ElementType>\r\n<PathToExecutable>\\\\****path****\\Setup.exe</PathToExecutable>\r\n<Parameters>/w /q</Parameters>\r\n<KillProcess>True</KillProcess>\r\n<TimeBeforeKilling>10</TimeBeforeKilling>\r\n<Variable/>\r\n</Action>\r\n</CustomUpdate>\r\n```",
+    "LastUpdatedDate": "2014-07-03T14:32:17.517-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-05-26T06:39:22.71-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Executabel Setup installs but return Code to WiUpdate is cancelled",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 194
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi,\n\nthe Error-Code shows your WSUS will be updated. Have a look in __WSUS-FAQ No. 44:__ http://www.wsus.de/faq\n\nIn http://www.wsus.de/images/wsus-version.png you will find the correct position for version number of your wsus. Pls install all updates for coming up to Version .262. If you have the WSUS-Console installed on a W7 Client, you have to install all updates on the W7 Client too. After this, restart the whole WSUS-Server and then you can restart the clients. ",
+      "PostedDate": "2014-05-27T00:58:18.927-07:00",
+      "Id": 147978
+    },
+    {
+      "Message": "Hi, \n* First, your 'PathToExecutable' point onto a remote shared path. This is not the best practice. Remember that update will install with local \"System\" account on computers. What is  folder permission for this account on the shared folder ????\nYou should set 'PathToExecutable' = Setup.exe . And add the file in the 'additionnal files' box of the Update Wizard.\n* Second, you didn't use a 'Variable' action to store the return code of the Setup.exe.\n* Third, your cutom package didn't return any return code. You should add a 'Return code\" action to return the result of the Setup.exe.",
+      "PostedDate": "2014-05-28T12:36:12.34-07:00",
+      "Id": 148168
+    }
+  ]
+}

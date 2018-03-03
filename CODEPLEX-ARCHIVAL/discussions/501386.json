@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1170300",
+    "ThreadId": "501386",
+    "Html": "hi guys,\r<br />\ni am having issues connecting to wsus package publisher after enabling ssl.\r<br />\ni am getting a HTTP Status 401: Unauthorized.\r<br />\n<br />\nany help would be greatly appreciated.\r<br />\n<br />\nThanks\r<br />\nShaun<br />\n",
+    "PostedDate": "2014-01-16T00:35:00.28-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1170399",
+    "ThreadId": "501386",
+    "Html": "Hi fonts, do you have change connexion setting in WPP to reflect these change in IIS ?\r<br />\nDo you have put the cert of the authority that have been create the cert for the SSL, into trusted authorities ?<br />\n",
+    "PostedDate": "2014-01-16T03:03:48.62-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:59:18.953-07:00"
+  }
+]

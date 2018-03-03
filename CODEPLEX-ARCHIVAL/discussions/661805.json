@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1493799",
+    "ThreadId": "661805",
+    "Html": "Forgive this if already discussed, but I haven't found it in the forums.  Firstly, many thanks for the development of this tool, works a treat.  Updating our Java install proved very simple with this, it just worked.\r<br />\n<br />\nLong-term use of this vs. the size of the WSUS content store raises the question of precedence or supersedence of similar updates, and cleanup of expired/superseded updates.  I haven't found anything in the instructions which talks about linking a newer update as superseding a previous one.  Is this possible, or already configured &amp; I've missed it?<br />\n",
+    "PostedDate": "2017-03-09T00:30:15.217-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1493887",
+    "ThreadId": "661805",
+    "Html": "It is on the page where you name your update.<br />\n",
+    "PostedDate": "2017-03-10T11:50:51.403-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

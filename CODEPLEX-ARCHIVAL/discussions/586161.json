@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1362849",
+    "ThreadId": "586161",
+    "Html": "Under Options /Color I see the possibility to give the Installation Status a Background Color. But there is no effect in STatus Tab. <br />\nIf I go to the STATUS Tab, the only colored field is the &quot;Online&quot; Status.<br />\n<br />\nBut - it is colored correctly in REPORT Tab.<br />\nTake a look:<br />\n<img src=\"http://u.jimdo.com/www67/o/s0b8f83a6d159cd45/img/ia2ec230369f77d3e/1426173179/std/image.jpg\" alt=\"Image\" /><br />\n<br />\nIs this correct? Color only in Report TAB ?<br />\n",
+    "PostedDate": "2015-03-12T08:42:32.657-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362854",
+    "ThreadId": "586161",
+    "Html": "Yes, colors only apply to Report Tab<br />\n",
+    "PostedDate": "2015-03-12T08:58:52.713-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

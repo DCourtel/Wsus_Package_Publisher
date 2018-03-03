@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1311018",
+    "ThreadId": "569177",
+    "Html": "How can I integrate PowerShell App Deployment Toolkit with WSUS Package Publisher to get user interactive window box and balloon tips.\r<br />\n<br />\nI have been trying to get to work but failing with &quot;session 0&quot; and script is running in &quot;non interactive mode&quot; as seems WSUS uses &quot;system&quot; account for installations.<br />\n",
+    "PostedDate": "2014-10-06T22:11:13.59-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1311105",
+    "ThreadId": "569177",
+    "Html": "When creating your package, use the option &quot;Can request user input&quot;.<br />\n",
+    "PostedDate": "2014-10-07T03:32:59.963-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1311586",
+    "ThreadId": "569177",
+    "Html": "Thanks DCourtel, excellent it worked the way I expected &quot;Can request user input&quot; is the answer.\r<br />\n<br />\nCan you please help me with one more in this case, now the update is pushed and installed interactively but <br />\n<ol>\n<li>update installation is requesting for administrative privileges and without admin rights update is not proceeding with installation.</li>\n<li>at my organization admin rights are restricted and how can I achieve the &quot;software installation&quot; in &quot;interactive&quot; mode and without &quot;admin rights&quot;</li>\n</ol>\n",
+    "PostedDate": "2014-10-08T08:28:13.437-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1311607",
+    "ThreadId": "569177",
+    "Html": "You need an interactive installation but users doesn't have admin rights + Your installation needs admin rights = You have a problem :-(\r<br />\nI don't have any solution for that scenario.\r<br />\n<br />\nAre you sure that interactive installation is required ? Unattended installation is not possible ?<br />\n",
+    "PostedDate": "2014-10-08T09:28:47.197-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1311751",
+    "ThreadId": "569177",
+    "Html": "Yes DCourtel, interactive is beneficial, as this internal software causes a problem or installation fails if user tries to open any window or runs a heavy application (during installation) so I want users to know that software installation is started and during this period do not open or run any application till installation completes.\r<br />\n<br />\nHowever, thanks for your utmost support, let me try some other options.\r<br />\n<br />\nWould like to take this opportunity to thank you for bringing up such a wonderful product and working towards its continuous up-gradation.<br />\n",
+    "PostedDate": "2014-10-08T22:13:40.667-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

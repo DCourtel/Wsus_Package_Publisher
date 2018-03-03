@@ -1,0 +1,96 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "NTFS permission issue",
+    "ClosedDate": "2014-10-16T13:07:57.737-07:00",
+    "CommentCount": 10,
+    "Custom": null,
+    "Description": "Having update to the latest version I seem to have a problem of not being able to create an update.\r\n\r\nI get to the last screen and press publish which then says CreateDirectory Failed.  ( SS attached)   I am sure it will be something I have done but I am completely stuck\r\n\r\nThanks in advance.\r\n\r\n",
+    "LastUpdatedDate": "2016-04-05T03:07:45.87-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-10-02T02:11:14.73-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Create Directory Failed",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 221
+  },
+  "FileAttachments": [
+    {
+      "FileId": 917933,
+      "FileName": "Untitled.png",
+      "DownloadUrl": ".\\917933"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Can you tell use :\n - What file do you try to publish.\n - The size of the main file you publish.\n\nAlso, run WPP and try to publish an update, once the errror message appears, go to 'Help', 'Send debug info...' and click on the link at bottom left 'Show informations' then send me this log at package.publisher@free.fr",
+      "PostedDate": "2014-10-03T09:14:12.183-07:00",
+      "Id": 161389
+    },
+    {
+      "Message": "The file is flashplayer msi og 18mb.\n",
+      "PostedDate": "2014-10-06T00:30:24.66-07:00",
+      "Id": 161513
+    },
+    {
+      "Message": "I have received your debug file.\nCan you check share and NTFS permission on folders :\nE:\\WSUS\\UpdateServicesPackages\nE:\\WSUS\\WsusContent\n\nsee [this post](https://community.shavlik.com/docs/DOC-22980)",
+      "PostedDate": "2014-10-08T09:22:46.663-07:00",
+      "Id": 161722
+    },
+    {
+      "Message": "Very odd as I don't have E:\\   Any ideas how this can be changed?\n\nMany thanks\n",
+      "PostedDate": "2014-10-09T01:44:51.577-07:00",
+      "Id": 161764
+    },
+    {
+      "Message": "Paths depend of your Wsus installation. You need to adapt these paths to your system.",
+      "PostedDate": "2014-10-09T04:43:06.607-07:00",
+      "Id": 161777
+    },
+    {
+      "Message": "There seems no way to change any path settings.  Really odd as there has never been am E:  Completely stuck!  Any ideas moving forward are welcome.\n\n",
+      "PostedDate": "2014-10-10T05:45:21.34-07:00",
+      "Id": 161945
+    },
+    {
+      "Message": "> There seems no way to change any path settings.\n\nThere is no path settings to change. Just locate UpdateServicesPackages and WsusContent folder on __YOUR__ wsus server. And check ntfs/share permissions.",
+      "PostedDate": "2014-10-10T08:16:03.607-07:00",
+      "Id": 161962
+    },
+    {
+      "Message": "That did the trick although now I get the message Failed to sign package, error was 2147942403\n\nMany Thanks",
+      "PostedDate": "2014-10-13T00:42:49.62-07:00",
+      "Id": 162150
+    },
+    {
+      "Message": "Fixed Many thanks for the help.  The Failed to sign package, error was 2147942403  was due to a manual move of the data.\n\n",
+      "PostedDate": "2014-10-14T09:14:02.517-07:00",
+      "Id": 162256
+    },
+    {
+      "Message": "I've got a similar problem. I've moved, reshared, given everyone permission to RW.\nBut no luck\n\nCurrent MaxCabFile Size is : 384\n05/04/2016 11:04:27\tEntering System.String GetTempFolder()\n05/04/2016 11:04:27\tWill return : C:\\xxx\\AppData\\Local\\Temp\\WPP\\53abr4ig.r32\\\n05/04/2016 11:04:27\tEntering System.Collections.Generic.Dictionary`2[System.Int32,System.Boolean] SaveAutoApprovalRulesState()\n05/04/2016 11:04:27\tSaving 'Default Automatic Approval Rule' with Id= 2 which is Enabled= True\n05/04/2016 11:04:27\tEntering Void DisableAutomaticApprovalRules()\n05/04/2016 11:04:27\t**** System.ComponentModel.Win32Exception : CreateDirectory failed\n05/04/2016 11:04:32\tEntering Void RestoreAutomaticApprovalRules(System.Collections.Generic.Dictionary`2[System.Int32,System.Boolean])\n05/04/2016 11:04:32\tRule 'Default Automatic Approval Rule with Id= 2 will be set to Enabled= True\n05/04/2016 11:04:43\tEntering Void btnOk_Click(System.Object, System.EventArgs)\n05/04/2016 11:04:43\tEntering Void Save(System.String) : C:\\Program Files (x86)\\WPP Release v1.3.1603.29\\Subscribed Catalogs\\MetaData\n05/04/2016 11:04:43\tEntering Void Save(System.String) : C:\\Program Files (x86)\\WPP Release v1.3.1603.29\\Subscribed Catalogs\\MetaData\n05/04/2016 11:04:47\tEntering Void .ctor() : FrmSendDebugInfo\n05/04/2016 11:04:49\tEntering Void lnkLblShowInformations_LinkClicked(System.Object, System.Windows.Forms.LinkLabelLinkClickedEventArgs)",
+      "PostedDate": "2016-04-05T03:07:45.87-07:00",
+      "Id": 198370
+    }
+  ]
+}

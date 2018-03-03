@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1335632",
+    "ThreadId": "576086",
+    "Html": "I've got problems to import a saved rule properly. I have saved this OR-Rule:<br />\n<br />\n<img src=\"http://i57.tinypic.com/2808saq.png\" alt=\"Image\" /><br />\n<pre><code>&lt;lar:Or&gt;\n&lt;bar:RegSzToVersion Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\Wow6432Node\\Macromedia\\FlashPlayerActiveX&quot; Value=&quot;Version&quot; Comparison=&quot;EqualTo&quot; Data=&quot;16.0.0.235&quot;/&gt;&lt;bar:RegSzToVersion Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\Macromedia\\FlashPlayerActiveX&quot; Value=&quot;Version&quot; Comparison=&quot;EqualTo&quot; Data=&quot;16.0.0.235&quot;/&gt;&lt;/lar:Or&gt;\n</code></pre>\n\nThan I loaded this rule into another update and it was inserted between the default AND:<br />\n<br />\n<img src=\"http://i59.tinypic.com/14mza7k.jpg\" alt=\"Image\" /><br />\n<br />\nI found no possibility to delete this unwanted outer AND. My only workaround is to manually edit the rule and delete the opening and closing OR tag, than importing the rule into the other update and change the AND manually to OR.<br />\n<br />\nBut I really hope there's some easier way to do this..<br />\n",
+    "PostedDate": "2014-12-22T14:54:46.437-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1337324",
+    "ThreadId": "576086",
+    "Html": "<blockquote>\nI've got problems to import a saved rule properly. I have saved this OR-Rule:<br />\n</blockquote>\nYou don't have save the &quot;OR-Rule&quot;, you have saved the &quot;OR-<strong>GROUP</strong>&quot;\r<br />\nThis is why end up with a Or-Group in the AND-Group\r<br />\n<br />\nWhen you want to save rules instead of a group of rules, unselect the group and select all rules you want to save.<br />\n",
+    "PostedDate": "2014-12-26T11:41:42.433-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1350072",
+    "ThreadId": "576086",
+    "Html": "That doesn't solve my problem. I just want to be able to save and load whole rule sets including all groups and rules. Maybe you can add this feature in a future version of the WPP. <br />\n",
+    "PostedDate": "2015-02-08T06:08:11.25-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1352667",
+    "ThreadId": "576086",
+    "Html": "Select only the outter group<br />\n",
+    "PostedDate": "2015-02-14T12:48:19.207-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1459011",
+    "ThreadId": "576086",
+    "Html": "I have some experience to create rules for deploying patches to specific clients. I use WMI Query to filter clients in Package level rules of 'installed rules' page.<br />\nIt work perfectly to deploy Java 8 Update 65 to Specific Clients on Windows 7 64-bit Workstations with WSUS Package Publisher.<br />\n<a href=\"http://www.sthshare.com/wordpress/wsus-package-publisher-create-an-installed-rule-for-deploying-patches-to-specific-clients.html\" rel=\"nofollow\">http://www.sthshare.com/wordpress/wsus-package-publisher-create-an-installed-rule-for-deploying-patches-to-specific-clients.html</a><br />\nYou need to understand the logical for creating rules. <a href=\"http://www.sthshare.com/wordpress/how-to-create-isinstalled-rules-or-isinstallable-rules-with-wsus-package-publisher.html\" rel=\"nofollow\">How to create IsInstalled Rules  with WSUS Package Publisher</a><br />\n",
+    "PostedDate": "2016-01-12T19:51:17.883-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

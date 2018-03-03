@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1030204",
+    "ThreadId": "440230",
+    "Html": "Hi!\r<br />\n<br />\nFirst at all - I hope you will go forward with this tool. It's realy amazing!!!!!!\r<br />\n<br />\nNow, I have a question about the Rules for detect and install some apps.\r<br />\nI will use Java JRE 7u17 as example.\r<br />\n<br />\nI want to install jre17x86 and jre17x64. Both editions needs to be installed on x64 machines and the x86 only on machines with x86 CPU.\r<br />\nAt the moment I have created 3 packages because I have some problems with the rules but I want to have 2 packages at least.\r<br />\n<br />\nThe problem with the both MSI package is that x86 and x64 will have the same product id. I don't know who the hell has decided this but I guess with your rules it should be possible to sort this out.\r<br />\n<br />\n<strong>3 values for the x86 package:</strong>\r<br />\n<br />\n<strong>1. (x86 and x64) - MSI ID:</strong>\r<br />\n26A24AE4-039D-4CA4-87B4-2F86417017FF\r<br />\n<strong>2. After Installing it on x64:</strong>\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\JavaSoft\\Java Runtime Environment\\1.7.0_17\r<br />\n<strong>3. After Installing it on x86:</strong>\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Runtime Environment\\1.7.0_17\r<br />\n<br />\nNow, I will notice down an rule for this:\r<br />\n<br />\n<strong>IF exists</strong> 26A24AE4-039D-4CA4-87B4-2F86417017FF\r<br />\n<strong>AND</strong>\r<br />\n{ <strong>IF</strong> CPU = x64 <strong>AND</strong> &quot;HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\JavaSoft\\Java Runtime Environment\\1.7.0_17}\r<br />\n<strong>OR</strong>\r<br />\n{ <strong>IF</strong> CPU = x86 <strong>AND</strong> HKEY_LOCAL_MACHINE\\SOFTWARE\\JavaSoft\\Java Runtime Environment\\1.7.0_17}\r<br />\n<strong>PACKAGE IS INSTALLED</strong>\r<br />\n<br />\n<strong>ELSE</strong>\r<br />\n<br />\n<strong>PACKAGE IS NOT INSTALLED</strong>\r<br />\n<br />\nI guess this rule should be right. But this will not work. Can you give me a short example to understand the rules within your tool?\r<br />\n<br />\nThanks in advance!<br />\n",
+    "PostedDate": "2013-04-14T06:56:21.653-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1030256",
+    "ThreadId": "440230",
+    "Html": "<strong>torstenj wrote:</strong><br />\n<blockquote>\nHi!<br />\n</blockquote>\nHi torstenj, and thank you for your interest in WPP.<br />\n<blockquote>\nFirst at all - I hope you will go forward with this tool. It's realy amazing!!!!!!<br />\n</blockquote>\nIf you like WPP, help me to improve it. Report me any bug or missing features !<br />\n<blockquote>\nThe problem with the both MSI package is that x86 and x64 will have the same product id. I don't know who the hell has decided this but I guess with your rules it should be possible to sort this out.<br />\n</blockquote>\nI publish Java package for 1 year now and I never saw that before. Which files do you publish :<br />\n<pre><code> * Exe file from Oracle ?\n * Msi file after manually installing the EXE file on a computer ?\n</code></pre>\n\n<blockquote>\nI guess this rule should be right. But this will not work.<br />\n</blockquote>\nHow a 64bit computer report about x86 package and x64 package ?\r<br />\nHow a 32bit computer report about x86 package and x64 package ?<br />\n",
+    "PostedDate": "2013-04-14T10:04:17.633-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1030269",
+    "ThreadId": "440230",
+    "Html": "I've just check :\r<br />\nInstalling Java 7 Update 17 with the EXE file from Oracle generate an MSI file which have as Product Code :<br />\n<ul>\n<li>For x64 : 26A24AE4-039D-4CA4-87B4-2F8 <strong>64</strong> 17017FF</li>\n<li>\nFor x86 : 26A24AE4-039D-4CA4-87B4-2F8 <strong>32</strong> 17017FF<br />\n</li>\n</ul>\nOracle always use the same pattern for his Java MSI :\r<br />\n --&gt; 26A24AE4-039D-4CA4-87B4-2F8 <strong>xx</strong> <strong>yyyyy</strong> FF\r<br />\n<br />\nWhere :<br />\n<ul>\n<li><strong>xx</strong> is 32 for x86 and 64 for x64.</li>\n<li>\n<strong>yyyyy</strong> is the version number.<br />\n</li>\n</ul>\nYour rules should be :<br />\n<ol>\n<li>\nFor x86 package :<br />\n<ul>\n<li>\n<em>Installed Rule</em> :<br />\n<ul>\n<li>\n<strong>IF</strong> MSI product code present (26A24AE4-039D-4CA4-87B4-2F8 <strong>32</strong> 17017FF) <strong>Then</strong> already installed<br />\n</li>\n</ul>\n</li>\n<li>\n<em>Installable Rule</em> :<br />\n<ul>\n<li>\n<strong>IF</strong> MSI product code <strong>NOT</strong> present (26A24AE4-039D-4CA4-87B4-2F8 <strong>32</strong> 17017FF) <strong>Then</strong> Install if approve (If you have no Itanium processor computers)<br />\n</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>\nFor x64 package :<br />\n<ul>\n<li>\n<em>Installed Rule</em>:<br />\n<ul>\n<li>\n<strong>IF</strong> MSI product code present (26A24AE4-039D-4CA4-87B4-2F8 <strong>64</strong> 17017FF) <strong>Then</strong> already installed<br />\n</li>\n</ul>\n</li>\n<li>\n<em>Installable Rule</em> :<br />\n<ul>\n<li>\n<strong>IF</strong> MSI product code <strong>NOT</strong> present (26A24AE4-039D-4CA4-87B4-2F8 <strong>64</strong> 17017FF) <strong>AND</strong> CPU = x64 <strong>Then</strong> Install if approve<br />\n</li>\n</ul>\n</li>\n</ul>\n</li>\n</ol>\nLet me know if you have any problem.<br />\n",
+    "PostedDate": "2013-04-14T10:56:44.247-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-08T11:23:49.433-07:00"
+  },
+  {
+    "Id": "1030274",
+    "ThreadId": "440230",
+    "Html": "Ohhh damn!!!\r<br />\nI have had only compared the last 4 digits. ;-)\r<br />\nSorry m8!!!\r<br />\n<br />\nThis will explain a lot of troubles why something was not working because I have only done a copy of this MSI ID string.\r<br />\nAnyway - thanks for your quick feedback and enjoy your sunday evening!\r<br />\n<br />\nBest regards,\r<br />\n<br />\nTorsen<br />\n",
+    "PostedDate": "2013-04-14T11:05:45.923-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

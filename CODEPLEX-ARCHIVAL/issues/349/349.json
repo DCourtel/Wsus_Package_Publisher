@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Whenever I create or revise an update, the system hangs for about ten minutes before proceeding.\r\n\r\nusing windows 2012 r2 server, wsus package publisher installed locally on server.\r\n\r\nOnce the window opens everything is fine going forward.\r\n\r\n",
+    "LastUpdatedDate": "2016-10-19T12:25:07.997-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-10-19T12:25:07.997-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Not Responding on Create and Revise",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 349
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

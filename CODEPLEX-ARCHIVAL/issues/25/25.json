@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update Detail Viewer",
+      "DisplayName": "Update Detail Viewer"
+    },
+    "ClosedComment": "The collection is now constructed so that it take in account hidden computers.",
+    "ClosedDate": "2013-04-19T12:02:40.063-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "In the UpdateDetail Viewer, Status tab, when filtering to show 'online computers only'' and sending command to these computers, some unselected computers receive the command.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1304.12",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-04-19T11:52:46.843-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Filter online computers",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 25
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

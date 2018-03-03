@@ -1,0 +1,210 @@
+[
+  {
+    "Id": "1348181",
+    "ThreadId": "579215",
+    "Html": "Hi,\r<br />\nI'd like to know if it's possible to load a certificate signed by a CA?\r<br />\nDuring my test, WPP worked fine with a self-signed certificate. Now I'm going to use this API in production, my company wants to use a certificate signed by our CA. We already have it, but WPP seems to only want to use its self-signed certificate.\r<br />\n<br />\nWhen I import it in mmc &gt; Certificates, then I load WPP and try to connect to my local WSUS server, it says there is no certificate.\r<br />\nIs there a way to use my certificate instead of the self-signed one? \r<br />\n<br />\nPlease let me know as quickly as you can.\r<br />\nThanks<br />\n",
+    "PostedDate": "2015-02-02T02:56:04.437-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348265",
+    "ThreadId": "579215",
+    "Html": "Did you try using the &quot;Load a certificate&quot; function in the WPP Certificate Manager (Tools &gt; Certificate...)? You can use it to import a password protected PFX file, the button will by grayed out until you type in a password into the text box near the button. You can export the cert that you've used in mmc &gt; Certificates, and WPP will put it in all the necessary places, if you've missed any.<br />\n",
+    "PostedDate": "2015-02-02T07:36:29.117-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348285",
+    "ThreadId": "579215",
+    "Html": "OK thank you. My original certificate file is a .crt file. I renamed it in .cer\r<br />\nNow you tell me I need a pfx file?\r<br />\nSo with openssl, I've converted my certificate in certificate.pfx. It works well on WPP, no more error to connect to the server.\r<br />\nMy question is, what certificate file I have to deploy to my clients computers?\r<br />\n<br />\nSorry I'm kinda lost.\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2015-02-02T08:09:44.987-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348301",
+    "ThreadId": "579215",
+    "Html": "Firstly, make sure that the certificate you created is valid for code signing.<br />\n<br />\nTo create the pfx file, export the cert from the Management Console:<br />\n<ol>\n<li>Right click cert &gt; all tasks &gt; export...</li>\n<li>Click next once, select &quot;<em>Yes, export the private key</em>&quot;, click next again</li>\n<li>Check the boxed for &quot;<em>Include all certificates in the certification path if possible</em>&quot; and &quot;<em>Export all extended properties</em>&quot;.</li>\n<li>Select a password to use for this pfx file</li>\n<li>Choose a file name</li>\n<li>\nFinish the export<br />\n</li>\n</ol>\nThen in WPP:<br />\n<ol>\n<li>Tools &gt; Certificate...</li>\n<li>Type the chosen password in the password box</li>\n<li>Click &quot;<em>Load a certificate...</em>&quot;, press yes if prompted</li>\n<li>\nFind the file and import it<br />\n</li>\n</ol>\nFinally, restart WSUS:<br />\n<ol>\n<li>Open Services console</li>\n<li>\nRestart &quot;Update Services&quot;<br />\n</li>\n</ol>\n--or--<br />\n<ol>\n<li>Open cmd/run dialog/powershell</li>\n<li>run <code>net stop WSUSService &amp; net start WSUSService</code></li>\n</ol>\n",
+    "PostedDate": "2015-02-02T09:25:01.17-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348328",
+    "ThreadId": "579215",
+    "Html": "Yes ok I understant this part and it works.\r<br />\nBut now, what file I have to add in the clients' stores to communicate with the server?<br />\n",
+    "PostedDate": "2015-02-02T10:19:10.497-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348357",
+    "ThreadId": "579215",
+    "Html": "If the clients trust the issuing CA, then you should not have to distribute a certificate to the client stores. The cert needs to be distributed (exported without the public key) if the clients don't trust the issuing CA.<br />\n<br />\nAlso, if there are any intermediate certs, make sure they're installed in Intermediate Certification Authorities &gt; Certificates in the certificates console of the WSUS server local computer account, that way it will send the intermediate certs along with the server cert, (sending the whole chain for proper verification). This should have been taken care of by the export/import done earlier, but I haven't tested this on my end specifically. You could also distribute the intermediate cert as a trusted intermediate CA for the clients, but it's more secure to have the clients trust the root CA and send the intermediate certs to the client upon connection.<br />\n",
+    "PostedDate": "2015-02-02T11:46:51.037-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348387",
+    "ThreadId": "579215",
+    "Html": "Ok. But before seeing if I need to deploy a certificate to my client, I found out my certificate isn't valid for code signing!\r<br />\nIt only shows Server Authentification and Client Authentification.\r<br />\nI can't add a purpose, it's grayed out.\r<br />\n<br />\nDoes it mean I have to ask a new certificate with this new purpose?\r<br />\n<br />\nThanks for your help!<br />\n",
+    "PostedDate": "2015-02-02T12:45:02.123-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348393",
+    "ThreadId": "579215",
+    "Html": "Yes, it must be a code signing certificate. And private key must be, at least, 1024 bit length.<br />\n",
+    "PostedDate": "2015-02-02T13:00:30.88-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348418",
+    "ThreadId": "579215",
+    "Html": "<strong>austinian wrote:</strong><br />\n<blockquote>\nFirstly, make sure that the certificate you created is valid for code signing.<br />\n</blockquote>\nI guess you skipped that step. :)<br />\n<br />\nGenerating a certificate that's valid for code signing will depend on the CA you are using.<br />\n",
+    "PostedDate": "2015-02-02T14:15:52.417-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1398976",
+    "ThreadId": "579215",
+    "Html": "Hello,\r<br />\nI finally have my code signing certificate!!\r<br />\nCan you explain me how to install it on my server to publish updates and then to let clients download them?\r<br />\n<br />\nThanks a lot.<br />\n",
+    "PostedDate": "2015-04-02T05:34:23.69-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1399043",
+    "ThreadId": "579215",
+    "Html": "It's me again. I've successfully imported the pfx file in the console. I can publish updates.\r<br />\nMy clients see the update but I get an error when I try to install it. \r<br />\nDo I have to do something on the client?? (My goal is to only configure parameters on the server)<br />\n",
+    "PostedDate": "2015-04-02T07:42:46.853-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1399047",
+    "ThreadId": "579215",
+    "Html": "<strong>HiDoo wrote:</strong><br />\n<blockquote>\nCan you explain me how to install it on my server to publish updates and then to let clients download them?<br />\n</blockquote>\nYou will find a documenation for importing certificates: <a href=\"http://wsuspackagepublisher.codeplex.com/documentation\" rel=\"nofollow\">http://wsuspackagepublisher.codeplex.com/documentation</a>\r<br />\n<a href=\"http://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=499803\" rel=\"nofollow\">http://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=499803</a><br />\n",
+    "PostedDate": "2015-04-02T07:53:23.053-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1399059",
+    "ThreadId": "579215",
+    "Html": "Ok so my certificate is up on the server but I get an error when I try to install the update on my client.\r<br />\nCan you help me?<br />\n",
+    "PostedDate": "2015-04-02T08:46:39.16-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1399073",
+    "ThreadId": "579215",
+    "Html": "<strong>HiDoo wrote:</strong><br />\n<blockquote>\nOk so my certificate is up on the server but I get an error when I try to install the update on my client.<br />\nCan you help me?<br />\n</blockquote>\nIf you want to post the error message, i think it could be possible to help you. OK? :)<br />\n",
+    "PostedDate": "2015-04-02T09:30:29.45-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1399108",
+    "ThreadId": "579215",
+    "Html": "2015-04-02\t20:31:07:457\t1088\t1028\tDnldMgr\tBITS job {DC791307-9EF1-4C70-A878-50C72F2E4859} completed successfully<br />\n2015-04-02\t20:31:07:778\t1088\t1028\tMisc\tValidating signature for C:\\Windows\\SoftwareDistribution\\Download\\40f14bfb56c3cc146413561e743e5792\\9ed26d98-f97d-4725-b9a2-c284f3e8e4e7_1.cab with dwProvFlags 0x00000080:<br />\n2015-04-02\t20:31:08:040\t1088\t1028\tMisc\t Microsoft signed: No<br />\n2015-04-02\t20:31:08:041\t1088\t1028\tMisc\tTrusted Publisher: No<br />\n2015-04-02\t20:31:08:041\t1088\t1028\tMisc\tWARNING: Digital Signatures on file C:\\Windows\\SoftwareDistribution\\Download\\40f14bfb56c3cc146413561e743e5792\\9ed26d98-f97d-4725-b9a2-c284f3e8e4e7_1.cab are not trusted: Error 0x800b0004<br />\n2015-04-02\t20:31:08:041\t1088\t1028\tDnldMgr\tWARNING: VerifyFileTrust on file C:\\Windows\\SoftwareDistribution\\Download\\40f14bfb56c3cc146413561e743e5792\\9ed26d98-f97d-4725-b9a2-c284f3e8e4e7_1.cab failed with hr = 800b0004.<br />\n2015-04-02\t20:31:08:044\t1088\t1028\tDnldMgr\tWARNING: File failed postprocessing, error = 800b0004<br />\n2015-04-02\t20:31:08:045\t1088\t1028\tDnldMgr\tFailed file: URL = '<a href=\"http://server:8530/Content/42/486CE3C18207FF4FE866452F00AE9C8F00E10442.cab\" rel=\"nofollow\">http://server:8530/Content/42/486CE3C18207FF4FE866452F00AE9C8F00E10442.cab</a>', Local path = 'C:\\Windows\\SoftwareDistribution\\Download\\40f14bfb56c3cc146413561e743e5792\\9ed26d98-f97d-4725-b9a2-c284f3e8e4e7_1.cab'<br />\n2015-04-02\t20:31:08:045\t1088\t1028\tDnldMgr\tError 0x800b0004 occurred while downloading update; notifying dependent calls.<br />\n2015-04-02\t20:31:08:058\t1088\t1674\tAU\t&gt;&gt;##  RESUMED  ## AU: Download update [UpdateId = {56E85F2E-A5B6-450A-8EBD-58E70295137C}]<br />\n2015-04-02\t20:31:08:058\t1088\t1674\tAU\t  # WARNING: Download failed, error = 0x800B0004<br />\n2015-04-02\t20:31:08:058\t1088\t1674\tAU\t#########<br />\n2015-04-02\t20:31:08:058\t1088\t1674\tAU\t##  END  ##  AU: Download updates<br />\n2015-04-02\t20:31:08:058\t1088\t1674\tAU\t#############<br />\n2015-04-02\t20:31:08:059\t1088\t1674\tAU\tSetting AU scheduled install time to 2015-04-03 01:00:00<br />\n2015-04-02\t20:31:08:059\t1088\t1674\tAU\tSuccessfully wrote event for AU health state:0<br />\n2015-04-02\t20:31:08:059\t1088\t1674\tAU\tCurrently showing Progress UX client - so not launching any other client<br />\n2015-04-02\t20:31:08:061\t1088\t1674\tAU\tSuccessfully wrote event for AU health state:0<br />\n2015-04-02\t20:31:08:064\t1088\t17b0\tAU\tGetting featured update notifications.  fIncludeDismissed = true<br />\n2015-04-02\t20:31:08:064\t1088\t17b0\tAU\tNo featured updates available.<br />\n2015-04-02\t20:31:09:934\t1088\t17b0\tAU\tBeginInteractiveInstall invoked for Install<br />\n2015-04-02\t20:31:09:935\t1088\t17b0\tAU\tAuto-approved 0 update(s) for install (for Ux), installType=0<br />\n2015-04-02\t20:31:09:935\t1088\t17b0\tAU\tWARNING: BeginInteractiveInstall failed, error = 0x8024000C<br />\n2015-04-02\t20:31:09:935\t5060\t158c\tCltUI\tFATAL: BeginInteractiveInstall for install returned code 8024000C<br />\n2015-04-02\t20:31:10:001\t5060\t158c\tCltUI\tWARNING: AU directive Interactive Progress is exiting due to error 8024000C<br />\n2015-04-02\t20:31:10:021\t1088\tcbc\tAU\tAU received handle event<br />\n2015-04-02\t20:31:10:021\t1088\tcbc\tAU\tUpdateDownloadProperties: 0 download(s) are still in progress.<br />\n2015-04-02\t20:31:10:022\t1088\tcbc\tAU\tTriggering Offline detection (non-interactive)<br />\n2015-04-02\t20:31:10:023\t1088\tcbc\tAU\tAU setting pending client directive to 'Install Complete Ux'<br />\n2015-04-02\t20:31:10:023\t1088\tcbc\tAU\tWARNING: Pending directive, 'Install Complete Ux', is not applicable<br />\n2015-04-02\t20:31:10:026\t1088\tcbc\tAU\tSuccessfully wrote event for AU health state:0<br />\n2015-04-02\t20:31:10:026\t1088\tcbc\tAU\t#############<br />\n2015-04-02\t20:31:10:026\t1088\tcbc\tAU\t## START ##  AU: Search for updates<br />\n2015-04-02\t20:31:10:026\t1088\tcbc\tAU\t#########<br />\n2015-04-02\t20:31:10:029\t1088\tcbc\tAU\t&lt;&lt;## SUBMITTED ## AU: Search for updates [CallId = {A6E57995-FAF4-4D15-8C90-AAA217016FB2}]<br />\n2015-04-02\t20:31:10:029\t1088\te8c\tAgent\t*************<br />\n2015-04-02\t20:31:10:029\t1088\te8c\tAgent\t** START **  Agent: Finding updates [CallerId = AutomaticUpdates]<br />\n2015-04-02\t20:31:10:029\t1088\te8c\tAgent\t*********<br />\n2015-04-02\t20:31:10:029\t1088\te8c\tAgent\t  * Online = No; Ignore download priority = No<br />\n2015-04-02\t20:31:10:029\t1088\te8c\tAgent\t  * Criteria = &quot;IsInstalled=0 and DeploymentAction='Installation' or IsPresent=1 and DeploymentAction='Uninstallation' or IsInstalled=1 and DeploymentAction='Installation' and RebootRequired=1 or IsInstalled=0 and DeploymentAction='Uninstallation' and RebootRequired=1&quot;<br />\n2015-04-02\t20:31:10:029\t1088\te8c\tAgent\t  * ServiceID = {3DA21691-E39D-4DA6-8A4B-B43877BCB1B7} Managed<br />\n2015-04-02\t20:31:10:029\t1088\te8c\tAgent\t  * Search Scope = {Machine}<br />\n2015-04-02\t20:31:12:663\t1088\te8c\tAgent\t  * Added update {56E85F2E-A5B6-450A-8EBD-58E70295137C}.1 to search result<br />\n2015-04-02\t20:31:12:663\t1088\te8c\tAgent\t  * Found 1 updates and 80 categories in search; evaluated appl. rules of 458 out of 3173 deployed entities<br />\n2015-04-02\t20:31:12:664\t1088\te8c\tAgent\t*********<br />\n2015-04-02\t20:31:12:665\t1088\te8c\tAgent\t**  END  **  Agent: Finding updates [CallerId = AutomaticUpdates]<br />\n2015-04-02\t20:31:12:665\t1088\te8c\tAgent\t*************<br />\n2015-04-02\t20:31:12:693\t1088\t1674\tAU\t&gt;&gt;##  RESUMED  ## AU: Search for updates [CallId = {A6E57995-FAF4-4D15-8C90-AAA217016FB2}]<br />\n2015-04-02\t20:31:12:693\t1088\t1674\tAU\t  # 1 updates detected<br />\n2015-04-02\t20:31:12:693\t1088\t1674\tAU\t#########<br />\n2015-04-02\t20:31:12:693\t1088\t1674\tAU\t##  END  ##  AU: Search for updates [CallId = {A6E57995-FAF4-4D15-8C90-AAA217016FB2}]<br />\n2015-04-02\t20:31:12:693\t1088\t1674\tAU\t#############<br />\n2015-04-02\t20:31:12:693\t1088\t1674\tAU\tFeatured notifications is disabled.<br />\n2015-04-02\t20:31:12:693\t1088\t1674\tAU\tSetting AU scheduled install time to 2015-04-03 01:00:00<br />\n2015-04-02\t20:31:12:693\t1088\t1674\tAU\tSuccessfully wrote event for AU health state:0<br />\n2015-04-02\t20:31:12:694\t1088\te8c\tReport\tREPORT EVENT: {DB558D3C-CC44-47AA-B72B-AC1FFD11BD24}\t2015-04-02 20:31:08:058+0200\t1\t161\t101\t{56E85F2E-A5B6-450A-8EBD-58E70295137C}\t1\t800b0004\tAutomaticUpdatesWuApp\tFailure\tContent Download\tError: Download failed.<br />\n2015-04-02\t20:31:12:695\t1088\t1674\tAU\tSuccessfully wrote event for AU health state:0<br />\n2015-04-02\t20:31:12:752\t1088\te8c\tReport\tCWERReporter::HandleEvents - WER report upload completed with status 0x8<br />\n2015-04-02\t20:31:12:752\t1088\te8c\tReport\tWER Report sent: 7.6.7600.320 0x800b0004 56E85F2E-A5B6-450A-8EBD-58E70295137C Download 101 Managed<br />\n2015-04-02\t20:31:12:752\t1088\te8c\tReport\tCWERReporter finishing event handling. (00000000)<br />\n2015-04-02\t20:31:12:814\t1088\t6b8\tAU\tGetting featured update notifications.  fIncludeDismissed = true<br />\n2015-04-02\t20:31:12:814\t1088\t6b8\tAU\tNo featured updates available.<br />\n2015-04-02\t20:31:13:826\t1088\tcbc\tAU\tNo pending client directive<br />\n2015-04-02\t20:31:17:695\t1088\te8c\tReport\tCWERReporter finishing event handling. (00000000)<br />\n",
+    "PostedDate": "2015-04-02T11:35:28.83-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1399115",
+    "ThreadId": "579215",
+    "Html": "Hi,<br />\n<blockquote>\n2015-04-02 20:31:08:041 1088 1028 Misc WARNING: <strong>Digital Signatures</strong> on file C:\\Windows\\SoftwareDistribution\\Download\\40f14bfb56c3cc146413561e743e5792\\9ed26d98-f97d-4725-b9a2-c284f3e8e4e7_1.cab <strong>are not trusted</strong>: Error 0x800b0004<br />\n</blockquote>\nDoes your client computer trust your home made certificate ? Looks like the answer is no !<br />\n",
+    "PostedDate": "2015-04-02T12:07:34.803-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1399116",
+    "ThreadId": "579215",
+    "Html": "It's not a home made certificate. I requested it from my CA and I had to wait more than a month to get the code signin format.\r<br />\n<br />\nIs Wsus Package Publisher able to work without deploying the server certificate to all my clients??<br />\n",
+    "PostedDate": "2015-04-02T12:12:04.527-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1399151",
+    "ThreadId": "579215",
+    "Html": "Can you deploy the code signing certificate in the trusted Publisher cert store on the client machine? Does it work then?\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2015-04-02T13:17:20.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1400467",
+    "ThreadId": "579215",
+    "Html": "Yes it works.\r<br />\nBut my goal isn't to deploy the cert to all clients. Is there something more to do on the server to make it work?\r<br />\nPlus the cert expires every 3 years so I'd have to redeploy It again and we don't have AD.<br />\n",
+    "PostedDate": "2015-04-03T01:11:49.927-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1400765",
+    "ThreadId": "579215",
+    "Html": "<strong>HiDoo wrote:</strong><br />\n<blockquote>\nYes it works.<br />\nBut my goal isn't to deploy the cert to all clients. Is there something more to do on the server to make it work?<br />\nPlus the cert expires every 3 years so I'd have to redeploy It again and we don't have AD.<br />\n</blockquote>\nBut all Clients/Servers need the certificate. Without certificate they can not install updates from WPP.<br />\n",
+    "PostedDate": "2015-04-03T02:47:08.473-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1414826",
+    "ThreadId": "579215",
+    "Html": "<strong>HiDoo wrote:</strong><br />\n<blockquote>\nYes it works.<br />\nBut my goal isn't to deploy the cert to all clients. Is there something more to do on the server to make it work?<br />\nPlus the cert expires every 3 years so I'd have to redeploy It again and we don't have AD.<br />\n</blockquote>\nThe root certificate is trusted through the trusted root store. You need the the certificated to be in the trusted publishers store too. Thats why a codesigning certificate from a CA is in this case usually oversized. ;)\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2015-04-16T08:24:30.81-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1415932",
+    "ThreadId": "579215",
+    "Html": "I've reconfigured my WSUS Server in https. I've added the SSL certificate in IIS\r<br />\nSo my client can install Windows Update through <a href=\"https://server:8531\r\nI thought this change would let me also install signed updates from WPP\" rel=\"nofollow\">https://server:8531\r\nI thought this change would let me also install signed updates from WPP</a>. I've imported in WPP my signing code certificat and I've successfully published updates.\r<br />\n<br />\nSince my clients trust the server through my SSL certificate on port 8531, I really don't understand why they don't trust that same server with the code signing certificate?\r<br />\nPlease could you explain me?\r<br />\n<br />\nWhy it's not necessary to deploy a certificate on my client to install Windows updates through 8531 whereas it is for WPP?<br />\n",
+    "PostedDate": "2015-04-20T06:27:36.053-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1416022",
+    "ThreadId": "579215",
+    "Html": "I'm tying to use a signed certificate by our CA and I doesn't work at all. I did everything you documentation and still the application is telling that it failed to load the certificate. \r<br />\nThe WSUS server is installed in a different Domain and this domain does not have a Certificate Authority. So I installed the root CA of the authority server that produced the certificate on my WSUS server along with code signing certificate.\r<br />\n<br />\nLog of WSUS Package Publisher:\r<br />\n<br />\n2015-04-20 14:09:29\tServer\r<br />\n2015-04-20 14:09:29\tEntering Void InitializeContextMenuForServer()\r<br />\n2015-04-20 14:09:29\tServer Version is : 6.3.9600.16384\r<br />\n2015-04-20 14:09:29\tConsole Version is : 6.3.9600.16384\r<br />\n2015-04-20 14:09:29\tLocal OS is : Microsoft Windows NT 6.2.9200.0\r<br />\n2015-04-20 14:09:33\tEntering Void certificatToolStripMenuItem_Click(System.Object, System.EventArgs)\r<br />\n2015-04-20 14:09:33\tEntering Void .ctor() : FrmCertificateManagement\r<br />\n2015-04-20 14:09:33\tEntering Void .ctor()\r<br />\n2015-04-20 14:09:41\tEntering Void btnLoad_Click(System.Object, System.EventArgs)\r<br />\n2015-04-20 14:09:41\tEntering Boolean IsSureToWantToOverwriteCurrentCertificate()\r<br />\n2015-04-20 14:09:41\tEntering Boolean IsSureToWantToOverwriteCurrentCertificate()\r<br />\n2015-04-20 14:09:41\tGenerate or Load the certificate.\r<br />\n2015-04-20 14:09:47\tWill load certificate : C:\\Users\\xarboure\\Desktop\\Certificat code 28p\\WSUS_PUB.pfx\r<br />\n2015-04-20 14:09:47\tEntering Boolean IsValidCertificate(System.String, System.String)\r<br />\n2015-04-20 14:10:02\tIsValideCertificate = False\r<br />\n2015-04-20 14:10:32\tEntering Void btnOk_Click(System.Object, System.EventArgs)\r<br />\n2015-04-20 14:10:36\tEntering Void .ctor() : FrmSendDebugInfo\r<br />\n2015-04-20 14:10:38\tEntering Void lnkLblShowInformations_LinkClicked(System.Object, System.Windows.Forms.LinkLabelLinkClickedEventArgs)<br />\n",
+    "PostedDate": "2015-04-20T11:31:45.85-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1416053",
+    "ThreadId": "579215",
+    "Html": "Hi HiDoo,<br />\n<blockquote>\nSince my clients trust the server through my SSL certificate on port 8531, I really don't understand why they don't trust that same server with the code signing certificate? <br />\nPlease could you explain me? <br />\n</blockquote>\nThe certificate for SSL is a server cert, used to identified a computer. Packages needs to be sign with a code signing certificate. To be trusted, the code signing certificate must be present in the &quot;Trusted Publisher&quot; store. And the certificate of the Root Authority that have issued the code signing cert, must be present in the &quot;Root Certificate authorities&quot; store.<br />\n<blockquote>\nWhy it's not necessary to deploy a certificate on my client to install Windows updates through 8531 whereas it is for WPP?<br />\n</blockquote>\nMicrosoft updates are digitally signed, and their certificates are already in the good stores.<br />\n",
+    "PostedDate": "2015-04-20T13:45:40.807-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1416057",
+    "ThreadId": "579215",
+    "Html": "Hi earbour, you should open your own thread in this forum.<br />\n",
+    "PostedDate": "2015-04-20T13:51:14.643-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1421324",
+    "ThreadId": "579215",
+    "Html": "OK so as I had no choice, I've deployed the certificate to my clients.\r<br />\nI can now publish updates.\r<br />\nThis thread can be closed.<br />\n",
+    "PostedDate": "2015-04-29T04:52:29.26-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

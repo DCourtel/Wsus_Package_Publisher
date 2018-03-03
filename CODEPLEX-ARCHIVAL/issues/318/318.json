@@ -1,0 +1,56 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:43:22.197-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Dear all,\r\nwe have a WSUS server version 3.2.7600.226 running on Windows Server 2008 R2 SP2. We installed WPP v1.3.1511.15. We are working in an AD environment.\r\n\r\nWe followed the documentation in order to push Acrobat Reader updates to our clients (all running Windows 7 Pro or Windows XP). That is:\r\n- we generated a self-signed certificate within WPP\r\n- we installed it on WSUS server and restarted\r\n- we created a GPO where we published the certificate in both \"Trusted Root Certification Authorities\" and \"Trusted Publisher\", and we enabled the \"Allow signed content from intranet MS update service location\" option\r\n- we published the Acrobat package\r\n\r\nWe can see the update on the clients, but whenever we try to install them the procedure fails and we read the following errors in the WindowsUpdate.log file (I just tampered with the wsus hostname)\r\n2016-01-16\t15:16:27:693\t 944\tc00\tMisc\tValidating signature for C:\\Windows\\SoftwareDistribution\\Download\\d1a1e01041c3ba23117f811c9b900da9\\AdbeRdrUpd11013.cab with dwProvFlags 0x00000080:\r\n2016-01-16\t15:16:27:836\t 944\tc00\tMisc\tFATAL: Error: 0x800b0109 when verifying trust for C:\\Windows\\SoftwareDistribution\\Download\\d1a1e01041c3ba23117f811c9b900da9\\AdbeRdrUpd11013.cab\r\n2016-01-16\t15:16:27:836\t 944\tc00\tMisc\tWARNING: Digital Signatures on file C:\\Windows\\SoftwareDistribution\\Download\\d1a1e01041c3ba23117f811c9b900da9\\AdbeRdrUpd11013.cab are not trusted: Error 0x800b0109\r\n2016-01-16\t15:16:27:848\t 944\tc00\tDnldMgr\tWARNING: File failed postprocessing, error = 800b0109\r\n2016-01-16\t15:16:27:848\t 944\tc00\tDnldMgr\tFailed file: URL = 'http://wsus.localdomain/Content/7A/E593B895DDC935A4BC277D9E422EDB949301C07A.cab', Local path = 'C:\\Windows\\SoftwareDistribution\\Download\\d1a1e01041c3ba23117f811c9b900da9\\AdbeRdrUpd11013.cab'\r\n2016-01-16\t15:16:27:853\t 944\tc00\tDnldMgr\tError 0x800b0109 occurred while downloading update; notifying dependent calls.\r\n\r\nWe are frustated because we think we followed all the installation steps, can anyone help us to achieve our goal?\r\n\r\nThank you.\r\nAlessandro",
+    "LastUpdatedDate": "2017-02-03T11:43:22.197-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-01-16T06:41:16.727-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Digital signature not trusted",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 318
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1538687,
+      "FileName": "wpp_error.png",
+      "DownloadUrl": ".\\1538687"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Your WSUS is not up2date. Pls check what is the Build from your WSUS: http://www.wsus.de/images/wsus-version.png If your Build lower then .274, pls install the updates up 2 build .274.\n\nWSUS 3.0 (SP2): \tBuild 3.2.7600.226\nWSUS 3.0 (SP2) + KB2720211: \tBuild 3.2.7600.251\nWSUS 3.0 (SP2) + KB2734608: \tBuild 3.2.7600.256\nWSUS 3.0 (SP2) + KB2828185: \tBuild 3.2.7600.262\nWSUS 3.0 (SP2) + KB2938066: \tBuild 3.2.7600.274\n\nAfter this, connect the clients again and try it. ",
+      "PostedDate": "2016-01-16T07:27:18.077-08:00",
+      "Id": 195492
+    },
+    {
+      "Message": "Dear WinfriedSonntag,\nthan you for your reply!\n\nI investigated and I discovered that I signed my cabs with an older version of a certificate that I did not distribute to end clients. I made a new one, published a new packet signed with this one, distributed the certificate and now everything is working.\n\nI apologize if I wasted your time.\n\nThank you again.\nAlessandro",
+      "PostedDate": "2016-01-18T03:23:52.81-08:00",
+      "Id": 195548
+    }
+  ]
+}

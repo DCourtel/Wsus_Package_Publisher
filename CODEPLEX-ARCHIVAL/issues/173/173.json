@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-03-04T10:39:10.26-08:00",
+    "CommentCount": 6,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI am a very beginner in this so I am sorry for my possibly lame questions. :)\r\nI've successfully packaged Adobe Reader 11.006 and distributed to my test computers so the package and the distribution are working fine. \r\nIn our company users usually use Adobe reader but approx. 25% of them use Foxit reader.\r\n\r\nWhich rule do I need to and how to configure to NOT to install Adobe Reader if there is no Adobe Reader previously installed on the computer?\r\n(I will have a same problem with the java because only 10-15% of our computers running java and I don't want to install the latest on all of them but to update only the ones where they are currently installed)\r\n\r\nI am a bit stuck with this because I find those rules quite complex.\r\n\r\nThank you guys in advance.\r\n\r\n\r\n\r\n\r\n\r\n",
+    "LastUpdatedDate": "2014-03-04T10:39:10.26-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-01-20T21:23:41.017-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Adobe reader distribution",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 173
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Are you deploying the 11.0.06 only (msp)? Or are you deploying the .exe? If you are deploying only the 11.0.06 update you don't need to do anything, because it will only install on Computers with at least Adobe Reader XI. If you deploy the .exe file, you Need to define rules \"if Directory exists than\" and so on. Same for foxit and any other Software.\n\nRegards\nNorbert",
+      "PostedDate": "2014-01-21T00:55:13.723-08:00",
+      "Id": 131026
+    },
+    {
+      "Message": "I am installing the full Adobe Reader 11.006 and found a bit hard to define the rule.\nIf I can get a bit help with this that would be wonderful.\n\nSo I see that the installation folder is different on WIn 7 and on Win XP but there is a registry key which is the same on both platforms so I think I can use the Registry Key Exist rule.\n(HKLM\\software\\classes\\applications\\acrord32.exe )\n\nWhere do I need to configure the rule and how?\nIs it at the first rule windows where allow clients computer to determine if the update is already installed\nor\nIs it the second rule window where Indicate here the rule or rules that allow clients computer to determine if the update is installable.\n\nShould I use an AND or OR group?\n\n(what I tried so far is in under the installable option I added an AND registry Key Exist rule with the registry key above but then the computer didn't detect the update)\n\nI stuck a bit with this. :(\n\nThank you!\nImre\n\n",
+      "PostedDate": "2014-01-21T18:29:39.29-08:00",
+      "Id": 131127
+    },
+    {
+      "Message": "It would be a lot easier to deploy the 11.0.06.msp file, because you wouldn't had to define any rule at all. It would only install on computers where Adobe reader XI is already installed.",
+      "PostedDate": "2014-01-21T21:27:51.273-08:00",
+      "Id": 131133
+    },
+    {
+      "Message": "I've tried that to be honest. I tried the MSP file and the MUI MSP file too but the computers didn't see the approved  updates at all. What I realised is when I create those packages there are no rules at all. (not even product ID rules)  Is that normal?",
+      "PostedDate": "2014-01-21T22:06:49.787-08:00",
+      "Id": 131136
+    },
+    {
+      "Message": "One of the computers has 11.03 installed (manually/locally  installed on the PC) and it can't see the mui/msp updates but can see the full 11.06 update",
+      "PostedDate": "2014-01-21T22:10:22.04-08:00",
+      "Id": 131137
+    },
+    {
+      "Message": "If you don't have the MUI Version of Adobe Reader installed, than you won't see the MUI updates. And vice versa.\n\nIs the Update approved for Installation? Anything in the Windowsupdate.log on a Client? And yes you won't see any rules in an .msp patch.\n\nRegards\nNorbert",
+      "PostedDate": "2014-01-21T22:36:22.673-08:00",
+      "Id": 131142
+    }
+  ]
+}

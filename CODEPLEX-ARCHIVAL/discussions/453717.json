@@ -1,0 +1,170 @@
+[
+  {
+    "Id": "1081810",
+    "ThreadId": "453717",
+    "Html": "Hi Guys,<br />\ni've added OpenOffice 4.0 as msi file to the packager. I tested follow command line manually:<br />\n<pre><code>REGISTER_NO_MSO_TYPES=1 CREATEDESKTOPLINK=0 SETUP_USED=1 COMPANYNAME=&quot;Bad Wurzach&quot; USERNAME=&quot;EDV&quot; ADDLOCAL=ALL REMOVE=gm_o_Winexplorerext,gm_o_Activexcontrol,gm_o_Quickstart,gm_o_Javafilter,gm_o_Pyuno,gm_o_Pyuno,gm_o_Onlineupdate</code></pre>\n\nIt work's great. Now i added this parameters to the package:<br />\n<a href=\"https://ajax.wurzach-it.de/data/public/f7ec1f\" rel=\"nofollow\">https://ajax.wurzach-it.de/data/public/f7ec1f</a><br />\n<br />\nAll parameters work fine, not &quot;REGISTER_NO_MSO_TYPES=1&quot;. As I have already write to begin manually the parameter works.<br />\n<br />\nRegards,<br />\nDaniel<br />\n",
+    "PostedDate": "2013-08-18T04:42:38.417-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1081815",
+    "ThreadId": "453717",
+    "Html": "Hi badwurzach,\r<br />\n<br />\nTry to revise the update and checking the option &quot;Can Request User Input&quot; ( &quot;Benutzereingabe ermöglichen&quot; in German).<br />\n",
+    "PostedDate": "2013-08-18T05:08:56.73-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1081881",
+    "ThreadId": "453717",
+    "Html": "Hi DCourtel,\r<br />\nthank you for your idea, but the installation still ignore this parameter.<br />\n",
+    "PostedDate": "2013-08-18T13:05:30.517-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1081894",
+    "ThreadId": "453717",
+    "Html": "Is there any installation log that you could consult ?<br />\n",
+    "PostedDate": "2013-08-18T14:03:35.957-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1081901",
+    "ThreadId": "453717",
+    "Html": "Thats a good question. Can i generate one with the command line parameters in wpp, e.g. msiexec /lv C:\\temp\\oo4.log?<br />\n",
+    "PostedDate": "2013-08-18T14:17:04.83-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1081975",
+    "ThreadId": "453717",
+    "Html": "Yes, add /lv C:\\temp\\oo4.log to the previous CommandLine and see the generated Log File after installation.<br />\n",
+    "PostedDate": "2013-08-18T21:54:09.503-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1081993",
+    "ThreadId": "453717",
+    "Html": "Good morning,\r<br />\ni try follow<br />\n<pre><code>REGISTER_NO_MSO_TYPES=1 CREATEDESKTOPLINK=0 SETUP_USED=1 COMPANYNAME=&quot;Bad Wurzach&quot; USERNAME=&quot;EDV&quot; ADDLOCAL=ALL REMOVE=gm_o_Winexplorerext,gm_o_Activexcontrol,gm_o_Quickstart,gm_o_Javafilter,gm_o_Pyuno,gm_o_Pyuno,gm_o_Onlineupdate /lv &quot;C:\\temp\\oo4.log&quot;</code></pre>\n\nand<br />\n<pre><code>/lv &quot;C:\\temp\\oo4.log&quot; REGISTER_NO_MSO_TYPES=1 CREATEDESKTOPLINK=0 SETUP_USED=1 COMPANYNAME=&quot;Bad Wurzach&quot; USERNAME=&quot;EDV&quot; ADDLOCAL=ALL REMOVE=gm_o_Winexplorerext,gm_o_Activexcontrol,gm_o_Quickstart,gm_o_Javafilter,gm_o_Pyuno,gm_o_Pyuno,gm_o_Onlineupdate</code></pre>\n\nIn any version i get the error code 80070667 from windows update. Here the logfile:\r<br />\n<a href=\"https://ajax.wurzach-it.de/data/public/44eaa9\" rel=\"nofollow\">https://ajax.wurzach-it.de/data/public/44eaa9</a><br />\n",
+    "PostedDate": "2013-08-18T23:07:15.503-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082188",
+    "ThreadId": "453717",
+    "Html": "<blockquote>\nIn any version i get the error code 80070667 from windows update.<br />\n</blockquote>\nWhich mean : Error in the comand-Line\r<br />\nDoes the <em>C:\\temp\\oo4.log</em> file show any evidences of why it failed ?\r<br />\n<br />\nIf <em>C:\\temp\\oo4.log</em>  haven't been created, check if the C:\\temp Exists.\r<br />\nTry :  /L*v C:\\temp\\oo4.log\r<br />\nDon't quote the path.<br />\n",
+    "PostedDate": "2013-08-19T07:26:23.307-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082212",
+    "ThreadId": "453717",
+    "Html": "The folder &quot;Temp&quot; exist on this machine. I tried follow command line:<br />\n<pre><code>/L*v C:\\temp\\oo4.log REGISTER_NO_MSO_TYPES=1 CREATEDESKTOPLINK=0 SETUP_USED=1 COMPANYNAME=&quot;Bad Wurzach&quot; USERNAME=&quot;EDV&quot; ADDLOCAL=ALL REMOVE=gm_o_Winexplorerext,gm_o_Activexcontrol,gm_o_Quickstart,gm_o_Javafilter,gm_o_Pyuno,gm_o_Pyuno,gm_o_Onlineupdate</code></pre>\n\nThe same error as before...<br />\n",
+    "PostedDate": "2013-08-19T08:14:41.67-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082280",
+    "ThreadId": "453717",
+    "Html": "To discover which parameter in the command-line, give the error, try to publish the package without the Command-Line. If it installed successfully, then add <strong>ONE</strong> parameter, if succeed, then add a second parameter... until it failed, then you will know which parameter is in fault.<br />\n",
+    "PostedDate": "2013-08-19T10:31:22.497-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082318",
+    "ThreadId": "453717",
+    "Html": "I tried the shortest command line:<br />\n<pre><code>/L*v C:\\temp\\oo4.log SETUP_USED=1</code></pre>\n\nThe same error code. The last parameter is necessary that OpenOffice installation starts with the msi file. Is a special parameter from msiexec, e.g. /qb required?<br />\n",
+    "PostedDate": "2013-08-19T12:12:59.657-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082344",
+    "ThreadId": "453717",
+    "Html": "In your first post, you said:<br />\n<blockquote>\nAll parameters work fine, not &quot;REGISTER_NO_MSO_TYPES=1&quot;. <br />\n</blockquote>\nWhat have been change since this point ?<br />\n<blockquote>\nIs a special parameter from msiexec, e.g. /qb required?<br />\n</blockquote>\nNo Wsus add necessary switch to the command line to make the installation silent. Don't add any.<br />\n",
+    "PostedDate": "2013-08-19T13:23:12.907-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082510",
+    "ThreadId": "453717",
+    "Html": "The differnet between my first post and now is the parameter &quot;/L*v C:\\temp\\oo4.log&quot;. If i try the commandline without this parameter windows update installed openoffice, but the parameter &quot;REGISTER_NO_MSO_TYPES=1&quot; was ignored.\r<br />\n<br />\nShort:<br />\n<pre><code>REGISTER_NO_MSO_TYPES=1 CREATEDESKTOPLINK=0 SETUP_USED=1 COMPANYNAME=&quot;Bad Wurzach&quot; USERNAME=&quot;EDV&quot; ADDLOCAL=ALL REMOVE=gm_o_Winexplorerext,gm_o_Activexcontrol,gm_o_Quickstart,gm_o_Javafilter,gm_o_Pyuno,gm_o_Pyuno,gm_o_Onlineupdate</code></pre>\n\nWindows Update installed office but ignored the parameter &quot;REGISTER_NO_MSO_TYPES=1&quot;.<br />\n<pre><code>/L*v C:\\temp\\oo4.log REGISTER_NO_MSO_TYPES=1 CREATEDESKTOPLINK=0 SETUP_USED=1 COMPANYNAME=&quot;Bad Wurzach&quot; USERNAME=&quot;EDV&quot; ADDLOCAL=ALL REMOVE=gm_o_Winexplorerext,gm_o_Activexcontrol,gm_o_Quickstart,gm_o_Javafilter,gm_o_Pyuno,gm_o_Pyuno,gm_o_Onlineupdate</code></pre>\n\nWindows Update don't installed openoffice and show me the error code 80070667.<br />\n",
+    "PostedDate": "2013-08-19T23:30:05.483-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082568",
+    "ThreadId": "453717",
+    "Html": "Strange that /L*v C:\\temp\\oo4.log give an error. You may want to check your Windows Installer version.\r<br />\n<br />\nFor the &quot;REGISTER_NO_MSO_TYPES=1&quot;, that been ignored, may be check with the editor of the software or on forums.\r<br />\nYou may find usefull informations on AppDeploy site.<br />\n",
+    "PostedDate": "2013-08-20T02:06:43.547-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082597",
+    "ThreadId": "453717",
+    "Html": "Only WPP ignore this parameter. If i start a command line in windows 7, drap and drop the msi file from open office, paste the parameters 1:1 behind it an press enter the installation runs successfully without any problems. AND... the parameter &quot;REGISTER_NO_MSO_TYPES=1&quot; works correct.<br />\n<br />\nmy command line:<br />\n<pre><code>C:\\&gt;C:\\Temp\\OpenOffice 4.0.0 (de) Installation Files\\openoffice400.msi REGISTER_NO_MSO_TYPES=1 CREATEDESKTOPLINK=0 SETUP_USED=1 COMPANYNAME=&quot;Bad Wurzach&quot; USERNAME=&quot;EDV&quot; ADDLOCAL=ALL REMOVE=gm_o_Winexplorerext,gm_o_Activexcontrol,gm_o_Quickstart,gm_o_Javafilter,gm_o_Pyuno,gm_o_Pyuno,gm_o_Onlineupdate</code></pre>\n\nIt's very strange... so i think it's a problem from WPP, because manually it works.<br />\n",
+    "PostedDate": "2013-08-20T03:05:02.097-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082604",
+    "ThreadId": "453717",
+    "Html": "<blockquote>\nOnly WPP ignore this parameter.<br />\n</blockquote>\nWPP doesn't ignore your command-line. See your WindowsUpdate.log :\r<br />\n<br />\n2013-08-19\t08:04:14:881\t4420\t13b4\tHandler\tMSI final <strong>command line</strong>: REGISTER_NO_MSO_TYPES=1 CREATEDESKTOPLINK=0 SETUP_USED=1 COMPANYNAME=&quot;Bad Wurzach&quot; USERNAME=&quot;EDV&quot; ADDLOCAL=ALL REMOVE=gm_o_Winexplorerext,gm_o_Activexcontrol,gm_o_Quickstart,gm_o_Javafilter,gm_o_Pyuno,gm_o_Pyuno,gm_o_Onlineupdate /lv &quot;C:\\temp\\oo4.log&quot; ALLUSERS=1 MSIRESTARTMANAGERCONTROL=Disable REBOOT=REALLYSUPPRESS\r<br />\n<br />\nopenoffice400.msi is not able to treat the parameter &quot;REGISTER_NO_MSO_TYPES=1&quot; when it is launch by Windows Update Agent.<br />\n",
+    "PostedDate": "2013-08-20T03:28:08.347-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082842",
+    "ThreadId": "453717",
+    "Html": "This evening i do a test: i copied your output 1:1 in a manual installation AND open office installed successfully. Now i have no idea what the problem is in this case.\r<br />\nNobody here, wo deployed open office with wpp successfully?<br />\n",
+    "PostedDate": "2013-08-20T12:49:53.81-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082850",
+    "ThreadId": "453717",
+    "Html": "Are you sure you have checked the checkbox &quot;Can Request user input&quot; ?\r<br />\n<img src=\"http://i.imgur.com/YoqoE2Q.png\" alt=\"Image\" /><br />\n",
+    "PostedDate": "2013-08-20T13:08:17.46-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082866",
+    "ThreadId": "453717",
+    "Html": "The checkbox is set. I controlled it again.<br />\n",
+    "PostedDate": "2013-08-20T13:41:11.037-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082955",
+    "ThreadId": "453717",
+    "Html": "When you tested, did you install at shutdown or when the User session was still open ?<br />\n",
+    "PostedDate": "2013-08-20T22:00:33.977-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082970",
+    "ThreadId": "453717",
+    "Html": "The user session is still open, because the user can manually start install updates.<br />\n",
+    "PostedDate": "2013-08-20T23:23:39.12-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:43:44.43-07:00"
+  }
+]

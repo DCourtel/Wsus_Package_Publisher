@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Ich möchte gerne ein Custom Update machen, in welchem ich z.B. nach der msi-Installation eine Datei kopiere. Habe mir mehrfach in der Dokumentation das CustomUpdate.pdf durchgelesen und verschiedene Custom Updates erstellt. Sie werden zwar im WSUS angezeigt, aber NIE erhält ein Client dieses Update. Ich habe schon ganz einfache Custom Updates gemacht, keine Chance, ich weiß nicht was ich falsch mache.\r\n\r\nNicht bei allen Custom Updates aber immer wieder kommt im WSUS die Anzeige \"Die Dateien für dieses Update wurde noch nicht heruntergeladen...\". Diese Anzeige steht tagelang da, ich wüsste nicht, was da heruntergeladen werden sollte, die Dateien liegen alle am WSUS selbst. \r\n\r\nDa ein Update mit dieser Anzeige (würde mich interessieren woher die kommt) nicht am Client erscheint ist mir klar, ich habe aber auch andere Custom Updates ohne diese Anzeige, die erscheinen auch nicht am Client. Bei \"normalen\" Updates, ohne Custom, klappt alles, z.B. Flash-Player kann ich mit WPP erstellen und ist im WSUS zu sehen und wird auch an Clients verteilt.\r\n\r\nHat jemand einen Tipp wie man die Custom Updates auf die Clients bekommt, irgendwas fehlt? Danke",
+    "LastUpdatedDate": "2016-03-13T07:25:15.067-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-03-07T09:45:08.31-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Custom Update - Keine Verteilung am Client",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 329
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Schau dir die Regeln für das MSI in diesem Artikel an: http://wsus.de/uninstall2install Wie sehen deine Regeln aus?",
+      "PostedDate": "2016-03-08T09:13:41.11-08:00",
+      "Id": 197744
+    },
+    {
+      "Message": "Habe mir den Artikel angeschaut und die fehlenden Regeln eingetragen, kein Unterschied, leider. Update steht in der WSUS-Konsole mit Vermerk \"Die Dateien für dieses Update wurden noch nicht heruntergeladen\". Liegt evtl. daran, dass kein Client dieses Update anfordert?\n\nIch möchte ja nur erstmal schaffen, dass ein 0815-CustomUpdate installiert wird, dann kann ich überhaupt mal versuchen kompliziertere Sachen zu versuchen. Wie gesagt, bei \"Nicht\"-CustomUpdates über WPP habe ich kein Problem, die werden verteilt, sobald ich aber irgendwas mit Custom mache geht alles außer das wichtigeste, die Anforderung vom Client.\n\nHat jemand eine Schritt für Schritt Anleitung eines simplen Custom Update?\n",
+      "PostedDate": "2016-03-09T08:27:41.993-08:00",
+      "Id": 197823
+    },
+    {
+      "Message": "Ist der WPP denn auf dem WSUS direkt installiert? Wo liegen die Dateien für das Custom Update? Am besten auf dem WSUS ablegen und dann von dort aus das Custom Update starten.\n\nHast Du das Update denn im WPP auch genehmigt? Wenn alles auf ja steht, dann schau doch am besten auf dem WSUS in die SoftwareDistribution.log, die Datei liegt auf dem WSUS im Programmverzeichnis, im Unterverzeichnis Logs oder so ähnlich. Dort könnte etwas drin stehen. Zusätzlich auf der Startseite vom WSUS nachschauen, Downloadstatus. Was ist dort zu finden? Ist noch genügend Platz auf der HDD vom WSUS?",
+      "PostedDate": "2016-03-09T09:14:01.99-08:00",
+      "Id": 197825
+    },
+    {
+      "Message": "DANKE WinfriedSonntag, das mit dem Tipp Startseite vom WSUS hat geholfen, mein WSUS Dienst lief nicht. OK sehr dumm, dann kann er natürlich nix bereitstellen. Weshalb der nicht lief muss ich noch ergründen, hat mir aber geholfen. Jetzt wird das \"Custom Update\" zwar an den Clients angezeigt und ausgeführt, aber läuft auch wenn es nur eine \"einfache\" Kopier/Umbennenaktion ist auf Fehler, werde mich mal weiter im Forum dazu umschauen. Danke erstmal trotzdem.",
+      "PostedDate": "2016-03-13T07:25:15.067-07:00",
+      "Id": 197871
+    }
+  ]
+}

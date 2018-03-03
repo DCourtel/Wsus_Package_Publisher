@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "I have wsus package publisher installed on 2016 server, and anytime I try to make updates visible in wsus Console, I receive an error.\r\n\r\nA Network-Related or Instance-related error occurred while establishing a connection to sql server. The server was not found or was not accessible. Verify that the instance name is correct and that sql server is configured to allow remote connections. (provider: named Pipes Provider, error: 40 - Could not open a connection to SQL server\r\n\r\nI am running all apps on the same server.\r\n",
+    "LastUpdatedDate": "2017-08-30T09:29:01.527-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-08-30T09:07:12.85-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "WSUS 10 error",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 381
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "You are using Windows Internal Database? If yes, pls install MS SQL Express Database, after this, you can make Updates visible in WSUS-Console.",
+      "PostedDate": "2017-08-30T09:29:01.527-07:00",
+      "Id": 208801
+    }
+  ]
+}

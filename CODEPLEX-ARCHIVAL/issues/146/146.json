@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "WPP now correctly sort column with DateTime.",
+    "ClosedDate": "2013-11-01T05:31:06.473-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Sorting computers by Last Sync Time or Last Reported Status sorts by the string representation of the date rather than the date itself.\r\n\r\ni.e. if you have D/M/Y dates, and you have computers that last reported on 9/11/2009, 1/12/2012 and 24/10/2013, and you sort by date descending, you'll get the following date order:\r\n\r\n9/11/2009\r\n24/10/2013\r\n1/12/2012\r\n\r\ninstead of:\r\n\r\n24/10/2013\r\n1/12/2012\r\n9/11/2009",
+    "LastUpdatedDate": "2013-11-01T05:33:34.593-07:00",
+    "PlannedForRelease": "Release v1.3.1310.12",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-27T23:15:43.583-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Sorting by date uses string sorting",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 146
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,256 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-05-02T12:14:24.72-07:00",
+    "CommentCount": 39,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\ni want publish many 3rd Party Software through WSUSPackagePublisher into WSUS. But i only want to manage the 3rd Party Software in WSUS.MSC. For this i run after publishing in WUP a Query or a Trigger like this:\r\n\r\nUPDATE [SUSDB].[dbo].[tbUpdate] SET [IsLocallyPublished] = 0 WHERE [IsLocallyPublished] <> 0\r\n\r\nAfter running this Query, i can't see my published 3rd Party Software in WSUS Package Publisher. \r\n\r\nPls make a Checkbox or another option to switch between Updates where SET [IsLocallyPublished] = 0 and Where SET = 1.\r\n\r\nThanks and Regards\r\nWinfried Sonntag",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-04-15T11:44:04.633-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Make Updates visible in WUP after SET IsLocallyPublished = 0",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 2,
+    "Id": 19
+  },
+  "FileAttachments": [
+    {
+      "FileId": 664526,
+      "FileName": "LUP_View.png",
+      "DownloadUrl": ".\\664526"
+    },
+    {
+      "FileId": 666923,
+      "FileName": "prerequisites.png",
+      "DownloadUrl": ".\\666923"
+    },
+    {
+      "FileId": 667056,
+      "FileName": "Prerequisites.png",
+      "DownloadUrl": ".\\667056"
+    },
+    {
+      "FileId": 667474,
+      "FileName": "Prereq1.png",
+      "DownloadUrl": ".\\667474"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "If I do that, WPP will show \"Microsoft\" updates. So creating an update will be EXTREMELY slow as WPP must build a list of all update to show potentially supersedes updates and prerequisites updates.\nI need a way to differentiate Microsoft updates from locally published updates which have been mark as  not IsLocallyPublished.",
+      "PostedDate": "2013-04-15T14:52:22.703-07:00",
+      "Id": 97071
+    },
+    {
+      "Message": "Maybe an optional filter to filter out Vendor \"Microsoft\" will help to speed up a bit.\n",
+      "PostedDate": "2013-04-16T00:22:46.673-07:00",
+      "Id": 97105
+    },
+    {
+      "Message": "It is very useful to have all updates in WUP too. In WSUS-Konsole (like WSUS.MSC) i can approve, decline Updates and 3rd Party Software and run Reports. And it is possible to give other Admins only rights for read the status. \r\n\r\nBut in WUP i need to 'see' the published 3rd Party Tools for update the 3rd Party Tools like Flash Player, Reader or Java Runtime.\r\n\r\nSorry, but in Local Update Publisher it is possible to see the Updates. I think you don't must read all updates at start, only i expand a node from treeview. Have a look on the picture, i attach this posting.",
+      "PostedDate": "2013-04-16T00:35:12.267-07:00",
+      "Id": 97106
+    },
+    {
+      "Message": "I see two options :\n  \n1- Read all updates and filtering out before importing in WPP, this will :\n\n*       Show Locally Published Updates with IsLocallyPublish = 0\n*       Show Locally Published Updates with IsLocallyPublish = 1\n*       Hide Microsoft Updates (Office, Windows, Internet Explorer, Bing...)\n\nIn this case, if users publish Locally Updates with \"Microsoft\" as Vendor Name, these updates will be hide until they uncheck the option (if they have not change the IsLocallyPublish property). These 'False' Microsoft updates will appear in the 'Prerequisite' and the 'Supersedes' combobox only if they uncheck the option. Same thing for reports.\n   \n 2-  Read all updates and filtering out only when necessary in WPP, this will :\n\n*       Show Locally Published Updates with IsLocallyPublish = 0\n*       Show Locally Published Updates with IsLocallyPublish = 1\n*       Show Microsoft Updates (Office, Windows, Internet Explorer, Bing...)\n\nIn this case, if users publish Locally Updates with \"Microsoft\" as Vendor Name, these updates will be __definitively__ hide. These 'False' Microsoft updates will __never__ appear in the 'Prerequisite' and the 'Supersedes' combobox. Same thing for reports.\n\nI think, the option 1 is better for users and is simpler to code.\n",
+      "PostedDate": "2013-04-16T11:40:40.843-07:00",
+      "Id": 97149
+    },
+    {
+      "Message": "Did you see the LUP_View.png? There are 5 Microsoft Updates, 4 are for Office and 1 is User Profile CleanUp Service. These 5 Updates are NOT from Microsoft Update, i bring this Updates into the LUP. All other Microsoft Updates are from WSUS and coming from Microsoft Update direct. The other Update from Microsoft i see only i mark a checkbox: Show Microsoft Updates.\n\nI vote for Option 1. If there is a EXE ready for testing, pls let me test in my environment.",
+      "PostedDate": "2013-04-16T13:26:40.34-07:00",
+      "Id": 97167
+    },
+    {
+      "Message": "I also vote for the first option.",
+      "PostedDate": "2013-04-16T14:43:28.91-07:00",
+      "Id": 97178
+    },
+    {
+      "Message": "I find a little bit strange thht there is 2 separates Vendor with the same name : 'Microsoft'.\nDo you have add a space character after the 'False' Microsoft' ?",
+      "PostedDate": "2013-04-17T02:53:08.483-07:00",
+      "Id": 97216
+    },
+    {
+      "Message": "No, i only wrote Microsoft. ",
+      "PostedDate": "2013-04-17T04:19:43.65-07:00",
+      "Id": 97222
+    },
+    {
+      "Message": "Ok, I see what LUP does to poll Vendors and Products, and so, why it can display multiple Vendors with the same name.\nI create WPP, primarily, to manage 3rd party updates, not Microsoft's updates.",
+      "PostedDate": "2013-04-17T14:39:51.207-07:00",
+      "Id": 97309
+    },
+    {
+      "Message": "OK, there is no Problem for me to write Microsoft Application and not Microsoft. ",
+      "PostedDate": "2013-04-17T23:32:38.747-07:00",
+      "Id": 97344
+    },
+    {
+      "Message": "Maybe you can watch for 'Microsoft' and if is only 'Microsoft' in the Field filled, bring an Exeption and change 'Microsoft' to 'Microsoft Application 2 WUP'. ;)",
+      "PostedDate": "2013-04-17T23:34:25.513-07:00",
+      "Id": 97347
+    },
+    {
+      "Message": "I have add an 'Update' tab in the Settings Form, with a checkbox to show Locally-Published updates which have been made visible in the Wsus Console by changing the 'IsLocallyPublished' property.\nChecking this checkbox will bring up your updates, but updates with 'Microsoft' as Vendor will still be hidden. \nI will send you, by mail, a test version. Let me know if this is ok.",
+      "PostedDate": "2013-04-20T15:51:41.617-07:00",
+      "Id": 97594
+    },
+    {
+      "Message": "Yes, i want to have a test version, send me pls within a mail.",
+      "PostedDate": "2013-04-21T02:53:59.613-07:00",
+      "Id": 97611
+    },
+    {
+      "Message": "Can you send me the testversion too?\n",
+      "PostedDate": "2013-04-21T08:02:54.207-07:00",
+      "Id": 97620
+    },
+    {
+      "Message": "I haven't your mail address.",
+      "PostedDate": "2013-04-21T08:37:22.573-07:00",
+      "Id": 97622
+    },
+    {
+      "Message": "I sent Nobert the Files you sent me.",
+      "PostedDate": "2013-04-21T09:22:37.263-07:00",
+      "Id": 97627
+    },
+    {
+      "Message": "Thanks, Going to test it tomorrow.",
+      "PostedDate": "2013-04-21T11:40:17.657-07:00",
+      "Id": 97635
+    },
+    {
+      "Message": "Are you interest by an option in WPP to make updates visible/hidden in the Wsus Console ?",
+      "PostedDate": "2013-04-21T14:23:53.887-07:00",
+      "Id": 97639
+    },
+    {
+      "Message": "Yes, i'm interested by an Option. Now i use a Trigger based on the Table tbUpdate in SUSDB to make 3rd Party Software visible in WSUS Console.",
+      "PostedDate": "2013-04-21T15:12:55.05-07:00",
+      "Id": 97641
+    },
+    {
+      "Message": "I can test on my wsus test servers with Windows Internal DataBase. But I haven't any SQL server (Wsus + External DataBase). Do you have any ?",
+      "PostedDate": "2013-04-21T22:03:37.473-07:00",
+      "Id": 97656
+    },
+    {
+      "Message": "Yes, i have in my Test Lab a WSUS on a W2012 with external SQL Express 2012. But you can use in Windows Internal Database a query with SQLCMD:\n\n```\nsqlcmd -S np:\\\\.\\pipe\\MSSQL$MICROSOFT##SSEE\\sql\\query –i <scriptLocation>\\IsLocallyPuplished.sql \n```\nThe IsLocallyPublished.sql contain this Code:\n```\nUSE SUSDB; \nGO \nSET NOCOUNT ON; \nUPDATE [SUSDB].[dbo].[tbUpdate]\nSET [IsLocallyPublished] = 'False' \nWHERE [IsLocallyPublished] = 'True'\n```\nThe next option is to use a SQL Server Management Studio to connect to the Windows Internal Database. This is the login:\n> \\\\.\\pipe\\MSSQL$MICROSOFT##SSEE\\sql\\query\nIf you are using a W2012 with WID, the Login need to be change. You need '2012' inside, but i don't know now the exact position. ;) let me have a look today in my lab. Look at the second Image: http://www.wsus.de/ausfuehren_eines_scripts_auf_der_windows_internal_database",
+      "PostedDate": "2013-04-21T23:41:09.203-07:00",
+      "Id": 97659
+    },
+    {
+      "Message": "Can you confirm that a Windows Internal Database can be only manage localy (Running WPP on the  server directly) and not remotely (by running WPP from a computer pointing to the DataBase) ?\nWhat about Sql Express ? Same restriction ?",
+      "PostedDate": "2013-04-22T01:37:31.17-07:00",
+      "Id": 97664
+    },
+    {
+      "Message": "A SQL Express can be managed remote. WID can not managed remote. There is no way to change this. I don't have WPP install on a remote machine and tried to connect the remote WSUS. Yes, i can test it in my lab.",
+      "PostedDate": "2013-04-22T02:38:09.763-07:00",
+      "Id": 97667
+    },
+    {
+      "Message": "Hi,\r\n\r\nI just tested a little bit with the release (Release v1.1.1304.21 (x64)) an it seems that prerequisites are not correctly determined. See screenshot. A quick test with supersedes seem to work.\r\n\r\nBTW. Thanks for your work.\r\n\r\n",
+      "PostedDate": "2013-04-22T03:48:44.337-07:00",
+      "Id": 97669
+    },
+    {
+      "Message": "Do you mean, that when you click on the little arrow at right, the list is empty ? (see my attachement).",
+      "PostedDate": "2013-04-22T09:19:58.86-07:00",
+      "Id": 97681
+    },
+    {
+      "Message": "No, the list is not empty, but the prerequisites already configured (with LUP) are not selected.",
+      "PostedDate": "2013-04-22T09:39:14.07-07:00",
+      "Id": 97684
+    },
+    {
+      "Message": "Ok, I see what you mean. In fact, you don't have to declare such prerequisite when publishing .msp files. These files already contains their own detection logic. I think that LUP read the .msp file to extract that prerequisite.\nWhen I publish .msp, I never add any rules (except eventually Processor rule).\n\nLet me know if it is a problem for you.",
+      "PostedDate": "2013-04-22T10:43:01.983-07:00",
+      "Id": 97691
+    },
+    {
+      "Message": "I do have another Software package (.msi), which is dependent on defined prereqs. Those aren't displayed either.\r\nSee new screenshot.\r\n",
+      "PostedDate": "2013-04-22T12:10:13.753-07:00",
+      "Id": 97708
+    },
+    {
+      "Message": "So, today i have time for testing, and wow, i am very happy about the new option! :) I like this option. I like the Row with Online or Offline Status from the Clients/Servers too. ;)\n\nIs it possible to make a button calling 'Refresh'? After i made changes in WSUS.MSC and WPP is not closed between the changes, i have to close and restart the WPP again.\n\nThank you for your good work. ;)",
+      "PostedDate": "2013-04-22T14:10:13.87-07:00",
+      "Id": 97728
+    },
+    {
+      "Message": "The Connectionstring for connecting WID on Windows Server 2012 is: \n\n```\n\\\\.\\pipe\\Microsoft##WID\\tsql\\query\n```\n",
+      "PostedDate": "2013-04-22T14:13:34.423-07:00",
+      "Id": 97730
+    },
+    {
+      "Message": "WinfriedSonntag, NorbertFe, are you satified of the new feature (the checkbox in the 'Settings' form). Does it work as expected for you ?",
+      "PostedDate": "2013-04-25T10:59:14.103-07:00",
+      "Id": 98447
+    },
+    {
+      "Message": "For me it is working. Thank you very much. ;) Pls let me testing again through the weekend.",
+      "PostedDate": "2013-04-25T11:23:05.46-07:00",
+      "Id": 98464
+    },
+    {
+      "Message": "Hi,\n\nit's working fine for me, although it takes some time to start up when the Checkbox is enabled.\n",
+      "PostedDate": "2013-04-26T02:11:04.857-07:00",
+      "Id": 98573
+    },
+    {
+      "Message": "Hello NorbertFe, \n\n> I do have another Software package (.msi), which is dependent on defined prereqs. Those aren't displayed either. \n\nCan you send me, by email, this MSI file with embedded prerequisites ? I will take a look.\n\nThanks.",
+      "PostedDate": "2013-04-27T13:24:15.507-07:00",
+      "Id": 98690
+    },
+    {
+      "Message": "Hi, I defined the prereqs with LUP, as I would do with WPP too. But they aren't displayed in WPP. I guess if you use LUP and define a prerequisite to any other published package that would do for testing. But I can of course send you the msi on monday.\n",
+      "PostedDate": "2013-04-27T13:38:14.563-07:00",
+      "Id": 98691
+    },
+    {
+      "Message": "> Hi, I defined the prereqs with LUP, as I would do with WPP too. But they aren't displayed in WPP\n\nOh, ok . I didn't understand it this way !\nEffectively, there's a bug here. I correct it.",
+      "PostedDate": "2013-04-28T00:46:18.367-07:00",
+      "Id": 98710
+    },
+    {
+      "Message": "Hi,\n\nthanks fixing this.\n",
+      "PostedDate": "2013-04-28T03:41:51.74-07:00",
+      "Id": 98724
+    },
+    {
+      "Message": "I have add a checkbox to Hide/Show updates that been publish and then have their 'IsLocallyPublished' property change to 0 in the Database.\nFix the display bug for prerequisite.\nAdd an option when right-clicking on an update to Hide/Show in Wsus Console.\nChanging the 'IsLocallyPublished'  property works only when WPP is running on the Wsus Server.",
+      "PostedDate": "2013-05-02T12:14:10.57-07:00",
+      "Id": 99190
+    },
+    {
+      "Message": "Wow, thank you very much.",
+      "PostedDate": "2013-05-02T13:04:04.68-07:00",
+      "Id": 99196
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1092916",
+    "ThreadId": "456981",
+    "Html": "Hi, \r<br />\nI started using the WPP and it's working great!\r<br />\nFor now it's still in testing but soon I'm going to move it to production environment\r<br />\nI have problem with XP firewall inside the domain, when the firewall is enabled (and it's enabled for all the workstations) the &quot;Detect Now&quot; and the &quot;Report Now&quot; won't work.\r<br />\nIs there any firewall rule which need to be enabled? What am I missing?\r<br />\nThanks for the help<br />\n",
+    "PostedDate": "2013-09-15T12:55:23.097-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1094203",
+    "ThreadId": "456981",
+    "Html": "Hi,\r<br />\nThese two services have to run on the remote machine :<br />\n<ul>\n<li>Appel de Procédure Distante (RPC) = RpcSs           : (Free translation) Remote Process Call (RPC)</li>\n<li>\nInfrastructure de gestion Windows = WinMgmt     : (Free translation) Windows Managment Infrastructure<br />\n</li>\n</ul>\nThese ports have to be open on the remote machine :<br />\n<ul>\n<li>\n<strong>Detect Now</strong> :<br />\n<ul>\n<li>MSRPC,\t    135 + Dynamic Port</li>\n<li>DCOM ,       Dynamic Port</li>\n<li>\nWMI,\t    Dynamic Port<br />\n</li>\n</ul>\n</li>\n<li>\n<strong>Report Now</strong> :<br />\n<ul>\n<li>MSRPC,\t135 + Dynamic Port</li>\n<li>DCOM,\tDynamic Port</li>\n<li>\nWMI,\tDynamic Port<br />\n</li>\n</ul>\n</li>\n<li>\n<strong>Show Current Logon User</strong> :<br />\n<ul>\n<li>MSRPC,\t135 + Dynamic Port</li>\n<li>DCOM,\tDynamic Port</li>\n<li>\nWMI,\tDynamic Port<br />\n</li>\n</ul>\n</li>\n<li>\n<strong>Show Pending Updates</strong> :<br />\n<ul>\n<li>MSRPC  \t135 + Dynamic Port</li>\n<li>DCOM  \tDynamic Port</li>\n<li>\nWMI     \tDynamic Port<br />\n</li>\n</ul>\n</li>\n<li>\n<strong>Show Windows Update Log</strong> :<br />\n<ul>\n<li>\nSMB,\t445<br />\n</li>\n</ul>\n</li>\n<li>\n<strong>Delete Software Update Folder</strong> :<br />\n<ul>\n<li>SMB,\t445</li>\n<li>MSRPC,\t135 + Dynamic Port</li>\n<li>DCOM,\tDynamic Port</li>\n<li>\nWMI,\tDynamic Port<br />\n</li>\n</ul>\n</li>\n<li>\n<strong>Install This Update Now</strong> :<br />\n<ul>\n<li>SMB,\t445</li>\n<li>MSRPC,\t135 + Dynamic Port</li>\n<li>DCOM,\tDynamic Port</li>\n<li>\nWMI,\tDynamic Port<br />\n</li>\n</ul>\n</li>\n</ul>\nSee this Microsoft KB for more info on <a href=\"http://support.microsoft.com/kb/875605/en-us\" rel=\"nofollow\">How to troubleshoot WMI-related issues</a><br />\n",
+    "PostedDate": "2013-09-18T13:28:09.123-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-08T11:30:52.743-07:00"
+  },
+  {
+    "Id": "1096856",
+    "ThreadId": "456981",
+    "Html": "Hi DCourtel and thank you for replying,<br />\n<br />\nWhat would be the best way to handle Dynamic Ports on a client computer's firewall? On Windows Vista/7 there's this <strong>RPC Dynamic Ports</strong> option in the firewall which is easily configurable using Group Policy, but Windows XP has no such option. Now, I know about the default port range for RPC services on Windows XP systems, but I'd like to know if there's any way to refrain from opening such a range in the firewall.<br />\n<br />\nThanks again<br />\n",
+    "PostedDate": "2013-09-20T02:58:42.26-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1097423",
+    "ThreadId": "456981",
+    "Html": "Try to use this GPO :\r<br />\n<br />\n<img src=\"http://i.imgur.com/Z5bkoG8.png\" alt=\"Image\" /><br />\n",
+    "PostedDate": "2013-09-21T09:15:37.95-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1200641",
+    "ThreadId": "456981",
+    "Html": "Excuse the ignorance. I have added the exception of ports and programs but do not understand how to add what you mention\r<br />\n<br />\n<img src=\"http://imagizer.imageshack.us/v2/800x600q90/812/hv5j.jpg\" alt=\"Image\" /><br />\n",
+    "PostedDate": "2014-01-29T12:22:41.83-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1200650",
+    "ThreadId": "456981",
+    "Html": "In this textBox, you have to enter the IP adress of the machine where WPP run (IP adress of the Wsus Server or Administrative computer). Or you can enter the whole subnet.<br />\n",
+    "PostedDate": "2014-01-29T12:56:42.12-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

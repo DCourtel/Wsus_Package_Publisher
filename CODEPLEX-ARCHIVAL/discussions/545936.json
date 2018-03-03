@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1247379",
+    "ThreadId": "545936",
+    "Html": "I am commonly building custom update packages.  There may be a method to do this already that I have missed.\r<br />\nI am looking for a method where if a product that I already built a custom package for makes an update, to basically re-use an existing custom package, but replace the product's installation EXE/MSI files and update the rule sets.\r<br />\nI can import/export the rulesets, but I'd like to be able to export an entire update, make the changes I need and re-import.\r<br />\n<br />\nIs anything like this already in WPP or could it be added?  Thanks!<br />\n",
+    "PostedDate": "2014-05-20T06:06:06.03-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1248129",
+    "ThreadId": "545936",
+    "Html": "Effectively, this feature is missing from WPP. In WPP v2 I will add the abillity do save custom update as 'Template'.<br />\n",
+    "PostedDate": "2014-05-21T12:55:06.873-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-23T11:51:49.49-07:00"
+  },
+  {
+    "Id": "1248706",
+    "ThreadId": "545936",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nEffectively, this feature is missing from WPP. In WPP v2 I will add the abillity do save custom update as 'Template'.<br />\n</blockquote>\nYou mentioned that earlier. It sounds really great!\r<br />\nWhen do you expect to have WPP v2 realeased?\r<br />\nJust an estimate!<br />\n",
+    "PostedDate": "2014-05-22T22:52:34.897-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1249013",
+    "ThreadId": "545936",
+    "Html": "WPP V1 works great, even if it miss some features and enhancements. So i take my time for V2. \r<br />\nLast few weeks I have work on another &quot;Little&quot; project (Pst Backup 2013). <br />\n",
+    "PostedDate": "2014-05-23T11:51:40.893-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

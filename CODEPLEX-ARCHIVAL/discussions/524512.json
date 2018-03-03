@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "1195496",
+    "ThreadId": "524512",
+    "Html": "Hello,\r<br />\n<br />\nthere are many different installations of Adobe Reader in our enterprise. Most of them are 11.0.03 but even MUI versions and many 11.0.04 and 11.0.05.\r<br />\nFurther several of them are allready published by WPP but without customized settings.\r<br />\n<br />\nNow i want to republish Adobe Reader and prefer some customized settings and the latest version 11.0.06.\r<br />\n<br />\nMy previous method is downloading the latest version 11.0.06 from\r<br />\nftp://ftp.adobe.com/pub/adobe/reader/win/11.x/11.0.06/de_DE/\r<br />\nunzip it und open the included AcroRead.msi with the Adobe Customization Wizard XI.\r<br />\n<br />\nEdited points:<br />\n<ul>\n<li>Installation Path to &quot;C:\\Program Files\\Adobe\\Adobe Reader 11.0&quot; (ignoring x86 and x64 because of a simple ruleset later in WPP)</li>\n<li>removed AutoUpdater</li>\n<li>\ndeactivated all possible online services\r<br />\netc.\r<br />\nAfter saving the the file i open in WPP the MSI Reader to check the MSI Product Code of my edited AcroRead.msi.\r<br />\nIt is still {AC76BA86-7AD7-1031-7B44-AB0000000001} whether if i open the default AcroRead.msi of version 11.0.00 or later.\r<br />\nIt is obviously always the msi file of version 11.0.00 independent of the version of the exe file.<br />\n</li>\n</ul>\nNevertheless i create in WPP a new Update and select the setup.exe and additional Setup.ini, ABCPY.ini, AcroRead.msi, AcroRead.mst and Data1.cab.\r<br />\nMy allready installed ruleset is<br />\n<pre><code>&lt;lar:And&gt;\n&lt;msiar:MsiProductInstalled ProductCode=&quot;{ac76ba86-7ad7-1031-7b44-ab0000000001}&quot;/&gt;\n&lt;bar:WindowsVersion Comparison=&quot;GreaterThan&quot; MajorVersion=&quot;5&quot; MinorVersion=&quot;1&quot; ProductType=&quot;1&quot;/&gt;\n&lt;bar:FileExists Path=&quot;C:\\Program Files\\Adobe\\Adobe Reader 11.0\\Reader\\AcroRd32.exe&quot;/&gt;\n&lt;/lar:And&gt;</code></pre>\n\nMy still installable ruleset is<br />\n<pre><code>&lt;lar:Or&gt;\n&lt;lar:And&gt;\n&lt;bar:WindowsVersion Comparison=&quot;GreaterThan&quot; MajorVersion=&quot;5&quot; MinorVersion=&quot;1&quot; ProductType=&quot;1&quot;/&gt;\n&lt;lar:Not&gt;&lt;msiar:MsiProductInstalled ProductCode=&quot;{ac76ba86-7ad7-1031-7b44-ab0000000001}&quot;/&gt;&lt;/lar:Not&gt;\n&lt;/lar:And&gt;\n&lt;lar:And&gt;\n&lt;bar:WindowsVersion Comparison=&quot;GreaterThan&quot; MajorVersion=&quot;5&quot; MinorVersion=&quot;1&quot; ProductType=&quot;1&quot;/&gt;\n&lt;msiar:MsiProductInstalled ProductCode=&quot;{ac76ba86-7ad7-1031-7b44-ab0000000001}&quot;/&gt;\n&lt;lar:Not&gt;&lt;bar:FileExists Path=&quot;C:\\Program Files\\Adobe\\Adobe Reader 11.0\\Reader\\AcroRd32.exe&quot;/&gt;&lt;/lar:Not&gt;\n&lt;/lar:And&gt;\n&lt;/lar:Or&gt;</code></pre>\n\nAfter approving my test clients get this new windows update. But by installing it the installer detects an already existing Adobe Reader installation and requires a user input to repair or uninstall it. If i check the uninstall procedure the uninstallation works fine but the reinstallation of the new customized package has to be initiated by Windows Update again.\r<br />\n<br />\nMy matter is that i do not want the users to be required to uninstall a previous Adobe Reader version. I would prefer if the previous installed version uninstalls und the new installs absolutely silently.\r<br />\nIn the Customization Tool ist the option &quot;Remove all versions of Reader&quot; already checked.\r<br />\n<br />\nAny ideas?<br />\n",
+    "PostedDate": "2014-01-24T06:53:15.743-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1200333",
+    "ThreadId": "524512",
+    "Html": "Hello,\r<br />\n<br />\nmaybe i have an idea.\r<br />\n<br />\nIf i create a custom update like this<br />\n<ol>\n<li>Declare a variable ReturnCode as an Integer</li>\n<li>Allow to exec the file &quot;%windir%\\System32\\msiexec.exe&quot; with additional Parameters &quot;/X{AC76BA86-7AD7-1031-7B44-AB0000000001} /qn&quot; and restoring the Return Code to ReturnCode</li>\n<li>Pause the process for 60 seconds</li>\n<li>Allow to exec the file &quot;%windir%\\System32\\msiexec.exe&quot; with additional Parameters &quot;/i [...]\\AcroRead.msi TRANSFORMS=AcroRead.mst /qn&quot; and restoring the Return Code to ReturnCode</li>\n<li>Pause the process for 180 seconds</li>\n<li>\nDefine the return code for this Custom Update to ReturnCode<br />\n</li>\n</ol>\nThe Ruleset may be the same like outlined above.\r<br />\n<br />\nWhere do i have to store the Installation Package with the customized AcroRead.mst? \r<br />\nDo the Clients have to get access to this directory or is it just necessary that the WPP server gets the access to this directory?\r<br />\n<br />\nWPP is a great tool but i did not use custom updates yet and i am not sure whether i undestood it correctly.<br />\n",
+    "PostedDate": "2014-01-29T01:16:32.28-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1200390",
+    "ThreadId": "524512",
+    "Html": "Hi,<br />\n<br />\nI have had the same problem with almost exact the same symptoms. I found out why there is only the Adobe 11.0.0 version installed:<br />\nWhen you extract the archive with 7Zip, only 5 files are extracted. Looking inside the MSI package there is alway version 11.0. I wondered why the version is 11.0 when installing from MSI or from extracted setup.exe, and the version is 11.0.06 when installing from downloaded and packaged AdbeRdr11006_en_EN.exe.<br />\n<br />\nAs stated here<br />\n<a href=\"http://blogs.adobe.com/dmcmahon/2010/06/16/how-to-extract-an-msi-file-from-the-exe-for-adobe-reader/\" rel=\"nofollow\">http://blogs.adobe.com/dmcmahon/2010/06/16/how-to-extract-an-msi-file-from-the-exe-for-adobe-reader/</a><br />\nyou can extract the exe with an option<br />\n<pre><code>AdbeRdr11006_en_US.exe&quot; -nos_ne</code></pre>\n\n<strong>This will extract also a 11.0.06 MSP file.</strong> <br />\n<br />\nProblem: you want to update, so you must use the 11.0.06 MSP file. With that, it won't be possible to make new settings.<br />\n<br />\nSo you have to make an administrative installation with the 11.0 MSI file<br />\n<pre><code>msiexec /a AcroRead.msi</code></pre>\n\nuse a local directory to put the administrative installation, e.g. admin\\<br />\nThen slipstream the MSP into that administrative installation - to admin\\<br />\n<pre><code>msiexec /a AcroRead.msi /p AdbeRdrUpd11006.msp</code></pre>\n\nNow you have a 11.0.06 package. Copy the setup.ini from first extraction to that directory or you won't be able to save the package in Adobe Customization Wizard.<br />\n<br />\n[edit: a test does not work unfortunately]<br />\n[edit2: Upgrading does not work. Installing does work]<br />\n<br />\n<strong>My problem now is that the version check in WPP does not work.</strong><br />\nThe rule that lets the client determine if the update is installed:<br />\n<pre><code>&lt;msiar:MsiProductInstalled ProductCode=&quot;{ac76ba86-7ad7-1031-7b44-ab0000000001}&quot; VersionMin=&quot;11.0.6.0&quot;/&gt;</code></pre>\n\nThis does not work, maybe because the version is 11.0.06 instead of 11.0.6.<br />\n<br />\nDoes anyone know how the installer compares the version in registry? That would help me a lot.<br />\n",
+    "PostedDate": "2014-01-29T03:24:21.4-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1200589",
+    "ThreadId": "524512",
+    "Html": "Try with 11.0.6.70, it's the exact version of 11.0.06.<br />\n",
+    "PostedDate": "2014-01-29T10:43:09.527-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1200780",
+    "ThreadId": "524512",
+    "Html": "<blockquote>\n<strong>My problem now is that the version check in WPP does not work.</strong><br />\nThe rule that lets the client determine if the update is installed:<br />\n<pre><code>&lt;msiar:MsiProductInstalled ProductCode=&quot;{ac76ba86-7ad7-1031-7b44-ab0000000001}&quot; VersionMin=&quot;11.0.6.0&quot;/&gt;</code></pre>\n\nThis does not work, maybe because the version is 11.0.06 instead of 11.0.6.<br />\n<br />\nDoes anyone know how the installer compares the version in registry? That would help me a lot.<br />\n</blockquote>\nDid you try to check the version in registry\r<br />\n<br />\ne.g. for x86 systems\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall{AC76BA86-7AD7-1031-7B44-AB0000000001}\\DisplayVersion values &quot;11.0.06&quot;\r<br />\n<br />\ne.g. for x64 systems\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall{AC76BA86-7AD7-1031-7B44-AB0000000001}\\DisplayVersion values &quot;11.0.06&quot;<br />\n",
+    "PostedDate": "2014-01-29T23:39:55.287-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1200805",
+    "ThreadId": "524512",
+    "Html": "<blockquote>\nDid you try to check the version in registry<br />\n</blockquote>\nYes I did.\r<br />\n<br />\nI then tried to use the custom update function but as this will be a rather complicated procedure and there is no way to re-edit the package and correct mistakes, I will use Active Directory deployment with a PowerShell script to deploy this full version.\r<br />\n<br />\nDCourtel: I don't think that this is an official version from Adobe. I guess this is a malware transport package from some download sites without a good reputation.<br />\n",
+    "PostedDate": "2014-01-30T00:56:18.643-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1200864",
+    "ThreadId": "524512",
+    "Html": "This is the official version from Adobe web site :\r<br />\n<br />\n<img src=\"http://i.imgur.com/lyagcF8.jpg\" alt=\"Adobe Version\" /><br />\n",
+    "PostedDate": "2014-01-30T03:26:33.633-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1200939",
+    "ThreadId": "524512",
+    "Html": "<strong>macxs wrote:</strong><br />\n<blockquote>\nAs stated here<br />\n<a href=\"http://blogs.adobe.com/dmcmahon/2010/06/16/how-to-extract-an-msi-file-from-the-exe-for-adobe-reader/\" rel=\"nofollow\">http://blogs.adobe.com/dmcmahon/2010/06/16/how-to-extract-an-msi-file-from-the-exe-for-adobe-reader/</a><br />\nyou can extract the exe with an option<br />\n<pre><code>AdbeRdr11006_en_US.exe&quot; -nos_ne</code></pre>\n\n<strong>This will extract also a 11.0.06 MSP file.</strong> <br />\n<br />\nProblem: you want to update, so you must use the 11.0.06 MSP file. With that, it won't be possible to make new settings.<br />\n<br />\nSo you have to make an administrative installation with the 11.0 MSI file<br />\n<pre><code>msiexec /a AcroRead.msi</code></pre>\n\nuse a local directory to put the administrative installation, e.g. admin\\<br />\nThen slipstream the MSP into that administrative installation - to admin\\<br />\n<pre><code>msiexec /a AcroRead.msi /p AdbeRdrUpd11006.msp</code></pre>\n\nNow you have a 11.0.06 package. Copy the setup.ini from first extraction to that directory or you won't be able to save the package in Adobe Customization Wizard.<br />\n<br />\n[edit: a test does not work unfortunately]<br />\n[edit2: Upgrading does not work. Installing does work]<br />\n</blockquote>\nAfter some trying and searching i have found a complete and detailed procedure to create a adobe reader 11.0.06 package.<br />\n<br />\n<a href=\"http://www.scconfigmgr.com/2013/09/10/deploy-adobe-reader-11-0-4-with-configmgr-2012-sp1/\" rel=\"nofollow\">http://www.scconfigmgr.com/2013/09/10/deploy-adobe-reader-11-0-4-with-configmgr-2012-sp1/</a><br />\n<br />\nNow i have this package and can see in Adobe Customization Wizard XI in the Direct Editor the Properties where Product Version is 11.0.06 ... hurray!<br />\n<br />\nNew problems:<br />\n<ul>\n<li>I cannot install the package in command shell as long as i am not the administrator</li>\n</ul>\n<pre><code>msiexec /i &quot;[...]\\AcroRead.msi&quot; TRANSFORMS=&quot;AcroRead.mst&quot; /qn</code></pre>\n\nI have got the error ID 10005 at windows protocols (sry but i am german and do not know how it names in the english versions of windows) that i do not have the needed credentials.<br />\n<ul>\n<li>\nI cannot install the package in command shell as long as there is already a previous package with an older version installed <br />\n</li>\n<li>\nIf i try to publish it i become errors during windows updates installs (surelly because of the 1st and 2nd point) <br />\n</li>\n</ul>\n",
+    "PostedDate": "2014-01-30T06:12:27.603-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1200948",
+    "ThreadId": "524512",
+    "Html": "HerrmanKrebs:<br />\n<blockquote>\nI cannot install the package in command shell as long as there is already a previous package with an older version installed<br />\n</blockquote>\nSame here. That's why I'll solve this with group policies a last time. Almost finished with the script.\r<br />\n<br />\nDCourtel:<br />\n<blockquote>\nThis is the official version from Adobe web site :<br />\n</blockquote>\nThis is the version of the exe-file. The version of Reader is 11.0.06.\r<br />\nIf you would have read my first post, you'd understand my point. <br />\n",
+    "PostedDate": "2014-01-30T07:02:26.74-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1201343",
+    "ThreadId": "524512",
+    "Html": "<strong>macxs wrote:</strong><br />\n<blockquote>\nHerrmanKrebs:<br />\n<blockquote>\nI cannot install the package in command shell as long as there is already a previous package with an older version installed<br />\n</blockquote>\nSame here. That's why I'll solve this with group policies a last time. Almost finished with the script.<br />\n<br />\nDCourtel:<br />\n<blockquote>\nThis is the official version from Adobe web site :<br />\n</blockquote>\nThis is the version of the exe-file. The version of Reader is 11.0.06.<br />\nIf you would have read my first post, you'd understand my point.<br />\n</blockquote>\nIt is pity that it does not work as i wanted. I really do not know what i am doing wrong.\r<br />\n<br />\nI appropriated the Adobe Reader 11.0.06 with group policies and it works fine.<br />\n",
+    "PostedDate": "2014-01-31T07:06:51.083-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-31T07:07:08.277-08:00"
+  }
+]

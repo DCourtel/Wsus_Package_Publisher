@@ -1,0 +1,61 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Kindly could anyone help me on the Citrix receiver installation issue, I have attached the screenshot.",
+    "LastUpdatedDate": "2017-08-14T15:15:55.443-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-08-14T10:16:28.313-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Citrix Receiver Installation Issue",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 380
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1673565,
+      "FileName": "Citrix issue.JPG",
+      "DownloadUrl": ".\\1673565"
+    },
+    {
+      "FileId": 1673574,
+      "FileName": "Citrix package creation.docx",
+      "DownloadUrl": ".\\1673574"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "I don't think it's an issue with wpp, but your update package. As you didn't post any more info, you probably should try to translate my how to. ;)",
+      "PostedDate": "2017-08-14T11:30:32.13-07:00",
+      "Id": 208773
+    },
+    {
+      "Message": "I have attached doc of how the package has been created, kindly if possible could you please review and guide.\r\nOur environment is built with Windows 7 32 bit version workstations.",
+      "PostedDate": "2017-08-14T15:15:55.443-07:00",
+      "Id": 208775
+    }
+  ]
+}

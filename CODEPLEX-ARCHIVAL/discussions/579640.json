@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1349674",
+    "ThreadId": "579640",
+    "Html": "Hello,\r<br />\n<br />\nI ´ve published a TightVNC package following the guide in this web.\r<br />\n<br />\nFrom the side of the client computer, the update is found but when is installing it I get the error:\r<br />\n<br />\nCode 57E\r<br />\n<br />\nI don´t get this error with an Adobe Reader XI package.\r<br />\n<br />\nIt would be aprecciated your help.<br />\n",
+    "PostedDate": "2015-02-06T04:26:29.877-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1352668",
+    "ThreadId": "579640",
+    "Html": "This error code is specifique to the MSI file. You should ask the editor of TightVNC what does it mean.<br />\n",
+    "PostedDate": "2015-02-14T12:51:56.92-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

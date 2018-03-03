@@ -1,0 +1,56 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Wsus Wrapper",
+      "DisplayName": "Wsus Wrapper"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-11-25T13:15:39.74-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nafter publishing a update, a messagebox come up. See Screenshot. Is it possible to remove this Messagebox and bring the Infotext in the Form?\r\n\r\nThanks and Regards\r\nWinfried",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1311.24",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-11-25T06:41:07.007-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "Remove Messagebox",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 2,
+    "Id": 154
+  },
+  "FileAttachments": [
+    {
+      "FileId": 761949,
+      "FileName": "Update_Publishing.png",
+      "DownloadUrl": ".\\761949"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "I guess that belongs to GUI optimization for v2. ;)",
+      "PostedDate": "2013-11-25T06:45:08.573-08:00",
+      "Id": 124146
+    },
+    {
+      "Message": "Yes, finally, this message box is more annoying than anything else.",
+      "PostedDate": "2013-11-25T13:07:25.907-08:00",
+      "Id": 124209
+    }
+  ]
+}

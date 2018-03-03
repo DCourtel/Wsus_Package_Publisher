@@ -1,0 +1,218 @@
+[
+  {
+    "Id": "1428387",
+    "ThreadId": "639066",
+    "Html": "We have a multi domain / DNS environment.  Is there a way to configure WSUS Package Publisher to reference the Folder URL via an FDQN?\r<br />\n<br />\nCurrently the Folder references <a href=\"http://servername:8530/Content/ etc\" rel=\"nofollow\">http://servername:8530/Content/ etc</a>.<br />\n",
+    "PostedDate": "2015-06-02T06:42:10.98-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1432809",
+    "ThreadId": "639066",
+    "Html": "I am having the same issue, with no success finding a solution.<br />\n",
+    "PostedDate": "2015-07-01T14:26:19.683-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1432896",
+    "ThreadId": "639066",
+    "Html": "what if you go to Tools -&gt; settings -&gt; server tab and put the FQDN of the wsus server ?<br />\n",
+    "PostedDate": "2015-07-02T09:09:18.993-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1432897",
+    "ThreadId": "639066",
+    "Html": "I do have the FQDN in the server name and it is connected to the local server.\r<br />\n<br />\nTrying to figure a way to display photos.<br />\n",
+    "PostedDate": "2015-07-02T09:33:09.197-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1432899",
+    "ThreadId": "639066",
+    "Html": "Here you go:\r<br />\n<br />\n<img src=\"http://s23.postimg.org/t5490ez1n/WPP_settings.jpg\" alt=\"Image\" /><br />\n",
+    "PostedDate": "2015-07-02T09:37:43.287-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1432902",
+    "ThreadId": "639066",
+    "Html": "<img src=\"http://s6.postimg.org/fx67c00bl/WPP_update_info.jpg\" alt=\"Image\" /><br />\n",
+    "PostedDate": "2015-07-02T09:44:43.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1432921",
+    "ThreadId": "639066",
+    "Html": "Exactly the same scenario for me. Ultimately I have machines throughout my environment that are experiencing name resolution issues to the hostname only (without FQDN).\r<br />\n<br />\nClearly DNS and machine settings have a bearing, but best practice for most applications is to use FQDN - especially around URLs.\r<br />\n<br />\nIs this addressed in a newer version of the application? Is there a mechanism to formerly request this configuration be added to the next version of the product?\r<br />\n<br />\nThe side question is - is the FQDN here relevant if using a fully functioning FQDN WSUS environment or as we suspect, the machine is downloading this specific update from the URL defined in WSUS Package Publisher or through the WSUS process?<br />\n",
+    "PostedDate": "2015-07-02T12:16:30.21-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1433043",
+    "ThreadId": "639066",
+    "Html": "What is your expectation regarding this modification request ?\r<br />\n<br />\nBe aware that WPP doesn't break or change the way WSUS work. The URL display in front of &quot;Folder&quot; is here only for your convenience, to easily reach the folder where WsUS store the package. It doesn't take part in the process where clients download the package.<br />\n",
+    "PostedDate": "2015-07-03T11:35:08.247-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1433052",
+    "ThreadId": "639066",
+    "Html": "I feel your latter comment suggests that the FQDN is not relevant with the download issues we are seeing on some machines (through the WPP console). However I'm struggling to understand how those machines are happily downloading Windows Updates from the WSUS server (which is defined by GPO with FQDN), but failing to download the updates defined in WPP e.g. Adobe through SCUP and signed with certificate on all machines concerned. The WPP error itself suggests the inability to download the update.\r<br />\n<br />\nOur environment is 10,000+ machines and all predominately works well with the exception of ~200 machines that cannot resolve the WSUS / WPP (same server) by hostname only, but can using FQDN.\r<br />\n<br />\nThis is what lead me to believe that the URL defined in WPP needed to be fully qualified. This would be the requested modification request.\r<br />\n<br />\nThoughts?<br />\n",
+    "PostedDate": "2015-07-03T13:14:28.133-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1433054",
+    "ThreadId": "639066",
+    "Html": "Original Problem - WPP Update Event History\r<br />\nError Code: -21467262748\r<br />\nMessage: Error: Download failed.\r<br />\nStatus: DownloadFailed\r<br />\n<br />\nVarious Operating Systems - XP, 7, 8, 8.1 and Server 2008\r<br />\nSuccessfully deployed / installed on 4000+ machines, with 78 failed (failure message above).\r<br />\nWindows updates are successfully being installed.\r<br />\nConfirmed certificates are applied to all machines including WSUS servers.<br />\n",
+    "PostedDate": "2015-07-03T13:34:25.023-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1433121",
+    "ThreadId": "639066",
+    "Html": "Ok, so only 2% of client computers have this problem.\r<br />\nCan you do these steps on a client :<br />\n<ul>\n<li>Stop &quot;Windows udpdate&quot; service (Wuauserv)</li>\n<li>Delete C:\\Windows\\SoftwareDistribution folder</li>\n<li>Delete C:\\Windows\\WindowsUpdate.log file</li>\n<li>Start &quot;Windows Update&quot; Service (Wuauserv)</li>\n<li>Wait 1 minute and launch wuauclt /DetectNow</li>\n<li>\nWait 1 minute and look at C:\\Windows\\WindowsUpdate.log<br />\n</li>\n</ul>\nWhat error message do you see in this file ?<br />\n",
+    "PostedDate": "2015-07-04T12:53:39.103-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1433239",
+    "ThreadId": "639066",
+    "Html": "I can confirm what Brian is saying.\r<br />\n<br />\nIn my environment the WSUS and all other company wide infrastructure servers are in their own domain in our forest.  Each physical site (36 across the country) has it's own domain in the forest as well, with DNS working fine across all domains as long as I use the FQDN which always ends in '.local'\r<br />\n<br />\nI have tested the System Center Updates Publisher 2011 to deploy the same update, within it's system and the only thing I do different is that I am able to specify the FQDN in the download URL field and it does deploy the updates to the client machines across the various domains with success.  But, I do not like the SCUP interface at all, and would much prefer to use WPP, even if I have to go manually make a DB edit in SQL each time.\r<br />\n<br />\nMy site is approx 8000 Windows clients and approx 400 MS servers of various 2008 and 2012 versions.<br />\n",
+    "PostedDate": "2015-07-06T07:40:23.67-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1433801",
+    "ThreadId": "639066",
+    "Html": "I need the error code you can find in the WindowsUpdate.log (it should start with 0x802...)<br />\n",
+    "PostedDate": "2015-07-09T12:26:27.32-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1433806",
+    "ThreadId": "639066",
+    "Html": "Error 0x800B0100<br />\n",
+    "PostedDate": "2015-07-09T12:43:17.313-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1433807",
+    "ThreadId": "639066",
+    "Html": "<strong>Mike_KC wrote:</strong><br />\n<blockquote>\nError 0x800B0100<br />\n</blockquote>\nThis Error looks your WSUS is not up2date.<br />\nIf the OS from your WSUS W2008R2 or lower, look at the Startpage from WSUS: <a href=\"http://www.wsus.de/images/wsus-version.png\" rel=\"nofollow\">http://www.wsus.de/images/wsus-version.png</a> What Build is your WSUS?<br />\n<br />\nWSUS 3.0 (SP2): \tBuild 3.2.7600.226<br />\nWSUS 3.0 (SP2)  KB2720211: \tBuild 3.2.7600.251<br />\nWSUS 3.0 (SP2)  KB2734608: \tBuild 3.2.7600.256<br />\nWSUS 3.0 (SP2)  KB2828185: \tBuild 3.2.7600.262<br />\nWSUS 3.0 (SP2)  KB2938066: \tBuild 3.2.7600.274<br />\n<br />\nIf it is lower .274 pls update your WSUS to Build .0274. After this, restart WSUS and try again.<br />\n",
+    "PostedDate": "2015-07-09T12:49:01.583-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1433815",
+    "ThreadId": "639066",
+    "Html": "Yes I am on Server2008R2 ver 3.2.7600.274<br />\n<br />\nIf you read above, the issue is not being able to modify the FQDN.  I have tested it using SCUP and it does work, I just want to use WPP if at all possible.<br />\n<br />\nThat error is from the client side running Win 7<br />\n",
+    "PostedDate": "2015-07-09T13:31:02.49-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1433933",
+    "ThreadId": "639066",
+    "Html": "<strong>Mike_KC wrote:</strong><br />\n<blockquote>\nError 0x800B0100<br />\n</blockquote>\nThanks.\r<br />\nThis error code means : Trust Error, No Signature (No signature was present in the subject)\r<br />\n<br />\nYou have a problem with your certificate.<br />\n",
+    "PostedDate": "2015-07-10T11:54:23.397-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1433934",
+    "ThreadId": "639066",
+    "Html": "\r\n<div dir=\"ltr\">\r\n<div style=\"font-family:tahoma,sans-serif; font-size:small\">I will have to build another install package in WPP and test again. I did get that issue resolved.</div>\r\n<div style=\"font-family:tahoma,sans-serif; font-size:small\"><br>\r\n</div>\r\n<div style=\"font-family:tahoma,sans-serif; font-size:small\">I will report back shortly.</div>\r\n</div>\r\n",
+    "PostedDate": "2015-07-10T11:58:20.733-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1433936",
+    "ThreadId": "639066",
+    "Html": "<strong>BrianJamesKelly wrote:</strong><br />\n<blockquote>\nOriginal Problem - WPP Update Event History<br />\nError Code: -21467262748<br />\nMessage: Error: Download failed.<br />\nStatus: DownloadFailed<br />\n</blockquote>\nI can't found this error code. Do you have one that start with 0x802 or 0x800 ?\r<br />\nYou have to look in WindowsUpdate.log in C:\\Windows\\<br />\n",
+    "PostedDate": "2015-07-10T11:59:27.157-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436717",
+    "ThreadId": "639066",
+    "Html": "The error code displayed is Error code 800B0109 when the client machine is not in the same domain as the WSUS server.\r<br />\n<br />\nOnce I join the client to the same domain the update installs with no errors.\r<br />\n<br />\n<br />\nSorry it took so long to get back to this issue.<br />\n",
+    "PostedDate": "2015-07-30T21:41:33.18-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436737",
+    "ThreadId": "639066",
+    "Html": "Hi,<br />\n<blockquote>\nThe error code displayed is Error code 800B0109 <br />\n</blockquote>\nThis error code means : A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider<br />\n",
+    "PostedDate": "2015-07-31T02:46:52.383-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436767",
+    "ThreadId": "639066",
+    "Html": "Please help me here then:<br />\nI have a real signed CA certificate and then created a subCA for coding signing.  I then deployed the subCA from the root domain via GPO to all the 26 lower domains.  That replicated with no issue and both WPP and SCUP2011 allows me to create updates.  Once I deploy it from SCUP2011 it keeps the FQDN when I look into the update details and it will install on the clients thru WSUS.  When I publish an update thru WPP the download URL doesn't keep the FQDN and the updates fail with the above error code.  Even if I can just figure out what table in the DB that field is stored in I will gladly manually edit the database if you can guide me in the correct direction.\r<br />\n<br />\nHere is the SCUP:\r<br />\n<img src=\"http://s6.postimg.org/ogq6rqr35/SCUP_pic.jpg\" alt=\"Image\" />\r<br />\n<br />\nHere is the WPP:\r<br />\n<img src=\"http://s6.postimg.org/721d5q4kh/WPP_pic.jpg\" alt=\"Image\" /><br />\n",
+    "PostedDate": "2015-07-31T07:07:29.557-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436775",
+    "ThreadId": "639066",
+    "Html": "I'm sure at 99% that your issue are not related with FQDN path. You need to know that WPP is not responsible for the path where Wsus store package. The path you can see on the 'Informations' tab is create by WPP only to be displayed. It is not used for download/installation by Workstations.\r<br />\nTry this :<br />\n<ul>\n<li>From the screenshot, click on the id (8f8a8ce-...). This will open a new window.</li>\n<li>Open the folder where you can find the exe or the msi you have publish</li>\n<li>Copy it on a Workstation that have the problem</li>\n<li>Right click on the file and choose 'Properties'</li>\n<li>Open &quot;Signature&quot; tab and see if the certificate is trusted.</li>\n</ul>\n",
+    "PostedDate": "2015-07-31T08:45:25.967-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436777",
+    "ThreadId": "639066",
+    "Html": "I did check that earlier, but here is a screen grab that shows both the file and that the cert is good as well as the error from WU.\r<br />\n<br />\n<img src=\"http://s6.postimg.org/e97nfc4v5/cert_ok.jpg\" alt=\"Image\" /><br />\n",
+    "PostedDate": "2015-07-31T08:59:24.827-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436779",
+    "ThreadId": "639066",
+    "Html": "Can you send me by mail the file C:\\Windows\\windowsupdate.log\r<br />\n<a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a><br />\n",
+    "PostedDate": "2015-07-31T09:06:41.54-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436803",
+    "ThreadId": "639066",
+    "Html": "I FINALLY FIGURED IT OUT!!!!!!!!!!!!!  <img src=\"http://s6.postimg.org/5d622vt0h/solved.gif\" alt=\"Image\" />\r<br />\n<br />\nI just kept messing with the errors and Goggling and finally came across a post that mentioned and additional WU security setting:\r<br />\n<br />\nIn Group policy: <strong>Computer configuration &gt; Policies &gt; Admin Templates &gt; Windows Components &gt; Windows Update</strong>\r<br />\n<br />\nThe setting is:     &quot;<strong>Allow signed updates from an intranet Microsoft update service location</strong>&quot; - This must be set to <strong>Enabled</strong> otherwise the client will not accept it even if the signed certificate is valid and configured correctly.\r<br />\n<br />\nThis is one piece of info that might be good to put into the document just for users to check.\r<br />\nHope this helps someone else.<br />\n",
+    "PostedDate": "2015-07-31T14:54:46.197-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-07-31T22:13:51.887-07:00"
+  },
+  {
+    "Id": "1436818",
+    "ThreadId": "639066",
+    "Html": "<blockquote>\nThis is one piece of info that might be good to put into the document just for users to check. <br />\n</blockquote>\nIt's write in the &quot;Installation Guide&quot; page 5 !!!<br />\n",
+    "PostedDate": "2015-07-31T22:13:40.187-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

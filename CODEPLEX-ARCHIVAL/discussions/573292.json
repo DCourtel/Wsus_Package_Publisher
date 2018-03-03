@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1326521",
+    "ThreadId": "573292",
+    "Html": "Bonjour,\r<br />\n<br />\nJe suis en tests avec WPP. Mon environnement est un domaine avec un WSUS sur 2008R2 et des clients Win 7 (32 et 64 bits).\r<br />\nLa configuration de l'application et les certifcats sont opérationnels entre le WSUS et les clients (GPO).\r<br />\nAprès le test de déploiement d'un simple msi, la mise à jour apparait, et l'installation se lance.\r<br />\nPar contre une erreur ( code 51D) apparait lors de l'installation.\r<br />\nAvez vous des informations sur ce code erreur, est-ce lié au fichier msi ou aux paramètres ?\r<br />\nMerci de vos réponses\r<br />\nNicolas Thomas<br />\n",
+    "PostedDate": "2014-11-26T09:04:19.25-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1326606",
+    "ThreadId": "573292",
+    "Html": "Bonjour, si la mise à jour apparait sur les postes clients et qu'ils essaient de l'installer, c'est que WPP à bien fait son job et qu'il n'y a pas de problème avec le certificat.\r<br />\n<br />\nLe code 51D ne me dit rien. Il y a certainement plus d'info dans le fichier C:\\Windows\\windowsupdate.log\r<br />\nQuelle mise à jour donne ce code d'erreur ?<br />\n",
+    "PostedDate": "2014-11-26T12:23:36.83-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1326718",
+    "ThreadId": "573292",
+    "Html": "Bonjour,\r<br />\n<br />\nLe msi contient l'installation d'un fichier OCX pour le focntionnement d'une application dans IE.\r<br />\nSi on lance l'installation en ligne de commande avec msiexec, il n'a a pas de souci.\r<br />\nVoici l'extrait du fichier log, une erreur apparait bien lors de l'installation du composant, est-ce une limitation de WPP ?\r<br />\n<br />\n/*************************************************************************************************/\r<br />\n2014-11-26\t17:46:54:759\t2900\t238c\tHandler\t:::::::::::::\r<br />\n2014-11-26\t17:46:54:759\t2900\t238c\tHandler\t:: START ::  Handler: MSI Install\r<br />\n2014-11-26\t17:46:54:759\t2900\t238c\tHandler\t:::::::::\r<br />\n2014-11-26\t17:46:54:759\t2900\t238c\tHandler\t  : Updates to install = 1\r<br />\n2014-11-26\t17:46:54:759\t2900\t238c\tHandler\tMSI update {00000000-0000-0000-0000-000000000000}.0 using source image from 1 CABs.\r<br />\n2014-11-26\t17:46:54:791\t2900\t238c\tHandler\t  : Batch installing 1 updates\r<br />\n2014-11-26\t17:46:54:791\t2900\t238c\tHandler\tList of MSPs in transaction:\r<br />\n2014-11-26\t17:46:54:791\t2900\t238c\tHandler\tList of Transforms in transaction:\r<br />\n2014-11-26\t17:46:54:791\t2900\t238c\tHandler\tMSI final command line:   ALLUSERS=1 MSIRESTARTMANAGERCONTROL=Disable REBOOT=REALLYSUPPRESS\r<br />\n2014-11-26\t17:46:58:675\t2900\t238c\tHandler\tMSP Error List:\r<br />\n2014-11-26\t17:46:58:675\t2900\t238c\tHandler\t1: 1309 2: 3 3: C:\\Windows\\SoftwareDistribution\\Download\\22854a56e11f7023e3627980b2f299d2\\img\\WINNT\\system32\\KolokIntTest.ocx \r<br />\n2014-11-26\t17:46:58:675\t2900\t238c\tHandler\t  : MSI transaction completed. MSI: 0x80070643, Handler: 0x8024200b, Source: No, Reboot: 0\r<br />\n2014-11-26\t17:46:58:675\t2900\t238c\tHandler\t  : WARNING: First failure for update {42CB3D20-E2C6-4F4B-B96F-87DE8156DB1E}, transaction error = 0x8024200b, MSI result = 0x80070643, MSI action = InstallFiles\r<br />\n2014-11-26\t17:46:58:675\t1236\t1fa4\tAU\t&gt;&gt;##  RESUMED  ## AU: Installing update [UpdateId = {42CB3D20-E2C6-4F4B-B96F-87DE8156DB1E}]\r<br />\n2014-11-26\t17:46:58:675\t2900\t238c\tHandler\t  : WARNING: Operation failed at update 0, Exit code = 0x8024200B\r<br />\n2014-11-26\t17:46:58:675\t1236\t1fa4\tAU\t  # WARNING: Install failed, error = 0x80070643 / 0x0000051D\r<br />\n2014-11-26\t17:46:58:675\t2900\t238c\tHandler\t:::::::::\r<br />\n2014-11-26\t17:46:58:675\t2900\t238c\tHandler\t::  END  ::  Handler: MSI Install\r<br />\n2014-11-26\t17:46:58:675\t2900\t238c\tHandler\t:::::::::::::\r<br />\n/**********************************************************************************************************************************************************************/\r<br />\n<br />\nMerci de vos réponses\r<br />\nCdlt,\r<br />\nNicolas THOMAS<br />\n",
+    "PostedDate": "2014-11-27T00:39:57.87-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1328551",
+    "ThreadId": "573292",
+    "Html": "Bonjour, le code 0x0000051D est renvoyé par le fichier MSI. Il est propre à ce package et à l'éditeur. Voir si le fichier MSI à généré un fichier journal de l'installation.\r<br />\nIl est possible que le fichier MSI doive faire des modification dans le profil de l'utilisateur (HKCU ou C:\\Users...). Hors par défaut les mises à jour s'installent avec le compte System (qui n'a pas de profil).\r<br />\n<br />\nEssayez de réviser la mise à jour et de cocher l'option &quot;Peut nécessiter une action de l'utilisateur&quot;. (Attention la mise à jour va s'installer avec les même droits que l'utilisateur connecté. Donc si elle a besoin des droits d'administrateur et que l'utilisateur est simple user... ca va échouer).<br />\n",
+    "PostedDate": "2014-12-03T13:24:09.453-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

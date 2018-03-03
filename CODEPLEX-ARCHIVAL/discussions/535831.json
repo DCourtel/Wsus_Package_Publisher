@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1215871",
+    "ThreadId": "535831",
+    "Html": "I followed the guide for the 21 update and made some changes along the way....<br />\n<br />\nIgnored JavaQuickStarter and adjusted the msi id for update 51<br />\n<br />\nHowever when the update tries to install via WSUS, the JAva install screen pops up for you to click next. It appears the /s parameter is not working. <br />\n<br />\nWhen I run it manually with the /s, the install works silently, to me it appears the parameter is not being passed through?<br />\n<br />\nAny suggestions?<br />\n",
+    "PostedDate": "2014-02-27T14:33:27.837-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1219032",
+    "ThreadId": "535831",
+    "Html": "REvise the update and ensure the /S parameter is present in the command-Line textbox.<br />\n",
+    "PostedDate": "2014-03-04T07:27:18.68-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:53:35.88-07:00"
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Rules Update Wizard",
+      "DisplayName": "Rules Update Wizard"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:52.79-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Bonjour,\r\n\r\nJ'ai déployé Acrobat Reader DC MSI avec WPP.\r\nL'update est bien appliqué sur les PC.\r\n\r\nPar contre lorsque je met le MSP (uniquement le dernier en date AcroRdrDCUpd1500920077), il n'est pas proposé au PC.\r\nJ'ai essayé avec le xxxx_MUI.MSP et le xxxx.MSP\r\n\r\nFaut il passer tous les MSP pour qu'ils s'appliquent les un à la suite des autres ?\r\n\r\nMerci.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1508.08",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-11-15T09:28:36.367-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Adobe Acrobat Reader DC MSP Update",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 311
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Salut, \n\ncomment avez-vous résolu le problème?\n\nSnuggle",
+      "PostedDate": "2016-03-14T06:59:51.873-07:00",
+      "Id": 197904
+    }
+  ]
+}

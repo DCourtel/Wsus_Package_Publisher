@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1453076",
+    "ThreadId": "647814",
+    "Html": "We ran into an issue with WSUS Package Publisher where the update package is not time stamped and caused the the package to expire the same day as the code signing cert. \r<br />\n<br />\nIs there a way to time stamping the updates like using SignTool /t option?\r<br />\n<a href=\"https://msdn.microsoft.com/en-us/library/8s9b9yaz%28v=vs.110%29.aspx\" rel=\"nofollow\">https://msdn.microsoft.com/en-us/library/8s9b9yaz%28v=vs.110%29.aspx</a>\r<br />\n<br />\nIf I am to make this change can you point me where in the latest source code to look at? \r<br />\n<br />\nThanks.<br />\n",
+    "PostedDate": "2015-11-18T17:35:52.817-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

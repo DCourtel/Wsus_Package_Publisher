@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Please, for this type of question, open a «Discussion» instead of an «Issue». ",
+    "ClosedDate": "2017-01-30T22:09:48.643-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nTo perform the update flash player 18 to 19 , I pass by the AdobeFlashPlayerCatalog_SCUP.cab catalog.\r\n\r\nBut since the release of version 19 , version 18 no longer uninstalls , before I did not have this problem.\r\n\r\nAre you seeing this?\r\n\r\nRegards,\r\n\r\nElminio",
+    "LastUpdatedDate": "2017-01-30T22:09:48.69-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-09-22T01:42:40.507-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Update flash player 18 to 19",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 294
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "No, i never see this before.\nBut you can us Uninstall2Install for deinstall the old version and install the new one. The HowTo is in German, but i think you will understand what the tool is doing. http://wsus.de/Uninstall2Install",
+      "PostedDate": "2015-09-22T05:53:04.553-07:00",
+      "Id": 190558
+    },
+    {
+      "Message": "Hi,\n\ntake a look here:\nhttps://www.404techsupport.com/2015/09/flash-player-uninstall-previous/\n\nHTH\nNorbert",
+      "PostedDate": "2015-09-28T02:39:35.48-07:00",
+      "Id": 190832
+    }
+  ]
+}

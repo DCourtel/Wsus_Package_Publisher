@@ -1,0 +1,177 @@
+9/1/2015 4:02:18 PM	=================================================================================================================
+9/1/2015 4:02:18 PM	Starting. Release : 1.3.1508.8
+9/1/2015 4:02:18 PM	Upgrade Settings : False
+9/1/2015 4:02:18 PM	Windows was installed in : en (English)
+9/1/2015 4:02:18 PM	Entering Void .ctor() : FrmSettings
+9/1/2015 4:02:19 PM	Language is : Anglais.
+9/1/2015 4:02:19 PM	Entering Void .ctor()
+9/1/2015 4:02:19 PM	Entering Void .ctor() : UpdateControl
+9/1/2015 4:02:19 PM	Entering Void .ctor() : UpdateListViewer
+9/1/2015 4:02:19 PM	Entering Void .ctor()
+9/1/2015 4:02:19 PM	Entering Void .ctor() : UpdateDetailViewer
+9/1/2015 4:02:19 PM	Entering Wsus_Package_Publisher.Credentials GetInstance()
+9/1/2015 4:02:19 PM	CredentialNotice set to : Features connecting to remote computers will use the same credentials than the application.
+9/1/2015 4:02:19 PM	CredentialNotice set to : Features connecting to remote computers will use the same credentials than the application.
+9/1/2015 4:02:19 PM	Entering Wsus_Package_Publisher.WsusWrapper GetInstance()
+9/1/2015 4:02:19 PM	Entering Void chkCmbBxFilter_SelectionChanged()
+9/1/2015 4:02:19 PM	Entering Void DisplayUpdates(Microsoft.UpdateServices.Administration.UpdateCollection)
+9/1/2015 4:02:19 PM	Entering Void ClearDisplay()
+9/1/2015 4:02:19 PM	Entering Void ClearBeforeConnecting()
+9/1/2015 4:02:19 PM	Entering Void ClearDisplay()
+9/1/2015 4:02:19 PM	Entering Void ResetControl()
+9/1/2015 4:02:19 PM	Entering Void ClearDisplay()
+9/1/2015 4:02:19 PM	Entering Void AdjustSplitterDistance()
+9/1/2015 4:02:19 PM	Entering Void .ctor() : ComputerControl
+9/1/2015 4:02:19 PM	Entering Void .ctor() : ComputerListViewer
+9/1/2015 4:02:19 PM	Entering Wsus_Package_Publisher.Credentials GetInstance()
+9/1/2015 4:02:19 PM	Entering Wsus_Package_Publisher.WsusWrapper GetInstance()
+9/1/2015 4:02:19 PM	Entering Wsus_Package_Publisher.Credentials GetInstance()
+9/1/2015 4:02:19 PM	Entering Void .ctor() : ComputerDetailViewer
+9/1/2015 4:02:20 PM	Entering Void dtpInstalledAfter_ValueChanged(System.Object, System.EventArgs)
+9/1/2015 4:02:20 PM	Entering Void Display(System.Windows.Forms.DataGridViewSelectedRowCollection)
+9/1/2015 4:02:20 PM	Entering Void dtpInstalledAfter_ValueChanged(System.Object, System.EventArgs)
+9/1/2015 4:02:20 PM	Entering Void Display(System.Windows.Forms.DataGridViewSelectedRowCollection)
+9/1/2015 4:02:20 PM	Entering Void .ctor()
+9/1/2015 4:02:20 PM	Entering Void FrmWsusPackagePublisher_Shown(System.Object, System.EventArgs)
+9/1/2015 4:02:20 PM	Entering Void FillServerList()
+9/1/2015 4:02:20 PM	Entering System.Collections.Generic.List`1[Wsus_Package_Publisher.WsusServer] LoadServerSettings()
+9/1/2015 4:02:20 PM	Entering System.Collections.Generic.List`1[Wsus_Package_Publisher.WsusServer] LoadServerSettings()
+9/1/2015 4:02:20 PM	Entering Void set_Name(System.String) : localhost
+9/1/2015 4:02:20 PM	Name : localhost
+9/1/2015 4:02:20 PM	Entering Void set_IsLocal(Boolean) : True
+9/1/2015 4:02:20 PM	IsLocal : True
+9/1/2015 4:02:20 PM	Entering Void set_Port(Int32) : 443
+9/1/2015 4:02:20 PM	Port : 443
+9/1/2015 4:02:20 PM	Entering Void set_UseSSL(Boolean) : False
+9/1/2015 4:02:20 PM	UseSSL : False
+9/1/2015 4:02:20 PM	Entering Void set_IgnoreCertificateErrors(Boolean) : False
+9/1/2015 4:02:20 PM	ignoreCertErrors : False
+9/1/2015 4:02:20 PM	Entering Void set_DeadLineDaysSpan(Int32) : 0
+9/1/2015 4:02:20 PM	Entering Void set_DeadLineHour(Int32) : 0
+9/1/2015 4:02:20 PM	Entering Void set_DeadLineMinute(Int32) : 0
+9/1/2015 4:02:20 PM	Entering Void set_VisibleInWsusConsole(MakeVisibleInWsusPolicy) : Never
+9/1/2015 4:02:20 PM	Adding server : localhost
+9/1/2015 4:02:20 PM	Returning 1 Servers.
+9/1/2015 4:02:20 PM	Entering Void .ctor(System.String, Boolean, Int32, Boolean, Int32, Int32, Int32) : localhost, True, 443, False, 0, 0, 0
+9/1/2015 4:02:20 PM	Entering Void .ctor(System.String, Boolean, Int32, Boolean, Int32, Int32, Int32) : localhost
+9/1/2015 4:02:20 PM	Entering Void .ctor(System.String, Boolean, Int32, Boolean, Int32, Int32, Int32) : True
+9/1/2015 4:02:20 PM	Entering Void set_Port(Int32) : 443
+9/1/2015 4:02:20 PM	Entering Void .ctor(System.String, Boolean, Int32, Boolean, Int32, Int32, Int32) : False
+9/1/2015 4:02:20 PM	Entering Void set_DeadLineDaysSpan(Int32) : 0
+9/1/2015 4:02:20 PM	Entering Void .ctor(System.String, Boolean, Int32, Boolean, Int32, Int32, Int32) : 0
+9/1/2015 4:02:20 PM	Entering Void set_DeadLineMinute(Int32) : 0
+9/1/2015 4:02:20 PM	Entering System.Object Clone() : Never
+9/1/2015 4:02:20 PM	Entering System.Object Clone() : False
+9/1/2015 4:02:20 PM	Wsus Server localhost added to the Combobox
+9/1/2015 4:02:20 PM	WPP is up and ready
+9/1/2015 4:02:21 PM	Entering Void ConnectToServer(System.Object, System.EventArgs)
+9/1/2015 4:02:21 PM	Entering Void ClearBeforeConnecting()
+9/1/2015 4:02:21 PM	Entering Void ClearDisplay()
+9/1/2015 4:02:21 PM	Entering Void ResetControl()
+9/1/2015 4:02:21 PM	Entering Void ClearDisplay()
+9/1/2015 4:02:21 PM	Entering Void AdjustSplitterDistance()
+9/1/2015 4:02:21 PM	Entering Void .ctor() : ComputerControl
+9/1/2015 4:02:21 PM	Entering Void .ctor() : ComputerListViewer
+9/1/2015 4:02:21 PM	Entering Wsus_Package_Publisher.Credentials GetInstance()
+9/1/2015 4:02:21 PM	Entering Wsus_Package_Publisher.WsusWrapper GetInstance()
+9/1/2015 4:02:21 PM	Entering Wsus_Package_Publisher.Credentials GetInstance()
+9/1/2015 4:02:21 PM	Entering Void .ctor() : ComputerDetailViewer
+9/1/2015 4:02:21 PM	Entering Void dtpInstalledAfter_ValueChanged(System.Object, System.EventArgs)
+9/1/2015 4:02:21 PM	Entering Void Display(System.Windows.Forms.DataGridViewSelectedRowCollection)
+9/1/2015 4:02:21 PM	Entering Void dtpInstalledAfter_ValueChanged(System.Object, System.EventArgs)
+9/1/2015 4:02:21 PM	Entering Void Display(System.Windows.Forms.DataGridViewSelectedRowCollection)
+9/1/2015 4:02:21 PM	Entering Void .ctor()
+9/1/2015 4:02:21 PM	Try connecting to : localhost
+9/1/2015 4:02:21 PM	Entering Void StartWaitingForm(System.String)
+9/1/2015 4:02:21 PM	Entering Boolean Connect(Wsus_Package_Publisher.WsusServer, System.String) : localhost (Local), en
+9/1/2015 4:02:24 PM	Connected to local Wsus
+9/1/2015 4:02:26 PM	Entering System.Version GetConsoleVersion()
+9/1/2015 4:02:26 PM	Entering Boolean Connect(Wsus_Package_Publisher.WsusServer, System.String) : Administrator
+9/1/2015 4:02:26 PM	Entering CertificateStatus CheckCertificateStatus(Microsoft.UpdateServices.Administration.IUpdateServerConfiguration)
+9/1/2015 4:02:26 PM	Entering System.String GetTempFolder()
+9/1/2015 4:02:26 PM	Will return : C:\Users\reillyadmin\AppData\Local\Temp\1\WPP\vswzapfv.3yk\
+9/1/2015 4:02:26 PM	Trying to get certificate from server.
+9/1/2015 4:02:26 PM	Successfuly got certificate from server.
+9/1/2015 4:02:26 PM	EffectiveDate : 9/1/2015 3:03:59 PM / ExpirationDate : 9/1/2020 3:03:59 PM
+9/1/2015 4:02:26 PM	Invalid !
+9/1/2015 4:02:26 PM	Entering Boolean Connect(Wsus_Package_Publisher.WsusServer, System.String) : Invalid
+9/1/2015 4:02:26 PM	Entering Int32 CheckCertificateKeyLength(Microsoft.UpdateServices.Administration.IUpdateServerConfiguration)
+9/1/2015 4:02:26 PM	Entering System.String GetTempFolder()
+9/1/2015 4:02:26 PM	Will return : C:\Users\reillyadmin\AppData\Local\Temp\1\WPP\pftrorvp.aio\
+9/1/2015 4:02:26 PM	Entering Int32 GetCertificateKeyLength(System.String) : C:\Users\reillyadmin\AppData\Local\Temp\1\WPP\pftrorvp.aio\certificate.cer
+9/1/2015 4:02:26 PM	Will return 2048
+9/1/2015 4:02:26 PM	Will return : 2048
+9/1/2015 4:02:26 PM	Entering Boolean Connect(Wsus_Package_Publisher.WsusServer, System.String) : 2048
+9/1/2015 4:02:26 PM	Successfuly connected to Wsus server.
+9/1/2015 4:02:26 PM	This is not a Replica server.
+9/1/2015 4:02:26 PM	Entering PopulateTreeviewWithComputerGroups. With group : All Computers And node : All Computers
+9/1/2015 4:02:26 PM	Entering PopulateTreeviewWithComputerGroups. With group : Unassigned Computers And node : Unassigned Computers
+9/1/2015 4:02:26 PM	Entering PopulateTreeviewWithComputerGroups. With group : Workstations And node : Workstations
+9/1/2015 4:02:26 PM	Entering PopulateTreeviewWithComputerGroups. With group : Windows Storage Server 2012 R2 And node : Windows Storage Server 2012 R2
+9/1/2015 4:02:26 PM	Entering PopulateTreeviewWithComputerGroups. With group : Hudson Servers And node : Hudson Servers
+9/1/2015 4:02:26 PM	Entering PopulateTreeviewWithComputerGroups. With group : Windows Hyper-V 2012 R2 And node : Windows Hyper-V 2012 R2
+9/1/2015 4:02:26 PM	Entering PopulateTreeviewWithComputerGroups. With group : Hudson And node : Hudson
+9/1/2015 4:02:26 PM	Entering PopulateTreeviewWithComputerGroups. With group : Windows Server 2012 R2 And node : Windows Server 2012 R2
+9/1/2015 4:02:26 PM	Entering PopulateTreeviewWithComputerGroups. With group : Windows 8.1 And node : Windows 8.1
+9/1/2015 4:02:26 PM	Entering PopulateTreeviewWithComputerGroups. With group : Windows 8.1 Hudson And node : Windows 8.1 Hudson
+9/1/2015 4:02:26 PM	Entering PopulateTreeviewWithComputerGroups. With group : Hudson Workstations And node : Hudson Workstations
+9/1/2015 4:02:26 PM	Entering PopulateTreeviewWithComputerGroups. With group : Servers And node : Servers
+9/1/2015 4:02:26 PM	Entering PopulateTreeviewWithComputerGroups. With group : Windows 10 And node : Windows 10
+9/1/2015 4:02:26 PM	Entering PopulateTreeviewWithComputerGroups. With group : Windows 10 Hudson And node : Windows 10 Hudson
+9/1/2015 4:02:26 PM	Entering PopulateTreeviewWithComputerGroups. With group : Windows 10 Roaming And node : Windows 10 Roaming
+9/1/2015 4:02:26 PM	Entering PopulateComputerGroups. With node : All Computers And computersGroup : All Computers
+9/1/2015 4:02:26 PM	Entering PopulateComputerGroups. With node : Hudson And computersGroup : Hudson
+9/1/2015 4:02:26 PM	Entering PopulateComputerGroups. With node : Hudson Servers And computersGroup : Hudson Servers
+9/1/2015 4:02:26 PM	Entering PopulateComputerGroups. With node : Hudson Workstations And computersGroup : Hudson Workstations
+9/1/2015 4:02:26 PM	Entering PopulateComputerGroups. With node : Servers And computersGroup : Servers
+9/1/2015 4:02:26 PM	Entering PopulateComputerGroups. With node : Unassigned Computers And computersGroup : Unassigned Computers
+9/1/2015 4:02:26 PM	Entering PopulateComputerGroups. With node : Windows 10 And computersGroup : Windows 10
+9/1/2015 4:02:26 PM	Entering PopulateComputerGroups. With node : Windows 10 Hudson And computersGroup : Windows 10 Hudson
+9/1/2015 4:02:26 PM	Entering PopulateComputerGroups. With node : Windows 10 Roaming And computersGroup : Windows 10 Roaming
+9/1/2015 4:02:26 PM	Entering PopulateComputerGroups. With node : Windows 8.1 And computersGroup : Windows 8.1
+9/1/2015 4:02:26 PM	Entering PopulateComputerGroups. With node : Windows 8.1 Hudson And computersGroup : Windows 8.1 Hudson
+9/1/2015 4:02:26 PM	Entering PopulateComputerGroups. With node : Windows Hyper-V 2012 R2 And computersGroup : Windows Hyper-V 2012 R2
+9/1/2015 4:02:26 PM	Entering PopulateComputerGroups. With node : Windows Server 2012 R2 And computersGroup : Windows Server 2012 R2
+9/1/2015 4:02:26 PM	Entering PopulateComputerGroups. With node : Windows Storage Server 2012 R2 And computersGroup : Windows Storage Server 2012 R2
+9/1/2015 4:02:26 PM	Entering PopulateComputerGroups. With node : Workstations And computersGroup : Workstations
+9/1/2015 4:02:26 PM	Entering Void FillMetaGroups()
+9/1/2015 4:02:26 PM	Entering InitializeMetaGroups. With wsusServer : localhost
+9/1/2015 4:02:26 PM	Entering InitializeComputerGroups With WsusServer : localhost
+9/1/2015 4:02:26 PM	Entering Void PopulateMetaGroupNode()
+9/1/2015 4:02:26 PM	Entering Void CollectUpdates()
+9/1/2015 4:02:26 PM	Entering Void SetComputerGroups(Wsus_Package_Publisher.ComputerGroup, System.Windows.Forms.TreeNode)
+9/1/2015 4:02:26 PM	Entering Void SetComputerGroups(Wsus_Package_Publisher.ComputerGroup, System.Windows.Forms.TreeNode)
+9/1/2015 4:02:26 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : All Computers
+9/1/2015 4:02:26 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Hudson
+9/1/2015 4:02:26 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Hudson Servers
+9/1/2015 4:02:26 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Hudson Workstations
+9/1/2015 4:02:26 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Servers
+9/1/2015 4:02:26 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Unassigned Computers
+9/1/2015 4:02:26 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Windows 10
+9/1/2015 4:02:26 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Windows 10 Hudson
+9/1/2015 4:02:26 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Windows 10 Roaming
+9/1/2015 4:02:26 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Windows 8.1
+9/1/2015 4:02:26 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Windows 8.1 Hudson
+9/1/2015 4:02:26 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Windows Hyper-V 2012 R2
+9/1/2015 4:02:26 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Windows Server 2012 R2
+9/1/2015 4:02:26 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Windows Storage Server 2012 R2
+9/1/2015 4:02:26 PM	Entering Void FillComputerGroup(Wsus_Package_Publisher.ComputerGroup) : Workstations
+9/1/2015 4:02:26 PM	Entering Void StopWaitingForm()
+9/1/2015 4:02:26 PM	Entering Void CheckSubscriptions()
+9/1/2015 4:02:27 PM	Entering Void trvWsus_AfterSelect(System.Object, System.Windows.Forms.TreeViewEventArgs)
+9/1/2015 4:02:27 PM	Server
+9/1/2015 4:02:27 PM	Entering Void InitializeContextMenuForServer()
+9/1/2015 4:02:27 PM	Server Version is : 6.3.9600.16384
+9/1/2015 4:02:27 PM	Console Version is : 6.3.9600.16384
+9/1/2015 4:02:27 PM	Local OS is : Microsoft Windows NT 6.2.9200.0
+9/1/2015 4:02:29 PM	Entering Void certificatToolStripMenuItem_Click(System.Object, System.EventArgs)
+9/1/2015 4:02:29 PM	Entering Void .ctor() : FrmCertificateManagement
+9/1/2015 4:02:29 PM	Entering Void .ctor()
+9/1/2015 4:02:33 PM	Entering Void btnLoad_Click(System.Object, System.EventArgs)
+9/1/2015 4:02:33 PM	Entering Boolean IsSureToWantToOverwriteCurrentCertificate()
+9/1/2015 4:02:33 PM	Entering Boolean IsSureToWantToOverwriteCurrentCertificate()
+9/1/2015 4:02:33 PM	Generate or Load the certificate.
+9/1/2015 4:02:33 PM	ThreadException. Something Went Wrong
+9/1/2015 4:02:33 PM	**** Creating an instance of the COM component with CLSID {DC1C5A9C-E88A-4DDE-A5A1-60F82A20AEF7} from the IClassFactory failed due to the following error: 80040111 ClassFactory cannot supply requested class (Exception from HRESULT: 0x80040111 (CLASS_E_CLASSNOTAVAILABLE)).
+9/1/2015 4:02:33 PM	Entering Void .ctor() : FrmSendDebugInfo
+9/1/2015 4:28:25 PM	Entering Void lnkLblShowInformations_LinkClicked(System.Object, System.Windows.Forms.LinkLabelLinkClickedEventArgs)

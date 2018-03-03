@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1265530",
+    "ThreadId": "551508",
+    "Html": "Is there a way to update WPP, while at the same time keeping the info of the updates you've published with the previous version?\r<br />\n<br />\nI copied over the old folder with the new and my previous updates no longer show up in WPP.\r<br />\n<br />\nThanks,\r<br />\n<br />\nBill<br />\n",
+    "PostedDate": "2014-07-14T07:55:32.87-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1265533",
+    "ThreadId": "551508",
+    "Html": "<strong>Bill_T wrote:</strong><br />\n<blockquote>\nI copied over the old folder with the new and my previous updates no longer show up in WPP.<br />\n</blockquote>\nI only copied the new Files into the Folder where the old files are stored. Without any problems within one year.<br />\n",
+    "PostedDate": "2014-07-14T08:07:01.083-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1265538",
+    "ThreadId": "551508",
+    "Html": "Updating WPP is simply as copying new files over older files. \r<br />\nPlease open WPP and go to Tools-&gt; Settings -&gt; Updates tab and check the option &quot;Show Locally-Published udpates ...&quot;<br />\n",
+    "PostedDate": "2014-07-14T08:13:42.313-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-01T00:55:22.417-07:00"
+  },
+  {
+    "Id": "1265552",
+    "ThreadId": "551508",
+    "Html": "I figured out that copying over the old user settings file in AppData to the new version will make previous published packages show.\r<br />\n<br />\n<br />\nMight want to include a function to grab the old settings on launch of the new version. Just a suggestion.  :)\r<br />\n<br />\nThanks,\r<br />\n<br />\nBill<br />\n",
+    "PostedDate": "2014-07-14T08:44:57.347-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1265555",
+    "ThreadId": "551508",
+    "Html": "is it possible that I didn't have &quot;Show Locally Published Updates&quot; checked, which caused the behaviour that I worked around?<br />\n",
+    "PostedDate": "2014-07-14T08:48:33.483-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1265634",
+    "ThreadId": "551508",
+    "Html": "<blockquote>\nMight want to include a function to grab the old settings on launch of the new version. Just a suggestion.<br />\n</blockquote>\nIt's already the case. But for an unknown reason that didn't work on your computer :-(<br />\n",
+    "PostedDate": "2014-07-14T12:34:00.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

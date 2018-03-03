@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1104508",
+    "ThreadId": "461390",
+    "Html": "Hello,\r<br />\n<br />\nit seems to me that it is only possible to approve updates for uninstallation when the update is MSI based. EXE based updates don't give me this option. I think this is because MSI update parameters are added automatically by the wsus logic and the API doesn't offer options for this case - right?\r<br />\n<br />\nDo you see any way to import EXE updates with option to uninstallation? maybe with different command lines for install / uninstall? Or is the only way to import the update twice with different command lines?\r<br />\n<br />\nThanks in advance for you answer.\r<br />\n<br />\nGreets\r<br />\nMarco<br />\n",
+    "PostedDate": "2013-10-07T06:57:13.29-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1104509",
+    "ThreadId": "461390",
+    "Html": "Hello,<br />\n<blockquote>\nI think this is because MSI update parameters are added automatically by the wsus logic and the API doesn't offer options for this case - right? <br />\n</blockquote>\nYou are right. Wsus agent only know how to uninstall MSI files. This is a restriction in the API.<br />\n<blockquote>\nOr is the only way to import the update twice with different command lines?<br />\n</blockquote>\nThis is how I do.<br />\n",
+    "PostedDate": "2013-10-07T07:01:44.03-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-12T08:52:43.977-07:00"
+  }
+]

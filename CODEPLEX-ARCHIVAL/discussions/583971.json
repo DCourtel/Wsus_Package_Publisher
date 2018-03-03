@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1358692",
+    "ThreadId": "583971",
+    "Html": "hi,\r<br />\ni'm trying to publish xchange editor ( <a href=\"http://www.tracker-software.com/product/downloads\" rel=\"nofollow\">http://www.tracker-software.com/product/downloads</a> )with msi package.\r<br />\nMy package is published on my selected computers (i've already done this with acrobat/flash update from the same wsus server) but when I try to install it, Windows update report an error &quot;80070667&quot;.\r<br />\n<br />\nI've only add this command line parameter when i publish the package:\r<br />\n/quiet /norestart EDITOR_LANGUAGE=&quot;fr-FR&quot; DESKTOP_SHORTCUTS=1 PROGRAMSMENU_SHORTCUTS=1 SET_AS_DEFAULT=1 VIEW_IN_BROWSERS=1\r<br />\n<br />\n<a href=\"http://help.tracker-software.com/EUM/default.aspx?pageid=PDFXEdit3:switches_for_msi_installers\" rel=\"nofollow\">http://help.tracker-software.com/EUM/default.aspx?pageid=PDFXEdit3:switches_for_msi_installers</a>\r<br />\n<br />\nI have also tried only &quot;/quiet&quot; in the command line with same error message. <br />\n",
+    "PostedDate": "2015-03-02T02:48:52.197-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1358702",
+    "ThreadId": "583971",
+    "Html": "Hi,<br />\n<blockquote>\nWindows update report an error &quot;80070667&quot;<br />\n</blockquote>\nWhich mean, Invalid_Command_Line_Error\r<br />\nWsus will automatycally add /qn to your package to install it silently, so remove the /quiet from your command-line.<br />\n",
+    "PostedDate": "2015-03-02T03:09:01.82-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

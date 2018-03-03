@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-08-11T03:16:05.353-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Good Afternoon,\r\n\r\n  I have been trying to find information on how use WPP to push out files to certain folders, or even push a folder with files to a workstation.  Our GPO, unfortunately is causing some issues with slowness on some items.\r\n\r\nHow, if possible, can you push a folder with files on a Workstation using WPP.\r\n\r\nAlso could you place new font files in the fonts folder using WPP?\r\n\r\nJust looking for other avenues other than GPO..  Thank you.\r\n\r\n~J",
+    "LastUpdatedDate": "2015-08-11T03:16:05.353-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-07-24T11:24:42.427-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Possible to update folder's with files",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 276
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "You have to create a Custom Update and use either :\n - Add folder and Cpoy files\n or \n - Run a VbScript/Powershell\n",
+      "PostedDate": "2015-07-24T13:26:13.457-07:00",
+      "Id": 187691
+    },
+    {
+      "Message": "Another way to do it:\n1) Create self-extracting archive with the files.  In 7-Zip, save it as 7z archive format and put a check mark in the \"Create SFX archive\" box.\n\n2) When adding to WPP, make sure the command-line option is: -o\"c:\\Destination\\Directory\" -y\n\n3) Make sure the logic for detecting that the file is installed or needs to be upgraded works.\n\n4) Test to make sure you've not put the update into an endless loop.",
+      "PostedDate": "2015-08-10T11:21:18.607-07:00",
+      "Id": 188208
+    }
+  ]
+}

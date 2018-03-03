@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "About form",
+      "DisplayName": "About form"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-08-09T15:26:16.073-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Display Certificate Key Length in the 'About' Form.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1307.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-08-09T15:25:32.69-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Display Certificate Key Length",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 94
+  },
+  "FileAttachments": [
+    {
+      "FileId": 716066,
+      "FileName": "Certificate Key Length.png",
+      "DownloadUrl": ".\\716066"
+    }
+  ],
+  "Comments": []
+}

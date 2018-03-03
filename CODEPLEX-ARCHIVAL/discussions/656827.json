@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1480160",
+    "ThreadId": "656827",
+    "Html": "Hey everyone, anyone else having an issue when trying to use a longer MSI product code in an install rule etc - The new version of Java 8 has a longer code and I can't enter the last digit:\r<br />\n<br />\nEg Java 8x64 u99\r<br />\n26a24ae4-039d-4ca4-87b4-2f86418099f0\r<br />\n<br />\nLatest Java 8x64 u101\r<br />\n26a24ae4-039d-4ca4-87b4-2f864180101f0\r<br />\n<br />\nThis is going to cause me some issues as I have created a package to &quot;install&quot; not update Java but check for existing versions and so I need to list all available versions otherwise I'm going to get duplicate installs.<br />\n",
+    "PostedDate": "2016-07-31T14:55:32.877-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1480215",
+    "ThreadId": "656827",
+    "Html": "That has to be a bug on Oracles part.\r<br />\n<br />\nThat isn't a valid GUID as the length is fixed, you can't simply throw an extra digit on the end of it.<br />\n",
+    "PostedDate": "2016-08-01T14:55:07.99-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1480220",
+    "ThreadId": "656827",
+    "Html": "Indeed - I just checked their Release notes and nothing yet about it. We use the patchmypc catalog and they have just released Java 8 u101 but they have thankfully amended the GUID so its correct &quot;26a24ae4-039d-4ca4-87b4-2f86418101f0&quot; and &quot;26a24ae4-039d-4ca4-87b4-2f88618101f0&quot;\r<br />\n<br />\nHopefully we won't have many machines that have sourced Java directly from Oracle as that would cause some issues with other custom updates we have.<br />\n",
+    "PostedDate": "2016-08-01T18:36:18.493-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,61 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Added settings for HTTP Proxy and FTP Proxy.",
+    "ClosedDate": "2013-11-01T05:32:40.323-07:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nour Proxy Server authenticate the Active-Directory User via LDAP. In every Browser it is working. In WPP i can not Update the Catalog, allways i get: Unable to download the File. See Screenshot.\r\n\r\nClick on Test Connectivity is always OK.\r\n\r\nIs it possible to get a Option for Proxy-Settings in Tools > Settings? Proxy-URL or IP, Username and PW and Port.\r\n\r\nThanks.",
+    "LastUpdatedDate": "2013-11-01T05:32:40.323-07:00",
+    "PlannedForRelease": "Release v1.3.1310.12",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-16T07:18:47.16-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "need Form for Proxy Settings",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 137
+  },
+  "FileAttachments": [
+    {
+      "FileId": 744287,
+      "FileName": "WPP_UpdateCatalog.png",
+      "DownloadUrl": ".\\744287"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Something like this :\n![Proxy Settings](http://i.imgur.com/2pL5VAV.png)",
+      "PostedDate": "2013-10-20T13:34:17.877-07:00",
+      "Id": 118995
+    },
+    {
+      "Message": "Oh yes, looks very good. ;)\n\nCan i test before it comes in Release?",
+      "PostedDate": "2013-10-20T13:56:09.98-07:00",
+      "Id": 118997
+    },
+    {
+      "Message": "No problem. I will send a beta release to all WPP testers'.",
+      "PostedDate": "2013-10-21T03:26:55.247-07:00",
+      "Id": 119033
+    }
+  ]
+}

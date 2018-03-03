@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1441996",
+    "ThreadId": "644242",
+    "Html": "Bonjour,\r<br />\nd'après le site Oracle, depuis la version 8 de java JRE, il y a la possibilité d'installer la version en lançant le fichier jrexxx.exe suivi du fichier installcfg:chemin ou se trouve le fichier cfg\r<br />\nCela fonctionne parfaitement quand je le fait en local.\r<br />\nPar contre je n'arrive pas à trouver l'endroit et la syntaxe exacte pour effectuer cette installlation avec WPP en sachant que dans la syntaxe doit figurer le chemin complet ou se trouve le fichier INSTALL.CFG\r<br />\nMerci d'avance pour le retour d'aide<br />\n",
+    "PostedDate": "2015-08-26T07:08:47.58-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

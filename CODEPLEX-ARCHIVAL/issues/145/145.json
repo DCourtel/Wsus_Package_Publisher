@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Custom Update Creator",
+      "DisplayName": "Custom Update Creator"
+    },
+    "ClosedComment": "These three Actions have been added.",
+    "ClosedDate": "2013-11-01T15:51:21.04-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Add these actions in Custom Update :\r\n* Work with Folders (Add, Remove, Rename)\r\n* Work with Files (Copy, Delete, Rename)\r\n* Work with Registry Keys (Add, Remove, Rename)",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1310.12",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-25T03:21:53.38-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "New Actions in Custom Update",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 3,
+    "Id": 145
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Sounds good. :)\nThanks. ;)\n",
+      "PostedDate": "2013-10-25T04:52:04.417-07:00",
+      "Id": 119642
+    }
+  ]
+}

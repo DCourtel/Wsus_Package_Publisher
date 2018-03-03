@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1466091",
+    "ThreadId": "652296",
+    "Html": "Hello,\r<br />\n<br />\nI want to deploy an application that only needs to be copied to the applications directory but UAC is keeping me from doing that - could you please give me some help on how to configure the update so the files are copied to a subfolder of %programfiles% ? The folder creation as part of the update does work... \r<br />\n<br />\nThank you very much!\r<br />\n<br />\nRegards\r<br />\nGismo<br />\n",
+    "PostedDate": "2016-03-08T08:01:49.98-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1466110",
+    "ThreadId": "652296",
+    "Html": "I think the better way is to do this with Group Policy Preferences or with a Batch Script as a computerstartupscript.\r<br />\n<br />\nxcopy \\Server\\Share %programfiles%\\Folder<br />\n",
+    "PostedDate": "2016-03-08T09:11:33.717-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

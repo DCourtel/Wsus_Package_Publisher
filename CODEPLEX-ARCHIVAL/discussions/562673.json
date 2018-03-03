@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1294913",
+    "ThreadId": "562673",
+    "Html": "<a href=\"http://docs.oracle.com/javase/8/docs/technotes/guides/install/windows_installer_options.html#CJAJGEHA\" rel=\"nofollow\">http://docs.oracle.com/javase/8/docs/technotes/guides/install/windows_installer_options.html#CJAJGEHA</a>\r<br />\n<br />\nThe changes will affect how Java Updates are applied using WSUS, since the command line installation previously used will not work anymore.<br />\n",
+    "PostedDate": "2014-08-29T07:22:03.607-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:21:53.213-07:00"
+  }
+]

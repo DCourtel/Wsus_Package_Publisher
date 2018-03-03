@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-01-26T12:13:02.317-08:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "This makes importing only new updates a difficult task, especially in the case of update catalogs as extensive as the dell update catalog.",
+    "LastUpdatedDate": "2014-01-26T12:13:02.317-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-01-14T10:29:17.497-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Postponed"
+    },
+    "Summary": "When looking at a catalog, you can't see what you've already imported",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 167
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hello Austinian, you are right. Thanks for sharing this comment. i will consider it when writting WPP v2.",
+      "PostedDate": "2014-01-15T02:43:19.787-08:00",
+      "Id": 130478
+    }
+  ]
+}

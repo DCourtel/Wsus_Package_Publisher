@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1223567",
+    "ThreadId": "539259",
+    "Html": "Hi guys,\r<br />\n<br />\nI have a problem deploying Java update 51 x86.\r<br />\nI tried to follow this guide <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/462519\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/462519</a> updating the MSI code into the rules.\r<br />\nI tried in my test environment and the result are so strange:<br />\n<ul>\n<li>on windows 7 where is already installed the u51, WPP say that is &quot;Not Installed&quot; where should be &quot;Installed&quot;;</li>\n<li>\non windows Vista where Java is not installed, WPP say that is &quot;Not Installed&quot; where should be &quot;Not Applicable&quot;;<br />\n</li>\n</ul>\nI think that the error is in isInstallable rule but I didn't find what is wrong.\r<br />\nMy goal is to install Javax86 also on x64 machine so I didn't add the Architecture rule.\r<br />\n<br />\nI classified the package type to Update and the update classification to CriticalUpdates.\r<br />\n<br />\nisAlreadyInstalled rule:\r<br />\n&lt;msiar:MsiProductInstalled ProductCode=&quot;{26a24ae4-039d-4ca4-87b4-2f83217051ff}&quot;/&gt;\r<br />\n<br />\nisInstallable rule:\r<br />\n&lt;lar:Not&gt;\r<br />\n&lt;msiar:MsiProductInstalled ProductCode=&quot;{26a24ae4-039d-4ca4-87b4-2f83217051ff}&quot;/&gt;\r<br />\n&lt;/lar:Not&gt;\r<br />\n<br />\nOther updates work fine (flash and reader). \r<br />\nWhat I missed?<br />\n",
+    "PostedDate": "2014-03-17T09:01:47.757-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1225155",
+    "ThreadId": "539259",
+    "Html": "Did you check 'delete package rules'?<br />\n",
+    "PostedDate": "2014-03-21T02:39:47.2-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1227463",
+    "ThreadId": "539259",
+    "Html": "<blockquote>\non windows Vista where Java is not installed, WPP say that is &quot;Not Installed&quot; where should be &quot;Not Applicable&quot;<br />\n</blockquote>\nThat's wrong. Your 'IsInstallable' rule clearly states that <strong>ALL COMPUTERS</strong> that <strong>DIDN'T HAVE</strong> Java7 U51 <strong>should install it</strong>.<br />\n<blockquote>\non windows 7 where is already installed the u51, WPP say that is &quot;Not Installed&quot; where should be &quot;Installed&quot;<br />\n</blockquote>\nThis mean that the MSI Product code you have used in the 'IsInstalled' rule have not been detected.\r<br />\n<br />\nOn a client computer, open regedit and select : \r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\r<br />\n<br />\nthen search for the string 'Java' and look at the value : UninstallString\r<br />\n<br />\nyou can search into this RegKey too :\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\Installer\\Products<br />\n",
+    "PostedDate": "2014-03-27T10:07:11.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:42:39.167-07:00"
+  }
+]

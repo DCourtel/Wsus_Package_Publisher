@@ -1,0 +1,56 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Settings",
+      "DisplayName": "Settings"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-15T08:26:52.2-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Add a setting to choose if, when publishing an update, the Update File Wizard always open :\r\n - on a preconfigurated path.\r\n - on the last used path.\r\n - on a preconfigurated path for the main file, and the same path than the main file for additionnal files.\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1306.09",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-09T14:30:23.157-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Remember last used or preconfigurated path",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 3,
+    "Id": 61
+  },
+  "FileAttachments": [
+    {
+      "FileId": 691523,
+      "FileName": "UpdateFilePath.png",
+      "DownloadUrl": ".\\691523"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Adding a new option in the 'updates' tab of the Settings form.\r\nLet the user to choose if, when creating a new update, the file Wizard always open:\r\n - on the last used path.\r\n - On the same specified path\r\n\r\nWhen the second option is choose, user can decide if, for additionnal files, the path is substitute by the path of the main update file.",
+      "PostedDate": "2013-06-10T13:13:58.463-07:00",
+      "Id": 102691
+    },
+    {
+      "Message": "Wow, it looks very good. ;)",
+      "PostedDate": "2013-06-11T01:01:31.02-07:00",
+      "Id": 102755
+    }
+  ]
+}

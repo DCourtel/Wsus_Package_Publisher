@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1250439",
+    "ThreadId": "546813",
+    "Html": "hello all,\r<br />\n<br />\nWhen I right click a computer, I can't use the 3 options &quot;show pending updates&quot;, &quot;install pending update&quot; and &quot;install this update&quot;.  they are all greyed.\r<br />\n<br />\nDo some have a hint to solve this?\r<br />\n<br />\nThanks!<br />\n",
+    "PostedDate": "2014-05-28T06:01:43.063-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1250442",
+    "ThreadId": "546813",
+    "Html": "I solved the problem by running the EXE &quot;showpendingupdates.exe&quot;, I just uncheck &quot;always ask before opening this file&quot; and click run.    After this I was able to use the options by right clicking.\r<br />\n<br />\nSolved<br />\n",
+    "PostedDate": "2014-05-28T06:05:43.557-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-28T06:05:48.627-07:00"
+  }
+]

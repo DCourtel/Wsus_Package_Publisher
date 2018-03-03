@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1426807",
+    "ThreadId": "638501",
+    "Html": "Hi everyone,\r<br />\n<br />\nwill there be a Adobe Reader DC Katalog ? Or must i create for every Update of the DC a new Package ?<br />\n",
+    "PostedDate": "2015-05-21T02:21:58.973-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1426813",
+    "ThreadId": "638501",
+    "Html": "These catalogs can be download here :\r<br />\n<br />\n<a href=\"http://armmf.adobe.com/arm-manifests/win/SCUP/ReaderCatalog-2015.cab\" rel=\"nofollow\">Classic Track</a>\r<br />\n<a href=\"http://armmf.adobe.com/arm-manifests/win/SCUP/ReaderCatalog-DC.cab\" rel=\"nofollow\">Continuous Track</a><br />\n",
+    "PostedDate": "2015-05-21T02:57:02.62-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

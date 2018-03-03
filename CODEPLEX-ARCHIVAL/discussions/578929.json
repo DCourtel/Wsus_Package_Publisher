@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1347170",
+    "ThreadId": "578929",
+    "Html": "I'm having issues installing updates from WPP. I can see the pending updates, I am just unable to install them. I'm getting error code: 800B0109.<br />\n<br />\nThe updates I have deployed are the latest Java, Adobe Reader and Adobe Flash updates. <br />\n",
+    "PostedDate": "2015-01-29T08:31:17.5-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1347171",
+    "ThreadId": "578929",
+    "Html": "Edited: Found issue to be certs not on local machine, were installed on user.<br />\n",
+    "PostedDate": "2015-01-29T08:31:31.773-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1347173",
+    "ThreadId": "578929",
+    "Html": "Edit: Removing windowsupdate.log<br />\n",
+    "PostedDate": "2015-01-29T08:32:06.717-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1347174",
+    "ThreadId": "578929",
+    "Html": "Edit: Removing windowsupdate.log<br />\n",
+    "PostedDate": "2015-01-29T08:32:32.347-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348906",
+    "ThreadId": "578929",
+    "Html": "I have the same issue with Java. However, Adobe reader is installed succesfully. Do you already have a solution for this?<br />\n",
+    "PostedDate": "2015-02-04T05:15:27.767-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348983",
+    "ThreadId": "578929",
+    "Html": "<strong>MIGHTY_MO wrote:</strong><br />\n<blockquote>\nI have the same issue with Java. However, Adobe reader is installed succesfully. Do you already have a solution for this?<br />\n</blockquote>\nThe very same issue?<br />\n<br />\nError code: 800B0109 is a certificate issue. The client doesn't trust the signing CA of the cert. Which Adobe Reader update are you using? Are you using the one from Adobe's SCUP cab or are you creating your own? If you're creating your own, this points to certificate you created not being distributed to clients correctly, or your clients not trusting the CA that you used to sign your cert. If you're not creating your own, then... idk. But, if you've changed your cert recently, newer updates will be signed with the new cert and older ones with the old one. You can resign updates with the new cert by selecting the updates you wish to sign again in WPP, right click and then select Resign.<br />\n<br />\nYou also need to have GPO set up correctly to allow clients to trust the cert, etc. Stuff that's in the initial setup document. Some good troubleshooting steps for this issue are in this discussion: <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/450315\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/450315</a><br />\n",
+    "PostedDate": "2015-02-04T07:51:30.583-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

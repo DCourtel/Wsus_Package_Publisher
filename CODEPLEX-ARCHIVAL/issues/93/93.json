@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Settings",
+      "DisplayName": "Settings"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-08-09T14:14:43.623-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When WPP run locally on the Wsus server, if the user ask for generate a self-signed certificate, then the generated certificate is automatically imported in the \"Trusted Publisher\" store and the \"Trusted Root Authorities\" store of the server.\r\n\r\n/!\\ This doesn't exempt the user to import the certificate in these stores on client computers !",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1307.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-08-09T14:14:29.413-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Automatically install Certificate when running local",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 93
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

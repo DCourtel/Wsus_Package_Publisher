@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1463202",
+    "ThreadId": "651296",
+    "Html": "Guten Tag,\r<br />\n<br />\nich würde gerne eine Datei (mss.cfg) als Konfigdatei für den Flashplayer verteilen. Allerdings bekomme ich die Datei nicht auf die Clients kopiert - es wird zwar ein Update angezeigt und auch ausgeführt, allerdings erscheint die Datei nicht auf dem Zielclient.\r<br />\nIch habe mir bereits die Doku angeschaut und auch verschiedene Kopiervariationen getestet - allerdings alle mit dem selben negativen Ergebnis. \r<br />\n<br />\nKönnte mir evtl. jemand einen Tipp geben, wie ich diese Datei an den Zielort auf dem Client kopiert bekommen. \r<br />\n<br />\nIch wähle bei den Benutzerdefinierten Updates - Datei kopieren aus. Als Quelle wird das Verzeichnis auf dem WUS bei uns angegeben - habe auch bereits mit UNC-Freigabe das Ganze getestet (SRVW\\UpdateServicePackages\\mss\\mss.cfg), bei Ziel habe ich den Zielpfad für den Client eingetragen (C:\\Windows\\SysWow64\\Macromed\\Flash\\mss.cfg). Die Bedingungen in den Regeln lediglich ob die Datei bereits vorhanden ist, bzw. nicht vorhanden ist.\r<br />\n<br />\nWie gesagt, das Update wird angezeigt und ausgeführt - allerdings ohne die Datei zu kopieren.\r<br />\nWürde mich freuen, wenn mir jemand hierbei weiterhelfen könnte.\r<br />\n<br />\nvielen Dank im Voraus und viele Grüße\r<br />\n<br />\npfeifera<br />\n",
+    "PostedDate": "2016-02-14T22:38:29.737-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1463653",
+    "ThreadId": "651296",
+    "Html": "Am einfachsten ist, die Datei per Script oder per Group Policy Preference auf die Clients zu kopieren. Wegen so einer 1 KB großen Textdatei würde ich nicht den Aufwand mit dem WPP machen. ;)<br />\n",
+    "PostedDate": "2016-02-18T12:01:40.727-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1466658",
+    "ThreadId": "651296",
+    "Html": "Ich klinke mich hier mal ein, da ich das identische Problem habe. Bei mir wird auch keine Kopieraktion ausgeführt obwohl das Update angezeigt und ausgeführt wird. DAs mit Script und GPP ist soweit so gut, möchte aber bestimmte Dinge Vor/Nach Update über WPP gezielt ausführen/kopieren. Dies sollte möglich sein hoffe ich. Wie ist z.B. die korrekte Pfadangabe beim Baustein &quot;Allow to Copy...&quot; im Custiom Update Creator? &quot;File: c:\\test.txt&quot; und bei &quot;Destination: c:\\test1.txt&quot; wenn ich hier als Beispiel test.txt in test1.txt umbenennen will. Ist die Angabe mit c:\\ so korrekt?<br />\n",
+    "PostedDate": "2016-03-13T07:21:25.327-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

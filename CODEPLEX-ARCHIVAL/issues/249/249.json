@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update Detail Viewer",
+      "DisplayName": "Update Detail Viewer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-04-12T10:28:34.003-07:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Hello,\r\nWpp exports only the first CAB file from an update multiple files\r\n\r\nBonjour,\r\nWpp exporte seulement le premier fichier CAB depuis une mise à jour à fichiers multiples.\r\n\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.3.1411.09",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-02-04T04:31:36.88-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Export an update with multiple CAB files",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 249
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Bonjour, lorsqu'une mise à jour contient plusieurs fichiers, ils sont tous compressés dans un seul fichier CAB.\nDécompressez le fichier CAB pour voir tous les fichiers.",
+      "PostedDate": "2015-02-04T12:02:27.763-08:00",
+      "Id": 173494
+    },
+    {
+      "Message": "Hello,\n\nI speak here of a large software example Ms Office of size 1 GB. The whole is created automatically in several CAB files.\nA 630 megabyte file and another 410 MB\nWhen I extract all the CAB files created , yes, there are all imported files.\nOff , when I export , there is only one 630 MB CAB file who contain not all files.\nI did the test with an application of 5GB . He created several CAB files 630 MB When I export it , I end up with a single file of 630 MB\n\n\nBonjour,\n\nJe parle là d'un gros logiciel, exemple Ms Office de taille 1 Go. La totalité est créé automatiquement dans plusieurs fichiers CAB.\nUn fichier de 630 Mo et un autre de 410 Mo.\nQuand j'extrais tous les fichiers CAB créé, oui, il y a tous les fichiers importés.\nHors, si je l'exporte, il n'y a plus qu'un seul fichier CAB de 630 Mo qui ne contiens plus tous les fichiers.\nJ'ai fait le test avec une application de 5 Go. Il créé plusieurs fichiers CAB de 630 Mo. Quand je l'exporte, je me retrouve avec un seul fichier de 630 Mo",
+      "PostedDate": "2015-02-13T01:58:53.237-08:00",
+      "Id": 174518
+    },
+    {
+      "Message": "Effectivement, pour les très gros packages, il y a plusieurs fichiers CAB de générés. \nJ'ai corrigé la méthode d'export pour en tenir compte.\n\nA noter, que la méthode pour importer une mise à jour exporter, ne prendra que le premier CAB trouvé. Je n'ai pas vu, dans l'API Wsus, de méthode pour importer plusieurs fichiers CAB dans une seul mise à jour.",
+      "PostedDate": "2015-02-14T13:37:13.17-08:00",
+      "Id": 174605
+    }
+  ]
+}

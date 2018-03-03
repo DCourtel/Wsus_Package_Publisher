@@ -1,0 +1,66 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-11T22:20:54.58-08:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Hello, I am trying to import a certificate into WPP on Windows Server 2012 R2 Core /w WSUS and am having an error message appear as soon as I click on \"Load a certificate\". The version of WPP I am using is v1.3.1508.08. I previously generated a self signed certificate before I tried importing and the same error appeared when I tried to import. I removed all of those certs from the Application Experience cert store, restarted the server and am still having this issue even though WPP no longer thinks a cert is installed.\r\n\r\nAny ideas?",
+    "LastUpdatedDate": "2015-11-11T22:20:54.58-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-09-01T16:50:13.803-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Cannot Import Certificate",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 290
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1481931,
+      "FileName": "WPP-fad5f859-9549-48fd-84bc-64b75a847210.log",
+      "DownloadUrl": ".\\1481931"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "> the IClassFactory failed due to the following error: 80040111 ClassFactory cannot supply requested class\n\nLooks like something is missing on the server due to the fact that it is a core installation\n.Net Framework cannot create an instance of the fileDialogBox\nsee this [article](http://forum.pulseway.com/topic/176-server-core-bug/)",
+      "PostedDate": "2015-09-02T12:11:10.197-07:00",
+      "Id": 189849
+    },
+    {
+      "Message": "Can I manually import the cert into the application experience store and then manually tell WPP to use it?",
+      "PostedDate": "2015-09-02T12:23:28.873-07:00",
+      "Id": 189850
+    },
+    {
+      "Message": "> Can I manually import the cert into the application experience store\n\nNo, for two reasons :\n* The certificat must be in the \"Wsus\" store\n* The certificat must be imported using the wsus API\n\n> and then manually tell WPP to use it\n\nWPP doesn't use any certificat. It's Wsus\nEven if you can successfully import the certificat, how do you will publish update without displaying a fileDialogBox ?",
+      "PostedDate": "2015-09-03T12:45:15.52-07:00",
+      "Id": 189882
+    },
+    {
+      "Message": "I only intended to use the WPP console to initially import the certificate as it needs to be run locally. Afterward I was planning on using a separate installation to manage it.",
+      "PostedDate": "2015-09-09T13:24:04.07-07:00",
+      "Id": 190039
+    }
+  ]
+}

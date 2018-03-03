@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Error 502 = Bad Gateway\nPlease see your network administrator.",
+    "ClosedDate": "2017-03-01T09:10:02.757-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\ni've problems to download a adobe reader dc update from a catalog (ReaderCatalog-DC.cab). \r\nthe message is \"download failed\" - remoteserver responded with code 502. \r\n\r\nis there a idea or solution about this problem? \r\n\r\ngreetings\r\nmatteo",
+    "LastUpdatedDate": "2017-03-01T09:10:02.757-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-03-01T02:11:30.11-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Problem Download Update Adobe Reader DC",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 359
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1643672,
+      "FileName": "download failed.JPG",
+      "DownloadUrl": ".\\1643672"
+    }
+  ],
+  "Comments": []
+}

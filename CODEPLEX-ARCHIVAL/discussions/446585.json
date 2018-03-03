@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1054931",
+    "ThreadId": "446585",
+    "Html": "I believe the WSUS server stores all of the &quot;last updated&quot; and &quot;last reported&quot; in GMT time.  Then the WSUS Client screen adjusted the times to the system's timezone.\r<br />\n<br />\nThe WSUS Package Publisher does not do that.   It displayed everything in GMT.   Can we have an option for TimeZone adjustments?<br />\n",
+    "PostedDate": "2013-06-10T09:01:04.027-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1055020",
+    "ThreadId": "446585",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"https://wsuspackagepublisher.codeplex.com/workitem/62\" rel=\"nofollow\">here</a> to go to the work item and continue the discussion.<br />\n",
+    "PostedDate": "2013-06-10T11:44:59.393-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:37:01.233-07:00"
+  }
+]

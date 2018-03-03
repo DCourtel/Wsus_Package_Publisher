@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Trying to run Adobe flash player 22 package from WSUS server.  WPP shows installed, but no flash on client system.  Can't see any errors on the server and the only error I'm seeing on the client is in the application log.  Event ID 7000 from Service Control Manager and 7009.  Timeout on starting InstallPendingUpdates service.  Any help would be appreciated, this is my first test with WPP.",
+    "LastUpdatedDate": "2016-09-09T07:58:47.727-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-09-09T07:58:47.727-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "InstallPendingUpdates service failed to start",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 348
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

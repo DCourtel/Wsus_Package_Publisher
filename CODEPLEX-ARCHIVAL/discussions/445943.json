@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "1052587",
+    "ThreadId": "445943",
+    "Html": "How are people deploying java ? I've tried MSI and EXE and its failing with code 643, it's not a cert issue as I've successfully got adobe flash working fine.\r<br />\nAlso I can't appear to delete products, the software crashes, from the logs I see this\r<br />\n<br />\nFailed to publish ProductKiller\r<br />\n**** Object reference not set to an instance of an object.<br />\n",
+    "PostedDate": "2013-06-04T05:07:16.13-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1052818",
+    "ThreadId": "445943",
+    "Html": "Hi Caffrey, thanks for your feed back.<br />\n<blockquote>\nI've tried MSI and EXE and its failing with code 643<br />\n</blockquote>\nSearch in installation log to see if you can find the reason of the fail. Look at this page for telling MSI to log : <a href=\"http://technet.microsoft.com/en-us/library/cc759262(v=ws.10).aspx\" rel=\"nofollow\">MSI CommandLine</a><br />\n<br />\nTry to run the MSI or the EXE manually on the computers to see if it install. <br />\nPersonnaly, I always use EXE for publishing Java. Because EXE file do many check before installing Java, to ensure that Java can be installed safely. And even if Internet Explorer run at the time of the installation, Java will install properly.<br />\n<blockquote>\nAlso I can't appear to delete products, the software crashes, from the logs I see this <br />\n</blockquote>\nI have received many Support Data File where user try to delete 'Non Empty Product'. This is not allow. In fact there is a bug in the UI of WPP, so that user can try to delete 'Non Empty Products'.<br />\nTry deleting ALL UPDATES in the product, then delete the product. Sorry for the inconvenience. This bug will be fix in the next release.<br />\nSee <a href=\"https://wsuspackagepublisher.codeplex.com/workitem/52\" rel=\"nofollow\">This post for more explaination</a>.<br />\n",
+    "PostedDate": "2013-06-04T14:05:55.76-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1053030",
+    "ThreadId": "445943",
+    "Html": "Thank you for the reply,<br />\n<br />\nI've tried to publish with the exe and used this for the command line &quot;/s IEXPLORER=1 MOZILLA=1 ADDLOCAL=ALL JAVAUPDATE=0 JU=0 AUTOUPDATECHECK=0 &quot;<br />\nstill no go, getting an error code of 643 / error 0x80070643.<br />\n<br />\nAdobe flash via MSI is working great so I know its not certificate issues etc.<br />\n<br />\nThe workaround i've found for deleting updates is to decline first then delete - works every time :)<br />\n<br />\nThanks for your hard work<br />\n<br />\nEDIT, I've fixed it now, silly me should've tried installing it via the exe first - there was an issue with the test machine /hangs head in shame...<br />\n<br />\nAnyone know of anything I can push that will clean out all old java completely ? JavaRa for instance ?<br />\n",
+    "PostedDate": "2013-06-05T03:11:04.213-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1053095",
+    "ThreadId": "445943",
+    "Html": "I'm using this CommandLine : /s IExplorer=1\r<br />\nDo not use quotes.\r<br />\nI think that : JAVAUPDATE=0 JU=0 AUTOUPDATECHECK=0 doesn't work anymore since a very long time with EXE file.\r<br />\n<br />\nTry without the CommandLine to see if it's the command that block the installation.\r<br />\nDoes it fail on one computer or several computers ?<br />\n",
+    "PostedDate": "2013-06-05T06:18:04.403-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1053584",
+    "ThreadId": "445943",
+    "Html": "Hi,\r<br />\n<br />\nIt's all working great now, thank you for your help<br />\n",
+    "PostedDate": "2013-06-06T07:29:03.943-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1053724",
+    "ThreadId": "445943",
+    "Html": "Can you share the solution with us ?<br />\n",
+    "PostedDate": "2013-06-06T11:57:27.11-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1054073",
+    "ThreadId": "445943",
+    "Html": "Problem was that other methods I've used in the past have caused some installations to fail.\r<br />\nYour method of using the exe works great especially with your command line suggestion.\r<br />\nOnly other issue I ran into was certificate mismatch, I just redid and repushed out the certificate and recreated the packages, upto now on the test group everything is great.\r<br />\nThanks for your hard work<br />\n",
+    "PostedDate": "2013-06-07T08:10:50.427-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:36:29.813-07:00"
+  },
+  {
+    "Id": "1054344",
+    "ThreadId": "445943",
+    "Html": "Do not forget that EXE deployement of Java will install Java Auto-Updater.<br />\n",
+    "PostedDate": "2013-06-08T05:56:11.22-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1055719",
+    "ThreadId": "445943",
+    "Html": "Is there any reason why the MSI way fails ? I'll do some more testing then I could just use a TRANSFORM to stop the JU<br />\n",
+    "PostedDate": "2013-06-12T01:55:20.71-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1056489",
+    "ThreadId": "445943",
+    "Html": "I think tha tEXE file do some actions to ensure that MSI can install safely. I always use the EXE file to deploy JAVA.\r<br />\nSee 'Installing Java 7u21 without Java Auto Updater ' in the documentation tab to install JAVA with a Custom Update.<br />\n",
+    "PostedDate": "2013-06-13T10:51:34.257-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1056696",
+    "ThreadId": "445943",
+    "Html": "Thanks for that,\r<br />\nI've got it running with a MSI and a transform however ran into this bug which it seems oracle are not fixing [TEXT](<a href=\"http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6947907\" rel=\"nofollow\">http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6947907</a>\r<br />\n<br />\nProblem with installer.dll, I'll investigate further, maybe a custom update with a java uninstaller.<br />\n",
+    "PostedDate": "2013-06-14T00:04:29.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

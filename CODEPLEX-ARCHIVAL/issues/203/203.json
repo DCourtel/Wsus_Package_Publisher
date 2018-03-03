@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Wsus Wrapper",
+      "DisplayName": "Wsus Wrapper"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-08-23T13:44:40.18-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Wsus API systematically throws ArgumentNullException when trying to publish a detectoid.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1407.11",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-07-12T10:47:08.907-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "Unable to publish a Detectoid",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 203
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "So it is possible to use the Dell Server Catalog in a not so distant future? ;)\n\nRegards\nNorbert",
+      "PostedDate": "2014-07-14T13:33:21.163-07:00",
+      "Id": 152387
+    },
+    {
+      "Message": "Yes, but with some limitation due to the lake of support for Detectoids in the Wsus API.\n\n* For now, it is impossible to know if the publication of a detectoid has been successful or has failed (in fact the Wsus API always throw an exception even if the publication has succeeds !)\n* When a detectoid has been publish, you can't see it neither in WPP nor in the Wsus console.\n* You can't determine whether or not a detectoid has already been published.\n\nI have sent to Winfried and you a beta release of WPP with Detectoids support. Tell me what you think about it.",
+      "PostedDate": "2014-07-14T14:22:21.093-07:00",
+      "Id": 152393
+    }
+  ]
+}

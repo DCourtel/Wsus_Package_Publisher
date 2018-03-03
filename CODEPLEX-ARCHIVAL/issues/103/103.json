@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Settings",
+      "DisplayName": "Settings"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-09-03T12:09:18.34-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "```\r\n---------------------------\r\n\r\n---------------------------\r\nServer version is differente from console version. You won't be able to publish updates.\r\n---------------------------\r\nOK   \r\n---------------------------\r\n```\r\n\r\n\r\ndifferent versus differente",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1309.01",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-09-03T11:45:55.62-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Spelling Error on server/client version check dialog box.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 103
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Thanks, I'm sure there is many other errors like this in the English version. And more worst errors !\r\nI don't speak/write fluently English.\r\nI do my best to be as intelligible as possible. I'm always seeking people to help me in the translation of this tool.",
+      "PostedDate": "2013-09-03T12:08:35.08-07:00",
+      "Id": 111970
+    }
+  ]
+}

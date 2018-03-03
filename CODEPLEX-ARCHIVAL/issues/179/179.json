@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-03-04T10:44:17.733-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Scenario 1: If client machine is member of test1.com and pointing to the WSUS server located on test2.com \r\nthrough GPO configuration.\r\n\r\nIn this scenario1 how WPP will support for this client.\r\n\r\nScenario 2: If client machine is member of test1.contoso.com and pointing to the WSUS server located on test2.contoso.com through GPO configuration.\r\n\r\ntest1.contoso.com  and test2.contoso.com are child domains for contoso.com\r\n\r\nIn this scenario2 how WPP will support for this client.\r\n",
+    "LastUpdatedDate": "2014-03-04T10:44:17.733-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-01-29T00:29:06.893-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "WPP will support for multiple domains or forest level support?",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 179
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "WPP will push Updates in WSUS. How WSUS support the clients? Right, WSUS doesn't matter about Domain A oder Domain B. WSUS will only present the updates for the clients. Clients will pick up the updates, if they can connect to WSUS.",
+      "PostedDate": "2014-01-29T01:15:27.497-08:00",
+      "Id": 131995
+    },
+    {
+      "Message": "Clients will download updates from there respective Wsus just like they download Microsoft Updates.\n/!\\ you need to pay attention at certificates. Especially if you have a Root Authority in each domaine !\n\nWhen you will try to send 'Command', like 'ReportNow', 'DetectNow', 'InstallNow', you must run WPP on a computer that is part of the same domaine than the remote computer and/or use a credential that have admin privileges on the remote computer.",
+      "PostedDate": "2014-01-29T03:20:22.86-08:00",
+      "Id": 132003
+    }
+  ]
+}

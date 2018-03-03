@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Please, for this type of question, open a «Discussion» instead of an «Issue».\r\nAnyway, you can read the C:\\Windows\\temp\\CustomUpdateEngine.log to search for any error message.",
+    "ClosedDate": "2017-01-30T22:01:33.023-08:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Hello guys, i tryied many times as you have described in docs install Java  with uninstall older version, but nothing happend except installation new one. working this solution for anybody?\r\n\r\nThanks a lot \r\nPavel",
+    "LastUpdatedDate": "2017-01-30T22:01:33.073-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-04-06T23:35:59.527-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "MSI Uninstall element not working",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 335
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This http://wsus.de/uninstall2install works for me every time a new Java Version is available.\n",
+      "PostedDate": "2016-04-07T00:17:18.043-07:00",
+      "Id": 198407
+    },
+    {
+      "Message": "Thanks Winfried, but you know, MSI uinstall element is much more easy to handle, and if exists, should work.",
+      "PostedDate": "2016-04-07T01:16:13.7-07:00",
+      "Id": 198408
+    },
+    {
+      "Message": "Yes, it should work. For me it was easyier to create a new solution, then troubleshoot the old one. ;)",
+      "PostedDate": "2016-04-07T02:39:16.64-07:00",
+      "Id": 198410
+    },
+    {
+      "Message": "hah, i'm not stupid, it just doesn't work =)",
+      "PostedDate": "2016-04-28T01:12:47.527-07:00",
+      "Id": 199028
+    }
+  ]
+}

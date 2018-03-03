@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1257238",
+    "ThreadId": "548957",
+    "Html": "I've created a package from the msi &amp; cab for Java 7 u60, and once the package is created, approved and displayed on the WSUS server it shows the following;\r<br />\n<br />\n&quot;The files for this update have not yet been downloaded&quot;\r<br />\n<br />\nHave I missed something somewhere? \r<br />\n<br />\nThe files were local to the server when I created the package, and when I follow the links to the package directories they appear to be correct with files present.<br />\n",
+    "PostedDate": "2014-06-17T13:57:22.647-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1257261",
+    "ThreadId": "548957",
+    "Html": "What is your Wsus infrastructure : How many Wsus servers, do you have Upstream/Downstream servers, Replica ? On which of these Wsus server did you have published the update ?<br />\n",
+    "PostedDate": "2014-06-17T15:21:02.83-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1257468",
+    "ThreadId": "548957",
+    "Html": "Very small setup. Just one WSUS server.\r<br />\n<br />\nI published the files on the one and only WSUS server we have.\r<br />\n<br />\nI've also done flash 14, which worked, and Adobe Reader which displays the same &quot;The files for this update have not yet been downloaded&quot; message.<br />\n",
+    "PostedDate": "2014-06-18T06:58:27.43-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1258404",
+    "ThreadId": "548957",
+    "Html": "Very strange, especially if flash 14 works. Try to delete the package and create it again. If it doesn't work, try to find error messages in the wsus log.<br />\n",
+    "PostedDate": "2014-06-20T13:08:54.153-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:29:34.473-07:00"
+  }
+]

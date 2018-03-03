@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "1027921",
+    "ThreadId": "439667",
+    "Html": "I followed the instructions and installed on our production WSUS server.  Created self signed certificate and installed in Trusted Publishers &amp; Trusted Root Certification.\r<br />\n<br />\nI want test an update installation for Adobe Acrobat\r<br />\nlets say a computer has Adobe acrobat 9.5.3 and I want to push update 9.5.4 to that.\r<br />\n<br />\nDo I have to follow the same procedure as &quot;Adobe Reader XI deployment guide&quot; ? since it is not .exe and an update. \r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2013-04-09T08:31:21.28-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1028018",
+    "ThreadId": "439667",
+    "Html": "Hello pthiyaga, <br />\n<br />\nFirst, ensure you make difference between :<br />\n<pre><code> * Adobe Reader : For reading PDF.\n * Adobe Acrobat : For creating PDF.\n</code></pre>\n\nSecond, &quot;Adobe Reader XI deployment guide&quot; is a special deployment procedure and you do not have to follow it. In Addition, I think that &quot;Customization Wizard&quot; does not exist for version 9 (only starting with X).<br />\n<br />\nIf a computer have already Adobe Reader or Adobe Acrobat, you can update it by deploying an .msp file (Patch file). Patch files are lighter than full files. You can download it here : <br />\n<pre><code> * [Adobe Reader](ftp://ftp.adobe.com/pub/adobe/reader/win/9.x/)\n * [Adobe Acrobat](ftp://ftp.adobe.com/pub/adobe/acrobat/win/9.x/)\n</code></pre>\n\nIf you want to deploy 9.5.4 everywhere there is a 9.5.3, leave &quot;installed rule&quot; and &quot;installable rule&quot; empty. Wsus will use .msp metadata to generate it automatically.<br />\n<br />\nOnce you have publish the update, do not approve it immediately. Select the vendor of the update in the left pane. Select the update in the upper right pane. On the &quot;Status&quot; tab, select a computers group. Select some computers in the lower right pane. Then right click on these computers and choose &quot;Send DetectNow&quot;. Wait 1 minute, to let these computers to check if they need this update. Then, on the same computers, right click and choose &quot;Send ReportNow&quot;. Wait 30 secondes, to let the server processing these answers.<br />\n<br />\nVerify, that computers who need the update, report as &quot;Not Installed&quot;. And computers that do not need this update, report as &quot;Not Applicable&quot;.<br />\n<br />\nIf you have a test group in your Wsus, approve this update for installation in this group. Wait 30 seconds, and send a &quot;DetectNow&quot;. Depending of your computers configuration, they will download and install the update or wait for the user to click to install.<br />\nOnce some computers have installed the update, check that the software work reliably.<br />\nIf you are satisfied with this update, you can apply it to other groups<br />\n<br />\nNote : 9.5 is a pretty old release. If you're talking about Adobe Reader, consider an upgrade to the latest release (11.0.2).<br />\n<br />\nIf you have any problem for publishing, testing, installing, don't hesitate to contact me.<br />\n",
+    "PostedDate": "2013-04-09T11:38:52.023-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1028608",
+    "ThreadId": "439667",
+    "Html": "Hi DCourtel, Thank you for your detailed reply.\r<br />\n<br />\nI tried publishing Adobe acrobat release 11.0.2 , but it look like not functioning as you mentioned. \r<br />\n<br />\nI think better I should double check the Installation and configuration of the Wsus Package  Publisher with you.\r<br />\n<br />\nSo  , I have installed WPP (v1.1.1303.16 (x64) on our WSUS server (Windows 2008R2 running windows server update services).\r<br />\nFollowed the installation guide.\r<br />\n<br />\nopen WPP :: Certificate:  Tools &gt; Certificate \r<br />\ngenerated certificate and Saved it. (Noticed on wsus server/certificate mmc, there is a folder as &quot;WSUS&quot; under that certificate sub folder found a certificate saying &quot;WSUS Published Self signed&quot;.\r<br />\nExported the certificate and then Imported that certificate to WSUS server's &quot;Trusted Publishers&quot; and &quot;trusted root certification authorities&quot;\r<br />\n<br />\nHave a test group on wsus which has two computers (one XP and one Win 7) rather than setting up a GPO to push the certificate to those computers. I just manually installed the certificate on those two computers as I did on WSUS server ( trusted publishers &amp; trusted root..)\r<br />\n<br />\nCan you please confirm me whether I'm on the right track to proceed publishing...\r<br />\n<br />\nThank you.<br />\n",
+    "PostedDate": "2013-04-10T11:48:47.08-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1028671",
+    "ThreadId": "439667",
+    "Html": "I think you are in the right way.<br />\nUsing WPP directly on the Wsus server is a good point for starting as the Admin console is already installed and I suppose you are using an account that belong of the &quot;Wsus administrator&quot; group.<br />\n<br />\nRegarding certificate, two points :<br />\n<pre><code> 1.  Ensure you have import it in the &quot;Computer Account&quot; (mmc -&gt; File -&gt; Add ... -&gt;Certificate -&gt; computer Account)\n 2.  Ensure you have reboot the machine after importing certificat. \n</code></pre>\n\nSecondly, when you say &quot;it look like not functioning as you mentioned&quot; : What exactly doesn't work as expected ?<br />\nPublishing the update ? Computers doesn't see the update ? Computers doesn't download ? Installation failed ?<br />\nAt which step does it fail ?<br />\nHave you an error message from WPP ?<br />\n<br />\nDid you see the update in WPP ?<br />\nHave you approve it for installation in your test group ?<br />\n",
+    "PostedDate": "2013-04-10T13:38:53.193-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1029124",
+    "ThreadId": "439667",
+    "Html": "I restarted the computers &amp; WSUS server after the certificate installation.\r<br />\n<br />\nSo, in the test group I have a Win Xp pc with Adobe Reader 7.0.9  &amp; Java JRE 1.4.1<br />\n<pre><code>                              and a win 7 (VM) with Adobe Acrobat Pro 9.0.0  &amp; Java version 7 update 11\n</code></pre>\n\nI tried Adobe Reader XI and 11,  after &quot;Send detect now&quot; and &quot;send report now&quot; the status shows  &quot;unknown&quot;\r<br />\nfor Adobe reader 11, both computers shows status as &quot;Not Applicable&quot;\r<br />\n<br />\nI approved for installation , checked &quot;Status&quot; and &quot;report&quot; tab after some time and still it shows &quot;Install&quot; on Approbation and on Report tab  &quot;0&quot; for Downloaded.\r<br />\nI'm not sure how to check whether anything happening?\r<br />\n<br />\nMy problem is , I just want to publish and test one update....(either Adobe or Java , either one computer on test group)\r<br />\nCan you suggest which update I can download and publish via WPP to test whether it works properly ? for example , for Adobe acrobat Do I have to download the .msp for the exact next release from what it has (9.0.0) or can I try any version msp   i.e  9.2 ?\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2013-04-11T10:39:19.603-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1029128",
+    "ThreadId": "439667",
+    "Html": "forgot to add something..\r<br />\n<br />\n<br />\nDo I have to select any rule after selected the .msp file when creating the update..\r<br />\nCan't I proceed without selecting any rule?<br />\n",
+    "PostedDate": "2013-04-11T10:43:39.267-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1029176",
+    "ThreadId": "439667",
+    "Html": "<blockquote>\nDo I have to download the .msp for the exact next release from what it has (9.0.0) or can I try any version msp i.e 9.2 ?<br />\n</blockquote>\nYes, MSP files are patch files. With that you can update a software from ONE version to another ONE version (for example : from 11.0.0.0 to 11.0.1.0). You will NEVER update a software from 11.0.0.0 to 11.0.1.0 on one computer and from 11.0.1.0 to 11.0.2.0 on another one computer.\r<br />\n<br />\n Don't try to update Adobe Acrobat Pro for now, because you will have licence problems.\r<br />\nLet concentrate on Adobe Reader 7.0.9 on your XP computer.\r<br />\nFirst, go to <a href=\"ftp://ftp.adobe.com/pub/adobe/reader/win/11.x/11.0.00/\" rel=\"nofollow\">Adobe Reader FTP</a>\r<br />\nChoose the appropriate language and download the MSI file (this is a FULL installation file. With that you can upgrade from release 7 to release 11 directly).\r<br />\nThen download release 11.0.1.0 in MSP format <a href=\"ftp://ftp.adobe.com/pub/adobe/reader/win/11.x/11.0.01/misc/\" rel=\"nofollow\">HERE</a>\r<br />\nThis will allow you to update release 11.0.0.0 to 11.0.1.0\r<br />\nThen download release 11.0.2.0 in MSP format <a href=\"ftp://ftp.adobe.com/pub/adobe/reader/win/11.x/11.0.02/misc/\" rel=\"nofollow\">HERE</a>\r<br />\n<br />\nStart WPP and publish MSI file et the two MSP files. Leave the 'installed rule' tab and the 'installable rule' tab empty. Wsus will automaticaly generate appropriate rule base on  the msi/msp code.\r<br />\n<br />\nAfter these files have been publish, wait 30 seconds to let Wsus process these update. \r<br />\nOpen a session on the XP computer. Open a command line and type : Wuauclt /DetectNow\r<br />\nWait one minute. and type Wuauclt /ReportNow\r<br />\nWait 30 seconds, and, on WPP, refresh the display. See if the XP computer show these updates has 'not installed'.\r<br />\n<br />\nYou can do the same for updating Java 7 u11 to Java 7 U17.\r<br />\nFirst go <a href=\"http://www.oracle.com/technetwork/java/javase/downloads/index.html\" rel=\"nofollow\">HERE</a>\r<br />\ndownload the JRE : jre-7u17-windows-i586.exe for <strong>32bit</strong> or jre-7u17-windows-x64.exe for <strong>64bit</strong>\r<br />\n<br />\nAs this is an EXE file, the installation won't be silent if you do not add this switch /s in the command line (at the bottom of the second page when creating your update).\r<br />\n<br />\nKeep me informed of your progress.<br />\n",
+    "PostedDate": "2013-04-11T12:29:25.61-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1029762",
+    "ThreadId": "439667",
+    "Html": "Something weird happened..\r<br />\n<br />\nFor Adobe, \r<br />\n<br />\nAfter DetectNow &amp; ReportNow, the status for the XP computer was &quot;Not applicable&quot; \r<br />\nI clicked approve and after some time when I check the Status/Report , 7 PCs were &quot;Installed &quot; from All computers.\r<br />\nBut I only selected &quot;test&quot; group for the approval. I did not notice anything on the test pc.\r<br />\nso I deleted the update from WPP.\r<br />\n<br />\nso if the status says &quot;not applicable&quot; even we approve , it will not be installed?!\r<br />\n<br />\n<br />\n<br />\nJava:\r<br />\n<br />\nThe win7 pc in the test group shows status &quot;Not Applicable&quot; no idea why since it has version 7 update 11.\r<br />\n<br />\n<br />\n<br />\nAlso I did not understand something from your instructions, &quot;&quot;Leave the 'installed rule' tab and the 'installable rule' tab empty&quot;&quot;&quot;\r<br />\nwhere this part comes? \r<br />\n<br />\nOnly on 3rd page of creating update I see &quot;Rule Type&quot; where a list of rules available such as 'MSi product Installed , Processor architecture, etc..\r<br />\nI didn't add any rule for both updates.\r<br />\n<br />\nAre there any options such as &quot;if this version available, not update&quot; etc..\r<br />\n<br />\nstill confused.\r<br />\n<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2013-04-12T11:35:38.877-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1029766",
+    "ThreadId": "439667",
+    "Html": "other confusion is that I didn't install the certificate on those computers!!! which got adobe XI installation....<br />\n",
+    "PostedDate": "2013-04-12T11:44:36.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1029785",
+    "ThreadId": "439667",
+    "Html": "<strong>pthiyaga wrote:</strong><br />\n<blockquote>\nSomething weird happened..<br />\n<br />\nFor Adobe, <br />\n<br />\nAfter DetectNow &amp; ReportNow, the status for the XP computer was &quot;Not applicable&quot; <br />\n</blockquote>\nThis happen sometime, if we try to launch a 'DetectNow' / 'ReportNow' too early after having publishing the update.<br />\n<blockquote>\nI clicked approve and after some time when I check the Status/Report , 7 PCs were &quot;Installed &quot; from All computers.<br />\n</blockquote>\nApproving update have no effect on the detection by clients. Clients will evaluate installable rules and installed rules event on 'not approved' updates. This is usefull to determine if our rules are good.\r<br />\nIf some computers show as 'Installed' for Adobe that mean that the software is already installed. But the software was not necessarily installed by WSUS. It can be installed by the user earlier, or by an admin.<br />\n<blockquote>\nBut I only selected &quot;test&quot; group for the approval. I did not notice anything on the test pc.<br />\nso I deleted the update from WPP.<br />\n<br />\nso if the status says &quot;not applicable&quot; even we approve , it will not be installed?!<br />\n</blockquote>\nUpdates evaluate at 'Not Applicable' won't be downloaded nor installed. Clients think they have no needs for this update.<br />\n<blockquote>\nJava:<br />\n<br />\nThe win7 pc in the test group shows status &quot;Not Applicable&quot; no idea why since it has version 7 update 11.<br />\n</blockquote>\nStrange as you have publish an EXE file and add no rules. All clients should report has &quot;Not Installed&quot;.<br />\n<blockquote>\nAlso I did not understand something from your instructions, &quot;&quot;Leave the 'installed rule' tab and the 'installable rule' tab empty&quot;&quot;&quot;<br />\nwhere this part comes? <br />\n<br />\nOnly on 3rd page of creating update I see &quot;Rule Type&quot; where a list of rules available such as 'MSi product Installed , Processor architecture, etc..<br />\nI didn't add any rule for both updates.<br />\n</blockquote>\nYes this is what I call 'installed rule' tab and the 'installable rule' tab. Sorry for my bad english.<br />\n<blockquote>\nAre there any options such as &quot;if this version available, not update&quot; etc..<br />\n</blockquote>\nThis is where 'installed rule' tab and the 'installable rule' tab become usefull. You will define rules that will be evaluate by clients computers. You can say something like &quot;If this registry Key exists, and the value is greater or equal to 7.11.0.0 then don't install this update&quot;...<br />\n<blockquote>\nstill confused.<br />\n<br />\n<br />\nThanks<br />\n</blockquote>\n",
+    "PostedDate": "2013-04-12T12:29:27.51-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-08T11:27:41.457-07:00"
+  },
+  {
+    "Id": "1029788",
+    "ThreadId": "439667",
+    "Html": "<strong>pthiyaga wrote:</strong><br />\n<blockquote>\nother confusion is that I didn't install the certificate on those computers!!! which got adobe XI installation....<br />\n</blockquote>\nComputers can not install a package from WSUS if they not having the certificate. They will not trust the package. \r<br />\nI think those computers had already Adobe Reader XI installed.<br />\n",
+    "PostedDate": "2013-04-12T12:32:20.543-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

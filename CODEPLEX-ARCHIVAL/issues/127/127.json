@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:07.363-08:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nWhat I found is, if you create a new superseding update which is superseding another one (f.i. create Firefox 23.0.1 superseding the FF 22.0 which itselfs supersedes the FF 21) and delete the middle one, the superseding info gets lost, resulting in failed installations of the oldest update. I would say, that the superseding info from the deleted Update should be inserted into the latest Update. Or at least warn the Administrator that deleting this update results in above descripted Scenario.\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2017-02-03T11:50:07.363-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-03T13:50:39.38-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "deleting an update with defined supersedes info",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 127
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "> resulting in failed installations of the oldest update\n\nYou mean that FF 21 can't be installed if FF 22 is not present in the database ?!?",
+      "PostedDate": "2013-10-06T12:02:25.577-07:00",
+      "Id": 117594
+    },
+    {
+      "Message": "No, I mean that an old Version of f.i. Adobe Flashplayer and probably a lot other Tools can't be installed, if a already new Version is installed. And if the superseding info is lost, it will install first the old Version and than the new Version and than start over again with the old Version. correct me, if I'm wrong here.\n\nRegards\nNorbert",
+      "PostedDate": "2013-10-06T12:26:30.483-07:00",
+      "Id": 117597
+    },
+    {
+      "Message": "I think that this is not a problem of supersedence. It's most a problem of \"IsInstallable\" rule.\nYour rule, surely, looks if the product you try to install is already installed or not, but don't looks if a newer version is already installed.\nSupersedence is often used to avoid installing a lot of updates. If the latest include previous updates, It will install the latest instead.",
+      "PostedDate": "2013-10-06T13:07:27.097-07:00",
+      "Id": 117599
+    },
+    {
+      "Message": "Yes, that might be right, but using the msi rules only is less complicated than building it new with Version checks.  So I guess my Feature request is still useful for a lot of users. ;)\n\nRegards\nNorbert",
+      "PostedDate": "2013-10-06T23:59:53.033-07:00",
+      "Id": 117618
+    }
+  ]
+}

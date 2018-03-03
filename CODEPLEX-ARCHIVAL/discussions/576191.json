@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1336961",
+    "ThreadId": "576191",
+    "Html": "I have got WPP installed and running, and successfully deployed Adobe Reader, Flash &amp; Java to a test group.\r<br />\n<br />\nI have also managed to deploy 3rd party software using a custom update (version 10.5.0.446) with a classification of Updates and package type Application.<br />\n\r<br />\nI now need to deploy version 10.5.1.401 of the 3rd party software, but I am getting error 0x80070643.\r<br />\n<br />\nI ran the entire command locally on the PC and I get a dialog, which I assume may be the cause of the error, informing me: \r<br />\n<br />\n&quot;An upgradable version has been detected.  Continue the installation and upgrade to ....&quot;\r<br />\n<br />\nI recreated the package and configured it as an Update rather than an Application, but still get the same error.\r<br />\n<br />\nSo my question(s) is/are :<br />\n<ul>\n<li>Is this an issue with the package; would /qn resolve the issue?</li>\n<li>Is this a fault with how the MSI has been created?  \r</li>\n<li>Should the new MSI have a different upgrade code in the property table?  \r</li>\n<li>\nCan I force windows update to perform the upgrade?  \n<br />\n</li>\n</ul>\n",
+    "PostedDate": "2014-12-24T02:16:44.88-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1336984",
+    "ThreadId": "576191",
+    "Html": "As your update file is an MSI, you have to use the /qn switch to make this installation silent. Create a new Custom Update that launch the MsiExec.exe with this switch.<br />\n",
+    "PostedDate": "2014-12-24T05:00:33.837-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-12-29T06:35:11.963-08:00"
+  },
+  {
+    "Id": "1337630",
+    "ThreadId": "576191",
+    "Html": "Thanks for your prompt answer.\r<br />\n<br />\nIt turns out that, although they were accepted on the initial installation, the parameters, or property values, I was passing to msiexec.exe were causing it to fail.  Once I'd removed those, and added /qn, the package installed successfully.\r<br />\n<br />\nIs it good practice to include the /qn switch on all msi installations?<br />\n",
+    "PostedDate": "2014-12-29T06:35:25.1-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341040",
+    "ThreadId": "576191",
+    "Html": "Hi all,\r<br />\n<br />\nhow should additional switches on .msi files be used? I tried simply entering &quot;/qn&quot; in the &quot;Command Line&quot; field of the Update Creation Wizzard, but get an error 80070667 (bad command) upon installation. I expect all possible parameters of msiexec can be used here, right?<br />\n",
+    "PostedDate": "2015-01-12T05:08:46.027-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1341122",
+    "ThreadId": "576191",
+    "Html": "If you are creating a standard package with a MSI file, Wsus will automatically add /qn to the command line. So, if you add /qn by yourself, these switch will be present twice and give an error.\r<br />\nIf you are creating a custom update, you have to add /qn in the custom update wizard (when adding the item to run msiexec.exe)<br />\n",
+    "PostedDate": "2015-01-12T08:24:58.42-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1312170",
+    "ThreadId": "569490",
+    "Html": "It would be great if the current logged on user could be added as a column option to the status tab of an update.<br />\n",
+    "PostedDate": "2014-10-10T06:53:21.823-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1312214",
+    "ThreadId": "569490",
+    "Html": "Each time you ask to see which user is logged on a computer, WPP launch a WMI query. For a computer group with 100 computers, it can take a while before finish.<br />\n",
+    "PostedDate": "2014-10-10T08:17:46.687-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1312278",
+    "ThreadId": "569490",
+    "Html": "Thanks for responding.  I like the ability built-in to be able to right click on a device to see the current logged on user.  This was more of having to save from right clicking on each device and have the information available in a column.  This would be something optional and by default did not have to be selected.\r<br />\n<br />\nTo save on the WMI query time you could first check if the OnLine value is &quot;Yes&quot; run the wmi query, if the OnLine value is No don't attempt to run the query?\r<br />\n<br />\nThis application is powerful and a tremendous addition to WSUS!<br />\n",
+    "PostedDate": "2014-10-10T11:22:07.49-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1314563",
+    "ThreadId": "569490",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"https://wsuspackagepublisher.codeplex.com/workitem/224\" rel=\"nofollow\">here</a> to go to the work item and continue the discussion.<br />\n",
+    "PostedDate": "2014-10-18T01:13:16.823-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

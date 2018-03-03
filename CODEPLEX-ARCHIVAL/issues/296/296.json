@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2016-09-01T13:31:59.04-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nis there any chance to get the new Windows Update Events via WPP?\r\nAs of now it's not doing anything helpful. ;)\r\n\r\nWindows Update logs are now generated using ETW (Event Tracing for Windows).\r\nPlease run the Get-WindowsUpdateLog PowerShell command to convert ETW traces into a readable WindowsUpdate.log.\r\n\r\n\r\nFor more information, please visit http://go.microsoft.com/fwlink/?LinkId=518345\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1508.08",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-09-24T06:31:45.253-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Show WindowsUpdate Log for Windows 10?",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 296
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This is one piece of changes to the update mechanism in Win10 that went wrong. For trouble shooting among other things the log file was just fine, esp if you want to check it on remote clients. What is in the log has also changed, i get tons of useless GUID lines.",
+      "PostedDate": "2015-11-01T10:38:25.84-08:00",
+      "Id": 193177
+    },
+    {
+      "Message": "I have follow Microsoft KB to decode ETL files, and get this :\n\n1601/01/01 01:00:00.0000000 1080  720                   Unknown( 68): GUID=8a318093-059a-e9ef-ab03-c2350e726c5f (No Format Information found).\n1601/01/01 01:00:00.0000000 1080  720                   Unknown( 127): GUID=8a318093-059a-e9ef-ab03-c2350e726c5f (No Format Information found).\n1601/01/01 01:00:00.0000000 1080  720                   Unknown( 128): GUID=8a318093-059a-e9ef-ab03-c2350e726c5f (No Format Information found).\n1601/01/01 01:00:00.0000000 1080  720                   Unknown( 64): GUID=4cd50051-9aac-e814-f629-25e47a70b808 (No Format Information found).\n1601/01/01 01:00:00.0000000 1080  720                   Unknown( 137): GUID=4cd50051-9aac-e814-f629-25e47a70b808 (No Format Information found).\n1601/01/01 01:00:00.0000000 1080  720                   Unknown( 137): GUID=4cd50051-9aac-e814-f629-25e47a70b808 (No Format Information found).\n1601/01/01 01:00:00.0000000 1080  720                   Unknown( 137): GUID=4cd50051-9aac-e814-f629-25e47a70b808 (No Format Information found).\n1601/01/01 01:00:00.0000000 1080  720                   Unknown( 137): GUID=4cd50051-9aac-e814-f629-25e47a70b808 (No Format Information found).\n1601/01/01 01:00:00.0000000 1080  720                   Unknown( 316): GUID=4cd50051-9aac-e814-f629-25e47a70b808 (No Format Information found).\n1601/01/01 01:00:00.0000000 1080  720                   Unknown( 137): GUID=4cd50051-9aac-e814-f629-25e47a70b808 (No Format Information found).\n1601/01/01 01:00:00.0000000 1080  720                   Unknown( 137): GUID=4cd50051-9aac-e814-f629-25e47a70b808 (No Format Information found).\n1601/01/01 01:00:00.0000000 1080  3116                  Unknown( 137): GUID=4cd50051-9aac-e814-f629-25e47a70b808 (No Format Information found).\n1601/01/01 01:00:00.0000000 1080  3116                  Unknown( 137): GUID=4cd50051-9aac-e814-f629-25e47a70b808 (No Format Information found).\n\nHey Crosoft !! Is it a joke ????",
+      "PostedDate": "2015-11-12T11:41:59.293-08:00",
+      "Id": 193550
+    }
+  ]
+}

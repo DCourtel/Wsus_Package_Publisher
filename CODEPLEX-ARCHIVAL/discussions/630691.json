@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1414204",
+    "ThreadId": "630691",
+    "Html": "Hello,\r<br />\n<br />\nI have a issue when I'm installing an exe setup. The software is coud installed, but I always receive the error code : 80070643. Unfortunately the MSI installer is not available.\r<br />\nI tested  with a (normal) update and with a custom update, always the same error. Same thing if I'm connected with an admin account on the client. Is it an UAC problem ?\r<br />\n<br />\nJ'ai une erreur qui m'est retournée lorsque j'essaie d'installer une mise à jour avec un fichier .exe. \r<br />\nIl n'y a pas de MSI disponible pour le logiciel.\r<br />\nJe reçois à chaque fois l'erreur : 80070643 malgré que l'application s'installe. La même chose se produit avec une mise à jour normal et une custom.\r<br />\nLa même chose se produit si je suis connecté avec un compte admin sur la machine. Serait-ce un soucis d'UAC ?\r<br />\n<br />\nHow can I resolve this issue ?\r<br />\n<br />\nBest regards\r<br />\nMeilleures salutations\r<br />\n<br />\nFlorent<br />\n",
+    "PostedDate": "2015-04-15T01:15:54.56-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1414322",
+    "ThreadId": "630691",
+    "Html": "Oui, c'est un bug que je viens de corriger. Merci de télécharger la dernière version.<br />\n",
+    "PostedDate": "2015-04-15T09:58:03.87-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1414599",
+    "ThreadId": "630691",
+    "Html": "Merci, je n'ai plus d'erreur après avoir recréé ma mise à jour avec la dernière version<br />\n",
+    "PostedDate": "2015-04-16T00:00:59.033-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1430839",
+    "ThreadId": "630691",
+    "Html": "Bonjour,\r<br />\n<br />\nNous avons acheté le catalogue de PatchMyPC.\r<br />\nLa même erreur apparaît pour les mises à jour importés depuis ce catalogue. \r<br />\nLes mêmes symptomes que ceux ci-dessus apparaissent pour les mises à jours utilisant un fichier exe. (La mise à jour s'installe correctement mais retourne l'erreur 80070643).\r<br />\n<br />\nJ'ai recréer manuellement une mise à jour en copiant l'exe, les paramètres et les règles d'installations provenant du catalogue. La mise à jour s'installe correctement sans retourner d'erreur.\r<br />\n<br />\nJe pense qu'il doit s'agir du même bug que vous avez corrigé auparavant, ce bug doit toujours être présent pour les mises à jour importées depuis un catalogue.\r<br />\n<br />\nSaluations\r<br />\nFlorent<br />\n",
+    "PostedDate": "2015-06-18T02:34:27.353-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1444014",
+    "ThreadId": "630691",
+    "Html": "Bonjour,\r<br />\n<br />\nAvez-vous pu identifier le problème lié à l'erreur ?\r<br />\nSalutations\r<br />\nFlorent<br />\n",
+    "PostedDate": "2015-09-11T04:27:19.16-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1444244",
+    "ThreadId": "630691",
+    "Html": "Hello Florent, I'd love to see how you get on with PatchMyPC as we are looking to use this too now that we have completed some testing with custom updates etc. Are all the updates from PatchMyPC in an exe format?\r<br />\n<br />\nThanks\r<br />\nMark<br />\n",
+    "PostedDate": "2015-09-13T18:24:53.55-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1444257",
+    "ThreadId": "630691",
+    "Html": "Hello Mark<br />\n<br />\nUnfortunately for the moment we are not using all the update provided by PatchMyPC.<br />\nHowever, after having imported an update from the catalog, you can open the update folder with the &quot;ID link&quot;. You will find  the .EXE or .MSI in this folder.<br />\n<br />\nLike vaguely explained in my first post, if the update use an update in an .EXE format, you will probably receive the error 80070643 even if the update is correctly installed.<br />\n<br />\nThe workaround, which I use, is to save the .EXE, export the package rules from the update, create a new update and import the .EXE and the rules manually.<br />\n<br />\nI hope this could help you<br />\n<br />\nFlorent<br />\n",
+    "PostedDate": "2015-09-13T23:16:46.99-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

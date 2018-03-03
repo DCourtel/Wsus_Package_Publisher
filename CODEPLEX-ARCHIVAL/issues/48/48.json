@@ -1,0 +1,126 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Updated the documentation.",
+    "ClosedDate": "2013-05-25T01:35:32.697-07:00",
+    "CommentCount": 11,
+    "Custom": null,
+    "Description": "hi,\r\n\r\nI have published Adobe Reader XI and approved and pushed for installation for a windows 7 machine \r\nfrom my WSUS server (server 2008 r2). After installation in windows 7 in the WSUS package publisher still gives the status for windows 7 is downloaded , not showing installed. Also on windows 7 machine if i check for update it shows update for adobe reader again.\r\n",
+    "LastUpdatedDate": "2013-05-25T01:35:32.697-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-23T02:18:15.093-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Windows 7 status not changing",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 48
+  },
+  "FileAttachments": [
+    {
+      "FileId": 683170,
+      "FileName": "WSUS.jpg",
+      "DownloadUrl": ".\\683170"
+    },
+    {
+      "FileId": 683181,
+      "FileName": "WindowsUpdate.log",
+      "DownloadUrl": ".\\683181"
+    },
+    {
+      "FileId": 683194,
+      "FileName": "InstallRule.jpg",
+      "DownloadUrl": ".\\683194"
+    },
+    {
+      "FileId": 683197,
+      "FileName": "IsInstalledRule.jpg",
+      "DownloadUrl": ".\\683197"
+    },
+    {
+      "FileId": 683266,
+      "FileName": "product code.png",
+      "DownloadUrl": ".\\683266"
+    },
+    {
+      "FileId": 683406,
+      "FileName": "WindowsUpdateXP.log",
+      "DownloadUrl": ".\\683406"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Hello faisalpar, \nIt's probably a problem with the rules that are define in the update (IsInstalled Rules).\n\n   - Can you tell me if the update file is a .msi or a .exe ?\n   - What is the rule you have set for 'IsInstalled' ?\n\nThanks.",
+      "PostedDate": "2013-05-23T03:23:01.88-07:00",
+      "Id": 100966
+    },
+    {
+      "Message": "\r\nHi DCourtel,\r\n\r\nThanks for the reply\r\n\r\nI have followed the steps as per the documentation for Adobe Reader XI\r\n\r\nUpdate File is .EXE\r\nAttaching the InstallRule.",
+      "PostedDate": "2013-05-23T03:58:58.943-07:00",
+      "Id": 100968
+    },
+    {
+      "Message": "Oh sorry i uploaded the wrong image.\r\n\r\nThe rules i applied are MSi Product Type Installed and entered the MSI Product Code and checkboxed the \"Delete Rules at package level\"",
+      "PostedDate": "2013-05-23T04:29:57.087-07:00",
+      "Id": 100972
+    },
+    {
+      "Message": "I think it is easyier to deploy a MSI. Here you can download the MSI-Files for Reader: ftp://ftp.adobe.com/pub/adobe/reader/win/",
+      "PostedDate": "2013-05-23T04:38:11.263-07:00",
+      "Id": 100974
+    },
+    {
+      "Message": "Hi WinfriedSonntag,\n\nIs the deployment steps of MSI different in anyway compared to [EXE documentation](https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=528068) .\n\nIf its different is there any documentation available?\n",
+      "PostedDate": "2013-05-23T04:53:57.827-07:00",
+      "Id": 100977
+    },
+    {
+      "Message": "No, it is not a different Documentation. Do you have the right MSI-Code copyied in the Rule? You must use the MSI-Code from your MSI/EXE. If you deploy a MSI, the correct MSI-Code is in the Rule.",
+      "PostedDate": "2013-05-23T06:27:07.32-07:00",
+      "Id": 100985
+    },
+    {
+      "Message": "There is a problem with the MSI code in the documentation.\r\nI realized that the MSI code have the language code in it : 1036 mean 'French' version. Therefore, if you have downloaded another language, the MSI code should be adapted.\r\nOpen WPP, go to Tools->MSI Reader then open the MSI file. In the dropdown list choose : Property and look for 'Product code' this is the MSI code to use in the rule.\r\nIn WPP right-click on the update and choose 'revise', then change the IsInstalledRule and the IsInstallableRule.\r\n\r\nSorry for the trouble.\r\nIf you need more help, do not hesitate.",
+      "PostedDate": "2013-05-23T07:50:57.103-07:00",
+      "Id": 100990
+    },
+    {
+      "Message": "Thanks now i can publish it to Windows 7.\r\nBut in Windows XP it says Not Applicable.\r\nI have reinstalled WindowsUpdateService. But still XP is not detecting any update.\r\nAttaching the log.",
+      "PostedDate": "2013-05-24T02:06:10.05-07:00",
+      "Id": 101073
+    },
+    {
+      "Message": "Ouuups !!! Sound like, you have a problem with the version of Windows Installer :\n\n> FATAL: MSI DLL version is 3.0. Version 3.1 is required.\n\nMay be you should try to upgrade Windows Installer to the latest version.\nWsus should provide this update. Ensure this update is not decline.",
+      "PostedDate": "2013-05-24T02:58:44.65-07:00",
+      "Id": 101077
+    },
+    {
+      "Message": "Thanks !!!!!!!\nUpdated to Latest Windows Installer\nNow its working fine.\nThanks again guys",
+      "PostedDate": "2013-05-24T04:39:01.407-07:00",
+      "Id": 101081
+    },
+    {
+      "Message": "Glad I could help.",
+      "PostedDate": "2013-05-24T06:10:30.557-07:00",
+      "Id": 101086
+    }
+  ]
+}

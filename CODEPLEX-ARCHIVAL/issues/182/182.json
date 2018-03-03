@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-05-02T07:45:43.683-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "So i set up WSUS Package Publisher as i have done before and it doesn't seem to work correctly. I haven't tested if the updates are installing yet, but i need Status to work first. I send \"Detect Now\" and \"Report Now\" for all the computers for my Flash update packages, but the Status for all of them is Unknown. What could be the issue?",
+    "LastUpdatedDate": "2014-05-02T07:45:43.683-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-03-18T02:18:32.193-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Status: Unknown",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 182
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "WPP just read and display the status from WSUS server. Ensure that computers are able to talk to your Wsus server. Try to launch a detection directly from a computer.",
+      "PostedDate": "2014-03-19T09:01:59.99-07:00",
+      "Id": 137340
+    }
+  ]
+}

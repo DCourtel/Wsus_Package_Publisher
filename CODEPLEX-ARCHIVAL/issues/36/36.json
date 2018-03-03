@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Deleted the \"Connect to Server\" button. Added a button at right of the Servers list to connect or reload data from the server.",
+    "ClosedDate": "2013-05-07T10:43:01.533-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When already connecting to a server, sometime we need  to reload Data from server after changing something in the Wsus Console.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1305.03",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-07T10:41:58.9-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Allow to Reload server data",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 36
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "Id": "1452102",
+    "ThreadId": "647464",
+    "Html": "Hallo Zusammen,<br />\n<br />\nwieder mal ein Problem welches ich nicht alleine lösen konnte. Für eine Software möchte ich ein Update einrichten (mit einer MSI Datei samt CAB Datei). <br />\n<br />\nEgal ob das Update als &quot;ersetzendes Update&quot; oder &quot;separates Update&quot; eingerichtet wird, es wird nicht installiert. <br />\n<br />\nIm Bericht zeigt der WPP dafür an, dass das Update schon installiert wäre - obwohl es nicht durchgeführt wurde. Mir ist dann aufgefallen, dass der MSI ProductCode bei der alten und der neuen Version identisch ist.<br />\n<br />\nEvtl. wird deswegen auch die Installation des Updates nicht durchgeführt? <br />\n<br />\nWenn ich die alte Version deinstalliere, wird die neue Version durch den WPP installiert... somit scheint meine Theorie zu stimmen (den das Update funktioniert ja).<br />\n<br />\nMan müsste also das Update irgendwie über die Regeln eingrenzen. Dort habe ich gesucht und probiert aber nichts hat wirklich funktioniert.<br />\n<br />\nPrinzipiell pflegen die MSI Dateien einen Wert &quot;ProductVersion&quot; und &quot;Build Nummer&quot;. Hiermit könnte man evtl. in den Regeln eine &quot;if else&quot; Eingrenzung machen - im WPP habe ich hier aber kein entsprechendes Feld gefunden. <br />\n<br />\nEvtl. geht es auch über das Datum - nur weiß ich ehrlich gesagt nicht welche Datei ich hierzu auswählen soll´etc....<br />\n<br />\nKann mir hier jemand helfen wie ich dies in den Regeln definieren muss?<br />\n<br />\nDanke<br />\n<br />\nGruß Markus<br />\n",
+    "PostedDate": "2015-11-12T07:24:54.68-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452103",
+    "ThreadId": "647464",
+    "Html": "nochmal ich\r<br />\n<br />\nMein erster Workaround war zunächst die alte Version zur Deinstallation freizugeben. Mit dem nächsten Update wurde auch die alte Version deinstalliert. Mit dem nächsten Updatelauf dann die neue Version installiert. \r<br />\n<br />\nMan musste hierzu natürlich zweimal hintereinander das Update aufrufen - was im Echtbetrieb eher kontraproduktiv wäre. \r<br />\n<br />\nDann viel mir allerdings auf, dass mit dem nächsten Updatelauf auch wieder die Deinstallation durchgeführt wurde (war ja noch nicht abgelehnt). \r<br />\n<br />\nAlso hätte ich hier einen schönen Deinstallation / Installationskreislauf ;-) <br />\n",
+    "PostedDate": "2015-11-12T07:30:49.653-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452110",
+    "ThreadId": "647464",
+    "Html": "Du kannst dir dieses HowTo dazu anschauen: <a href=\"http://www.wsus.de/chrome_per_wpp\" rel=\"nofollow\">http://www.wsus.de/chrome_per_wpp</a>\r<br />\n<br />\nAls Alternative wäre evtl. auch Uninstall2Install etwas für dich: <a href=\"http://www.wsus.de/uninstall2install\" rel=\"nofollow\">http://www.wsus.de/uninstall2install</a> Denk dir das Java weg, dafür deine Anwendung rein: <a href=\"http://www.wsus.de/uninstall2install\" rel=\"nofollow\">http://www.wsus.de/uninstall2install</a><br />\n",
+    "PostedDate": "2015-11-12T08:08:01.507-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452268",
+    "ThreadId": "647464",
+    "Html": "Vielen Dank für die Unterstützung.<br />\n<br />\nIch probiere momentan die erste Lösung - scheitere aber anscheinend an dem Regelwerk.<br />\n<br />\nIm Prinzip reicht mir doch eigentlich eine einzige UND Schleife <br />\n<br />\nbeim ersten Regelfenster gebe ich ein, dass nachgeschaut wird ob <br />\n<ul>\n<li>das MSI Paket Installiert ist</li>\n<li>die Datei existiert</li>\n<li>\ndie Version kleiner x ist<br />\n</li>\n</ul>\nAlso:<br />\n<br />\n&lt;lar:And&gt;<br />\n&lt;msiar:MsiProductInstalled ProductCode=&quot;{xxxxxxxxx}&quot;/&gt;&lt;bar:FileExists Path=&quot;Ordner1\\Ordner2\\programm.exe&quot; Csidl=&quot;42&quot;/&gt;&lt;bar:FileVersion Path=&quot;Ordner1\\Ordner2\\programm.exe&quot; Comparison=&quot;LessThan&quot; Version=&quot;1.2.3.4567&quot; Csidl=&quot;42&quot;/&gt;&lt;/lar:And&gt;<br />\n<br />\ndas muss ich doch nicht in drei einzelne UND Schleifen packen - oder etwa schon?<br />\n<br />\n<br />\nBeim zweiten Regelwerk setzte ich dann beim MSI Paket ein &lt;lar:Not&gt;  ... &lt;/lar:Not&gt; um die Regel umzukehren<br />\n<br />\n<br />\nBisher haben meine Einstellungen aber noch nicht geklappt.<br />\n<br />\nEine allgemeine Frage:<br />\nIch gehe davon aus, dass im ersten Regelfenster Regeln eingegeben werden die danach suchen ob das Programm vorhanden ist und im zweiten Regelfenster Regeln eingegeben werden ob das Update benötigt wird.<br />\n<br />\nVielleicht liegt hier auch mein Fehler?!?<br />\n<br />\nGruß und schönes Wochenende Markus<br />\n",
+    "PostedDate": "2015-11-13T08:13:45.25-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452291",
+    "ThreadId": "647464",
+    "Html": "Im ersten Teil legst Du fest, ob das Update schon installiert ist. Im zweiten Teil legst Du fest, ob das Update installiert werden kann.\r<br />\n<br />\nDas Update ist installiert, wenn die Dateiversion gleich mit deiner ist. Das Update kann installiert werden, wenn die vorhandene Dateiversion kleiner ist als die, die das Update hat.<br />\n",
+    "PostedDate": "2015-11-13T09:57:35.013-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452752",
+    "ThreadId": "647464",
+    "Html": "<h1>*** lest gleich den nachfolgenden Post :-) ***</h1>\nVielen Dank für den Hinweis - ich bin nun einen Schritt weiter - er bietet das Update nun an. Allerdings kommt bei der Installation relativ schnell die Meldung &quot;Die Updates wurden installiert - nicht benötigte Updates: 1 Update&quot;. Das Update wurde nicht installiert. Im Status des WPP kommt die Meldung &quot;Fehlgeschlagen&quot;. Das Update wird bei einer erneuten Suche wieder angeboten.<br />\n<br />\nWo kann es nun haken - kann man sich irgendwo noch mehr Informationen (Log Dateien) holen um die Ursache genauer festzustellen?<br />\n<br />\nIm Prinzip wird es als Update erkannt - aber bei der Installation wird es als &quot;nicht benötigt&quot; eingestuft!?!<br />\n<br />\n<br />\nZu Übersicht<br />\n<br />\nFolgendes ist eingestellt:<br />\n<br />\nErstes Regelwerk (Update vorhanden?)<br />\n<br />\nUND Verknüpfung innerhalb der Update level rules:<br />\n<ul>\n<li>\nRegel für die Dateiversion - wenn diese gleich der Version 6.8.0.1759 ist<br />\n</li>\n</ul>\nZweiten Regelwerk (Update installierbar?):<br />\n<br />\nUND Verknüpfung innerhalb der Update level rules:<br />\n<ul>\n<li>Regel ob die exe Datei existiert</li>\n<li>\nRegel für die Dateiversion - wenn diese kleiner der Version 6.8.0.1759 ist<br />\n</li>\n</ul>\nUnter Package level rules wurden der jeweilige Eintrag gelöscht. Seit dem Update auf die Version 1.3.1511.15 werden dort Einträge gesetzt wenn das Update eine MSI Datei ist. Bleiben diese Einträge gesetzt, wird das Update nicht angeboten.<br />\n<br />\nIch habe generell mit vielen Optionen schon probiert aber kam entweder zu dem Ergebnis, dass das Update nicht angeboten wurde oder als nicht benötigt eingestuft wurde...<br />\n<br />\nGruß Markus<br />\n",
+    "PostedDate": "2015-11-17T06:04:59.57-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452765",
+    "ThreadId": "647464",
+    "Html": "Hallo zusammen,<br />\n<br />\nich habe eine Lösung gefunden.<br />\n<br />\nDie von mir erstellten Regeln haben gepasst - allerdings erwies sich die Installation über die MSI Datei als &quot;zickig&quot;. <br />\n<br />\nIch habe das ganze jetzt über die Exe Datei gestartet und es funktioniert (da man hier entsprechende Befehlsparameter setzen kann)<br />\n<br />\nDas einzige Problem was ich jetzt noch habe, dass die &quot;unbeaufsichtigte&quot; Installation die ich über die Parameter eingestellt habe einen Neustart des PCs im laufenden Betrieb macht.... <br />\n<br />\nIch suche momentan in den nicht vorhandenen Dokumentationen ob es hier auch eine alternative zu dem Parameter gibt.<br />\n<br />\nGibt es hier eine Möglichkeit aus dem WPP einen Neustart zu unterdrücken?<br />\n<br />\n<br />\nBzw. gibt es die Möglichkeit die Installation über eine Batch Datei anzustoßen? Soweit ich bisher rausgefunden habe, gelingt es dem Setup nicht das Programm zu schließen wenn es noch aktiv ist. Ich möchte quasi eine Batch Datei schreiben um vorher das Programm zu beenden... und dann erst die Installation zu machen<br />\n<br />\n<br />\nGruß Markus<br />\n",
+    "PostedDate": "2015-11-17T07:06:35.057-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452796",
+    "ThreadId": "647464",
+    "Html": "Schön das Du eine Lösung gefunden hast. ;)<br />\n<br />\nWird denn auch neugestartet, wenn Du das uns unbekannte Programm manuell SILENT installierst? IMHO gibt es immer einen /NORESTART Parameter. Wenn nicht, dann würde ich mich an den Support des Herstellers wenden. <br />\n<br />\nNatürlich kannst Du auch alles über eine Batch anschieben, besser wäre es allerdings mit dem Hersteller sprechen. Der kann dir sicherlich weitere Parameter/Optionen im MSI nennen um dein Ziel zu erreichen. Auch findet es der Anwender bestimmt nicht toll, wenn das Programm plötzlich beendet wird und evtl. offene Eingaben nicht gespeichert werden.<br />\n<br />\nAnsonsten schau dir die Möglichkeit des Custom Update an, dort kannst Du vorher Dienste/Prozesse beenden, natürlich auch die Benutzer informieren oder auf Antwort der Benutzer warten. Einfacher wird das dann allerdings nicht. Dazu gibt es auch eine Dokumentation. <br />\n<a href=\"http://wsuspackagepublisher.codeplex.com/documentation\" rel=\"nofollow\">http://wsuspackagepublisher.codeplex.com/documentation</a><br />\n<br />\nEDIT: Informiere auch den Hersteller bezglich des Produktcode im MSI. Das sollte er unbedingt korrigieren!<br />\n",
+    "PostedDate": "2015-11-17T09:24:46.467-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452955",
+    "ThreadId": "647464",
+    "Html": "Ich bräuchte nochmal die Hilfe der Experten.\r<br />\n<br />\nDa meine erste Lösung sehr umständlich erscheint (und auch ist) - und auch den Nachteil hat, dass aktive Prozesse deaktiviert werden müssen und der PC ohne Vorwarnung neustartet, suche ich noch einen perfekteren Weg.\r<br />\n<br />\n<br />\nEs gibt für das Update eine MSP Datei - lokal gestartet führt die Datei ein Update aus ohne Neustart oder den Prozess gewaltsam beenden zu müssen. Sozusagen wäre diese Datei perfekt.\r<br />\n<br />\nLeider wird sie aber vom WPP nicht akzeptiert, bzw. kommt im letzten Fenster des Assistenten folgende Fehlermeldung:\r<br />\n<br />\n&quot;An error accourred while checking the meta data of the file you are trying to publish. This Problem occurs mostly in Publishing invalid MSI or MSP files.&quot;\r<br />\n<br />\nAktiviere ich das Häkchen &quot;Anwendungbarkeitsmetadaten bearbeiten (Nur für erfahrene Benutzer)&quot; und klicke auf &quot;Bestätigen&quot; werden für alle 31 Elemente der Metadaten ein Fehler ausgegeben.\r<br />\n<br />\nDas Element '<a href=\"http://www.microsoft.com/msi/patch_applicability.xsd:TargetLanguage\" rel=\"nofollow\">http://www.microsoft.com/msi/patch_applicability.xsd:TargetLanguage</a>' ist ungültig - Der Wert '0,1033,1043,2057,1036,1031,1040,1045,1034' ist gemäß seinem Datentyp '<a href=\"http://www.microsoft.com/msi/patch_applicability.xsd:ValidateLanguage\" rel=\"nofollow\">http://www.microsoft.com/msi/patch_applicability.xsd:ValidateLanguage</a>' ungültig -- Die Zeichenfolge '0,1033,1043,2057,1036,1031,1040,1045,1034' kein gültiger Int32-Wert..\r<br />\n<br />\nlösche ich alle Metadaten - kommt bei der Installation leider auch eine Fehlermeldung... \r<br />\n<br />\n<br />\nHier mal ein Auszug der Metadaten\r<br />\n<br />\n<br />\n&lt;msiar:MsiPatchMetadata&gt;<br />\n<pre><code>&lt;MsiPatch xmlns=&quot;http://www.microsoft.com/msi/patch_applicability.xsd&quot; SchemaVersion=&quot;1.0.0.0&quot; PatchGUID=&quot;{6017626C-A4E7-4214-893B-B955CDFAA1E4}&quot; MinMsiVersion=&quot;3&quot;&gt;\n\n&lt;TargetProduct MinMsiVersion=&quot;200&quot;&gt;\n        &lt;TargetProductCode Validate=&quot;true&quot;&gt;{831ADA8C-C73B-4915-AF8D-83D22BD58AA8}&lt;/TargetProductCode&gt;\n        &lt;TargetVersion Validate=&quot;true&quot; ComparisonType=&quot;Equal&quot; ComparisonFilter=&quot;MajorMinorUpdate&quot;&gt;6.6.2700&lt;/TargetVersion&gt;\n        &lt;UpdatedVersion&gt;6.8.3180&lt;/UpdatedVersion&gt;\n        &lt;TargetLanguage Validate=&quot;false&quot;&gt;0,1033,1043,2057,1036,1031,1040,1045,1034&lt;/TargetLanguage&gt;\n        &lt;UpdatedLanguages&gt;&lt;/UpdatedLanguages&gt;\n        &lt;UpgradeCode Validate=&quot;true&quot;&gt;{8E9E5B2B-6216-4D98-A792-979326435833}&lt;/UpgradeCode&gt;\n    &lt;/TargetProduct&gt;\n\n    ... \n\n    &lt;TargetProduct MinMsiVersion=&quot;200&quot;&gt;\n        &lt;TargetProductCode Validate=&quot;true&quot;&gt;{831ADA8C-C73B-4915-AF8D-83D22BD58AA8}&lt;/TargetProductCode&gt;\n        &lt;TargetVersion Validate=&quot;true&quot; ComparisonType=&quot;Equal&quot; ComparisonFilter=&quot;MajorMinorUpdate&quot;&gt;6.8.3175&lt;/TargetVersion&gt;\n        &lt;UpdatedVersion&gt;6.8.3180&lt;/UpdatedVersion&gt;\n        &lt;TargetLanguage Validate=&quot;false&quot;&gt;0,1033,1043,2057,1036,1031,1040,1045,1034&lt;/TargetLanguage&gt;\n        &lt;UpdatedLanguages&gt;1034&lt;/UpdatedLanguages&gt;\n        &lt;UpgradeCode Validate=&quot;true&quot;&gt;{8E9E5B2B-6216-4D98-A792-979326435833}&lt;/UpgradeCode&gt;\n    &lt;/TargetProduct&gt;\n\n    &lt;TargetProductCode&gt;{831ADA8C-C73B-4915-AF8D-83D22BD58AA8}&lt;/TargetProductCode&gt;\n\n    &lt;SequenceData&gt;\n        &lt;PatchFamily&gt;831ADA8CC73B4915AF8D83D22BD58AA8&lt;/PatchFamily&gt;\n        &lt;Sequence&gt;8.3175.21893.51393&lt;/Sequence&gt;\n        &lt;Attributes&gt;1&lt;/Attributes&gt;\n    &lt;/SequenceData&gt;\n\n&lt;/MsiPatch&gt;</code></pre>\n\n&lt;/msiar:MsiPatchMetadata&gt;\r<br />\n<br />\n<br />\nBisher habe ich mich da nicht rangetraut - aber vielleicht hat ja jemand einen Tipp für mich.\r<br />\n<br />\nGruß Markus<br />\n",
+    "PostedDate": "2015-11-18T05:48:13.227-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452967",
+    "ThreadId": "647464",
+    "Html": "Weshalb wendest Du dich nicht an den Hersteller der Anwendung? Der ist dein Ansprechpartner.\r<br />\n<br />\nDie Fehlermeldung ist recht eindeutig:\r<br />\n<br />\nDas Element '<a href=\"http://www.microsoft.com/msi/patch_applicability.xsd:TargetLanguage\" rel=\"nofollow\">http://www.microsoft.com/msi/patch_applicability.xsd:TargetLanguage</a>' ist ungültig - Der Wert '0,1033,1043,2057,1036,1031,1040,1045,1034' ist gemäß seinem Datentyp '<a href=\"http://www.microsoft.com/msi/patch_applicability.xsd:ValidateLanguage\" rel=\"nofollow\">http://www.microsoft.com/msi/patch_applicability.xsd:ValidateLanguage</a>' ungültig -- Die Zeichenfolge '0,1033,1043,2057,1036,1031,1040,1045,1034' kein gültiger Int32-Wert.\r<br />\n<br />\nIn einem Integer Wert gibt es nun mal nur Zahlen und keine Kommas. Zusätzlich ist der Wert auch viel zu groß für ein Integer Feld.<br />\n",
+    "PostedDate": "2015-11-18T06:24:33.99-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1454011",
+    "ThreadId": "647464",
+    "Html": "Hallo Winfried,<br />\n<br />\nso als Abschlusszusammenfassung.<br />\n<br />\nIch habe mich an deinen Rat &quot;mich an den Hersteller zu wenden&quot; versucht und die letzten Tage &quot;etwas&quot; telefoniert. Da ich bereits schonmal die Ehre hatte mit der Hotline zu telefonieren wusste ich eigentlich schon vorher wie das endet.<br />\n<br />\nDie Supporthotline der Telefonanlage kann mir auf die genannte Fehlermeldung keine Antwort geben - da sie ja nur die Software zur Verfügung stellen - die zwar Geld kostet - aber da wir in unserem Fall eine andere als die empfohlene Installationsvariante wählen sie hier keinen Support geben (können). <br />\n<br />\nAuch der Hersteller der Anlage (Alcatel) verweist im Support auf den gleichen Ausspruch - zu den Entwicklern ist kein durchkommen (dazu sind wir als Endkunde zu trivial). Man verweist letztendlich auf eine wesentlich teurere Alternative (Client/Server Lösung) und auf die Installationsmethode via GPO (wo ich auch nicht weis ob diese letztendlich funktioniert).<br />\n<br />\nIch werden jetzt noch deinen Rat mit Uninstall2Install ausprobieren (welches übrigens bei Java toll funktioniert) ansonsten bleibt nur die enttäuschende manuelle Installation <br />\n<br />\nGruß Markus<br />\n<hr />\nUPDATE:<br />\nLeider bringt mir auch das Unistall2Install nichts.<br />\n<br />\nLaut Anleitung macht das Script folgendes: <br />\n<br />\nMsiexec.exe /i {Name der MSI} /qn <br />\n<br />\nfür meine Installation bräuchte ich allerdings folgendne Befehl<br />\n<br />\nMsiexec.exe /update {Name der MSP} /qn<br />\n<br />\nDieser Befehlt hat zumindest so auf der Kommandozeile funktioniert - echt ärgerlich wenn man zwar eine MSP Datei hat diese aber (richtigerweise) vom WPP nicht akzeptiert wird weil die Entwickler gepfuscht haben___<br />\n",
+    "PostedDate": "2015-11-30T03:19:49.067-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1455193",
+    "ThreadId": "647464",
+    "Html": "Hmm, Du könntest natürlich in einem Batch den Aufruf eintragen und die Batch als Computerstartupscript laufen lassen. Oder die Batch im WPP als Custom Update einbinden.<br />\n",
+    "PostedDate": "2015-12-08T14:24:56.613-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1455817",
+    "ThreadId": "647464",
+    "Html": "Hallo Winfried,\r<br />\n<br />\nvielen Dank für die Idee - nach ein paar Tests und Überlegungen stehe ich wieder mal auf dem Schlauch.... und bräuchte wieder eure Erfahrung und/oder Hilfe ;-)<br />\n<ol>\n<li>\nIch erstelle eine Batch Datei\r<br />\n   -- in dieser steht nichts anderes als: &quot;Msiexec.exe /update {Name der MSP} /qn&quot;<br />\n</li>\n<li>\nIm WPP erstelle ich ein Custom Update\r<br />\n   -- dort wähle ich die Option &quot;Allow to execute a file&quot;<br />\n</li>\n<li>\nIch gebe den Pfad vor (oder auch die Datei!?) und keinen Parameter (der steht ja in der Batch)<br />\n</li>\n<li>\nIm Updatefenster füge ich dann die Batchdatei und die MSP Datei hinzu\r<br />\n   -- und danach ist es ja der &quot;normale&quot; Ablauf<br />\n</li>\n</ol>\nAber irgendwie klappt das nicht - das Update wird zwar angezeigt aber die Datei nicht ausgeführt - was mache ich hier falsch? Mit den benutzerdefinierten Updates habe ich erst recht keine Erfahrung - muss ich hier noch weitere Punkte hinzufügen? Knackpunkt ist wahrscheinlich auch der Datenpfad?!?\r<br />\n<br />\nMal wieder vielen Dank im voraus\r<br />\n<br />\nGruß Markus<br />\n",
+    "PostedDate": "2015-12-14T00:51:20.733-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1455893",
+    "ThreadId": "647464",
+    "Html": "Hi,\r<br />\n<br />\nauf keinen Fall darfst Du mit Laufwerksbuchstaben arbeiten! Immer mit UNC-Pfaden. \\Server\\Freigabe\\Datei Und achte darauf, dass auch die Authentifizierten Benutzer Leserechte auf die Freigabe haben. In den Authentifizierten Benutzern sind auch alle Computerkonten enthalten.\r<br />\n<br />\nIm Punkt 3 gibst Du den UNC-Pfad zur Batch an, zumindest hab ich das noch so im Kopf, richtig?\r<br />\nDie Batch brauchst Du IMHO nicht im Updatefenster erneut angeben.\r<br />\n<br />\nIn %windir%\\Temp gibt es AFAIR auch eine Logdatei von den Custom Updates. Schau auch mal dort hinein. Ich hab das nur einmal versucht und mir dann meine eigene Uninstall2Install.exe erstellt. ;)<br />\n",
+    "PostedDate": "2015-12-14T12:37:38.057-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

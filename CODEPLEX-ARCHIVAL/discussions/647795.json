@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1452999",
+    "ThreadId": "647795",
+    "Html": "Hi Guys,\r<br />\n<br />\ni thought it's better to make a new topic since the <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/644903\" rel=\"nofollow\">last one</a> regarding this (or similar) issue is marked as a &quot;closed issue&quot;.\r<br />\n<br />\nI'm using the Classic Track for our machines after I switched over from 11.0.x branch. I created a &quot;Initial&quot; Installation with Version 15.006.30094 (slipstreamed this version into the initial release 15.006.30033) after some tweaks with the Customization Wizard DC (regarding Product Updates, Shortcuts, ...(the usual stuff) and of cause uninstallation of all prev. versions of Adobe Reader). This works really fine.\r<br />\n<br />\nNow I'm trying to install 15.006.30096 with the .msp file from <a href=\"ftp://ftp.adobe.com/pub/adobe/reader/win/Acrobat2015/\" rel=\"nofollow\">Adobes FTP</a> (<em>AcroRdr2015Upd1500630096_MUI_incr.msp</em>) since <em>AcroRdr2015Upd1500630096_MUI.msp</em> only works if you installed the first Release <em>AcroRdr20151500630033_MUI.exe</em> and no updates.\r<br />\nWhenever I try to publish this package i get this error --&gt; <a href=\"http://fs5.directupload.net/images/151118/zjlmti94.png\" rel=\"nofollow\">Image</a>\r<br />\n<br />\nA manual install works fine. I have tried some combinations regarding Package Type,Update Classification and Prerequisites and of cause using the &quot;empty rules&quot; option. Nothing worked.\r<br />\n<br />\nJust to test I have tried to publish <em>AcroRdr2015Upd1500630096_MUI.msp</em> and this works fine but I can't use it because 15.006.30094 is currently installed.\r<br />\n<br />\nAny way to fix it? Here's the Metadata for reference...<br />\n<pre><code>&lt;msiar:MsiPatchMetadata&gt;&lt;MsiPatch xmlns=&quot;http://www.microsoft.com/msi/patch_applicability.xsd&quot; SchemaVersion=&quot;1.0.0.0&quot; PatchGUID=&quot;{AC76BA86-7AD7-FFFF-2550-AE0F06759000}&quot; MinMsiVersion=&quot;4&quot;&gt;&lt;TargetProduct MinMsiVersion=&quot;300&quot;&gt;&lt;TargetProductCode Validate=&quot;true&quot;&gt;{AC76BA86-7AD7-FFFF-7B44-AE0F06755100}&lt;/TargetProductCode&gt;&lt;TargetVersion Validate=&quot;true&quot; ComparisonType=&quot;GreaterThanOrEqual&quot; ComparisonFilter=&quot;MajorMinorUpdate&quot;&gt;15.006.30094&lt;/TargetVersion&gt;&lt;UpdatedVersion&gt;15.006.30096&lt;/UpdatedVersion&gt;&lt;TargetLanguage Validate=&quot;false&quot;&gt;0,1033,2052,1028,1030,1043,1035,1036,1031,1040,1041,1042,1044,1046,1034,1053,1050,1029,1038,1045,1048,1049,1051,1060,1055,1058,1069,1027&lt;/TargetLanguage&gt;&lt;UpdatedLanguages&gt;1027&lt;/UpdatedLanguages&gt;&lt;UpgradeCode Validate=&quot;true&quot;&gt;{A6EADE66-0000-0000-484E-7E8A45000000}&lt;/UpgradeCode&gt;&lt;/TargetProduct&gt;&lt;TargetProductCode&gt;{AC76BA86-7AD7-FFFF-7B44-AE0F06755100}&lt;/TargetProductCode&gt;&lt;ObsoletedPatch&gt;{AC76BA86-7AD7-FFFF-2550-AE0F06756C00}&lt;/ObsoletedPatch&gt;&lt;ObsoletedPatch&gt;{AC76BA86-7AD7-FFFF-2550-AE0F06758E00}&lt;/ObsoletedPatch&gt;&lt;SequenceData&gt;&lt;PatchFamily&gt;AC76BA867AD7FFFF7B44AE0F06755100&lt;/PatchFamily&gt;&lt;Sequence&gt;15.006.30096.10000&lt;/Sequence&gt;&lt;Attributes&gt;1&lt;/Attributes&gt;&lt;/SequenceData&gt;&lt;/MsiPatch&gt;\n&lt;/msiar:MsiPatchMetadata&gt;</code></pre>\n\n",
+    "PostedDate": "2015-11-18T08:43:37.86-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1453006",
+    "ThreadId": "647795",
+    "Html": "Already solved : <a href=\"http://wsuspackagepublisher.codeplex.com/discussions/577061\" rel=\"nofollow\">See this post</a><br />\n",
+    "PostedDate": "2015-11-18T09:01:11.27-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-11-19T03:30:33.117-08:00"
+  },
+  {
+    "Id": "1453135",
+    "ThreadId": "647795",
+    "Html": "Great!! Didn't ever noticed the 'Validate' button...\r<br />\n<br />\nIt's the TargetLanguage Tag - just remove everything expect the one you use (1031 = German -&gt; Find <a href=\"https://msdn.microsoft.com/en-us/goglobal/bb964664.aspx\" rel=\"nofollow\">this List</a> from MS (LCID Dec)).<br />\n",
+    "PostedDate": "2015-11-19T03:30:27.797-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

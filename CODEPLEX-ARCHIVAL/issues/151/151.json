@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "CustomUpdateEngine",
+      "DisplayName": "CustomUpdateEngine"
+    },
+    "ClosedComment": "WPP was not able to use the translated path.",
+    "ClosedDate": "2013-11-24T14:01:54.807-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When a custom update have a ExecutableElement and that element have a path to executable with System Variables (like %WinDir%), the update failed to install with error code FFFC.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1311.02",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-11-19T11:48:22.647-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Error FFFC when trying to install a cutsom update with a ExecutableElement",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 151
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

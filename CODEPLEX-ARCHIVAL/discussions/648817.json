@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1456084",
+    "ThreadId": "648817",
+    "Html": "Can some one help me on how to publish .exe software through WPP.<br />\n",
+    "PostedDate": "2015-12-15T23:01:49.64-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1456436",
+    "ThreadId": "648817",
+    "Html": "Is it just a pure .exe someone would double click or a package? Yes you could use the Custom Update method to just copy the file somewhere overwriting whatever you need its best to use an installer since they register themselves with the system making detection easier.\r<br />\n<br />\nDid you create and publish out your certificate for WPP?<br />\n",
+    "PostedDate": "2015-12-18T10:58:05.867-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1456472",
+    "ThreadId": "648817",
+    "Html": "Enxer, Yes I would like to install Mozilla, MS office etc and also I would like to updates for existing installed software.  Yes I have created and published certificate.\r<br />\n<br />\nThanks,\r<br />\nVrenkat<br />\n",
+    "PostedDate": "2015-12-18T23:38:51.28-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

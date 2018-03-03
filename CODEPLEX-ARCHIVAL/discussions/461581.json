@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1105257",
+    "ThreadId": "461581",
+    "Html": "I am trying to publish 7-Zip.\r<br />\nI have no problem with the 32-bit version. (I add a rule that only allows install on 32-bit OS)\r<br />\nWhen I do the same with the 64-bit version, the program installed OK but in the <strong>Program Files (x86)\\7-Zip</strong> folder and will not work properly as the program looks for components in the <strong>Program Files\\7-Zip</strong> folder.\r<br />\nIf the install the program by just double clicking the msi file and following the prompts, everything works perfect.\r<br />\nIf it install the program from a command prompt as follows:   <strong>msiexec /i 7z920-x64.msi /q</strong> \r<br />\nit also works perfect.\r<br />\nBut when I installed it via WPP and only add the rule   <strong>Processor Architecture = x64</strong>  to the <strong>determine if the update is installable</strong> page, it gets installed into the <strong>Program Files (x86)\\7-Zip</strong> folder.\r<br />\nI even tried adding <strong>INSTALLDIR=&quot;%ProgramFiles%\\7-Zip&quot;</strong> to the <strong>Command Line</strong> option, still no luck.<br />\n",
+    "PostedDate": "2013-10-08T17:16:06.497-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105329",
+    "ThreadId": "461581",
+    "Html": "Please, verify that you don't have publish the 32-bit version twice.\r<br />\nTry to revise the update and check the option 'Can request user input'.<br />\n",
+    "PostedDate": "2013-10-08T23:45:29.337-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:44:30.087-07:00"
+  }
+]

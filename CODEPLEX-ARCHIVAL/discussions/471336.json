@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1129673",
+    "ThreadId": "471336",
+    "Html": "Have an issue, I have three custom updates that are approved for install for some computer groups but not others.  For the computer groups that they are not approved for install the updates show up in WSUS console as Updates Needed.  I have the updates set to not be visible in WSUS.  Any ideas?<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2013-11-27T09:51:02.863-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1129699",
+    "ThreadId": "471336",
+    "Html": "This is expected behaviour. If you don't allow Installation of Service Pack 1 for Windows 7 it is still needed. ;)\r<br />\nMaybe you should define better installable rules, so you don't need different approvals.\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-11-27T11:11:44.79-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1129757",
+    "ThreadId": "471336",
+    "Html": "What is exactly your problem ?<br />\n<ul>\n<li>Unapproved updates appears as needed ?</li>\n<li>Locally-Published updates appears in Wsus Console, despite the fact that you have instructs WPP to not let them appearing ?</li>\n</ul>\n",
+    "PostedDate": "2013-11-27T13:21:49.167-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T07:57:56.907-08:00"
+  }
+]

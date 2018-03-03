@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1061216",
+    "ThreadId": "448231",
+    "Html": "Hi all,\r<br />\n<br />\nis there a way to load an existing code signing certificate which is not password protected?\r<br />\n<br />\nAs long as no password is entered, the &quot;Load a certificate&quot; button is disabled. Is there any other change to manually configure WSUS package publisher to use such a certificate - e.g. by editing the &quot;options.xml&quot;? <br />\n",
+    "PostedDate": "2013-06-25T22:37:40.537-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1061292",
+    "ThreadId": "448231",
+    "Html": "As you need a certificate together with it's private key, there is no way to import such into Windows other than importing an certficate as pfx-file. And a pfx file always has a Password. If you don't have a pfx, you can convert such certificates using openssl.\r<br />\n<br />\nHTH\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-06-26T01:32:01.517-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1061307",
+    "ThreadId": "448231",
+    "Html": "Hi Norbert,\r<br />\n<br />\nI'm trying to import a pfx file and it is not password secured, because our outsources did not specify any password when generating the pfx file. \r<br />\n<br />\nI'm using the same .pfx file for WSUS integration of Secunia to publish updates that way. And this works without any issues. The WSUS package publisher simply does not allow me to load a certificate without specifying a password. \r<br />\n<br />\nSince publishing itself seems to work, but the published update always shows the status &quot;not applicable&quot; I thought it might have to do with the missing specification of the certificate to be used.  But as long as publishing works, package publisher seems to use the already installed correct certificate. \r<br />\n<br />\nDo you have any other idea what might be the reason for the clients reporting &quot;Not applicable&quot;, even if I remove all the installation and already installed checks or specify only e.g. checking the processor type?\r<br />\n<br />\nI'm not able to see any reason for this in the clients WindowsUpdate.Log. Furthermore revising the published package also does not end up being synced to the downstream WSUS server - based on the sync log.\r<br />\n<br />\nAny idea what might be wrong? Is it due to WSUS package publisher does not know which certificate to use and I'm not able to load it due to missing password? If so, is there a way to manually specify the certificate inside the &quot;options.xml&quot; or not?\r<br />\n<br />\nAny suggestions are welcome.\r<br />\n<br />\nThanks <br />\n",
+    "PostedDate": "2013-06-26T02:13:47.297-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1061399",
+    "ThreadId": "448231",
+    "Html": "Try importing it manually with the mmc. If this succeeds try exporting it again with private key and specify a password.\r<br />\nIf you already have a correct installed certificate it's like you said. WPP just works. I do not have an idea what the error message means. Can you post a screenshot please?\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-06-26T05:56:02.967-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1061443",
+    "ThreadId": "448231",
+    "Html": "I've turned on tracing on the WSUS client and going through the windowsupdate.log, checking for the published package, I can see that it is always identified as being &quot;Not Applicable&quot;. \r<br />\n<br />\nI'm not quite sure whether this is related to the certificate. It sounds more like a publishing issue itself, since neither for the check whether the package is already installed or whether it is allowed to be installed, any additionally configured checks (like file exists or file version or processor architecture or any other one I tried) are listed inside the windowsupdate.log - which means they are not executed.\r<br />\n<br />\nBut such checks are listed and verified for some MS Updates. Hence this looks like WSUS package publisher is somehow able to publish the package, but not the configured checks to identify whether an installation is allowed or not. \r<br />\n<br />\nCould this be certificate related - it does not sound to me like this. \r<br />\n<br />\nRevising the published package I can modify all the configured settings, but they are simply ignored (not executed based on windowsupdate trace output) when the WSUS client checks the package for installation.\r<br />\n<br />\nDo you have any other idea what could be the reason for this behavior?<br />\n",
+    "PostedDate": "2013-06-26T07:06:55.027-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1061620",
+    "ThreadId": "448231",
+    "Html": "Hi JackT2,<br />\nFirst, you shouldn't use non-password protected pfx file. Did you ever writes your credit card code on a paper with your card? ;-)<br />\n<blockquote>\nis there a way to load an existing code signing certificate which is not password protected?<br />\n</blockquote>\nNo, WPP is not design to allow that, because I never imagine that someone can have to use such pfx file.<br />\n<blockquote>\nthe published update always shows the status &quot;not applicable&quot; I thought it might have to do with the missing specification of the certificate to be used<br />\n</blockquote>\nNo, the certificate is used by the Wsus server to sign the package, and by the client to verify the integrity of the package. But the client don't have to use the certificate to evaluate Isinstalled and IsInstallable rules.<br />\n<blockquote>\nBut as long as publishing works, package publisher seems to use the already installed correct certificate.<br />\n</blockquote>\nThat's right, Wsus has a valid certificate and use it, otherwise Wsus would generate an error when signing the package and the publication would fail.<br />\n<blockquote>\nDo you have any other idea what might be the reason for the clients reporting &quot;Not applicable&quot;<br />\n</blockquote>\nIf clients report &quot;Not Applicable&quot;, that mean :<br />\n<ul>\n<li>The package is successfully published in Wsus.</li>\n<li>Clients 'see' the package.</li>\n<li>Clients are able to download the metedata of the package.</li>\n<li>Clients are able to evaluate rules.</li>\n<li>\nClients are able to report there status to the server.<br />\n</li>\n</ul>\n<strong>What type of file do you publish ? EXE, MSI, MSP ?</strong><br />\n<blockquote>\nIs it due to WSUS package publisher does not know which certificate <br />\n</blockquote>\nNo, in any case. WPP doesn't use the certificate. Only the Wsus server use it to sign the package.<br />\n<blockquote>\nis there a way to manually specify the certificate inside the &quot;options.xml&quot;<br />\n</blockquote>\nNo, Options.xml doesn't store any informations on the certificate. The only thing that WPP do with the certificate is to tell to the Wsus server : 'Hey this is the certificate you have to use now'. And this is said only when you import the certificate.<br />\n<blockquote>\nHence this looks like WSUS package publisher is somehow able to publish the package, but not the configured checks to identify whether an installation is allowed or not.<br />\n</blockquote>\nIf when you revise an update, you can see the Isinstalled and Isinstallable rules you have set, so rules are correctly publish with the update. When you revise an update, WPP ask Wsus server for the MetaData corresponding to this update and show it to you.<br />\n<ul>\n<li>Does this happen with one published update or every updates ?</li>\n<li>Does all clients reports 'Not Applicable' ?</li>\n<li>\nWhat is the type of the file you have published? .EXE, .MSI, .MSP ?<br />\n</li>\n</ul>\nOn one client, try to :<br />\n<ul>\n<li>Stop the wuauclt service.</li>\n<li>Stop Bits service.</li>\n<li>Delete folder c:\\Windows\\SoftwareDistribution.</li>\n<li>Start the WuauClt service.</li>\n<li>Start the Bits service.</li>\n</ul>\n",
+    "PostedDate": "2013-06-26T12:13:38.597-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:33:38.713-07:00"
+  },
+  {
+    "Id": "1061625",
+    "ThreadId": "448231",
+    "Html": "You can turn on 'Extended Logging' from the WuAgent. See the bottom of this article :\r<br />\n<br />\n<a href=\"http://support.microsoft.com/kb/902093/en-us\" rel=\"nofollow\">http://support.microsoft.com/kb/902093/en-us</a>\r<br />\n<br />\nDo not forget to turn back off when finished !<br />\n",
+    "PostedDate": "2013-06-26T12:22:13.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1061917",
+    "ThreadId": "448231",
+    "Html": "HI DCourtel,\r<br />\n<br />\nthe .pfx file does not have a password since it has been issued by our own CA. Please don't ask me why our data center outsourcer issued it without specifiying a password, but due to the fact that it is only published to company owned computers and its only purpose is the code signing for WSUS, this is ok for me.\r<br />\n<br />\nI've turned on extended logging already during my tests yesterday noon. Based on this I noticed that the package is always identified as &quot;Not applicable&quot; and all the rules for &quot;IsInstalled&quot; and &quot;IsInstallable&quot; are not recorded in the log at all. For other packages, where such rules are configured, I can see such e.g. FileVersion, FileExist or Reg.Key checks in the log. But all these other packages have either been published by MS or by using Secunia.\r<br />\n<br />\nI'm trying to install an .msp file and I've tried to publish this package several times, using some different rules and also with and without checking &quot;Delete Rules at Package Level&quot;. Does &quot;Delete Rules at Package Level&quot; remove rules included inside the .MSP / .MSI file - or what else is the intention of it?\r<br />\n<br />\nBTW - by manually executing the .MSP file I found the reason why it did not work. It was due to different GUIDs of the installed program and the one configured inside the .MSP to proceed with the update. Due to lack of a tool for reconfiguring the included .MST files I reinstalled the test computer with a suitable product to fit the update .msp package. \r<br />\n<br />\nIt looks like in the windowsupdate.log you'll find only entries for the additional configured rules, as long as the .msp package itself (and the contained .mst) files itself are valid and identified as installable. As soon as this prerequisites are met, additional rules are executed and logged. \r<br />\n<br />\nCan you confirm that this is the usual behavior? <br />\n",
+    "PostedDate": "2013-06-27T04:03:43.837-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1492991",
+    "ThreadId": "661477",
+    "Html": "I created a custom update package to update desktop machines to the latest v8update121. I've set the installable conditions to the following:\r<br />\n<br />\n&lt;Start AND&gt;\r<br />\n&lt;Iar:Not&gt; Processor architecture=&quot;6&quot; &lt;/Iar:Not&gt;\r<br />\n<br />\n&lt;Start AND&gt;\r<br />\n&lt;Iar:Not&gt;WindowsVersion MajorVersion=&quot;6&quot;MinorVersion=&quot;3&quot;ProductType=&quot;3&quot;/&gt; &lt;/Iar:Not&gt;\r<br />\n&lt;Start OR&gt;\r<br />\n&lt;Iar:Not&gt;WindowsVersion MajorVersion=&quot;6&quot;MinorVersion=&quot;2&quot;ProductType=&quot;3&quot;/&gt; &lt;/Iar:Not&gt;\r<br />\n&lt;Start OR&gt;\r<br />\n&lt;Iar:Not&gt;WindowsVersion MajorVersion=&quot;6&quot;MinorVersion=&quot;3&quot;ProductType=&quot;2&quot;/&gt; &lt;/Iar:Not&gt;\r<br />\n&lt;Start OR&gt;\r<br />\n&lt;Iar:Not&gt;WindowsVersion MajorVersion=&quot;6&quot;MinorVersion=&quot;2&quot;ProductType=&quot;2&quot;/&gt; &lt;/Iar:Not&gt;\r<br />\n&lt;End OR&gt;\r<br />\n&lt;End OR&gt;\r<br />\n&lt;End AND&gt;\r<br />\n&lt;End AND&gt;\r<br />\n<br />\nThe reason I have it structured like that is, previously i had Server selected for both Windows Server 2012 and 2012 R2 and the package was appearing N/a for all windows servers with the exception of those that are domain controllers. Because of that, I added the other set of OR options and selected Domain Controller from the list however now I am seeing that one of my non-domain controller servers are appearing as Not Installed now and all the DC's are still showing as Not Installed instead of N/A.<br />\n",
+    "PostedDate": "2017-02-20T13:08:41.21-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1495708",
+    "ThreadId": "661477",
+    "Html": "Sorry not really an answer to your question but I saw this and thought I would mention how we control what gets what... We use the targeting groups in group policy to control what gets what, we have the groups Workstations, Servers, Domain Controller, and some specific App_JavaInstall ones for example.\r<br />\n<br />\nWhen we approve Java it gets approved to only the Workstations targeting groups etc, we find this the best way to grannually manage what gets what.\r<br />\n<br />\nHope it helps even if its not the answer you wanted.<br />\n",
+    "PostedDate": "2017-04-21T18:38:52.45-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

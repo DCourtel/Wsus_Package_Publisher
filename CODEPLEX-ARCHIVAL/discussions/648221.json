@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1454125",
+    "ThreadId": "648221",
+    "Html": "Serait il possible d'ajouter l'édition/modification de MAJ personnalisée.\r<br />\n<br />\nAfin de pouvoir gérer lors de MAJ d'application ou de test de paramètres le fait de ne pas devoir recrée une MAJ complète à chaque fois.<br />\n",
+    "PostedDate": "2015-12-01T05:50:14.153-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1456434",
+    "ThreadId": "648221",
+    "Html": "Ceci est une limitation de Windows Update ne WPP. Lorsque vous créez un package et CAB signé numériquement est créé avec une somme de contrôle et un numéro de révision. Voici un exemple de WindowsUpdate.log:<br />\n<pre><code>DnldMgr WARNING: Preparing update for install, updateId = {BE186464-5D2D-40C9-94C8-0F9BCF65B204}.4 (using payload from revision 3).</code></pre>\n\nCeci est pour empêcher toute manipulation et d'assurer l'intégrité des données de l'emballage.\r<br />\n<br />\nVous pouvez tester en utilisant psexec pour imiter le compte SYSTEM:<br />\n<pre><code>psexec -s -h \\\\computer c:\\windows\\system32\\msiexec.exe /I  C:\\Windows\\SoftwareDistribution\\Download\\Install\\PACKAGE\\CustomUpdateEngine.exe /Actionfile=C:\\Windows\\SoftwareDistribution\\Download\\Install\\laskdjf3qasdiasjdfsdlfasf.xml</code></pre>\n\nLe c:\\windows\\temp\\CustomUpdateEngine.log a les résultats.<br />\n",
+    "PostedDate": "2015-12-18T10:48:08.217-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1456441",
+    "ThreadId": "648221",
+    "Html": "L'idée ne serait pas d'editer le cab mais de permettre la modification du fichier XML avec un repackage et une republication ensuite.<br />\n",
+    "PostedDate": "2015-12-18T12:36:39.603-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

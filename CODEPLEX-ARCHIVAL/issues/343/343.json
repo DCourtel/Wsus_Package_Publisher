@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Approval Form",
+      "DisplayName": "Approval Form"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:52.993-08:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "In Update Approval view, you can't just click one of the dropdown arrows. You have to first select the row to make it active, then you can click the arrow.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1603.29",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-06-13T08:16:30.163-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Update Approval box requires too many clicks",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 2,
+    "Id": 343
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This is because the \"_EditMode_\" of the DataGridView object is set to \"_EditOnKeystrokeOrF2_\" instead of \"_EditOnEnter_\".\n\nI downloaded the source code to fix it myself, but the Git repository is out of date (v1.3.1507.29), and missing several assemblies that are referenced.\n\n__Missing Assemblies:__\n* CheckCombobox\n* CustomUpdateCreator\n* EasyCompany.Controls\n* FavoritesContainer\n* FolderBrowserEx\n* Microsoft.Deployment.Compression (available on NuGet, though)\n* Microsoft.Deployment.Compression.Cab (available on NuGet, though)\n* MsiReader\n\nBecause of that, it won't compile :(",
+      "PostedDate": "2016-06-14T22:22:19.563-07:00",
+      "Id": 200100
+    },
+    {
+      "Message": "__Update:__ Grabbed the missing assemblies from the release version. Provided source code is still outdated, however.",
+      "PostedDate": "2016-06-21T21:21:17.7-07:00",
+      "Id": 200218
+    },
+    {
+      "Message": "Set «EditMode» to «EditOnEnter».",
+      "PostedDate": "2017-01-27T12:35:01.163-08:00",
+      "Id": 206275
+    }
+  ]
+}

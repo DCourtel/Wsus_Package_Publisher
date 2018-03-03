@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-09T09:13:08.063-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I have received many 'debug info' files from anonymous users. Thanks to them.\r\n\r\nWhen an error message like \"Verification of file signature failed for file\" appear, I have notice that user have generated a auto-signed certificat or load a certificat but they had certainly omit to restart the Wsus server to take this change in account. \r\n\r\nAdded a message when generate or load a certificate to warn the user that he need to restart his serveur.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.2.1305.26",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-28T14:07:45.12-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Verification of file signature failed for file",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 51
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

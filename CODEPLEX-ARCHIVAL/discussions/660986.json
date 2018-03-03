@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1491776",
+    "ThreadId": "660986",
+    "Html": "Hey Everyone!\r<br />\n<br />\nWPP told me that the connection for Adobe Flash was failed.\r<br />\nSo I started to search in the board here: no result.\r<br />\nThen google: no result.\r<br />\nHey come on, google without a result? Are you kidding?\r<br />\n<br />\nI've found this:\r<br />\n<a href=\"http://www.adobe.com/licensing/distribution/strategies/sms.html\" rel=\"nofollow\">http://www.adobe.com/licensing/distribution/strategies/sms.html</a>\r<br />\n<br />\nAnd the URL: <a href=\"https://fpdownload.adobe.com/get/flashplayer/distribution/win/AdobeFlashPlayerCatalog_SCUP.cab\" rel=\"nofollow\">https://fpdownload.adobe.com/get/flashplayer/distribution/win/AdobeFlashPlayerCatalog_SCUP.cab</a>\r<br />\n<br />\nSo it was changed from:\r<br />\n<a href=\"http://fpdownload.adobe.com/get/flashplayer/current/licensing/win\" rel=\"nofollow\">http://fpdownload.adobe.com/get/flashplayer/current/licensing/win</a>\r<br />\nto:\r<br />\n<a href=\"https://fpdownload.adobe.com/get/flashplayer/distribution/win/\" rel=\"nofollow\">https://fpdownload.adobe.com/get/flashplayer/distribution/win/</a>\r<br />\n<br />\nSo you only have to change the URL within the catalog feed and you are done!\r<br />\n<br />\nNow I can download Flash Player Version 24 and deploy it with the WPP.\r<br />\nI hope, if someones trying to find the new URL he will find this post.\r<br />\n<br />\nCheers,\r<br />\nm3D<br />\n",
+    "PostedDate": "2017-01-27T06:41:42.94-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2017-01-27T06:44:46.663-08:00"
+  },
+  {
+    "Id": "1493504",
+    "ThreadId": "660986",
+    "Html": "Yeah! Thank you! Run in the same problem today...<br />\n",
+    "PostedDate": "2017-03-02T06:43:34.48-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

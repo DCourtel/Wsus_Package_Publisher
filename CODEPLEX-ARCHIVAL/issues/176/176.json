@@ -1,0 +1,96 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-03-04T10:43:36.173-08:00",
+    "CommentCount": 8,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nCan someone help explain why I still see the update list count (see attached image) even after I have deleted the updates? How do I clear the lists under Updates?\r\n\r\nThank you in advance for your help!\r\nHS7.\r\n\r\n",
+    "LastUpdatedDate": "2014-03-04T10:43:36.173-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-01-23T02:28:30.5-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Updates list view",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 176
+  },
+  "FileAttachments": [
+    {
+      "FileId": 782059,
+      "FileName": "1-23-2014 6-25-45 PM.png",
+      "DownloadUrl": ".\\782059"
+    },
+    {
+      "FileId": 783794,
+      "FileName": "1-27-2014 4-55-39 PM.png",
+      "DownloadUrl": ".\\783794"
+    },
+    {
+      "FileId": 783795,
+      "FileName": "1-27-2014 4-59-07 PM.png",
+      "DownloadUrl": ".\\783795"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Because there is ONE item \"Reader\" beneath \"Adobe\" ;) Just delete the product and it will be Zero. ;)\n\nRegards\nNorbert",
+      "PostedDate": "2014-01-23T03:06:20.543-08:00",
+      "Id": 131286
+    },
+    {
+      "Message": "Hi Norbert,\r\n\r\nSorry for the delayed update/response and thank you for your reply. I tried to do as what you suggested (delete the Reader) and after that WPP became unresponsive. (see first image attached). I waited for quite some time and then I force-exit WPP and launch it again, and there is a \"Delete Me!\" update created (second image attached). I just went ahead and deleted the \"Delete Me!\" update and that cleared up the Update list (great!). Is this the expected behavior? \r\nI deleted 2 different updates (Adobe and LUP) and both times WPP behaved the same.\r\n\r\nThank you.\r\nHS7",
+      "PostedDate": "2014-01-27T01:09:34.66-08:00",
+      "Id": 131667
+    },
+    {
+      "Message": "Another screenshot",
+      "PostedDate": "2014-01-27T01:10:14.457-08:00",
+      "Id": 131668
+    },
+    {
+      "Message": "The Vendor Adobe is from LUP? This is another product, like WPP. Is it only for looking or are you have problems with this Vendor? Click Right on LUP > Delete. ",
+      "PostedDate": "2014-01-27T02:30:46.637-08:00",
+      "Id": 131674
+    },
+    {
+      "Message": "Oh I had 2 different updates. One is from Adobe, and another one is from LUP (for the sake of testing). I did the same for both updates, right click and delete and for both updates, WPP behave the same (frozen after the delete, when I restart WPP, \"Delete Me!\" package was listed. I wonder if WPP becoming unresponsive indicates anything.\n(I'm not concerned about the updates, just testing the WPP features and see what I can do with it :)\n\nThank you",
+      "PostedDate": "2014-01-27T06:47:18.293-08:00",
+      "Id": 131690
+    },
+    {
+      "Message": "Do you have created the Vendor Adobe in LUP? If yes, then i know it is a problem to delete this Vendors with WPP.\nRun in WSUS the Servercleanupwizard daily, i didn't remember exactly, but i think after a couple of days the Vendors where removed.",
+      "PostedDate": "2014-01-27T07:26:18.23-08:00",
+      "Id": 131695
+    },
+    {
+      "Message": "How long did you wait after seeing it \"unresponsive\"? I've just waited some time (2-3 minutes) depending on serverhardware. ;) Don't panic and don't kill WPP in this state.\n\nRegards\nNorbert",
+      "PostedDate": "2014-01-27T11:47:56.807-08:00",
+      "Id": 131763
+    },
+    {
+      "Message": "Hi HS7, deleting 'Product' or 'Vendor' is not easy. They generally manage by Wsus itself. WPP can help you to delete 'Empty Product' or 'Empty Vendor',but it doesn't work everytime.\n\nIt can take some time for WPP to delete these items. Be patient.\nIf you see an  update named 'DeleteMe' this mean that the process of deleting item has been interrupted before WPP can delete this update.\nDo you have set a trigger in the SQL database to switch locally published updates as non-locally published updates ?\nCan you try again and once you have kill WPP, go to %temp% and send me the file WPP-GUID.log at package.publisher@free.fr",
+      "PostedDate": "2014-01-27T12:58:18.83-08:00",
+      "Id": 131784
+    }
+  ]
+}

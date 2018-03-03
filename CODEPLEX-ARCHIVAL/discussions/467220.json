@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1120608",
+    "ThreadId": "467220",
+    "Html": "Hello Team<br />\n<br />\nI have installed a new Server 2012 Essentials with the current Release of Package Publisher.<br />\nThe self published Cert is stored. If i try to create an package i get an error.<br />\n&quot;Failed to sign package, error was 214794403&quot;<br />\nCan you please help me?<br />\n<br />\nthanks computerversteher<br />\n",
+    "PostedDate": "2013-11-08T11:07:49.27-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1120635",
+    "ThreadId": "467220",
+    "Html": "There is a similar discussion four thread down from this one.<br />\n\r<br />\nPlease review it.   <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/465355\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/465355</a>  to see if this helps<br />\n",
+    "PostedDate": "2013-11-08T12:02:43.267-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T08:11:14.22-08:00"
+  }
+]

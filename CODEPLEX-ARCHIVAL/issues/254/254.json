@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-11T22:32:02.873-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hey guys,\r\n\r\nI am attempting to pull Adobe Reader/Flash updates in from the catalog and then push them to users.\r\n\r\nIt seems like if they install the updates on shutdown (Shutdown and Install Updates), we have an issue with the machine locking up when it comes back up.  On the screen that says Configuring updates 1 of 2 for example, it will just sit on update 1 until we reboot the machine.  Most of the time it will boot up afterwords and the update will have been applied but it is annoying to have the users shut their machines off when it is saying not to shut it off!\r\n\r\nI attempted these updates on my machine and just installed them while in Windows.  No reboot was required and it never locked up.  We are currently doing some testing with some other machines to see if we can figure out what is going on.  I had one yesterday that attempted to install two older versions of Flash (newer than what was installed on the machine but not the newest version that I had approved) we tested it with the shutdown and install updates, it locked up, we restarted, and when it came back up flash was gone all together.  I will be testing a Reader 11.0.9 to 11.0.10 update on that machine today.\r\n\r\nI was wondering if anyone experienced this and knew how to fix it or what log files to look at to get an idea of what is going on.",
+    "LastUpdatedDate": "2015-11-11T22:32:02.873-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-03-19T04:04:11.46-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Adobe Flash/Reader Updates",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 254
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "You should look into %windir%\\WindowsUpdate.log on one of the machines that locked up during boot.\n\nIs this happening with every Reader/Flash update or only a specific one? Adobe has released bad patches in the past, and you can look on their forums for people with similar issues.",
+      "PostedDate": "2015-03-19T08:38:51.577-07:00",
+      "Id": 179590
+    },
+    {
+      "Message": "Most recently with the 17.0.0.134 version.  I have had two lockup.  I have tried it now on a couple more and it worked fine so I approved it and I am hoping we have minimal issues or none.\n\nIf any of them do lock up, I will be sure to check that log file.",
+      "PostedDate": "2015-03-19T09:23:38.873-07:00",
+      "Id": 179592
+    }
+  ]
+}

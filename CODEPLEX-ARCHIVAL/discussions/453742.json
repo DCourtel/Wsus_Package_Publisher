@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1081885",
+    "ThreadId": "453742",
+    "Html": "Hi Guys,\r<br />\nis ist possible in wsus package publisher to create a new computer group and assign it different computers from the default wsus group &quot;All computers&quot;. For example:<br />\n<ul>\n<li>\nAll Computers (group)\r<br />\n++ Server with wsus role (group)\r<br />\n+++ wsus01 (machine)\r<br />\n+++ wsus02 (machine)\r<br />\n+++ wsus03 (machine)<br />\n</li>\n</ul>\nNow i need a goup in WPP with then name &quot;Adobe Reader&quot; and member of this group should be &quot;wsus02&quot; and &quot;wsus03&quot;, not &quot;wsus01&quot;. \r<br />\n<br />\nIs there a possibility to map this example in wpp? With Metagroups i can create a new group in wpp but i can choose only groups from wsus and no machines.\r<br />\n<br />\nRegrads,\r<br />\nDaniel<br />\n",
+    "PostedDate": "2013-08-18T13:15:21.22-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1081895",
+    "ThreadId": "453742",
+    "Html": "Computers group have to be created in the Wsus Console.<br />\n",
+    "PostedDate": "2013-08-18T14:04:50.68-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1081896",
+    "ThreadId": "453742",
+    "Html": "The purpose of MetaGroups is to facilitate the deployment of udpate.\r<br />\nFor example :\r<br />\nYou make a MetaGroup with All Test Computers group and you call it 'Test'.\r<br />\nYou make a second MetaGroup with All Production Computers group and you call it 'Prod'.\r<br />\nYou can then create a third MetaGroup, call 'Test + Prod'.\r<br />\n<br />\nOnce you received an update, you approve it to the 'Test4 MetaGroup, and all Test Group receive this update. Once you are satified of the update, you can approve it to the 'Test + Prod' MetaGroup.<br />\n",
+    "PostedDate": "2013-08-18T14:08:47.55-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:21:26.63-07:00"
+  },
+  {
+    "Id": "1081899",
+    "ThreadId": "453742",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nComputers group have to be created in the Wsus Console.<br />\nThats right... but in the wsus console a computer can only be an member of one group. That is my problem i have some programs that for different people where not in the same team. In this case i hope wpp can replace my manual installation.<br />\n</blockquote>\n",
+    "PostedDate": "2013-08-18T14:15:43.367-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1081976",
+    "ThreadId": "453742",
+    "Html": "<blockquote>\nThats right... but in the wsus console a computer can only be an member of one group. <br />\n</blockquote>\nNo, a computer can belong to several Computer Group.\r<br />\n<br />\n<img src=\"http://i.imgur.com/nKkhB6E.png?1\" alt=\"Image\" /><br />\n",
+    "PostedDate": "2013-08-18T22:05:38.867-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:21:59.517-07:00"
+  },
+  {
+    "Id": "1082009",
+    "ThreadId": "453742",
+    "Html": "Hmpf... we use a gpo to assign the computer to the different groups.<br />\n",
+    "PostedDate": "2013-08-19T00:10:26.617-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082022",
+    "ThreadId": "453742",
+    "Html": "No, problem. Just put your groups separated with semicolons.\r<br />\n<br />\n<img src=\"http://i.imgur.com/YYnqCak.jpg\" alt=\"Image\" /><br />\n",
+    "PostedDate": "2013-08-19T01:02:13.317-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:21:45.787-07:00"
+  },
+  {
+    "Id": "1082123",
+    "ThreadId": "453742",
+    "Html": "Okay, i will try it... thank you very much.<br />\n",
+    "PostedDate": "2013-08-19T05:29:17.987-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

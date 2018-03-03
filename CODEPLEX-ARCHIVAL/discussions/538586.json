@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "1221293",
+    "ThreadId": "538586",
+    "Html": "All,\r<br />\nI Approved the correct Driver (model/version) for a DELL BIOS driver , And when I Approve this driver on the correct computer model the update doesnt appear in the WUA, i checked the Windowsupdate.log file and i found that it couldnt evaluate this update as seen below.\r<br />\n<br />\n2014-03-11\t07:13:55:839\t 952\t610\tPT\t+++++++++++  PT: Synchronizing server updates  +++++++++++\r<br />\n2014-03-11\t07:13:55:839\t 952\t610\tPT\t  + ServiceId = {3DA21691-E39D-4DA6-8A4B-B43877BCB1B7}, Server URL = <a href=\"http://WSUS:8530/ClientWebService/client.asmx\" rel=\"nofollow\">http://WSUS:8530/ClientWebService/client.asmx</a>\r<br />\n2014-03-11\t07:13:55:941\t 952\t610\tPT\tWARNING: Cached cookie has expired or new PID is available\r<br />\n2014-03-11\t07:13:55:941\t 952\t610\tPT\tInitializing simple targeting cookie, clientId = 6768dcea-9bdb-44bb-a806-3b6c27b9c9c0, target group = LAB, DNS name = Client.Domain.com\r<br />\n2014-03-11\t07:13:55:941\t 952\t610\tPT\t  Server URL = <a href=\"http://pcrs0141:8530/SimpleAuthWebService/SimpleAuth.asmx\" rel=\"nofollow\">http://pcrs0141:8530/SimpleAuthWebService/SimpleAuth.asmx</a>\r<br />\n2014-03-11\t07:14:01:973\t 952\t610\tAgent\tWARNING: Failed to evaluate Installed rule, updateId = {1A37D14B-2588-469C-A219-FA954F4803B4}.1, hr = 8004100E\r<br />\n2014-03-11\t07:14:01:974\t 952\t610\tAgent\tWARNING: Failed to evaluate Installable rule, updateId = {1A37D14B-2588-469C-A219-FA954F4803B4}.1, hr = 8004100E<br />\n",
+    "PostedDate": "2014-03-10T22:58:01.55-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221300",
+    "ThreadId": "538586",
+    "Html": "Hi AMElSisi,<br />\nDid you use Dell's SCUP Catalog?<br />\n<br />\nI have some Dell updates, which has WMI install rules, like these:<br />\n<pre><code>Root\\Dell\\sysinv\nSELECT * FROM Dell_OEMComputerSystem WHERE SystemTypeID = '630'</code></pre>\n\nYou can see that it is using some odd WMI Dell WMI namespace, if I am correct, you can only get this, by installing <strong>Dell OpenManage Inventory Agent</strong> (DSIA).<br />\nDell OpenManage Inventory Agent is available in the Dell Catalog, but it also uses the Dell WMI installable rules, you can revise that update, and change the installable rule to something like this:<br />\n<pre><code>root\\CIMV2\nselect * from win32_ComputerSystem WHERE Model like 'OptiPlex%'</code></pre>\n\nI have not been successful with installing BIOS updates yet, but I think we're close.<br />\nWhen Dell OpenManage Inventory Agent is installed, it should create the WMI namespace on startup and then stop the service, or something like that.<br />\n",
+    "PostedDate": "2014-03-11T00:13:25.47-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221378",
+    "ThreadId": "538586",
+    "Html": "Thanks NikolajP for your response , from your words does this mean that'll never install dell updates from catalog without installing the DSIA ?<br />\n",
+    "PostedDate": "2014-03-11T04:12:26.977-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221381",
+    "ThreadId": "538586",
+    "Html": "You may want to read this <a href=\"http://www.wsus.de/veroeffentlichen_von_hardwareupdates_mit_hilfe_von_wsus_package_publisher\" rel=\"nofollow\">Article</a>\r<br />\n<br />\nIt's in German, but Google Translate can help :-)<br />\n",
+    "PostedDate": "2014-03-11T04:26:01.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:52:03.247-07:00"
+  },
+  {
+    "Id": "1221418",
+    "ThreadId": "538586",
+    "Html": "Thanks DCourtel , gonna try it , Really Many Thanks for your support :)<br />\n",
+    "PostedDate": "2014-03-11T06:08:18.973-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221619",
+    "ThreadId": "538586",
+    "Html": "Hi,\r<br />\n<br />\nlet me know if you need more info. ;) Regarding BIOS Installation, there are some &quot;older&quot; bios packages, which have the wrong &quot;silent&quot; Switch defined. So try using it Manual before deploying it.\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2014-03-11T14:11:31.22-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221696",
+    "ThreadId": "538586",
+    "Html": "Sure NorbertFe, but Actually Am still stuck with the &quot;Dell OpenManage Inventory Agent&quot; as when i push it via WPP it is evaluated as not needed Although AM testing on a Dell Machine , but What i found in the installable rule that it requires Windows Version 5 And below , And Am using Windows 7 sp1 which is 6.* <br />\n",
+    "PostedDate": "2014-03-11T21:11:36.797-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221772",
+    "ThreadId": "538586",
+    "Html": "What type of Dell machine is it?<br />\n",
+    "PostedDate": "2014-03-12T02:20:59.647-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221811",
+    "ThreadId": "538586",
+    "Html": "Optiplex 780, I guess NorbretFE it wasnt matching because of the Windows Version specified in the installable Rule<br />\n",
+    "PostedDate": "2014-03-12T04:17:52.737-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1221841",
+    "ThreadId": "538586",
+    "Html": "All , I modified the Installable Rule for the Dell Agent to\r<br />\n WMI Query &quot;root\\CIMV2\r<br />\nselect * from win32_ComputerSystem WHERE Model like 'OptiPlex%'&quot;\r<br />\n<br />\nNow I have the Agent installed, I Also made a restart twice , I Published the BIOS update that I needed since the beginning were I checked the correct Model/Version of the BIOS update , when i run /detectnow from the client side i still get that the update cannot be evaluated as shown in my first post and as if the Agent is not installed :S<br />\n",
+    "PostedDate": "2014-03-12T06:10:56.92-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

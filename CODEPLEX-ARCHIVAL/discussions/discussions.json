@@ -1,0 +1,3072 @@
+[
+  {
+    "Id": "434451",
+    "Title": "[Solved] Additional files missing from CAB",
+    "LatestDate": "2013-02-27T13:08:38.227-08:00"
+  },
+  {
+    "Id": "439285",
+    "Title": "[Solved] Multiple WSUS Servers",
+    "LatestDate": "2013-04-08T21:45:25.53-07:00"
+  },
+  {
+    "Id": "439667",
+    "Title": "[Solved] Publishing Adobe acrobat update",
+    "LatestDate": "2013-04-12T12:32:20.543-07:00"
+  },
+  {
+    "Id": "440230",
+    "Title": "[Solved] Installation Rules",
+    "LatestDate": "2013-04-14T11:05:45.923-07:00"
+  },
+  {
+    "Id": "441605",
+    "Title": "[Solved] Verification of file signature failed for file",
+    "LatestDate": "2014-10-03T08:40:31.313-07:00"
+  },
+  {
+    "Id": "444698",
+    "Title": "[Solved] Load / Save rules - Im- / Export Updates",
+    "LatestDate": "2013-08-09T13:56:35.197-07:00"
+  },
+  {
+    "Id": "445138",
+    "Title": "[Solved] Possible to update Adobe Reader and apply new .MST customization?",
+    "LatestDate": "2013-06-25T14:26:53.95-07:00"
+  },
+  {
+    "Id": "445932",
+    "Title": "[Solved] Creating an Update for Terminalservers",
+    "LatestDate": "2013-06-04T13:42:01.63-07:00"
+  },
+  {
+    "Id": "445943",
+    "Title": "[Solved] Java deployment",
+    "LatestDate": "2013-06-14T00:04:29.35-07:00"
+  },
+  {
+    "Id": "446109",
+    "Title": "[Solved] Error using Commandline Options when deploying MSI Package",
+    "LatestDate": "2013-06-06T11:56:41.92-07:00"
+  },
+  {
+    "Id": "446382",
+    "Title": "[Solved] Certificate Validation",
+    "LatestDate": "2013-06-10T07:22:58.967-07:00"
+  },
+  {
+    "Id": "446585",
+    "Title": "[Solved] Timezone adjusted for Date/Time display under status and reports",
+    "LatestDate": "2013-06-10T11:44:59.393-07:00"
+  },
+  {
+    "Id": "446613",
+    "Title": "[Solved] Certificate Validation in the new version",
+    "LatestDate": "2014-10-23T04:46:54.667-07:00"
+  },
+  {
+    "Id": "448195",
+    "Title": "[Solved] Deploy .NET 4.5 Framework",
+    "LatestDate": "2013-07-25T10:05:04.72-07:00"
+  },
+  {
+    "Id": "448231",
+    "Title": "[Solved] Load certificate without entering a password",
+    "LatestDate": "2013-06-27T04:03:43.837-07:00"
+  },
+  {
+    "Id": "448284",
+    "Title": "[Solved] Scroll Bars in Custom Update Creator window",
+    "LatestDate": "2013-06-26T11:35:18.3-07:00"
+  },
+  {
+    "Id": "449027",
+    "Title": "[Solved] Issue when  creating a update",
+    "LatestDate": "2013-07-07T22:11:47.32-07:00"
+  },
+  {
+    "Id": "449511",
+    "Title": "[Solved] \"WSUS Package Publisher\" vs \"Local Updates Publisher\"",
+    "LatestDate": "2014-12-14T06:28:25.867-08:00"
+  },
+  {
+    "Id": "449773",
+    "Title": "[Solved] Import Adobe internet catalog?",
+    "LatestDate": "2013-07-12T07:11:24.803-07:00"
+  },
+  {
+    "Id": "450315",
+    "Title": "[Solved] Updates on Client computer fail with Error Code 800B0109",
+    "LatestDate": "2014-12-04T03:20:15.627-08:00"
+  },
+  {
+    "Id": "450388",
+    "Title": "HOW TO: Deploy Java 7 Update 25 (32-bit) & (64-bit) with UAC on or off in client environment.",
+    "LatestDate": "2013-08-30T08:20:59.573-07:00"
+  },
+  {
+    "Id": "450488",
+    "Title": "[solved] Adobe Reader older version being installed",
+    "LatestDate": "2013-07-19T04:25:00.44-07:00"
+  },
+  {
+    "Id": "451069",
+    "Title": "[Closed] Scheduled Install fails",
+    "LatestDate": "2013-08-11T22:03:39.907-07:00"
+  },
+  {
+    "Id": "452279",
+    "Title": "[Solved] Fail to Connect Message when running Detect Now",
+    "LatestDate": "2013-08-06T13:34:44.54-07:00"
+  },
+  {
+    "Id": "453096",
+    "Title": "[Solved] Not enough rights?",
+    "LatestDate": "2013-08-13T04:27:33.103-07:00"
+  },
+  {
+    "Id": "453304",
+    "Title": "[Solved] SCUP to work with WPP ?",
+    "LatestDate": "2013-08-16T00:26:34.607-07:00"
+  },
+  {
+    "Id": "453629",
+    "Title": "[Solved] Windws update shows package again",
+    "LatestDate": "2013-08-17T05:14:54.17-07:00"
+  },
+  {
+    "Id": "453717",
+    "Title": "[Closed] Commandline parameter don't work",
+    "LatestDate": "2013-08-20T23:23:39.12-07:00"
+  },
+  {
+    "Id": "453742",
+    "Title": "[SOLVED] Create customer computer groups",
+    "LatestDate": "2013-08-19T05:29:17.987-07:00"
+  },
+  {
+    "Id": "453814",
+    "Title": "[SOLVED] Deploying a .msu file",
+    "LatestDate": "2013-09-02T01:42:45.18-07:00"
+  },
+  {
+    "Id": "453836",
+    "Title": "[Solved] Adobe Reader - chain publish 11.0.0 msi along with current 11.0.3 msp files in one package?",
+    "LatestDate": "2013-08-19T10:35:43.25-07:00"
+  },
+  {
+    "Id": "454245",
+    "Title": "[SOLVED] Path or Filename too long",
+    "LatestDate": "2014-11-30T03:28:22.427-08:00"
+  },
+  {
+    "Id": "454343",
+    "Title": "[Solved] Error 800b004 when installing update",
+    "LatestDate": "2013-08-27T07:14:41.093-07:00"
+  },
+  {
+    "Id": "454418",
+    "Title": "[SOLVED] Add a file additional",
+    "LatestDate": "2013-08-24T05:26:04.46-07:00"
+  },
+  {
+    "Id": "454501",
+    "Title": "[Closed] Windows Update not detecting custom package",
+    "LatestDate": "2013-08-26T06:51:56.243-07:00"
+  },
+  {
+    "Id": "454675",
+    "Title": "[SOLVED] Copy a file to windows dir",
+    "LatestDate": "2013-09-03T10:59:25.667-07:00"
+  },
+  {
+    "Id": "454725",
+    "Title": "[Solved] Deleting unsused update folders",
+    "LatestDate": "2013-09-02T23:33:52.763-07:00"
+  },
+  {
+    "Id": "454833",
+    "Title": "[SOLVED] Install Java 32bit and64bit",
+    "LatestDate": "2013-08-29T05:37:22.523-07:00"
+  },
+  {
+    "Id": "454985",
+    "Title": "[Solved] installation guidance",
+    "LatestDate": "2013-08-30T04:08:08.093-07:00"
+  },
+  {
+    "Id": "455509",
+    "Title": "[Solved] Adobe Reader 11 catalog is empty ( Managed catalog Subscription )",
+    "LatestDate": "2013-09-17T11:25:59.207-07:00"
+  },
+  {
+    "Id": "455528",
+    "Title": "[Solved] Import updates from Managed Catalog",
+    "LatestDate": "2013-09-09T09:18:00.27-07:00"
+  },
+  {
+    "Id": "455571",
+    "Title": "[Solved] WPP hung if changing Computer in computer list",
+    "LatestDate": "2013-09-08T06:54:54.523-07:00"
+  },
+  {
+    "Id": "455783",
+    "Title": "[Solved] WSUS Replica Server",
+    "LatestDate": "2013-09-06T13:02:55.43-07:00"
+  },
+  {
+    "Id": "456144",
+    "Title": "[SOLVED] Problems with file exist and modified date",
+    "LatestDate": "2013-09-08T08:40:32.99-07:00"
+  },
+  {
+    "Id": "456252",
+    "Title": "[Solved] Minor Language Bug on \"Manage Catalog Subcripton\" screen",
+    "LatestDate": "2013-09-09T12:34:37.833-07:00"
+  },
+  {
+    "Id": "456258",
+    "Title": "[Solved] Error Code 800B0109 When Installing Adobe Reader",
+    "LatestDate": "2013-09-09T14:26:20.79-07:00"
+  },
+  {
+    "Id": "456297",
+    "Title": "[Solved] add a module under 'check computers against AD'",
+    "LatestDate": "2013-09-14T12:07:34.807-07:00"
+  },
+  {
+    "Id": "456311",
+    "Title": "[Solved] Can LUP and WPP coexist on same WSUSserver?",
+    "LatestDate": "2013-09-26T01:05:48.257-07:00"
+  },
+  {
+    "Id": "456843",
+    "Title": "[Out of Scope] Wake On Lan",
+    "LatestDate": "2014-10-10T07:41:07.367-07:00"
+  },
+  {
+    "Id": "456981",
+    "Title": "Which ports to open in firewall",
+    "LatestDate": "2014-01-29T12:56:42.12-08:00"
+  },
+  {
+    "Id": "457068",
+    "Title": "[Solved] Connection Failed to Local WSUS Server",
+    "LatestDate": "2013-09-18T07:20:50.923-07:00"
+  },
+  {
+    "Id": "457188",
+    "Title": "[Solved] Updates keep returning",
+    "LatestDate": "2013-09-19T07:51:13.683-07:00"
+  },
+  {
+    "Id": "457207",
+    "Title": "[Solved] Approved install",
+    "LatestDate": "2013-10-03T02:38:06.347-07:00"
+  },
+  {
+    "Id": "457221",
+    "Title": "HOW TO: Deploy Java 7 Update 40 (32-bit) & (64-bit) with UAC on or off in the client environment.",
+    "LatestDate": "2014-08-31T01:58:53.587-07:00"
+  },
+  {
+    "Id": "458820",
+    "Title": "[Solved] console version mismatch.",
+    "LatestDate": "2013-09-23T13:03:59.707-07:00"
+  },
+  {
+    "Id": "458988",
+    "Title": "[Solved] Deploy EXE files without admin privileges",
+    "LatestDate": "2013-09-25T14:20:46.71-07:00"
+  },
+  {
+    "Id": "459343",
+    "Title": "[Solved] How can HP Catalog Driver update be installed?",
+    "LatestDate": "2013-09-26T07:34:08.777-07:00"
+  },
+  {
+    "Id": "459352",
+    "Title": "[Auto-Solved] WSUS Replica Downstream Server Problems - Folder & Id field red - missing cab files",
+    "LatestDate": "2014-12-01T06:14:55.56-08:00"
+  },
+  {
+    "Id": "459387",
+    "Title": "Translation Enhancement",
+    "LatestDate": "2015-11-11T06:43:59.983-08:00"
+  },
+  {
+    "Id": "459593",
+    "Title": "New Member !",
+    "LatestDate": "2013-10-14T13:17:29.17-07:00"
+  },
+  {
+    "Id": "459594",
+    "Title": "New Member !",
+    "LatestDate": "2013-09-30T14:17:36.387-07:00"
+  },
+  {
+    "Id": "459647",
+    "Title": "[Applied] Hilfe Menü",
+    "LatestDate": "2013-09-29T10:55:14.167-07:00"
+  },
+  {
+    "Id": "459653",
+    "Title": "[Applied] Subscribe to Catalogs",
+    "LatestDate": "2013-09-29T13:05:35.833-07:00"
+  },
+  {
+    "Id": "459654",
+    "Title": "[Applied] Switching to German Language Setting",
+    "LatestDate": "2013-09-29T13:09:59.897-07:00"
+  },
+  {
+    "Id": "459689",
+    "Title": "[Solved] Limit installation to shutdown",
+    "LatestDate": "2013-10-03T05:13:55.063-07:00"
+  },
+  {
+    "Id": "459702",
+    "Title": "[Solved] Error Code 800B0109 When Installing Firefox ",
+    "LatestDate": "2013-10-08T03:55:40.127-07:00"
+  },
+  {
+    "Id": "459805",
+    "Title": "[Solved] Updates require admin rights",
+    "LatestDate": "2013-10-08T02:12:26.317-07:00"
+  },
+  {
+    "Id": "460948",
+    "Title": "[Solved] Optional updates",
+    "LatestDate": "2013-10-08T07:50:41.907-07:00"
+  },
+  {
+    "Id": "460959",
+    "Title": "[Solved] \"COM Exception ! Verify the firewall settings on the remote computer.\"",
+    "LatestDate": "2013-10-02T11:49:19.317-07:00"
+  },
+  {
+    "Id": "461048",
+    "Title": "[Solved] Certificate Issue on 64bit package only",
+    "LatestDate": "2013-10-03T10:19:59.493-07:00"
+  },
+  {
+    "Id": "461051",
+    "Title": "[Solved] Replica Server CAB Files",
+    "LatestDate": "2013-10-04T05:46:04.12-07:00"
+  },
+  {
+    "Id": "461236",
+    "Title": "Publication Adobe Flash Player et Java",
+    "LatestDate": "2013-10-18T07:30:17.857-07:00"
+  },
+  {
+    "Id": "461328",
+    "Title": "[Applied] Reboot Message",
+    "LatestDate": "2013-10-06T11:37:58.053-07:00"
+  },
+  {
+    "Id": "461390",
+    "Title": "[Solved] Removal support for \"EXE\" updates",
+    "LatestDate": "2013-10-07T07:01:44.03-07:00"
+  },
+  {
+    "Id": "461504",
+    "Title": "[Solved] W8 error = 0x80070032 in update",
+    "LatestDate": "2013-10-18T12:25:33.69-07:00"
+  },
+  {
+    "Id": "461547",
+    "Title": "[Solved] Server 2012 with console on Windows 7",
+    "LatestDate": "2013-10-08T21:42:06.953-07:00"
+  },
+  {
+    "Id": "461558",
+    "Title": "\"Delete Product\" in Publisher",
+    "LatestDate": "2013-10-18T12:52:05.73-07:00"
+  },
+  {
+    "Id": "461581",
+    "Title": "[Closed] 7z920-x64.msi installed in to %ProgramFiles(x86)% folder",
+    "LatestDate": "2013-10-08T23:45:29.337-07:00"
+  },
+  {
+    "Id": "461631",
+    "Title": "[Solved] Error 0x800B0109 and when I try to delete the package \"cannot delete revisionid...\"",
+    "LatestDate": "2013-10-15T05:59:43.713-07:00"
+  },
+  {
+    "Id": "461732",
+    "Title": "[Solved] Java detection",
+    "LatestDate": "2013-10-10T02:33:29.567-07:00"
+  },
+  {
+    "Id": "461774",
+    "Title": "[Solved] Error when i create an update",
+    "LatestDate": "2013-10-10T08:27:23.42-07:00"
+  },
+  {
+    "Id": "461845",
+    "Title": "[Solved] WSUS Replica in another forest",
+    "LatestDate": "2013-10-14T03:05:31.69-07:00"
+  },
+  {
+    "Id": "461870",
+    "Title": "Windows 8 and CustomUpdateEngine.exe",
+    "LatestDate": "2014-11-06T06:19:45.923-08:00"
+  },
+  {
+    "Id": "462030",
+    "Title": "[Solved] Where can I download the newest sourcecode?",
+    "LatestDate": "2013-12-03T09:32:17.287-08:00"
+  },
+  {
+    "Id": "462043",
+    "Title": "[Solved] Uninstalling all previous JAVA JDK versions and Installating JAVA JDK 7u40 ",
+    "LatestDate": "2014-06-04T06:35:56.26-07:00"
+  },
+  {
+    "Id": "462426",
+    "Title": "[Solved] Erreur lors du déploiement de l'ActiveX de Flash",
+    "LatestDate": "2013-11-07T21:46:39.217-08:00"
+  },
+  {
+    "Id": "462519",
+    "Title": "HOW TO: Deploy Java 7 Update 45 (32-bit) & (64-bit) with UAC on or off in the client environment. ",
+    "LatestDate": "2015-03-03T07:32:49.09-08:00"
+  },
+  {
+    "Id": "462633",
+    "Title": "[Solved] Getting message \"Fail to copy file\"",
+    "LatestDate": "2013-10-18T07:31:15.03-07:00"
+  },
+  {
+    "Id": "462693",
+    "Title": "[Closed] Detection logic when moving pc",
+    "LatestDate": "2013-10-21T01:28:24.933-07:00"
+  },
+  {
+    "Id": "462696",
+    "Title": "[Closed] Thunderbird keeps shwing up after succesful installation",
+    "LatestDate": "2013-10-18T12:18:38.573-07:00"
+  },
+  {
+    "Id": "462727",
+    "Title": "[Solved] Open browser and Java Update",
+    "LatestDate": "2014-01-14T07:48:07.367-08:00"
+  },
+  {
+    "Id": "462974",
+    "Title": "[SOLVED] Disable Java Upate via Registry",
+    "LatestDate": "2013-10-22T06:35:06.58-07:00"
+  },
+  {
+    "Id": "463088",
+    "Title": "[SOLVED] Installations problems with Java 7u25 exe",
+    "LatestDate": "2013-10-22T06:44:02.523-07:00"
+  },
+  {
+    "Id": "463114",
+    "Title": "[Closed] Corrupted Computer Overview in WSUS Console ",
+    "LatestDate": "2013-10-23T11:52:44.473-07:00"
+  },
+  {
+    "Id": "463246",
+    "Title": "[Solved] Console Version differs from Server Version",
+    "LatestDate": "2013-10-23T11:40:56.627-07:00"
+  },
+  {
+    "Id": "463332",
+    "Title": "[Solved] Trouble having packages installed",
+    "LatestDate": "2013-11-04T10:09:43.44-08:00"
+  },
+  {
+    "Id": "464856",
+    "Title": "[Solved] Trying Silent installs without local user as Admin",
+    "LatestDate": "2013-11-04T10:10:50.77-08:00"
+  },
+  {
+    "Id": "465152",
+    "Title": "[Solved] [sha].cab file not created when update is published",
+    "LatestDate": "2013-11-07T11:43:46.897-08:00"
+  },
+  {
+    "Id": "465355",
+    "Title": "[Solved] Failed to Sign Package",
+    "LatestDate": "2013-12-18T11:26:54.65-08:00"
+  },
+  {
+    "Id": "465488",
+    "Title": "[Solved] Loading Certificate into WSUS under Windows 2012 R2",
+    "LatestDate": "2014-04-27T14:51:55.563-07:00"
+  },
+  {
+    "Id": "466242",
+    "Title": "[Closed] Import \"Metadata-Only Update\" from Catalog",
+    "LatestDate": "2013-11-06T11:46:33.94-08:00"
+  },
+  {
+    "Id": "466870",
+    "Title": "[Solved] Custom update failing when trying to add Reg entry!",
+    "LatestDate": "2013-11-07T22:04:53.13-08:00"
+  },
+  {
+    "Id": "467220",
+    "Title": "[Solved] Failed to sign package",
+    "LatestDate": "2013-11-08T12:02:43.267-08:00"
+  },
+  {
+    "Id": "468279",
+    "Title": "going stuck in publishing updates for Adobe Reader 11",
+    "LatestDate": "2013-11-25T03:14:55.053-08:00"
+  },
+  {
+    "Id": "468646",
+    "Title": "[Solved] language-Independent",
+    "LatestDate": "2013-11-14T02:25:28.43-08:00"
+  },
+  {
+    "Id": "470461",
+    "Title": "[SOLVED] Failed to Sign Package with 1.3.1311.6",
+    "LatestDate": "2013-11-19T23:28:58.61-08:00"
+  },
+  {
+    "Id": "470471",
+    "Title": "[Solved] Error 0x80070643 when Installing Java 7 U45 ",
+    "LatestDate": "2014-02-11T12:02:29.077-08:00"
+  },
+  {
+    "Id": "470603",
+    "Title": "[Solved] \"Not applicable\" issue",
+    "LatestDate": "2015-11-04T06:40:36.003-08:00"
+  },
+  {
+    "Id": "470738",
+    "Title": "[SOLVED] Package rules don't work",
+    "LatestDate": "2013-11-21T09:50:13.29-08:00"
+  },
+  {
+    "Id": "471047",
+    "Title": "created updates dosen't show up",
+    "LatestDate": "2013-11-25T23:16:09.88-08:00"
+  },
+  {
+    "Id": "471055",
+    "Title": "Custom Update questions",
+    "LatestDate": "2013-11-25T12:53:57.717-08:00"
+  },
+  {
+    "Id": "471065",
+    "Title": "[Solved] Install updates signed by our AD Root CA",
+    "LatestDate": "2013-11-25T13:33:28.357-08:00"
+  },
+  {
+    "Id": "471290",
+    "Title": "[Solved] Not able to Delete Update Group",
+    "LatestDate": "2014-09-08T12:55:59.677-07:00"
+  },
+  {
+    "Id": "471336",
+    "Title": "[Solved] Not Approved For Install updates show as Updates Needed in WSUS",
+    "LatestDate": "2013-11-27T13:21:49.167-08:00"
+  },
+  {
+    "Id": "471364",
+    "Title": "[Solved] How WSUS Package Publisher Handles Older Versions ",
+    "LatestDate": "2013-11-28T12:09:47.833-08:00"
+  },
+  {
+    "Id": "471367",
+    "Title": "[Solved] Avast reports that CustomUpdateEngine contains virus",
+    "LatestDate": "2013-11-28T12:20:06.1-08:00"
+  },
+  {
+    "Id": "471686",
+    "Title": "[Closed] Powershell script is not running",
+    "LatestDate": "2013-12-10T00:42:29.38-08:00"
+  },
+  {
+    "Id": "472466",
+    "Title": "[Solved] Processor Architecture",
+    "LatestDate": "2013-12-10T09:11:11.323-08:00"
+  },
+  {
+    "Id": "473328",
+    "Title": "[Solved] Incidence of a WSUS 3.0 SP2 cleanup (reset) on WPP package ?",
+    "LatestDate": "2013-12-12T10:12:17.067-08:00"
+  },
+  {
+    "Id": "473461",
+    "Title": "[Solved] Update only when older version is currently installed - ADOBE READER",
+    "LatestDate": "2013-12-16T19:12:53.763-08:00"
+  },
+  {
+    "Id": "474338",
+    "Title": "[Closed] Cannot install WPP",
+    "LatestDate": "2013-12-17T04:21:25.54-08:00"
+  },
+  {
+    "Id": "474376",
+    "Title": "[Solved] WPP and SCCM?",
+    "LatestDate": "2014-01-03T02:11:46.617-08:00"
+  },
+  {
+    "Id": "474516",
+    "Title": "[Solved] WSUS Repliac Servers",
+    "LatestDate": "2013-12-20T12:33:32.05-08:00"
+  },
+  {
+    "Id": "474960",
+    "Title": "[Solved] Environment variables in create file",
+    "LatestDate": "2013-12-20T12:31:17.03-08:00"
+  },
+  {
+    "Id": "475075",
+    "Title": "[Closed] Installation error",
+    "LatestDate": "2013-12-19T12:35:46.67-08:00"
+  },
+  {
+    "Id": "475185",
+    "Title": "[Solved] Configure clients without gpo?",
+    "LatestDate": "2013-12-25T13:13:08.24-08:00"
+  },
+  {
+    "Id": "476799",
+    "Title": "[Solved] Operators: \"AND\" & \"OR\" ",
+    "LatestDate": "2014-04-29T02:25:26.347-07:00"
+  },
+  {
+    "Id": "478060",
+    "Title": "[Solved] Error Code FFFC with windows update on custom Self extracting EXE install",
+    "LatestDate": "2014-03-05T02:01:58.98-08:00"
+  },
+  {
+    "Id": "479365",
+    "Title": "[Solved] Command Line / API for custom package publish",
+    "LatestDate": "2014-01-03T15:47:20.963-08:00"
+  },
+  {
+    "Id": "496016",
+    "Title": "[Solved] Probleme deploiement Mozilla Firefox ",
+    "LatestDate": "2014-01-14T11:57:28.68-08:00"
+  },
+  {
+    "Id": "501386",
+    "Title": "issues after enabling ssl",
+    "LatestDate": "2014-01-16T03:03:48.62-08:00"
+  },
+  {
+    "Id": "501388",
+    "Title": "[Solved] Reactivate expired update",
+    "LatestDate": "2014-01-16T03:49:41.617-08:00"
+  },
+  {
+    "Id": "513838",
+    "Title": "[Solved] Adobe Flash Player ActiveX 12.0.0.38 issue",
+    "LatestDate": "2014-01-22T00:28:35.87-08:00"
+  },
+  {
+    "Id": "524468",
+    "Title": "[Solved] mise à jour qui revient",
+    "LatestDate": "2014-01-29T08:01:46.16-08:00"
+  },
+  {
+    "Id": "524512",
+    "Title": "Republishing Adobe Reader with customized settings",
+    "LatestDate": "2014-01-31T07:06:51.083-08:00"
+  },
+  {
+    "Id": "527290",
+    "Title": "WSUS Replica-Server",
+    "LatestDate": "2014-01-30T03:16:37.383-08:00"
+  },
+  {
+    "Id": "527398",
+    "Title": "[Solved] Problem Windows 8.1",
+    "LatestDate": "2014-01-29T07:20:15.637-08:00"
+  },
+  {
+    "Id": "528525",
+    "Title": "Java updates",
+    "LatestDate": "2015-07-18T07:43:09.72-07:00"
+  },
+  {
+    "Id": "528753",
+    "Title": "[Solved] Installation pre-requisite Server and Console release",
+    "LatestDate": "2014-02-09T05:22:05.493-08:00"
+  },
+  {
+    "Id": "528901",
+    "Title": "[Solved] KeePass",
+    "LatestDate": "2014-02-04T11:23:54.333-08:00"
+  },
+  {
+    "Id": "528971",
+    "Title": "[Solved] Crash on 'Publish'",
+    "LatestDate": "2014-02-06T12:55:37.873-08:00"
+  },
+  {
+    "Id": "529552",
+    "Title": "WSUS/WPPTimeouts?",
+    "LatestDate": "2014-02-08T14:53:47-08:00"
+  },
+  {
+    "Id": "529775",
+    "Title": "[Solved] update java installation instruction",
+    "LatestDate": "2014-02-11T11:19:48.05-08:00"
+  },
+  {
+    "Id": "531178",
+    "Title": "Client gives 80244019 error when updating",
+    "LatestDate": "2014-05-08T02:57:26.853-07:00"
+  },
+  {
+    "Id": "531489",
+    "Title": "Setup as MSI or Update Catalog ",
+    "LatestDate": "2014-06-12T22:55:17.593-07:00"
+  },
+  {
+    "Id": "531526",
+    "Title": "[Solved] Cannot send an upgrade for copy a file",
+    "LatestDate": "2014-02-13T05:51:19.96-08:00"
+  },
+  {
+    "Id": "531665",
+    "Title": "Need help to deploy Adobe Reader 9.3.3 to Client Workstation",
+    "LatestDate": "2014-02-16T23:44:15.66-08:00"
+  },
+  {
+    "Id": "531700",
+    "Title": "[Solved] Client Failed to Download Code 800B0109",
+    "LatestDate": "2014-02-13T06:19:15.667-08:00"
+  },
+  {
+    "Id": "531715",
+    "Title": "Can I copy a folder ?",
+    "LatestDate": "2014-02-13T13:26:15.293-08:00"
+  },
+  {
+    "Id": "531976",
+    "Title": "old updates",
+    "LatestDate": "2014-02-15T13:03:23.903-08:00"
+  },
+  {
+    "Id": "533186",
+    "Title": "Return Codes",
+    "LatestDate": "2014-02-21T03:02:50.34-08:00"
+  },
+  {
+    "Id": "534761",
+    "Title": "[Solved] Publishing Issue Code 6BA",
+    "LatestDate": "2014-10-27T12:53:07.147-07:00"
+  },
+  {
+    "Id": "534943",
+    "Title": "Set a client's WSUS client service to debug mode",
+    "LatestDate": "2014-02-26T03:54:12.393-08:00"
+  },
+  {
+    "Id": "535569",
+    "Title": "Unable to publish updates due to WPP certificate problem",
+    "LatestDate": "2014-03-20T19:02:19.797-07:00"
+  },
+  {
+    "Id": "535621",
+    "Title": "Can I detect when Windows Updates are finished ?",
+    "LatestDate": "2014-02-26T07:16:33.037-08:00"
+  },
+  {
+    "Id": "535682",
+    "Title": "Own certificate with openssl",
+    "LatestDate": "2014-02-27T12:47:54.92-08:00"
+  },
+  {
+    "Id": "535831",
+    "Title": "JAva 7 U 51 install",
+    "LatestDate": "2014-03-04T07:27:18.68-08:00"
+  },
+  {
+    "Id": "537215",
+    "Title": "problem when publicating flash player, error 0x80244022",
+    "LatestDate": "2014-03-03T08:48:58.133-08:00"
+  },
+  {
+    "Id": "537741",
+    "Title": "WSUS certificate",
+    "LatestDate": "2014-03-04T06:57:49.83-08:00"
+  },
+  {
+    "Id": "537887",
+    "Title": "[Solved] Remove flash update as a new one is available",
+    "LatestDate": "2014-03-05T03:28:36.967-08:00"
+  },
+  {
+    "Id": "537895",
+    "Title": "[Solved] How to detect that a client has already an old version of the program to update",
+    "LatestDate": "2014-05-09T14:03:49.953-07:00"
+  },
+  {
+    "Id": "537899",
+    "Title": "Should I see my published Apps in the WSUS Package Publisher Console",
+    "LatestDate": "2014-03-06T04:57:11.463-08:00"
+  },
+  {
+    "Id": "538138",
+    "Title": "Rule Windows Version doesn't work ",
+    "LatestDate": "2014-03-12T07:21:16.237-07:00"
+  },
+  {
+    "Id": "538274",
+    "Title": "How to exclude servers ?",
+    "LatestDate": "2014-03-10T13:40:57.347-07:00"
+  },
+  {
+    "Id": "538421",
+    "Title": "Java Update Evaluation",
+    "LatestDate": "2014-03-11T03:54:25.777-07:00"
+  },
+  {
+    "Id": "538508",
+    "Title": "Java 7u51 fails in Windows 8 64 bits",
+    "LatestDate": "2014-03-21T00:25:30.84-07:00"
+  },
+  {
+    "Id": "538586",
+    "Title": "DELL BIOS Driver",
+    "LatestDate": "2014-03-12T06:10:56.92-07:00"
+  },
+  {
+    "Id": "538592",
+    "Title": "Request: Custom Update Templates / Custom XML import",
+    "LatestDate": "2014-03-11T03:28:50.493-07:00"
+  },
+  {
+    "Id": "538705",
+    "Title": "Adobe Reader Updates",
+    "LatestDate": "2014-03-12T04:18:10.987-07:00"
+  },
+  {
+    "Id": "538879",
+    "Title": "WSUS update Mozilla Firefox - problem",
+    "LatestDate": "2014-03-19T01:29:17.187-07:00"
+  },
+  {
+    "Id": "538920",
+    "Title": "Publishing and Not Applicable",
+    "LatestDate": "2014-03-18T13:43:18.213-07:00"
+  },
+  {
+    "Id": "539004",
+    "Title": "[Solved] Adobe FlashPlayer 12.0.0.77 out of the catalog doesn't install - HELP!",
+    "LatestDate": "2014-03-31T00:33:07.957-07:00"
+  },
+  {
+    "Id": "539246",
+    "Title": "Guide: Jave 7 Update 51 (x86)",
+    "LatestDate": "2014-04-01T04:05:40.66-07:00"
+  },
+  {
+    "Id": "539259",
+    "Title": "Java u51 detect issue: Not installed where should be Not applicable or Installed",
+    "LatestDate": "2014-03-27T10:07:11.35-07:00"
+  },
+  {
+    "Id": "539262",
+    "Title": "Source coude",
+    "LatestDate": "2014-06-27T06:49:05.72-07:00"
+  },
+  {
+    "Id": "539421",
+    "Title": "Adobe Flash Player 12.0.077 - mms.cfg files how to deploy this.",
+    "LatestDate": "2014-03-19T01:21:59.107-07:00"
+  },
+  {
+    "Id": "540054",
+    "Title": "Error publishing Adobe Acrobat 9.1.0 MSP",
+    "LatestDate": "2014-03-27T09:42:16.72-07:00"
+  },
+  {
+    "Id": "540186",
+    "Title": "Wsus wants to download old versions already installed",
+    "LatestDate": "2014-03-27T09:38:05.103-07:00"
+  },
+  {
+    "Id": "540203",
+    "Title": "[Solved] Client tries to install Update, which is deleted in WPP-Console",
+    "LatestDate": "2014-03-31T04:08:26.487-07:00"
+  },
+  {
+    "Id": "540354",
+    "Title": "Custom Update failed on Windows Server 2012",
+    "LatestDate": "2014-09-12T00:10:52.97-07:00"
+  },
+  {
+    "Id": "540452",
+    "Title": "Custom Update Creator",
+    "LatestDate": "2014-04-01T03:57:20.583-07:00"
+  },
+  {
+    "Id": "541309",
+    "Title": "[solved] Powershell script don't work",
+    "LatestDate": "2014-04-09T01:21:09.473-07:00"
+  },
+  {
+    "Id": "541602",
+    "Title": "[solved] Replica Server",
+    "LatestDate": "2014-04-10T00:12:51.493-07:00"
+  },
+  {
+    "Id": "541683",
+    "Title": "[Closed] Documentation for creating Firefox Package",
+    "LatestDate": "2014-04-08T23:32:48.94-07:00"
+  },
+  {
+    "Id": "541836",
+    "Title": "Clients cannot detect Adobe Reader 9.3.3 from WPP",
+    "LatestDate": "2014-04-15T03:33:19.16-07:00"
+  },
+  {
+    "Id": "541977",
+    "Title": "[Solved] Error while approving Update",
+    "LatestDate": "2014-04-15T04:33:08.023-07:00"
+  },
+  {
+    "Id": "542037",
+    "Title": "Custom Update vs. Silent EXE Installer",
+    "LatestDate": "2014-05-08T02:36:22.38-07:00"
+  },
+  {
+    "Id": "542679",
+    "Title": "[SOLVED] Deploy new mst file for Adobe Reader XI",
+    "LatestDate": "2014-07-18T04:13:10.613-07:00"
+  },
+  {
+    "Id": "543656",
+    "Title": "New Member !",
+    "LatestDate": "2014-05-21T13:01:02.767-07:00"
+  },
+  {
+    "Id": "543704",
+    "Title": "[Closed] Update reported as 'not installed' is not downloaded.",
+    "LatestDate": "2014-04-30T09:22:08.217-07:00"
+  },
+  {
+    "Id": "543822",
+    "Title": "Adobe Reader patch reported as 'Not applicable'",
+    "LatestDate": "2014-04-30T07:12:33.977-07:00"
+  },
+  {
+    "Id": "543915",
+    "Title": "Flash Player Updates with Code 6BA",
+    "LatestDate": "2014-05-06T07:22:24.193-07:00"
+  },
+  {
+    "Id": "543970",
+    "Title": "[Solved] Adobe Flash and Reader and IE integration",
+    "LatestDate": "2014-06-02T04:26:19.587-07:00"
+  },
+  {
+    "Id": "543986",
+    "Title": "[Solved] Adobe Flash Catalog - Only receiving 6KB file instead of 17-18MB files",
+    "LatestDate": "2014-05-12T11:57:41.437-07:00"
+  },
+  {
+    "Id": "544469",
+    "Title": "[Solved] Support for downstream WSUS Servers?",
+    "LatestDate": "2014-05-06T12:59:58.94-07:00"
+  },
+  {
+    "Id": "544620",
+    "Title": "Strange error with Win2012 R2",
+    "LatestDate": "2014-05-09T12:11:49.463-07:00"
+  },
+  {
+    "Id": "545040",
+    "Title": "certificate RSA 512 Bit",
+    "LatestDate": "2014-05-12T23:06:40.323-07:00"
+  },
+  {
+    "Id": "545133",
+    "Title": "[Solved] Publishing Updates to individual computers in a group",
+    "LatestDate": "2014-05-14T13:09:39.043-07:00"
+  },
+  {
+    "Id": "545345",
+    "Title": "[Solved] Remove Product from Replica Server(s)",
+    "LatestDate": "2014-05-14T13:49:26.517-07:00"
+  },
+  {
+    "Id": "545387",
+    "Title": "Need help understanding the purpose of the Msi Product Code and \"Reverse Rule\"",
+    "LatestDate": "2014-05-15T16:10:40.803-07:00"
+  },
+  {
+    "Id": "545389",
+    "Title": "How to delete a n item listed under the updates heading?",
+    "LatestDate": "2014-05-15T13:06:17.907-07:00"
+  },
+  {
+    "Id": "545390",
+    "Title": "[Solved] Help Deploying Adobe Reader 11.0.07",
+    "LatestDate": "2014-05-19T17:47:39.067-07:00"
+  },
+  {
+    "Id": "545432",
+    "Title": "[Solved] Deployment of Adobe Flash - 80070643",
+    "LatestDate": "2014-05-22T08:32:29.2-07:00"
+  },
+  {
+    "Id": "545527",
+    "Title": "[Solved] Publishing Irfanview",
+    "LatestDate": "2014-05-18T23:16:03.26-07:00"
+  },
+  {
+    "Id": "545547",
+    "Title": "how to detect in a client a newest version already installed of a package",
+    "LatestDate": "2014-05-20T05:25:50.62-07:00"
+  },
+  {
+    "Id": "545792",
+    "Title": "[Solved] Copy a file from WPP server to a client",
+    "LatestDate": "2014-05-19T09:51:52.82-07:00"
+  },
+  {
+    "Id": "545803",
+    "Title": "[Solved] Client Faild to Connect",
+    "LatestDate": "2015-01-13T08:23:57.937-08:00"
+  },
+  {
+    "Id": "545923",
+    "Title": "[Solved] Modify XML coda before plublishing an update",
+    "LatestDate": "2014-06-05T12:48:38.627-07:00"
+  },
+  {
+    "Id": "545934",
+    "Title": "Ruleset Editor",
+    "LatestDate": "2015-02-27T09:18:49.253-08:00"
+  },
+  {
+    "Id": "545936",
+    "Title": "Re-usable Update Packages",
+    "LatestDate": "2014-05-23T11:51:40.893-07:00"
+  },
+  {
+    "Id": "546231",
+    "Title": "[Closed] Newbie: Acrobat Reader 11.0.7 and Java 7 U55 (32bit)",
+    "LatestDate": "2014-05-23T04:06:30.393-07:00"
+  },
+  {
+    "Id": "546813",
+    "Title": "[Solved] showing pending updates",
+    "LatestDate": "2014-05-28T06:05:43.557-07:00"
+  },
+  {
+    "Id": "546816",
+    "Title": "[Solved] Error while trying to deploy updates",
+    "LatestDate": "2014-05-29T08:53:06.863-07:00"
+  },
+  {
+    "Id": "547328",
+    "Title": "Deployment of SAP network installer",
+    "LatestDate": "2014-06-03T10:50:39.037-07:00"
+  },
+  {
+    "Id": "547463",
+    "Title": "[Solved] Import Updates from Catalog - No updates are shown?",
+    "LatestDate": "2014-06-03T15:01:05.66-07:00"
+  },
+  {
+    "Id": "547577",
+    "Title": "[Solved] Deploying Firefox",
+    "LatestDate": "2015-11-05T09:19:02.963-08:00"
+  },
+  {
+    "Id": "547630",
+    "Title": "[Solved] Custom Update XML-File",
+    "LatestDate": "2014-06-11T11:04:19.753-07:00"
+  },
+  {
+    "Id": "547642",
+    "Title": "Import from Catalog fails during publishing. \"Verification of file signature failed for file\"",
+    "LatestDate": "2014-06-06T14:58:14.95-07:00"
+  },
+  {
+    "Id": "548145",
+    "Title": "[Solved] How to deploy msu hotfix ?",
+    "LatestDate": "2014-06-11T01:08:59.023-07:00"
+  },
+  {
+    "Id": "548240",
+    "Title": "[Solved] Code signing certificate",
+    "LatestDate": "2014-06-20T13:26:02.113-07:00"
+  },
+  {
+    "Id": "548286",
+    "Title": "[Solved] The WPP console crash everytime on report",
+    "LatestDate": "2014-06-30T09:30:49.163-07:00"
+  },
+  {
+    "Id": "548324",
+    "Title": "CustomUpdateEngine.exe and ampersands in executable lines",
+    "LatestDate": "2014-06-11T10:33:11.34-07:00"
+  },
+  {
+    "Id": "548428",
+    "Title": "Replace a Update",
+    "LatestDate": "2014-06-13T00:19:46.923-07:00"
+  },
+  {
+    "Id": "548569",
+    "Title": "[Solved] WPP remote connection on a downstream server",
+    "LatestDate": "2014-09-18T03:44:48.707-07:00"
+  },
+  {
+    "Id": "548957",
+    "Title": "Published update status \"not yet downloaded\"",
+    "LatestDate": "2014-06-20T13:08:54.153-07:00"
+  },
+  {
+    "Id": "549170",
+    "Title": "[Solved] Creating Package using WPP and moving content to offline server without WPP?",
+    "LatestDate": "2014-06-23T08:07:43.83-07:00"
+  },
+  {
+    "Id": "549183",
+    "Title": "Re-Certification of Updates",
+    "LatestDate": "2014-06-20T13:01:04.567-07:00"
+  },
+  {
+    "Id": "549215",
+    "Title": "[Solved] Deploy Adobe Reader XI 11.0.07 with customized settings",
+    "LatestDate": "2014-06-26T04:07:54.89-07:00"
+  },
+  {
+    "Id": "549274",
+    "Title": "[Closed] Adobe Acrobat Professional XI 11.0.07 msp",
+    "LatestDate": "2014-06-20T11:52:44.94-07:00"
+  },
+  {
+    "Id": "549416",
+    "Title": "[Solved] Verification of file signature failed que sur un package",
+    "LatestDate": "2014-07-03T14:07:32.11-07:00"
+  },
+  {
+    "Id": "549623",
+    "Title": "[Solved] WPB + VPN",
+    "LatestDate": "2014-06-25T11:41:20.937-07:00"
+  },
+  {
+    "Id": "549714",
+    "Title": "[Solved] Translation - Traditional Chinese",
+    "LatestDate": "2014-06-26T04:21:48.953-07:00"
+  },
+  {
+    "Id": "550217",
+    "Title": "[Solved] Show Pending Updates Firewall problem",
+    "LatestDate": "2015-02-19T08:31:10.017-08:00"
+  },
+  {
+    "Id": "550630",
+    "Title": "[Solved] Adobe Reader custom settings with SCUP catalog import?",
+    "LatestDate": "2014-07-07T11:06:27.997-07:00"
+  },
+  {
+    "Id": "550777",
+    "Title": "[Solved] Update Level rules / Package level rules",
+    "LatestDate": "2014-07-07T06:40:35.117-07:00"
+  },
+  {
+    "Id": "550784",
+    "Title": "[Solved] Problems with \"OR\" Rules",
+    "LatestDate": "2014-07-09T03:10:09.673-07:00"
+  },
+  {
+    "Id": "551011",
+    "Title": "[Closed] exporting and importing Updates into different WPP",
+    "LatestDate": "2014-12-02T04:22:38.273-08:00"
+  },
+  {
+    "Id": "551023",
+    "Title": "Not Installed",
+    "LatestDate": "2014-07-12T08:12:31.467-07:00"
+  },
+  {
+    "Id": "551058",
+    "Title": "Installed updates continue to want to be installed",
+    "LatestDate": "2014-10-17T07:33:40.233-07:00"
+  },
+  {
+    "Id": "551118",
+    "Title": "[Solved] some Clients always \"offline\"",
+    "LatestDate": "2014-07-13T04:54:44.783-07:00"
+  },
+  {
+    "Id": "551205",
+    "Title": "[Solved] Console version mismatch after Update for Windows Server Update Services 3.0 SP2 (KB2938066)",
+    "LatestDate": "2014-07-12T08:17:13.65-07:00"
+  },
+  {
+    "Id": "551219",
+    "Title": "SOLVED: Certificate invalid not able to publish packages",
+    "LatestDate": "2014-07-11T00:03:56.71-07:00"
+  },
+  {
+    "Id": "551508",
+    "Title": "[Solved] Best way to update WPP?",
+    "LatestDate": "2014-07-14T12:34:00.3-07:00"
+  },
+  {
+    "Id": "551610",
+    "Title": "[Solved] Issue with Custom Update",
+    "LatestDate": "2014-07-17T07:19:23.693-07:00"
+  },
+  {
+    "Id": "551915",
+    "Title": "[Solved] WSUS Package Publisher Crashes on Custom Update",
+    "LatestDate": "2014-07-28T10:28:20.443-07:00"
+  },
+  {
+    "Id": "552418",
+    "Title": "[Solved] Custom Updates crash in Release v1.3.1407.11",
+    "LatestDate": "2014-07-28T10:38:17.72-07:00"
+  },
+  {
+    "Id": "552424",
+    "Title": "Install this Update.... explanation",
+    "LatestDate": "2014-07-28T10:41:07.85-07:00"
+  },
+  {
+    "Id": "554507",
+    "Title": "[Solved] XP SP3: \"specified cryptographic algorithm is not supported\"",
+    "LatestDate": "2014-07-29T08:10:26.027-07:00"
+  },
+  {
+    "Id": "554611",
+    "Title": "[Solved] Codes 800B0109 (Windows 7) et 57E (Windows 8)",
+    "LatestDate": "2014-07-31T03:29:32.767-07:00"
+  },
+  {
+    "Id": "560575",
+    "Title": "[Solved] Failed to Sign Package - it was the proxy !",
+    "LatestDate": "2014-08-12T12:40:45.26-07:00"
+  },
+  {
+    "Id": "560578",
+    "Title": "[SOLVED] - WinUpdate Failure 802000F and Trigger for SQL Database did not work",
+    "LatestDate": "2014-08-15T07:15:52.667-07:00"
+  },
+  {
+    "Id": "560860",
+    "Title": "Symantec Endpoint Protection (versions 12.1.4013.4013 and 12.1.4112.4156 )",
+    "LatestDate": "2014-08-11T10:49:40.377-07:00"
+  },
+  {
+    "Id": "560873",
+    "Title": "Use of regular expressions in detection",
+    "LatestDate": "2014-08-12T13:22:19.247-07:00"
+  },
+  {
+    "Id": "560929",
+    "Title": "WPP Client Actions: Start/Stop Windows Update Service",
+    "LatestDate": "2014-08-19T12:52:12.89-07:00"
+  },
+  {
+    "Id": "560933",
+    "Title": "Install specific updates on startup/shutdown",
+    "LatestDate": "2014-08-12T13:11:38.793-07:00"
+  },
+  {
+    "Id": "560934",
+    "Title": "[Solved] How can i remove unused and/or unnecessary product categories",
+    "LatestDate": "2014-08-12T22:56:00.7-07:00"
+  },
+  {
+    "Id": "560943",
+    "Title": "[Closed] Java problems still",
+    "LatestDate": "2014-10-18T02:02:22.157-07:00"
+  },
+  {
+    "Id": "561023",
+    "Title": "Application hangs deleting products",
+    "LatestDate": "2014-08-19T21:41:50.737-07:00"
+  },
+  {
+    "Id": "561045",
+    "Title": "[Closed] Managed to install custom updates but now can't install normal microsoft updates",
+    "LatestDate": "2014-09-02T03:25:21.387-07:00"
+  },
+  {
+    "Id": "561138",
+    "Title": "Install Error Adobe Air",
+    "LatestDate": "2014-11-14T19:26:56.51-08:00"
+  },
+  {
+    "Id": "561164",
+    "Title": "Rules with AND + OR in system detection",
+    "LatestDate": "2014-08-14T13:21:07.063-07:00"
+  },
+  {
+    "Id": "561181",
+    "Title": "Approving updates",
+    "LatestDate": "2014-08-18T09:44:00.64-07:00"
+  },
+  {
+    "Id": "561635",
+    "Title": "WPP Connect to client",
+    "LatestDate": "2014-09-18T03:45:51.467-07:00"
+  },
+  {
+    "Id": "561683",
+    "Title": "Recover from Re-build of WSUS",
+    "LatestDate": "2014-08-20T11:43:55.5-07:00"
+  },
+  {
+    "Id": "561744",
+    "Title": "[Closed] id issues for Deploy third party update",
+    "LatestDate": "2014-08-24T17:53:25.277-07:00"
+  },
+  {
+    "Id": "561761",
+    "Title": "Publishing Already Signed Updates",
+    "LatestDate": "2014-09-13T12:01:09.827-07:00"
+  },
+  {
+    "Id": "561781",
+    "Title": "Context menu for superseding update missing",
+    "LatestDate": "2014-08-21T10:52:46.003-07:00"
+  },
+  {
+    "Id": "561815",
+    "Title": "Accidentally clicked on \"Generate the Certificate\" again",
+    "LatestDate": "2014-08-22T12:51:49.673-07:00"
+  },
+  {
+    "Id": "561908",
+    "Title": "[Solved] Custom Update for .msu file",
+    "LatestDate": "2014-08-23T13:36:18.747-07:00"
+  },
+  {
+    "Id": "562189",
+    "Title": "[Closed] Java 7u67 Deployment",
+    "LatestDate": "2014-09-15T14:26:44.563-07:00"
+  },
+  {
+    "Id": "562285",
+    "Title": "Few Servers Not Being Patched via WSUS",
+    "LatestDate": "2014-08-27T21:50:26.333-07:00"
+  },
+  {
+    "Id": "562315",
+    "Title": "[Solved] Lost Certificat",
+    "LatestDate": "2014-09-02T00:12:25.817-07:00"
+  },
+  {
+    "Id": "562673",
+    "Title": "Java 8 Update 20 introduces new installer behavior, again",
+    "LatestDate": "2014-08-29T07:22:03.607-07:00"
+  },
+  {
+    "Id": "565007",
+    "Title": "[Solved] Adobe Products disapear in gui",
+    "LatestDate": "2014-09-17T22:53:13.103-07:00"
+  },
+  {
+    "Id": "565317",
+    "Title": "[Closed] Deleting \"old Product\" in WPP",
+    "LatestDate": "2014-09-13T12:02:47.373-07:00"
+  },
+  {
+    "Id": "565568",
+    "Title": "[Closed]Multiple WPP instances on different networks with the same self signed certificate.",
+    "LatestDate": "2014-09-05T07:10:39.957-07:00"
+  },
+  {
+    "Id": "565614",
+    "Title": "[Solved] Issue deleting products",
+    "LatestDate": "2014-12-10T00:11:53.133-08:00"
+  },
+  {
+    "Id": "567538",
+    "Title": "update dependancy",
+    "LatestDate": "2014-09-16T03:27:24.507-07:00"
+  },
+  {
+    "Id": "567761",
+    "Title": "[Solved] Remote Administration and Update deployment",
+    "LatestDate": "2014-09-18T03:26:18.967-07:00"
+  },
+  {
+    "Id": "567769",
+    "Title": "Not Able to detect or push the patches to clients",
+    "LatestDate": "2014-09-18T12:54:36.363-07:00"
+  },
+  {
+    "Id": "567875",
+    "Title": "Install Update Acrobat Reader 11.00.9",
+    "LatestDate": "2014-09-19T08:07:27.323-07:00"
+  },
+  {
+    "Id": "568034",
+    "Title": "[Solved] certificate not recognized.",
+    "LatestDate": "2014-10-01T07:53:29.763-07:00"
+  },
+  {
+    "Id": "568173",
+    "Title": "Using Catalogs",
+    "LatestDate": "2014-09-30T11:31:07.97-07:00"
+  },
+  {
+    "Id": "568618",
+    "Title": "Acrobat Reader 11.0.09",
+    "LatestDate": "2014-10-16T01:09:44.193-07:00"
+  },
+  {
+    "Id": "568939",
+    "Title": "Rule to determine if the update is already installed",
+    "LatestDate": "2014-10-03T09:09:44.613-07:00"
+  },
+  {
+    "Id": "569177",
+    "Title": "PowerShell App Deployment Toolkit and WSUS Package Publisher",
+    "LatestDate": "2014-10-08T22:13:40.667-07:00"
+  },
+  {
+    "Id": "569323",
+    "Title": "Create a MSU import feature",
+    "LatestDate": "2014-11-03T12:26:16.967-08:00"
+  },
+  {
+    "Id": "569490",
+    "Title": "Add column to status tab",
+    "LatestDate": "2014-10-18T01:13:16.823-07:00"
+  },
+  {
+    "Id": "569783",
+    "Title": "[Solved] Adobe Reader package issues",
+    "LatestDate": "2014-10-20T07:27:04.443-07:00"
+  },
+  {
+    "Id": "570023",
+    "Title": "Client`s workstation not see published updates. Please Help!",
+    "LatestDate": "2014-10-17T07:55:52.3-07:00"
+  },
+  {
+    "Id": "570089",
+    "Title": "Adobe Reader 11.0.09 - Fails on install Error Code 66A from Windows update",
+    "LatestDate": "2014-10-18T03:03:50.953-07:00"
+  },
+  {
+    "Id": "570135",
+    "Title": "[Solved] - JAVA not uninstalling old version",
+    "LatestDate": "2014-10-23T13:52:53.54-07:00"
+  },
+  {
+    "Id": "570492",
+    "Title": "Java 8 update 25",
+    "LatestDate": "2015-03-16T13:05:23.6-07:00"
+  },
+  {
+    "Id": "570803",
+    "Title": "[Closed] - Updating WPP base software",
+    "LatestDate": "2014-10-29T04:11:58.797-07:00"
+  },
+  {
+    "Id": "570920",
+    "Title": "[Closed] - updates are no longer displayed",
+    "LatestDate": "2014-10-30T08:38:14.14-07:00"
+  },
+  {
+    "Id": "571139",
+    "Title": "[Closed] - Failed to Publish",
+    "LatestDate": "2014-11-07T11:50:03.47-08:00"
+  },
+  {
+    "Id": "571312",
+    "Title": "Server version is different from console version",
+    "LatestDate": "2014-11-10T17:01:06.94-08:00"
+  },
+  {
+    "Id": "571440",
+    "Title": "[Solved] - Renaming folders in Custom Updates and variables",
+    "LatestDate": "2014-11-06T13:35:35.28-08:00"
+  },
+  {
+    "Id": "571656",
+    "Title": "[Solved] need help copy file to installation directora",
+    "LatestDate": "2014-11-13T12:57:56.943-08:00"
+  },
+  {
+    "Id": "571705",
+    "Title": "WPP is very slow publishing big Updates",
+    "LatestDate": "2014-12-03T13:40:32.407-08:00"
+  },
+  {
+    "Id": "571775",
+    "Title": "[Solved] - Report tab",
+    "LatestDate": "2014-11-21T08:26:40.353-08:00"
+  },
+  {
+    "Id": "571826",
+    "Title": "[Solved] Issues with Adobe Flash and version Control",
+    "LatestDate": "2014-11-12T16:57:32.373-08:00"
+  },
+  {
+    "Id": "571905",
+    "Title": "[Solved] - Version check through registry keys. I don't really understand...",
+    "LatestDate": "2014-11-13T08:44:05.197-08:00"
+  },
+  {
+    "Id": "571906",
+    "Title": "Please decrease the height of dialog boxes",
+    "LatestDate": "2015-02-27T09:07:19.813-08:00"
+  },
+  {
+    "Id": "571909",
+    "Title": "2 less clicks to publish updates",
+    "LatestDate": "2014-11-12T11:38:54.763-08:00"
+  },
+  {
+    "Id": "571994",
+    "Title": "[Solved] Default Adobe Catalog automatically removed",
+    "LatestDate": "2014-11-13T07:04:52.423-08:00"
+  },
+  {
+    "Id": "572062",
+    "Title": "Rules: Registry 32 Bit option. Can someone please explain?",
+    "LatestDate": "2015-02-13T01:42:00.987-08:00"
+  },
+  {
+    "Id": "572079",
+    "Title": ".net 4.0 Framework Client + Extended",
+    "LatestDate": "2014-11-14T09:20:30.14-08:00"
+  },
+  {
+    "Id": "572103",
+    "Title": "[Closed] - Unable to Publish Updates from Multiple User/Admin Accounts",
+    "LatestDate": "2014-11-18T21:36:52.003-08:00"
+  },
+  {
+    "Id": "572749",
+    "Title": "[Solved] - Office 2013 update",
+    "LatestDate": "2014-11-21T09:27:50.293-08:00"
+  },
+  {
+    "Id": "573292",
+    "Title": "Windows Update  : Erreur code 51D",
+    "LatestDate": "2014-12-03T13:24:09.453-08:00"
+  },
+  {
+    "Id": "573412",
+    "Title": "Uninstall Java 7 via WPP",
+    "LatestDate": "2015-01-13T04:12:22.677-08:00"
+  },
+  {
+    "Id": "573448",
+    "Title": "[Solved] - WSUS Replica Downstream Server Problems - Folder & Id field red",
+    "LatestDate": "2014-11-29T23:02:18.597-08:00"
+  },
+  {
+    "Id": "573455",
+    "Title": "Can we add a Refresh View button, like in WSUS console",
+    "LatestDate": "2014-11-28T09:03:31.6-08:00"
+  },
+  {
+    "Id": "573688",
+    "Title": "Unable to connect to local server",
+    "LatestDate": "2015-06-17T09:43:50.757-07:00"
+  },
+  {
+    "Id": "573827",
+    "Title": "Planning ahead certificate expires",
+    "LatestDate": "2014-12-03T13:05:03.917-08:00"
+  },
+  {
+    "Id": "573923",
+    "Title": "3rd Party Catalogs specifically Shavlik and WPP ",
+    "LatestDate": "2014-12-03T11:03:09.703-08:00"
+  },
+  {
+    "Id": "574487",
+    "Title": "Auto Deletion of Updates and Failing in Windows 8",
+    "LatestDate": "2014-12-12T00:33:06.403-08:00"
+  },
+  {
+    "Id": "574497",
+    "Title": "\"reactivate\" a replaced package",
+    "LatestDate": "2014-12-11T03:24:45.78-08:00"
+  },
+  {
+    "Id": "574888",
+    "Title": "[Solved] Server version is different from console version (even though it's not)",
+    "LatestDate": "2015-03-12T05:45:33.053-07:00"
+  },
+  {
+    "Id": "574928",
+    "Title": "How to deploy msi files together with msp files that need FULL path? (e. g. Adobe Reader XI)",
+    "LatestDate": "2014-12-29T05:43:07.333-08:00"
+  },
+  {
+    "Id": "574934",
+    "Title": "[Solved] Can't save Self signed certificate to file per documentation",
+    "LatestDate": "2014-12-15T09:25:56.35-08:00"
+  },
+  {
+    "Id": "575563",
+    "Title": "[Closed] Is there an update catalogue for Java?",
+    "LatestDate": "2014-12-16T07:53:07.843-08:00"
+  },
+  {
+    "Id": "575621",
+    "Title": "Is it possible to add AD DS Group as filter to deploy custom application",
+    "LatestDate": "2014-12-17T06:23:58.193-08:00"
+  },
+  {
+    "Id": "575768",
+    "Title": "Installing Java 8 Update 25 without Admin Rights",
+    "LatestDate": "2015-04-28T07:48:13.3-07:00"
+  },
+  {
+    "Id": "576086",
+    "Title": "Saving and loading rules not working as expected",
+    "LatestDate": "2016-01-12T19:51:17.883-08:00"
+  },
+  {
+    "Id": "576088",
+    "Title": "Fehler - Errors - Verbesserungsvorschläge",
+    "LatestDate": "2015-03-04T11:51:47.853-08:00"
+  },
+  {
+    "Id": "576191",
+    "Title": "Deployment of Upgradable Software",
+    "LatestDate": "2015-01-12T08:24:58.42-08:00"
+  },
+  {
+    "Id": "577061",
+    "Title": "[solved] Publishing msp: An error occurred while checking the meta data",
+    "LatestDate": "2015-01-08T08:53:14.127-08:00"
+  },
+  {
+    "Id": "577278",
+    "Title": "waiting for WPP v2",
+    "LatestDate": "2015-01-10T00:07:55.277-08:00"
+  },
+  {
+    "Id": "577464",
+    "Title": "[Solved] Publishing Java Auto Updater",
+    "LatestDate": "2015-01-13T06:59:33.313-08:00"
+  },
+  {
+    "Id": "577501",
+    "Title": "Need Help for deploy a non MSI File : I would like deploy VLC 2.1.5",
+    "LatestDate": "2016-02-15T05:41:31.757-08:00"
+  },
+  {
+    "Id": "577621",
+    "Title": "[Solved] The certificate is invalid. You will not be able to publish updates.",
+    "LatestDate": "2015-01-14T04:43:44.983-08:00"
+  },
+  {
+    "Id": "577681",
+    "Title": "Failed to connect with provided credentials. Do you want to...",
+    "LatestDate": "2015-01-15T13:04:47.33-08:00"
+  },
+  {
+    "Id": "577744",
+    "Title": "Reporting possibilities",
+    "LatestDate": "2015-01-15T07:16:23.38-08:00"
+  },
+  {
+    "Id": "577804",
+    "Title": "Deploying Firefox",
+    "LatestDate": "2016-04-14T07:03:20.2-07:00"
+  },
+  {
+    "Id": "578058",
+    "Title": "Pop-up when uninstalling Java Auto Updater",
+    "LatestDate": "2015-01-26T12:34:44.837-08:00"
+  },
+  {
+    "Id": "578119",
+    "Title": "Automatisation of updates",
+    "LatestDate": "2015-01-20T02:15:43.597-08:00"
+  },
+  {
+    "Id": "578178",
+    "Title": "CreateDirectory failed",
+    "LatestDate": "2015-01-20T13:21:25.01-08:00"
+  },
+  {
+    "Id": "578427",
+    "Title": "Unable to deploy third party apps",
+    "LatestDate": "2015-02-05T22:46:24.61-08:00"
+  },
+  {
+    "Id": "578575",
+    "Title": "Custom Package less function",
+    "LatestDate": "2015-01-26T04:26:58.923-08:00"
+  },
+  {
+    "Id": "578620",
+    "Title": "Windows Update don't show update",
+    "LatestDate": "2015-01-27T09:02:20.013-08:00"
+  },
+  {
+    "Id": "578665",
+    "Title": "third-party software to test the rules on clients",
+    "LatestDate": "2015-01-27T16:14:28.02-08:00"
+  },
+  {
+    "Id": "578708",
+    "Title": "\"Not applicable\" Adobe Flash",
+    "LatestDate": "2015-01-27T11:03:40.263-08:00"
+  },
+  {
+    "Id": "578880",
+    "Title": "ID field on Downstream Server is yellow/orange",
+    "LatestDate": "2015-01-30T08:15:11.417-08:00"
+  },
+  {
+    "Id": "578929",
+    "Title": "Issues with clients not installing (seems to be downloading)",
+    "LatestDate": "2015-02-04T07:51:30.583-08:00"
+  },
+  {
+    "Id": "578951",
+    "Title": "Client failed to connect",
+    "LatestDate": "2015-01-30T14:02:54.41-08:00"
+  },
+  {
+    "Id": "578977",
+    "Title": "Adobe Reader \"not applicable\"",
+    "LatestDate": "2015-02-04T05:26:29.737-08:00"
+  },
+  {
+    "Id": "579212",
+    "Title": "Import from Catalog - Filter",
+    "LatestDate": "2015-02-02T02:23:00.39-08:00"
+  },
+  {
+    "Id": "579213",
+    "Title": "Dell Catalog - Publishing Detectoids not possible",
+    "LatestDate": "2015-02-02T23:02:21.693-08:00"
+  },
+  {
+    "Id": "579215",
+    "Title": "Use a real certificate (from CA)",
+    "LatestDate": "2015-04-29T04:52:29.26-07:00"
+  },
+  {
+    "Id": "579233",
+    "Title": "The update cannot be deleted as it is still referecend by other updates",
+    "LatestDate": "2015-05-08T02:31:05.397-07:00"
+  },
+  {
+    "Id": "579500",
+    "Title": "Push Adobe Acrobat Update but need to Stop Service First",
+    "LatestDate": "2015-02-05T08:44:12.433-08:00"
+  },
+  {
+    "Id": "579532",
+    "Title": "When I send \"Detect Now\" I get \"Error\" as result",
+    "LatestDate": "2015-03-25T13:41:39.457-07:00"
+  },
+  {
+    "Id": "579640",
+    "Title": "Error Code 57E with TightVNC",
+    "LatestDate": "2015-02-14T12:51:56.92-08:00"
+  },
+  {
+    "Id": "579810",
+    "Title": "Updates keep failing",
+    "LatestDate": "2015-02-14T12:46:41.787-08:00"
+  },
+  {
+    "Id": "580521",
+    "Title": "WSUS Migration: Existing self-signed certificate becomes invalide",
+    "LatestDate": "2015-02-16T10:35:49.79-08:00"
+  },
+  {
+    "Id": "580542",
+    "Title": "Adobe Flash Updates are not shown on client",
+    "LatestDate": "2015-02-17T08:37:05.96-08:00"
+  },
+  {
+    "Id": "581137",
+    "Title": "Quicktime 7.7.6",
+    "LatestDate": "2015-02-17T03:20:45.247-08:00"
+  },
+  {
+    "Id": "581139",
+    "Title": "Custom update - msi uninstall",
+    "LatestDate": "2015-02-17T12:08:19.863-08:00"
+  },
+  {
+    "Id": "581175",
+    "Title": "HP Broadcom driver from Catalog",
+    "LatestDate": "2015-02-17T06:21:00.057-08:00"
+  },
+  {
+    "Id": "581177",
+    "Title": "Commencer ET - Commencer OU",
+    "LatestDate": "2015-02-17T07:49:31.857-08:00"
+  },
+  {
+    "Id": "581682",
+    "Title": "WSUS doesn't show my Updates but the client get them",
+    "LatestDate": "2015-02-24T03:21:45.923-08:00"
+  },
+  {
+    "Id": "581932",
+    "Title": "Failed to load the certificate",
+    "LatestDate": "2017-06-16T05:32:07.513-07:00"
+  },
+  {
+    "Id": "582027",
+    "Title": "Adobe Reader 11.0.10 wrong version shows up after deploy",
+    "LatestDate": "2015-02-27T07:26:13.347-08:00"
+  },
+  {
+    "Id": "583971",
+    "Title": "tracker software xchange PDF editor error WindowsUpdate_80070667 when publishing from wsus",
+    "LatestDate": "2015-03-02T03:09:01.82-08:00"
+  },
+  {
+    "Id": "584416",
+    "Title": "HOW TO: Deploy Java 8 (while uninstalling previous versions) ",
+    "LatestDate": "2015-05-15T11:36:54.187-07:00"
+  },
+  {
+    "Id": "584567",
+    "Title": "Publisher certificate renewing",
+    "LatestDate": "2016-12-08T13:23:45.56-08:00"
+  },
+  {
+    "Id": "584596",
+    "Title": "Import is successful in WSUS, but disappear in WPP after closing WPP",
+    "LatestDate": "2015-03-05T00:32:15.343-08:00"
+  },
+  {
+    "Id": "584751",
+    "Title": "Unable to make updates visible in WSUS console",
+    "LatestDate": "2015-03-06T10:29:14.703-08:00"
+  },
+  {
+    "Id": "585048",
+    "Title": "Install on Clients, but only update on Servers",
+    "LatestDate": "2015-03-16T03:43:58.5-07:00"
+  },
+  {
+    "Id": "585604",
+    "Title": "firewall ports",
+    "LatestDate": "2015-03-10T07:30:08.977-07:00"
+  },
+  {
+    "Id": "585866",
+    "Title": "Specifying Repository location for storing updates on WSUS Package Publisher",
+    "LatestDate": "2015-03-10T02:32:21.757-07:00"
+  },
+  {
+    "Id": "585870",
+    "Title": "Fehler bei den Regeln",
+    "LatestDate": "2015-03-12T09:17:27.567-07:00"
+  },
+  {
+    "Id": "585872",
+    "Title": "WPP crashs wen open Adobe Catalog",
+    "LatestDate": "2015-08-18T01:29:58.693-07:00"
+  },
+  {
+    "Id": "586085",
+    "Title": "Powershell script not running?",
+    "LatestDate": "2015-03-13T05:05:01.113-07:00"
+  },
+  {
+    "Id": "586161",
+    "Title": "Coloring STATUS does not work",
+    "LatestDate": "2015-03-12T08:58:52.713-07:00"
+  },
+  {
+    "Id": "586165",
+    "Title": "Checking URL for new Versions",
+    "LatestDate": "2015-04-15T23:59:32.343-07:00"
+  },
+  {
+    "Id": "586369",
+    "Title": "installation java 8",
+    "LatestDate": "2015-03-16T03:57:36.22-07:00"
+  },
+  {
+    "Id": "586820",
+    "Title": "Customization adobe flash player.",
+    "LatestDate": "2015-03-20T05:50:04.187-07:00"
+  },
+  {
+    "Id": "612788",
+    "Title": "Config for remote commands",
+    "LatestDate": "2015-03-25T05:50:13.263-07:00"
+  },
+  {
+    "Id": "616136",
+    "Title": "consternate WPP",
+    "LatestDate": "2015-04-02T13:44:37.287-07:00"
+  },
+  {
+    "Id": "630686",
+    "Title": "HOWTO? Correct WPP update",
+    "LatestDate": "2015-04-15T03:18:28.723-07:00"
+  },
+  {
+    "Id": "630691",
+    "Title": "Exe installation 80070643 error",
+    "LatestDate": "2015-09-13T23:16:46.99-07:00"
+  },
+  {
+    "Id": "630708",
+    "Title": "Possibility to edit WPP Custom Updates",
+    "LatestDate": "2015-04-16T08:49:49.803-07:00"
+  },
+  {
+    "Id": "631315",
+    "Title": "Optional installation of third party software",
+    "LatestDate": "2015-04-17T03:23:46.173-07:00"
+  },
+  {
+    "Id": "631764",
+    "Title": "Another certificate issue... (I guess)",
+    "LatestDate": "2015-04-20T06:28:00.433-07:00"
+  },
+  {
+    "Id": "631826",
+    "Title": "Clean softwaredistribution folder failure with **** Unable to Mount the folder.",
+    "LatestDate": "2015-04-20T14:28:48.53-07:00"
+  },
+  {
+    "Id": "631922",
+    "Title": "Translation - Polish",
+    "LatestDate": "2015-04-21T04:31:16.303-07:00"
+  },
+  {
+    "Id": "632233",
+    "Title": "[SOLVED] Will SCCM 2012 see packages created with WPP?",
+    "LatestDate": "2015-05-06T04:13:29.557-07:00"
+  },
+  {
+    "Id": "634224",
+    "Title": "reporting incorrectly to Wsus package publisher",
+    "LatestDate": "2015-04-28T03:12:15.497-07:00"
+  },
+  {
+    "Id": "635279",
+    "Title": "FileZilla & WPP",
+    "LatestDate": "2015-04-28T10:48:50.447-07:00"
+  },
+  {
+    "Id": "635874",
+    "Title": "Dell Driver catalog import - fails",
+    "LatestDate": "2015-04-29T04:02:22.82-07:00"
+  },
+  {
+    "Id": "636170",
+    "Title": "Java Updates question ",
+    "LatestDate": "2015-05-16T14:02:42.32-07:00"
+  },
+  {
+    "Id": "637155",
+    "Title": "Windows 2012R2 WSUS & WPP - Unable to connect to local server",
+    "LatestDate": "2015-05-07T14:48:34.163-07:00"
+  },
+  {
+    "Id": "637900",
+    "Title": "Latest source code?",
+    "LatestDate": "2015-07-13T01:14:44.75-07:00"
+  },
+  {
+    "Id": "637917",
+    "Title": "Easiest way to publish new Adobe Reader updates",
+    "LatestDate": "2015-05-18T04:58:01.567-07:00"
+  },
+  {
+    "Id": "638030",
+    "Title": "Multiple Updates, dependent on each other",
+    "LatestDate": "2015-05-16T14:01:24.227-07:00"
+  },
+  {
+    "Id": "638167",
+    "Title": "Connection failed: Invalid URI",
+    "LatestDate": "2015-05-20T01:41:35.893-07:00"
+  },
+  {
+    "Id": "638323",
+    "Title": "Deploy Flash Player 17.0.0.188",
+    "LatestDate": "2015-06-25T01:57:02.363-07:00"
+  },
+  {
+    "Id": "638378",
+    "Title": "Deployment trouble scenario with Adobe Flash Player & Help (17.0.0.188)",
+    "LatestDate": "2015-05-20T04:16:05.32-07:00"
+  },
+  {
+    "Id": "638466",
+    "Title": "Deploy SCCM Agent using WSUS Package Publisher / WSUS",
+    "LatestDate": "2015-05-21T03:10:18.053-07:00"
+  },
+  {
+    "Id": "638491",
+    "Title": "Неправильно отображаются названия группы \"И\" (AND) в перечне правил",
+    "LatestDate": "2015-05-21T00:08:06.023-07:00"
+  },
+  {
+    "Id": "638501",
+    "Title": "Adobe Reader DC ?",
+    "LatestDate": "2015-05-21T02:57:02.62-07:00"
+  },
+  {
+    "Id": "638514",
+    "Title": "Java check previous version",
+    "LatestDate": "2015-05-22T00:45:13.4-07:00"
+  },
+  {
+    "Id": "638518",
+    "Title": "Rename an update",
+    "LatestDate": "2015-05-21T12:17:43.57-07:00"
+  },
+  {
+    "Id": "638563",
+    "Title": "Is there any user guide for WPP ?",
+    "LatestDate": "2015-05-22T14:14:32.227-07:00"
+  },
+  {
+    "Id": "638911",
+    "Title": "EXE packages distribution",
+    "LatestDate": "2015-06-02T02:40:17.523-07:00"
+  },
+  {
+    "Id": "638993",
+    "Title": "Catalog updates",
+    "LatestDate": "2015-06-02T03:23:34.78-07:00"
+  },
+  {
+    "Id": "639003",
+    "Title": "Error \"CreateDirectory failed\"",
+    "LatestDate": "2015-06-29T05:29:02.057-07:00"
+  },
+  {
+    "Id": "639066",
+    "Title": "Folder URL with FDQN",
+    "LatestDate": "2015-07-31T22:13:40.187-07:00"
+  },
+  {
+    "Id": "639707",
+    "Title": "Java 1.8.45 update error",
+    "LatestDate": "2015-06-17T03:09:35.043-07:00"
+  },
+  {
+    "Id": "639910",
+    "Title": "How to push Microsoft patches with WPP",
+    "LatestDate": "2015-07-13T18:08:25.993-07:00"
+  },
+  {
+    "Id": "640330",
+    "Title": "Importing from Catalog... Error",
+    "LatestDate": "2015-06-23T03:45:20.577-07:00"
+  },
+  {
+    "Id": "640428",
+    "Title": "Error: 2147942403",
+    "LatestDate": "2015-07-13T18:07:11.87-07:00"
+  },
+  {
+    "Id": "640588",
+    "Title": "Is there documentation on using the Managed Catalog Subscriptions?",
+    "LatestDate": "2015-06-30T13:10:43.543-07:00"
+  },
+  {
+    "Id": "640640",
+    "Title": "Java Update ",
+    "LatestDate": "2015-07-14T03:48:28.32-07:00"
+  },
+  {
+    "Id": "640823",
+    "Title": "[Publishing Issue] Adobe Acrobat Reader DC - MUI 15.006.30033 ",
+    "LatestDate": "2015-07-09T05:52:21.373-07:00"
+  },
+  {
+    "Id": "641014",
+    "Title": "How can I move WPP to another server",
+    "LatestDate": "2015-07-16T15:12:30.14-07:00"
+  },
+  {
+    "Id": "641125",
+    "Title": "\"unsuperseded\" an update",
+    "LatestDate": "2015-07-08T23:46:44.83-07:00"
+  },
+  {
+    "Id": "641139",
+    "Title": "Move WSUS server",
+    "LatestDate": "2015-07-09T05:30:36.42-07:00"
+  },
+  {
+    "Id": "641150",
+    "Title": "Publishing Java only as an update",
+    "LatestDate": "2015-07-09T10:31:51.923-07:00"
+  },
+  {
+    "Id": "641210",
+    "Title": "Publish an update to FeatureList of applicaton",
+    "LatestDate": "2015-07-11T12:25:41.883-07:00"
+  },
+  {
+    "Id": "641219",
+    "Title": "Failed to sign package; error was 2148081670",
+    "LatestDate": "2015-09-29T03:31:50.597-07:00"
+  },
+  {
+    "Id": "641377",
+    "Title": "Adobe Flash Plugin stays in 'Not Installed'",
+    "LatestDate": "2015-07-27T11:46:53.52-07:00"
+  },
+  {
+    "Id": "641440",
+    "Title": "not applicable or failed",
+    "LatestDate": "2015-12-30T06:04:18.263-08:00"
+  },
+  {
+    "Id": "641816",
+    "Title": "Java 1.8.51 error 0x80070643",
+    "LatestDate": "2015-07-27T11:27:58.543-07:00"
+  },
+  {
+    "Id": "641821",
+    "Title": "How to do custom command line?",
+    "LatestDate": "2015-07-29T11:57:56.267-07:00"
+  },
+  {
+    "Id": "641895",
+    "Title": "SCUP Catalog for Reader DC?",
+    "LatestDate": "2015-07-24T09:17:31.187-07:00"
+  },
+  {
+    "Id": "641972",
+    "Title": "Please update available source code",
+    "LatestDate": "2015-08-06T00:14:12.623-07:00"
+  },
+  {
+    "Id": "641991",
+    "Title": "Empty Product stuck under duplicate \"Local Publisher\"",
+    "LatestDate": "2015-07-28T06:42:36.87-07:00"
+  },
+  {
+    "Id": "642105",
+    "Title": "update file localization",
+    "LatestDate": "2015-07-29T03:26:10.167-07:00"
+  },
+  {
+    "Id": "642307",
+    "Title": "W10 / optional Updates",
+    "LatestDate": "2015-08-04T04:33:36.343-07:00"
+  },
+  {
+    "Id": "642414",
+    "Title": "revise update",
+    "LatestDate": "2015-08-06T23:35:53.693-07:00"
+  },
+  {
+    "Id": "642417",
+    "Title": "Flash uninstaller",
+    "LatestDate": "2015-08-07T06:04:09.953-07:00"
+  },
+  {
+    "Id": "642574",
+    "Title": "How to validate a new update ?",
+    "LatestDate": "2015-08-17T16:33:52.73-07:00"
+  },
+  {
+    "Id": "642608",
+    "Title": "WPP Design question with WSUS replica servers",
+    "LatestDate": "2015-08-14T02:02:13.887-07:00"
+  },
+  {
+    "Id": "642660",
+    "Title": "Détection de l'état d'installation",
+    "LatestDate": "2015-08-24T02:39:15.19-07:00"
+  },
+  {
+    "Id": "643777",
+    "Title": "How to have client detect whether update is needed",
+    "LatestDate": "2015-08-23T20:56:51.157-07:00"
+  },
+  {
+    "Id": "644100",
+    "Title": "always and always update",
+    "LatestDate": "2015-08-26T02:55:32.173-07:00"
+  },
+  {
+    "Id": "644242",
+    "Title": "Java 1.8u50 avec fichier cfg",
+    "LatestDate": "2015-08-26T07:08:47.58-07:00"
+  },
+  {
+    "Id": "644270",
+    "Title": "Deploy custom update with Flash update modifications ",
+    "LatestDate": "2015-09-06T09:36:10.863-07:00"
+  },
+  {
+    "Id": "644458",
+    "Title": "Custom updates to Windows 10 machines",
+    "LatestDate": "2015-09-08T23:18:09.087-07:00"
+  },
+  {
+    "Id": "644519",
+    "Title": "Dell server updates - issue",
+    "LatestDate": "2015-09-02T23:35:18.603-07:00"
+  },
+  {
+    "Id": "644903",
+    "Title": "Adobe Acrobat Reader DC - MSP don't work",
+    "LatestDate": "2015-11-15T09:22:38.52-08:00"
+  },
+  {
+    "Id": "645477",
+    "Title": "NET Framework 4.6 Installation",
+    "LatestDate": "2015-10-19T07:04:35.687-07:00"
+  },
+  {
+    "Id": "645874",
+    "Title": "Non applicable Statut",
+    "LatestDate": "2015-10-15T02:09:24.2-07:00"
+  },
+  {
+    "Id": "645998",
+    "Title": "Rules",
+    "LatestDate": "2015-12-13T07:22:09.903-08:00"
+  },
+  {
+    "Id": "646432",
+    "Title": "greenshot upgrade",
+    "LatestDate": "2016-02-11T13:40:39.593-08:00"
+  },
+  {
+    "Id": "646459",
+    "Title": "Java Update mit deinstallation der alten Version",
+    "LatestDate": "2015-11-02T01:38:09.317-08:00"
+  },
+  {
+    "Id": "646472",
+    "Title": ".msp files now longer work for Adobe Reader XI",
+    "LatestDate": "2015-11-24T00:36:57.597-08:00"
+  },
+  {
+    "Id": "646933",
+    "Title": "Package Publisher Update von 1.3.1411.9 auf 1.3.1508.08",
+    "LatestDate": "2015-11-03T22:48:05.967-08:00"
+  },
+  {
+    "Id": "646980",
+    "Title": "32bit JRE 8u65 on 64bit Win7/8.1",
+    "LatestDate": "2015-12-12T05:12:10.797-08:00"
+  },
+  {
+    "Id": "647017",
+    "Title": "Java 8 Update 65 + Deinstallation alter Java 8 Versionen",
+    "LatestDate": "2015-11-17T09:12:25.297-08:00"
+  },
+  {
+    "Id": "647053",
+    "Title": "Option \"Supprimer le produit\" grisée dans l'arborescence",
+    "LatestDate": "2015-11-06T03:28:28.507-08:00"
+  },
+  {
+    "Id": "647058",
+    "Title": "Adobe Acrobat Reader DC MSP Update",
+    "LatestDate": "2015-11-15T09:28:36.463-08:00"
+  },
+  {
+    "Id": "647464",
+    "Title": "MSI Update mit gleichem ProductCode aber unterschiedlicher Version",
+    "LatestDate": "2015-12-14T12:37:38.057-08:00"
+  },
+  {
+    "Id": "647469",
+    "Title": "updates not being seen by clients",
+    "LatestDate": "2015-11-13T05:53:55.85-08:00"
+  },
+  {
+    "Id": "647695",
+    "Title": "Support for .msu",
+    "LatestDate": "2015-11-18T07:27:20.757-08:00"
+  },
+  {
+    "Id": "647740",
+    "Title": "WSUSutil.exe csaimport fails upon import in Windows Server 2012 R2",
+    "LatestDate": "2015-11-17T14:31:38.73-08:00"
+  },
+  {
+    "Id": "647795",
+    "Title": "Adobe Acrobat Reader DC (2015 Classic Track) - incremental MSP don't work",
+    "LatestDate": "2015-11-19T03:30:27.797-08:00"
+  },
+  {
+    "Id": "647814",
+    "Title": "Apply timestamp to WSUS updates",
+    "LatestDate": "2015-11-18T17:35:52.817-08:00"
+  },
+  {
+    "Id": "647864",
+    "Title": "Guide: WSUS Package Publisher deploy firefox",
+    "LatestDate": "2015-11-19T19:06:59.827-08:00"
+  },
+  {
+    "Id": "647885",
+    "Title": "Exporting/Importing from One WPP into another WPP",
+    "LatestDate": "2015-11-23T02:50:42.873-08:00"
+  },
+  {
+    "Id": "647962",
+    "Title": "Edit an existing Custom Update",
+    "LatestDate": "2015-12-18T10:55:53.297-08:00"
+  },
+  {
+    "Id": "648221",
+    "Title": "Edition de Custom Updates",
+    "LatestDate": "2015-12-18T12:36:39.603-08:00"
+  },
+  {
+    "Id": "648309",
+    "Title": "MSP update problem...",
+    "LatestDate": "2015-12-03T06:46:35.8-08:00"
+  },
+  {
+    "Id": "648681",
+    "Title": "Guide: WSUS Package Publisher deploy Java 8 Update 65 to Clients",
+    "LatestDate": "2016-02-17T23:29:37.217-08:00"
+  },
+  {
+    "Id": "648731",
+    "Title": "Deploy ATEMPO Live Navigator",
+    "LatestDate": "2015-12-17T00:31:48.56-08:00"
+  },
+  {
+    "Id": "648737",
+    "Title": "Failed to load the certificate",
+    "LatestDate": "2015-12-14T05:41:00.32-08:00"
+  },
+  {
+    "Id": "648817",
+    "Title": "How to install .exe using WPP",
+    "LatestDate": "2015-12-18T23:38:51.28-08:00"
+  },
+  {
+    "Id": "648949",
+    "Title": "Microsoft Power BI x64 MSI require ACCEPT_EULA=1 errors with 0x80070667",
+    "LatestDate": "2015-12-18T10:22:58.47-08:00"
+  },
+  {
+    "Id": "649613",
+    "Title": "Approval column at Not Approved",
+    "LatestDate": "2016-01-11T00:42:35.027-08:00"
+  },
+  {
+    "Id": "649914",
+    "Title": "Guide: WSUS Package Publisher deploy Adobe Flash Player 20 ActiveX to Clients",
+    "LatestDate": "2016-01-12T03:36:52.14-08:00"
+  },
+  {
+    "Id": "650395",
+    "Title": "Guide: How to deploy Adobe Reader XI to clients silently",
+    "LatestDate": "2016-01-23T06:57:54.473-08:00"
+  },
+  {
+    "Id": "650678",
+    "Title": "WPP does not provide .exe Updates but .msi",
+    "LatestDate": "2016-05-31T06:49:08.227-07:00"
+  },
+  {
+    "Id": "650826",
+    "Title": "Updates mit .exe / Java Uninstall2Install",
+    "LatestDate": "2016-02-05T00:38:37.46-08:00"
+  },
+  {
+    "Id": "650861",
+    "Title": "Java 8 updates",
+    "LatestDate": "2016-04-25T08:03:34.943-07:00"
+  },
+  {
+    "Id": "650871",
+    "Title": "allow signed updates from an intranet microsoft update service location",
+    "LatestDate": "2016-02-03T06:54:46.68-08:00"
+  },
+  {
+    "Id": "650913",
+    "Title": "Certificate issue with Windows Sever 2012 ?",
+    "LatestDate": "2016-02-05T08:05:39.25-08:00"
+  },
+  {
+    "Id": "651074",
+    "Title": "Java Uninstall2Install -> Client restart",
+    "LatestDate": "2016-04-20T03:25:26.287-07:00"
+  },
+  {
+    "Id": "651296",
+    "Title": "Kopieren einer Datei",
+    "LatestDate": "2016-03-13T07:21:25.327-07:00"
+  },
+  {
+    "Id": "651306",
+    "Title": "Unable to deploy LibreOffice",
+    "LatestDate": "2016-02-15T01:19:50.8-08:00"
+  },
+  {
+    "Id": "651502",
+    "Title": "Manage catalog subscription is failing  ",
+    "LatestDate": "2016-02-21T11:37:07.133-08:00"
+  },
+  {
+    "Id": "651893",
+    "Title": "Updates deleted in WSUS package publisher",
+    "LatestDate": "2016-02-29T06:13:39.813-08:00"
+  },
+  {
+    "Id": "652296",
+    "Title": "copy file to %programfiles% folder",
+    "LatestDate": "2016-03-08T09:11:33.717-08:00"
+  },
+  {
+    "Id": "652707",
+    "Title": "Patch My PC experience",
+    "LatestDate": "2016-09-04T19:35:55.33-07:00"
+  },
+  {
+    "Id": "652799",
+    "Title": "Problem to deploy custom update on windows server 2012R2",
+    "LatestDate": "2016-04-23T07:08:16.193-07:00"
+  },
+  {
+    "Id": "653057",
+    "Title": "Source Code",
+    "LatestDate": "2016-03-30T06:29:01.473-07:00"
+  },
+  {
+    "Id": "653092",
+    "Title": "Flash Install / Uninstall guide",
+    "LatestDate": "2016-04-27T23:40:23.667-07:00"
+  },
+  {
+    "Id": "653137",
+    "Title": "Wsus Package Publisher not starting - Win10 Ent. x64",
+    "LatestDate": "2016-04-01T01:16:25.85-07:00"
+  },
+  {
+    "Id": "653140",
+    "Title": "Wmi query Rule",
+    "LatestDate": "2016-04-20T08:37:36.17-07:00"
+  },
+  {
+    "Id": "653185",
+    "Title": "AutoCAD verteilen",
+    "LatestDate": "2016-04-04T06:00:07.96-07:00"
+  },
+  {
+    "Id": "653266",
+    "Title": "keep informed about updates",
+    "LatestDate": "2016-04-06T02:24:04.603-07:00"
+  },
+  {
+    "Id": "653331",
+    "Title": "Detect MSI Product code automatically",
+    "LatestDate": "2016-04-07T06:16:46.35-07:00"
+  },
+  {
+    "Id": "653563",
+    "Title": "Install Error 80070643",
+    "LatestDate": "2016-04-14T08:11:20.63-07:00"
+  },
+  {
+    "Id": "653775",
+    "Title": "How To Update von WPP",
+    "LatestDate": "2016-04-21T00:32:09.653-07:00"
+  },
+  {
+    "Id": "653817",
+    "Title": "Identifying new updates from catalog",
+    "LatestDate": "2016-04-20T08:40:02.217-07:00"
+  },
+  {
+    "Id": "653982",
+    "Title": "Desktopverknüpfung verteilen ",
+    "LatestDate": "2016-04-27T03:46:17.39-07:00"
+  },
+  {
+    "Id": "653998",
+    "Title": "Updatefehler Code 800B0109",
+    "LatestDate": "2016-04-26T02:37:20.183-07:00"
+  },
+  {
+    "Id": "654011",
+    "Title": "How to ....?",
+    "LatestDate": "2016-04-27T06:29:14.153-07:00"
+  },
+  {
+    "Id": "654098",
+    "Title": "Deploying portable software ",
+    "LatestDate": "2016-04-28T03:03:07.207-07:00"
+  },
+  {
+    "Id": "654101",
+    "Title": "Not Approved change to Approved automatically",
+    "LatestDate": "2016-05-17T11:21:06.433-07:00"
+  },
+  {
+    "Id": "654109",
+    "Title": "[howto] Adobe flash player doesn't deploy with Adobe repository",
+    "LatestDate": "2016-04-28T07:54:28.46-07:00"
+  },
+  {
+    "Id": "654160",
+    "Title": "How to import home-made packages into new WSUS ?",
+    "LatestDate": "2016-05-02T08:47:02.42-07:00"
+  },
+  {
+    "Id": "654614",
+    "Title": "Default approval",
+    "LatestDate": "2016-05-12T12:28:06.877-07:00"
+  },
+  {
+    "Id": "655107",
+    "Title": "Bypass version mismatch when publishing",
+    "LatestDate": "2016-05-31T13:18:08.647-07:00"
+  },
+  {
+    "Id": "655361",
+    "Title": "WSUS 4.0?",
+    "LatestDate": "2016-06-09T07:56:01.493-07:00"
+  },
+  {
+    "Id": "655365",
+    "Title": "Office 365",
+    "LatestDate": "2016-08-10T07:31:24.353-07:00"
+  },
+  {
+    "Id": "655392",
+    "Title": "Windows update complain need admin to install",
+    "LatestDate": "2016-06-10T02:12:45.697-07:00"
+  },
+  {
+    "Id": "655795",
+    "Title": "Failed to sign package; error was: 2147942403",
+    "LatestDate": "2016-06-28T00:51:30.123-07:00"
+  },
+  {
+    "Id": "656136",
+    "Title": "Deploy some Exe's - Programme verteilen (Exe)",
+    "LatestDate": "2016-07-06T23:06:17.843-07:00"
+  },
+  {
+    "Id": "656202",
+    "Title": "can`t connect to local server",
+    "LatestDate": "2016-07-08T02:53:44.39-07:00"
+  },
+  {
+    "Id": "656366",
+    "Title": "[howto] Deleting Adobe Reader XI MUI Installation",
+    "LatestDate": "2016-07-25T00:32:22.323-07:00"
+  },
+  {
+    "Id": "656574",
+    "Title": "Other 3rd parties app",
+    "LatestDate": "2016-07-20T07:43:40.947-07:00"
+  },
+  {
+    "Id": "656579",
+    "Title": "Deploy msi for selected clients : package level rules",
+    "LatestDate": "2016-07-22T01:52:55.86-07:00"
+  },
+  {
+    "Id": "656598",
+    "Title": "done",
+    "LatestDate": "2016-07-21T01:07:14.583-07:00"
+  },
+  {
+    "Id": "656612",
+    "Title": "How to determine if the update will be treated as a new application",
+    "LatestDate": "2016-07-21T13:50:24.17-07:00"
+  },
+  {
+    "Id": "656766",
+    "Title": "Accessing %appdata% of current user",
+    "LatestDate": "2016-07-29T02:49:45.9-07:00"
+  },
+  {
+    "Id": "656799",
+    "Title": "Not an Issue, More a question about downstream",
+    "LatestDate": "2017-02-02T12:20:37.237-08:00"
+  },
+  {
+    "Id": "656827",
+    "Title": "Install rules - Longer MSI Product code for Java 8 u101",
+    "LatestDate": "2016-08-01T18:36:18.493-07:00"
+  },
+  {
+    "Id": "656875",
+    "Title": "MSI UID for creating custom update(s)",
+    "LatestDate": "2016-10-09T09:13:01.727-07:00"
+  },
+  {
+    "Id": "656890",
+    "Title": "Computer Name",
+    "LatestDate": "2016-08-17T10:19:33.673-07:00"
+  },
+  {
+    "Id": "656942",
+    "Title": "Java 8u101 und Adobe Reader DC 2015.017.20050",
+    "LatestDate": "2016-08-30T05:12:49.963-07:00"
+  },
+  {
+    "Id": "656963",
+    "Title": "WPP for the Enterprise",
+    "LatestDate": "2016-08-06T06:25:14.827-07:00"
+  },
+  {
+    "Id": "657002",
+    "Title": "How can I create shortcut to desktop in 32bit&64bit system?",
+    "LatestDate": "2016-08-10T22:06:50.477-07:00"
+  },
+  {
+    "Id": "657044",
+    "Title": "Deinstallationsprobleme bei JAVA",
+    "LatestDate": "2016-08-11T08:06:20.653-07:00"
+  },
+  {
+    "Id": "657084",
+    "Title": "New application branch deployment best practises",
+    "LatestDate": "2016-09-03T10:05:18.283-07:00"
+  },
+  {
+    "Id": "657149",
+    "Title": "Using Command-Line Option and/or Configuration File for JAVA",
+    "LatestDate": "2016-10-24T00:59:34.74-07:00"
+  },
+  {
+    "Id": "657203",
+    "Title": "Some OUs stopped making status reports",
+    "LatestDate": "2016-08-19T05:40:22.897-07:00"
+  },
+  {
+    "Id": "657401",
+    "Title": "When to Delete or Supersede?",
+    "LatestDate": "2016-08-25T10:45:08.097-07:00"
+  },
+  {
+    "Id": "657454",
+    "Title": "wsus package publisher deploy firefox.exe patches to clients",
+    "LatestDate": "2016-08-26T08:52:54.543-07:00"
+  },
+  {
+    "Id": "657566",
+    "Title": "Configure package download URL?",
+    "LatestDate": "2016-08-31T09:07:04.08-07:00"
+  },
+  {
+    "Id": "657571",
+    "Title": "Package Level Rules - Understanding OR",
+    "LatestDate": "2016-08-31T14:08:52.06-07:00"
+  },
+  {
+    "Id": "657591",
+    "Title": "Difference of rulesets",
+    "LatestDate": "2016-09-01T13:01:02.56-07:00"
+  },
+  {
+    "Id": "657657",
+    "Title": "Error 0x80246003 on Windows 10 Pro",
+    "LatestDate": "2016-09-21T04:48:37.447-07:00"
+  },
+  {
+    "Id": "657683",
+    "Title": "createDirectory failed when wsus uses ssl",
+    "LatestDate": "2017-05-30T04:34:38.43-07:00"
+  },
+  {
+    "Id": "658264",
+    "Title": "Connection Failed: Index was outside the bounds of the array.",
+    "LatestDate": "2016-09-26T08:41:33.91-07:00"
+  },
+  {
+    "Id": "658287",
+    "Title": "Support for Modern Apps ?",
+    "LatestDate": "2016-10-24T01:36:56.32-07:00"
+  },
+  {
+    "Id": "658310",
+    "Title": "Moving from LUP to WPP",
+    "LatestDate": "2016-10-02T02:12:04.557-07:00"
+  },
+  {
+    "Id": "658323",
+    "Title": "Solution for lack of 'optional updates' in Windows 10 needed",
+    "LatestDate": "2016-10-09T09:15:56.453-07:00"
+  },
+  {
+    "Id": "658397",
+    "Title": "Replica server URL colored 'red'",
+    "LatestDate": "2016-10-09T09:17:11.803-07:00"
+  },
+  {
+    "Id": "658722",
+    "Title": "Reader and acrobat on the same computer",
+    "LatestDate": "2016-10-14T05:59:13.853-07:00"
+  },
+  {
+    "Id": "658837",
+    "Title": "Adobe Flash with different PC Languages",
+    "LatestDate": "2016-10-20T06:41:47.087-07:00"
+  },
+  {
+    "Id": "658911",
+    "Title": "WPP on WSUS 2016",
+    "LatestDate": "2016-12-08T05:29:42.123-08:00"
+  },
+  {
+    "Id": "658994",
+    "Title": "Show IP address on Status of a Package",
+    "LatestDate": "2016-10-26T06:58:36.847-07:00"
+  },
+  {
+    "Id": "659016",
+    "Title": "WindowsUpdateLog for W10",
+    "LatestDate": "2016-10-27T04:36:11.15-07:00"
+  },
+  {
+    "Id": "659025",
+    "Title": "Löschen von Java-Updates",
+    "LatestDate": "2016-11-02T02:06:25.587-07:00"
+  },
+  {
+    "Id": "659135",
+    "Title": "Error when importing Update from DellSDPCatalog.cab",
+    "LatestDate": "2016-11-02T09:56:16.37-07:00"
+  },
+  {
+    "Id": "659539",
+    "Title": "New to WPP, Couple of questions",
+    "LatestDate": "2016-12-01T12:05:46.82-08:00"
+  },
+  {
+    "Id": "659591",
+    "Title": "Newbie - Java Install, Retain two versions",
+    "LatestDate": "2016-11-21T12:17:27.507-08:00"
+  },
+  {
+    "Id": "659614",
+    "Title": "Newbie - Edit custom XML file within CAB file",
+    "LatestDate": "2016-11-30T06:36:23.72-08:00"
+  },
+  {
+    "Id": "659652",
+    "Title": "Missing PC's in WPP Console",
+    "LatestDate": "2016-12-04T13:56:21.947-08:00"
+  },
+  {
+    "Id": "659699",
+    "Title": "WPP einfach kopieren bei Neuinstallation WSUS",
+    "LatestDate": "2016-11-27T05:40:28.997-08:00"
+  },
+  {
+    "Id": "659789",
+    "Title": "Remote MSI Manager",
+    "LatestDate": "2016-11-28T23:01:12.7-08:00"
+  },
+  {
+    "Id": "659859",
+    "Title": "Status Not Applicable - Where to look to fix that ?",
+    "LatestDate": "2016-12-06T05:26:38.5-08:00"
+  },
+  {
+    "Id": "659879",
+    "Title": "Missing Published Updates in the WPP Console",
+    "LatestDate": "2016-12-02T04:27:39.68-08:00"
+  },
+  {
+    "Id": "659882",
+    "Title": "Firefox 50.0.2 msi not detected by clients",
+    "LatestDate": "2016-12-06T07:02:56.927-08:00"
+  },
+  {
+    "Id": "659932",
+    "Title": "Installing fails with 80070667",
+    "LatestDate": "2016-12-08T02:45:19.607-08:00"
+  },
+  {
+    "Id": "660125",
+    "Title": "Problem import catalag Flash Player ADOBE",
+    "LatestDate": "2016-12-15T07:43:51.66-08:00"
+  },
+  {
+    "Id": "660135",
+    "Title": "failed to load the certificate",
+    "LatestDate": "2017-01-09T13:18:54.897-08:00"
+  },
+  {
+    "Id": "660163",
+    "Title": "windows 10 client not detecting update",
+    "LatestDate": "2016-12-15T12:50:36.1-08:00"
+  },
+  {
+    "Id": "660286",
+    "Title": "Commandline with Path to config file - does not work",
+    "LatestDate": "2016-12-22T03:44:13.707-08:00"
+  },
+  {
+    "Id": "660418",
+    "Title": "Server 2016 with Win 10 clients - looks broken",
+    "LatestDate": "2017-01-10T13:33:28.63-08:00"
+  },
+  {
+    "Id": "660585",
+    "Title": "error while loading of the certificate",
+    "LatestDate": "2017-01-09T11:05:25.537-08:00"
+  },
+  {
+    "Id": "660605",
+    "Title": "Deploying Java 8 Update 112",
+    "LatestDate": "2017-01-10T07:07:46.54-08:00"
+  },
+  {
+    "Id": "660635",
+    "Title": "Adobe Flash Catalog URL change",
+    "LatestDate": "2017-01-11T08:57:10.593-08:00"
+  },
+  {
+    "Id": "660650",
+    "Title": "Cant Edit Catalog Subscriptions",
+    "LatestDate": "2017-01-12T03:44:24.933-08:00"
+  },
+  {
+    "Id": "660831",
+    "Title": "WPP Einstellungen",
+    "LatestDate": "2017-01-21T08:55:12.487-08:00"
+  },
+  {
+    "Id": "660836",
+    "Title": "Install this update - not working",
+    "LatestDate": "2017-01-20T11:06:51.933-08:00"
+  },
+  {
+    "Id": "660871",
+    "Title": "connection failed to the local server",
+    "LatestDate": "2017-03-23T03:14:42.487-07:00"
+  },
+  {
+    "Id": "660956",
+    "Title": "Too many published categories",
+    "LatestDate": "2017-01-29T13:44:09.62-08:00"
+  },
+  {
+    "Id": "660986",
+    "Title": "New SCUP URL for Adobe Flash",
+    "LatestDate": "2017-03-02T06:43:34.48-08:00"
+  },
+  {
+    "Id": "661072",
+    "Title": "new version Flash or Java",
+    "LatestDate": "2017-02-01T11:08:45.21-08:00"
+  },
+  {
+    "Id": "661122",
+    "Title": "Show Pending Updates ... COM Exception!",
+    "LatestDate": "2017-02-03T03:11:02.223-08:00"
+  },
+  {
+    "Id": "661249",
+    "Title": "How Do i Run a Batch File Using WPP?",
+    "LatestDate": "2017-02-15T13:10:04.307-08:00"
+  },
+  {
+    "Id": "661329",
+    "Title": "Failed to download update : Error Code 80070661",
+    "LatestDate": "2017-02-14T01:13:13.987-08:00"
+  },
+  {
+    "Id": "661399",
+    "Title": "Best way to publish 32 & 64 bits package ?",
+    "LatestDate": "2017-02-16T08:59:17.09-08:00"
+  },
+  {
+    "Id": "661473",
+    "Title": "Besoin d'aide ?",
+    "LatestDate": "2017-02-20T11:31:22.87-08:00"
+  },
+  {
+    "Id": "661477",
+    "Title": "Prevent servers from seeing Java update package",
+    "LatestDate": "2017-04-21T18:38:52.45-07:00"
+  },
+  {
+    "Id": "661518",
+    "Title": "UpdateServicesPackages Folder Cleanup",
+    "LatestDate": "2017-02-23T15:59:31.45-08:00"
+  },
+  {
+    "Id": "661534",
+    "Title": "Configuring a package for Forcepoint Triton AP Endpoint",
+    "LatestDate": "2017-02-23T16:45:58.5-08:00"
+  },
+  {
+    "Id": "661628",
+    "Title": "Certificate Invalid, Updates can't be created",
+    "LatestDate": "2017-02-28T22:18:16.16-08:00"
+  },
+  {
+    "Id": "661696",
+    "Title": "Removing a package with Wsus ?",
+    "LatestDate": "2017-03-07T05:48:04.453-08:00"
+  },
+  {
+    "Id": "661697",
+    "Title": "MSP not apllied",
+    "LatestDate": "2017-03-20T03:25:35.793-07:00"
+  },
+  {
+    "Id": "661700",
+    "Title": "Setting up the sequence of Windows Updates published through WPP.",
+    "LatestDate": "2017-03-10T11:56:37.877-08:00"
+  },
+  {
+    "Id": "661738",
+    "Title": "Create Custom Update",
+    "LatestDate": "2017-03-10T14:54:40.033-08:00"
+  },
+  {
+    "Id": "661805",
+    "Title": "Update precedence",
+    "LatestDate": "2017-03-10T11:50:51.403-08:00"
+  },
+  {
+    "Id": "661808",
+    "Title": "Optional Installation",
+    "LatestDate": "2017-03-09T02:59:22.34-08:00"
+  },
+  {
+    "Id": "661810",
+    "Title": "Getting \"Access denied\" (ger: \"Zugriff verweigert\") when loading certificate in WPP on Windows 10",
+    "LatestDate": "2017-03-09T03:52:43.933-08:00"
+  },
+  {
+    "Id": "661917",
+    "Title": "Katalogabonnements-Verwaltung ausgegraut",
+    "LatestDate": "2017-07-25T06:21:50.037-07:00"
+  },
+  {
+    "Id": "661941",
+    "Title": "Additional files",
+    "LatestDate": "2017-03-15T02:44:44.53-07:00"
+  },
+  {
+    "Id": "661971",
+    "Title": "How to deny installation for a single computer?",
+    "LatestDate": "2017-03-23T06:35:14.03-07:00"
+  },
+  {
+    "Id": "662165",
+    "Title": "Anzeigen der Updates in der WSUS-Konsole unter Windows Server 2016",
+    "LatestDate": "2017-03-27T00:58:06.14-07:00"
+  },
+  {
+    "Id": "662457",
+    "Title": "100 3rd party limit & old update cleanup",
+    "LatestDate": "2017-04-07T14:27:16.93-07:00"
+  },
+  {
+    "Id": "662652",
+    "Title": "Java updates from Patch my PC failing now Return code missing",
+    "LatestDate": "2017-04-21T18:34:30.87-07:00"
+  },
+  {
+    "Id": "662691",
+    "Title": "Updates shows installed but computer still using old software version.",
+    "LatestDate": "2017-04-25T09:29:28.65-07:00"
+  },
+  {
+    "Id": "662741",
+    "Title": "Removing Approved Updates from downstream WSUS servers",
+    "LatestDate": "2017-05-09T04:53:08.193-07:00"
+  },
+  {
+    "Id": "662796",
+    "Title": "Foxit Reader Update fails with \"Update is not requiered\"",
+    "LatestDate": "2017-09-28T02:05:56.723-07:00"
+  },
+  {
+    "Id": "662860",
+    "Title": "Import and catalog greyed out",
+    "LatestDate": "2017-05-25T14:14:02.833-07:00"
+  },
+  {
+    "Id": "662918",
+    "Title": "Shutting down CodePlex",
+    "LatestDate": "2017-11-10T08:48:13.103-08:00"
+  },
+  {
+    "Id": "663191",
+    "Title": "Application installed but shows as Not Applicable",
+    "LatestDate": "2017-06-05T09:25:16.85-07:00"
+  },
+  {
+    "Id": "663196",
+    "Title": "Creating update",
+    "LatestDate": "2017-06-07T12:08:56.153-07:00"
+  },
+  {
+    "Id": "663331",
+    "Title": "Return Codes unavailable from Revise",
+    "LatestDate": "2017-10-22T22:53:12.147-07:00"
+  },
+  {
+    "Id": "663394",
+    "Title": "Testinstallation WPP on Windows Server 2012",
+    "LatestDate": "2017-07-10T02:12:35.973-07:00"
+  },
+  {
+    "Id": "663406",
+    "Title": "Uninstalling an application",
+    "LatestDate": "2017-07-12T03:30:46.243-07:00"
+  },
+  {
+    "Id": "663498",
+    "Title": "CreateDirectoryFailed",
+    "LatestDate": "2017-07-27T12:48:15.6-07:00"
+  },
+  {
+    "Id": "663567",
+    "Title": "Connection Failed: The request failed with HTTP status 400: Bad Request",
+    "LatestDate": "2017-08-07T14:11:23.997-07:00"
+  },
+  {
+    "Id": "663591",
+    "Title": "Checking updates",
+    "LatestDate": "2017-08-11T06:45:28.373-07:00"
+  },
+  {
+    "Id": "663782",
+    "Title": "Error 0x80246003 on windows 10",
+    "LatestDate": "2017-09-18T23:59:36.783-07:00"
+  },
+  {
+    "Id": "663841",
+    "Title": "Deployment of SAPgui single .exe installer",
+    "LatestDate": "2017-10-02T23:11:36.47-07:00"
+  },
+  {
+    "Id": "663873",
+    "Title": "New version flash from catalog wont apply",
+    "LatestDate": "2017-10-16T03:06:02.963-07:00"
+  },
+  {
+    "Id": "663881",
+    "Title": "Can`t start the Application from a workstation (W10)",
+    "LatestDate": "2017-10-13T06:31:45.453-07:00"
+  },
+  {
+    "Id": "663960",
+    "Title": "Package disparait après création",
+    "LatestDate": "2017-11-14T01:11:43.627-08:00"
+  }
+]

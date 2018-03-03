@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Information Update Wizard",
+      "DisplayName": "Information Update Wizard"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:53.057-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "MSI and MSP files has their own return codes.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1603.29",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-01-28T08:51:40.607-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Disable Return Code list when the main file is a MSI or MSP",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 355
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

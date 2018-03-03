@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1245544",
+    "ThreadId": "545387",
+    "Html": "I don't understand the purpose of the MSI Product Code and the &quot;Reverse Rule&quot;, can someone explain to me when they should be used?<br />\n",
+    "PostedDate": "2014-05-14T15:29:07.02-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1245882",
+    "ThreadId": "545387",
+    "Html": "<a href=\"http://msdn.microsoft.com/en-us/library/aa370860(v=vs.85).aspx\" rel=\"nofollow\">MSI Product Code</a> : see this link<br />\n<br />\nReverse Rule : If you  make a rule that say : &quot;Instalable if this MSI product code is present&quot;, and check &quot;Reverse Rule&quot; then the rule become &quot;Instalable if this MSI product code is NOT present&quot;<br />\n",
+    "PostedDate": "2014-05-15T13:02:01.647-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-15T16:13:54.417-07:00"
+  },
+  {
+    "Id": "1245944",
+    "ThreadId": "545387",
+    "Html": "Thank you for your explanation. Time for me to experiment!<br />\n",
+    "PostedDate": "2014-05-15T16:10:40.803-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

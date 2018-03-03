@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1490864",
+    "ThreadId": "660585",
+    "Html": "Hello,\r<br />\n<br />\nWPP was running and running. But today I opend and WPP says that the certificate was expired. But the certificate has the Deadline in 2018. It is a AD-certifcate.\r<br />\n<br />\nNow I create a new certificate but I`m not able to Import it. Error message:\r<br />\n&quot;error while loading of the certificate, please check the file&quot;\r<br />\n<br />\nHas someone an idea?\r<br />\n<br />\nKind regards\r<br />\nSabine from Germany<br />\n",
+    "PostedDate": "2017-01-09T11:05:25.537-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

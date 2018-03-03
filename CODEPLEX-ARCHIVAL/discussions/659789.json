@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1488936",
+    "ThreadId": "659789",
+    "Html": "Hallo zusammen,<br />\n<br />\nseit einiger Zeit funktioniert der Remote MSI Manager nicht mehr korrekt. Es lassen sich einfach keine MSI-Files mehr verteilen. Mit msiexec funktioniert alles aber der mit dem Remote Manager keine Chance.<br />\n<br />\nSobald ein MSI  auf einem Zielrechner verteilt und installiert werden soll, erscheint sofort die Meldung:<br />\n<br />\nStatus: Deleting temporary files...<br />\nResult: The copy has failed. Falscher Parameter.<br />\n<br />\nAm Server selbst wurde meines Wissens nach nichts geändert...<br />\n<br />\nJemand eine Ahnung womit das zusammenhängen kann?<br />\n<br />\nViele Grüße,<br />\nBelloci<br />\n",
+    "PostedDate": "2016-11-28T23:01:12.7-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1433351",
+    "ThreadId": "641014",
+    "Html": "Hi there,\r<br />\n<br />\nis there any way to move the installation of WPP to a new Server (or only the configuration)?\r<br />\n<br />\nWe want to migrate from Windows Server 2008R2 on a Server2012R2...\r<br />\n<br />\nRegards Markus\r<br />\n(German user)<br />\n",
+    "PostedDate": "2015-07-07T03:47:12.593-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1433356",
+    "ThreadId": "641014",
+    "Html": "WPP is not an installation, you can copy alle files to your new Server. I think it is not what you are asking for. How do you move your wsus to your new Server? You can install WSUS on your new server as an Replica from the old one, synchronise every Content and Client to new WSUS. If all is there, you can change the new one to a Master WSUS.\r<br />\nThink about the certificate from your actual WSUS/WPP. Did you create it with WPP or with an CA?<br />\n",
+    "PostedDate": "2015-07-07T04:22:39.947-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1433362",
+    "ThreadId": "641014",
+    "Html": "Thanks for your quick answer. And I really mean the WPP. WSUS is already replicated and I change the Server in GPO.\r<br />\n<br />\nTo WPP:\r<br />\nSo I just grab the WPP directory to the new server, start WPP and create a new certificate - right?\r<br />\n<br />\nTo your question: I created the certificate with WPP .<br />\n",
+    "PostedDate": "2015-07-07T05:22:02.443-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1433367",
+    "ThreadId": "641014",
+    "Html": "<strong>MFriedlein wrote:</strong><br />\n<blockquote>\nTo WPP:<br />\nSo I just grab the WPP directory to the new server, start WPP and create a new certificate - right?<br />\n</blockquote>\nRight, just have a look in Options.xml. There you have to change/correct the WSUS-Name.\r<br />\n<br />\nAfter creating a new certificate, you have to resigne all active packages und publish this certificate to your clients/servers.<br />\n<blockquote>\nTo your question: I created the certificate with WPP .<br />\n</blockquote>\nOK.<br />\n",
+    "PostedDate": "2015-07-07T05:41:46.03-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1434685",
+    "ThreadId": "641014",
+    "Html": "Just Export the existing code signing certificate with it's private key and Import it into the new wsus using WPP for Import. You don't Need re-sign all packages than.\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2015-07-16T15:12:30.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

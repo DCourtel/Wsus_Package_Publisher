@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1299784",
+    "ThreadId": "565614",
+    "Html": "When I try to delete a product, WPP crashes, the SQL server runs a task for a while after this, and then when it's done, there's a new declined update under the product called &quot;Delete Me !&quot;, and the product is never actually deleted. I'm not certain if this is specific to my environment, or if it's an issue with WPP.<br />\n<br />\nThis occurs whether the product being deleted is the only product listed for the publisher or if there are other products listed for the publisher that will remain after the product is deleted.<br />\n<br />\nAll of the following conditions are met from: <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/471290\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/471290</a><br />\n<ul>\n<li>Run WPP locally on the Wsus server.</li>\n<li>Product folder must be empty.</li>\n<li>Product mustn't have been publish by Microsoft.</li>\n<li>Product can't be the &quot;Locally Published Packages&quot; folder</li>\n<li>\nOption to make newly published update visible in Wsus Console, must be different from &quot;Never&quot;.<br />\n</li>\n</ul>\nI'm not sure how to troubleshoot this, or else I'd give more details.<br />\n",
+    "PostedDate": "2014-09-05T10:23:32.553-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1304422",
+    "ThreadId": "565614",
+    "Html": "Try to delete an empty product. When WPP failed, go to %temp% folder. Look for the file 'Wpp-guid.log'. Send me this file at <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a> with a reference to this thread.<br />\n",
+    "PostedDate": "2014-09-13T12:15:25.363-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-15T06:21:24.37-07:00"
+  },
+  {
+    "Id": "1304798",
+    "ThreadId": "565614",
+    "Html": "Alright, based on that log, I think that the issue is being caused by DB corruption. I've been planning on moving to a new DB soon, so that should fix this issue.<br />\n<pre><code>9/15/2014 8:58:29 AM    Selecting Java SE Runtime Environment 8 (0)\n9/15/2014 8:58:30 AM    Entering Void ctxMnuTreeview_ItemClicked(System.Object, System.Windows.Forms.ToolStripItemClickedEventArgs)\n9/15/2014 8:58:30 AM    Delete Product.\n9/15/2014 8:58:30 AM    Entering EmptyProductDeleterResult DeleteProduct(System.Guid) : 991751d3-b928-448b-d313-f690b05130a5\n9/15/2014 8:58:30 AM    Entering Void StartWaitingForm(System.String)\n9/15/2014 8:58:30 AM    Entering Microsoft.UpdateServices.Administration.IUpdate PublishUpdate(Microsoft.UpdateServices.Administration.IUpdateCategory, Microsoft.UpdateServices.Administration.IUpdateCategory) : Product to Delete : Java SE Runtime Environment 8 and Vendor to delete : Oracle Corporation\n9/15/2014 8:58:30 AM    Entering System.String GetTempFolder()\n9/15/2014 8:58:30 AM    Returning : C:\\Users\\ADMINI~1.COM\\AppData\\Local\\Temp\\2\\Wsus Package Publisher\\\n9/15/2014 8:58:39 AM    Successfuly publish ProductKiller\n9/15/2014 8:58:39 AM    Entering Boolean MakeLocallyPublished(Microsoft.UpdateServices.Administration.IUpdateCategory, Microsoft.UpdateServices.Administration.IUpdateCategory) : Product to Delete : Java SE Runtime Environment 8 and Vendor to delete : Oracle Corporation\n9/15/2014 8:58:39 AM    Entering Boolean MakeLocallyPublished(Microsoft.UpdateServices.Administration.IUpdateCategory, Microsoft.UpdateServices.Administration.IUpdateCategory)\n9/15/2014 8:58:39 AM    Entering Void .ctor()\n9/15/2014 8:58:39 AM    Entering System.String GetServerName()\n9/15/2014 8:58:39 AM    IsUsingWindowsInternalDatabase : True\n9/15/2014 8:58:39 AM    Major Version : 3\n9/15/2014 8:58:39 AM    Entering Boolean Connect(System.String, System.String)\n9/15/2014 8:58:39 AM    \\\\.\\pipe\\MSSQL$MICROSOFT##SSEE\\sql\\query : SUSDB\n9/15/2014 8:58:39 AM    Connected to SQL !\n9/15/2014 8:58:39 AM    Connected to SQL\n9/15/2014 8:58:39 AM    ProductToDelete UpdateSource = MicrosoftUpdate\n9/15/2014 8:58:39 AM    Entering Boolean MakeLocallyPublished(Microsoft.UpdateServices.Administration.IUpdateCategory, Microsoft.UpdateServices.Administration.IUpdateCategory)\n9/15/2014 8:58:39 AM    Entering Void QuerySql(System.Collections.Generic.List`1[System.Guid], Int32)\n9/15/2014 8:58:39 AM    UPDATE [SUSDB].[dbo].[tbUpdate] SET [IsLocallyPublished] = 1 WHERE [UpdateID] = '991751d3-b928-448b-d313-f690b05130a5'\n9/15/2014 8:58:39 AM    Entering Void Disconnect()\n9/15/2014 8:58:39 AM    End of SQL session\n9/15/2014 8:58:39 AM    Successfuly made LocallyPublished\n9/15/2014 8:58:39 AM    Entering Void DeclineUpdate(Microsoft.UpdateServices.Administration.IUpdate) : Delete Me !\n9/15/2014 8:58:39 AM    Entering EmptyProductDeleterResult DeleteProduct(System.Guid)\n9/15/2014 8:59:15 AM    ThreadException. Something Went Wrong\n9/15/2014 8:59:15 AM    **** SQL Server detected a logical consistency-based I/O error: incorrect checksum (expected: 0x56832d48; actual: 0x56832d98). It occurred during a read of page (1:450529) in database ID 5 at offset 0x000000dbfc2000 in file 'd:\\WSUS\\\\UpdateServicesDbFiles\\SUSDB.mdf'.  Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online.\n9/15/2014 8:59:15 AM    Entering Void .ctor() : FrmSendDebugInfo\n</code></pre>\n\n",
+    "PostedDate": "2014-09-15T06:21:20.22-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1330475",
+    "ThreadId": "565614",
+    "Html": "I'm having the exact same issue. I'll send the logfile to you...<br />\n",
+    "PostedDate": "2014-12-10T00:11:53.133-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

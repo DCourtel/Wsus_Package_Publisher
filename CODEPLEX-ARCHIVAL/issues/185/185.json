@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Settings",
+      "DisplayName": "Settings"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-05-02T07:44:29.753-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "I want to use the WSUS Package Publisher to push out EMET around my business, but my WSUS Server uses a non standard port of 11443 instead of 443 or the 8531.\r\n\r\nThe port options when connecting to my server gives me only a drop down box.  \r\n\r\nWhy can this not just be an input box?  Is there a manual way I can specify my port somewhere?\r\n\r\nMuch appreciated.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1401.04",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-04-02T02:15:24.793-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "I have a non-standard SSL port for WSUS",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 185
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Ok, I see your problem. The workaround, for now, is to run WPP directly on the Wsus server and checking the checkbox \"Connect to Local Server\" (you can choose any connection port, it will not be used).\r\n\r\nSend me an email at package.publisher@free.fr, I will send you a new release where you will be able to enter a non-standard port.",
+      "PostedDate": "2014-04-02T12:27:16.5-07:00",
+      "Id": 140335
+    },
+    {
+      "Message": "Hi JSpud, I have made some changes in WPP, but I can't test thoroughly because I don't have Wsus server with non-standard port.\nCan you send me a email at package.publisher@free.fr \nI will send you this fixed release and you will be able to tell me if it fix the issue.\n\nThanks",
+      "PostedDate": "2014-04-09T13:07:45.747-07:00",
+      "Id": 141236
+    }
+  ]
+}

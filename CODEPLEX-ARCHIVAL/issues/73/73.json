@@ -1,0 +1,71 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-24T02:31:30.72-07:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI create some Updates and they are visible in the WSUS-Console. After remove them with WPP the empty Product and Vendor are not removed. \r\n\r\nIt is possible that WPP removes the complete Groups?\r\n\r\nThanks!",
+    "LastUpdatedDate": "2013-06-24T02:31:30.72-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-21T04:58:28.823-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Remove empty Vendors",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 73
+  },
+  "FileAttachments": [
+    {
+      "FileId": 695396,
+      "FileName": "EmptyGroup.JPG",
+      "DownloadUrl": ".\\695396"
+    },
+    {
+      "FileId": 695463,
+      "FileName": "Delete Empty Product with prerequisite.png",
+      "DownloadUrl": ".\\695463"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Did you rightclick on \"delete product\" (Adobe Reader)?\n\nBye\nNorbert",
+      "PostedDate": "2013-06-21T05:18:52.733-07:00",
+      "Id": 103767
+    },
+    {
+      "Message": "Hi Dusselritter, \r\nyou will need to run WPP on the Wsus server. Then go to Tools -> Settings -> 'Server' Tab\r\n   - Ensure that the 'Connect to local server' checkbox is checked.\r\n   - In the 'When publishing a new update' section choose either 'Let me choose' or 'Always make this update visible in the Wsus Console'.\r\n\r\nSelect the 'Empty Product', right-click on it and choose 'Delete Product'. You will be able to delete only Product with 0 update in it.\r\n(See the attached screenshot)",
+      "PostedDate": "2013-06-21T14:19:01.773-07:00",
+      "Id": 103823
+    },
+    {
+      "Message": "Thank you for your help! ",
+      "PostedDate": "2013-06-24T00:16:13.527-07:00",
+      "Id": 103896
+    },
+    {
+      "Message": "You're welcome.\n",
+      "PostedDate": "2013-06-24T02:30:56.307-07:00",
+      "Id": 103906
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1142424",
+    "ThreadId": "478060",
+    "Html": "I have a custom self extracting exe build with 7zip that will extract itself and run a batch file inside it to install something. I can double click on the exe and everything works fine. Through WSPP custom install, the client tries to update this and fails with error code FFFC. Any idea what is wrong?<br />\n",
+    "PostedDate": "2013-12-26T15:49:59.44-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1142495",
+    "ThreadId": "478060",
+    "Html": "Please select the update in WPP, and click on the link beside the 'Id' label. This will open a window, open the folder and open the .xml file. Copy the content of the file and paste it here.<br />\n",
+    "PostedDate": "2013-12-27T02:30:01.317-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1142801",
+    "ThreadId": "478060",
+    "Html": "'FFFC' is a FileNotFound Exception. Please send me the .XML file to see where is the probleme.<br />\n",
+    "PostedDate": "2013-12-27T12:09:33.207-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T07:52:58.32-08:00"
+  },
+  {
+    "Id": "1219338",
+    "ThreadId": "478060",
+    "Html": "I Also have this problem, please find be XML file below\r<br />\n&lt;CustomUpdate&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.VariableElement&lt;/ElementType&gt;\r<br />\n&lt;Name&gt;Return Code&lt;/Name&gt;\r<br />\n&lt;Type&gt;Int&lt;/Type&gt;\r<br />\n&lt;ID&gt;e66a35b0-fa4f-4aed-a349-6f312356dba5&lt;/ID&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ServiceElement&lt;/ElementType&gt;\r<br />\n&lt;ServiceAction&gt;Stop&lt;/ServiceAction&gt;\r<br />\n&lt;ServiceName&gt;JavaQuickStarterService&lt;/ServiceName&gt;\r<br />\n&lt;PathToEXE&gt;&lt;/PathToEXE&gt;\r<br />\n&lt;StartupMode&gt;Undefined&lt;/StartupMode&gt;\r<br />\n&lt;StartingAccount&gt;Undefined&lt;/StartingAccount&gt;\r<br />\n&lt;Login&gt;&lt;/Login&gt;\r<br />\n&lt;Password&gt;&lt;/Password&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;\r<br />\n&lt;PathToExecutable&gt;D:\\CustomUpdates\\jdk-7u51-windows-x64.exe&lt;/PathToExecutable&gt;\r<br />\n&lt;Parameters&gt;/s IExplorer=1&lt;/Parameters&gt;\r<br />\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;\r<br />\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;\r<br />\n&lt;Variable&gt;e66a35b0-fa4f-4aed-a349-6f312356dba5&lt;/Variable&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.WaitElement&lt;/ElementType&gt;\r<br />\n&lt;Wait&gt;30&lt;/Wait&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt;\r<br />\n&lt;PathToExecutable&gt;C:\\Windows\\System32\\msiexec.exe&lt;/PathToExecutable&gt;\r<br />\n&lt;Parameters&gt;/x {4a03706f-666a-4037-7777-5f2748764d10} /qn /norestart&lt;/Parameters&gt;\r<br />\n&lt;KillProcess&gt;True&lt;/KillProcess&gt;\r<br />\n&lt;TimeBeforeKilling&gt;10&lt;/TimeBeforeKilling&gt;\r<br />\n&lt;Variable/&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.WaitElement&lt;/ElementType&gt;\r<br />\n&lt;Wait&gt;30&lt;/Wait&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ServiceElement&lt;/ElementType&gt;\r<br />\n&lt;ServiceAction&gt;Stop&lt;/ServiceAction&gt;\r<br />\n&lt;ServiceName&gt;JavaQuickStarterService&lt;/ServiceName&gt;\r<br />\n&lt;PathToEXE&gt;&lt;/PathToEXE&gt;\r<br />\n&lt;StartupMode&gt;Undefined&lt;/StartupMode&gt;\r<br />\n&lt;StartingAccount&gt;Undefined&lt;/StartingAccount&gt;\r<br />\n&lt;Login&gt;&lt;/Login&gt;\r<br />\n&lt;Password&gt;&lt;/Password&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ServiceElement&lt;/ElementType&gt;\r<br />\n&lt;ServiceAction&gt;ChangeStartingMode&lt;/ServiceAction&gt;\r<br />\n&lt;ServiceName&gt;JavaQuickStarterService&lt;/ServiceName&gt;\r<br />\n&lt;PathToEXE&gt;&lt;/PathToEXE&gt;\r<br />\n&lt;StartupMode&gt;Disabled&lt;/StartupMode&gt;\r<br />\n&lt;StartingAccount&gt;Undefined&lt;/StartingAccount&gt;\r<br />\n&lt;Login&gt;&lt;/Login&gt;\r<br />\n&lt;Password&gt;&lt;/Password&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;Action&gt;\r<br />\n&lt;ElementType&gt;CustomUpdateElements.ReturnCodeElement&lt;/ElementType&gt;\r<br />\n&lt;ReturnCodeMethod&gt;Variable&lt;/ReturnCodeMethod&gt;\r<br />\n&lt;StaticReturnCode&gt;0&lt;/StaticReturnCode&gt;\r<br />\n&lt;Variable&gt;e66a35b0-fa4f-4aed-a349-6f312356dba5&lt;/Variable&gt;\r<br />\n&lt;/Action&gt;\r<br />\n&lt;/CustomUpdate&gt;<br />\n",
+    "PostedDate": "2014-03-05T00:46:02.687-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1219364",
+    "ThreadId": "478060",
+    "Html": "I solved the problem, I placed the update &quot;jdk-7u51-windows-x64.exe&quot; in the location of installation files of WPP, then i modified the PathToExecutable And it worked<br />\n",
+    "PostedDate": "2014-03-05T02:01:58.98-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

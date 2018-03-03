@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Wsus package publisher fails to download java update package deployed,the certificate of the wsus package publisher is present in the client so i dont know what the problem is.see error attached",
+    "LastUpdatedDate": "2017-05-24T05:59:07.01-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-05-24T05:59:06.793-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Download Fails",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 375
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1663275,
+      "FileName": "error.PNG",
+      "DownloadUrl": ".\\1663275"
+    }
+  ],
+  "Comments": []
+}

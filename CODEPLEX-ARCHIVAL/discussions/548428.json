@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1255590",
+    "ThreadId": "548428",
+    "Html": "I have deployed Adobe Reader 11.0.07 as first package with WPP - works great! But now I find out that there is a Setting (Adobe Customization Wizard -&gt; Security -&gt; Protected View) that should be disabled. Is it correct to create a new Update and &quot;Replace&quot; the old one with the new one? Or is there a other way?\r<br />\n<br />\nThanks!<br />\n",
+    "PostedDate": "2014-06-12T06:56:13.697-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1255594",
+    "ThreadId": "548428",
+    "Html": "You can use Group Policy Preferences. IMHO it is the best way to configure settings in Applications.<br />\n",
+    "PostedDate": "2014-06-12T07:06:21.117-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-06-30T09:07:05.257-07:00"
+  },
+  {
+    "Id": "1255901",
+    "ThreadId": "548428",
+    "Html": "hmm great idea - thanks! Never used the GPP in a productive environment for those things but hey - there are a few GPOs for Adobe Reader and this works fine.<br />\n",
+    "PostedDate": "2014-06-13T00:19:46.923-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

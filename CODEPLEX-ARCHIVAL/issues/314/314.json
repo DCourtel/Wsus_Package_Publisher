@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2016-09-01T13:29:43.117-07:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI have a setup of an upstream WSUS where I installed WPP on the server to package and publish an Adobe update, and a downstream WSUS server that synchronizes from the upstream server.\r\n\r\nI can see the Adobe update listed in my upstream WSUS server (selected to make update visible in WSUS console), but I couldn't see the update listed in my downstream WSUS console. Since I do not install WPP in the downstream server, how do I make the update visible there? \r\n\r\nThank you.",
+    "LastUpdatedDate": "2016-09-01T13:29:43.117-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-12-13T22:06:17.323-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Make update visible in downstream WSUS server console",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 314
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "On the Downstream-WSUS you have to create a new View for the Products. After this, you must run this Script on your Downstream-WSUS:\n\nSET QUOTED_IDENTIFIER ON\nGO\nUSE SUSDB;\nUPDATE [SUSDB].[dbo].[tbUpdate] SET [IsLocallyPublished] = 0 WHERE [IsLocallyPublished] <> 0\n\nIf you speak a little german you can read this small howto: http://www.wsus.de/anwendungen_ueber_wsus_bereitstellen_teil_2 there you find how to run the script daily or weekly in a commandline.",
+      "PostedDate": "2015-12-13T23:38:43.967-08:00",
+      "Id": 194539
+    },
+    {
+      "Message": "Thank you very much. I can see my updates in the WSUS console after running the script.\nCan't speak/read German but I get the gist from the link provided.\n\nThanks again!",
+      "PostedDate": "2015-12-14T00:34:50.813-08:00",
+      "Id": 194542
+    },
+    {
+      "Message": "Great, but think about, you must run the script every time you create a new update and replication bring the new update to your Downstream-WSUS.",
+      "PostedDate": "2015-12-14T01:46:28.017-08:00",
+      "Id": 194545
+    }
+  ]
+}

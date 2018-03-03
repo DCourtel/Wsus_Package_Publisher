@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Catalogs",
+      "DisplayName": "Catalogs"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-03-04T10:37:58.953-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Do we have any documents for uploading catalogs and manage servers drivers and firmwares through wpp.\r\n",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-01-21T10:40:22.353-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "servers driver and firmware updates through WPP",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 174
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Yes, sure. In the zip file that you have downloaded from CodePlex, you will find two PDF file :\n- Importing Updates from Vendor's Catalog.pdf\n- Catalogs' subscriptions management.pdf\n",
+      "PostedDate": "2014-01-21T11:02:29.383-08:00",
+      "Id": 131083
+    },
+    {
+      "Message": "And if Google translate is sufficent \n\nhttp://translate.google.de/translate?sl=de&tl=en&js=n&prev=_t&hl=de&ie=UTF-8&u=http%3A%2F%2Fwww.wsus.de%2Fveroeffentlichen_von_hardwareupdates_mit_hilfe_von_wsus_package_publisher\n\nRegards\nNorbert\n",
+      "PostedDate": "2014-01-21T11:31:44.297-08:00",
+      "Id": 131087
+    }
+  ]
+}

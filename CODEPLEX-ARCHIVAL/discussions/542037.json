@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1233324",
+    "ThreadId": "542037",
+    "Html": "Hello all! I have successfully setup and implemented WSUS Package Publisher, it is quite nice and I wonder why I haven't deployed this product before.\r<br />\n<br />\nI do have a question regarding best practice. Currently I have my applications packaged as a silent exe installer (<a href=\"http://www.msfn.org/board/topic/101552-7z-sfx-modified-module-and-tools/\" rel=\"nofollow\">created with 7-zip</a>) which installs the application but then performs quite a few additional steps such as creating/deleting files, registry keys, etc.\r<br />\n<br />\nSo my questions is this, is there any benefit to creating a custom update in WSUS Package Publisher or can I just continue to use the silent exe installers and import as a regular update?\r<br />\n<br />\nCheers!<br />\n",
+    "PostedDate": "2014-04-11T11:47:30.357-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1242964",
+    "ThreadId": "542037",
+    "Html": "Hello, If the silent Exe installer fits your needs, use it. Custom update have been created to fill the gap between classic installer and Wsus admin needs.<br />\n",
+    "PostedDate": "2014-05-08T02:36:22.38-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:36:25.81-07:00"
+  }
+]

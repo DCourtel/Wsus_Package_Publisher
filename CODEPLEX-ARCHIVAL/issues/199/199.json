@@ -1,0 +1,56 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-06-18T14:07:19.03-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hello, I've been using the wsus Package Publisher Adobe Flash Player version 14.x imported via \"import from catalog\". After I restarted the program is no longer visible in Updates the software package. Is this normal? How can I fix the problem? See attachments.",
+    "LastUpdatedDate": "2014-06-18T14:07:19.03-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-06-18T07:22:47.313-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Updates everything is empty",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 199
+  },
+  "FileAttachments": [
+    {
+      "FileId": 865674,
+      "FileName": "Import from Catalog.PNG",
+      "DownloadUrl": ".\\865674"
+    },
+    {
+      "FileId": 865675,
+      "FileName": "Wsus Package Publisher.PNG",
+      "DownloadUrl": ".\\865675"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Sorry, I have found the solution under Discussions - Misc (https://wsuspackagepublisher.codeplex.com/discussions/537899).\r\n\r\nThanks for the great program!",
+      "PostedDate": "2014-06-18T07:40:59.527-07:00",
+      "Id": 150029
+    }
+  ]
+}

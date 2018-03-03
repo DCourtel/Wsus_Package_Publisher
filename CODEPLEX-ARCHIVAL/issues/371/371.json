@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nI am running Release v1.3.1702.10 on Windows Server 2012 R2. I just updated my code signing cert a couple of days ago, and yesterday created a custom update for Java 8 Update 131 (x86 & x64). Updates were being installed by the clients ok, then I installed the latest Windows Updates, rebooted the system, and now my custom Java updates are nowhere to be found in the WPP console.  \r\n\r\nClients are still getting the Java updates to install, but it is telling them the update is not signed properly.  Any ideas of why the Java updates went missing, and what I can do to resolve? I am currently going to re-create the custom updates to republish Java again, but I'd like to determine the root cause of this. Thanks!\r\n\r\n",
+    "LastUpdatedDate": "2017-04-27T10:04:09.387-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-04-27T08:03:23.66-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Custom Updates Missing",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 371
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I should note, that I *do* see the updates in my main WSUS console though, just not WPP.",
+      "PostedDate": "2017-04-27T08:50:08.777-07:00",
+      "Id": 208232
+    },
+    {
+      "Message": "Check your settings in WPP. https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=742282 > Settings > Servers, Updates and Misc.",
+      "PostedDate": "2017-04-27T09:23:24.293-07:00",
+      "Id": 208233
+    },
+    {
+      "Message": "Thank you. That resolved my issue. Somehow, under Tools --> Settings --> Updates the option for \"Show locally-published updates that are also visible in WSUS Console\" got unchecked from the system reboot. Once I checked that box again, and reconnected to my console, the updates are showing up again. \n\nThank you.",
+      "PostedDate": "2017-04-27T10:04:09.387-07:00",
+      "Id": 208234
+    }
+  ]
+}

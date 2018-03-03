@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1475538",
+    "ThreadId": "655361",
+    "Html": "Hello,\r<br />\n<br />\nI'd like to know if Wsus Package Publisher is compatible with a WSUS Server 4.0?\r<br />\nWe used to have a 3.0 WSUS server but it crashed so we're going to install a new one in 4.0, but before I have to know if it's compatible with Wsus Package Publisher.\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2016-06-09T00:44:21.4-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1475574",
+    "ThreadId": "655361",
+    "Html": "Hello, there is no Wsus 4.0. \r<br />\nWsus has been directly release as 6.2 in Windows 2012.\r<br />\nAnd, yes, WPP is compatible with that version of Wsus.<br />\n",
+    "PostedDate": "2016-06-09T07:56:01.493-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-11-10T12:42:26.757-08:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Have to make custom updates and have problems with the rules.\r\n\r\nIs there any documentation about the difference between \"Update Level Rules\" and \"Package Level Rules\"? Which type of rules shoud be used for custom updates?\r\n\r\nThank you all in advance for any hint.\r\nFranz",
+    "LastUpdatedDate": "2015-11-10T12:42:26.757-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-10-14T07:43:54.337-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "\"Update Level Rules\" vs. \"Package Level Rules\"?",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 301
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I have read somewhere an explication for why there are two type of rules (update and package level). \n At first, when Microsoft started to think about Wsus, they have imagined that a package can contains more than one update (InstallableItem). So, they have designed a package-level rule and an Update-Level rule. Each InstallableItem should have his own update-Level rule. \n Imagines a package to install Office. One InstallableItem contains the main file for Office, a second InstallableItem contains a patch to apply if Windows is installed in French, another InstallableItem contains the same patch for the English version and so on....",
+      "PostedDate": "2015-10-14T08:50:33.943-07:00",
+      "Id": 191626
+    },
+    {
+      "Message": "Thank you for your explications!\n\nSo, when I understand this correct: In WPP, does in makes no difference in practice if Update- or Package Level Rules are used?\n\nKind regards, Franz",
+      "PostedDate": "2015-10-14T09:28:24.727-07:00",
+      "Id": 191628
+    },
+    {
+      "Message": "That's right. It's only provided to allow user to edit rules on updates from catalog.",
+      "PostedDate": "2015-11-10T12:42:14.943-08:00",
+      "Id": 193411
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 22,
+    "Custom": null,
+    "Description": "* New GUI, based on Office Ribbon look & feel.\r\n* Enhance Multi-threading to avoid hangs.\r\n* Show Microsoft official updates.\r\n* Add ability to drag&drop rule when creating/editing an update.\r\n* Add the ability to filter datagridview like Excel does.\r\n* Enable displaying/modification of rules at package level.\r\n* When importing updates from Catalogs, enable to filter on already imported updates.\r\n* Allow users to edit Vendor name and product name when importing from Catalog. Create a \"Substitution Dictonnary\" to automatically make these changes.\r\n* Redesign Rule Assistant. Separate IsInstalled and IsInstallable. Separate UpdateLevel Rules and PackageLevel Rules.\r\n* Allow to publish MetaData only updates from catalogs.\r\n* CustomUpdate Engine should be wrote in C++ to be a native EXE instead of relying on .Net Framework\r\n* When showing pending updates, allow to select some of these updates to perform a remote installation.\r\n* Modify the \"Show pending updates\" component to to align with UI-Culture chosen in WPP.\r\n\r\n__Suggestions are welcome !__",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-09-08T13:29:55.97-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Ideas for WPP V2 - Call for contributions",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 4,
+    "Id": 109
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "+1 for new GUI and new rule handling",
+      "PostedDate": "2013-09-17T13:47:00.39-07:00",
+      "Id": 114827
+    },
+    {
+      "Message": "Suggestions are welcome !",
+      "PostedDate": "2013-09-21T13:14:01.877-07:00",
+      "Id": 115253
+    },
+    {
+      "Message": "Setup-Routine using .msi files and using and automatic update with msi too. Just click on install within the update available window.\n\nRegards\nNorbert",
+      "PostedDate": "2013-10-09T02:37:14.387-07:00",
+      "Id": 117906
+    },
+    {
+      "Message": "> Setup-Routine using .msi files and using and automatic update with msi too. Just click on install within the update available window.\n\nYou mean, auto-upgrade WPP ?",
+      "PostedDate": "2013-10-09T02:56:56.413-07:00",
+      "Id": 117907
+    },
+    {
+      "Message": "Yes, thats what I mean.",
+      "PostedDate": "2013-10-09T03:49:42.583-07:00",
+      "Id": 117909
+    },
+    {
+      "Message": "Add feature for editing rules at package level: https://wsuspackagepublisher.codeplex.com/discussions/459343\n",
+      "PostedDate": "2013-10-10T14:00:01.42-07:00",
+      "Id": 118069
+    },
+    {
+      "Message": "```\nI worked on VB6 with MDI-Forms: http://msdn.microsoft.com/en-us/library/xyhh2e7e.aspx If you don't want to redesign to Office Ribbons maybe MDI-Forms is an Alternative.\n```",
+      "PostedDate": "2013-10-16T01:20:53.833-07:00",
+      "Id": 118576
+    },
+    {
+      "Message": "1.) Provide familiar catalogs(HP, Dell, IBM, Adobe, etc..) by default with WPP for easy access.\n2.) When click WSUS group in WPP the it show the list computer with current status(Installation, download, reboot) with status bar.\n3.) Add a new column with icon to each computer to show that server is up to date or not.\n4.) Add reporting features it should include windows updates.",
+      "PostedDate": "2014-01-29T00:46:01.377-08:00",
+      "Id": 131990
+    },
+    {
+      "Message": "Do HP and IBM provide SCUP Catalogs? I doubt it. Dell and Adobe Catalogs are already included, so what is your request?",
+      "PostedDate": "2014-01-29T04:56:55.897-08:00",
+      "Id": 132007
+    },
+    {
+      "Message": "HP-PC, HP-ProLiant and Fuji Servers is already included.",
+      "PostedDate": "2014-01-29T06:02:24.82-08:00",
+      "Id": 132014
+    },
+    {
+      "Message": "_1.) Provide familiar catalogs(HP, Dell, IBM, Adobe, etc..) by default with WPP for easy access._\nGo to 'Manage Catalog subscriptions' and click on 'Load a shared catalog'. That said, there is very, very, VERY few available catalogs. In facts, only Dell, HP, Adobe and Fujistsu provide some catalogs.\n\n _2.) When click WSUS group in WPP the it show the list computer with current status(Installation, download, reboot) with status bar._\nI'm not sure to understand what you mean. Do you refer to a special view in the Wsus Console ?\n\n _3.) Add a new column with icon to each computer to show that server is up to date or not._\n\"Server is up to date\" ???\n\n _4.) Add reporting features it should include windows updates._\nInclude Microsoft updates may considerably slow down WPP.",
+      "PostedDate": "2014-01-29T13:11:23.167-08:00",
+      "Id": 132053
+    },
+    {
+      "Message": "A Service who is checking daily the subscribed catalogs for new Updates. If a new update is available send a mail to a admin. \n\n",
+      "PostedDate": "2014-02-14T08:26:02.207-08:00",
+      "Id": 133586
+    },
+    {
+      "Message": "> A Service who is checking daily the subscribed catalogs for new Updates. If a new update is available send a mail to a admin. \n\n\nPersonnaly, I use [FollowThatPage](https://www.followthatpage.com/) to monitor Download Page.\n",
+      "PostedDate": "2014-03-27T10:40:47.6-07:00",
+      "Id": 139021
+    },
+    {
+      "Message": "> Personnaly, I use FollowThatPage to monitor Download Page.\n\nHmm, looks good, thank you, i will give them a try. :)",
+      "PostedDate": "2014-03-27T11:23:59.667-07:00",
+      "Id": 139026
+    },
+    {
+      "Message": "Export update as template so I could import it on the __same__ server and modify its settings (update Information incl. command line, IsInstalled/IsInstallable definitions etc.).\nWhen currently exporting and importing an update on the same server, the following errors appear and the import doesn't succeed:\n```\nThere's already an update with this Package ID. No Import will be perform.\n```\nfollowed by\n```\nError when importing update.\n```\nBut the requested functionality already exists when \"creating a superseding update...\" but it should then not set the original update superseded. When currently deselecting the superseded update in the information dialog, it although sets the selected update superseded. Unfortunatly this is not reversable. So currently its not usable as the requested template functionality.\n\nOr is there another trick to import an exported update on the same server?\n",
+      "PostedDate": "2015-01-28T01:08:14.213-08:00",
+      "Id": 170971
+    },
+    {
+      "Message": "Import/Export collections of updates should be merged into this issue, probably:\nhttps://wsuspackagepublisher.codeplex.com/workitem/238",
+      "PostedDate": "2015-02-04T07:59:57.94-08:00",
+      "Id": 173475
+    },
+    {
+      "Message": "+10 :-) for publishing MetaData only updates from catalogs\n\nadd rule for checking WSUS-Group-Membership (makes distribution much more easier and saves time instead of distribute special files for checking or something like that)\n\nenhance function to clear Softwaredistribution-Folder to hold wpp-Updates. Otherwise \"install source\" is missing if you want to uninstall one of these updates.\n",
+      "PostedDate": "2015-02-04T23:07:57.83-08:00",
+      "Id": 173519
+    },
+    {
+      "Message": "Add a column to display the \"current logged on user\"",
+      "PostedDate": "2015-02-14T12:30:43.04-08:00",
+      "Id": 174604
+    },
+    {
+      "Message": "allow an existing custom update to be revised in the same way _regular_ updates can be revised.",
+      "PostedDate": "2015-03-18T17:37:06.2-07:00",
+      "Id": 179552
+    },
+    {
+      "Message": "> allow an existing custom update to be revised in the same way regular updates can be revised.\n\nThat's already possible. Right click on the update and choose 'Revise'",
+      "PostedDate": "2015-03-19T01:48:06.983-07:00",
+      "Id": 179569
+    },
+    {
+      "Message": "> allow an existing custom update to be revised in the same way regular updates can be revised.\nI think patanne means update the XML file that CustomUpdateEngine uses. I know this isn't possible to do using the Revise function, but would be possible using something like \"Create new custom update based on this one and have it supersede the old one\".",
+      "PostedDate": "2015-03-19T08:31:48.727-07:00",
+      "Id": 179589
+    },
+    {
+      "Message": "Effectively, as per Microsoft definition, revising an update mean : Modifying meta data only and not the main update file or additionnal files.\nIn WPP v2, you will be able to save custom update XML file as templates and create custom update from these templates.",
+      "PostedDate": "2015-03-19T09:25:00.127-07:00",
+      "Id": 179593
+    }
+  ]
+}

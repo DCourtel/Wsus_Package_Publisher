@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1480923",
+    "ThreadId": "657084",
+    "Html": "Sorry if the title is inappropriate, I did my best and find no better way.\r<br />\nHere is the scenario\r<br />\nApplication version 11 is deployed in the enterprise. Everytime a new update (.msp) is released it is published in Wsus Package Publisher and it supersedes all previous ones.\r<br />\nApplication version 12 is released while Application 11 is still maintained and it will get new updates. \r<br />\nThe enterprise cannot migrate to Application 12 entirely because it doesn't support the legacy windows xp.\r<br />\nSo the idea is the following:<br />\n<ul>\n<li>all new computers will migrate to Application 12</li>\n<li>\nlegacy xp computers will get the .msp update for version 11<br />\n</li>\n</ul>\nCurrently the windows 7 and 8 computers have application 11 and its last update approved.\r<br />\nWhich is the best way to achieve the goal ? \r<br />\nI suppose it is better create a new <strong>Product name</strong> for Application 12 and change the approval for application 11 removing all computers which are not windows xp.\r<br />\n<br />\nAny suggestions ?\r<br />\n<br />\nThanks\r<br />\nFilippo\r<br />\n<br />\nP.S.\r<br />\nAny reference to Adobe Reader Dc is purely casual.<br />\n",
+    "PostedDate": "2016-08-12T02:32:26.963-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1482588",
+    "ThreadId": "657084",
+    "Html": "Hi Filippo,\r<br />\n<br />\nto keep things overlookable I personally would indeed rather use a different product name for version 12. But as I just checked, Adobe use &quot;Adobe Reader&quot; as product name for all its versions in their catalogues and unfortunately it doesn't seem to be possible to alter the product name when importing an update from a catalogue to WPP.\r<br />\n<br />\nTo only provide Win XP machines with version 11 and only higher OS versions with version 12, you could use IsInstallable rules (type Windows version).\r<br />\n<br />\nRegards, Felix<br />\n",
+    "PostedDate": "2016-09-01T00:57:28.723-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1482592",
+    "ThreadId": "657084",
+    "Html": "<strong>jFMd wrote:</strong><br />\n<blockquote>\nTo only provide Win XP machines with version 11 and only higher OS versions with version 12, you could use IsInstallable rules (type Windows version).<br />\n</blockquote>\nI have all the computers divided into groups based on their OS, so I can approve new applications only for some groups. What is not clear to me is how to deal with the previously approved application 11.\r<br />\nAt the moment application 11 and its updates are approved for windows 8 and 7 too. I can remove approvals for those groups or I can repackage everything inserting an appropriate 'IsInstallable' rule.\r<br />\n<br />\nThanks\r<br />\n<br />\nFilippo<br />\n",
+    "PostedDate": "2016-09-01T01:46:21.643-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1482595",
+    "ThreadId": "657084",
+    "Html": "two ways:<br />\n<br />\nNumber One<br />\nCreate Product- orientated Computergroups in WSUS, like: <br />\n<ul>\n<li>Product V 12</li>\n<li>\nProduct V 11<br />\n</li>\n</ul>\nand put the XP Clinets in Product V 11 and W7 and higher in Product V12<br />\nApprove the Updates in WPP to the correspondending Group: Product V11 Updates to Product V11 Group with XP Clients inside and so on. - finish. Easy and for Beginners :-)<br />\n<br />\nIts ok to have OS orientated groups, but for softwaredeployment you need also software orientaded grooups.<br />\n<br />\n Number two<br />\nuse the rules in WPP! , like jFMd tell you. You missunderstand what he says, Ininstable rules does not need other groups.<br />\nConfigure &quot;IsInstallable rules&quot; for Product V11 Updates and Product V12 Updates and set corresponding OS Versions. Than you can deploy it to all Clients, the rule will check if installation is possible or not<br />\n",
+    "PostedDate": "2016-09-01T02:32:14.27-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1482600",
+    "ThreadId": "657084",
+    "Html": "Filippo,\r<br />\n<br />\nI definitely recommend to set up test groups for this migration on your WSUS. and ply around with a couple of test machines and in a later stage with production machines.\r<br />\nCheck if version 12 can be installed as an update to version 11 or if it is being installed additionally to v11. Also if it is installed additionally,  if the original msi package could be uninstalled afterwards via &quot;Approval for uninstallation&quot;. If OS is the only criteria for migration to v12 or not, should be easy to handle everything with the OS groups you have already on your WSUS and just use all packages from the Adobe Software Catalogues...\r<br />\n<br />\nRegards, Felix<br />\n",
+    "PostedDate": "2016-09-01T03:38:36.147-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1482842",
+    "ThreadId": "657084",
+    "Html": "HI Filippo,<br />\n<br />\nwe had same here, some clints WinXP has to run for a few years <em>sick!</em>.<br />\nUsing INstallRules is the best way and you will have less effort to maintain the updates.<br />\n<br />\nAssign V11 only to &quot;EqualTo&quot; (or if you like &quot;LessThanOrEqualTo&quot;) Winxp in &quot;is installed&quot; and &quot;is installable&quot; section.<br />\nThis updates will only shown to win xp clients.<br />\n<br />\nAssing V12 only to &quot;GreaterthanorEqualTo&quot; Windows7 in both sections.<br />\nYour WinXP clients wil not see them.<br />\n<br />\nThe Wixp rule have to look like this: &lt;bar:WindowsVersion Comparison=&quot;LessThanOrEqualTo&quot; MajorVersion=&quot;5&quot; MinorVersion=&quot;1&quot; ProductType=&quot;1&quot;/&gt;<br />\nThe Win7 Rule: &lt;bar:WindowsVersion Comparison=&quot;GreaterThanOrEqualTo&quot; MajorVersion=&quot;6&quot; MinorVersion=&quot;1&quot; ProductType=&quot;1&quot;/&gt;<br />\n<br />\nBenefit of using OS based assigning: If you accidently add a memberserver to a wrong group, &quot;he&quot; will not see that update or application.<br />\n<br />\nRegards<br />\n<br />\neggat<br />\n",
+    "PostedDate": "2016-09-03T10:05:18.283-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

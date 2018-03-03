@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1322078",
+    "ThreadId": "572062",
+    "Html": "It seems this doesn't work like it should or I've don't understand it at all ;)<br />\n<br />\nMicrosoft help says:<br />\n<br />\nUse 32-bit Registry: Specifies whether registry hive detection will always occur in 32-bit or determine whether the computer is 64-bit or 32-bit and detect the registry hive accordingly. By default, the Use 32-bit check box is not enabled and both 64-bit and 32-bit registry detection are supported.<br />\n<br />\nSo I thought if I leave the setting &quot;32 bit registry&quot; unchecked for example both of this registry hives will be checked.:<br />\n<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Test1<br />\n<br />\nand <br />\n<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Test1<br />\n<br />\nBut in my tests only the defined registry key in the Update rule will be checked and not both of them.<br />\n",
+    "PostedDate": "2014-11-14T01:18:54.563-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1327059",
+    "ThreadId": "572062",
+    "Html": "<blockquote>\nBut in my tests only the defined registry key in the Update rule will be checked and not both of them.<br />\n</blockquote>\nIt will never check 'both of them', but only one.<br />\n",
+    "PostedDate": "2014-11-28T07:54:34.587-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1327691",
+    "ThreadId": "572062",
+    "Html": "But what Microsoft means than with this:\r<br />\n<br />\n By default, the Use 32-bit check box is not enabled and both 64-bit and 32-bit registry detection are supported.<br />\n",
+    "PostedDate": "2014-12-01T06:44:02.92-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1352110",
+    "ThreadId": "572062",
+    "Html": "you have to use the 32-bit check box only when you install a 32bit software with test on HKEY_LOCAL_MACHINE\\SOFTWARE...<br />\n<ul>\n<li>so when you install on windows 32bit, it will test HKEY_LOCAL_MACHINE\\SOFTWARE...</li>\n<li>and with windows 64bit, it will automatically test HKEY_LOCAL_MACHINE\\Wow6432Node\\SOFTWARE...</li>\n</ul>\n",
+    "PostedDate": "2015-02-13T01:42:00.987-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-02-14T12:37:00.06-08:00"
+  }
+]

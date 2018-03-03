@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1429680",
+    "ThreadId": "639707",
+    "Html": "I try to deploy java 1.8.45 package on our network. I made a custom package (details bellow). The installation is failed with the error code 80070643 and event id 20 on Our Windows 7 test mashine. Do anyone have any idea, that how I can fix it?\r<br />\n<br />\nDownloaded the offline Java installer (jre-8u45-windows-i586) from the link: <a href=\"https://java.com/en/download/windows_offline.jsp\" rel=\"nofollow\">https://java.com/en/download/windows_offline.jsp</a>\r<br />\nAt the first splashscreen copied the file from the folder: c:\\Users...\\AppData\\LocalLow\\Sun\\Java\\jre1.8.0_45\\\r<br />\nBased on the document (Installing Java 7u21 Without Java Auto Updater.pdf) I’ve made a custom package with the deails bellow:\r<br />\nFrom the tools/msi reader menu saved the product code: {26A24AE4-039D-4CA4-87B4-2F83218045F0}\r<br />\nCreate an int variable „ReturnCode”\r<br />\nAdd a ‘Service Element’, to stop JavaQuickStarterService\r<br />\nAdd an ‘Executable Element’: jre1.8.0_45.msi\tparameter: /i jre1.8.0_40.msi /quiet /norestart AUTOUPDATECHECK=0 WEB_JAVA=1 JAVAUPDATE=0 JU=0 \tReturnCode\r<br />\nAdd a ‘Pause Element’ 30s\r<br />\nAdd an ‘Executable Element’: %windir%\\System32\\msiexec.exe \tparameter: /x {4A03706F-666A-4037-7777-5F2748764D10} /qn /norestart\r<br />\nAdd a ‘Pause Element’ 30s\r<br />\nAdd a ‘Service Element’, to stop JavaQuickStarterService\r<br />\nAdd a ‘Service Element’, to ChangeStartingMode JavaQuickStarterService: disabled\r<br />\nAdd a ‘Return Code Element’ ReturnCode\r<br />\nAdded the jre1.8.0_45.msi file\r<br />\nfilled out the vendor, etc\r<br />\nadd a MSI rule with product code 26A24AE4-039D-4CA4-87B4-2F83218045F0 and check the „delete rules at …..” next.\r<br />\nadd a MSI rule with product code 26A24AE4-039D-4CA4-87B4-2F83218045F0 with Check the ‘Reverse Rule’ and check the „delete rules at …..”<br />\n",
+    "PostedDate": "2015-06-09T04:01:50.373-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1429696",
+    "ThreadId": "639707",
+    "Html": "I think her is the failure:<br />\n<br />\nAdd an ‘Executable Element’: jre1.8.0_45.msi parameter: <strong>/i jre1.8.0_40.msi</strong> /quiet /norestart AUTOUPDATECHECK=0 WEB_JAVA=1 JAVAUPDATE=0 JU=0 ReturnCode <br />\n<br />\nWhy you want to install Java 8 Update 40?<br />\n<br />\nBTW: You can use my Tool for Uninstall2Install: <a href=\"http://www.wsus.de/uninstall2install\" rel=\"nofollow\">http://www.wsus.de/uninstall2install</a><br />\n",
+    "PostedDate": "2015-06-09T05:14:27.77-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-06-17T07:19:06.827-07:00"
+  },
+  {
+    "Id": "1430665",
+    "ThreadId": "639707",
+    "Html": "Thanks for the quick reply. I misstyped. After fixing that number the update 've been success.<br />\n",
+    "PostedDate": "2015-06-17T03:09:35.043-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,76 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2016-09-01T13:07:13.453-07:00",
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "We have a WSUS on 2008 R2 and the last version on WPP.\r\nOn Windows 7 all work fine with any package deployed but on Windows 10 is not working with the error 0x80246003.\r\nMy WSUS is update and my client too.\r\nThe error happen only with my package deployed and the other update of Windows works.\r\nAny ideas ?",
+    "LastUpdatedDate": "2016-09-01T13:07:13.453-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-06-16T00:38:43.003-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Error 0x80246003 on Windows 10",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 344
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1582902,
+      "FileName": "Capture.PNG",
+      "DownloadUrl": ".\\1582902"
+    },
+    {
+      "FileId": 1582903,
+      "FileName": "WPP-0c65b42c-e4fb-4fdf-a678-0971afd3bea6.log.gz",
+      "DownloadUrl": ".\\1582903"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "What is the Build from WSUS?\nHer you find the Plcae where you can fin the correct Build: http://www.wsus.de/images/wsus-version.png\nIf the Build is NOT .274, pls install all missing updates:\n\nWSUS 3.0 (SP2): \tBuild 3.2.7600.226\nWSUS 3.0 (SP2) + KB2720211: \tBuild 3.2.7600.251\nWSUS 3.0 (SP2) + KB2734608: \tBuild 3.2.7600.256\nWSUS 3.0 (SP2) + KB2828185: \tBuild 3.2.7600.262\nWSUS 3.0 (SP2) + KB2938066: \tBuild 3.2.7600.274\n\nRestart the whole Server after installing a update. If the WSUS is on Build 2.74 create a new update and publish it to a W10 Client.",
+      "PostedDate": "2016-06-26T01:27:52.793-07:00",
+      "Id": 200273
+    },
+    {
+      "Message": "My build are : Build 3.2.7600.251\nSo i up to date my wsus server to 3.2.7600.274 and recreate a package.\nThx for the advise.\nAnd now we have a new error 0x80070643.\n\n",
+      "PostedDate": "2016-06-27T00:55:22.897-07:00",
+      "Id": 200285
+    },
+    {
+      "Message": "Your WSUS is now on Build .274?\nYou create a NEW package? Pls create a new one, FlashPlayer 21.0.0.242 is old. 22.0.0.192 is actually.\nhttps://www.adobe.com/products/flashplayer/distribution3.html\n\nCan you install the MSI manually without errormessages?",
+      "PostedDate": "2016-06-27T01:23:10.42-07:00",
+      "Id": 200287
+    },
+    {
+      "Message": "Yes it's good !\nIt's because i try to install activeX on Windows 10 so even manually it's not possible.\nI try with the NPAPI version of Adobe Flash Player and it's work now !\nTo conclude always update the WSUS server.\nThank you !",
+      "PostedDate": "2016-06-27T01:50:41.863-07:00",
+      "Id": 200288
+    },
+    {
+      "Message": "OK, Adobe Flash Player ActiveX you can install only up to Windows 7. Windows 8 and higher get the ActiveX Flash Player from Microsoft/Windows Update.\n\nOnly NPAPI + PPAPI Plugins you can install in all current Windows Versions.",
+      "PostedDate": "2016-06-27T02:42:09.687-07:00",
+      "Id": 200290
+    }
+  ]
+}

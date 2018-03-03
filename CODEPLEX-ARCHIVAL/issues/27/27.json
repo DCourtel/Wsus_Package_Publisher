@@ -1,0 +1,61 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-04-26T03:04:28.23-07:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI was trying create package but I have this error: Cannot access closed Stream.\r\n \r\n\r\n\r\nSee the end of this message for details on invoking \r\njust-in-time (JIT) debugging instead of this dialog box.\r\n\r\n************** Exception Text **************\r\nSystem.ObjectDisposedException: Cannot access a closed Stream.\r\n   at System.IO.__Error.StreamIsClosed()\r\n   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)\r\n   at System.Xml.XmlUtf8RawTextWriter.FlushBuffer()\r\n   at System.Xml.XmlUtf8RawTextWriter.Flush()\r\n   at System.Xml.XmlWellFormedWriter.Close()\r\n   at System.Xml.XmlWriter.Dispose(Boolean disposing)\r\n   at System.Xml.XmlWriter.Dispose()\r\n   at Microsoft.UpdateServices.Internal.BaseApi.Publisher.VerifyAndPublishPackage()\r\n   at Microsoft.UpdateServices.Internal.BaseApi.Publisher.PublishPackage(String sourcePath, String additionalSourcePath, String packageDirectoryName)\r\n   at Microsoft.UpdateServices.Internal.BaseApi.Publisher.PublishPackage(String sourcePath, String packageDirectoryName)\r\n   at Wsus_Package_Publisher.WsusWrapper.PublishUpdate(FrmUpdateFilesWizard filesWizard, FrmUpdateInformationsWizard informationsWizard, FrmUpdateRulesWizard isInstalledRulesWizard, FrmUpdateRulesWizard isInstallableRulesWizard)\r\n   at Wsus_Package_Publisher.FrmUpdatePublisher.Publish()\r\n   at Wsus_Package_Publisher.FrmUpdateWizard.updateIsInstallableRulesWizard_btnNext_Click(Object sender, EventArgs e)\r\n   at System.Windows.Forms.Control.OnClick(EventArgs e)\r\n   at System.Windows.Forms.Button.OnClick(EventArgs e)\r\n   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)\r\n   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)\r\n   at System.Windows.Forms.Control.WndProc(Message& m)\r\n   at System.Windows.Forms.ButtonBase.WndProc(Message& m)\r\n   at System.Windows.Forms.Button.WndProc(Message& m)\r\n   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)\r\n   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)\r\n   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)\r\n\r\n\r\n************** Loaded Assemblies **************\r\nmscorlib\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.233 (RTMGDR.030319-2300)\r\n    CodeBase: file:///C:/Windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll\r\n----------------------------------------\r\nWsus Package Publisher\r\n    Assembly Version: 1.1.1304.12\r\n    Win32 Version: 1.1.1304.12\r\n    CodeBase: file:///C:/Users/m/Downloads/Release%20v1.1.1304.12%20(x86)/Wsus%20Package%20Publisher.exe\r\n----------------------------------------\r\nSystem.Windows.Forms\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.1 built by: RTMRel\r\n    CodeBase: file:///C:/windows/Microsoft.Net/assembly/GAC_MSIL/System.Windows.Forms/v4.0_4.0.0.0__b77a5c561934e089/System.Windows.Forms.dll\r\n----------------------------------------\r\nSystem.Drawing\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.1 built by: RTMRel\r\n    CodeBase: file:///C:/windows/Microsoft.Net/assembly/GAC_MSIL/System.Drawing/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Drawing.dll\r\n----------------------------------------\r\nSystem\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.233 built by: RTMGDR\r\n    CodeBase: file:///C:/windows/Microsoft.Net/assembly/GAC_MSIL/System/v4.0_4.0.0.0__b77a5c561934e089/System.dll\r\n----------------------------------------\r\nMicrosoft.UpdateServices.Administration\r\n    Assembly Version: 3.1.6001.1\r\n    Win32 Version: 3.1.7600.226\r\n    CodeBase: file:///C:/windows/assembly/GAC_MSIL/Microsoft.UpdateServices.Administration/3.1.6001.1__31bf3856ad364e35/Microsoft.UpdateServices.Administration.dll\r\n----------------------------------------\r\nSystem.Configuration\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.1 (RTMRel.030319-0100)\r\n    CodeBase: file:///C:/windows/Microsoft.Net/assembly/GAC_MSIL/System.Configuration/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Configuration.dll\r\n----------------------------------------\r\nSystem.Xml\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.233 built by: RTMGDR\r\n    CodeBase: file:///C:/windows/Microsoft.Net/assembly/GAC_MSIL/System.Xml/v4.0_4.0.0.0__b77a5c561934e089/System.Xml.dll\r\n----------------------------------------\r\nWsus Package Publisher.resources\r\n    Assembly Version: 1.1.1304.12\r\n    Win32 Version: 1.1.1304.12\r\n    CodeBase: file:///C:/Users/m/Downloads/Release%20v1.1.1304.12%20(x86)/en/Wsus%20Package%20Publisher.resources.DLL\r\n----------------------------------------\r\nCheckComboBox\r\n    Assembly Version: 1.1.1212.22\r\n    Win32 Version: 1.1.1212.22\r\n    CodeBase: file:///C:/Users/m/Downloads/Release%20v1.1.1304.12%20(x86)/CheckComboBox.DLL\r\n----------------------------------------\r\nMicrosoft.UpdateServices.BaseApi\r\n    Assembly Version: 3.1.6001.1\r\n    Win32 Version: 3.1.7600.226\r\n    CodeBase: file:///C:/windows/assembly/GAC_MSIL/Microsoft.UpdateServices.BaseApi/3.1.6001.1__31bf3856ad364e35/Microsoft.UpdateServices.BaseApi.dll\r\n----------------------------------------\r\nMicrosoft.UpdateServices.StringResources\r\n    Assembly Version: 3.1.6001.1\r\n    Win32 Version: 3.1.7600.226\r\n    CodeBase: file:///C:/windows/assembly/GAC_MSIL/Microsoft.UpdateServices.StringResources/3.1.6001.1__31bf3856ad364e35/Microsoft.UpdateServices.StringResources.dll\r\n----------------------------------------\r\nSystem.Data\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.245 (RTMGDR.030319-2400)\r\n    CodeBase: file:///C:/windows/Microsoft.Net/assembly/GAC_32/System.Data/v4.0_4.0.0.0__b77a5c561934e089/System.Data.dll\r\n----------------------------------------\r\nSystem.Core\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.233 built by: RTMGDR\r\n    CodeBase: file:///C:/windows/Microsoft.Net/assembly/GAC_MSIL/System.Core/v4.0_4.0.0.0__b77a5c561934e089/System.Core.dll\r\n----------------------------------------\r\nMicrosoft.UpdateServices.Utils\r\n    Assembly Version: 3.1.6001.1\r\n    Win32 Version: 3.1.7600.226\r\n    CodeBase: file:///C:/windows/assembly/GAC_MSIL/Microsoft.UpdateServices.Utils/3.1.6001.1__31bf3856ad364e35/Microsoft.UpdateServices.Utils.dll\r\n----------------------------------------\r\nMicrosoft.UpdateServices.AdminDataAccessProxy\r\n    Assembly Version: 3.1.6001.1\r\n    Win32 Version: 3.1.7600.226\r\n    CodeBase: file:///C:/windows/assembly/GAC_MSIL/Microsoft.UpdateServices.AdminDataAccessProxy/3.1.6001.1__31bf3856ad364e35/Microsoft.UpdateServices.AdminDataAccessProxy.dll\r\n----------------------------------------\r\nMicrosoft.UpdateServices.DBlayer\r\n    Assembly Version: 3.1.6001.1\r\n    Win32 Version: 3.1.7600.226\r\n    CodeBase: file:///C:/windows/assembly/GAC_MSIL/Microsoft.UpdateServices.DBlayer/3.1.6001.1__31bf3856ad364e35/Microsoft.UpdateServices.DBlayer.dll\r\n----------------------------------------\r\nSystem.Web.Services\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.1 (RTMRel.030319-0100)\r\n    CodeBase: file:///C:/windows/Microsoft.Net/assembly/GAC_MSIL/System.Web.Services/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Web.Services.dll\r\n----------------------------------------\r\nnrifkhru\r\n    Assembly Version: 3.1.6001.1\r\n    Win32 Version: 4.0.30319.233 built by: RTMGDR\r\n    CodeBase: file:///C:/windows/Microsoft.Net/assembly/GAC_MSIL/System/v4.0_4.0.0.0__b77a5c561934e089/System.dll\r\n----------------------------------------\r\nMsiReader\r\n    Assembly Version: 1.2.1212.8\r\n    Win32 Version: 1.2.1212.08\r\n    CodeBase: file:///C:/Users/m/Downloads/Release%20v1.1.1304.12%20(x86)/MsiReader.DLL\r\n----------------------------------------\r\nSystem.Data.SqlXml\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.1 built by: RTMRel\r\n    CodeBase: file:///C:/windows/Microsoft.Net/assembly/GAC_MSIL/System.Data.SqlXml/v4.0_4.0.0.0__b77a5c561934e089/System.Data.SqlXml.dll\r\n----------------------------------------\r\nSystem.Xml.Xsl.CompiledQuery.1\r\n    Assembly Version: 0.0.0.0\r\n    Win32 Version: 4.0.30319.1 built by: RTMRel\r\n    CodeBase: file:///C:/windows/Microsoft.Net/assembly/GAC_MSIL/System.Data.SqlXml/v4.0_4.0.0.0__b77a5c561934e089/System.Data.SqlXml.dll\r\n----------------------------------------\r\nAccessibility\r\n    Assembly Version: 4.0.0.0\r\n    Win32 Version: 4.0.30319.1 built by: RTMRel\r\n    CodeBase: file:///C:/windows/Microsoft.Net/assembly/GAC_MSIL/Accessibility/v4.0_4.0.0.0__b03f5f7f11d50a3a/Accessibility.dll\r\n----------------------------------------\r\n\r\n************** JIT Debugging **************\r\nTo enable just-in-time (JIT) debugging, the .config file for this\r\napplication or computer (machine.config) must have the\r\njitDebugging value set in the system.windows.forms section.\r\nThe application must also be compiled with debugging\r\nenabled.\r\n\r\nFor example:\r\n\r\n<configuration>\r\n    <system.windows.forms jitDebugging=\"true\" />\r\n</configuration>\r\n\r\nWhen JIT debugging is enabled, any unhandled exception\r\nwill be sent to the JIT debugger registered on the computer\r\nrather than be handled by this dialog box.\r\n\r\n\r\n",
+    "LastUpdatedDate": "2014-10-21T11:33:56.963-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-04-25T23:59:40.733-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Cannot access a closed Stream",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 27
+  },
+  "FileAttachments": [
+    {
+      "FileId": 669189,
+      "FileName": "screen.jpg",
+      "DownloadUrl": ".\\669189"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "This problem was resolved by KB2530678.\n\nhttp://support.microsoft.com/?kbid=2530678\n\n",
+      "PostedDate": "2013-04-26T01:55:20.377-07:00",
+      "Id": 98572
+    },
+    {
+      "Message": "Hi byczy,\nI like users who solve their problems themselves :-)\n",
+      "PostedDate": "2013-04-26T03:03:11.633-07:00",
+      "Id": 98578
+    },
+    {
+      "Message": "Thank you for the response to your post with your fix, this helped me as well.",
+      "PostedDate": "2014-10-21T11:33:56.963-07:00",
+      "Id": 162846
+    }
+  ]
+}

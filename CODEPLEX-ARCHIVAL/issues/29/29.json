@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Change to handle empty rules",
+    "ClosedDate": "2013-04-28T00:49:44.957-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When revising an update which have empty IsInstalledRule and/or Isinstallable rules, WPP crash with null reference object.",
+    "LastUpdatedDate": "2013-04-28T00:49:45.003-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "High",
+      "Severity": 150,
+      "Id": 3
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-04-28T00:49:22.557-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Crash when revising an update with empty rules",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 29
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,61 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Défaut de paramétrage de l'antivirus.",
+    "ClosedDate": "2015-03-09T13:09:23.503-07:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Bonjour\r\n Etant nouveau dans l'ulisation du loigiciel WPP, j'espère être au bon ebndroit pour demander un peu d'aide.\r\n\r\nTout d'abord j'ai installé mon serveur WPP sur le même serveur WSUS qui est en windows 2003 SR2 et mes certificats sont bien descendus sur les postes clients par GPO. Par GPO, je modifie également les autorisations de mes parefeu machines et jusque là tout va bien.\r\nMes pakages MSI FlasPlayer PLugIN et ActiveX si'installent aussi bien sur des PC en Windows XP 32 bits que sur du PC Windows 7 64 Bits (paerfeu activé).\r\n\r\nPar contre dès que j'active mon antivirus Kaspserky Workstation 6.0.4...., l'activeX ne s'installe plus. Voici l'extrait de mon fichier Windowsupdate.log (voir ficiher joint). le PLugIn continue a bien vouloir s'installer\r\n\r\nQUe se passe t-il ? Que dois je autoriser en plus sur mon antivirus ??\r\n\r\nMerci de votre aide\r\n\r\n\r\n\r\n",
+    "LastUpdatedDate": "2015-03-09T13:09:23.503-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-03-09T06:57:38.033-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Erreur lors de l'install de ActiveX Flash Player",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 253
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1437195,
+      "FileName": "extrait windowsupdates.txt",
+      "DownloadUrl": ".\\1437195"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Bonjour, il semblerait que Kaspersky bloque le téléchargement du fichier d'installation :\n\n> DnldMgr\tError 0x80246002 occurred while downloading update; notifying dependent calls.\n\nA voir dans les log et les politiques de l'antivirus se qu'il faut modifier. Je ne connais pas du tout ce logiciel.",
+      "PostedDate": "2015-03-09T08:09:01.953-07:00",
+      "Id": 177286
+    },
+    {
+      "Message": "Merci pour cette première réponse\n\nPar contre dans le log avec l'erreur relevée ci-dessus, quel logiciel renvoie cette erreur:\nDnldMgr Error 0x80246002 occurred while downloading update; notifying dependent calls.\n\nDnldMgr ???\n\nMerci\n",
+      "PostedDate": "2015-03-09T08:20:40.687-07:00",
+      "Id": 177287
+    },
+    {
+      "Message": "Résolu\n\nPour info, Kaspersky considère le serveur WSUS comme un serveur de Publicité de type Bannière.\nIl m'a suffit de laisser passer l'adresse HTTP://ip de mon serveur\n\nVoila\n\nEt merci tout de même pour ce début de recherche\n\nA bientôt",
+      "PostedDate": "2015-03-09T09:26:18.573-07:00",
+      "Id": 177293
+    }
+  ]
+}

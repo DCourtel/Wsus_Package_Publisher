@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "We just began testing your product and it look very promising.  We specifically are interested in using to keep Java up to date.  I followed the documentation you have for uninstalling All Java release except the latest one.  The latest Java does install 8 update 131 however previous versions are not uninstalling (8 update 71)  Please advise on how to troubleshoot and resolve",
+    "LastUpdatedDate": "2017-05-03T13:47:22.377-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2017-05-03T13:47:22.377-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Uninstalling All Java release except the latest one",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 372
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

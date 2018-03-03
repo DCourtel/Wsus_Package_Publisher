@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-06-05T13:05:33.413-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi there,\r\n\r\nwhen i tried to create a certificate with WPP i got the error \"The directory name is invalid\",\r\nthe error also showed up when i tried to load an existing certificate.\r\n\r\nI checked my wpp directory and saw a new folder i did not create: \"my user name\"/appdata/local/temp\"\r\nLooks like WPP had a struggle finding the right temp folder...\r\n\r\nI solved the problem by creating the directory %windir%/system32/__windows/temp__ and  %windir%/system32/__windows/tmp__",
+    "LastUpdatedDate": "2014-06-05T13:05:33.413-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-04-09T01:42:16.293-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Wrong certificate directory",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 187
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

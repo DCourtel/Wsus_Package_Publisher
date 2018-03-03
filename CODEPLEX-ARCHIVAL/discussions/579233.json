@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1348237",
+    "ThreadId": "579233",
+    "Html": "Hi,<br />\n<br />\nwhen i try to delete an update i got this error message followed by an offer to display <br />\nthe updates which referenced to this update.<br />\nWhen i try to display the referenced update the referenced-update-list is completely empty. So its not possible to delete any prerequisites .... so its not possible to delete this update.<br />\n<br />\nMy Version: 1.3.1411.09<br />\n<br />\nAny idea?<br />\nmoe<br />\n",
+    "PostedDate": "2015-02-02T06:00:39.843-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348404",
+    "ThreadId": "579233",
+    "Html": "Once you have the empty list displayed, go to Help -&gt; Send Debug Info -&gt; &quot;Show informations&quot; and send me the debug file at <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a><br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2015-02-02T13:26:41.51-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1348512",
+    "ThreadId": "579233",
+    "Html": "Thx for your answer!\r<br />\nI just sended the informations.\r<br />\n<br />\nregards moe<br />\n",
+    "PostedDate": "2015-02-02T23:40:48.547-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1355623",
+    "ThreadId": "579233",
+    "Html": "Hi,\r<br />\n<br />\nis there a chance to delete these orphaned updates?\r<br />\n<br />\nmoe<br />\n",
+    "PostedDate": "2015-02-25T06:53:24.803-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1424129",
+    "ThreadId": "579233",
+    "Html": "Hi,\r<br />\n<br />\ni tried the latest Version (Release v1.3.1504.15) but cannot delete theses orphaned Objects.\r<br />\nA little help would be nice ... \r<br />\n<br />\nmoe<br />\n",
+    "PostedDate": "2015-05-08T02:31:05.397-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "1106364",
+    "ThreadId": "461870",
+    "Html": "Hey\r<br />\nI noticed that you get an error if you use a customized update of wsus package publisher (cab includes CustomUpdateEngine.exe) in Windows 8 or later.\r<br />\nIt looks like that this exe needs .NET Framework 3.5 that is not usually installed on Windows 8/8.1.\r<br />\nIs it possible to compile this small exe without restriction of the framework version?\r<br />\n<br />\nThanks for your efforts.\r<br />\nCarmen<br />\n",
+    "PostedDate": "2013-10-11T04:08:00.78-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1106460",
+    "ThreadId": "461870",
+    "Html": "Hi,<br />\n<blockquote>\nIt looks like that this exe needs .NET Framework 3.5<br />\n</blockquote>\nWhere have you seen that ?<br />\n",
+    "PostedDate": "2013-10-11T08:53:13.747-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1106729",
+    "ThreadId": "461870",
+    "Html": "Hi,\r<br />\nI had the same problem. I couldn't install the java update under Win8. \r<br />\nI just extracted the cab file and started the CustomUpdateEngine.exe under Win8 by double click. Afterwards Windows 8 showed me a dialog that wanted to install .NET Framework 3.5. Therefore, I let it install and since then the java update works...\r<br />\n<br />\nCheers<br />\n",
+    "PostedDate": "2013-10-12T10:26:51.443-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1106745",
+    "ThreadId": "461870",
+    "Html": "Hi, \r<br />\nCustomUpdateEngine.exe target the .Net Framework 2.0. Windows 8 want to install .NET Framework 3.5 because it include .Net 3.0 and .Net 2.0.\r<br />\n<br />\nYou need to install .Net 2.0 or .Net 3.5 to get CustomUpdateEngine to work properly.<br />\n",
+    "PostedDate": "2013-10-12T12:37:31.837-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:35:08.763-07:00"
+  },
+  {
+    "Id": "1108708",
+    "ThreadId": "461870",
+    "Html": "Same issue here :(<br />\n<br />\nMaybe you add support for .NET 4? <br />\n<br />\ni dont want install .NET 3.5 on win 8 PC.<br />\n<br />\nAny ideas?<br />\n",
+    "PostedDate": "2013-10-17T04:02:47.923-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1109374",
+    "ThreadId": "461870",
+    "Html": "And what about people that don't want to install .Net 4.0 on Windows XP ?<br />\n",
+    "PostedDate": "2013-10-18T13:02:40.23-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1110153",
+    "ThreadId": "461870",
+    "Html": "Is it not possible to have two versions of the CustomUpdateEngine?\r<br />\nOne for 3.5 and one for 4.5?\r<br />\nThere is another problem for deploying .NET Framework 3.5 in a big environment: this is in Win8 a feature. You can't deploy the framework by WSUS - is not support so far - only by Windows Update (<a href=\"http://blogs.technet.com/b/askcore/archive/2012/05/14/windows-8-and-net-framework-3-5.aspx\" rel=\"nofollow\">http://blogs.technet.com/b/askcore/archive/2012/05/14/windows-8-and-net-framework-3-5.aspx</a>).\r<br />\nTherefore you need another process to deploy (e.g. login script)...\r<br />\n<br />\n@DCourtel: I would like to support you. I could compile it... Just let me know ;-)<br />\n",
+    "PostedDate": "2013-10-21T11:15:34.383-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1110217",
+    "ThreadId": "461870",
+    "Html": "<strong>coder32 wrote:</strong><br />\n<blockquote>\nIs it not possible to have two versions of the CustomUpdateEngine?<br />\n</blockquote>\nI second this.<br />\n<blockquote>\nThere is another problem for deploying .NET Framework 3.5 in a big environment: this is in Win8 a feature. You can't deploy the framework by WSUS - is not support so far - only by Windows Update (<a href=\"http://blogs.technet.com/b/askcore/archive/2012/05/14/windows-8-and-net-framework-3-5.aspx\" rel=\"nofollow\">http://blogs.technet.com/b/askcore/archive/2012/05/14/windows-8-and-net-framework-3-5.aspx</a>).<br />\n</blockquote>\nYes, unfortunatly, but you can specify multipley alternate filepaths, as outlined in your link. See this one too: <a href=\"http://support.microsoft.com/kb/2734782/en-us\" rel=\"nofollow\">http://support.microsoft.com/kb/2734782/en-us</a>\r<br />\n<br />\nBye\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-10-21T13:15:01.997-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1110391",
+    "ThreadId": "461870",
+    "Html": "Thanks Norbert for your fast answer.\r<br />\nHowever I would like to deploy everything by WSUS. In that case I have only one process to maintain for updating all my clients.\r<br />\nThe mentioned approach is for me a quite big drawback since we have a larger network with some Win8 clients.\r<br />\n<br />\nRegards<br />\n",
+    "PostedDate": "2013-10-22T00:18:03.033-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1110537",
+    "ThreadId": "461870",
+    "Html": "<strong>coder32 wrote:</strong><br />\n<blockquote>\nIs it not possible to have two versions of the CustomUpdateEngine?<br />\nOne for 3.5 and one for 4.5?<br />\n</blockquote>\nAgree. That will be nice<br />\n",
+    "PostedDate": "2013-10-22T06:24:52.847-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1319656",
+    "ThreadId": "461870",
+    "Html": "Is Net Framework generally required ON THE CLIENTS for Custom Updates to work properly?<br />\n",
+    "PostedDate": "2014-11-06T06:19:45.923-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Catalogs",
+      "DisplayName": "Catalogs"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-10-19T08:33:19.873-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nif i click Updates > Manage Catalog Subscriptions > Import Updates from this Catalog > Unable to Download File > click OK at the Messagebox, the Mouse will be not change back from hourglass. ;) I have to close WPP and restart WPP.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1310.12",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-16T07:07:42.823-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Hourglass will not change back",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 136
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Cursor is now set back to Default if download failed.",
+      "PostedDate": "2013-10-19T08:33:06.083-07:00",
+      "Id": 118933
+    }
+  ]
+}

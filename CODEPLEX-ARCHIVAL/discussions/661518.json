@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1493109",
+    "ThreadId": "661518",
+    "Html": "The &quot;UpdateServicesPackages&quot; shared folder on my WSUS server doesn't seem to get cleaned up whenever I decline/expire and delete packages. I have old content in that folder that is no longer relevant and taking up space.\r<br />\n<br />\nWhat is the proper method to cleanup unused content in that folder?<br />\n",
+    "PostedDate": "2017-02-22T12:21:53.213-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1493166",
+    "ThreadId": "661518",
+    "Html": "Hi, start WPP, connect to your Wsus server, right click on your server name and choose «Clean UpdateServicesPackages Folder…»<br />\n",
+    "PostedDate": "2017-02-23T11:28:32.13-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2017-02-23T15:59:35.403-08:00"
+  },
+  {
+    "Id": "1493185",
+    "ThreadId": "661518",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nHi, start WPP, connect to your Wsus server, right click on your server name and choose «Clean UpdateServicesPackages Folder…»<br />\n</blockquote>\nThank you! I looked through all the menu options, but didn't think to right-click the WSUS server.<br />\n",
+    "PostedDate": "2017-02-23T15:59:31.45-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

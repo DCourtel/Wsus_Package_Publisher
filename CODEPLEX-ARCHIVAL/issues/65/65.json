@@ -1,0 +1,96 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-21T13:58:55.84-07:00",
+    "CommentCount": 10,
+    "Custom": null,
+    "Description": "Right now wpp uses all the default update classifications when publishing updates (see screenshot). If one has a auto allow rules for those classifications in state in wsus, every custom gets automatically approved. It would be nice to have a custom update classification like Application or something similar. This would not get autoapproved by WSUS.\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2013-06-25T22:12:49.77-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-17T04:40:02.097-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Add custom update classification",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 65
+  },
+  "FileAttachments": [
+    {
+      "FileId": 693717,
+      "FileName": "WPP-Update-Classifications.png",
+      "DownloadUrl": ".\\693717"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "[Update Classification](http://msdn.microsoft.com/en-us/library/microsoft.updateservices.administration.packageupdateclassification(v=vs.85).aspx)  is a hard-coded enumeration in the API.\nThis can not be extended.",
+      "PostedDate": "2013-06-17T10:50:17.633-07:00",
+      "Id": 103196
+    },
+    {
+      "Message": "Yes I see, I actually meant http://msdn.microsoft.com/en-us/library/microsoft.updateservices.administration.packagetype(v=vs.85).aspx ;)\n\nRegards\nNorbert",
+      "PostedDate": "2013-06-17T13:01:01.967-07:00",
+      "Id": 103207
+    },
+    {
+      "Message": "Norbert, do you mean Application in this Article? http://msdn.microsoft.com/en-us/library/microsoft.updateservices.administration.packagetype%28v=vs.85%29.aspx\n\nRegards\nWinfried",
+      "PostedDate": "2013-06-17T13:26:55.227-07:00",
+      "Id": 103210
+    },
+    {
+      "Message": "Yes. There seems to be a difference, how WSUS handles Update Package Type and Application Package.",
+      "PostedDate": "2013-06-17T13:30:11.457-07:00",
+      "Id": 103211
+    },
+    {
+      "Message": "We will fall in the same problem. PackageType is a hard-coded enumeration, so can't be modify.\n\nI could surely add an option to prevent Wsus to apply Automatic Approval Rules to locally published updates.",
+      "PostedDate": "2013-06-17T13:54:40.95-07:00",
+      "Id": 103216
+    },
+    {
+      "Message": "Is it possible to publish packages of application package type?",
+      "PostedDate": "2013-06-17T14:03:53.893-07:00",
+      "Id": 103217
+    },
+    {
+      "Message": "Yes it is possible. I seem to remember that there is a difference between Application and Update, but I can't remember  what it is.",
+      "PostedDate": "2013-06-17T21:40:31.457-07:00",
+      "Id": 103251
+    },
+    {
+      "Message": "So, how is it possible with the released Version? I seem to miss the right option for this.\n\nRegards\nNorbert",
+      "PostedDate": "2013-06-25T14:08:21.733-07:00",
+      "Id": 104114
+    },
+    {
+      "Message": "With the current release, it's not possible. Use the one that I hae sent you yesterday.",
+      "PostedDate": "2013-06-25T21:59:17.19-07:00",
+      "Id": 104167
+    },
+    {
+      "Message": "Thanks, I'll try this than. :)",
+      "PostedDate": "2013-06-25T22:12:49.77-07:00",
+      "Id": 104170
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Rules Update Wizard",
+      "DisplayName": "Rules Update Wizard"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-10-19T07:22:18.11-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\ncan you please add the new OS (Windows 8.1 and 2012 R2) to the Windows Version comparison? Winver says it's 6.3 ;)\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1310.12",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-16T07:40:17.873-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "New OS (8.1 and Windows 2012 R2)",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 139
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "No problem.",
+      "PostedDate": "2013-10-16T13:40:20.25-07:00",
+      "Id": 118645
+    },
+    {
+      "Message": "I have add Windows 8.1 and Windows Server 2012R2\n\n![Windows Rule](http://i.imgur.com/OMjFTgE.png)",
+      "PostedDate": "2013-10-19T07:21:59.7-07:00",
+      "Id": 118929
+    }
+  ]
+}

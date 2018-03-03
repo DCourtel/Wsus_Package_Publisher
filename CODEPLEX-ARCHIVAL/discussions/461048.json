@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1103197",
+    "ThreadId": "461048",
+    "Html": "I am getting ready to use wsus package publisher for the first time.  My first test package was a 32bit deployment of Java 7u40 which, after a few tweaks, was successful.  However, i created a second deployment for the 64bit systems.  It is nearly identical except for the detection id of the software.  However, my 64bit deployment is returning the 800B0109 error.  I have confirmed that the certificate is installed.  I have also rebooted the systems after the certificate was installed.\r<br />\n<br />\nCertificate installation was generated from our Domain Controller and pushed via Group Policy into the Trusted Publishers container.  Any idea why i am seeing this issue only with the 64bit systems?  I only had one 32bit system that I was testing with, but i put two 64bit systems in my test deployment and both are showing the same error.<br />\n",
+    "PostedDate": "2013-10-03T07:40:55.75-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1103207",
+    "ThreadId": "461048",
+    "Html": "Sorry guys, I forgot that i had added the accept trusted publisher key manually on the 32bit test system.  For reference, the following corrected it:\r<br />\n<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AcceptTrustedPublisherCerts = 1<br />\n",
+    "PostedDate": "2013-10-03T07:53:04.74-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-12T08:51:05.103-07:00"
+  },
+  {
+    "Id": "1103265",
+    "ThreadId": "461048",
+    "Html": "So, all works fine now ?<br />\n",
+    "PostedDate": "2013-10-03T10:19:59.493-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

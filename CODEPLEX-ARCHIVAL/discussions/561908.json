@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1292630",
+    "ThreadId": "561908",
+    "Html": "I published a custom update that I was hoping would run the following wsua.exe commandline:\r<br />\n&quot;wusa.exe Windows6.1-KB2819745-x86-MultiPkg.msu /quiet /norestart&quot;\r<br />\n<br />\nSo my text xml is this:\r<br />\n-&lt;CustomUpdate&gt; -&lt;Action&gt; &lt;ElementType&gt;CustomUpdateElements.ExecutableElement&lt;/ElementType&gt; &lt;PathToExecutable&gt;C:\\Windows\\System32\\wusa.exe&lt;/PathToExecutable&gt; &lt;Parameters&gt;Windows6.1-KB2819745-x86-MultiPkg.msu /quiet /norestart&lt;/Parameters&gt; &lt;KillProcess&gt;True&lt;/KillProcess&gt; &lt;TimeBeforeKilling&gt;5&lt;/TimeBeforeKilling&gt; &lt;Variable/&gt; &lt;/Action&gt; &lt;/CustomUpdate&gt;\r<br />\n<br />\nInstalling the update results in the following error: \r<br />\nWindows update &quot;Update for Windows (KB2819745)&quot; could not be installed because of error 2149842966 &quot;&quot; (Command line: &quot;&quot;C:\\Windows\\System32\\wusa.exe&quot; Windows6.1-KB2819745-x86-MultiPkg.msu /quiet /norestart&quot;)\r<br />\n<br />\nIt looks like the final command that is being run contains an extra set of &quot;&quot; around the executable location, but I'm not sure if that's the only thing causing the fail.\r<br />\n<br />\nWhat did I do incorrectly?<br />\n",
+    "PostedDate": "2014-08-22T19:07:41.323-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1292686",
+    "ThreadId": "561908",
+    "Html": "<blockquote>\nIt looks like the final command that is being run contains an extra set of &quot;&quot; around the executable location<br />\n</blockquote>\nIt looks to be the normal behaviour.\r<br />\nThis error code means : &quot;try to install while another install is going on or reboot is pending&quot;\r<br />\nRestart the target computer and try to install again.\r<br />\n<br />\nIf it doesn't works, try to install manually with this command line : wusa.exe Windows6.1-KB2819745-x86-MultiPkg.msu /quiet /norestart\r<br />\nPut Windows6.1-KB2819745-x86-MultiPkg.msu in the same folder than wusa.exe.<br />\n",
+    "PostedDate": "2014-08-23T02:32:30.97-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1292750",
+    "ThreadId": "561908",
+    "Html": "Restarting doesn't help, I tried that and also tried install on other computers. Also, other updates will install fine. I'm starting to think that wsua.exe might rely on some Windows Update process itself. So wusa can't install because you are already using Windows Update in installing the update itself. That's my guess anyway.<br />\n",
+    "PostedDate": "2014-08-23T11:50:47.13-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1292754",
+    "ThreadId": "561908",
+    "Html": "That could explain the error message : &quot;try to install while another install is going on&quot;<br />\n",
+    "PostedDate": "2014-08-23T12:37:46.68-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1292757",
+    "ThreadId": "561908",
+    "Html": "Ok, so here's what I did to get around this. I read here (<a href=\"http://support.microsoft.com/kb/934307/en-us\" rel=\"nofollow\">http://support.microsoft.com/kb/934307/en-us</a>) that wusa.exe uses to pkgmgr.exe to install the updates. So instead of using wusa.exe, I used pkgmgr.exe as well, see xml below.<br />\n<br />\nYou have to extract the contents of the .msu, and them add them to the update. My first test went well, so I'm going to try other .msu's that I have to see if they'll work too. I still have to figure out the return codes for pkgmgr.exe, though.<br />\n<br />\n&lt;PathToExecutable&gt;%windir%\\System32\\pkgmgr.exe&lt;/PathToExecutable&gt;<br />\n&lt;Parameters&gt;/n:Windows6.1-2819745-x86.xml /quiet /norestart&lt;/Parameters&gt;<br />\n",
+    "PostedDate": "2014-08-23T13:03:45.987-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-08-26T13:05:33.183-07:00"
+  },
+  {
+    "Id": "1292759",
+    "ThreadId": "561908",
+    "Html": "Type : pkgmgr.exe /?<br />\n",
+    "PostedDate": "2014-08-23T13:36:18.747-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-09T09:15:33.39-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I have received a Debug Info file from an anonymous user which try to approve an update for uninstallation but this update doesn't support uninstall.\r\n\r\nI have add a check to detect this update. When WPP detect that an update can not be approve for uninstallation, the form to set approval don't offer the option \"Uninstallation\".",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.2.1305.26",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-31T13:13:53.887-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Can not create an uninstall deployment to an update that does not support uninstall",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 55
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

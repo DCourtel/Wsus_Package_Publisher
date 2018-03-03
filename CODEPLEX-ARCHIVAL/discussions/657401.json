@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1482023",
+    "ThreadId": "657401",
+    "Html": "Are there any general guidelines for when I would want to choose to delete, supersede, or expire an update?<br />\n",
+    "PostedDate": "2016-08-24T13:38:02.837-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1482051",
+    "ThreadId": "657401",
+    "Html": "No special guidline. If you are running daily or weekly the sever cleanup, you can decline a update, after 30 days, the files for this update will delete through server cleanup process automatically. You have to do nothing special for Updates coming from WPP in WSUS.<br />\n",
+    "PostedDate": "2016-08-25T00:36:33.62-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2016-08-25T10:45:12.34-07:00"
+  },
+  {
+    "Id": "1482100",
+    "ThreadId": "657401",
+    "Html": "thanks<br />\n",
+    "PostedDate": "2016-08-25T10:45:08.097-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

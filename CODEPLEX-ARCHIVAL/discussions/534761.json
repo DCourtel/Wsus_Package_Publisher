@@ -1,0 +1,194 @@
+[
+  {
+    "Id": "1213594",
+    "ThreadId": "534761",
+    "Html": "I have a strange issue when installing flash player through the publisher.  It seems to be failing on computers that already have the same version installed.  E.G  Test computer A:  installs flash MSI. Report says Installed and green.  2 days later the update is back and it is showing as failed!\r<br />\nI have tried to uninstall flash and run it again.  But the update fails.\r<br />\n<br />\nI have downloaded flash from Adobe over the internet and it installs fine. But it still is trying to install the update.  It seems that it is not checking if the update is required or not and keeps sending it out regardless.<br />\n",
+    "PostedDate": "2014-02-24T03:36:26.673-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1214586",
+    "ThreadId": "534761",
+    "Html": "Which version of Flash Player do you have published ? do you have used the Adobe catalog or directly the MSI file ?<br />\n",
+    "PostedDate": "2014-02-25T07:19:23.4-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1214619",
+    "ThreadId": "534761",
+    "Html": "I used the MSI installer from here  <a href=\"http://www.adobe.com/uk/products/flashplayer/distribution3.html\" rel=\"nofollow\">http://www.adobe.com/uk/products/flashplayer/distribution3.html</a>\r<br />\n<br />\nAny ideas?\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2014-02-25T07:56:40.48-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1214688",
+    "ThreadId": "534761",
+    "Html": "What do you have set in the &quot;IsInstalled&quot; and &quot;IsInstallable&quot; tab ?<br />\n",
+    "PostedDate": "2014-02-25T09:16:50.013-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1215046",
+    "ThreadId": "534761",
+    "Html": "I am unsure what you mean by what I have set on the tabs?  I have put a link to an image of the numbers below.\r<br />\n<br />\n<a href=\"http://www.wacc.ac.uk/Untitled.png\" rel=\"nofollow\">www.wacc.ac.uk/Untitled.png</a><br />\n",
+    "PostedDate": "2014-02-26T02:52:07.83-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1215155",
+    "ThreadId": "534761",
+    "Html": "When you revise the update you should see this tab : <br />\n<br />\n<img src=\"http://i.imgur.com/ztNRul2.jpg\" alt=\"Rules\" /><br />\n",
+    "PostedDate": "2014-02-26T07:11:33.6-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1215159",
+    "ThreadId": "534761",
+    "Html": "Below is what I see when I revise.\r<br />\n<br />\n<br />\n<a href=\"http://www.wacc.ac.uk/Untitled2.png\" rel=\"nofollow\">www.wacc.ac.uk/Untitled2.png</a><br />\n",
+    "PostedDate": "2014-02-26T07:19:33.373-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1215815",
+    "ThreadId": "534761",
+    "Html": "What is the release number of the Flash Player you try to publish ? 12.0.0.44 or 12.0.0.70 ?<br />\n",
+    "PostedDate": "2014-02-27T12:54:42.76-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1215984",
+    "ThreadId": "534761",
+    "Html": "It is 12.0.0.70<br />\n",
+    "PostedDate": "2014-02-28T00:43:40.227-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1216051",
+    "ThreadId": "534761",
+    "Html": "I also have the same issue.  Adobe Flash 12.0.0.70 \r<br />\nCertificates etc installed ok.,  MSI published to WSUS,  Update detected by PC, install starts OK, (create system restore point)  but install fails with the 6BA error.\r<br />\n<br />\nI am installing onto a PC that did have 12.0.0.70 installed via Group Policy using the same source msi \r<br />\n<br />\nI have a work around (it is by no means a fix).  Adobe produce a utility called adobe_uninstaller  see <a href=\"http://helpx.adobe.com/flash-player/kb/uninstall-flash-player-windows.html\" rel=\"nofollow\">http://helpx.adobe.com/flash-player/kb/uninstall-flash-player-windows.html</a> .\r<br />\n<br />\nIf you run this utility to remove flash then the install will work through WSUS.\r<br />\n<br />\nDoes that give any clues ?<br />\n",
+    "PostedDate": "2014-02-28T02:58:33.497-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1216085",
+    "ThreadId": "534761",
+    "Html": "You are trying to publish Adobe Flash Player 12.0.0.70 but the MSI product code shown on your screen capture is for Adobe Flash Player 12.0.0.70.\r<br />\n<br />\nSee <a href=\"http://helpx.adobe.com/flash-player/kb/msi-guids-windows.html\" rel=\"nofollow\">this Post</a> <br />\n",
+    "PostedDate": "2014-02-28T04:36:02.23-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1216127",
+    "ThreadId": "534761",
+    "Html": "Is the 12:36PM post a typo?.<br />\n\r<br />\nI cant spot the difference between  &quot;Adobe Flash Player 12.0.0.70&quot; and &quot;Adobe Flash Player 12.0.0.70&quot;.  It might be me, its been a long week.\r<br />\n<br />\nNigel<br />\n",
+    "PostedDate": "2014-02-28T06:28:11.39-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1216134",
+    "ThreadId": "534761",
+    "Html": "You workaround  works Nigel many thanks.  Sorry Dcourtel me being stupid but I cant see any solution? <br />\n",
+    "PostedDate": "2014-02-28T06:36:05.53-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1216164",
+    "ThreadId": "534761",
+    "Html": "Yes, I made a typo. you should read :\r<br />\n<br />\n<br />\n<em>You are trying to publish Adobe Flash Player 12.0.0.70 but the MSI product code shown on your screen capture is for Adobe Flash Player 12.0.0.44.\r<br />\n \r<br />\nSee <a href=\"http://helpx.adobe.com/flash-player/kb/msi-guids-windows.html\" rel=\"nofollow\">this Post</a></em> <br />\n",
+    "PostedDate": "2014-02-28T07:36:01.76-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1219069",
+    "ThreadId": "534761",
+    "Html": "Unfortunately the link doesn't really give a solution.  Or it does and I just cant see it.  Is the answer to stop this and roll out a newer version?\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2014-03-04T08:51:25.86-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1219114",
+    "ThreadId": "534761",
+    "Html": "<blockquote>\nUnfortunately the link doesn't really give a solution<br />\n</blockquote>\nIn fact,, it does ! By reading Adobe's page and my previous post, you should realize that you are using a  <strong>WRONG</strong> Msi product code !!!\r<br />\nYour &quot;IsInstallable&quot; rule say : Adobe Flash Player 12.0.0.70 is installable if Adobe Flash Player 12.0.0.44 is not installed !!!\r<br />\nand your &quot;IsInstalled&quot; rule say : Adobe Flash Player 12.0.0.<strong>70</strong> is installed if Adobe Flash Player 12.0.0.<strong>44</strong> is installed !?!?!?<br />\n<blockquote>\nIs the answer to stop this and roll out a newer version? <br />\n</blockquote>\nTo my knowledge, there is not newer version than 12.0.0.70. You have to revise the update and use the correct MSI product code.<br />\n",
+    "PostedDate": "2014-03-04T10:25:26.497-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-03-07T01:39:49.843-08:00"
+  },
+  {
+    "Id": "1220193",
+    "ThreadId": "534761",
+    "Html": "I can see now DCourtel  and this seems to be working now.<br />\n\r<br />\nMany Thanks for your help. <br />\n",
+    "PostedDate": "2014-03-07T01:30:50.917-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1315039",
+    "ThreadId": "534761",
+    "Html": "Can you explain the IsInstallable and IsInstalled rule more in depth? I'm also having this issue with an Adobe Flash Player update package using the MSI. I have verified that I am using the proper MSI code.\r<br />\n<br />\nI did an uninstall of adobe flash on my test machine, would this affect the ability of the package to install if there is no version of flash player on the computer? If so is there a way to tweak my package to force the computer to install if the package version software isn't found or if no adobe flash software is found?<br />\n",
+    "PostedDate": "2014-10-20T10:22:15.77-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1315105",
+    "ThreadId": "534761",
+    "Html": "<blockquote>\nCan you explain the IsInstallable and IsInstalled rule more in depth?<br />\n</blockquote>\nThis is what Microsoft say about <a href=\"http://msdn.microsoft.com/en-us/library/bb902473(v=vs.85).aspx\" rel=\"nofollow\">Applicaiblity Rules</a><br />\n<blockquote>\nI did an uninstall of adobe flash on my test machine, would this affect the ability of the package to install if there is no version of flash player on the computer?<br />\n</blockquote>\nThat dépends of the applicability rules you have set.<br />\n",
+    "PostedDate": "2014-10-20T13:40:16.973-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1315113",
+    "ThreadId": "534761",
+    "Html": "My rules are setup the same as evansdp from this post:<br />\n<h2><a href=\"http://www.wacc.ac.uk/Untitled2.png\" rel=\"nofollow\">http://www.wacc.ac.uk/Untitled2.png</a></h2>\nI double checked my Product Codes to make sure they're the proper ones. Any ideas why I'd be getting the 6BA error?<br />\n",
+    "PostedDate": "2014-10-20T13:58:32.697-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1315190",
+    "ThreadId": "534761",
+    "Html": "The MSI product code I saw on your screen capture is for Adobe Flash player ActiveX 12.0.0.44. Is it this version you try to publish ?\r<br />\n<a href=\"http://helpx.adobe.com/flash-player/kb/msi-guids-windows.html\" rel=\"nofollow\">List of all Flash Player MSI GUIDs for managing Flash Player across an enterprise </a><br />\n",
+    "PostedDate": "2014-10-20T22:00:40.763-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1315319",
+    "ThreadId": "534761",
+    "Html": "Those were screenshots from evansdp's post as I did not have time to load my own.\r<br />\n<br />\nI am running Flash Player ActiveX 14.0.0.176 with Msi  15AE611F-5A40-4BD0-9291-1C6856BDB9A4 <br />\n",
+    "PostedDate": "2014-10-21T05:55:13.273-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1316765",
+    "ThreadId": "534761",
+    "Html": "Do you know anything about the Background Update Resources on the flash distribution page?\r<br />\n<br />\n<a href=\"http://www.adobe.com/uk/products/flashplayer/distribution3.html\" rel=\"nofollow\">http://www.adobe.com/uk/products/flashplayer/distribution3.html</a>\r<br />\n<br />\nI tried to look up the information but couldn't find much. I downloaded these and added them to my flash package and had successful tests installing it.<br />\n",
+    "PostedDate": "2014-10-27T07:44:52.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1316833",
+    "ThreadId": "534761",
+    "Html": "Here some informations on this app : <a href=\"http://www.adobe.com/devnet/flashplayer/articles/background-updater-windows.html\" rel=\"nofollow\">http://www.adobe.com/devnet/flashplayer/articles/background-updater-windows.html</a><br />\n",
+    "PostedDate": "2014-10-27T12:53:07.147-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

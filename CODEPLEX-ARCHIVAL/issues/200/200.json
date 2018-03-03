@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update Detail Viewer",
+      "DisplayName": "Update Detail Viewer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-07-11T11:22:44.327-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nMy WPP console crash everytime when I go to the report tab and if I checked the \"show only computers group with approval\" before it finish to load all groups information.\r\n\r\nWPP run on the WSUS Master server with 2 downstream replicas, on Windows Server 2012 R2.\r\nMy WPP version is 1.3.1405.24, version that DCourtel sent me 3 weeks ago.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1405.30",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-06-30T09:30:49.023-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "The WPP console crash everytime on report",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 200
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:07.503-08:00",
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nif i want to delete an Update from Wsus Package Publisher the WSUS DB ist crashed all the time. I try this serval times an always the Database is corrupt. Does anyone know why or is this an bug of the act. release ?\r\n\r\nMy Way :\r\n\r\nCreate an Update in WPP for example Adobe Inc\r\nAn delete this Update after publishing \r\nAfter these steps i cannot create or delete an update anymore\r\n\r\nMy System : Windows 2008 R2 - WSUS 3.0 SP2",
+    "LastUpdatedDate": "2017-02-03T11:50:07.503-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-04-20T07:46:40.057-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "If i delete an update the WSUS DB crash",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 265
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Pls check your WSU-BUILD. Have a look at this Image, here you can see the place fro checking the build: http://www.wsus.de/images/wsus-version.png If your Build not .274, pls install all Updates up to Build .274:\n\nWSUS 3.0 (SP2): \tBuild 3.2.7600.226\nWSUS 3.0 (SP2) + KB2720211: \tBuild 3.2.7600.251\nWSUS 3.0 (SP2) + KB2734608: \tBuild 3.2.7600.256\nWSUS 3.0 (SP2) + KB2828185: \tBuild 3.2.7600.262\nWSUS 3.0 (SP2) + KB2938066: \tBuild 3.2.7600.274\n\nHow do you check if the SUSDB is corrupt?\n\nDid you Reconnect or close and start again WPP, after you delete a Update?",
+      "PostedDate": "2015-04-20T09:03:03.493-07:00",
+      "Id": 183138
+    },
+    {
+      "Message": "I try a reconnect an restart of WPP several times. And the Issue is still exists.\n\n> How do you check if the SUSDB is corrupt?\n\nThe Eventlog tells me , the MSSQL$MICROSOFT##SSEE is corrupt. And i cannot deploy updates or wpp packages.\n\nMy WSUS Version is (WSUS 3.0 (SP2) + KB2720211: Build 3.2.7600.251) i try to do an update but i cannot find any updates for the wsus.",
+      "PostedDate": "2015-04-21T01:54:26.953-07:00",
+      "Id": 183168
+    },
+    {
+      "Message": "Google is your friend\nJust Google KB2734608, KB2828185 and KB2938066, and download these updates from Microsoft web site",
+      "PostedDate": "2015-04-21T02:45:07.64-07:00",
+      "Id": 183171
+    },
+    {
+      "Message": ">The Eventlog tells me , the MSSQL$MICROSOFT##SSEE is corrupt. And i cannot deploy updates or wpp >packages.\n\nPls post the complete Event incl. Description and EventID and Event Source.",
+      "PostedDate": "2015-04-21T04:37:47.45-07:00",
+      "Id": 183180
+    },
+    {
+      "Message": "I will update my server and give information if it works or not.\n\nIm sorry i cannot post the complete Event ... the eventlog is empty ... my boss means there are to much events and delete the log .... omg \n\nOFFTOPIC\nwhere i can order an new Boss *g*",
+      "PostedDate": "2015-04-21T07:25:07.33-07:00",
+      "Id": 183190
+    }
+  ]
+}

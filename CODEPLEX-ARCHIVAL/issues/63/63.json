@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Settings",
+      "DisplayName": "Settings"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-13T11:51:05.987-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "In the lastest release, WPP prevent user to publish update if the certificate is invalid.\r\nSome users, use a ~Vaild~ certificate that is judge invalid by .Net Framework, but work well with Wsus.\r\n\r\nAdd an option to bypass certificate validation.\r\nUsing this option, __WILL NOT__ make a real invalid certificate working with Wsus.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1306.09",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-13T11:50:31.48-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Certificate Validation prevent publishing updates event if the certificate is ~Valid~",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 63
+  },
+  "FileAttachments": [
+    {
+      "FileId": 692389,
+      "FileName": "IgnoreCertVerificationErrors.png",
+      "DownloadUrl": ".\\692389"
+    }
+  ],
+  "Comments": []
+}

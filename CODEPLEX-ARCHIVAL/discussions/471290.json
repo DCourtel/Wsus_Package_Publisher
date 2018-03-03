@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "1129525",
+    "ThreadId": "471290",
+    "Html": "Dear Team,<br />\n<br />\nI am experiencing problem in deleting the update vendor group created automatically by software/update.<br />\n<a href=\"http://s8.postimg.org/6g2lcr7z9/vendore.png\" rel=\"nofollow\">Unable to delete Vendor Group</a><br />\n",
+    "PostedDate": "2013-11-27T03:26:42.86-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1129542",
+    "ThreadId": "471290",
+    "Html": "Have you tried deleting the &quot;product&quot;-category first?\r<br />\n<br />\nBye\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-11-27T04:23:27.52-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1129755",
+    "ThreadId": "471290",
+    "Html": "In this case, you have to delete &quot;Adobe Reader XI&quot; first and then you will be able to delete &quot;Adobe Systems Incorporated&quot;.\r<br />\n<br />\nNote that this feature, has prerequisites. And it works only in 99% of cases.<br />\n",
+    "PostedDate": "2013-11-27T13:17:25.557-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1129933",
+    "ThreadId": "471290",
+    "Html": "Delete button is greyed out, update is deleted but the Adobe Systems Incorporated is not automatically getting deleted.<br />\n",
+    "PostedDate": "2013-11-28T02:09:53.83-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1130228",
+    "ThreadId": "471290",
+    "Html": "What does &quot;clean  updateservicespackages folder&quot; do?<br />\n",
+    "PostedDate": "2013-11-29T03:16:05.49-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1131040",
+    "ThreadId": "471290",
+    "Html": "This is another feature of WPP. It browses the &quot;E:\\WSUS\\UpdateServicesPackages&quot; folder and try to find unused folders.\r<br />\nNo correlation with &quot;Delete Product&quot;.<br />\n",
+    "PostedDate": "2013-12-02T12:56:24.783-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1131044",
+    "ThreadId": "471290",
+    "Html": "Do you met all prerequistes to use this function ?<br />\n<ul>\n<li>Run WPP locally on the Wsus server.</li>\n<li>Product folder must be empty.</li>\n<li>Product mustn't have been publish by Microsoft.</li>\n<li>Product can't be the &quot;Locally Published Packages&quot; folder</li>\n<li>Option to make newly published update visible in Wsus Console, must be different from &quot;Never&quot;.</li>\n</ul>\n",
+    "PostedDate": "2013-12-02T13:06:59.707-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-12-06T12:48:12.073-08:00"
+  },
+  {
+    "Id": "1132484",
+    "ThreadId": "471290",
+    "Html": "<pre><code>Run WPP locally on the Wsus server. - Yes WPP is running on WSUS server\nProduct folder must be empty. - product folder is deleting by itself after click on delete button\nProduct mustn't have been publish by Microsoft. - product is adobe reader 11\nProduct can't be the &quot;Locally Published Packages&quot; folder - product name is adobe systems\nOption to make newly published update visible in Wsus Console, must be different from &quot;Never&quot;.  - by default set to NEVER changed to let me choose and did the magic\n</code></pre>\n\nissue is solved\r<br />\n<br />\nthanks for support<br />\n",
+    "PostedDate": "2013-12-06T05:49:05.023-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1302577",
+    "ThreadId": "471290",
+    "Html": "hello,\r<br />\nthis is not working by me. Strange... <br />\n",
+    "PostedDate": "2014-09-08T12:55:59.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

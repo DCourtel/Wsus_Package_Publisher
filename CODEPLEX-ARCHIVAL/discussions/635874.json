@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1421312",
+    "ThreadId": "635874",
+    "Html": "Hi all,\r<br />\n<br />\nFirst of all - this project is very cool !!\r<br />\n<br />\nMy company 100% Dell house, both with servers and clients. But of cause we have the &quot;please use the newst driver, bios etc.&quot;\r<br />\n<br />\nSo this project is maybe the solution for all my problems.\r<br />\n<br />\nI have imported the Dell PC catalog (DellSDPCatalogPC.cab) - and everything works! But when I try to import the server catalog (DellSDPCatalog.cab) then the file is reable, but if I select example a BIOS for a server, then I gets &quot;Error when importing Update&quot; - Anybody knows about this?\r<br />\n<br />\nThe funny thing is that if I try the same job in SCUP2011 - then SCUP asks me to import a Dell certificate - but the import are working!\r<br />\n<br />\nAny help?<br />\n",
+    "PostedDate": "2015-04-29T04:02:22.82-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

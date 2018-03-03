@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1359801",
+    "ThreadId": "584596",
+    "Html": "I use WPP on a Windows Server 2003 R2. I done these PDF:<br />\n<ul>\n<li>&quot;Installation Guide.pdf&quot;,</li>\n<li>&quot;Creating a Code Signing Certificate.pdf&quot;,</li>\n<li>&quot;Catalogs' subscriptions management.pdf&quot;</li>\n<li>&quot;Importing Updates from Vendor's Catalog.pdf&quot;<br />\nI added some Adobe Catalogs and imported packages and then I deleted some packages in WPP. New Package are visible in WPP and WSUS, but disappear in WPP after closing WPP.<br />\nIs there maybe something corrupted in the SQL Database?</li>\n</ul>\n",
+    "PostedDate": "2015-03-04T05:53:46.897-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1359873",
+    "ThreadId": "584596",
+    "Html": "Thats not a Problem with SQL. Just click the Checkbox unter Tools/Settings/Updates &quot;Show Locally-Published Updates that...&quot;<br />\n",
+    "PostedDate": "2015-03-04T11:46:32.973-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-03-05T21:24:32.067-08:00"
+  },
+  {
+    "Id": "1359999",
+    "ThreadId": "584596",
+    "Html": "Yeah, that worked, thanks!<br />\n",
+    "PostedDate": "2015-03-05T00:32:15.343-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

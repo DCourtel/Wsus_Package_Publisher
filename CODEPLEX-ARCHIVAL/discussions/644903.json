@@ -1,0 +1,322 @@
+[
+  {
+    "Id": "1444203",
+    "ThreadId": "644903",
+    "Html": "Hi Guys,<br />\nfor a new weeks i imported the installation files from the setup Version 15.007.20033.<br />\nYesterday i added the AcroRdrDCUpd1500820082.msp and approved it to the same Group as the full installation. The Windows 7 Client don't find the update on Windows update service. I already deleted the Folder C:\\Windows\\SoftwareDistribution. So, have any one get worked this Szenario?<br />\n<br />\nWPP Version:  v1.3.1508.08<br />\n",
+    "PostedDate": "2015-09-13T05:48:00.053-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1447883",
+    "ThreadId": "644903",
+    "Html": "I am actually wrestling with this very issue.  When I tried to use 15.008.20082 from the Adobe catalog, it failed and when I checked the metadata, I noticed it was validating the 15.007.20033 install against a different product code.  I've managed to get the clients to download the MSP update but when the clients try to perform the install, it completes saying the update was not applicable.  I'm still trying a few things, mainly modifying the resulting metadata, as I'm guessing one of the validation steps is failing for some reason (version mismatch or something).  The package I created for 15.007.20033 installs perfectly but the 15.008.20082 update reports 'not applicable'.<br />\n",
+    "PostedDate": "2015-10-09T11:03:06.22-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1447923",
+    "ThreadId": "644903",
+    "Html": "I didn't use Adobe Catalog. At work, I have downloaded the MSP from the FTP site, and didn't have any problem with it.\r<br />\nIt's possible that Adobe have made a mistake when creating this catalog.\r<br />\nYou can post a question on Adobe's forum if you wish.<br />\n",
+    "PostedDate": "2015-10-09T13:42:00.147-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1447957",
+    "ThreadId": "644903",
+    "Html": "DCourtel, thanks for the response.  Hmm ... I just expired both packages and started over.  I downloaded 15.007.20033 from the ftp site and the MSP file for 15.008.20082.  I built 15.007.20033, uninstalled it from a desktop, and performed a check for updates.  Like normal, it found 15.007.20033 and began the installation.  I, next, in WPP I right clicked on Adobe Reader and selected Create An Update.  I loaded the MSP file for 15.008.20082.  I skipped through all the rules (using your Update Reader documentation) and published the update.  Next, I right clicked on 15.008.20082, selected Revise, and selected 15.007.20033 for Supercedes and revised the update.  Like before, when I do a Send Detect Now and then Send Report Now, for the desktop, it reports Not Applicable.  I even set the Application Type to Application (versus Update) which didn't make a difference.  When I Revise 15.008.20082 to get to the metadata, it does have the 15.007.20033 product code listed so at least that part is correct.  I've also searched the registry on the desktop for the 15.007.20033 product code and I find it.<br />\n",
+    "PostedDate": "2015-10-09T18:45:52.44-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1447998",
+    "ThreadId": "644903",
+    "Html": "DCourtel:\r<br />\nI don't use the catalog. I try it on the same way as you in your enviroment.\r<br />\nBut the Update isn't Show im Windows update Dialog. :-(<br />\n",
+    "PostedDate": "2015-10-10T05:33:11.047-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1448000",
+    "ThreadId": "644903",
+    "Html": "It won't show, at least from what preliminary troubleshooting I've done.  The WindowsUpdate log never records downloading the update, which tells me something on WSUS is stopping it.  One thing I am going to try is to install the MUI base version and then try the update.  I noticed the 15.008.20082 MSP update, in the metadata, list a slew of languages for 15.007.20033 but my base is only US English.  It honestly shouldn't matter but something in 15.008.20082 update's metadata is validating false but is needing to be true which is why I'm seeing Not Applicable.  Using Adobe's ftp site to download the update fixed the product code mismatch I was having when I was using the catalog.  I am using the catalog for updating Adobe Flash, which seems to be working.<br />\n",
+    "PostedDate": "2015-10-10T06:06:03.173-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1448011",
+    "ThreadId": "644903",
+    "Html": "What happen if you manually launch the MSP fîle on the computer ?<br />\n",
+    "PostedDate": "2015-10-10T09:02:38.073-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1448012",
+    "ThreadId": "644903",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nWhat happen if you manually launch the MSP fîle on the computer ?<br />\n</blockquote>\nUpgrade runs without any problems.<br />\n",
+    "PostedDate": "2015-10-10T09:05:46.64-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1448035",
+    "ThreadId": "644903",
+    "Html": "<strong>badwurzach wrote:</strong><br />\n<blockquote>\n<strong>DCourtel wrote:</strong><br />\n<blockquote>\nWhat happen if you manually launch the MSP fîle on the computer ?<br />\n</blockquote>\nUpgrade runs without any problems.<br />\n</blockquote>\nAgree with that.  I took the same MSP file I created the update package in WPP and ran it on the desktop.  The GUI loaded and I navigated through the update.  It finished, noting the update was successful.  I launched Reader DC and verified 15.008.20082 was the current version.  Hmm ... now I'm really confused.  Could the way I'm building the package be the problem?  I know the documentation, for Acrobat updates, say to bypass the rules, as the MSP file contains its own but could that be causing the problem?  Even after I manually performed the update, WPP is still showing 'not applicable' for 15.008.20082 for the same computer.  I thought it would have updated the status to Installed.  Last Report was updated.<br />\n",
+    "PostedDate": "2015-10-10T13:01:51.2-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1448368",
+    "ThreadId": "644903",
+    "Html": "Not sure if this is progress or not but I have managed to get the client to download the MSP file.  I used the Update Creation Wizard in WPP, set the package type to UPDATE (Update Classification doesn't seem to mean much but I tried with Updates and Security Updates).  On the first Rule page, I used product code<br />\n<br />\na6eade66-0000-0000-484e-7e8a45000000<br />\n<br />\nwhich I found in the metadata for the 15.009.20069 update and assumed it was the product code for the US English version of 15.009.20069.  This first rule will see if the update has already been applied so having that product there makes sense.  Next Rule, I used product code<br />\n<br />\nac76ba86-7ad7-1033-7b44-ac0f074e4100<br />\n<br />\nwhich is the product code for 15.007.20033.  Since the patch is for 15.007.2003, I choose to install only if it finds that product code already installed.<br />\n<br />\nWith this, if I remove Adobe Reader DC from a client, run Windows Update, I will get the 15.007.20033 Adobe Reader.  It installs successfully.  I run Windows Update a second time and, ayep, it finds 15.009.20069.  I try to install and get a Windows Error Code 80242006.  It downloaded the cab file to the client computer.  When I open the cab file, it contains the MSP update.  If I extract the MSP from the cab file, I can run it on the client and it will install the update.  Using Windows Update fails with the 80242006 error code, though, which I assume really doesn't tell me anything.<br />\n<br />\nAlso, forgot to mention, before I published the package, I deleted the metadata that was contained within 15.009.20069.<br />\n",
+    "PostedDate": "2015-10-13T13:37:47.467-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1448374",
+    "ThreadId": "644903",
+    "Html": "badwurzach, here is what I finally figured out to get it to work.<br />\n<ol>\n<li>Created Update for Adobe Acrobat Reader DC 15.007.20033 (seems to be the base for Reader 2015)</li>\n<li>\nCreated another Update for Adobe Acrobat Reader DC 15.009.20069 using the MSP with the following:<br />\n</li>\n</ol>\nPackage Type: Update<br />\nUpdate Classification: SecurityUpdates<br />\nPrerequisites: 15.007.20033<br />\n<br />\nNEXT<br />\n<br />\nRule Type: Msi Patch Installed For Product<br />\nAdd Rule<br />\n   Patch Code: ac76ba86-7ad7-0000-2550-ac0f094e6500<br />\n   Product Code: ac76ba86-7ad7-1033-7b44-ac0f074e4100<br />\nClick OK<br />\nCheck Delete Rules at Package Level<br />\n<br />\nNEXT<br />\n<br />\nRule Type: Msi Patch Installed For Product<br />\nAdd Rule<br />\n   Patch Code: ac76ba86-7ad7-0000-2550-ac0f094e6500<br />\n   Product Code: ac76ba86-7ad7-1033-7b44-ac0f074e4100<br />\nCheck Reverse Rule<br />\nClick OK<br />\nCheck Delete Rules at Package Level<br />\n<h1>Click Publish</h1>\nI got &quot;Patch Code&quot; from the registry where I manually installed the 15.009.20069 patch.  I got &quot;Product Code&quot; from viewing the MSI.  I could probably have used the Max/Min Version to accomplish the same task but this works so why re-invent the wheel?<br />\n<br />\nTo test, I removed Adobe Acrobat Reader DC from the client.  I reset Windows Update on the client (just to make a clean start).  I checked for Windows Updates.  As expected, I get the update for Adobe Acrobat Reader DC 15.007.20033.  I install.  It installs successfully.  I do another check for Windows Updates.  As expected, I get the update for Adobe Acrobat Reader DC 15.009.20069.  I install.  It installs successfully.  I do a final check for Windows Updates and, this time, I am told I have all updates!<br />\n<br />\nI'm going to test this on several more clients with some doing a fresh install of Reader and others testing just the 15.009.20069 update.  If you get a chance, please try and see if it works for you too.<br />\n",
+    "PostedDate": "2015-10-13T14:14:24.4-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1448469",
+    "ThreadId": "644903",
+    "Html": "Yeah, I also have some Problems with users that can't open Adobe because It started two times after the Update. Maybe I did it wrong, because I added the MSI and only the new MSP and didn't see the, that the adobe updates AREN'T cumulative.\r<br />\n<br />\nSo question for the right way to do it:<br />\n<ol>\n<li>Add the .MSI AcroRdrDC1500720033_de_DE.msi</li>\n<li>Approve said MSI</li>\n<li>Add Update AcroRdrDCUpd1500820082.msp</li>\n<li>Approve Update</li>\n<li>Add newest Update AcroRdrDCUpd1500920069.msp</li>\n<li>\nApprove Update and select 1500820082.msp as &quot;Superseed&quot;<br />\n</li>\n</ol>\nIs this right? That Way at least I read it out of the PDF under Documentation for Adobe 11<br />\n",
+    "PostedDate": "2015-10-14T07:17:13.767-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1448500",
+    "ThreadId": "644903",
+    "Html": "I no longer have it showing up multiple times now.  I think it was doing it because I was using the wrong Product Code.  It kept showing up in Windows Update because the Product Code would never be found so it would always show up.  The install would still work because the MSP file was smart enough to know the update was already installed.<br />\n<br />\nTo build the initial Adobe Acrobat Reader base, I followed the instructions in the Adobe Reader XI Deployment with Custom Settings (skipping the custom settings section).  In other words, I extracted the Adobe Reader EXE (7zip), and uploaded the SETUP.EXE file in the Update Creation Wizard.  I added the 5 additional files minus the MSP update file.  If you view the PDF I note above, you'll start with Page 9.<br />\n<br />\nOnce you've published that (don't forget to use the MSI tool to get the product code), create another Update for Adobe Reader and add just the MSP file (use my instructions in the previous post to get it published).  You'll create multiple of these as Adobe releases.<br />\n<br />\nDo not use supersede.  I was confused on that.  Supersede means it replaces a previous update.  That would be correct except Adobe doesn't repackage the downloadable executable into one file--i.e. all of their downloadable executables (for this year) will come with the MSI for version 15.007.20033 and an MSP for the update.  What we were doing was superseding the full blown Adobe Reader with just the Update (MSP file)--i.e. kinda like trying to install Windows 7 from scratch with just the Windows 7 SP1 disc.<br />\n<br />\nHope this helps.  I've been testing this quite a bit and it works flawlessly.  I'm now tackling Java.<br />\n<br />\nUPDATE: Just to clarify, you will always have 15.007.20033 as an approved update as this will take care of getting Adobe Reader installed on new computers.  You'll create additional updates as Adobe releases them.  If I understand this correctly, you'll expire the old update (15.009.20069, for example) and approve the newest release.  I believe I read on Adobe's site each of their updates will be cumulative so you won't need to keep all of the updates approved--i.e. at any given time, Adobe will have 2 files for Adobe Reader, the base and whatever is the latest patch/update.  So, at any given time, you'll always have 2 Adobe Reader updates approved.  With Java and Flash, though, you'll just have 1 approved update.  I guess, with them, you would use Supersede.<br />\n",
+    "PostedDate": "2015-10-14T10:30:06.277-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1448747",
+    "ThreadId": "644903",
+    "Html": "@triton53<br />\ni modified the package rules as in your comment from Tue at 11:14 PM<br />\nAt first windows update Service found Adobe Reader DC 15.007.20033. After that it found update 15.009.20069 and installed to. But if i search now for updates again, the Adobe update will be displayed for Installation again.<br />\n",
+    "PostedDate": "2015-10-15T14:55:47.787-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1448755",
+    "ThreadId": "644903",
+    "Html": "My apologies for that.  I did leave out some things so let's get you going as I've got a fully functional solution that handles Flash, Reader, and Java.  You've got the base package done, so we don't need to worry about it.  It sounds like you have the update almost correct as you only see it in Windows Update <em>after</em> the base has been installed.\r<br />\n<br />\nI'm assuming you created the 15.009.20069 Update using the MSP file and did not add any other files when you built the update.<br />\n<ol>\n<li>Revise 15.009.20069</li>\n<li>Update Classification: SecurityUpdates</li>\n<li>Package Type: Update</li>\n<li>Prerequisites: 15.007.20033</li>\n<li>Next\r<br />\n<strong>Msi Patch Installed For Product</strong></li>\n<li>Patch Code: ac76ba86-7ad7-0000-2550-ac0f094e6500</li>\n<li>Product Code: ac76ba86-7ad7-1033-7b44-ac0f074e4100</li>\n<li>OK</li>\n<li>Delete Rules at Package Level</li>\n<li>Next\r<br />\n<strong>Msi Patch Installed For Product</strong></li>\n<li>Patch Code: ac76ba86-7ad7-0000-2550-ac0f094e6500</li>\n<li>Product Code: ac76ba86-7ad7-1033-7b44-ac0f074e4100</li>\n<li>Reverse Rule</li>\n<li>OK</li>\n<li>Delete Rules at Package Level</li>\n<li>Next</li>\n<li>\nRevise<br />\n</li>\n</ol>\nThat should do it.  Let me know if it doesn't.  When you approve both, if a client doesn't have the base (15.007.20033), WSPP will report the status for 15.009.20069 as Not Applicable since the client needs the base first.<br />\n",
+    "PostedDate": "2015-10-15T18:37:53.923-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1448799",
+    "ThreadId": "644903",
+    "Html": "I created (step for step) the Packages as described by you.\r<br />\nBoth packages Adobe Acrobat Reader DC - 15.007.20033 and Adobe Acrobat Reader DC - 15.009.20069 was installed sucessfully on the lab pc:\r<br />\n<a href=\"http://www.bilder-upload.eu/show.php?file=45052f-1444995716.png\" rel=\"nofollow\">http://www.bilder-upload.eu/show.php?file=45052f-1444995716.png</a>\r<br />\n<br />\nAfter that Windows update search again and found the packges Adobe Acrobat Reader DC - 15.009.20069:\r<br />\n<a href=\"http://www.bilder-upload.eu/show.php?file=ab9a68-1444995852.png\" rel=\"nofollow\">http://www.bilder-upload.eu/show.php?file=ab9a68-1444995852.png</a>\r<br />\n<br />\nIn the package is only the msp file:\r<br />\n<a href=\"http://www.bilder-upload.eu/show.php?file=24a969-1444996129.png\" rel=\"nofollow\">http://www.bilder-upload.eu/show.php?file=24a969-1444996129.png</a>\r<br />\n<br />\nHere the Details of my package for 15.009.20069:\r<br />\n<a href=\"http://www.bilder-upload.eu/show.php?file=acabed-1444996165.png\" rel=\"nofollow\">http://www.bilder-upload.eu/show.php?file=acabed-1444996165.png</a>\r<br />\n<a href=\"http://www.bilder-upload.eu/show.php?file=e2d374-1444996185.png\" rel=\"nofollow\">http://www.bilder-upload.eu/show.php?file=e2d374-1444996185.png</a>\r<br />\n<a href=\"http://www.bilder-upload.eu/show.php?file=38a3da-1444996207.png\" rel=\"nofollow\">http://www.bilder-upload.eu/show.php?file=38a3da-1444996207.png</a>\r<br />\n<a href=\"http://www.bilder-upload.eu/show.php?file=dd9601-1444996226.png\" rel=\"nofollow\">http://www.bilder-upload.eu/show.php?file=dd9601-1444996226.png</a>\r<br />\n<br />\nNo idea where the error should be?!<br />\n",
+    "PostedDate": "2015-10-16T04:36:34.037-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1448836",
+    "ThreadId": "644903",
+    "Html": "I bet Patch Code is the problem. Verify the patch code. Install patch on client, scan registry. There will be a registry entry for it. This update is checking for only 2 conditions. If it finds both conditions on the client, the update is already Installed.   If not, it shows it in windows update.  Sorry about missing that.<br />\n<br />\nUPDATE: As luck would have it, Adobe snuck out an update on the 14th (15.009.20071) <br />\n<br />\n<a href=\"http://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotes/DC/dccontinuousoctober2015ooc.html\" rel=\"nofollow\">http://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotes/DC/dccontinuousoctober2015ooc.html</a><br />\n<br />\nSo, this was a good opportunity to test things.  I thought I'd expire 15.009.20069 but I noticed the size of 20071 was small and figured it needed 15.009.20069 installed.<br />\n<ol>\n<li>Downloaded AcroRdrDCUpd1500920071_incr.msp from ftp site</li>\n<li>Created a new Update</li>\n<li>Selected MSP file</li>\n<li>Package Type: Update</li>\n<li>Update Classification: SecurityUpdates</li>\n<li>Prerequisites: 15.009.20069</li>\n<li>NEXT<br />\nMsi Patch Installed For Product</li>\n<li>Patch Code: ac76ba86-7ad7-0000-2550-ac0f094e6700</li>\n<li>Product Code: ac76ba86-7ad7-1033-7b44-ac0f074e4100<br />\n*NOTE: Installed 15.009.20069 on client, search registry for &quot;20071&quot;. Patch Code will equal PatchGUID value</li>\n<li>OK</li>\n<li>Check &quot;Delete Rules at Package Level&quot;</li>\n<li>NEXT<br />\nMsi Patch Installed For Product</li>\n<li>Patch Code: ac76ba86-7ad7-0000-2550-ac0f094e6700</li>\n<li>Product Code: ac76ba86-7ad7-1033-7b44-ac0f074e4100</li>\n<li>Check &quot;Reverse Rule&quot;</li>\n<li>OK</li>\n<li>Check &quot;Delete Rules at Package Level&quot;</li>\n<li>NEXT</li>\n<li>\nPUBLISH<br />\n</li>\n</ol>\nIt looks like the Prerequisites option will do the work for us--i.e. by selecting 15.009.20069 for Prerequisites will ensure this update only shows up after that has been installed so this can be treated like any other update.<br />\n<br />\nI've already tested this with Windows 10 and Windows 7.  On a machine with 15.009.20069, I run Windows Update and I am presented with 15.009.20071.  I install and run Windows Update again.  No new (or repeat) updates.  Next, I uninstall Adobe Reader DC from a client.  I run Windows Update.  Yes, I am presented with 15.007.20033.  It installs and I run Windows Update again.  Yes, only 15.009.20069 shows up.  I install it and run Windows Update again.  Yes, 15.009.20071 shows up.  I install it and run Windows Update one last time.  Yes, no new (or repeat) updates.<br />\n<br />\nMy problem with going this route is Adobe installs its update checker so I may have to use a Custom Update like I did with Java to remove the update checker.<br />\n<br />\nUPDATE: To disable Adobe Reader DC's check for updates, I created a GPO and set the registry entry from <a href=\"https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/WizardDC/online.html\" rel=\"nofollow\">https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/WizardDC/online.html</a>.<br />\n<br />\nHope this helps.<br />\n",
+    "PostedDate": "2015-10-16T08:58:00.79-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1449026",
+    "ThreadId": "644903",
+    "Html": "In business inviroment, I recommend NOT to use the &quot;Adobe Reader DC Continuous ( Base DC)&quot;. This product is for consumer enviroment.\r<br />\nUse the Adobe Reader Classic ( Base 2015). (Base installation: 15.006.30033 , MUI Updates: 15.006.30060 / 15.006.30094 ). This product is for business enviroment.\r<br />\nWhy: only security updates, no feature updates, no &quot;pay-features&quot;, GPO administation possible. No automatic updates.\r<br />\n<br />\nI roll out the master installation manual with special config via WPP/WSUS, and all updates via WPP/ Adobe Update-Katalog. Its a 2-click rollout.\r<br />\n<br />\nIf you can read german ( with this nickname - i think so ) you can take a look in my documentation on:\r<br />\n<br />\n<a href=\"http://road-books.jimdo.com/2015/07/09/howto-adobe-acrobat-reader-dc-2015-classic-track-angepasstes-software-deployment-mit-wsus-package-publisher/\" rel=\"nofollow\">http://road-books.jimdo.com/2015/07/09/howto-adobe-acrobat-reader-dc-2015-classic-track-angepasstes-software-deployment-mit-wsus-package-publisher/</a>\r<br />\n<br />\n<br />\nmaybe you see helpfull ideas.\r<br />\n<br />\nenjoy it!<br />\n",
+    "PostedDate": "2015-10-19T06:50:21.933-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1449359",
+    "ThreadId": "644903",
+    "Html": "Hi GMBU,<br />\nit didn't work for me. Which Version of wpp do you use? <br />\nI use the newest one, 1.3.1508.8. So it's possible, that there a bug with msp?<br />\n<br />\nGerman:<br />\nEs funktioniert einfach bei mir nicht. Welche Version von WPP nutzt du?<br />\nIch nutze die aktuelle Version 1.3.1508.8. Ies es möglich, dass es ein Bug mit MSP gibt?<br />\n<br />\nIch habe gestern versucht auf einem neuen Notebook den Adobe Acrobat XI 11.0.0 + 11.0.12 zu installieren. Beide Pakete sind seit 21.05.2014 bzw. 16.07.2015 in WPP eingepflegt. Beide Pakete konnten vor 3 Monaten noch auf einem Server Problem gefunden und installiert werden. In diesem Fall wurde nur das Programm installiert und das Update wird nicht gefunden.<br />\n",
+    "PostedDate": "2015-10-22T01:22:53.38-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1449468",
+    "ThreadId": "644903",
+    "Html": "Hallo,\r<br />\nich denke es gibt da einen Fehler in der Version 1.3.1508.8 - bei der Erstellung vom MSP-basierten Updates wurden bei mir die &quot;Package level Rules&quot; - Einträge<br />\n<ul>\n<li>&lt;msiar:MsiPatchInstalled/&gt;\r<br />\n und</li>\n<li>\n&lt;msiar:MsiPatchInstallable/&gt;<br />\n</li>\n</ul>\nNICHT automatisch angelegt.\r<br />\n<br />\nMit der Version 1.3.1504.15 funktioniert das noch problemlos.<br />\n",
+    "PostedDate": "2015-10-22T22:53:41.197-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1449819",
+    "ThreadId": "644903",
+    "Html": "ok, ähm da der Fragesteller deutsch spricht denke ich wir können hier so weitermachen :-))<br />\n<br />\nIch verwende 1.3.1508.8 , und rolle damit aus, aktuell seit dem 19.10. das Update 15.006.30094 . Überhaupt keine Probleme.<br />\nIch würde es im Rahmen der Fehlersuche eigentlich begrüßen wenn alle von der gleichen Softwareversion reden und nicht  die XI  und die DC Versionen wild durcheinander diskutieren, aber es muss auch so gehen :-)).<br />\n<br />\nIch prüfe mal den Hinweis von SGK1.....<br />\n<br />\nEs ist korrekt, das Update 15.006.30094 enthält bei mir auch keine Einträge bei den &quot;Package Level Rules&quot; . Es wird aber trotzdem korrekt installiert.<br />\nIm übrigen: das Update 15.006.30060 enthält da auch keine Einträge und funktionierte auch, was mir sagt das das ein Holzweg ist, ich glaube da nicht an einen Bug.<br />\n<br />\nMeine Updates sind über den Katalog erstellt, womöglich ist das anderes wenn man sie manuell erstellt, oder &quot;ersetzendes Update&quot; verwendet.<br />\n<br />\nAdobe arbeitet, zumindest bis  XI mit Updates unterschiedlichen Types, ich glaube die Quater Updates sind kummulativ und der Rest nicht, müßte ich nachlesen. Sprich es werden teilsweise die neuen nicht installiert wenn die vorhergehenden nicht da sind. Soweit ich gesehen habe steht in der  Installationszusammenfassung des 11.0.12 zwar überall das Vorraussetzung 11.0 reicht, aber naja.... Da ich zu faul bin mir zu merken welche welche sind, verfahre ich so das ich ALLE seit dem Hauptprogramm erschienenen Updates auf &quot;genehmigt&quot; setze, Adobe sucht sich dann selbst raus was es braucht. Jaja, bei 10000 Clients sollte man es dann nicht mehr so machen aber in kleineren Netzwerken geht das schon.  Ich würde also mal in die Richtung anregen.<br />\n<br />\n<br />\n<br />\n Ich denke nicht das dein Update nicht &quot;gefunden&quot; wird. Wenn es veröffentlicht ist ist es draußen und wird gefunden. Welchen Status hat es denn im WPP auf dem Rechner für den es freigegeben wurde? (Installiert/Neustart/gedownloaded/nicht verfügbar/nicht installiert/unbekannt/fehler)<br />\n<br />\nGib doch mal die alten Reader Updates wieder frei, schadet doch nicht,  die müßten ja noch in der Verwaltung stehen, nimmt er die denn an ? Und außerdem.... 11.0.13 wäre als aktuellestes Update auch ein guter Test. Und probier mal parallel via Katalog die Updates, um irgendwelche Felhler im Laden und publizieren auszuschließen. <br />\n<br />\n<br />\nPro forma weise ich auch immer gerne wieder darauf hin das man nicht auf verschiedene Wege installierte Adobe mischen und updaten sollte, und aufpassen das man nicht die  MUI Versionen mit normalen zusammenwürfelt.......... aber das scheint hier ja nicht der Fall.<br />\n<br />\nMan kann davon ausgehen das die Freigaben der Updates für die entsprechende Computer(Verteilungs)gruppe  alle richtig gesetzt sind und sich die Computer auch darin befinden.......? Das wäre wahrhaftig ein Grund das sie die Updates nicht finden :-)<br />\n",
+    "PostedDate": "2015-10-27T03:19:01.11-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1449914",
+    "ThreadId": "644903",
+    "Html": "<strong>badwurzach wrote:</strong><br />\n<blockquote>\nHi GMBU,<br />\nit didn't work for me. Which Version of wpp do you use? <br />\nI use the newest one, 1.3.1508.8. So it's possible, that there a bug with msp?<br />\n<br />\nGerman:<br />\nEs funktioniert einfach bei mir nicht. Welche Version von WPP nutzt du?<br />\nIch nutze die aktuelle Version 1.3.1508.8. Ies es möglich, dass es ein Bug mit MSP gibt?<br />\n<br />\nIch habe gestern versucht auf einem neuen Notebook den Adobe Acrobat XI 11.0.0 + 11.0.12 zu installieren. Beide Pakete sind seit 21.05.2014 bzw. 16.07.2015 in WPP eingepflegt. Beide Pakete konnten vor 3 Monaten noch auf einem Server Problem gefunden und installiert werden. In diesem Fall wurde nur das Programm installiert und das Update wird nicht gefunden.<br />\n</blockquote>\nbadwurzach, this is really, really weird.  With the way I'm doing it, I am having no problems and have updated and done fresh installs of Adobe Reader across several hundred computers.  My version of WPP is the same as yours.  Using the Prerequisite option cuts down on any special rules I need to create, outside of the standard rule covered in the documentation--i.e. is it there and is it installable.  For both rules, I use the &quot;Msi Patch Installed For Product&quot; (which I get once I install the patch/update on a single computer via the registry).  Once it installs the update the first time, do you find that Patch Code ID from searching the registry?  The fact that you keep getting it over and over again tells me it isn't.  If you're using Prerequisite, the condition is testing true but, when it checks to see if it is already installed, it is testing false.  Search your registry, after it installs the update the first time, for that patch code.  Also, make sure you don't have any extra characters in the rules where you enter the patch code.  Maybe there's a non-printable character at the beginning or end of the string.  I know how frustrating this must be.  You've followed my steps exactly so something is up with the patch code id, not WPP.  Another thing, can you take the MSP file itself and install it on a computer?  If so, the MSP is valid.<br />\n",
+    "PostedDate": "2015-10-27T20:05:13.153-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1450399",
+    "ThreadId": "644903",
+    "Html": "Hello,\r<br />\ni had the same problems iwth Reader DC (2015)\r<br />\n<br />\nBase-Version 15.006.30033 installs without problems.\r<br />\nUpdate (via adobe catalog) 15.006.30096 installs also, but wsus is sending this update again and again.\r<br />\n<br />\ni had to create the following rule (section: &lt;msiar:MsiPatchInstalled/&gt; ):\r<br />\n&lt;msiar:MsiPatchInstalledForProduct PatchCode=&quot;{ac76ba86-7ad7-ffff-2550-ae0f06759000}&quot; ProductCode=&quot;{ac76ba86-7ad7-ffff-7b44-ae0f06755100}&quot;/&gt;\r<br />\n<br />\nAfer that everything went fine.<br />\n",
+    "PostedDate": "2015-10-30T00:57:56.49-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1450422",
+    "ThreadId": "644903",
+    "Html": "ok... what is with the other, older  updates ?  30060 and 30094 works correctly ? \r<br />\n<br />\nWSUS NOT sending updates !!, Clients load updates !\r<br />\n<br />\nI public 30096 today, from Adobe Catalog,  and check it, ......in the moment, there are no problem (two  W7 + W10 Clients ).  WPP Status of 30096 is &quot;installed&quot;. No manual manipualtion of rules nessasary.\r<br />\n<br />\nThe rule you set, looks like the same check included in the original update.  You can check it in the last WWP assistent rule window ( Metadaten ).\r<br />\n<br />\nI found this in WPP assistent metadata section:\r<br />\n<br />\n&lt;msiar:MsiPatchMetadata&gt;&lt;MsiPatch xmlns=&quot;<a href=\"http://www.microsoft.com/msi/patch_applicability.xsd\" rel=\"nofollow\">http://www.microsoft.com/msi/patch_applicability.xsd</a>&quot; SchemaVersion=&quot;1.0.0.0&quot; PatchGUID=&quot;{AC76BA86-7AD7-FFFF-2550-AE0F06759000}&quot; MinMsiVersion=&quot;4&quot; TargetsRTM=&quot;true&quot;&gt;&lt;TargetProduct MinMsiVersion=&quot;300&quot;&gt;&lt;TargetProductCode Validate=&quot;true&quot;&gt;{AC76BA86-7AD7-FFFF-7B44-AE0F06755100}&lt;/TargetProductCode&gt;&lt;TargetVersion Validate=&quot;true&quot; ComparisonType=&quot;Equal&quot; ComparisonFilter=&quot;MajorMinorUpdate&quot;&gt;15.006.30033&lt;/TargetVersion&gt;&lt;UpdatedVersion&gt;15.006.30096&lt;/UpdatedVersion&gt;&lt;TargetLanguage Validate=&quot;false&quot;&gt;0&lt;/TargetLanguage&gt;&lt;UpdatedLanguages&gt;1027&lt;/UpdatedLanguages&gt;&lt;UpgradeCode Validate=&quot;true&quot;&gt;{A6EADE66-0000-0000-484E-7E8A45000000}&lt;/UpgradeCode&gt;&lt;/TargetProduct&gt;&lt;TargetProductCode&gt;{AC76BA86-7AD7-FFFF-7B44-AE0F06755100}&lt;/TargetProductCode&gt;&lt;ObsoletedPatch&gt;{AC76BA86-7AD7-FFFF-2550-AE0F06756C00}&lt;/ObsoletedPatch&gt;&lt;ObsoletedPatch&gt;{AC76BA86-7AD7-FFFF-2550-AE0F06758E00}&lt;/ObsoletedPatch&gt;&lt;SequenceData&gt;&lt;PatchFamily&gt;AC76BA867AD7FFFF7B44AE0F06755100&lt;/PatchFamily&gt;&lt;Sequence&gt;15.006.30096.10000&lt;/Sequence&gt;&lt;Attributes&gt;1&lt;/Attributes&gt;&lt;/SequenceData&gt;&lt;/MsiPatch&gt;&lt;/msiar:MsiPatchMetadata&gt;\r<br />\n<br />\n<br />\nMaybee:\r<br />\n<br />\nremove the update from WPP, and import and publish it again. <br />\n",
+    "PostedDate": "2015-10-30T03:06:45.283-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1450425",
+    "ThreadId": "644903",
+    "Html": "<blockquote>\nok... what is with the other, older  updates ?  30060 and 30094 works correctly ? <br />\n</blockquote>\nmy understanding is: i only need base and last update from catalog.<br />\n<blockquote>\nI public 30096 today, from Adobe Catalog,  and check it, ......in the moment, there are no problem (two  W7 + W10 Clients ).  WPP Status of 30096 is &quot;installed&quot;. No manual manipualtion of rules nessasary.<br />\n</blockquote>\ninteresting...<br />\n<blockquote>\nThe rule you set, looks like the same check included in the original update.  You can check it in the last WWP assistent rule window ( Metadaten ).<br />\n</blockquote>\nyes, i've looked in the metadata to get the PatchID for the rule.<br />\n<blockquote>\nremove the update from WPP, and import and publish it again.<br />\n</blockquote>\nsame problem again, on my 3 win10 test clients, he tries to install the update again...\r<br />\n<br />\nwir können das aber auch auf deutsch besprechen.. :-)<br />\n",
+    "PostedDate": "2015-10-30T03:25:53.087-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1450431",
+    "ThreadId": "644903",
+    "Html": "<strong>molkanisonal wrote:</strong><br />\n<blockquote>\nmy understanding is: i only need base and last update from catalog.<br />\n</blockquote>\nI only ask because I want to know if this is a generally problem since beginnig  of deployment DC 2015 Classic, or a new specific update problem.<br />\n<blockquote>\n<blockquote>\nI public 30096 today, from Adobe Catalog,  and check it, ......in the moment, there are no problem (two  W7 + W10 Clients ).  WPP Status of 30096 is &quot;installed&quot;. No manual manipualtion of rules nessasary.<br />\n</blockquote>\ninteresting...<br />\n<br />\nno. normal :-)<br />\n<blockquote>\nThe rule you set, looks like the same check included in the original update.  You can check it in the last WWP assistent rule window ( Metadaten ).<br />\n</blockquote>\nyes, i've looked in the metadata to get the PatchID for the rule.<br />\n<blockquote>\nremove the update from WPP, and import and publish it again.<br />\n</blockquote>\nsame problem again, on my 3 win10 test clients, he tries to install the update again...<br />\n<br />\nwir können das aber auch auf deutsch besprechen.. :-)<br />\n</blockquote>\nJa das könnte hilfeich sein. :-)\r<br />\n \r<br />\nHm. Ich würde zur Eingrenzung trotzdem mal vorschlagen du lädst die verflossenen Updates und gibst die ebenso frei. Alle. Ich sehe auch das er laut Metadaten als Installationsvorrausetzung nur das Hauptprogramm verlangt, aber naja.....\r<br />\n<br />\nWie wurde das Hauptprogramm installiert? Eventuell liegt das Problem schon da . Die  DC 2015 Classic gibts ja idiotischer Weise nur als exe. Wenn du es verteilt hast musst du die .msi extrahiert haben. Und hast du die dann noch angepasst?  ( Ich hab das gemacht )\r<br />\nSind da womöglich kritische Konfigurationen entstanden die zu Fehlern führen?\r<br />\nGreifen GPOs aus den Adobe  templates auf die Installation die das Update steuern ?\r<br />\n<br />\n<br />\n<br />\n<br />\nDann wäre noch interessant zu wissen welchen Status WPP anzeigt. Was sagt er über die Updates die sich immer wieder installieren? Stehen die auf erforderlich, fehlgeschlagen, installiert oder was ?<br />\n",
+    "PostedDate": "2015-10-30T04:01:00.82-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1450436",
+    "ThreadId": "644903",
+    "Html": "<blockquote>\n<blockquote>\n<blockquote>\nI public 30096 today, from Adobe Catalog,  and check it, ......in the moment, there are no problem (two  W7 + W10 Clients ).  WPP Status of 30096 is &quot;installed&quot;. No manual manipualtion of rules nessasary.<br />\n</blockquote>\ninteresting...<br />\n<br />\nno. normal :-)<br />\n</blockquote>\n</blockquote>\nDas ist mir auch klar. Klappte bisher ja auch problemlos mit Reader 11 \\ Win 8.1.<br />\n<blockquote>\nHm. Ich würde zur Eingrenzung trotzdem mal vorschlagen du lädst die verflossenen Updates und gibst die ebenso frei. Alle. Ich sehe auch das er laut<br />\nMetadaten als Installationsvorrausetzung nur das Hauptprogramm verlangt, aber naja.....<br />\n</blockquote>\nIch hatte dasselber Problem vorher schon mit  Update 15.006.30060<br />\n<blockquote>\nWie wurde das Hauptprogramm installiert? Eventuell liegt das Problem schon da . Die  DC 2015 Classic gibts ja idiotischer Weise nur als exe. Wenn du es verteilt <br />\nhast musst du die .msi extrahiert haben. Und hast du die dann noch angepasst?  ( Ich hab das gemacht )<br />\n</blockquote>\nHabe ich auch (Adobe Customization Wizard)<br />\n<blockquote>\nGreifen GPOs aus den Adobe  templates auf die Installation die das Update steuern ?<br />\n</blockquote>\nNein <br />\n<blockquote>\nDann wäre noch interessant zu wissen welchen Status WPP anzeigt. Was sagt er über die Updates die sich immer wieder installieren? Stehen die auf erforderlich, fehlgeschlagen, installiert oder was ?<br />\n</blockquote>\nWeiss ich nicht mehr, kann ich erst nächste Woche prüfen.\r<br />\nMit der manuellen Regel läuft es ja zumindest.<br />\n",
+    "PostedDate": "2015-10-30T04:38:49.007-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1450452",
+    "ThreadId": "644903",
+    "Html": "<blockquote>\nIch hatte dasselber Problem vorher schon mit Update 15.006.30060<br />\n</blockquote>\nAlso von Anfang an. Hm. \r<br />\n<br />\nWenn du sie nicht aus dem Katalog holst, sondern downloadest und dann das Update manuell erstellst und publizierst funktioniert es auch nicht ohne den zusätzlichen Eintrag?\r<br />\n<br />\nja, schönes WE erst mal.<br />\n",
+    "PostedDate": "2015-10-30T06:29:43.433-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1450850",
+    "ThreadId": "644903",
+    "Html": "Hallo zusammen,<br />\nerstmals möchte ich mich für die späte Rückmeldung entschuldigen. Urlaub und Krankheit kamen dazwischen.<br />\n<br />\n<strong>GMBU wrote:</strong><br />\n<blockquote>\nMeine Updates sind über den Katalog erstellt, womöglich ist das anderes wenn man sie manuell erstellt, oder &quot;ersetzendes Update&quot; verwendet.<br />\n</blockquote>\nIch habe beides (Katalog und manuell) ausprobiert - beides Mal das selbe Ergebnis wie bisher. Ich habe bisher nie bei Reader XI mit &quot;ersetzen Updates&quot; gearbeitet.<br />\n<br />\n<strong>GMBU wrote:</strong><br />\n<blockquote>\nWelchen Status hat es denn im WPP auf dem Rechner für den es freigegeben wurde?<br />\n</blockquote>\nDer Status beim Update lautet &quot;Unbekannt&quot;.<br />\n<br />\n<strong>GMBU wrote:</strong><br />\n<blockquote>\nGib doch mal die alten Reader Updates wieder frei, schadet doch nicht, die müßten ja noch in der Verwaltung stehen, nimmt er die denn an ?<br />\n</blockquote>\nGebe ich diese Pakete in der Testgruppe wieder frei, wird das Programm (Basis) installiert, aber auch keine Updates gefunden. Das hat aber auf jeden Fall schon einmal funktioniert!<br />\n<br />\n<strong>GMBU wrote:</strong><br />\n<blockquote>\nPro forma weise ich auch immer gerne wieder darauf hin das man nicht auf verschiedene Wege installierte Adobe mischen und updaten sollte, und aufpassen das man nicht die MUI Versionen mit normalen zusammenwürfelt.......... aber das scheint hier ja nicht der Fall.<br />\n</blockquote>\nSchaden tut es nie... ich habe inzwischen auch  alle Pakete vom Reader nochmals gelöscht und neu eingerichtet.<br />\n<br />\n<strong>GMBU wrote:</strong><br />\n<blockquote>\nMan kann davon ausgehen das die Freigaben der Updates für die entsprechende Computer(Verteilungs)gruppe alle richtig gesetzt sind und sich die Computer auch darin befinden.......?<br />\n</blockquote>\nHabe ich schon mehrmals geprüft. Gebe ich z.B. 7Zip auf die Testgruppe frei, wird diese auch auf dem Testclient gefunden.<br />\n<br />\n<strong>triton53 wrote:</strong><br />\n<blockquote>\nAnother thing, can you take the MSP file itself and install it on a computer? If so, the MSP is valid.<br />\n</blockquote>\nI can install the msp file manually on the test Client without any Problems.<br />\n<br />\n<strong>molkanisonal wrote:</strong><br />\n<blockquote>\ni had to create the following rule (section: &lt;msiar:MsiPatchInstalled/&gt; ): <br />\n&lt;msiar:MsiPatchInstalledForProduct PatchCode=&quot;{ac76ba86-7ad7-ffff-2550-ae0f06759000}&quot; ProductCode=&quot;{ac76ba86-7ad7-ffff-7b44-ae0f06755100}&quot;/&gt; <br />\n</blockquote>\nI configure the rule on the msp package. But it don't help me.<br />\n<br />\n:::::::::::::::::::::::::::::::::::::::<br />\nKann ich eigentlich ohne Problem auf eine ältere Version zurückgehen?<br />\n<br />\n<br />\nGrüße,<br />\nDaniel<br />\n",
+    "PostedDate": "2015-11-04T04:57:48.193-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1450868",
+    "ThreadId": "644903",
+    "Html": "Ok, jetzt wirs unübersichtlich, mehrere Leute mit ähnlichem Problem hier :-) , ein paar Ideen hab ich noch:\r<br />\n<br />\nBist du eigentlich immer noch auf dem Continous Track ? Deinen Versionsnummer aus dem ersten Posting nach war das so. Wie ich bereits erwähnte ist das nicht so die beste Idee.\r<br />\nMeine Vermutung ist das dein Problem genau da liegen könnte:\r<br />\n<br />\n<a href=\"http://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html#reader-dc-tracks\" rel=\"nofollow\">http://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html#reader-dc-tracks</a>\r<br />\n<br />\nDa steht sinngemäß  ( unter anderem ) auch drin das NUR der Classic Track es ermöglicht Updates wie bei der XI durchzuführen und zu managen.\r<br />\n&quot;Want to manage updates like previous 10-11.x releases.&quot;\r<br />\n<br />\nDas der Eintrag von Molkanisol da auch nichts bringt wäre auch verständlich, denn der ist wohl auf dem Classic Track, und hat daher andere Nummern.\r<br />\nLösung wäre (hoffentlich) auf den Classic Track zu wechseln, und es mit der neuen Classic Grundinstallation und den Updates aus der Linie zu versuchen. \r<br />\n<br />\nDas der Eintrag von Molkanisol da auch nichts bringt wäre auch verständlich, denn der ist wohl auf dem Classic Track, und hat daher andere IDs.\r<br />\n<br />\nIch weiß es nervt aber du bist sicher das alles zusammenpasst, das du immer im richtigen Track ( Continuous / Classic) bist ? Basisinstallation, die manuell heruntergeladenen und die über den Katalog, denn es gibt da ja verschiedene Kataloge für..\r<br />\n<a href=\"http://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/sccm.html\" rel=\"nofollow\">http://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/sccm.html</a> \r<br />\nAuf der anderen Seite sagst du das die Updates in der XI Version auch nicht mehr funktionieren, was darauf hindeutet das das Problem tatsächlich wo ganz anders liegt.\r<br />\n<br />\nzurück? beim WPP?\r<br />\nDa das Update bei WPP normalerweise nur durch drüberkopieren erfolgt - im Prinzip ja :-)\r<br />\n<br />\nDu hattest mal ein Serverproblem erwähnt. Mit dem Zertifikat ist aber alles in Ordnung? \r<br />\n<br />\nDas der Status &quot;unbekannt&quot; ist....... hm......das ist er ja normalerweise nur wenn sich der Client noch nicht wieder am WSUS gemeldet hat seit das Update erstellt wurde. Hm ...Was könnte noch zu Status &quot;Unbekannt&quot; führen? Das die Prüfung aus irgendeinem Grund nicht möglich ist ( ich spekuliere nur )\r<br />\nAber ich denke genau das ist der Ansatz, wieso ist der Status &quot;unbekannt&quot;.\r<br />\n<br />\nFunktioniert eigentlich die Verteilung und Updates vom FLASH ( falls ihr das auch verteilt )<br />\n",
+    "PostedDate": "2015-11-04T06:30:01.797-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451196",
+    "ThreadId": "644903",
+    "Html": "<strong>GMBU wrote:</strong><br />\n<blockquote>\nBist du eigentlich immer noch auf dem Continous Track ? Deinen Versionsnummer aus dem ersten Posting nach war das so. Wie ich bereits erwähnte ist das nicht so die beste Idee.<br />\n</blockquote>\nNein. Ich bin inzwischen auf Classic umgestiegen.\r<br />\n<br />\n<strong>GMBU wrote:</strong><br />\n<blockquote>\nIch weiß es nervt aber du bist sicher das alles zusammenpasst, das du immer im richtigen Track ( Continuous / Classic) bist ? Basisinstallation, die manuell heruntergeladenen und die über den Katalog, denn es gibt da ja verschiedene Kataloge für..<br />\n<a href=\"http://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/sccm.html\" rel=\"nofollow\">http://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/sccm.html</a> <br />\nIch habe über WPP bzw. Windows Update die Vollinstallation (AcroRdr20151500630033_MUI.exe) auf dem Testclient installieren lassen. Danach habe ich das Update (AcroRdr2015Upd1500630096_MUI.msp) manuell problemlos installieren können. Daher gehe ich davon aus, dass Vollversion und Update in der richtigen Version vorliegen. Nach dem Update steht auch unter Programme und Features bei Version 15.006.30096.<br />\n</blockquote>\n<strong>GMBU wrote:</strong><br />\n<blockquote>\nAuf der anderen Seite sagst du das die Updates in der XI Version auch nicht mehr funktionieren, was darauf hindeutet das das Problem tatsächlich wo ganz anders liegt.<br />\n</blockquote>\nInzwischen funktioniert die XI-Version wieder. Ich habe zuerst ein Downgrade die Version 1.3.1504.15 durchgeführt. Dort die beiden Pakete für die Testgruppe genehmigt. Danach wurden auf dem Windows 7 Testclient nacheinander beide Pakete gefunden und problemlos installiert. Beide Pakete wieder für die Testgruppe auf &quot;Nicht genehmigt&quot; gesetzt und WPP wieder auf die neuste Version aktualisiert.\r<br />\n<br />\n<strong>GMBU wrote:</strong><br />\n<blockquote>\nDu hattest mal ein Serverproblem erwähnt. Mit dem Zertifikat ist aber alles in Ordnung? <br />\n</blockquote>\nJup. Andere Updates im WPP werden problemlos verteilt.\r<br />\n<br />\n<strong>GMBU wrote:</strong><br />\n<blockquote>\nDas der Status &quot;unbekannt&quot; ist....... hm......das ist er ja normalerweise nur wenn sich der Client noch nicht wieder am WSUS gemeldet hat seit das Update erstellt wurde. Hm ...Was könnte noch zu Status &quot;Unbekannt&quot; führen? Das die Prüfung aus irgendeinem Grund nicht möglich ist ( ich spekuliere nur ) <br />\n</blockquote>\nIch habe folgendes gemacht:\r<br />\nBeide Pakete (Vollversion und Update) genehmigt. Über Windows Update die Vollversion installiert. Danach steht bei Status im WPP Installiert. Danach nochmals nach Updates gesucht und natürlich keines gefunden. In der Spalte Status im WPP steht dort &quot;nicht verfügbar&quot;. Sowohl mit WPP Version 1.3.1504.15 als auch 1.3.1508.8 getestet.\r<br />\n<br />\n<strong>GMBU wrote:</strong><br />\n<blockquote>\nFunktioniert eigentlich die Verteilung und Updates vom FLASH ( falls ihr das auch verteilt )<br />\n</blockquote>\nJa<br />\n",
+    "PostedDate": "2015-11-06T07:59:16.407-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451522",
+    "ThreadId": "644903",
+    "Html": "Ich hatte (bzw. habe) das gleiche Problem mit der aktuellen Version von WPP, nach Downgrade auf die Version von April funktioniert alles wie es soll. Also das ist definitiv ein Problem mit der aktuellen WPP-Version... Das Problem trat sowohl bei selbst erstellten Updates als auch bei Katalog-Updates auf.<br />\n<br />\nHatte das Problem im mcseboard gepostet: <a href=\"http://www.mcseboard.de/topic/205065-wpp-adobe-reader-11-update-13-wird-immer-wieder-als-benötigt-angezeigt/\" rel=\"nofollow\">http://www.mcseboard.de/topic/205065-wpp-adobe-reader-11-update-13-wird-immer-wieder-als-benötigt-angezeigt/</a><br />\n",
+    "PostedDate": "2015-11-09T22:49:10.487-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451526",
+    "ThreadId": "644903",
+    "Html": "Ok, ich versuch mal zusammenzufassen.<br />\n<br />\nXI läuft. erledigt.<br />\n<br />\nReader DC Classic <strong>15.006.30033</strong>  , nicht zu verwechseln mit 15.007.20033, installiert ordnungsgemäß das Hauptprogramm, via WPP/WSUS/WUpdate . Dieses wurde aus der .exe extrahiert und per ACW angepasst, im WPP entsprechend die .msi sowie die transformierte .mst zur Updateerstellung eingebunden.<br />\n<br />\nHier ist die Downloadquelle, mit ausführlichen Hinweisen zur Aktivierung von Installations Logs, womöglich helfen die ja auch beim Reader und den Update mit Infos weiter.<br />\n<a href=\"http://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotes/DC/dcclassic15.006.html\" rel=\"nofollow\">http://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotes/DC/dcclassic15.006.html</a><br />\nftp://ftp.adobe.com/pub/adobe/reader/win/Acrobat2015/<br />\n<br />\nEs gibt übrigens auch INCREMENTALE Updates, für alle wo Bestandinstallationen mit geringer Netzwerklast geupdatet werden sollen. ( Cool...) Die sind aber nicht über den Katalog verfügbar soviel ich weiß. <br />\n<br />\n<br />\nFreigegeben für Testgruppe, Testgruppe installiert über WSUS Update den vorkonfigurierten Reader.<br />\n<br />\nAlles gut.<br />\n<br />\n Update ....96 aus Katalog automatisch erstellen lassen.<br />\n Freigeben für Testgruppe.<br />\n Clientstatus neu ermitteln lassen.<br />\nStatus wechselt von &quot;unbekannt&quot; auf &quot; nicht verfügbar&quot; ( Problem )<br />\n<br />\nhm. Ich habe mal bei mir nachgesehen. &quot;Nicht verfügbar&quot; habe ich zB stehen wenn es sich zB noch um einen XP Client handelt. Macht Sinn. <br />\nDu hast keine manuellen Regeln gesetzt deren Auswertung zu einem &quot;nicht Verfügbar&quot; führen könnten?<br />\nZwischenzeitlich eigentlich vorsichtshalber mal die Software Distribution gelöscht?<br />\nMöglicherweise Reste alter Installationen in der Registry? Man könnte vermuten das die Basisinstallation nicht ordnungsgemäß in der Reg eingetragen ist, und das Update deswegen der Meinung ist es hat dort nichts verloren. GGf Reiniger drüberlaufen lassen.<br />\n<br />\nAlso ansonsten gehen mir da jetzt langsam die Ideen aus.....<br />\n<br />\nDas es am WPP direkt liegt wiederspricht etwas der Punkt das es bei mir zB nicht passiert. Habt ihr nochmal die Metadaten verglichen dich ich oben gepostet habe?<br />\nWenn das Update auf nicht verfügbar steht, und es an einem Regelabgleich liegt müsste man es da ja sehen. <br />\nIhr rollt auf die üblichen Systeme aus? W 7 Prof 32/64 bit  bis W10 Prof 32/64bit ?<br />\n<br />\nIrgendwas war noch letztens mit Katalog und Updates in der letzten Version...hm... versuch das mal zu finden.<br />\n Wenn nicht müsst ihr das doch mal als Bug melden, der Programmierer ist normalerweise dran an Problemen.<br />\nAh ja. Ich hatte damals gemeldet das unter bestimmten Bedingungen WPP abstürzt beim Zugriff auf den Katalog, das war ein wesentlicher Grund für das letzte Update was euch jetzt Ärger macht. Sorry Jungs :-)<br />\n<br />\nIch kann anbieten das bei mir erzeugte Update, was bei mir ja läuft,  direkt zu Testzwecken zur Verfügung zu stellen. Kann man ja im WPP importieren.  Müßtet ihr nur neu zertifizieren denk ich.<br />\nI<br />\n",
+    "PostedDate": "2015-11-09T23:50:49.357-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451570",
+    "ThreadId": "644903",
+    "Html": "Moin, Moin,\r<br />\nalso wir haben nochmals mit dem 6-Augen-Prinzip alles durchgearbeitet. Mit der letzten Version aus dem April 2015 getestet und nun funktioniert es wie gewohnt.\r<br />\nWichtig ist, dass man vor dem Downgrade die betroffenen Adobe Reader Pakete ablehnt, aus WPP und dem Dateibaum löscht. Sonst haut es wohl nicht hin.\r<br />\n<br />\nVielen Dank an alle für die Unterstützung!<br />\n",
+    "PostedDate": "2015-11-10T04:50:40.29-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451571",
+    "ThreadId": "644903",
+    "Html": "Nachtrag:\r<br />\n<br />\nIch hatte heute ebenfalls einen Problemfall.\r<br />\nW7 Rechner neu aufgesetzt und Upgrade auf W10 gemacht, Adobe installiert den Reader und das 96er Update. Und dann immer wieder. Es wird nicht erkannt das das Update erfolgreich installiert wurde. \r<br />\nAlles versucht, Softwareverteilung gelöscht, aden Adobe Cleaner drüberlaufen lassen, immer das Gleiche. Nachdem ich dann mal wieder alles entfernt hatte, habe ich:\r<br />\nBasisinstallation freigegeben - alles gut.\r<br />\n60er Update freigegebem - alles gut, wird 1x installiert \r<br />\n94er Update freigegeben - alles gut. wird 1x installiert\r<br />\n96er Update freigegeben - wird erfolgreich installiert, installiert sich aber immer wieder und wieder und wieder.......\r<br />\n<br />\nAlso irgendwas ist mit dem Update auch faul. Vermutlich liegt es am Zusammenspiel  des WPP und des Updates :-)\r<br />\nIch durchforste mal die msi Metadaten, ob die strukturell anders sind als bei den bisherigen Updates.<br />\n",
+    "PostedDate": "2015-11-10T04:56:35.657-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451683",
+    "ThreadId": "644903",
+    "Html": "<strong>badwurzach wrote:</strong><br />\n<blockquote>\nalso wir haben nochmals mit dem 6-Augen-Prinzip alles durchgearbeitet. Mit der letzten Version aus dem April 2015 getestet und nun funktioniert es wie gewohnt.<br />\nWichtig ist, dass man vor dem Downgrade die betroffenen Adobe Reader Pakete ablehnt, aus WPP und dem Dateibaum löscht. Sonst haut es wohl nicht hin.<br />\n</blockquote>\nMit welcher Version <em>genau</em> funktioniert es denn jetzt? Im April gab es zwei Builds. Ich versuch dann mal den Entwickler zu kontaktieren und ihm das Problem schildern.<br />\n",
+    "PostedDate": "2015-11-10T22:01:54.093-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451693",
+    "ThreadId": "644903",
+    "Html": "Ich dachte mit &quot;letzter Version&quot; wäre es deutlich. ;-)\r<br />\nEs ist Version 1.3.1504.15.<br />\n",
+    "PostedDate": "2015-11-10T23:35:02.173-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451695",
+    "ThreadId": "644903",
+    "Html": "Bei mir funktioniert auch die 1.3.1504.15<br />\n",
+    "PostedDate": "2015-11-10T23:44:02.073-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1451700",
+    "ThreadId": "644903",
+    "Html": "Ich konnte mein Problem der sich immer wiederholenden Updates ( gleichen Fall hatte jemand vor ein paar Tagen in einem parallelen Thread gepostet ) gestern noch lösen. Habe das Update gelöscht und komplett neu aus dem Katalog geladen, dann gings. Wohlgemerkt war das bisherige aber auch schon seit Tagen erfolgreich in Betrieb. Keine logische Erklärung.\r<br />\nEs gibt von Adobe das &quot;Adobe CC Cleaner Tool&quot; , das sollte man in solchen Fällen sicherheitshalber auch immer griffbereit haben. Insbesondere wenn es nicht läuft wie es sollte :-)\r<br />\n<br />\nMit den sich NICHT instalierenden Updates bin ich nicht weiter gekommen. Habe mal die im WPP angezeigten .msi Metadaten der drei bisherigen Updates verglichen, als da gibt es ein paar strukturelle Unterschiede , Stichwort &lt;Obsolated Patch&gt; , aber mir fehlt da das Wissen um zu sehen was da welche Bedeutung hat. \r<br />\n<br />\nTja, bei mir funktioniert die Release v1.3.1508.08 . Vor den April Release hatte ich WPP Abstürze bei Verwendung des Adobe Katalog. \r<br />\n<br />\nVon Bedeutung ist Möglicherweise das das Handling von .msi Regeln mit den April Releases geändert wurde !\r<br />\n&quot; Now automatic Rules based on MSI Product code are not generated anymore. Instead, WPP use MetaData integrated by the Publisher. In the &quot;Package Level&quot;, you will found a rule like &quot;&lt;msiar:MsiPatchInstalled/&gt;&quot; and &quot;&lt;msiar:MsiPatchInstallable/&gt;&quot;\r<br />\n<br />\nDiese Einträge finde ich bei mir NICHT wenn ich ein Reader Update aus dem Katalog erstelle ( aber es funktioniert ), von anderen wurde die Einträge jeodch gesichtet. Das es an den &quot;WPP integrated MetaData&quot; würde für mich Sinn machen.  \r<br />\n",
+    "PostedDate": "2015-11-11T00:38:04.453-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1452432",
+    "ThreadId": "644903",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"https://wsuspackagepublisher.codeplex.com/workitem/310\" rel=\"nofollow\">here</a> to go to the work item and continue the discussion.<br />\n",
+    "PostedDate": "2015-11-15T09:22:38.52-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

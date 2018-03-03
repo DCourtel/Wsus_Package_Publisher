@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1488543",
+    "ThreadId": "659614",
+    "Html": "Hi All.\r<br />\nI've created a custom update and would like to modify the XML file within the created CAB.  Has anyone found a way of doing this?\r<br />\nRegards,\r<br />\nPete.<br />\n",
+    "PostedDate": "2016-11-22T02:54:48.803-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1489056",
+    "ThreadId": "659614",
+    "Html": "Found answer here <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/647962\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/647962</a> the answer is basically no as Wsus PP digitally signs the package.  But you can extract and edit for future reference.<br />\n",
+    "PostedDate": "2016-11-30T06:36:23.72-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2016-11-30T06:36:27.34-08:00"
+  }
+]

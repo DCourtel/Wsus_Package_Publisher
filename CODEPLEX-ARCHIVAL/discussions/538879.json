@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1222280",
+    "ThreadId": "538879",
+    "Html": "Hi! \r<br />\ndeveloping the package Mozilla Firefox, I find one problem: I installd the update in the clients, but in Control Pnael - Programs the old version still appears. So as much new version I install, more Mozilla Firefox I have in Programs. What am I dpoing wrong? The way I do the package is: <br />\n<ul>\n<li>I create the msi with AdvancedInstaller. Fot that I copy all the content of the folder Mozilla Firefox of that version from another computer with that version already installed. \r<br />\nThanks!</li>\n</ul>\n",
+    "PostedDate": "2014-03-13T04:05:24.463-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1222888",
+    "ThreadId": "538879",
+    "Html": "Hi Albricia,<br />\n<blockquote>\n•I create the msi with AdvancedInstaller<br />\n</blockquote>\nSo what actions do you have set in the MSI file to uninstall old version of Firefox ?<br />\n",
+    "PostedDate": "2014-03-14T12:23:34.433-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:50:13.627-07:00"
+  },
+  {
+    "Id": "1224306",
+    "ThreadId": "538879",
+    "Html": "I want to build a package also for updating Firefox.\r<br />\nThis will be my first package.\r<br />\n<br />\nWhat do I need?\r<br />\nI can download: Firefox Setup 28.0.exe\r<br />\nWill this be right ?\r<br />\nCan you please support me?<br />\n",
+    "PostedDate": "2014-03-19T01:29:17.187-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

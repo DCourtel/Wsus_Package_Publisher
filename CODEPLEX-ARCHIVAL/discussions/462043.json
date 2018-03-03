@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1106958",
+    "ThreadId": "462043",
+    "Html": "Hello Team,\r<br />\n<br />\nRecently got to know about this wonderful product.\r<br />\nPlanning to roll out in our environment, starting with JAVA JDK.\r<br />\n<br />\nPlease provide with the steps to be followed to install JDK (.exe version)\r<br />\n<br />\nWe have different version of JAVA JDK installed in our infrastructure, would like to uninstall all the previous version and install only the recent one JAVA JDK 7u40<br />\n<ol>\n<li>If currently installed version is latest one (7u40) - then proceed to Exit</li>\n<li>\nIf the installed version is older - then <br />\n  A. stop IE, Firefox and any other dependencies<br />\n  B. uninstall all the previous version of JAVA (JDK + JRE)<br />\n  C. install JDK (7u40)<br />\n  D. Exit\n</li>\n</ol>\n",
+    "PostedDate": "2013-10-13T17:20:24.347-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1107024",
+    "ThreadId": "462043",
+    "Html": "Hi, I recommend to always use MSI version. As Exe version will not do anything if IE or other browser is running while trying to deploy the newest release.\r<br />\n<br />\nIn addition, using MSI will uninstall older version of Java (If same major release, that mean Java 7u40 will uninstall Java7u21 but not Java 6)<br />\n",
+    "PostedDate": "2013-10-14T01:02:06.087-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1107082",
+    "ThreadId": "462043",
+    "Html": "Dear DCourtel,\r<br />\n<br />\nThanks for the quick reply.\r<br />\nFew queries:<br />\n<ol>\n<li>\nWhere can I get the MSI version of JAVA JDK files, as Oracle distributes only EXE version. Are you referring to TEMP folder with 1 MSI and 4 CAB files?<br />\n</li>\n<li>\nIn our environment, we have different releases of JDK7, 6 and JDK 5 as well, want to standardize this to all machines with JDK 7 only.<br />\n</li>\n<li>\nCurrently I am using powershell script to uninstall and install the JDK 7u40, but in future if Oracle release 7u41 then I will be again in same trouble of uninstalling and reinstalling latest JDK on every single machine manually, I want to automate this task along with other updates like Adobe, Skype, 7zip .....<br />\n</li>\n<li>\nHow to use powershell script with this tool<br />\n</li>\n</ol>\n",
+    "PostedDate": "2013-10-14T03:18:52.47-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1107159",
+    "ThreadId": "462043",
+    "Html": "<blockquote>\n1.Where can I get the MSI version of JAVA JDK files, as Oracle distributes only EXE version. Are you referring to TEMP folder with 1 MSI and 4 CAB files?<br />\n</blockquote>\nSorry, it's my bad. it's the EXE file that can install JAVA even if IE is open. So use EXE file.<br />\n<blockquote>\n4.How to use powershell script with this tool<br />\n</blockquote>\nYou have to create a Custom Update (and not a classic update), which allow you to run script. See documentations.<br />\n",
+    "PostedDate": "2013-10-14T06:38:19.06-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1108811",
+    "ThreadId": "462043",
+    "Html": "Thanks for the update.<br />\n<br />\nPlease provide process on <br />\n<ol>\n<li>How to detect and uninstall all previous versions of java and then only install only the latest one - ex: uninstall 6u30 and install 7u40 from JAVA JDK application</li>\n<li>\nHow to run powershell script in WPP with screenshots<br />\n</li>\n</ol>\nIn current scenario, all old versions of Java are still remained on the machines after installing recent ones.<br />\nProcess Steps as followed:<br />\n<ol>\n<li>Identify the current version</li>\n<li>If doesn't match with WPP one, run powershell script to uninstall JAVA </li>\n<li>After all uninstallations, then install WPP published JDK</li>\n</ol>\n",
+    "PostedDate": "2013-10-17T08:05:19.817-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1109380",
+    "ThreadId": "462043",
+    "Html": "<blockquote>\n1.How to detect and uninstall all previous versions of java and then only install only the latest one <br />\n</blockquote>\nMake a Powershell or VB script to search for registry key in the :\r<br />\nHKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\r<br />\nBase your search on the 'UninstallString' value.\r<br />\n<br />\nFor every registry key you found, launch MsiExec to uninstall this version of Java.\r<br />\n<br />\nThen launch the EXE file of the version of Java you want to install.<br />\n<blockquote>\nHow to run powershell script in WPP with screenshots<br />\n</blockquote>\nFollow this 'How To' : <a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=684389\" rel=\"nofollow\">Custom Update</a><br />\n",
+    "PostedDate": "2013-10-18T13:17:55.06-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T08:01:56.49-08:00"
+  },
+  {
+    "Id": "1252761",
+    "ThreadId": "462043",
+    "Html": "Hi,\r<br />\n<br />\nI tried several times, my Powershell script works locally, I put it before the step to run msiexec in my Custom Update, but the problem is still there.\r<br />\nI'm trying to update Java6u23 to Java7u55 in 2003 / XP environment.\r<br />\n<br />\nWhere did you place this step ?\r<br />\n<br />\nNicolas<br />\n",
+    "PostedDate": "2014-06-04T01:39:47.493-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1252842",
+    "ThreadId": "462043",
+    "Html": "Well I'm sorry,\r<br />\n<br />\nmy script did not work as expected, but I found another that works perfectly there : \r<br />\n<a href=\"http://ivan.dretvic.com/2011/02/who-hates-java-how-to-remove-all-java-installations-on-your-network/\" rel=\"nofollow\">http://ivan.dretvic.com/2011/02/who-hates-java-how-to-remove-all-java-installations-on-your-network/</a>\r<br />\n<br />\nThanks for help, Nicolas<br />\n",
+    "PostedDate": "2014-06-04T06:35:56.26-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

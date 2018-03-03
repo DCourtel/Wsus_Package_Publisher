@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1433950",
+    "ThreadId": "641210",
+    "Html": "I have an application that installed from WPP, using an msi file. The published update works great. Since then, we've discovered that we need to need to modify the installed feature set (and also change some other switches) of the application for everyone who has had it installed. The features were initially specified using AddLocal.<br />\n<br />\nI tried modifying the update with the additional AddLocal parameter, but even when I could get WSUS to install it, after downloading it, it will say &quot;Not needed: 1 update&quot;. It never actually gets installed. <br />\n<br />\nI tried making a new separate update with the same msi using a different command line (REINSTALL vs AddLocal) and that didn't work either, with the same problem. WSUS decides that the update is not needed.<br />\n<br />\nHow can I use WPP to publish an update to this app, without uninstalling/installing the app again?<br />\n",
+    "PostedDate": "2015-07-10T13:14:15.813-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1434015",
+    "ThreadId": "641210",
+    "Html": "Applicability is determinated by clients computer by processing &quot;IsInstalled&quot; Rules and &quot;IsInstallable&quot; Rules. Additionnaly, MSI and MST files have their own set of rules.\r<br />\nIf you publish the MSI file again with another command Line, clients computers will see that this MSI is already installed. \r<br />\nYou have to publish a MST file, or uninstall and reinstall the MSI file.<br />\n",
+    "PostedDate": "2015-07-11T12:25:41.883-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

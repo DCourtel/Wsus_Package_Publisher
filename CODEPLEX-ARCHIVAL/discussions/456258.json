@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1090293",
+    "ThreadId": "456258",
+    "Html": "I went through the instructions for installing Adobe Reader. I'm getting a code 800B0109. I pulled the Windows Update log and here is what I'm seeing.\r<br />\n<br />\n2013-09-09\t13:28:57:397\t 860\t11b8\tAU\tCurrently showing Progress UX client - so not launching any other client\r<br />\n2013-09-09\t13:28:57:397\t 860\t11b8\tAU\tSuccessfully wrote event for AU health state:0\r<br />\n2013-09-09\t13:28:57:397\t 860\t11b8\tAU\t  # Pending download calls = 1\r<br />\n2013-09-09\t13:28:57:397\t 860\t11b8\tAU\t&lt;&lt;## SUBMITTED ## AU: Download updates\r<br />\n2013-09-09\t13:28:57:397\t 860\t11b8\tAU\tGetting featured update notifications.  fIncludeDismissed = true\r<br />\n2013-09-09\t13:28:57:397\t 860\t11b8\tAU\tNo featured updates available.\r<br />\n2013-09-09\t13:29:02:045\t 860\te6c\tDnldMgr\tBITS job {877F7D13-D098-4F69-8F52-AF1B24EF9163} completed successfully\r<br />\n2013-09-09\t13:29:02:233\t 860\te6c\tMisc\tValidating signature for C:\\Windows\\SoftwareDistribution\\Download\\8e096547df601e727a709d83d0007c4f\\575aa75ff425bd90598b449f887b582697a327de:\r<br />\n2013-09-09\t13:29:02:389\t 860\te6c\tMisc\t Microsoft signed: No\r<br />\n2013-09-09\t13:29:02:389\t 860\te6c\tMisc\tWARNING: Digital Signatures on file C:\\Windows\\SoftwareDistribution\\Download\\8e096547df601e727a709d83d0007c4f\\575aa75ff425bd90598b449f887b582697a327de are not trusted: Error 0x800b0109\r<br />\n2013-09-09\t13:29:02:389\t 860\te6c\tDnldMgr\tWARNING: File failed postprocessing, error = 800b0109\r<br />\n2013-09-09\t13:29:02:389\t 860\te6c\tDnldMgr\tFailed file: URL = '<a href=\"http://server/Content/DE/575AA75FF425BD90598B449F887B582697A327DE.cab\" rel=\"nofollow\">http://server/Content/DE/575AA75FF425BD90598B449F887B582697A327DE.cab</a>', Local path = 'C:\\Windows\\SoftwareDistribution\\Download\\8e096547df601e727a709d83d0007c4f\\575aa75ff425bd90598b449f887b582697a327de'\r<br />\n2013-09-09\t13:29:02:389\t 860\te6c\tDnldMgr\tError 0x800b0109 occurred while downloading update; notifying dependent calls.\r<br />\n2013-09-09\t13:29:02:404\t 860\t1164\tAU\t&gt;&gt;##  RESUMED  ## AU: Download update [UpdateId = {FF665A4A-84C3-4208-8753-5DBA090C60C0}]\r<br />\n2013-09-09\t13:29:02:404\t 860\t1164\tAU\t  # WARNING: Download failed, error = 0x800B0109\r<br />\n2013-09-09\t13:29:02:404\t 860\t1164\tAU\t#########\r<br />\n2013-09-09\t13:29:02:404\t 860\t1164\tAU\t##  END  ##  AU: Download updates\r<br />\n2013-09-09\t13:29:02:404\t 860\t1164\tAU\t#############\r<br />\n2013-09-09\t13:29:02:404\t 860\t1164\tAU\tSuccessfully wrote event for AU health state:0\r<br />\n2013-09-09\t13:29:02:404\t 860\t1164\tAU\tCurrently showing Progress UX client - so not launching any other client\r<br />\n2013-09-09\t13:29:02:404\t 860\tdc8\tReport\tREPORT EVENT: {4E4F4885-DC52-4163-8D05-7C9DC107C363}\t2013-09-09 13:29:02:404-0400\t1\t161\t101\t{FF665A4A-84C3-4208-8753-5DBA090C60C0}\t1\t800b0109\tAutomaticUpdatesWuApp\tFailure\tContent Download\tError: Download failed.\r<br />\n2013-09-09\t13:29:02:404\t 860\t1164\tAU\tSuccessfully wrote event for AU health state:0\r<br />\n2013-09-09\t13:29:02:420\t 860\tdc8\tReport\tCWERReporter::HandleEvents - WER report upload completed with status 0x8\r<br />\n2013-09-09\t13:29:02:420\t 860\tdc8\tReport\tWER Report sent: 7.6.7600.256 0x800b0109 FF665A4A-84C3-4208-8753-5DBA090C60C0 Download 101 Managed\r<br />\n2013-09-09\t13:29:02:420\t 860\tdc8\tReport\tCWERReporter finishing event handling. (00000000)\r<br />\n2013-09-09\t13:29:02:467\t 860\tddc\tAU\tGetting featured update notifications.  fIncludeDismissed = true\r<br />\n2013-09-09\t13:29:02:467\t 860\tddc\tAU\tNo featured updates available.<br />\n",
+    "PostedDate": "2013-09-09T10:51:07.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1090330",
+    "ThreadId": "456258",
+    "Html": "Hi Baron164,<br />\n<blockquote>\n2013-09-09 13:29:02:233 860 e6c Misc Validating signature for C:\\Windows\\SoftwareDistribution\\Download\\8e096547df601e727a709d83d0007c4f\\575aa75ff425bd90598b449f887b582697a327de: <br />\n2013-09-09 13:29:02:389 860 e6c Misc Microsoft signed: No <br />\n2013-09-09 13:29:02:389 860 e6c Misc WARNING: <strong>Digital Signatures</strong> on file C:\\Windows\\SoftwareDistribution\\Download\\8e096547df601e727a709d83d0007c4f\\575aa75ff425bd90598b449f887b582697a327de are <strong>not trusted</strong>: Error 0x800b0109 <br />\n</blockquote>\nAnother problem with Certificate.\r<br />\nPlease check this <a href=\"https://wsuspackagepublisher.codeplex.com/discussions/450315\" rel=\"nofollow\">post </a>\r<br />\n<br />\nAnd carefully check certificate settings.<br />\n",
+    "PostedDate": "2013-09-09T12:30:51.727-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1090368",
+    "ThreadId": "456258",
+    "Html": "Ok, it was the registry key &quot;HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AcceptTrustedPublisherCerts = 1&quot; It didn't exist so I had to create the DWORD, thank you<br />\n",
+    "PostedDate": "2013-09-09T14:26:20.79-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:07:41.4-07:00"
+  }
+]

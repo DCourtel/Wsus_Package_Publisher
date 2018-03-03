@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-04-14T13:29:29.993-07:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "I install the new version this morning and when to create a superseding update for a MSI install.\r\nThe program did not read the msi file at all. All previous version of this program carried forward the custom settings so I might only have to change a value and not have to re-create the conditions for install.",
+    "LastUpdatedDate": "2015-04-15T10:10:40.69-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-04-13T07:09:04.143-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Release v1.3.1504.12 not carring forward setting when creating a superseding update",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 259
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "In this release, WPP change the way it handle MSI MetaData.\nIt doesn't create rule at \"update level\", instead, it use the MetaData integrate by the Publisher and put it in the \"Package Level\" rule.\nYou should see :\n<msiar:MsiApplicationInstalled/>\nand\n<msiar:MsiApplicationInstallable/>\n",
+      "PostedDate": "2015-04-13T11:36:35.95-07:00",
+      "Id": 182110
+    },
+    {
+      "Message": "But it doesn't re-use custome rules either like \"only install on Windows 7 and up\"\n\nIs this expected behaviour when creating superseding updates?",
+      "PostedDate": "2015-04-14T14:02:00.07-07:00",
+      "Id": 182878
+    },
+    {
+      "Message": "You are right Norbert. I've just published a new release to address this bug.",
+      "PostedDate": "2015-04-15T09:59:40.327-07:00",
+      "Id": 182909
+    },
+    {
+      "Message": "Thanks a lot. :)\n\nMaybe you can add \"removing\" existing msi rules at update level? But that would require some checking if there are multiple msi rules in one update in a later version.",
+      "PostedDate": "2015-04-15T10:10:40.69-07:00",
+      "Id": 182910
+    }
+  ]
+}

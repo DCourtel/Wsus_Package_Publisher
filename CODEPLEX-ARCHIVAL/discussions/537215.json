@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1217988",
+    "ThreadId": "537215",
+    "Html": "Hi to everyone,\r<br />\n<br />\nI'm having problems when deploying adobe flash player through wsus package publisher.\r<br />\nMy computer detects the update but i get this error 0x80244022.\r<br />\n<br />\nWhat is wrong?\r<br />\n<br />\nThanks in advance<br />\n",
+    "PostedDate": "2014-03-03T07:09:56.557-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1218071",
+    "ThreadId": "537215",
+    "Html": "Are sure of your error code ?\r<br />\n80244022 = <em>Http status 503 - temporarily overloaded</em>\r<br />\n<br />\nCan you send me by mail the file : C:\\Windows\\WindowsUpdate.log at <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a><br />\n",
+    "PostedDate": "2014-03-03T08:48:58.133-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:54:10.98-07:00"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "1478156",
+    "ThreadId": "656136",
+    "Html": "Hi together,\r<br />\n<br />\nI would like to publish some small programms e.g. PrintDesktop or FastStoneCapture. All of them are EXEs. So I created the rules and the client see these updates.\r<br />\n<br />\nProblem I)\r<br />\nIf I create a custom update and set the path to the executable (for example: E:\\deploy\\abcd.exe), the file is unreachable (doesn't exist is standing in CustomUpdateEngine.log). When the file is on a share comes\r<br />\n<br />\nProblem II)\r<br />\nThe update is starting. I can see the customupdate.exe in task manager but it will never come to an end.\r<br />\n<br />\nSo what can I do - what is the problem here?!\r<br />\n<br />\nThanks for help,<br />\n<h2>Belloci</h2>\nHallo zusammen,\r<br />\n<br />\nich würde gerne kleinere Programme über den WPP bereitstellen. In diesem Falle beispielhaft die Programme PrintDesktop und FastStoneCapture, die als EXE vorliegen. Die Regeln scheinen zu passen, die (Test-)Clients wollen das Update ziehen aber es kommt immer wieder zu Fehlern.\r<br />\n<br />\nFehler I)\r<br />\nSobald ein Custom Update installiert werden soll und ich einen lokalen Pfad auf dem SRV auf dem auch WPP installiert ist angebe, scheint die Datei für den Client nicht erreichbar zu sein. Z.B. E:\\deploy\\abcd.exe\r<br />\n<br />\nFehler II)\r<br />\nSobald die Exe auf einem Share liegt, scheint es so, dass das Update starten möchte. Es wird aber nie fertig gestellt und automatisch beendet nach den voreingestellt 10 Minuten.\r<br />\n<br />\nWo liegt hier der Fehler? Für eine kleine Hilfestellung bin ich dankbar.\r<br />\n<br />\nGruß,\r<br />\nBelloci<br />\n",
+    "PostedDate": "2016-07-05T22:57:17.92-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1478157",
+    "ThreadId": "656136",
+    "Html": "Warum als Custom Update? Warum nicht normal einfach zur Verfügung stellen? Oder haben diese Programme keine Installationsroutine, sondern werden einfach nur so ausgeführt? Um helfen zu können, brauchen wir weitere Details.<br />\n",
+    "PostedDate": "2016-07-05T23:31:40.01-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1478183",
+    "ThreadId": "656136",
+    "Html": "Hallo Winfried,\r<br />\n<br />\nschon viele Threads von dir gelesen und jetzt selbst die Ehre! ;-)\r<br />\n<br />\nWelche Details brauchst du genau? Ich habe das Programm jetzt als &quot;normales&quot; Update durchlaufen wollen aber auch hier sagt er, dass er das Update &quot;vorbereitet&quot; und danach kommt eine Meldung &quot;0x800705b4&quot;. MSIs stellen aber am gleichen Rechner keine Probleme dar.\r<br />\n<br />\nGetestet wird mit einem WSUS auf 2012R2 mit lokal installiertem WPP. Client ist ein Win10x64 Pro.\r<br />\n<br />\nViele Grüße,\r<br />\nBelloci<br />\n",
+    "PostedDate": "2016-07-06T04:06:06.353-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1478197",
+    "ThreadId": "656136",
+    "Html": "Wenn Du exakt diese EXE auf dem Rechner manuell installieren möchtest, funktioniert es dann? Falls ja, leg die EXE in %windir%\\SoftwareDistribution ab und starte die EXE aus einer administrativen Commandline heraus. Also nicht per Doppelklick starten, sondern per Commandline. Alles klar? Welcher AV-Scanner wird eingesetzt?\r<br />\n<br />\nEin paar Artikel gibt es zu dem Problem, zwei gehen in die gleiche Richtung: \r<br />\n<a href=\"http://www.win-10-forum.de/windows-10-updates-and-patches/546-win-10-laedt-keine-updates.html\" rel=\"nofollow\">http://www.win-10-forum.de/windows-10-updates-and-patches/546-win-10-laedt-keine-updates.html</a>\r<br />\n<a href=\"http://www.borncity.com/blog/2015/11/11/windows-10-update-error-0x800705b4/\" rel=\"nofollow\">http://www.borncity.com/blog/2015/11/11/windows-10-update-error-0x800705b4/</a>\r<br />\nSind die verwendeten Treiber auf dem System aktuell?\r<br />\n<br />\n<br />\nUnd hier gibt es auch noch einen Lösungsvorschlag: \r<br />\n<a href=\"https://www.thegeneralistit.com/blog/2015/10/02/fixing-windows-10-update-error-0x800705b4/\" rel=\"nofollow\">https://www.thegeneralistit.com/blog/2015/10/02/fixing-windows-10-update-error-0x800705b4/</a>\r<br />\n<br />\nIst das ein clean Install oder ein Inplace Upgrade von einem alten OS?<br />\n",
+    "PostedDate": "2016-07-06T06:40:34.867-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1478199",
+    "ThreadId": "656136",
+    "Html": "Hallo Winfried,<br />\n<br />\n2 der URLs kannte ich schon... Also die exe aus %windir%\\Softwaredistribution einer adm. Commandline funktioniert. Es kommt hier der AV-Scanner von TrendMicro (OfficeScan) zum Einsatz.<br />\n<br />\nDie verwendeten Treiber sollten aktuell sein. Hier handelt es sich um eine virtuelle Maschine (VMWare). Aber auch Blech verhält sich analog dazu.<br />\n<br />\nJa, es ist ein Clean install mit aktuellstem WIn10 1511 (10586.420)<br />\n<br />\nIch sehe das Update auch im Taskmanager (die Exe steht in den aktuellen Prozessen) PrintDesktop.exe. Jedoch passiert nichts und das Update Fenster zeigt, dass das Update &quot;vorbereitet&quot; wird - bis es zu einem Fehler irgendwann kommt...<br />\n<br />\n<br />\nViele Grüße,<br />\nBelloci<br />\n",
+    "PostedDate": "2016-07-06T06:53:43.747-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1478205",
+    "ThreadId": "656136",
+    "Html": "OK, funktioniert es denn auf einem 32-Bit W10? Oder auf W8.1 oder auf W7? Wenn es auf W7/W8.1 via WPP/WSUS funktioniert, hat MS hier wohl etwas 'angepasst'. Alternativ könntest du natürlich eine MSI selbst erstellen. Hab ich selbst aber schon sehr sehr lange nicht mehr gemacht, also auch keine Erfahrung mit aktuellen Tools dazu.<br />\n",
+    "PostedDate": "2016-07-06T07:41:24.033-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1478254",
+    "ThreadId": "656136",
+    "Html": "Morgen Winfried,\r<br />\n<br />\nalso W7 verhält sich ähnlich... Kann es sein, dass sich die Exe einfach nicht verteilen lässt, weil das Setup auf Eingaben &quot;wartet&quot;?! Wie gesagt, im Task-Manager sehe ich die Exe des Setups aber es tut sich einfach gar nichts. Ich denke, dass das Setup dann in ein Timeout läuft und beendet. Kennst du zufällig ein Programm, welches sich im Form einer exe ohne Probleme verteilen lässt? Dann würde ich damit die Gegenprobe anstellen...\r<br />\n<br />\n<br />\nViele Grüße,\r<br />\nBelloci<br />\n",
+    "PostedDate": "2016-07-06T22:09:03.077-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1478256",
+    "ThreadId": "656136",
+    "Html": "So etwas ähnliches dachte ich mir schon fast. Gibt es denn sog. Silent Schalter für die EXE? Via Start &gt; Ausführen &gt; Pfad_zur_Exe /? aufrufen. Bekommst Du Silent Schalter angezeigt? Wenn nein, Hersteller der SW danach fragen.\r<br />\n<br />\nAlternativ nochmal der Hinweis auf ein Tool, das aus der EXE ein MSI erstellt.\r<br />\n<br />\nDu kannst diese EXE zum Test verwenden: <a href=\"http://wsus.de/uninstall2install\" rel=\"nofollow\">http://wsus.de/uninstall2install</a> Läuft bei mir und vielen anderen immer ganz problemlos.<br />\n",
+    "PostedDate": "2016-07-06T23:01:18.403-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2016-07-07T02:21:11.59-07:00"
+  },
+  {
+    "Id": "1478257",
+    "ThreadId": "656136",
+    "Html": "Hi Winfried,\r<br />\n<br />\nalso ich glaube dann können wir diesen Thread hier schließen, es wird dann wohl daran liegen. Den Test werde ich mit Sicherheit noch machen (uninstall2install).\r<br />\n<br />\nEs wäre ein Segen, einen guten MSI-Wrapper zu kennen aber alles was ich bisher probiert habe war nicht so erfolgreich...\r<br />\n<br />\nDen letzten Test werde ich noch hier Posten.\r<br />\n<br />\nDanke für deine Hilfe!! :-)\r<br />\n<br />\nGruß,\r<br />\nB<br />\n",
+    "PostedDate": "2016-07-06T23:06:17.843-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

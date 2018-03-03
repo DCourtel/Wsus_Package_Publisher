@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-06-21T13:56:32.74-07:00",
+    "CommentCount": 4,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\ntrying to add files from an UNC path doesn't seem to work. It lets me select the .msi file and after clicking \"Open\" no file is displayed as Update file.\r\n\r\nCan someone verify this?\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2013-06-25T14:09:08.983-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-20T05:44:38.15-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Adding update files from unc-path does not do anything",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 71
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Yes, it is a feature. I see it if i translate the Application. :)\n",
+      "PostedDate": "2013-06-20T06:35:23.3-07:00",
+      "Id": 103608
+    },
+    {
+      "Message": "Yes, I have received some debug info files, where the user try to publish an update with an UNC path as main file path. It finnish by crashing. ",
+      "PostedDate": "2013-06-20T06:52:39.677-07:00",
+      "Id": 103611
+    },
+    {
+      "Message": "I have add a message to warn the user that UNC path are not supported.",
+      "PostedDate": "2013-06-21T13:56:20.557-07:00",
+      "Id": 103820
+    },
+    {
+      "Message": "Is there a cause why it's not possible to load updates from an UNC path?",
+      "PostedDate": "2013-06-25T14:09:08.983-07:00",
+      "Id": 104115
+    }
+  ]
+}

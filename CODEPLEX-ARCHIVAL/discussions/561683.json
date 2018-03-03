@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1291707",
+    "ThreadId": "561683",
+    "Html": "We just had to completely rebuild our WSUS server. Uninstalled and Re-installed the Role from the server with a new Database. Is there a way to get the WPP published updates back to where they were before we had to rebuild? I have all of the old files saved. \r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2014-08-20T07:04:55.577-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1291790",
+    "ThreadId": "561683",
+    "Html": "Sorry, but you have to publish again those packages. You should have export from Wsus (using wsusUtil /export) BEFORE deleting the database.<br />\n",
+    "PostedDate": "2014-08-20T11:43:55.5-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:23:00.857-07:00"
+  }
+]

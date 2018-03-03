@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1129821",
+    "ThreadId": "471367",
+    "Html": "<img src=\"http://farm4.staticflickr.com/3688/11093513793_278e056cd6_o.png\" alt=\"Image\" />\r<br />\n<br />\nIt shows every time client run the custom update.\r<br />\n<br />\nDoes it happen with me only or someone else? I'm using Avast Free\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2013-11-27T17:14:16.043-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1130075",
+    "ThreadId": "471367",
+    "Html": "First, ensure to ALWAYS get WPP from codeplex website. Do not download from another site.\r<br />\n<br />\nIf you are sure that you have get this version of CustomUpdateEngine from Codeplex website, click on the link &quot;Report the file as a false positive&quot; and provide the EXE to Avast company for analysing.<br />\n",
+    "PostedDate": "2013-11-28T12:20:06.1-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-17T07:56:49.483-08:00"
+  }
+]

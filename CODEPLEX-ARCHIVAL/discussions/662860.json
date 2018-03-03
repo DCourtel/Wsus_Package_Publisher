@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1496157",
+    "ThreadId": "662860",
+    "Html": "Recently I have the 'export an update' and 'manage catalog subscriptions' greyed out.<br />\n",
+    "PostedDate": "2017-05-05T08:16:49.247-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1496746",
+    "ThreadId": "662860",
+    "Html": "I searched some weeks for this.\r<br />\n<br />\ncause:\r<br />\nMeta-Data for subscribed catalog has an error.\r<br />\n<br />\nsolution:\r<br />\nDelete the corrupt/wrong file(s) under \\WSUS Package Publisher\\Subscribed Catalogs\\MetaData\r<br />\n<br />\n<br />\nI had only one file there from a first try to add a custom catalog.<br />\n",
+    "PostedDate": "2017-05-25T14:14:02.833-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

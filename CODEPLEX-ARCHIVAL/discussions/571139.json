@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1318537",
+    "ThreadId": "571139",
+    "Html": "Hi everyone!\r<br />\n<br />\nI have small problem with wsus package publisher. When i want create any package then I have error like this\r<br />\n<img src=\"http://i.imgur.com/bpTsw8U.jpg\" alt=\"Image\" />\r<br />\nWhere is a problem? Cert is still valid - I check this. Elso I have enough space on WSUS drive\r<br />\n<br />\nThank u for your reply!\r<br />\nMateusz<br />\n",
+    "PostedDate": "2014-11-03T01:15:17.257-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1318585",
+    "ThreadId": "571139",
+    "Html": "Hi, once you have this message, go to 'Help' -&gt; 'Send Debug Info' and click on the link 'Show Informations'.\r<br />\nSend me the file at <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a><br />\n",
+    "PostedDate": "2014-11-03T03:11:55.907-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1320038",
+    "ThreadId": "571139",
+    "Html": "Hi, I send u email with logs 2 days ego. Can u check it?<br />\n",
+    "PostedDate": "2014-11-07T07:32:11.397-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1320119",
+    "ThreadId": "571139",
+    "Html": "I have received your debug file.\r<br />\nError was : 11/4/2014 10:22:38 AM\t**** System.ComponentModel.Win32Exception : <strong>CreateDirectory failed</strong>\r<br />\n<br />\n Can you check share and NTFS permissions on folders :\r<br />\n<br />\n E:\\WSUS\\UpdateServicesPackages\r<br />\n E:\\WSUS\\WsusContent\r<br />\n<br />\nReal paths dépends of your Wsus installation.<br />\n",
+    "PostedDate": "2014-11-07T11:50:03.47-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-12-03T13:41:12.577-08:00"
+  }
+]

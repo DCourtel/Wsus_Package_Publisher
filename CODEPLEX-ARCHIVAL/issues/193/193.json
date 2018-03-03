@@ -1,0 +1,85 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:07.193-08:00",
+    "CommentCount": 9,
+    "Custom": null,
+    "Description": "Hi \r\n\r\nPlease, can someone help me to achieve the task below. \r\n\r\nI want to install a package on laptops in the estate. I have a WMI script that identifies a latop. If it is a laptop, the exe will run and install the kit. If not exit.\r\n\r\nBut how do I achieve this? \r\n\r\nThank you.",
+    "LastUpdatedDate": "2017-02-03T11:50:07.193-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2014-05-23T08:52:12.713-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Custom Update kit issue",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 193
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Identification should occurs in the \"IsInstallable\" rules set. To avoid to run the update on all computers.\nWhat Wmi query are you using ?",
+      "PostedDate": "2014-05-23T12:00:22.093-07:00",
+      "Id": 147560
+    },
+    {
+      "Message": "Hi DC,\n\nThe vbscript is as follows. I try to call the \"EXE\" file within the script.\n\nstrComputer = \".\"\nintIsLaptop = 0\n\nSet objWMIService = GetObject(\"winmgmts:\" _\n    & \"{impersonationLevel=impersonate}!\\\\\" & strComputer & \"\\root\\cimv2\")\nSet colChassis = objWMIService.ExecQuery _\n    (\"Select * from Win32_SystemEnclosure\")\nFor Each objChassis in colChassis\n    For  Each strChassisType in objChassis.ChassisTypes\n\tintTest= int(strChassisType)\n    Next\nNext\n\nIf ( inttest = 9 or inttest = 10 or inttest = 1) Then \n\n\tintintIsLaptop = 1\n\nDim objShell\nSet objShell = WScript.CreateObject( \"WScript.Shell\" )\nobjShell.Run (\"cmd /c call \"\"StandAloneHttpNarInstall.exe\"\"\")\nSet objShell = Nothing\n\n    else \n        \tintintIsLaptop = 0\nend if\n\n\n\nThanks",
+      "PostedDate": "2014-05-28T01:12:05.943-07:00",
+      "Id": 148111
+    },
+    {
+      "Message": "Franckly, Wsus is not made to do this sort of task. It won't be easy to determine which computer is a laptop or not. Wsus clients will use udpate rules to determine if the update is needed or  not, and you will not be able to make a rule to check that.\nIn your scenario, the update will be offer to all computers, laptop will run the EXE and desktop will try to install the update again and again....",
+      "PostedDate": "2014-05-28T12:47:05.717-07:00",
+      "Id": 148172
+    },
+    {
+      "Message": "Thanks DC",
+      "PostedDate": "2014-05-29T03:42:09.187-07:00",
+      "Id": 148238
+    },
+    {
+      "Message": "Something you can do is set up GPO to run the script once on all your computers to set a registry key, which WSUS would then check to see if updates are applicable.\nWPKG documentation suggests this method here:\nhttp://wpkg.org/Identify_Client_Form_Factor\nIf you can't roll the script out using GPO, you can use a Custom Update to roll out the script, (mark yourself as the publisher, document what it does in the description, etc.) this way, you'll have reporting on whether the computers have the key defined. You can set the applicable logic to detect whether the custom key exists, that way, if the key gets deleted for some reason, the update will run again and recreate it.\nThese are just 2 of many ways to get this done, one of them involves only WSUS(PackagePublisher)",
+      "PostedDate": "2014-07-17T12:12:07.497-07:00",
+      "Id": 152738
+    },
+    {
+      "Message": "Last answer was a bit weird, better answer:\n\nput this rule in the update to check if it's one of the chassis types you're looking for as a criteria for installability: (I haven't tested it because I don't have requirements like this in my environment, so it may need some tweaking, but it covers the basic idea)\n<bar:WmiQuery Namespace=\"Root\\cimv2\" WqlQuery=\"SELECT * FROM systemenclosure WHERE (ChassisType = 9 OR ChassisType = 10 OR ChassisType = 1)\"/>",
+      "PostedDate": "2014-07-25T11:14:03.03-07:00",
+      "Id": 153537
+    },
+    {
+      "Message": "Cheers Ian, much appreciated",
+      "PostedDate": "2014-08-08T03:07:09.38-07:00",
+      "Id": 154894
+    },
+    {
+      "Message": "Last update: query should be as follows:\n```\nSELECT * FROM Win32_SystemEnclosure WHERE (ChassisType = 9 OR ChassisType = 10 OR ChassisType = 1)\n```\nAlso, here's a good tool (that's already on your computer!) for testing WMI queries:\nC:\\Windows\\System32\\wbem\\wbemtest.exe",
+      "PostedDate": "2014-08-19T12:08:12.71-07:00",
+      "Id": 155758
+    },
+    {
+      "Message": "WMICodeCreator from Microsoft can help building WMI-queries: \nhttp://www.microsoft.com/en-us/download/details.aspx?id=8572",
+      "PostedDate": "2014-08-19T21:40:37.547-07:00",
+      "Id": 155806
+    }
+  ]
+}

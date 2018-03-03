@@ -1,0 +1,81 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Computer List Viewer",
+      "DisplayName": "Computer List Viewer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-07-12T09:52:18.613-07:00",
+    "CommentCount": 7,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nwould it be possible to have a filter in computerlist grid? So I can type some letters to just Show Computers which have those letters in their Name.\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.2.1307.01",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-07-05T05:07:06.293-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Filter Computers",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 79
+  },
+  "FileAttachments": [
+    {
+      "FileId": 703922,
+      "FileName": "Filter.png",
+      "DownloadUrl": ".\\703922"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Everything is possible :-)",
+      "PostedDate": "2013-07-05T06:13:04.387-07:00",
+      "Id": 105187
+    },
+    {
+      "Message": "Sounds great. Looking forward to filtering. ;)",
+      "PostedDate": "2013-07-05T06:19:27.877-07:00",
+      "Id": 105188
+    },
+    {
+      "Message": "I have sent you the new release of WPP with this feature. Please send me back the coresponding translation so I can include it in the new release.",
+      "PostedDate": "2013-07-07T11:38:47.213-07:00",
+      "Id": 105320
+    },
+    {
+      "Message": "Hi,\n\na quick test seem to work fine. Thanks for this feature.\n\nRegards\nNorbert",
+      "PostedDate": "2013-07-09T09:05:42.24-07:00",
+      "Id": 105538
+    },
+    {
+      "Message": "Need to change the behavior of the filter. When in the TextBox and press 'Enter' key, the display should refresh.",
+      "PostedDate": "2013-07-10T02:11:33.247-07:00",
+      "Id": 105617
+    },
+    {
+      "Message": "There should maybe be a reset filter button. I now have to clear the filterbox and press \"filter\" for having \"no filter\".\n\nBye\nNorbert",
+      "PostedDate": "2013-07-10T06:47:45.977-07:00",
+      "Id": 105633
+    },
+    {
+      "Message": "Added a button to clear the filter and show all computers.",
+      "PostedDate": "2013-07-12T09:51:48.727-07:00",
+      "Id": 105860
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "After replacing the self-signed SSL certificate with one issued by a third party CA, right-clicking on an existing package does not actually update the SSL signature to use the newly installed certificate. Note that the timestamp on the associated package also remains unchanged.  I'm currently using version 1.3.1603.29 on a Windows 2012 R2 server with WSUS 6.3.9600.18324.",
+    "LastUpdatedDate": "2016-06-16T01:33:58.08-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2016-06-04T19:19:08.663-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Resign not updating SSL signature",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 340
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Actually, it looks like this may just be an interface issue.  I noticed that if I resign a package then close and relaunch WPP, the digital signature on the package will actually be updated.  The folder link is not getting updated dynamically once the package has been successfully resigned.",
+      "PostedDate": "2016-06-04T19:33:06.29-07:00",
+      "Id": 199926
+    }
+  ]
+}

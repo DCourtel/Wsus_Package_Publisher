@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1089856",
+    "ThreadId": "456144",
+    "Html": "Hi Guys,<br />\ni installed the newst version of wpp.<br />\nToday i created a new custom update package. i want to deploy a single file. the copy process is successfully but the rules of the package don't work.<br />\n<br />\nFile properties:<br />\n<a href=\"https://ajax.wurzach-it.de/data/public/2a2ce3\" rel=\"nofollow\">https://ajax.wurzach-it.de/data/public/2a2ce3</a><br />\n<br />\nRules:<br />\n<a href=\"https://ajax.wurzach-it.de/data/public/e8550f\" rel=\"nofollow\">https://ajax.wurzach-it.de/data/public/e8550f</a><br />\n<a href=\"https://ajax.wurzach-it.de/data/public/184632\" rel=\"nofollow\">https://ajax.wurzach-it.de/data/public/184632</a><br />\n<br />\nCan anyone reproduce my problem?!<br />\n",
+    "PostedDate": "2013-09-08T05:35:12.167-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1089857",
+    "ThreadId": "456144",
+    "Html": "Hi badwurzach,\r<br />\nThe rule should target the file, not the folder.\r<br />\nRevise the update and put into 'File Path' field :\r<br />\n<br />\nC:\\Windows\\SysWOW64\\Macromed\\Flash\\ <strong>mms.cfg</strong><br />\n",
+    "PostedDate": "2013-09-08T05:44:22.91-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:09:34.033-07:00"
+  },
+  {
+    "Id": "1089858",
+    "ThreadId": "456144",
+    "Html": "Hi DCourtel,\r<br />\nhmpf... i'm blind today. Thank you!\r<br />\nOther question to this title: If i open a rule with double click the correct date and time is shown. if i click on &quot;Cancel&quot; the program set a wrong date/time.\r<br />\n<br />\n<br />\nRegards,\r<br />\nDaniel<br />\n",
+    "PostedDate": "2013-09-08T05:50:11.18-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1089866",
+    "ThreadId": "456144",
+    "Html": "When you edit a rule, time is shown as Local Time. When closing the window, the Time is convert to UTC time.  This is what you saw in the main window (XML string). That's what to be send to the Wsus Server. Wsus Server think only with UTC time.<br />\n",
+    "PostedDate": "2013-09-08T06:46:06.633-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1089872",
+    "ThreadId": "456144",
+    "Html": "That's correct, but i think if you press cancel somethin went wrong. Ich make two screenshots for you.<br />\n<br />\nOpen the rule:<br />\n<a href=\"https://ajax.wurzach-it.de/data/public/62dac8\" rel=\"nofollow\">https://ajax.wurzach-it.de/data/public/62dac8</a><br />\n<br />\nDate and time translation is correct.<br />\n<br />\nAfter i click on &quot;Cancel&quot;:<br />\n<a href=\"https://ajax.wurzach-it.de/data/public/9a2460\" rel=\"nofollow\">https://ajax.wurzach-it.de/data/public/9a2460</a><br />\n<br />\nNow wpp set a random date/time.<br />\n",
+    "PostedDate": "2013-09-08T07:30:16.56-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1089882",
+    "ThreadId": "456144",
+    "Html": "You have right, the clone method for &quot;Modified Date&quot; rule doesn't set the the Hour, minute and second Properties, So these properties are set by default (00h00m00s) which lead to always show 22h00:00 for our country.\r<br />\nI have sent you by mail the correction.<br />\n",
+    "PostedDate": "2013-09-08T08:40:32.99-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-05T05:09:08.73-07:00"
+  }
+]

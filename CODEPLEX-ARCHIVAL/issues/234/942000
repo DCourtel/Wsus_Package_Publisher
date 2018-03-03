@@ -1,0 +1,339 @@
+isQueryRequest: InstallType InstallHint SET to 0
+ InstallType InstallHint SET to 0
+RegisterDeploy, version 11.25.2
+ ForceInstall InstallHint SET to 0
+ ForceInstall InstallHint SET to 0
+ SecurityLevel InstallHint SET to 0
+setSecurityLevel - no hints
+Set WebJava system security Level  OK
+ Cannot open registry key SOFTWARE\JavaSoft\Java Runtime Environment
+RegisterDeploy - getLatestInstalledVersion FAIL
+empty pluginVersion
+RegisterDeploy - getPluginHome FAIL
+ Cannot open registry key SOFTWARE\JavaSoft\Java Runtime Environment
+registerGivenDeployBin
+RegisterWS keys
+Set system default Webstart Version Keys OK
+Webstart version is newer
+Set WebStart compat keys OK
+  get system dir [C:\Windows\system32] OK
+create Webstart browser keys OK
+register Webstart with DLLServier OK
+GetLatestJavaws32or64Home():
+GetLatestJavawsVersion():
+   checking 32-bit
+   Processing key: 1.0.1
+   Processing key: 1.0.1_02
+   Processing key: 1.0.1_03
+   Processing key: 1.0.1_04
+   Processing key: 1.2
+   Processing key: 1.2.0_01
+   Processing key: 11.25.2
+GetLatestJavawsVersion():
+   checking 64-bit
+   Processing key: 1.0.1
+   Processing key: 1.0.1_02
+   Processing key: 1.0.1_03
+   Processing key: 1.0.1_04
+   Processing key: 1.2
+   Processing key: 1.2.0_01
+   Processing key: 11.25.2
+   latestVersion: 11.25.2 latestHome: C:\Program Files (x86)\Java\jre1.8.0_25\bin
+RestoreJNLPfileAssociation():
+   Create HKLM .jnlp default OK
+   Create HKLM .jnlp Content Type OK
+   Create HKLM JNLPFile default OK
+   Create HKLM JNLPFile EditFlags OK
+   Create HKLM JNLPFile Shell Open OK
+   Create HKLM JNLPFile Shell Open Command OK
+Register JavaWS OK
+  checking mozilla plugin[@adobe.com/FlashPlayer]
+  checking mozilla plugin[@microsoft.com/GENUINE]
+  checking mozilla plugin[@Microsoft.com/NpCtrl,version=1.0]
+  checking mozilla plugin[@microsoft.com/OfficeAuthz,version=14.0]
+  checking mozilla plugin[adobe.com/AdobeAAMDetect]
+
+Latest JRE version: 1.8.0_25
+set up Mozilla plugin keys  OK
+set up IE plugin keys OK
+SSVSetup: RedirectAllStaticVersionKeys OK
+SSVSetup: RedirectSelectedStaticVersionKeys OK
+SSVSetup OK
+Register for elevation
+update elevation policy for ssvagent OK
+update elevation policy for jp2launcher OK
+tell IE to refresh elevation policies after undate registry OK
+RegisterforElevation OK
+  checking mozilla plugin[@adobe.com/FlashPlayer]
+  checking mozilla plugin[@java.com/JavaPlugin,version=11.25.2]
+  checking mozilla plugin[@microsoft.com/GENUINE]
+  checking mozilla plugin[@Microsoft.com/NpCtrl,version=1.0]
+  checking mozilla plugin[@microsoft.com/OfficeAuthz,version=14.0]
+  checking mozilla plugin[adobe.com/AdobeAAMDetect]
+   Delete HKLM DT CLSID OK
+   Delete HKLM OLD DT CLSID OK
+RegisterDT: try to register dlls in jre
+   FF DT deploy path: C:\Program Files\Java\jre1.8.0_25\bin\dtplugin\npDeployJava1.dll
+  checking mozilla plugin[@adobe.com/FlashPlayer]
+  checking mozilla plugin[@java.com/JavaPlugin,version=11.25.2]
+  checking mozilla plugin[@microsoft.com/GENUINE]
+  checking mozilla plugin[@Microsoft.com/NpCtrl,version=1.0]
+  checking mozilla plugin[@microsoft.com/OfficeAuthz,version=14.0]
+  checking mozilla plugin[adobe.com/AdobeAAMDetect]
+DT FF: add plugin key [SOFTWARE\MozillaPlugins\@java.com/DTPlugin,version=11.25.2] => [C:\Program Files\Java\jre1.8.0_25\bin\dtplugin\npDeployJava1.dll] OK
+   IE DT deploy path: C:\Program Files\Java\jre1.8.0_25\bin\dtplugin\deployJava1.dll
+DT IE: create CLSID [CLSID\{CAFEEFAC-DEC7-0000-0001-ABCDEFFEDCBA}] OK
+DT IE: create InProcServer32 [C:\Program Files\Java\jre1.8.0_25\bin\dtplugin\deployJava1.dll] OK
+DT IE: set apartment threading model OK
+DT IE: create 'Implemented Categories' OK
+DT IE: create 'Implemented Categories\{59fb2056-d625-48d0-a944-1a85b5ab2640}' OK
+DT IE: add DT MIME type OK
+DT IE: add OLD DT compatibility key alt clisd OK
+DT IE: add OLD DT compatibility key compat flags OK
+set up Deployment Toolkit OK
+DeployHome: C:\Program Files\Java\jre1.8.0_25
+SOFTWARE\JavaSoft\Java Plug-in\11.25.2
+  get system dir [C:\Windows\system32] OK
+  isFileExist for [C:\Windows\system32\javacpl.cpl] return FALSE
+  isFileExist for [C:\Windows\system32\jpicpl32.cpl] return FALSE
+Register Java Control Panel - OK
+ check JRE registry to see if it's an corrupted webstart key
+  failed to recover webstart key when attempt to open jre key FAIL, error code[2]
+ check JRE registry to see if it's an corrupted webstart key
+  failed to recover webstart key when attempt to open jre key FAIL, error code[2]
+ check JRE registry to see if it's an corrupted webstart key
+  failed to recover webstart key when attempt to open jre key FAIL, error code[2]
+ check JRE registry to see if it's an corrupted webstart key
+  failed to recover webstart key when attempt to open jre key FAIL, error code[2]
+ check JRE registry to see if it's an corrupted webstart key
+  failed to recover webstart key when attempt to open jre key FAIL, error code[2]
+ check JRE registry to see if it's an corrupted webstart key
+  failed to recover webstart key when attempt to open jre key FAIL, error code[2]
+Cleanup bogus RegKeys in Java Plugin-in and Web Start OK
+Cleanup bogus JavaFX disabled entry OK
+Cleanup SSV disabled entry OK
+Cleanup new SSV disabled entry OK
+Cleanup HKCU dynamic clsid OK
+Cleanup HKCU new dynamic clsid OK
+  get system dir [C:\Windows\system32] OK
+  isFileExist for [C:\Windows\system32\npDeployJava1.dll] return FALSE
+  isFileExist for [C:\Windows\system32\npdeploytk.dll] return FALSE
+  isFileExist for [C:\Windows\system32\deployJava1.dll] return FALSE
+RegisterDeployEx return: TRUE
+
+isQueryRequest: InstallType InstallHint SET to 2
+ isUserWebJavaStatusHint InstallHint SET to 1
+execJCPCmd new cmd:  -cp "C:\Program Files\Java\jre1.8.0_25\bin\..\lib\deploy.jar" com.sun.deploy.panel.ControlPanel -getUserWebJavaStatus
+RunAsDesktopUser - OnVistaOrLater, use CreateProcessWithTokenW
+RunAsDesktopUser - calling _CreateProcessWithTokenW
+  adding command:QUERY 
+ isUserPreviousDecisionsExistQuery InstallHint SET to 0
+ isClearUserPreviousDecisionsQuery InstallHint SET to 0
+ isResetUserPrevousDecisionsQuery InstallHint SET to 0
+isQueryRequest: InstallType InstallHint SET to 2
+ isUserWebJavaStatusHint InstallHint SET to 0
+ isUserPreviousDecisionsExistQuery InstallHint SET to 1
+execJCPCmd new cmd:  -cp "C:\Program Files\Java\jre1.8.0_25\bin\..\lib\deploy.jar" com.sun.deploy.panel.ControlPanel -getUserPreviousDecisionsExist 30
+RunAsDesktopUser - OnVistaOrLater, use CreateProcessWithTokenW
+RunAsDesktopUser - calling _CreateProcessWithTokenW
+  adding command:QUERY 
+ isClearUserPreviousDecisionsQuery InstallHint SET to 0
+ isResetUserPrevousDecisionsQuery InstallHint SET to 0
+GetLatestJavaws32or64Home():
+GetLatestJavawsVersion():
+   checking 32-bit
+   Processing key: 1.0.1
+   Processing key: 1.0.1_02
+   Processing key: 1.0.1_03
+   Processing key: 1.0.1_04
+   Processing key: 1.2
+   Processing key: 1.2.0_01
+   Processing key: 11.25.2
+GetLatestJavawsVersion():
+   checking 64-bit
+   Processing key: 1.0.1
+   Processing key: 1.0.1_02
+   Processing key: 1.0.1_03
+   Processing key: 1.0.1_04
+   Processing key: 1.2
+   Processing key: 1.2.0_01
+   Processing key: 11.25.2
+   latestVersion: 11.25.2 latestHome: C:\Program Files (x86)\Java\jre1.8.0_25\bin
+
+Latest deploy version: 11.25.2
+
+Latest deploy version: 11.25.2
+
+Latest deploy version: 11.25.2
+
+Latest deploy version: 11.25.2
+isQueryRequest: InstallType InstallHint SET to 0
+ InstallType InstallHint SET to 0
+RegisterDeploy, version 11.25.2
+ ForceInstall InstallHint SET to 0
+ ForceInstall InstallHint SET to 0
+ SecurityLevel InstallHint SET to 0
+setSecurityLevel - no hints
+Set WebJava system security Level  OK
+ Cannot open registry key SOFTWARE\JavaSoft\Java Runtime Environment
+RegisterDeploy - getLatestInstalledVersion FAIL
+empty pluginVersion
+RegisterDeploy - getPluginHome FAIL
+ Cannot open registry key SOFTWARE\JavaSoft\Java Runtime Environment
+registerGivenDeployBin
+RegisterWS keys
+Set system default Webstart Version Keys OK
+Webstart version is newer
+Set WebStart compat keys OK
+create Webstart browser keys OK
+register Webstart with DLLServier OK
+GetLatestJavaws32or64Home():
+GetLatestJavawsVersion():
+   checking 32-bit
+   Processing key: 1.0.1
+   Processing key: 1.0.1_02
+   Processing key: 1.0.1_03
+   Processing key: 1.0.1_04
+   Processing key: 1.2
+   Processing key: 1.2.0_01
+   Processing key: 11.25.2
+   Processing key: Cache Upgrade
+GetLatestJavawsVersion():
+   checking 64-bit
+   Processing key: 1.0.1
+   Processing key: 1.0.1_02
+   Processing key: 1.0.1_03
+   Processing key: 1.0.1_04
+   Processing key: 1.2
+   Processing key: 1.2.0_01
+   Processing key: 11.25.2
+   failed to read SOFTWARE\JavaSoft\Java Web Start\Cache Upgrade\Home
+RestoreJNLPfileAssociation():
+   Delete HKLM .jnlp OK
+   Delete HKLM JNLPFile OK
+Register JavaWS OK
+  checking mozilla plugin[@adobe.com/FlashPlayer]
+  checking mozilla plugin[@microsoft.com/GENUINE]
+  checking mozilla plugin[@Microsoft.com/NpCtrl,version=1.0]
+  checking mozilla plugin[@microsoft.com/OfficeAuthz,version=14.0]
+  checking mozilla plugin[@microsoft.com/SharePoint,version=14.0]
+  checking mozilla plugin[@nvidia.com/3DVision]
+  checking mozilla plugin[@nvidia.com/3DVisionStreaming]
+  checking mozilla plugin[Adobe Acrobat]
+  checking mozilla plugin[Adobe Reader]
+  checking mozilla plugin[adobe.com/AdobeAAMDetect]
+
+Latest JRE version: 1.8.0_25
+set up Mozilla plugin keys  OK
+set up IE plugin keys OK
+SSVSetup: RedirectAllStaticVersionKeys OK
+SSVSetup: RedirectSelectedStaticVersionKeys OK
+SSVSetup OK
+Register for elevation
+update elevation policy for ssvagent OK
+update elevation policy for jp2launcher OK
+tell IE to refresh elevation policies after undate registry OK
+RegisterforElevation OK
+  checking mozilla plugin[@adobe.com/FlashPlayer]
+  checking mozilla plugin[@java.com/JavaPlugin,version=11.25.2]
+  checking mozilla plugin[@microsoft.com/GENUINE]
+  checking mozilla plugin[@Microsoft.com/NpCtrl,version=1.0]
+  checking mozilla plugin[@microsoft.com/OfficeAuthz,version=14.0]
+  checking mozilla plugin[@microsoft.com/SharePoint,version=14.0]
+  checking mozilla plugin[@nvidia.com/3DVision]
+  checking mozilla plugin[@nvidia.com/3DVisionStreaming]
+  checking mozilla plugin[Adobe Acrobat]
+  checking mozilla plugin[Adobe Reader]
+  checking mozilla plugin[adobe.com/AdobeAAMDetect]
+   Delete HKLM DT CLSID OK
+   Delete HKLM OLD DT CLSID OK
+RegisterDT: try to register dlls in jre
+   FF DT deploy path: C:\Program Files (x86)\Java\jre1.8.0_25\bin\dtplugin\npDeployJava1.dll
+  checking mozilla plugin[@adobe.com/FlashPlayer]
+  checking mozilla plugin[@java.com/JavaPlugin,version=11.25.2]
+  checking mozilla plugin[@microsoft.com/GENUINE]
+  checking mozilla plugin[@Microsoft.com/NpCtrl,version=1.0]
+  checking mozilla plugin[@microsoft.com/OfficeAuthz,version=14.0]
+  checking mozilla plugin[@microsoft.com/SharePoint,version=14.0]
+  checking mozilla plugin[@nvidia.com/3DVision]
+  checking mozilla plugin[@nvidia.com/3DVisionStreaming]
+  checking mozilla plugin[Adobe Acrobat]
+  checking mozilla plugin[Adobe Reader]
+  checking mozilla plugin[adobe.com/AdobeAAMDetect]
+DT FF: add plugin key [SOFTWARE\MozillaPlugins\@java.com/DTPlugin,version=11.25.2] => [C:\Program Files (x86)\Java\jre1.8.0_25\bin\dtplugin\npDeployJava1.dll] OK
+   IE DT deploy path: C:\Program Files (x86)\Java\jre1.8.0_25\bin\dtplugin\deployJava1.dll
+DT IE: create CLSID [CLSID\{CAFEEFAC-DEC7-0000-0001-ABCDEFFEDCBA}] OK
+DT IE: create InProcServer32 [C:\Program Files (x86)\Java\jre1.8.0_25\bin\dtplugin\deployJava1.dll] OK
+DT IE: set apartment threading model OK
+DT IE: create 'Implemented Categories' OK
+DT IE: create 'Implemented Categories\{59fb2056-d625-48d0-a944-1a85b5ab2640}' OK
+DT IE: add DT MIME type OK
+DT IE: add OLD DT compatibility key alt clisd OK
+DT IE: add OLD DT compatibility key compat flags OK
+set up Deployment Toolkit OK
+DeployHome: C:\Program Files (x86)\Java\jre1.8.0_25
+SOFTWARE\JavaSoft\Java Plug-in\11.25.2
+  get system dir [C:\Windows\SysWOW64] OK
+  isFileExist for [C:\Windows\SysWOW64\javacpl.cpl] return FALSE
+  isFileExist for [C:\Windows\SysWOW64\jpicpl32.cpl] return FALSE
+Register Java Control Panel - OK
+ check JRE registry to see if it's an corrupted webstart key
+  failed to recover webstart key when attempt to open jre key FAIL, error code[2]
+ check JRE registry to see if it's an corrupted webstart key
+  failed to recover webstart key when attempt to open jre key FAIL, error code[2]
+ check JRE registry to see if it's an corrupted webstart key
+  failed to recover webstart key when attempt to open jre key FAIL, error code[2]
+ check JRE registry to see if it's an corrupted webstart key
+  failed to recover webstart key when attempt to open jre key FAIL, error code[2]
+ check JRE registry to see if it's an corrupted webstart key
+  failed to recover webstart key when attempt to open jre key FAIL, error code[2]
+ check JRE registry to see if it's an corrupted webstart key
+  failed to recover webstart key when attempt to open jre key FAIL, error code[2]
+ check JRE registry to see if it's an corrupted webstart key
+  failed to recover webstart key when attempt to open jre key FAIL, error code[2]
+ check JRE registry to see if it's an corrupted webstart key
+  failed to recover webstart key when attempt to open jre key FAIL, error code[2]
+ check JRE registry to see if it's an corrupted webstart key
+  failed to recover webstart key when attempt to open jre key FAIL, error code[2]
+ check JRE registry to see if it's an corrupted webstart key
+  failed to recover webstart key when attempt to open jre key FAIL, error code[2]
+ check JRE registry to see if it's an corrupted webstart key
+  failed to recover webstart key when attempt to open jre key FAIL, error code[2]
+ check JRE registry to see if it's an corrupted webstart key
+  failed to recover webstart key when attempt to open jre key FAIL, error code[2]
+Cleanup bogus RegKeys in Java Plugin-in and Web Start OK
+Cleanup bogus JavaFX disabled entry OK
+Cleanup SSV disabled entry OK
+Cleanup new SSV disabled entry OK
+Cleanup HKCU dynamic clsid OK
+Cleanup HKCU new dynamic clsid OK
+  get system dir [C:\Windows\SysWOW64] OK
+  isFileExist for [C:\Windows\SysWOW64\npDeployJava1.dll] return FALSE
+  isFileExist for [C:\Windows\SysWOW64\npdeploytk.dll] return FALSE
+  isFileExist for [C:\Windows\SysWOW64\deployJava1.dll] return FALSE
+RegisterDeployEx return: TRUE
+
+
+Latest deploy version: 11.25.2
+GetLatestJavaws32or64Home():
+GetLatestJavawsVersion():
+   checking 32-bit
+   Processing key: 1.0.1
+   Processing key: 1.0.1_02
+   Processing key: 1.0.1_03
+   Processing key: 1.0.1_04
+   Processing key: 1.2
+   Processing key: 1.2.0_01
+   Processing key: 11.25.2
+GetLatestJavawsVersion():
+   checking 64-bit
+   Processing key: 1.0.1
+   Processing key: 1.0.1_02
+   Processing key: 1.0.1_03
+   Processing key: 1.0.1_04
+   Processing key: 1.2
+   Processing key: 1.2.0_01
+   Processing key: 11.25.2
+   latestVersion: 11.25.2 latestHome: C:\Program Files (x86)\Java\jre1.8.0_25\bin
+
+Latest deploy version: 11.25.2

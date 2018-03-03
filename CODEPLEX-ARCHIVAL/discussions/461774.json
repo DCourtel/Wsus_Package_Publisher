@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1105988",
+    "ThreadId": "461774",
+    "Html": "Hi,\r<br />\n<br />\nI have a big problem :). When i want create an update for example Adobe Flash player, at the publishing step, i have this error : Cannot access a closed stream.\r<br />\n<br />\n<br />\nMy server works on windows 2008 R2 with WSUS-3.2.7600.226. We don't use SSL on server.\r<br />\n<br />\nCan you help me ?\r<br />\n<br />\nThanks in advance.<br />\n",
+    "PostedDate": "2013-10-10T06:45:47.29-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1106002",
+    "ThreadId": "461774",
+    "Html": "Please see this <a href=\"https://wsuspackagepublisher.codeplex.com/workitem/27\" rel=\"nofollow\">Post</a><br />\n",
+    "PostedDate": "2013-10-10T07:16:31.59-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1106040",
+    "ThreadId": "461774",
+    "Html": "It's ok after installation of these 3 updates : KB2530678 KB2530709 and KB2720211.\r<br />\n<br />\nThank you very much for you help.<br />\n",
+    "PostedDate": "2013-10-10T08:27:23.42-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-10T10:13:58.07-07:00"
+  }
+]

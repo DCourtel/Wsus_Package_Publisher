@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1321376",
+    "ThreadId": "571905",
+    "Html": "Why is this reg_sz version check thing as an option in the WPP-detection rules limited to four part version strings? It is really impossible to check for example a two or three part version string in a key like &quot;DisplayVersion&quot; for example with the data &quot;33.1&quot; for &quot;greater or equal values&quot; because it's got only two &quot;segments&quot;, the 33 and the 1? I want to use this for version check of Firefox and many other programs. I can't believe that.<br />\n<br />\nEdit: After all it seems to work now. It seems it's possible to use less than four string parts and kust leave the missing ones to the default zero values. I've tested it by changing the registry value manually from 33.1 to 33.0 and then wuapp.exe finds the update as expected by the used reg_sz version rule design. The problem was, that Firefox uninstaller has left this keys back in the registry after uninstalling Firefox manually, so the update was not found by wuapp.exe while the keys still exists in registry.<br />\n",
+    "PostedDate": "2014-11-12T11:10:32.037-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1321431",
+    "ThreadId": "571905",
+    "Html": "This is unacceptable :-)\r<br />\n<br />\nI have made two updates with the same &quot;IsInstalled&quot; Rule :<br />\n<ul>\n<li>\nReg_SZ To Version = 33.1.0.0 and a registry Value : DisplayVersion = 33.1<br />\n</li>\n</ul>\nIn first update, the rule was put at update level. In the second update, the rule was put at package level.\r<br />\nAfter triggering a manual detection. This is what I can see in WindowsUpdate.log :<br />\n<ul>\n<li>\nFor the first update :<br />\n</li>\n</ul>\nEEHndlr\t  EE: Evaluating RegSzToVersion: Subkey=SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Test, value=DisplayVersion, version=33.1.0.0\r<br />\nEEHndlr\tRegSzToVersion: Successfully opened Subkey SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Test\r<br />\nEEHndlr\tRegSzToVersion: Successfully queried value DisplayVersion: data: 33.1\r<br />\nEEHndlr\t  EE: RegSzToVersion evaluated to <strong>False</strong>, return hr=0<br />\n<ul>\n<li>\nFor the second update : <br />\n</li>\n</ul>\nEE: Evaluating RegSzToVersion: Subkey=SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Test, value=DisplayVersion, version=33.1.0.0\r<br />\nEEHndlr\tRegSzToVersion: Successfully opened Subkey SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Test\r<br />\nEEHndlr\tRegSzToVersion: Successfully queried value DisplayVersion: data: 33.1\r<br />\nEEHndlr\t  EE: RegSzToVersion evaluated to <strong>True</strong>, return hr=0\r<br />\n<br />\nDon't ask me why, but the same rule is not evaluated the same way if it be in Update Level or Package Level.\r<br />\n<br />\nPut your rule at package level, and compare 33.1.0.0 with the registry Data.<br />\n",
+    "PostedDate": "2014-11-12T12:50:08.997-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-12-03T13:30:40.387-08:00"
+  },
+  {
+    "Id": "1321456",
+    "ThreadId": "571905",
+    "Html": "I'm working now for some month with your really great tool but I 've never understood the difference between update and package level. ;) Maybe you can explain it?\r<br />\nFirst i thought that the update level rules will be applied if the update type is set to &quot;update&quot; and the package level rules will be used for updates approved as &quot;application&quot; type updates. But I think this is maybe very wrong ;)\r<br />\nSecond possibility is for me, that the update level rules AND the package level rules will be applied for any wpp published updates and if package level rules are defined than they will overwrite some rules that are however defined in the packaged msi or exe setup files or stored in a mst file maybe? I've also read in some documentations to disable the &quot;Package rules&quot; but not WHY to do so and how someone can see if there are some predefined rules that have to be disabled and why?<br />\n",
+    "PostedDate": "2014-11-12T13:44:41.243-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1321825",
+    "ThreadId": "571905",
+    "Html": "First, I must admit that I'm not a Wsus expert. \r<br />\nWsus is a pretty much well documented role (for a Microsoft product :-) )\r<br />\n<br />\nThis is what we can learn from MSDN :<br />\n<ul>\n<li>\nThere are three core applicability rules, <strong>IsInstalled</strong>, <strong>IsSuperseded</strong>, and <strong>IsInstallable</strong>. These applicability rules appear under the InstallableItem.ApplicabilityRules element under the SoftwareDistributionPackage element (<strong>Update Level</strong>). The IsInstallable and IsInstalled rules can also be specified at the top level of the SoftwareDistributionPackage element (<strong>Package Level</strong>). If they are specified in both places, the expressions are combined (using the Boolean AND operator) to form a composite applicability rule for the package.<br />\n</li>\n</ul>\nI have read somewhere an explication for why there are two type of rules (update and package level).\r<br />\nAt first, when Microsoft started to think about Wsus, they have imagined that a package can contains more than one update (InstallableItem). So, they have designed a package-level rule and an Update-Level rule. Each InstallableItem should have his own update-Level rule.\r<br />\nImagines a package to install Office. One InstallableItem contains the main file for Office, a second InstallableItem contains a patch to apply if Windows is installed in French, another InstallableItem contains the same patch for the English version and so on....<br />\n",
+    "PostedDate": "2014-11-13T08:44:05.197-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

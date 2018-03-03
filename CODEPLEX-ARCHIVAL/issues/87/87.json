@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Certificate Managment",
+      "DisplayName": "Certificate Managment"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-08-05T03:24:39.77-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Validate that the current user has Administrator rights on the local machine and is part of the 'Wsus Administrators' group before trying to generate a self-signed certificate.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1307.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-08-05T03:24:16.823-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "Check Admin rights before trying to generate self-Signed certificate",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 87
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

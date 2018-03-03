@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1436473",
+    "ThreadId": "642105",
+    "Html": "Hello,\r<br />\nIm looking for a way to see the files name/ path  I used for creating the update. \r<br />\nIf I create a new update, the first windows ask for ..file an ..more Files / folders.\r<br />\nIf I reopen the update configuration later, I start on the second window (Vendor / Product name .... )\r<br />\nBut time to time, if I searching for problems, eg. with modified .msi's, I want to check used file name / creating date. \r<br />\n<br />\n request:\r<br />\nYes, I can got to /WSUS/UpdateServicesPackages/ and searching, but Its not very comfortable, starting on the first Window, eg with greyed  path names will be helpfull.<br />\n",
+    "PostedDate": "2015-07-29T02:32:36.187-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436478",
+    "ThreadId": "642105",
+    "Html": "Hello, run WPP and connect to your wsus server. Then select the update and on the 'Information' tab click on the 'Id' Guid. This will open the right folder.\r<br />\nNote that you won't be able to change files here. Wsus will not let you do. You will need to make a new update to change these files. This is why when you revise an update, you start with the second screen.<br />\n",
+    "PostedDate": "2015-07-29T03:26:10.167-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-08-04T07:05:09.87-07:00"
+  }
+]

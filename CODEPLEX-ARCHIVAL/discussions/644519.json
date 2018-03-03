@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1442933",
+    "ThreadId": "644519",
+    "Html": "Hi\r<br />\nHas anyone been able to do Dell server updates using WSUS Package Publisher.\r<br />\nIt works fine with clients, but every time I want to import updates from the dell server catalog, it simply fails (and I can't seem to find a log or so to indicate why).\r<br />\nFYI, when using SCUP it works, but it also imports prerequisites if needed.  Maybe that's what's going wrong, but I have no idea how to tell Wsus Package Publisher to do the same.\r<br />\nIf anyone has an idea, just let me know.\r<br />\nKind regards<br />\n",
+    "PostedDate": "2015-09-02T23:35:18.603-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

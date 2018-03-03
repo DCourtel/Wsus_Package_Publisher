@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1293678",
+    "ThreadId": "562189",
+    "Html": "After working for months trying to get Java to go out via WSUS, here's what I came up with. I tried using the documentation with Package Publisher along with things I'd found through Google. None worked.\r<br />\n<br />\nHere's what is working. Of course, your mileage may vary.\r<br />\n<br />\nI extracted the MSIs using 7-Zip. Since it's recommended that whatever you're packaging goes in the same directory as the Packager files, I renamed the MSI with an x86 or x64 suffix (Java 7-67_x64) and put them both there. I made appropriately folders for the Data1.cab files to keep them separate.\r<br />\n<br />\nIn WPP, I selected Create an update, selected one of the MSIs, and selected the appropriate additional file in the folder; checked Reverse Rules at Package Level.\r<br />\n<br />\nOn the next screen, I created a Processor Rule; selected ia64 and Reverse Rule (so both x86 and x64 would install on x64 systems), and again selected Reverse Rules at Package Level.\r<br />\n<br />\nIt's as simple as that, and it's working without users knowing about it.\r<br />\n<br />\nI've done the same with QuickTime even though there's only one version, but putting the secondary file in a folder. And using the Shockwave MSI also works by itself.<br />\n",
+    "PostedDate": "2014-08-26T13:45:44.54-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1296975",
+    "ThreadId": "562189",
+    "Html": "unfortunately the step by step guide for deployment of java has been removed, but you can find instructions how to install java in a previous post titled &quot;HOW TO: Deploy Java 7 Update 40 (32-bit) &amp; (64-bit) with UAC on or off in the client environment. &quot;\r<br />\n<br />\nGood job.<br />\n",
+    "PostedDate": "2014-08-31T01:05:20.123-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1298200",
+    "ThreadId": "562189",
+    "Html": "We've run into an issue where Java is uninstalled on some computers after sending out this update. I'm thinking it might be related to the last Patch Tuesday IE update which doesn't allow older versions of Java...something getting boogered up. Working on it.<br />\n",
+    "PostedDate": "2014-09-02T09:02:46.74-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1304424",
+    "ThreadId": "562189",
+    "Html": "<blockquote>\nWe've run into an issue where Java is uninstalled on some computers after sending out this update<br />\n</blockquote>\nThis is because you are using the MSI file instead the EXE.\r<br />\nThe MSI file start by uninstalling the old versoin of Java, then try to install the newest version, failed because Internet Explorer is in use. And the computer end with no Java on it.<br />\n",
+    "PostedDate": "2014-09-13T12:19:59.523-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-09-13T12:20:03.227-07:00"
+  },
+  {
+    "Id": "1304970",
+    "ThreadId": "562189",
+    "Html": "What happened is that Java was getting uninstalled on XP computers.\r<br />\n<br />\nTurns out that Windows Update was showing it as an uninstall. I deleted the package, created a new one from the MSI, and now there have been no problems.\r<br />\n<br />\nI worked for months to get Java to deploy/update using the EXE - couldn't get it. Computers would detect that they needed it; they'd download it; but it wouldn't install.<br />\n",
+    "PostedDate": "2014-09-15T14:26:44.563-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

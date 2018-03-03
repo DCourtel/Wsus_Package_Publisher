@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "1108512",
+    "ThreadId": "462519",
+    "Html": "Java 7 Update 45 Install Notes:\r<br />\nFirst install the standard Java x86 &amp; x64 packages from Sun.\r<br />\n<a href=\"http://www.java.com/en/download/manual.jsp\" rel=\"nofollow\">http://www.java.com/en/download/manual.jsp</a>\r<br />\n<br />\nObtain Cab and MSI from Vista/7 Directory: C:\\Users\\&lt;yourusername&gt;\\AppData\\LocalLow\\Sun\\Java (XP: C:\\Documents and Settings\\username\\Local Settings\\Application Data\\Sun\\Java)\r<br />\n<br />\nThe jre folders therein contain the uncompressed installers; your results may be undesirable if you attempt to uncompress the jre executable installer with 7zip or winRAR and then try to use those installers to create a package; just something I ran into a while back, FYI.\r<br />\n<br />\nI use the .cab / .msi because of various errors and problems I’ve encountered using the EXEs; Sun recommends using the MSI and cab like I do. Save yourself the headache and skip the EXEs; I encounter new issues with each release.\r<br />\n<a href=\"http://www.java.com/en/download/help/msi_install.xml\" rel=\"nofollow\">http://www.java.com/en/download/help/msi_install.xml</a>\r<br />\n<br />\nNext, get the install strings for the java release you're deploying; I have listed them for convenience, but you can see how I found them below.\r<br />\n<br />\n7u45 string:\r<br />\n{26A24AE4-039D-4CA4-87B4-2F83217045FF}\r<br />\n<br />\n7u45x64 string:\r<br />\n{26A24AE4-039D-4CA4-87B4-2F86417045FF}\r<br />\n<br />\n7u45 updater string: (Unchanged since 7u21)\r<br />\n{4A03706F-666A-4037-7777-5F2748764D10}\r<br />\n<br />\nYou can find these by using the WSUS Package Publisher and going to tools &gt; MSI Reader, loading the MSI, and going to the property table. The install string is labeled &quot;ProductCode&quot;.\r<br />\n<br />\nNow to create the package!\r<br />\nI used the guide as a template, (<a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=691788\" rel=\"nofollow\">https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=691788</a>) so you may need to read that to fill in some gaps, but in summary here's how I built my x86 update:\r<br />\nA. Start Custom Update from WPP<br />\n<ol>\n<li>Define variable “Return Code” as an integer as in guide</li>\n<li>Stop Service JavaQuickStarterService</li>\n<li>Allow to execute a file with following strings:\r<br />\nPath to file:\r<br />\n%windir%\\System32\\msiexec.exe\r<br />\nParameters:\r<br />\n/i jre1.7.0_45.msi /quiet /norestart AUTOUPDATECHECK=0 IEXPLORER=1 JAVAUPDATE=0 JU=0\r<br />\nKill process after 15 minutes, link to &quot;Return Code&quot;\r<br />\nAdd Exit code, link to &quot;Return Code.&quot;</li>\n<li>\nYou are now done with custom update XML generator, continue on.\r<br />\nB. Add .CAB and .MSI files to the package; Mark it as an update - Critical update.\r<br />\nI mostly followed the guide from this point on, except for my install rules; for “already installed”, I used the guide, but for “installable”, I set the x86 java package to install on x86 &amp; x64 machines (since most browsers are 32-bit.) I used the not equal to Itanium CPU type rule to allow for x86 and x64 installation.\r<br />\nOn the 64-bit package, for “installable” values, I set the x64 architecture type and the &lt;not&gt;&lt;MSI&gt; value.\r<br />\nAlso, the x64 installer doesn't have an updater package anymore; for more information in what command line options java's MSI accepts, see the slightly outdated article from Sun:\r<br />\n<a href=\"http://www.oracle.com/technetwork/java/javase/silent-136552.html\" rel=\"nofollow\">http://www.oracle.com/technetwork/java/javase/silent-136552.html</a><br />\n</li>\n</ol>\nTo test, approve for WSUS test group. If retrying a package, or flushing a deleted test package on a test machine, you can stop the Windows Update service, delete “datastore” and “download” folder contents from local cache in C:\\Windows\\SoftwareDistribution, then check for Windows Updates. (Leave the folders, just delete the contents.)\r<br />\nI hope you find these tips helpful; your mileage may vary. Credit: The people at WSUS Package Publisher who wrote that excellent documentation. I never would have gotten this package working right without the Documentation section.<br />\n",
+    "PostedDate": "2013-10-16T13:49:40.493-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-16T13:49:48.933-07:00"
+  },
+  {
+    "Id": "1126531",
+    "ThreadId": "462519",
+    "Html": "This process works fine on Release v1.3.1309.28 but on v1.3.1311.02 it allways getting error code &quot;FFFC&quot;<br />\n",
+    "PostedDate": "2013-11-19T06:20:34.78-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1126601",
+    "ThreadId": "462519",
+    "Html": "I'm getting the error code as well. I posted a discussion regarding the error that I get, with a sample from the update log.<br />\n",
+    "PostedDate": "2013-11-19T08:48:35.857-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1126679",
+    "ThreadId": "462519",
+    "Html": "Please select the update in WPP, and click on the link beside the 'Id' label. This will open a window, open the folder and open the .xml file. Copy the content of the file and paste it here.<br />\n",
+    "PostedDate": "2013-11-19T11:13:52.033-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1126708",
+    "ThreadId": "462519",
+    "Html": "@ cmaraslian : With 9993009fmmmdkk22 we have identified a bug in the release that prevent installation of custom updates if there is an ExecutableElement with System Variable (like %WinDir%) in the Path to executable.\r<br />\n<br />\nPlease send me an email at <a href=\"mailto:package.publisher@free.fr,\" rel=\"nofollow\">package.publisher@free.fr,</a> I will reply with a fixed release.<br />\n",
+    "PostedDate": "2013-11-19T11:57:33.873-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1129514",
+    "ThreadId": "462519",
+    "Html": "Hello,\r<br />\n<br />\nThe above mentioned procedure seemed to work fine for me with release 1.3.1311.24 but i noticed that everytime Windows 7 checks for updates it finds the Java update even though it completes the installation without errors. I also noticed that Java isn't registered in IE or Mozilla.\r<br />\n<br />\nDoes anybody have an idea what i'm doing wrong?<br />\n",
+    "PostedDate": "2013-11-27T02:37:52.577-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1129545",
+    "ThreadId": "462519",
+    "Html": "Hi,\r<br />\n<br />\nanyone knows, if the above description is able to kill any Java and/or IE instance running at the time of install?\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2013-11-27T04:34:59.197-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1129610",
+    "ThreadId": "462519",
+    "Html": "Hey all, some notes with my deploy experiece; I'm going to change the update status to &quot;requires reboot&quot; next time so I don't have to worry about java instances being killed, this seemed to cause a bit of a problem, application wouldn't register properly if Java was running. Also to answer NorbertFE: Check out this link from Sun for command line switches to register Java with Mozilla (Our organization is IE only due to government applications.)\r<br />\n <a href=\"http://www.oracle.com/technetwork/java/javase/silent-136552.html\" rel=\"nofollow\">http://www.oracle.com/technetwork/java/javase/silent-136552.html</a>\r<br />\n<br />\nAny one else have any tips? Thanks DCourtel for the update about WPP, I'm still on the old release and hadn't noticed that bug.<br />\n",
+    "PostedDate": "2013-11-27T07:28:38.51-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1129715",
+    "ThreadId": "462519",
+    "Html": "@ DCourtel : Thanks for your reply, I tested on new Release v1.3.1311.24 and is working like a charm!\r<br />\n<br />\nRegards \r<br />\nCarlos A. Maraslian<br />\n",
+    "PostedDate": "2013-11-27T11:46:01.12-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1129752",
+    "ThreadId": "462519",
+    "Html": "<strong>DParks256 wrote:</strong><br />\n<blockquote>\nThanks DCourtel for the update about WPP, I'm still on the old release and hadn't noticed that bug.<br />\n</blockquote>\nThe bug only occure in V1.3.1311.02. When WPP start to display Package Level Rules.<br />\n",
+    "PostedDate": "2013-11-27T13:12:20.51-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1359393",
+    "ThreadId": "462519",
+    "Html": "Hello,\r<br />\n<br />\n<strong>DParks256 wrote:</strong><br />\n<blockquote>\nTo test, approve for WSUS test group.<br />\n</blockquote>\nHow do I manage to test one update with a certain test group? I would like to configure eg. Java Updates. JRE 7 for the staff, JDK 7 for the developers, JDK 8 for a special test group. Corresponding groups are configured on the WSUS Server.\r<br />\nCan this be done?\r<br />\n<br />\nThanks in advance.\r<br />\nBest regards\r<br />\nHeiko<br />\n",
+    "PostedDate": "2015-03-03T07:32:49.09-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

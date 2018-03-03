@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1480784",
+    "ThreadId": "657044",
+    "Html": "Aus gegebenen Anlass werfe ich mal wieder das Problem in die Runde das gerade abgelaufene JAVA Updates bei Verteilung der .msi via WPP nicht deinstalliert werden wenn eine neue Version erscheint. <br />\nDie erste Frage wäre: Wieso ist das so, schließlich kommt das bei der normalen Installation nicht vor. Wäre gut das herauszubekommen, denn alle separaten Deinstall Lösungen sind eigentlich nur arbeitsaufwendige Workarounds.<br />\n<br />\nDa es mehrere Möglichkeiten bei JAVA gibt- ich benutzt den Weg die .msi zu extrahieren und ein modifiziertes .mst zu generieren was ich in WPP dann mit auf dem Weg gebe.<br />\n<br />\nMein alte Lösungsansatz Nr1 war immer das ich die abgelaufen Updates von &quot;Genehmigt&quot; auf &quot; Zur Deinstallation genehmigt&quot; gesetzt habe. Leider läuft dieses Update was dann ausgeführt wird seit einiger Zeit ins leere, JAVA bleibt installiert obwohl das Update durchläuft. <br />\n<br />\nLösungsvorschlag Nr2 war CustomUpdate/Deinstall MSI Produkt, dann hab ich mir den MSI Code von einer ClientInstallation ausgelesen und ein entsprechendes Update erzeugt. Das funktioniert irgendwie nicht immer.  Außerdem ist das Aufwendig in der Erstellung und Pflege, ich hab auch noch 64bit JAVA.<br />\n<br />\nLösungvorschlag Nr3 war der Hinweis aus einem Posting, das man, sofern man seine Optionen in der CommandLine bei WPP einträgt, REMOVEOLDERJRES=1 eintragen kann. Find ich nicht schlecht, nur das ich lieber ein transformtes .mst File benutze.<br />\n<br />\nAlso hab ich in der msi nach REMOVEOLDJRES gesucht und bin im Table INSTALLEXECUTESEQUENCE fündig geworden, wo das zwei mal auftaucht. Einmal bei FINDRELATEDPRODUCTS und einmal bei REMOVEXSISTINGPRODUCTS. In beiden Fällen ist es Standardmäßig mit 1 belegt, trotzdem wird die alte Installation nicht entfernt. Kann mir das einer erklären?<br />\n<br />\nUnd es gibt noch ein paar Krücken ( install&amp;uninstall.exe oder so) die alten Javas zu entfernen, aber eigentlich würde ich lieber herausbekommen was das ganze Problem eigentlich verursacht.<br />\n<br />\nIch verwende normalerweise keine Regeln bei .msi Installationen und bin damit immer gut und problemlos gefahren, frage mich aber ob es in diesem Fall von Bedeutung sein könnte.<br />\n<br />\nby Pö<br />\n",
+    "PostedDate": "2016-08-10T08:01:52.537-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1480791",
+    "ThreadId": "657044",
+    "Html": "Hast Du denn schon mal REMOVEXSISTINGPRODUCTS = 0 getestet? Wenn nein, dann hol das nach.\r<br />\n<br />\nAnsonsten benutze ich die von dir als 'Krücke' bezeichnete Uninstall2Install.exe und bin damit bestens gerüstet. :P<br />\n",
+    "PostedDate": "2016-08-10T08:50:13.357-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1480831",
+    "ThreadId": "657044",
+    "Html": "Hallo Windfried!,\r<br />\n<br />\nREMOVEXSISTINGPRODUCTS, wo soll ich das in der .msi setzen? \r<br />\nIm Table ActionText taucht das auf, da sind ihm Templates zugewiesen, ich denke nicht das es dort ist.\r<br />\nIm Table InstallExecuteSequence gibt es auch REMOVEXSISTINGPRODUCTS, allerdings gibt es dort kein &quot;Value&quot; sondern ein &quot;Condition&quot;, und das lautet: REMOVEOLDERJRES=1, womit sich der Kreis schließt. Ich habe nicht das Gefühl das ich da einfach eine 0 reinschreiben sollte.\r<br />\n<br />\nOder sollte ich im Property Table eine entsprechende Zeile einfügen? Sowas geht auch wie ich bei Libre gelernt habe :-) \r<br />\n<br />\nIch mein wenn es absolut nicht anders geht Wechsel ich halt von .msi mit .mst File auf .msi mit CommandLineParametern, so viele sind das ja nicht bei JAVA, aber den Unterschied sehe ich irgendwie nicht. Das sollte doch praktisch das Gleiche sein.\r<br />\n<br />\nIch weiß das du Uninstall2Install.exe schon ein paar Mal empfohlen hast. Ich sehe es trotzdem etwas als notdürftige Ersatzlösung.\r<br />\nWeil: \r<br />\nIdeal - die Deinstallation funktioniert einfach\r<br />\nOptimal - die Deinstallation der alten Version läßt sich in der sowieso benutzten Config ( .msi ) steuern\r<br />\nGut - die Deinstallation läßt sich als extra Update über das aufgestülpte Deployment regeln ( WPP ), muss aber manuell gemanagt werden\r<br />\nBefriedigend - Die Deploymentsoftware stellt ein Tool ( zusätzlicher Aufwand )um die Software wieder loszuwerden, mittels Extra Update  (Custom Update WPP) \r<br />\nAusreichend - man benötigt ein weiteres Programm um mit der Deploymentsoftware ein Update zu erzeugen was das Update deinstalliert. ( Uninstall2Install ) ARG!\r<br />\n<br />\nSo sortier ich das für mich zumindest, nichts für ungut!<br />\n",
+    "PostedDate": "2016-08-11T00:16:39.16-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1480832",
+    "ThreadId": "657044",
+    "Html": "Du kannst natürlich REMOVEOLDERJRES=0 eintragen und die anderen Zeile löschen. Einfach mal ausprobieren und nicht so viel fragen.\r<br />\n<br />\nAlternativ direkt beim Hersteller der Software nachfragen, was getan werden muss damit die alte Version auch korrekt deinstalliert wird.\r<br />\n<a href=\"https://java.com/en/download/faq/uninstaller_toolfaq.xml#browserinfo\" rel=\"nofollow\">https://java.com/en/download/faq/uninstaller_toolfaq.xml#browserinfo</a>\r<br />\n<br />\nZuletzt, ich nutze das Tool um eine neue Version zu installieren, dabei werden alle vorherigen Versionen automatisch deinstalliert. Das hast Du schon gelesen, oder? Und das beste ist, wir brauchen ab sofort kein Java mehr, also wird der Mist bei uns jetzt rückstandsfrei deinstalliert.\r<br />\n<br />\nBevor ich mir die Arbeit mache, die du dir machst, nutze ich das Tool und lehne mich zurück, es macht die Arbeit für mich für die es gemacht worden ist. :)<br />\n",
+    "PostedDate": "2016-08-11T00:29:27.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1480837",
+    "ThreadId": "657044",
+    "Html": "Hm? Tut mir leid, kann dir da nicht folgen.\r<br />\nIch kann doch nicht planlos irgendwo was eintragen und irgendwelche Zeilen löschen. An anderer Stelle hieß es REMOVEOLDERJRES=1 würde alte Deinstallationen löschen wenn man die CommandLine benutzt.\r<br />\nDu empfiehlst jetzt zunächst REMOVEXSISTINGPRODUCTS = 0 , sagst aber nicht wo in der MSI das sein sollte, und als nächstes REMOVEOLDERJRES=0, aber wieder ohne Angabe des Tables.\r<br />\nIch bin dir ja dankbar für deine Tipps, mehr Profiunterstützung kann man schließlich kaum erhalten, aber ein endloses Try &amp; Error war das was ich vermeiden wollte.\r<br />\n<br />\nDanke für den Link oben, das Tool kannte ich noch nicht, gut zu wissen das sowas auch noch bereit steht. Es hat aber keinen Bezug zu dem Problem des Handlings alter Installationen bei Versionsaktualisierung.<br />\n",
+    "PostedDate": "2016-08-11T01:49:20.48-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1480843",
+    "ThreadId": "657044",
+    "Html": "Sorry, für mich war klar, Du weißt wo du was einzustellen hättest. Und nein, ich weiß es auch nicht weil ich mich damit noch nicht beschäftigt habe. Um genau dieses Try and Error zu vermeiden hab ich mir das Tool Uninstall2Install erstellt. Damit aktualisierte ich meine Java Runtime immer ganz problemlos. Hast Du denn mit dem Tool schon gearbeitet? Die EXE als Update im WPP einbinden, das MSI von Java und die aktualisierte REG-Datei hinzufügen, evtl. noch Regeln erstellen, veröffentlichen, fertig. Dauert 5-10 Minuten beim ersten Mal, anschließend geht es sicher noch schneller.<br />\n",
+    "PostedDate": "2016-08-11T02:57:02.91-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1480863",
+    "ThreadId": "657044",
+    "Html": "Wenn ich die Ausführungen\r<br />\n<a href=\"http://docs.oracle.com/javase/8/docs/technotes/guides/install/windows_jre_install.html#uninstalling_the_jre_windows\" rel=\"nofollow\">http://docs.oracle.com/javase/8/docs/technotes/guides/install/windows_jre_install.html#uninstalling_the_jre_windows</a>\r<br />\nrichtig verstehe, ist der greift der Deinstaller für alte Versionen nicht wenn man mit einer Modifizierung arbeitet, insbesondere scheint er im .exe Installer verwurstelt zu sein. \r<br />\n<br />\nDamit bleibt die Option: Verwendung des .exe Installers + Befehlszeilenparameter, etwa so:\r<br />\nINSTALL_SILENT=Enable AUTO_UPDATE=Disable WEB_ANALYTICS=Disable EULA=Disable REBOOT=Disable NOSTARTMENU=Enable WEB_JAVA=Enable WEB_JAVA_SECURITY_LEVEL=H SPONSORS=Disable REMOVEOLDERJRES=1\r<br />\n<br />\nFunktionierte bei mir aber nicht.\r<br />\n<br />\nWenn ich den Ausführungen folge:\r<br />\n<a href=\"http://docs.oracle.com/javase/8/docs/technotes/guides/install/config.html#table_config_file_options\" rel=\"nofollow\">http://docs.oracle.com/javase/8/docs/technotes/guides/install/config.html#table_config_file_options</a>\r<br />\n<br />\ndann gibt es einen Befehl der da lautet\r<br />\nREMOVEOUTOFDATEJRE , \r<br />\nalso werde ich es demnächst damit und dem .EXE Installer probieren.<br />\n",
+    "PostedDate": "2016-08-11T08:06:20.653-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

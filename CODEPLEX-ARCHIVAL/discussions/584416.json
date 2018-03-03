@@ -1,0 +1,98 @@
+[
+  {
+    "Id": "1359438",
+    "ThreadId": "584416",
+    "Html": "First of all a big thanks to developers, for the great product, thanks to anyone who contributes to this board and thanks to DParks256 for posting a guide for Java 7.<br />\n<br />\nI have finally started deploying Java 8 in our network, and decided share this short guide that I've created for internal use.<br />\nIt's nothing new, but a good step by step manual on how to publish Java 8 using WPP. Any feedback is welcome.<br />\n<br />\nAlso, FYI, I've test deployed Java 8 Update 31 MSI on our XP machines, and so far it works without issues, with the apps that we need it for.<br />\n<br />\nMy current MSI installation command looks like this:<br />\n<br />\nmsiexec /i jre1.8.0_XX.msi JU=0 JAVAUPDATE=0 AUTOUPDATECHECK=0 RebootYesNo=No WEB_JAVA=1 /q /norestart /log C:\\JavaInstall.log<br />\n<br />\nThe guide<br />\n<ol>\n<li>Extract MSI from EXE:<br />\n•\tRun the Java Installation executable, don't need to install<br />\n•\tGo to C:\\Users\\&lt;yourusername&gt;\\AppData\\LocalLow\\Sun\\Java\\ and copy your version's MSI file to some dedicated work folder/location.</li>\n<li>Read MSI ProductCode using WPP's MSI-reader function and copy it to a text file in a work folder. Looks like this {26A24AE4-039D-4CA4-87B4-2F83218031F0}<br />\n•\tWSUS Package Publisher&gt;Tools&gt;MSI Reader<br />\n•\tFind and copy Product Code field under Properties.</li>\n<li>Create a Java8_XXInstall.bat (replace XX with your update version) file with the following content: this will uninstall the previous versions of Java(7) and install Java 8, (the list for 7 might not be complete, so modify if needed). You can get more GUIDs from here <a href=\"http://www.74k.org/java-uninstall-remove-guids-strings\" rel=\"nofollow\">http://www.74k.org/java-uninstall-remove-guids-strings</a><br />\n...........................................................<br />\nREM Uninstall Java 7 Update 45<br />\nmsiexec /x {26A24AE4-039D-4CA4-87B4-2F83217045FF} /q<br />\nREM Uninstall Java 7 Update 51<br />\nmsiexec /x {26A24AE4-039D-4CA4-87B4-2F83217051FF} /q<br />\nREM Uninstall Java 7 Update 55<br />\nmsiexec /x {26A24AE4-039D-4CA4-87B4-2F83217055FF} /q<br />\nREM Uninstall Java 7 Update 60<br />\nmsiexec /x {26A24AE4-039D-4CA4-87B4-2F03217060FF} /q<br />\nREM Uninstall Java 7 Update 65<br />\nmsiexec /x {26A24AE4-039D-4CA4-87B4-2F03217065FF} /q<br />\nREM Uninstall Java 7 Update 67<br />\nmsiexec /x {26A24AE4-039D-4CA4-87B4-2F03217067FF} /q<br />\nREM Uninstall Java 7 Update 71<br />\nmsiexec /x {26A24AE4-039D-4CA4-87B4-2F03217071FF} /q<br />\nREM Uninstall Java 7 Update 75<br />\nmsiexec /x {26A24AE4-039D-4CA4-87B4-2F03217075FF} /q<br />\nREM Install Latest Java Version X86<br />\nmsiexec /i jre1.8.0_XX.msi JU=0 JAVAUPDATE=0 AUTOUPDATECHECK=0 RebootYesNo=No WEB_JAVA=1 /q /norestart /log C:\\JavaInstall.log<br />\n...........................................................</li>\n<li>\nCreate a new Custom Update:<br />\n<ul>\n<li>Open WSUS Package Publisher&gt;Updates&gt;Create Custom Update</li>\n<li>Add &quot;Decalre variable to store data and use it later&quot; - name it ReturnCode, type - Int</li>\n<li>Add &quot;Allow to execute a file&quot;:<br />\nPath to file: Java_8_XX_Install.bat<br />\nParameters: leave empty<br />\nKill process after 30 minutes<br />\nStore Return Code to select our &quot;ReturnCode&quot; variable</li>\n<li>\nAdd &quot;Allow to define a return code for this custom update “Select Variable, choose ReturnCode.<br />\n</li>\n</ul>\n</li>\n</ol>\nWe are now done with custom update XML generator, continue on.<br />\n<ul>\n<li>Add the .MSI and the Java_8_XX_Install.bat file to the package; Mark it as an Update - Critical update. Next&gt;</li>\n<li>IsInstalled. Add rule “MSI Product Installed” - For MSI Product Code use the value copied to the text file in step 2. Next&gt;</li>\n<li>\nIsInstallable. If deploying 32bit and 64bit versions of Java and if Itanum machines report to your WSUS, then you can add the “Processor Architecture” rule. You should also be able to use Reverse rule for Processor Architecture = Architecture IA64 (not equal to Itanium) if you want to just skip IA64 machines. If you are deploying either just 32bit or just 64bit version across the board then you can leave this section alone. Publish&gt;<br />\n</li>\n</ul>\nRelated links/documents:<br />\n<a href=\"https://wsuspackagepublisher.codeplex.com/discussions/570492\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/570492</a><br />\n<a href=\"https://wsuspackagepublisher.codeplex.com/discussions/462519\" rel=\"nofollow\">https://wsuspackagepublisher.codeplex.com/discussions/462519</a><br />\n<a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=903843\" rel=\"nofollow\">https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&DownloadId=903843</a><br />\n",
+    "PostedDate": "2015-03-03T09:12:52.007-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1364750",
+    "ThreadId": "584416",
+    "Html": "For all who speak a little german, i have create a small tool for Uninstall any Java Version and Install any Java Version:\r<br />\n<a href=\"http://www.wsus.de/uninstall2install\" rel=\"nofollow\">http://www.wsus.de/uninstall2install</a><br />\n",
+    "PostedDate": "2015-03-16T13:02:58.223-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1366015",
+    "ThreadId": "584416",
+    "Html": "Hi Winfried,\r<br />\n<br />\nthanks for this tool. One suggestion: It would be great to have the possibilty to add some more parameters to the install-string instead of using a MST (f.e. AUTO_UPDATE=0).<br />\n",
+    "PostedDate": "2015-03-17T00:32:00.613-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1367323",
+    "ThreadId": "584416",
+    "Html": "I followed this tutorial and the documentation <a href=\"https://www.codeplex.com/Download?ProjectName=WsusPackagePublisher&amp;DownloadId=903843\" rel=\"nofollow\">Installing Java 7u21 without Java Auto Updater</a><br />\n<br />\nI tried several times but I have not been successful.<br />\n<br />\nI approved the update for installation, on the client there is no version of java but the console and windowsupdate.log report that there are no pending updates.<br />\n<br />\nThe update for Adobe Reader and Flash are successful.<br />\n<br />\nCustom updates not.<br />\n<br />\nAny idea why? where am I doing wrong?<br />\n",
+    "PostedDate": "2015-03-19T11:32:34.01-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1367353",
+    "ThreadId": "584416",
+    "Html": "<strong>trcc wrote:</strong><br />\n<blockquote>\nthanks for this tool. One suggestion: It would be great to have the possibilty to add some more parameters to the install-string instead of using a MST (f.e. &gt;AUTO_UPDATE=0).<br />\n</blockquote>\nHmm, this was never planned. ;) Never i am using this Commandline parameters for install, to configure autoupdate i am using ADM-Templates within Group Policys. One time configured, allways there.<br />\n",
+    "PostedDate": "2015-03-19T14:01:22.967-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1414815",
+    "ThreadId": "584416",
+    "Html": "Thanks for the great walkthrough. This worked perfect for me to uninstall all previous versions and install version 8 update 40. However I just followed this again for update 45 and updated my batch script to include the GUID for Update 40 for removal. However it looks like since this was installed through windows update it doesn't have a GUID in the registry for uninstall. What would be the best method for removing the previous install of Java that was install through WSUS Package Publisher?\r<br />\n<br />\nThanks.<br />\n",
+    "PostedDate": "2015-04-16T08:12:02.47-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1414823",
+    "ThreadId": "584416",
+    "Html": "I'm using Winfried's tool for uninstalling previous versions of Java. I deployed Update 40 a while ago and today Update 45 with preceding uninstallation of Update 40 (uninstall2install with the GUID from 40). No problems here.\r<br />\n<br />\nRegards\r<br />\nNorbert<br />\n",
+    "PostedDate": "2015-04-16T08:19:22.29-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1414875",
+    "ThreadId": "584416",
+    "Html": "<strong>NorbertFe wrote:</strong><br />\n<blockquote>\nI'm using Winfried's tool for uninstalling previous versions of Java. I deployed Update 40 a while ago and today Update 45 with preceding uninstallation of Update 40 (uninstall2install with the GUID from 40). No problems here.<br />\n<br />\nRegards<br />\nNorbert<br />\n</blockquote>\nI like to have the ability to turn off auto update.\r<br />\n<br />\nIt looks like I made the package wrong (I deleted the customupdate.exe), however now when I made it correctly, I get a not applicable regardless of what I do. I setup a temp VM and nothing is installed and I still get not applicable. Weird. I'll keep messing with it and report back.<br />\n",
+    "PostedDate": "2015-04-16T10:31:23.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1414889",
+    "ThreadId": "584416",
+    "Html": "Well, it looks like I fixed it. When I made the update, on the second screen after I had to enter the GUID as stated in step &quot;MSI Product Installed&quot;, it appears to be the same screen I entered the GUID again but made it reversed by hitting the Reverse Rule Checkbox so I got this:\r<br />\n<br />\n<img src=\"http://i.imgur.com/rROvpSQ.png\" alt=\"Image\" />\r<br />\n<br />\nHope this helps anyone that ran into this.<br />\n",
+    "PostedDate": "2015-04-16T11:25:39.88-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1414900",
+    "ThreadId": "584416",
+    "Html": "The first screen allows you to define rules used by WUA to determine if the update is installed. The second screen allows you to define rules to determine if the update is installable (needed)<br />\n",
+    "PostedDate": "2015-04-16T12:17:36.493-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1414903",
+    "ThreadId": "584416",
+    "Html": "<strong>nebulight wrote:</strong><br />\n<blockquote>\nI like to have the ability to turn off auto update.<br />\n</blockquote>\nThis is the reason for using Group Policys in this case.\r<br />\n<br />\nBy\r<br />\nWinfried<br />\n",
+    "PostedDate": "2015-04-16T12:26:41.137-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1425644",
+    "ThreadId": "584416",
+    "Html": "<strong>nebulight wrote:</strong><br />\n<blockquote>\nThanks for the great walkthrough. This worked perfect for me to uninstall all previous versions and install version 8 update 40. However I just followed this again for update 45 and updated my batch script to include the GUID for Update 40 for removal. However it looks like since this was installed through windows update it doesn't have a GUID in the registry for uninstall. What would be the best method for removing the previous install of Java that was install through WSUS Package Publisher?<br />\n<br />\nThanks.<br />\n</blockquote>\nThe GUID should stay the same if you are using the original MSI.\r<br />\nYou can use MSI reader to find the one from 8u40.\r<br />\n<br />\nAlso I needed to find ones for version 6 and came a cross this great page. - <a href=\"http://www.74k.org/java-uninstall-remove-guids-strings\" rel=\"nofollow\">http://www.74k.org/java-uninstall-remove-guids-strings</a><br />\n",
+    "PostedDate": "2015-05-15T11:36:54.187-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

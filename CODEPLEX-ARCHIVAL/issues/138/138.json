@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update Detail Viewer",
+      "DisplayName": "Update Detail Viewer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-10-19T08:26:31.717-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "When selecting an update and then sorting computers for a computers group, if update selection change, then sorting is not preserve in the computer view.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.3.1310.12",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-10-16T07:31:47.383-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "Sorting in DataGridView are not preserved when selection change",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 138
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "WPP now preserve sorting seletion when refreshing the display.",
+      "PostedDate": "2013-10-19T08:26:14.43-07:00",
+      "Id": 118931
+    }
+  ]
+}

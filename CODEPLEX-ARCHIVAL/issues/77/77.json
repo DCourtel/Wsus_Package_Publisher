@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Custom Update Creator",
+      "DisplayName": "Custom Update Creator"
+    },
+    "ClosedComment": "Scrollbar added.",
+    "ClosedDate": "2013-06-26T11:36:32.103-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hi there,\r\n\r\nFirst of all, thanks for creating great application.  Currently, I start learning how to use and I found that there is a problem at Updates -> Create a Custom Update -> Custom Update Creator.  On the window, there is a panel where you drop an action.  As I add many actions, I can't access the lower actions because there is no scroll bars.  Could you fix this for me?\r\n\r\nI also downloaded the source code and it seems that it doesn't match to the current release. Is it possible if I can download the latest sources?\r\n\r\nThank you,",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1306.16",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-26T11:35:18.207-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "Scroll Bars in Custom Update Creator window",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 77
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I have add a scrollbar to the Update Creator Wizard window.",
+      "PostedDate": "2013-06-26T11:36:10.06-07:00",
+      "Id": 104247
+    }
+  ]
+}

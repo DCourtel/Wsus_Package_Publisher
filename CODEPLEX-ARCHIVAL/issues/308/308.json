@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Will refactor UI in V2",
+    "ClosedDate": "2015-11-11T22:18:46.593-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When importing a new code signing certificate the 'import certificate' button is greyed out until the password for the certificate has been put in the password box.  \r\n\r\nIt would make more sense if you clicked on the 'import certificate' button and were then prompted for the password. \r\n\r\n  ",
+    "LastUpdatedDate": "2015-11-11T22:18:46.593-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-11-11T03:26:04.443-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Postponed"
+    },
+    "Summary": "Interface Issue",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 308
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

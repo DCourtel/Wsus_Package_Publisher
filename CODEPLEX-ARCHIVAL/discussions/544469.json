@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "1242146",
+    "ThreadId": "544469",
+    "Html": "I didn't see any mention of this in the documentation.  Sorry if I overlooked it.\r<br />\n<br />\nWill WPP published packaged synch and be supported on downstream WSUS servers?<br />\n",
+    "PostedDate": "2014-05-06T09:21:57.663-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1242157",
+    "ThreadId": "544469",
+    "Html": "To clarify my question.  If I publish a package with WPP on the Upstream server that has several downstream (replica) servers, will that package and its approvals be synchronized throughout the environment.  This is assuming WPP is running as default config out of the box (Never make update visible in WSUS Console).\r<br />\n<br />\nIn addition, I am curious why &quot;Never make update visible in WSUS Console&quot; is the recommended setting.  Can you explain why this is?\r<br />\n<br />\nAre there any issues if an update is visible in the WSUS Console?<br />\n",
+    "PostedDate": "2014-05-06T09:36:23.533-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1242174",
+    "ThreadId": "544469",
+    "Html": "<strong>Brinky wrote:</strong><br />\n<blockquote>\nI didn't see any mention of this in the documentation.  Sorry if I overlooked it.<br />\n<br />\nWill WPP published packaged synch and be supported on downstream WSUS servers?<br />\n</blockquote>\nYes, if you publish a update on a mainstream the update will come to downstream server. But! You can not 'see' the update on the Downstream WSUS. But all clients pick up the updates from the Downstream WSUS. Try it. ;)<br />\n",
+    "PostedDate": "2014-05-06T09:58:39.18-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1242181",
+    "ThreadId": "544469",
+    "Html": "Hi Brinky, at work I have 1 upstream server and  4 downstreams replica servers, so yes it works.\r<br />\nThe only think you have to do is to import the signing certificate into the &quot;Trusted publisher' store on the replica server<br />\n",
+    "PostedDate": "2014-05-06T10:10:24.68-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:14:58.93-07:00"
+  },
+  {
+    "Id": "1242183",
+    "ThreadId": "544469",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nHi Brinky, at work I have 1 upstream server and  4 downstreams replica servers, so yes it works.<br />\nThe only think you have to do is to import the signing certificate into the &quot;Trusted publisher' store on the replica server<br />\n</blockquote>\nIf Brinky publish the certificate with Group Policys then he had no problems. ;)<br />\n",
+    "PostedDate": "2014-05-06T10:14:35.327-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1242235",
+    "ThreadId": "544469",
+    "Html": "Indeed it does work!  I stood up a downstream WSUS server, added the cert to the &quot;Trusted Publisher&quot; store, pointed a client to the downstream server and all worked successfully.\r<br />\n<br />\nIt appears paid products (SolarWinds) places the update in the WSUS Console when publishing, so I'm still curious why &quot;Never make update visible in WSUS Console&quot; is the recommended setting. Can you explain why this is? Are there any known issues if an update is visible in the WSUS Console?\r<br />\n<br />\nThanks for the help!<br />\n",
+    "PostedDate": "2014-05-06T12:20:51.687-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1242248",
+    "ThreadId": "544469",
+    "Html": "May be that, &quot; not recommended&quot; is too strong. But when publishing an update via API, by default, this update is not shown in the console. And there is no way to make it appears using API. This is Microsoft's choice. The only way to make this update visible in the console, is to edit the database directly.\r<br />\nSo I didn't recommend that option. \r<br />\nSaid that, I know many people using this option for years without any problems.\r<br />\nMake your choice :-)<br />\n",
+    "PostedDate": "2014-05-06T12:53:08.303-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1242250",
+    "ThreadId": "544469",
+    "Html": "@DCourtel - Thanks for the clarification.<br />\n",
+    "PostedDate": "2014-05-06T12:59:58.94-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

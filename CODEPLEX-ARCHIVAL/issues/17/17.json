@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-05-26T11:39:49.85-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Add ability to create \"Custom Updates\".\r\n\r\nCustom Updates can perform some actions before and/or after installing the update.\r\nThese Actions can be :\r\n* Create/Delete/Modify registry values.\r\n* Create/Delete folders.\r\n* Create/Delete/Modify files.\r\n* Start/Stop/Unregister services.\r\n* Run Executable file.\r\n* Launch of VBS Scripts or Powershell Scripts.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release V1.2.1305.26",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-03-17T06:24:03.803-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Add ability to do some actions before and/or after installing the update",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 17
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

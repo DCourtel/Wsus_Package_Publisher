@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-10-06T12:04:30.47-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\ncan you let the user choose if he likes to check for program updates and on which Intervalls?\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2013-10-06T12:04:30.47-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-09-29T07:02:24.903-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Postponed"
+    },
+    "Summary": "WPP Update check",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 124
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "As WPP evolves very quickly, I like to be sure that users stays up to date with the release.",
+      "PostedDate": "2013-09-29T12:31:38.537-07:00",
+      "Id": 115947
+    },
+    {
+      "Message": "I do understand this. But actually this is up to the user. Maybe ask the user at intial Startup if  he likes to have this update check enabled. If not, let him enable it later.\n\nRegards\nNorbert",
+      "PostedDate": "2013-09-29T12:43:31.253-07:00",
+      "Id": 115948
+    }
+  ]
+}

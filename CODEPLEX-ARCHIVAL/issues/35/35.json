@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update List Viewer",
+      "DisplayName": "Update List Viewer"
+    },
+    "ClosedComment": "Change the way how right clicking is handle to update selection if need.",
+    "ClosedDate": "2013-05-07T09:50:03.86-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When right clicking on a node in the treeview, a row in the UdpateList or a row in the ComputerList, the selection is not updated if the click is on another row than selected.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1305.03",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-07T09:48:55.873-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Update selection on right clicking",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 35
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Information Update Wizard",
+      "DisplayName": "Information Update Wizard"
+    },
+    "ClosedComment": "Speed up the display by multithreading the instantiation.",
+    "ClosedDate": "2013-08-08T13:50:22.843-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When creating a new update, the first form take up to 2 seconds to appears.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1307.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-08-08T13:48:38.54-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Task Completed"
+    },
+    "Summary": "Speed up the display of the updates creation wizard",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 91
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

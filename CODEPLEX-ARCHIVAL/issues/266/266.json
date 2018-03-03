@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2015-04-24T07:20:24.117-07:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "How do I upgrade from one release to another?  Specifically, 1.3.1411.9 to 1.3.1504.15.\r\n\r\nI've got the installation document, but it does not say anything about upgrading.\r\n\r\nThanks!",
+    "LastUpdatedDate": "2015-04-24T07:20:24.117-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-04-23T12:05:27.173-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "How Do I Upgrade To A New Release",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 266
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Extract the files and copy alle new files in folder where old files are stored, ready.",
+      "PostedDate": "2015-04-23T12:48:37.293-07:00",
+      "Id": 183311
+    },
+    {
+      "Message": "Just copy the new version into the old program directory.",
+      "PostedDate": "2015-04-23T12:56:17.67-07:00",
+      "Id": 183312
+    }
+  ]
+}

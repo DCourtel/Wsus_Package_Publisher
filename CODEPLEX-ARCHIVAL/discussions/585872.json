@@ -1,0 +1,130 @@
+[
+  {
+    "Id": "1362070",
+    "ThreadId": "585872",
+    "Html": "Ok, I used and imported the Adobe Reader Catalog. No problem to import the updates, works well.\r<br />\nBut if I want to use the Adobe Flash Catalog, WPP crashes completly and shut down if update importing from catalog starts.\r<br />\n<br />\nDoes everyone know why and can give me a workaround? \r<br />\n<br />\nI used the Adobe Flash Catalog unter LUP without problems. <br />\n",
+    "PostedDate": "2015-03-10T02:41:02.637-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362083",
+    "ThreadId": "585872",
+    "Html": "Can you tell me which release of WPP you are using ? And send me the file you are importing : <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a><br />\n",
+    "PostedDate": "2015-03-10T03:19:31.763-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362085",
+    "ThreadId": "585872",
+    "Html": "V 1.3.1411.9 on WS2012 R2 ( german )<br />\n<br />\nIt crashed yesterday 2 times and today also, half hour ago. <br />\n<br />\nfor the following error description in this forum  I chagned the language from German to English, and .... NOW it WORKS.<br />\n<br />\nso I tested it again in german - and itcrached again and shut down! <br />\n<br />\nWorkaround: Use English if you import Adobe Flash Updates from Catalog!<br />\n<br />\nMaybe everyone else can test it with his installation.<br />\n<br />\nWHAT I DO in German an English:<br />\n<br />\nUpdates/Manage Catalog Subscriptions... / Load a shared Catalog / Adobe-Catalog-FlashPlayer.xml OPEN<br />\n<br />\nTest Connectivity - &gt; OK<br />\nCheck Update aviable now -&gt; ok ( YES, updates aviable )<br />\nImport Updates from this catalog -&gt; (Window opend..)<br />\nOpen Catalog -&gt; ( I see all the AxtiveX and Plugin Updates from version 15.0.0.239 to 16.0.0.305 )-&gt; I select all the six PlugIn Updates -&gt;<br />\nI click &quot;Import selected Updates&quot; -&gt;<br />\n-&gt; Importing starts, but WPP crashes after 1/2 sec ( Will send error report and then shut down( GERMAN ) &lt;-&gt;Can import updates sucsessfull  ( ENGLISH )<br />\n<br />\nvery funny :-)<br />\n",
+    "PostedDate": "2015-03-10T03:59:17.947-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362779",
+    "ThreadId": "585872",
+    "Html": "Did you have the same problem, if you only select the latest update in the list? I allways download only the last, do you need all old FlashUpdates? ;)<br />\n<br />\nI don't have your problem, maybe because i never import all updates. ;)<br />\n",
+    "PostedDate": "2015-03-12T05:09:33.223-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1362783",
+    "ThreadId": "585872",
+    "Html": "lets check..\r<br />\noh. yes, it works correctly if I only download the latest file. \r<br />\nGood Idea!\r<br />\n<br />\nits  correct, normaly I only need the latest version of flash.....\r<br />\n<br />\nThank you!<br />\n",
+    "PostedDate": "2015-03-12T05:24:36.65-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436256",
+    "ThreadId": "585872",
+    "Html": "Hello, i got the same Problem with Flash update 18.0.0.209.\r<br />\n<br />\nI used WPP release 1.3.1504.15. Changing Language to englisch (from german) doesn´t work.\r<br />\n<br />\nAre there other ways to solve the problem?\r<br />\n<br />\nThank you!<br />\n",
+    "PostedDate": "2015-07-28T01:38:23.583-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436267",
+    "ThreadId": "585872",
+    "Html": "WPP zwischendurch neu gestartet ?\r<br />\nUnd du hast nur das letzte Update angewählt ?\r<br />\nIch habe 18..0.0.209 vor ein paar Tagen ausgerollt, im &quot;deutschen&quot; WPP. Hatte keine Auffälligkeiten.\r<br />\nNochmal komplett löschen, von vorne anfangen und neu importieren.<br />\n",
+    "PostedDate": "2015-07-28T03:20:27.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436268",
+    "ThreadId": "585872",
+    "Html": "Ja, komplett neu gestartet und auch gelöscht und neu heruntergeladen.\r<br />\n<br />\nJa, habe nur das letzte 209er Update ausgewählt.\r<br />\n<br />\nWas mich etwas wundert, wenn ich den WPP lösche, neu herunterlade und neu starte, und mich mit dem WSUS verbinde, dass er dann jedesmal die Updates die ich bereits genutzt habe links in der Baumstruktur irgndwo herlädt und diese wieder anzeigt. \r<br />\nHängt das irgendwo im WSUS oder in einem Cache?<br />\n",
+    "PostedDate": "2015-07-28T03:27:49.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436276",
+    "ThreadId": "585872",
+    "Html": "Also davon gleich den ganzen WPP zu löschen und neu aufzusetzen würde ich jetzt mal absehen.....<br />\n<br />\nDie erzeugten Updates liegen im Verzeichnis beim WSUS. Wenn du dich da durchklickst findest du zB. die .exe s wieder, sofern du entsprechende Updates verteilst. Wenn er sich mit dem verbindet findet er die dann wieder. bei &quot;WSUS Content&quot; bzw &quot; UpdateServicePackages&quot; wirst du fündig.<br />\n<br />\nAnsonsten spricht das ganze dafür das es doch in irgendeiner Ecke einen Bug gibt. Als Workaround empfehle ich das Update halt nicht aus dem Katalog zu ziehen sonden die .msi halt manuell herunterzuladen und mit dem WPP zu verteilen.<br />\n",
+    "PostedDate": "2015-07-28T04:29:32.8-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436373",
+    "ThreadId": "585872",
+    "Html": "Hi, can you try to publish agian, when WPP crash, go to %temp% and search for a file call WPP-Guid.log\r<br />\nSend me the log file at <a href=\"mailto:package.publisher@free.fr\" rel=\"nofollow\">package.publisher@free.fr</a><br />\n<br />\nThanks.<br />\n",
+    "PostedDate": "2015-07-28T12:30:40.487-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436596",
+    "ThreadId": "585872",
+    "Html": "I got the error file and send it to you via Mail to <a href=\"mailto:package.publisher@free.fr.\r\n\r\nThank\" rel=\"nofollow\">package.publisher@free.fr.\r\n\r\nThank</a> you!<br />\n",
+    "PostedDate": "2015-07-30T00:56:52.683-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1437213",
+    "ThreadId": "585872",
+    "Html": "After reviewing the log files, this what happen :<br />\n<ul>\n<li>WPP try to download <a href=\"https://download.macromedia.com/pub/flashplayer/current/licensing/win/install_flash_player_17_plugin.msi\" rel=\"nofollow\">https://download.macromedia.com/pub/flashplayer/current/licensing/win/install_flash_player_17_plugin.msi</a></li>\n<li>The web server respond by an 404 Error : Not Found</li>\n<li>A file of 0 Byte is created</li>\n<li>\nWhen try to publish this file, WPP doesn't handle properly the case and crash.<br />\n</li>\n</ul>\nI have fix this bug and will publish the new release soon.<br />\n",
+    "PostedDate": "2015-08-04T08:47:38.87-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2015-08-04T08:47:43.86-07:00"
+  },
+  {
+    "Id": "1437485",
+    "ThreadId": "585872",
+    "Html": "Hope this will also fix this similar issue:\r<br />\n<a href=\"http://wsuspackagepublisher.codeplex.com/workitem/273\" rel=\"nofollow\">http://wsuspackagepublisher.codeplex.com/workitem/273</a>\r<br />\n<br />\nAnd, also, hope you'll commit recent changes to CodePlex too, not only the binaries.\r<br />\n<a href=\"http://wsuspackagepublisher.codeplex.com/discussions/641972\" rel=\"nofollow\">http://wsuspackagepublisher.codeplex.com/discussions/641972</a>\r<br />\n<br />\nCheers\r<br />\nClaudio<br />\n",
+    "PostedDate": "2015-08-06T00:13:35.153-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1440568",
+    "ThreadId": "585872",
+    "Html": "Hallo, ich hab mir auch die neue Version gezogen, die einzige Besserung ist das bei laden der Adobe-Produkte WPP nicht mehr Abstürzt. \r<br />\nLeider ist weiterhin kein Download möglich. Fehlermeldung: &quot;Download fehlgeschlagen : Die zugrunde liegende Verbindung geschlossen&quot;\r<br />\n<br />\nGruß Doc<br />\n",
+    "PostedDate": "2015-08-14T05:38:47.49-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1440804",
+    "ThreadId": "585872",
+    "Html": "Hallo Doc,\r<br />\n<br />\ndas gleiche Problem besteht bei mir auch, nach engerem Austausch mit dem Entwickler habe ich das Update nun manuell ausgerollt.<br />\n",
+    "PostedDate": "2015-08-16T23:39:28.327-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1440915",
+    "ThreadId": "585872",
+    "Html": "Danke, für die Info. Hab ich vermutet das es ich es wieder so lösen muss.<br />\n",
+    "PostedDate": "2015-08-18T01:29:58.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

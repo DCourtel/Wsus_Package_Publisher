@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-04-15T15:07:57.827-07:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "I would be nice to set the default langauage (when the program is started the first time) to english instead of france or set the language according to the language setup of windows, falling back to english when the language is not supported.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1302.27",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-02-25T02:37:31.69-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Default language to english",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 12
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi seitfa, thank you for your contribution to Wsus Package Publisher.\n\nI take into account your suggestions for improvement.\n",
+      "PostedDate": "2013-02-25T13:32:26.883-08:00",
+      "Id": 91471
+    },
+    {
+      "Message": "Hi seitfa, I have modified WPP so that, by default, the language is English.\nI need to add a bug fix for multi-file udpates publication. And doing some test.\n\nI hope to publish the new release tomorrow.",
+      "PostedDate": "2013-02-26T14:52:06.63-08:00",
+      "Id": 91610
+    },
+    {
+      "Message": "Hi seitfa, I have modified the application so that at first launch the language is English.\n\nDon't hesitate to let me know if you have new features' requests. The more feedback I will receive, the better WPP will be.",
+      "PostedDate": "2013-02-27T13:15:01.29-08:00",
+      "Id": 91722
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Rules Update Wizard",
+      "DisplayName": "Rules Update Wizard"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-08-09T10:29:31.527-07:00",
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nroot\\cimv2 is probably the most used WMI Namespace. To prevent syntax errors, it would be good to have this prefilled. Maybe some Default namespaces could be offered with a Dropdown menu.\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.2.1307.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-06-21T05:50:15.173-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Feature Added"
+    },
+    "Summary": "Prefill WMI Namespace with root\\cimv2",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 2,
+    "Id": 75
+  },
+  "FileAttachments": [
+    {
+      "FileId": 696840,
+      "FileName": "WPP-WMI.png",
+      "DownloadUrl": ".\\696840"
+    },
+    {
+      "FileId": 715843,
+      "FileName": "Browse WMI Namespaces.png",
+      "DownloadUrl": ".\\715843"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "+1 ;)\n\nWinfried",
+      "PostedDate": "2013-06-21T06:52:46.227-07:00",
+      "Id": 103773
+    },
+    {
+      "Message": "Do you have other 'Wmi namespace' in mind. I have only done few Wmi query, and I always used Root\\Cimv2.\n",
+      "PostedDate": "2013-06-21T14:31:16.017-07:00",
+      "Id": 103827
+    },
+    {
+      "Message": "Actally no. I too used only this one.",
+      "PostedDate": "2013-06-22T00:56:50.553-07:00",
+      "Id": 103840
+    },
+    {
+      "Message": "Hi,\r\n\r\nactually I stumbled about a nice Feature in WMI filters for GPO within the GPMC. Take a look at the screenshot. Maybe this could Kind of adapted into WPP.\r\n\r\nRegards\r\nNorbert",
+      "PostedDate": "2013-06-25T14:07:04.667-07:00",
+      "Id": 104112
+    },
+    {
+      "Message": "Add a button to browse WMI namespaces available on the local computer.\r\nSee attached screenshot.",
+      "PostedDate": "2013-08-08T13:58:23.807-07:00",
+      "Id": 109096
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1204467",
+    "ThreadId": "529775",
+    "Html": "Hi, \r<br />\nfirst of all, Thank you for great job.\r<br />\n<br />\nmy problem was with java 7 update 51.  I just create custom update trought your tutorial PDF. after some problems with cert and missing registr AcceptTrustedPublisherCerts looks everything good. But over pending updates it ask me for uninstalling something. Don't know what, but it's wrong. I dont want any asking to users. After answer yes.. java finally installed. The next problem was, that the update still pending and traying install again.\r<br />\n<br />\nCould you please anyone update the Installing Java 7u21 manual with actual version ? Thank you.<br />\n",
+    "PostedDate": "2014-02-07T10:03:23.793-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1205124",
+    "ThreadId": "529775",
+    "Html": "Hi,<br />\n<blockquote>\nit ask me for uninstalling something. Don't know what, but it's wrong. I dont want any asking to users.<br />\n</blockquote>\nRevise the update and uncheck the checkbox &quot;Can request user imputs&quot;.<br />\n<blockquote>\nthe update still pending and traying install again<br />\n</blockquote>\nCertainly a problem with the &quot;isInstalled&quot; rule. Can you post here what you have define as &quot;IsInstalled&quot; rule ?<br />\n",
+    "PostedDate": "2014-02-08T14:57:15.743-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1206366",
+    "ThreadId": "529775",
+    "Html": "<strong>DCourtel wrote:</strong><br />\n<blockquote>\nHi,<br />\n<blockquote>\nit ask me for uninstalling something. Don't know what, but it's wrong. I dont want any asking to users.<br />\n</blockquote>\nRevise the update and uncheck the checkbox &quot;Can request user imputs&quot;.<br />\ndo it again and now it works.. probably msi parametr /qn must be wrong or missing.<br />\n<blockquote>\nthe update still pending and traying install again<br />\n</blockquote>\nCertainly a problem with the &quot;isInstalled&quot; rule. Can you post here what you have define as &quot;IsInstalled&quot; rule ?<br />\nI found mistake on MSI uninstall code. I was copy paste msi code to x86 installation with mistake, so this problem is gone too.<br />\n</blockquote>\nnow everything looks good.. I put the update on to the test to several computers. One computer report that installation finish and in program and features looks all good but JAVA config in ControlPanel missing and java.com test say no java on this computer, so I must uninstall and install again :(  People do not even know how I hate Java :(\r<br />\n<br />\nAny idea how to redeploy the same update to computer where is broken installation ? WSUS detect partly broken installation and don't want install it again. \r<br />\n<br />\nThank you again..  you are best. <br />\n",
+    "PostedDate": "2014-02-10T07:05:49.207-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1206790",
+    "ThreadId": "529775",
+    "Html": "Same problem to me, after successful installation, ”The update still pending and trying to install repeatedly”. I have checked and double checked the ”IsInstalled” rule, I have created, deleted and recreated countless times the update... still the testing machine tries to reinstall the INSTALLED update. Every time he tries to reinstall the update the returned code is ”Failed” (but I guess this is normal, since the update is already in place, I did not check if the returned code mentions something about this...)\r<br />\n<br />\nRegarding the ”msi parameter /qn” I didn't encountered any issues: once I inserted only the msi parameter, without the /qn flag, and a message box ”Are you sure you want to uninstall this application? Yes / No” appeared. After I recreated the update with the /qn flag everything worked like a charm regarding any user input requested. (Of course, the problem described upon, regarding the update being repeatedly offered, persists.)\r<br />\n<br />\nI will recreate now the update, being very careful at ”IsInstaled” rule, I'll keep you updated.<br />\n",
+    "PostedDate": "2014-02-11T05:25:53.1-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1206898",
+    "ThreadId": "529775",
+    "Html": "I just republished the update, still the same problem, It is repeatedly offered for installation even after the update is installed on the test machine, returning the &quot;Success&quot; code. :((<br />\n",
+    "PostedDate": "2014-02-11T09:54:21.363-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1206906",
+    "ThreadId": "529775",
+    "Html": "Where is the MSI Product Code stored in the PC? Isn't it in the registry? Cause I have searched entire registry and couldn't find the code ”26A24AE4-039D-4CA4-87B4-2F83217021FF” - is this the code for Java 7 Update 51 (x86)? Honestly, I am out of clues and ideas... :(<br />\n",
+    "PostedDate": "2014-02-11T10:16:25.317-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1206941",
+    "ThreadId": "529775",
+    "Html": "OK, it looks like the last 4 digits (before ”FF”) is the version/ subversion/ sub-subversion. So, I have to Revise, changing the code from ”26A24AE4-039D-4CA4-87B4-2F8321__7021__FF” to ”26A24AE4-039D-4CA4-87B4-2F8321__7051__FF”.\r<br />\n<br />\nAnd now I confirm that everything is fine! :)\r<br />\n<br />\nSo, for everyone, the MSI product code changes from update to update, if you create the update as I did, meaning following the .pdf from documentation, do not just ”Copy-Paste” the MSI Product Code found in the .pdf, adjust it as described above.\r<br />\n<br />\nGood luck everyone!<br />\n",
+    "PostedDate": "2014-02-11T11:19:48.05-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-02-12T10:53:30.177-08:00"
+  }
+]

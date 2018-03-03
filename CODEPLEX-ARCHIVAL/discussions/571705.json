@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1320612",
+    "ThreadId": "571705",
+    "Html": "Hi,\r<br />\n<br />\nI try to publish bigger packages using WSUS and WPP.\r<br />\nSo it takes up to 30 mins to an hour to get the packages published. The Setup folder (and all its files) takes round about 1.6 GByte of disk space.\r<br />\nMy storage location for the Updates is a mapped network drive with a Gigabit network conneciton.\r<br />\nMy 2nd problem is, that I can publish the update, but it always sais &quot;Update failed to download&quot;. But I can see it in the list - what am I doing wrong?\r<br />\nThe 3rd problem is really strange: while publishing is in progress, I try to use the machine for other tasks. When WPP is in foreground, I cannot move the mouse pointer. When I try, the computer locks.\r<br />\n<br />\nRegards,\r<br />\nGeorg<br />\n",
+    "PostedDate": "2014-11-10T08:36:01.753-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1320638",
+    "ThreadId": "571705",
+    "Html": "Hi, \r<br />\nPublishing is faster when WPP run on the Wsus server and all published files as well..<br />\n<blockquote>\n...it always sais &quot;Update failed to download&quot;. <br />\n</blockquote>\nWhere do you see this message ? At which step does it occurs ? Be sure to use the latest release of WPP (1.3.1411.09).<br />\n<blockquote>\nWhen WPP is in foreground, I cannot move the mouse pointer. When I try, the computer locks. <br />\n</blockquote>\nWhen WPP call Wsus API, those API can take as much as 100% of the CPU if the update file is very large.<br />\n",
+    "PostedDate": "2014-11-10T10:40:27.18-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1320781",
+    "ThreadId": "571705",
+    "Html": "Hi,\r<br />\nhmmm – but on the network drive I have got more disk space ;) all right, I will give it a try to change the folder where the updates are located.\r<br />\nThe error message I see in the WSUS console. I try to refresh and see the message in the status of the update in the list after the update is published.\r<br />\nWith &quot;locks&quot;, I mean my user is locked out suddenly. When I move the window in the background, I can use the machine. Very strange behavior...\r<br />\nRegards,\r<br />\nGeorg<br />\n",
+    "PostedDate": "2014-11-10T23:51:12.04-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1320799",
+    "ThreadId": "571705",
+    "Html": "As I understand, the error message (&quot;Failed to download the update&quot;) appears on clients computers when they try to install the published update.\r<br />\nDoes it always occurs or just with this big update ?\r<br />\nPlease, looks into C:\\Windows\\WindowsUpdate.log to get more informations on what happens.<br />\n",
+    "PostedDate": "2014-11-11T00:59:03.02-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1320805",
+    "ThreadId": "571705",
+    "Html": "Sorry, I did not tell it right.\r<br />\nIt occurs at the Server - and I use the latest release.\r<br />\nThe exact error is: &quot;The files for this update failed to download. the update can be approved but will not be available for computers until the download of the files is complete. Click Retry Download to start the download again.&quot;\r<br />\nAnd - as I stated before, it occurs after the update is published from WPP to WSUS (it said &quot;update published successfully&quot;).<br />\n",
+    "PostedDate": "2014-11-11T01:16:03.45-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1328560",
+    "ThreadId": "571705",
+    "Html": "Please, can you see if this apply to your case : <a href=\"http://blogs.msdn.com/b/windows_installer_team/archive/2005/09/18/461810.aspx\" rel=\"nofollow\">CAB files limitations</a><br />\n",
+    "PostedDate": "2014-12-03T13:40:32.407-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

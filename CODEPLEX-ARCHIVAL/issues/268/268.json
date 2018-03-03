@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:50:07.583-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nwhen creating superseding updates with Version 1.3.1504.15 msi rules at update Level should be removed automatically.\r\nSee this threads too:\r\nhttps://wsuspackagepublisher.codeplex.com/workitem/259\r\nhttps://wsuspackagepublisher.codeplex.com/workitem/267\r\n\r\nRegards\r\nNorbert",
+    "LastUpdatedDate": "2017-02-03T11:50:07.583-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-05-13T14:11:16.937-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Remove existing msi rules at update level when creating superseding updates",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 268
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

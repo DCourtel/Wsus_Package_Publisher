@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1105832",
+    "ThreadId": "461732",
+    "Html": "Hello,<br />\n<br />\nWe have all kinds of Java on our environnment (6 and 7 with different updates). We would like to use WPP to patch all of them to the lastest version (7 update 40). But we don't want the computers that don't have Java to have it installed.<br />\n<br />\nTherefore i collected all the product codes of the existing installations (31 of them) and we added a OR rule  when the update packet checks if it's installable. It goes like that:<br />\n<br />\n&lt;Start AND&gt;<br />\n&lt;lar:Not&gt;<br />\n&lt;msiar:MsiProductInstalled ProductCode=&quot;{26a24ae4-039d-4ca4-87b4-2f83217040ff}&quot;/&gt;<br />\n&lt;/lar:Not&gt;<br />\n<br />\n&lt;Start OR&gt;<br />\n&lt;bar:RegValueExists Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\Folders&quot; Value=&quot;C:\\Windows\\Installer{26A24AE4-039D-4CA4-87B4-2F83217013FF}&quot; Type=&quot;REG_SZ&quot;/&gt;<br />\n<br />\n&lt;bar:RegValueExists Key=&quot;HKEY_LOCAL_MACHINE&quot; Subkey=&quot;SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\Folders&quot; Value=&quot;C:\\Windows\\Installer{26A24AE4-039D-4CA4-87B4-2F83217011FF}&quot; Type=&quot;REG_SZ&quot;/&gt;<br />\n<br />\n... with the 31 keys<br />\n<br />\n&lt;End OR&gt;<br />\n&lt;End AND&gt;<br />\n<br />\nThe update never gets detected on machines that have a Java installed. We tried with 2 detections only (7 update 25 and 7 update 21) and the updates sometimes gets detected, sometimes not (reboots, ...). When we don't make any registry related detection, the update is always detected for installation (but as we don't want the computers without Java to install, this is not a solution for us)<br />\n<br />\nWe surely do something wrong, but i don't know anymore where to check...<br />\n<br />\nThanks in advance for your help<br />\n",
+    "PostedDate": "2013-10-09T23:46:14.007-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105862",
+    "ThreadId": "461732",
+    "Html": "Hello,<br />\n<blockquote>\nSubkey=&quot;SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\Folders&quot; Value=&quot;C:\\Windows\\Installer{26A24AE4-039D-4CA4-87B4-2F83217013FF}&quot; Type=&quot;REG_SZ&quot;/&gt;<br />\n</blockquote>\nDon't you have forgot the '\\' at the end of the GUID ?\r<br />\n-&gt; Subkey=&quot;SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\Folders&quot; Value=&quot;C:\\Windows\\Installer{26A24AE4-039D-4CA4-87B4-2F83217013FF} <strong>\\</strong> &quot; Type=&quot;REG_SZ&quot;/&gt;<br />\n",
+    "PostedDate": "2013-10-10T01:00:13.507-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105863",
+    "ThreadId": "461732",
+    "Html": "Hello,\r<br />\n<br />\nWe have tried with and without the slash, with no effect. The actual test with 2 detections only (7 update 25 and 7 update 21) has the slash in, but gets detected only sometimes...<br />\n",
+    "PostedDate": "2013-10-10T01:05:21.9-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105877",
+    "ThreadId": "461732",
+    "Html": "<blockquote>\ngets detected only sometimes...<br />\n</blockquote>\nDo you mean that on one specific computer Java is sometimes detected and sometimes not detected ?\r<br />\nOr, on some computers Java is detected and on some other computers it is not detected ?\r<br />\n<br />\nWhy don't you use MSI Rules ?<br />\n",
+    "PostedDate": "2013-10-10T01:32:00.9-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105879",
+    "ThreadId": "461732",
+    "Html": "Hello,\r<br />\n<br />\nOn the same computer it's sometimes detected, sometimes not. When it's not, we change something in the rule (the slash for example) and then it gets detected. But we couldn't reproduce the detection problem at 100%...\r<br />\n<br />\nWe'll try with MSI rules and i keep you updated<br />\n",
+    "PostedDate": "2013-10-10T01:39:38.373-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105895",
+    "ThreadId": "461732",
+    "Html": "It seems to function much better with the MSI rules\r<br />\n<br />\nThank you for your excelelnt and quick support !<br />\n",
+    "PostedDate": "2013-10-10T02:33:29.567-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-12T08:53:31.68-07:00"
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-02-03T11:45:30.96-08:00",
+    "CommentCount": 6,
+    "Custom": null,
+    "Description": "After upgrade of system to Windows 10 WSUS Package Publisher fails to publish scup catalog patches (Flash 19 as one example) with \"Publishing operation failed because the console and remote server versions do not match.\"\r\n\r\nHelp->About reports:\r\nRelease: 1.3.1508.8\r\nServer Version: 6.3.9600.16384\r\nConsole Version: 10.0.10514.4\r\n\r\nI have Tools->Settings->\"Ignore Console and Server version mismatch.\" checked.\r\n",
+    "LastUpdatedDate": "2017-02-03T11:45:30.96-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-10-21T10:53:24.46-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Version mismatch",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 304
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "The better way is to install WPP directly on WSUS. Do so and try again.\n\nRegards\nWinfried",
+      "PostedDate": "2015-10-29T00:35:40.213-07:00",
+      "Id": 193022
+    },
+    {
+      "Message": "I tend to run \"Core\" version of my servers whenever possible but it does appear that PP runs fine on core once started so I guess that will work.  I hadn't even thought to try.  Thanks.\n\nI do wish Microsoft would get their act together on this issue of software version compared to the protocol version used to talk to the server.  I really like the model of running all management software for everything I do from a single workstation rather than connecting to individual servers.  But I understand with WSUS how difficult they've made it for that to work consistently.",
+      "PostedDate": "2015-10-29T09:19:12.5-07:00",
+      "Id": 193087
+    },
+    {
+      "Message": "Correction:  at least some functionality does not work on 2012 R2 Server Core systems.  Specifically when I try to browse for a file while using the \"Update Creation Wizard\" the software crashes.\n\nFor reference to any one else caught in this situation don't forget that WSUS 6 remote tools don't install on anything less than Win 8 so you can't use a Win 7 box as a client management system.  And while you can switch from core to full gui and back on a new clean install easily I've read a few things that imply once you've patched your system for a while you may have trouble.  I haven't tried it yet myself.\n\nStatus as of this post:  WSUS PP doesn't work on Win10 yet.  WSUS v6 console doesn't install on anything older than Win 8.  WSUS PP relies on having the WSUS console installed.  Instead of using a client-console it's recommend to run WSUS PP directly on the server.  WSUS PP doesn't work completely on a Core server.\n\nNow I'm off to decide if it's easier/riskier to move my server to full gui or setup a new Win8 management box.",
+      "PostedDate": "2015-10-29T12:50:02.853-07:00",
+      "Id": 193098
+    },
+    {
+      "Message": "> WSUS v6 console doesn't install on anything older than Win 8.\n\nStarting with Windows 8, you have to install RSAT instead of WSUS Console, like wrote in the documentation, moreover.",
+      "PostedDate": "2015-11-10T12:20:09.187-08:00",
+      "Id": 193408
+    },
+    {
+      "Message": "I understand that WSUS Console comes in with RSAT.  But RSAT for Server 2012R2 only installs on Windows 8 or Windows 10.  I don't have any Windows 8 boxes anymore, we're mostly Windows 7 and just starting switching to Windows 10.  I've also confirmed I can't easily upgrade my server from core to gui.  So I can't run PP on the server.\n\nRight now my choices appear to be: 1) re-create a Windows 8 client with RSAT and PP (what I did before I foolishly upgraded my management box, 2) install a new server in gui mode and create a new WSUS system and then use  the new WSUS capable server to run PP.\n\nGiven my old WSUS server has all the Windows XP and Windows 8/8.1 stuff which will no longer be needed in my environment I'm thinking maybe building a whole new server isn't a bad idea.",
+      "PostedDate": "2015-11-13T11:56:08.233-08:00",
+      "Id": 193598
+    },
+    {
+      "Message": "And now to modify my early comments:  I had been unable to get RSAT to install on a Server 2012R2 system but I did find out I could get the WSUS Console to install:\n\nRun \"cmd\" as admin, run powershell, run \"Install-WindowsFeature -Name UpdateServices-Ui\"\n\nThis will install the WSUS Console code on a server OS system (I had a different server OS that already required a gui).  Once this was installed I was able to install PP and connect remotely to the original (server core) WSUS server.\n\nCredit to: https://methmal132.wordpress.com/2013/02/21/how-to-install-wsus-administration-console-only-in-server-2012/",
+      "PostedDate": "2015-11-13T12:35:39.9-08:00",
+      "Id": 193599
+    }
+  ]
+}

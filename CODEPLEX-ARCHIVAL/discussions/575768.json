@@ -1,0 +1,98 @@
+[
+  {
+    "Id": "1334656",
+    "ThreadId": "575768",
+    "Html": "Good afternoon everyone!\r<br />\n<br />\nI have 120+ users with a limited budget, so anything I can do for free or cheap is recommended. I stumbled upon your software and have been very successful sending out my regular WU and some custom updates through my network. Way to go guys! \r<br />\n<br />\nThe only problem I am having now is I cannot get Java to install without requiring Admin rights. \r<br />\nHas any one else been successful in doing this? This is the last piece to have all of my software deploy-able without having to use the slow GPO method.\r<br />\n<br />\nThank you all and I love your work! <br />\n",
+    "PostedDate": "2014-12-18T12:47:10.913-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1334886",
+    "ThreadId": "575768",
+    "Html": "WSUS makes updates available to the WUA to download and install the published and approved updates under the context of the local system account. Updates don't run in a user's context. How are you sending out custom updates now?<br />\n",
+    "PostedDate": "2014-12-19T06:57:34.6-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1334894",
+    "ThreadId": "575768",
+    "Html": "Good morning Austinian,\r<br />\n<br />\nFor Adobe Reader, I am using the executable version of 11.0.9 packaged under the custom updates options of WPP with a silent install flag. \r<br />\n<br />\nFor Java 8u25, I want to use the MSI install file with an MST, but when I push it out to my test computers, it is Admin rights to install. \r<br />\n<br />\nKeep in my I do not give local admin rights to my users. \r<br />\n<br />\nThanks,<br />\n",
+    "PostedDate": "2014-12-19T07:20:18.307-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1334976",
+    "ThreadId": "575768",
+    "Html": "So you're creating an update using WPP, marking the update as applicable to the test system, and using windows update on the test system to run the update?\r<br />\n<br />\nI'm just trying to verify that the update is being run under the context of Windows Update and not some other mechanism. What user is the process running as that prompts for elevation?<br />\n",
+    "PostedDate": "2014-12-19T11:39:36.993-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1334979",
+    "ThreadId": "575768",
+    "Html": "That is correct! On the test machine, it comes up under Windows Update as a new important update.  I click the install button and the UAC comes up requesting admin rights.\r<br />\n<br />\nThe currently logged in user is setup as as standard Domain User with no Local Admin Rights. <br />\n",
+    "PostedDate": "2014-12-19T12:05:06.983-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1334990",
+    "ThreadId": "575768",
+    "Html": "This can happen if you have used the option &quot;Can request user input&quot;. in this case the update is installed in the &quot;user context&quot;.<br />\n",
+    "PostedDate": "2014-12-19T12:53:11.097-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1335515",
+    "ThreadId": "575768",
+    "Html": "DCourtel! :D\r<br />\n<br />\nI removed the &quot;Can request user input&quot; check box and now I am just receiving an error: \r<br />\n<br />\nCode 80070667 -  ERROR_INVALID_COMMAND_LINE\r<br />\n<br />\nI am not using an command line flags at the moment, but I have tried: /qn, /s, and /silent\r<br />\n<br />\nWhat flags are you guys using to install Java silently? <br />\n",
+    "PostedDate": "2014-12-22T07:02:56.97-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1335526",
+    "ThreadId": "575768",
+    "Html": "If you are using the EXE file, it's /s. If you are using the MSI file, it's nothing :-)<br />\n",
+    "PostedDate": "2014-12-22T07:56:03.823-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1335529",
+    "ThreadId": "575768",
+    "Html": "Thanks! \r<br />\n<br />\nI will give that a try :)<br />\n",
+    "PostedDate": "2014-12-22T07:57:27.637-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1335530",
+    "ThreadId": "575768",
+    "Html": "DCourtlel and austinian,\r<br />\n<br />\nIt worked!!\r<br />\n<br />\nThank you so much for your help on this matter. Your product has saved us a lot of time, effort, and money.\r<br />\n<br />\nHave a wonderful and blessed day! <br />\n",
+    "PostedDate": "2014-12-22T08:00:34.553-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1420128",
+    "ThreadId": "575768",
+    "Html": "Do anyone have a step by step guide, how to make a package of Java 8.40 that works in a mixed Windows 7 and 8.1 enviroment? I've try to make a package with the instuction of the Java 7.21 under the documentation, but didn't work.<br />\n",
+    "PostedDate": "2015-04-28T02:22:58.153-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1420416",
+    "ThreadId": "575768",
+    "Html": "<strong>HZoltan wrote:</strong><br />\n<blockquote>\nDo anyone have a step by step guide, how to make a package of Java 8.40 that works in a mixed Windows 7 and 8.1 enviroment? I've try to make a package with the instuction of the Java 7.21 under the documentation, but didn't work.<br />\n</blockquote>\nI think it is better you start a new own thread. Pls give us in your own new thread more informations about your problem.\r<br />\n<br />\nIf you understand a little german, you can use my tool and read my  small Howto for the Tool: <a href=\"http://www.wsus.de/uninstall2install\" rel=\"nofollow\">http://www.wsus.de/uninstall2install</a><br />\n",
+    "PostedDate": "2015-04-28T07:48:13.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

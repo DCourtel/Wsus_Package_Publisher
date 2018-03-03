@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2013-07-12T09:49:21.243-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hi, folks,\r\n\r\nam I the only one getting the attached error message on v 1.2.1307.1? I'm quite shure that this one is new in that version ;)\r\n\r\nRegards\r\nJoerg",
+    "LastUpdatedDate": "2013-07-12T09:49:21.243-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-07-10T15:01:19.303-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "'Update File' & UNC path",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 84
+  },
+  "FileAttachments": [
+    {
+      "FileId": 703567,
+      "FileName": "Add update file error.png",
+      "DownloadUrl": ".\\703567"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "https://wsuspackagepublisher.codeplex.com/workitem/71\n\nHtc\nNorbert ",
+      "PostedDate": "2013-07-10T22:35:51.33-07:00",
+      "Id": 105704
+    }
+  ]
+}

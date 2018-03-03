@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Update Detail Viewer",
+      "DisplayName": "Update Detail Viewer"
+    },
+    "ClosedComment": "Modified the component to fill this Column after double-clicking on a row in the 'Report Tab'",
+    "ClosedDate": "2013-05-09T03:18:49.39-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When double-clicking on a row in the Report Tab, that's bring us on the 'Status Tab' but the 'Online' Column is not fill.",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "Release v1.1.1305.03",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2013-05-09T03:17:31.157-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Fixed"
+    },
+    "Summary": "Online computer status didn't work after double-clicking on a row in the report tab",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 38
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

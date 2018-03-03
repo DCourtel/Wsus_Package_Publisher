@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1218959",
+    "ThreadId": "537899",
+    "Html": "I have deployed (successfully as far as I am concerned) Acrobat 11 and 6 updates and Flash 12.0.0.70 and I think its a great product.\r<br />\n<br />\nAfter I publish a package I see it listed in the WSUS Package Publisher Console  (WSUSPP Console) .\r<br />\n<br />\nIf I close down the WSUS Package Publisher Console re-open the console then package disappears  so I can't see what I have published now.\r<br />\n<br />\nIs this by design ? or am I doing something wrong ?\r<br />\n<br />\nNigel<br />\n",
+    "PostedDate": "2014-03-04T04:42:45.487-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1218996",
+    "ThreadId": "537899",
+    "Html": "Hi Nigel,\r<br />\nIf you have do so that locally-published updates are visible in the Wsus Console, so you need to check the checkbox &quot;Show Locally-Published Updates that are also visible in Wsus Console&quot; (in the 'Updates' tab of the 'Settings' window.<br />\n",
+    "PostedDate": "2014-03-04T06:31:05.02-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T02:53:18.347-07:00"
+  },
+  {
+    "Id": "1219845",
+    "ThreadId": "537899",
+    "Html": "\r\n<div dir=\"ltr\">Many thanks. I am off-site until tomorrow but will do so as soon as I get it.\r\n<br>\r\n<br>\r\nI must say that this product is just what I have been searching for for many years. I have a central site with 50&#43; remote sites connected via VPN. Until now we were using Group policy software deployment - but this had the following drawbacks.<br>\r\n<br>\r\n1) network Traffic was not BITS throttled and a large install (Major version of Acrobat Reader) could bring the network to a halt and break connectivity for 100&#43; terminal services users<br>\r\n2) Software installation at start-up meant delays when people switched on their PC's of up to 30 minutes<br>\r\n3) Software installation especially with some combinations of Wireless/drivers/and dhcp over a non Microsoft Vlan switch was problematic.\r\n<br>\r\n<br>\r\nI think this product is wonderful. <br>\r\n<br>\r\nI will be telling all my friend (But as a 50yr old geek you may appreciate that I don't have many!)<br>\r\n<br>\r\nNigel<br>\r\n<br>\r\n<div>\r\n<hr id=\"stopSpelling\">\r\n</div>\r\n</div>\r\n",
+    "PostedDate": "2014-03-06T04:57:11.463-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

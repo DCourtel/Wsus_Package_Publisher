@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1134991",
+    "ThreadId": "473328",
+    "Html": "Hello,\r<br />\n<br />\nI would like to apply a cleanup or &quot;reset&quot; to the &quot; WsusContent &quot; folder, <strong>as described <a href=\"http://social.technet.microsoft.com/Forums/windowsserver/en-US/9a4dd62e-3977-4896-b433-abc44aaaf8bc/express-installation-files-downloaded-and-i-now-need-to-revert-back-to-old-download-method?forum=winserverwsus\" rel=\"nofollow\">here</a></strong>, because of low disk space on WSUS server (&quot; express installation files &quot; was checked under &quot; tools &gt; files and languages &quot; causing a four time size growth).\r<br />\n<br />\nI think deleting all WsusContent folder then doing &quot; WSUSUtil.exe RESET &quot; like described in the link would ruin my WPP packages and maybe have an impact on deployed computers.\r<br />\n<br />\nAny advice ? :-)<br />\n",
+    "PostedDate": "2013-12-12T04:29:52.607-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1135172",
+    "ThreadId": "473328",
+    "Html": "Just export your packages for safety. ;)<br />\n",
+    "PostedDate": "2013-12-12T10:12:17.067-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-05-08T03:00:32.477-07:00"
+  }
+]

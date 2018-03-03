@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2017-01-27T23:09:14.723-08:00",
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "I have a update for flash 18.0.x.x. this was released and is installed on the computers. Wpp shows installed in the status. Now if I change the update to \"approve for uninstall\", it does uninstall the update, but it either shows as \"installed\" or \"not installed.\" Shouldn't the status change to \" uninstalled\" so you can determine what pcs the update was uninstalled on.\r\n\r\nOverall, I have a flash 18 and flash 19 update. Both are installed. Now I need Wpp to remove flash 18 and report that they have been removed. \r\n\r\nThanks",
+    "LastUpdatedDate": "2017-11-27T18:20:29.673-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "WsusPackagePublisher",
+    "ReportedDate": "2015-10-07T20:35:57.603-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "No defect found"
+    },
+    "Summary": "Approved for Uninstall shows not installed",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 299
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Take Look: https://wsuspackagepublisher.codeplex.com/workitem/294",
+      "PostedDate": "2015-10-07T21:30:19.743-07:00",
+      "Id": 191283
+    },
+    {
+      "Message": "Installation status is evaluated by client itself using \"IsInstallated\", \"IsInstallable\" and \"IsSupperseded\" rules.\nAdditionally, if the update is made of a MSI or MSP file, this file have it's own set of rules.\nRevise the update a take a look to these rules, evaluate it against computer's settings, and you will have your answer",
+      "PostedDate": "2015-10-09T13:53:09.367-07:00",
+      "Id": 191361
+    }
+  ]
+}
