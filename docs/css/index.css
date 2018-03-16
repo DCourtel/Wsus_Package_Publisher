@@ -6,26 +6,23 @@ h1
         color:#ffffe6;
         font-style:italic;
         border-left: 5px solid #3399ff;
+        border-bottom: 1px solid #3399ff;
     }
 h2
 {
-        margin-left: 10%;
-    /*font-style: italic;*/
+    margin-left: 10%;
     font-weight: normal;
     font-size: 25px;
-    /*text-decoration: underline;*/
-    /*margin-left: 15px; */   
 }
 h3
 {
-        margin-left: 10%;
-/*    font-style: italic;*/
-    /*text-decoration: underline;*/
+    margin-left: 10%;
     font-size: 17px;
     font-weight: normal;
-    /*margin-left: 25px;*/
     border-left: 5px solid #ff9933;
+    border-bottom: 1px solid #ff9933;
     padding-left: 5px;
+    width: 10%;
 }
 img
 {
@@ -51,6 +48,5 @@ p
     {
         margin-left: 12%;
         margin-right: 10%;
-        /*border-left: 5px solid #ff9933;*/
         padding-left: 5px;
     }
