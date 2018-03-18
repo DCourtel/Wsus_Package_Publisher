@@ -1,4 +1,4 @@
-![WPP Logo](/Images/Logo_WPP.png)
+![WPP Logo](/images/Logo_WPP.png)
 # Wsus Package Publisher
 
 Publish third party applications into your Wsus.
@@ -27,5 +27,5 @@ Wsus Package Publisher позволяет Вам опубликовывать В
 
 Вы можете импортировать пакеты обновлений из каталогов производителей, таких как Dell, HP и Fujitsu чтобы опубликовывать обновления ПО для оборудования, например драйверы или новые версии BIOS для Ваших серверов и настольных компьютеров.
 ___
-![Updates Injection](/Images/Wsus-WPP-Deployement.png)
+![Updates Injection](/images/Wsus-WPP-Deployement.png)
 ___
