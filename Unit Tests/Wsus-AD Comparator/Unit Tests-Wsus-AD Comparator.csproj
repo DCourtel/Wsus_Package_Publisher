@@ -8,7 +8,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Unit_Tests_Wsus_AD_Comparator</RootNamespace>
     <AssemblyName>Unit Tests-Wsus-AD Comparator</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -26,6 +26,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -34,6 +35,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -59,19 +61,19 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WPP.ActiveDirectory\WPP.ActiveDirectory.csproj">
+    <ProjectReference Include="..\..\code\WsusAD Comparator\WPP.ActiveDirectory\WPP.ActiveDirectory.csproj">
       <Project>{bd010a4e-f19f-4bfe-902b-04a8ae0d4e33}</Project>
       <Name>WPP.ActiveDirectory</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WPP.Management\WPP.Management.csproj">
+    <ProjectReference Include="..\..\code\WsusAD Comparator\WPP.Management\WPP.Management.csproj">
       <Project>{489d6f3e-c52d-45a4-90ed-ef0031221377}</Project>
       <Name>WPP.Management</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WPP.Security\WPP.Security.csproj">
+    <ProjectReference Include="..\..\code\WsusAD Comparator\WPP.Security\WPP.Security.csproj">
       <Project>{0addf554-28d6-42c3-9886-49813b2d4836}</Project>
       <Name>WPP.Security</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WPP.Tools\WPP.Tools.csproj">
+    <ProjectReference Include="..\..\code\WsusAD Comparator\WPP.Tools\WPP.Tools.csproj">
       <Project>{7d7dc170-68ef-4f3b-a845-6f12a8872aa9}</Project>
       <Name>WPP.Tools</Name>
     </ProjectReference>
