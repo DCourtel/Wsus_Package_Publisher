@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EFD6A3B2-8243-4A8A-94AE-7A2ED5DC5901}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CustomActions</RootNamespace>
+    <AssemblyName>CustomActions</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>..\..\output\debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DefineConstants>DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>..\..\output\release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AddRegKeyAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddRegKeyAction.Designer.cs">
+      <DependentUpon>AddRegKeyAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddRegValueAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddRegValueAction.Designer.cs">
+      <DependentUpon>AddRegValueAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeRegDataAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChangeRegDataAction.Designer.cs">
+      <DependentUpon>ChangeRegDataAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeServiceAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChangeServiceAction.Designer.cs">
+      <DependentUpon>ChangeServiceAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CopyFileAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CopyFileAction.Designer.cs">
+      <DependentUpon>CopyFileAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateFolderAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CreateFolderAction.Designer.cs">
+      <DependentUpon>CreateFolderAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateShortcutAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CreateShortcutAction.Designer.cs">
+      <DependentUpon>CreateShortcutAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateTextFileAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CreateTextFileAction.Designer.cs">
+      <DependentUpon>CreateTextFileAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteFileAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeleteFileAction.Designer.cs">
+      <DependentUpon>DeleteFileAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteFolderAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeleteFolderAction.Designer.cs">
+      <DependentUpon>DeleteFolderAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteRegKeyAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeleteRegKeyAction.Designer.cs">
+      <DependentUpon>DeleteRegKeyAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteRegValueAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeleteRegValueAction.Designer.cs">
+      <DependentUpon>DeleteRegValueAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteTaskAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeleteTaskAction.Designer.cs">
+      <DependentUpon>DeleteTaskAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DragDropInfo.cs" />
+    <Compile Include="ExecutableAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExecutableAction.Designer.cs">
+      <DependentUpon>ExecutableAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEnvironmentVariables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEnvironmentVariables.Designer.cs">
+      <DependentUpon>FrmEnvironmentVariables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenericAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GenericAction.Designer.cs">
+      <DependentUpon>GenericAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportRegFileAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportRegFileAction.Designer.cs">
+      <DependentUpon>ImportRegFileAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstallMsiAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InstallMsiAction.Designer.cs">
+      <DependentUpon>InstallMsiAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IStoreReturnCodeToVariable.cs" />
+    <Compile Include="KillProcessAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KillProcessAction.Designer.cs">
+      <DependentUpon>KillProcessAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\CustomActionsStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomActionsStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RebootAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RebootAction.Designer.cs">
+      <DependentUpon>RebootAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterDLLAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RegisterDLLAction.Designer.cs">
+      <DependentUpon>RegisterDLLAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistryHelper.cs" />
+    <Compile Include="RenameFileAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RenameFileAction.Designer.cs">
+      <DependentUpon>RenameFileAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenameFolderAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RenameFolderAction.Designer.cs">
+      <DependentUpon>RenameFolderAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenameRegKeyAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RenameRegKeyAction.Designer.cs">
+      <DependentUpon>RenameRegKeyAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenameRegValueAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RenameRegValueAction.Designer.cs">
+      <DependentUpon>RenameRegValueAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RunPowershellScriptAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RunPowershellScriptAction.Designer.cs">
+      <DependentUpon>RunPowershellScriptAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RunVbScriptAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RunVbScriptAction.Designer.cs">
+      <DependentUpon>RunVbScriptAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShutdownAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShutdownAction.Designer.cs">
+      <DependentUpon>ShutdownAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartServiceAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StartServiceAction.Designer.cs">
+      <DependentUpon>StartServiceAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StopServiceAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StopServiceAction.Designer.cs">
+      <DependentUpon>StopServiceAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UninstallMsiProductByGuidAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UninstallMsiProductByGuidAction.Designer.cs">
+      <DependentUpon>UninstallMsiProductByGuidAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UninstallMsiProductByNameAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UninstallMsiProductByNameAction.Designer.cs">
+      <DependentUpon>UninstallMsiProductByNameAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnregisterDLLAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UnregisterDLLAction.Designer.cs">
+      <DependentUpon>UnregisterDLLAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnregisterServiceAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UnregisterServiceAction.Designer.cs">
+      <DependentUpon>UnregisterServiceAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WaitAction.Designer.cs">
+      <DependentUpon>WaitAction.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EasyCompany.Controls">
+      <HintPath>..\..\external dll\EasyCompany.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddRegKeyAction.fr.resx">
+      <DependentUpon>AddRegKeyAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRegKeyAction.resx">
+      <DependentUpon>AddRegKeyAction.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRegValueAction.fr.resx">
+      <DependentUpon>AddRegValueAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRegValueAction.resx">
+      <DependentUpon>AddRegValueAction.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeRegDataAction.fr.resx">
+      <DependentUpon>ChangeRegDataAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeRegDataAction.resx">
+      <DependentUpon>ChangeRegDataAction.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeServiceAction.fr.resx">
+      <DependentUpon>ChangeServiceAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeServiceAction.resx">
+      <DependentUpon>ChangeServiceAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CopyFileAction.fr.resx">
+      <DependentUpon>CopyFileAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CopyFileAction.resx">
+      <DependentUpon>CopyFileAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateFolderAction.fr.resx">
+      <DependentUpon>CreateFolderAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateFolderAction.resx">
+      <DependentUpon>CreateFolderAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateShortcutAction.fr.resx">
+      <DependentUpon>CreateShortcutAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateShortcutAction.resx">
+      <DependentUpon>CreateShortcutAction.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateTextFileAction.fr.resx">
+      <DependentUpon>CreateTextFileAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateTextFileAction.resx">
+      <DependentUpon>CreateTextFileAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteFileAction.fr.resx">
+      <DependentUpon>DeleteFileAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteFileAction.resx">
+      <DependentUpon>DeleteFileAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteFolderAction.fr.resx">
+      <DependentUpon>DeleteFolderAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteFolderAction.resx">
+      <DependentUpon>DeleteFolderAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteRegKeyAction.fr.resx">
+      <DependentUpon>DeleteRegKeyAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteRegKeyAction.resx">
+      <DependentUpon>DeleteRegKeyAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteRegValueAction.fr.resx">
+      <DependentUpon>DeleteRegValueAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteRegValueAction.resx">
+      <DependentUpon>DeleteRegValueAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteTaskAction.fr.resx">
+      <DependentUpon>DeleteTaskAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteTaskAction.resx">
+      <DependentUpon>DeleteTaskAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExecutableAction.fr.resx">
+      <DependentUpon>ExecutableAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExecutableAction.resx">
+      <DependentUpon>ExecutableAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEnvironmentVariables.fr.resx">
+      <DependentUpon>FrmEnvironmentVariables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEnvironmentVariables.resx">
+      <DependentUpon>FrmEnvironmentVariables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenericAction.en.resx">
+      <DependentUpon>GenericAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenericAction.fr.resx">
+      <DependentUpon>GenericAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenericAction.resx">
+      <DependentUpon>GenericAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportRegFileAction.fr.resx">
+      <DependentUpon>ImportRegFileAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportRegFileAction.resx">
+      <DependentUpon>ImportRegFileAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallMsiAction.fr.resx">
+      <DependentUpon>InstallMsiAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallMsiAction.resx">
+      <DependentUpon>InstallMsiAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KillProcessAction.fr.resx">
+      <DependentUpon>KillProcessAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KillProcessAction.resx">
+      <DependentUpon>KillProcessAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\CustomActionsStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomActionsStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\CustomActionsStrings.fr.resx" />
+    <EmbeddedResource Include="RegisterDLLAction.fr.resx">
+      <DependentUpon>RegisterDLLAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterDLLAction.resx">
+      <DependentUpon>RegisterDLLAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenameFileAction.fr.resx">
+      <DependentUpon>RenameFileAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenameFileAction.resx">
+      <DependentUpon>RenameFileAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenameFolderAction.fr.resx">
+      <DependentUpon>RenameFolderAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenameFolderAction.resx">
+      <DependentUpon>RenameFolderAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenameRegKeyAction.fr.resx">
+      <DependentUpon>RenameRegKeyAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenameRegKeyAction.resx">
+      <DependentUpon>RenameRegKeyAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenameRegValueAction.fr.resx">
+      <DependentUpon>RenameRegValueAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenameRegValueAction.resx">
+      <DependentUpon>RenameRegValueAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RunPowershellScriptAction.fr.resx">
+      <DependentUpon>RunPowershellScriptAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RunPowershellScriptAction.resx">
+      <DependentUpon>RunPowershellScriptAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RunVbScriptAction.fr.resx">
+      <DependentUpon>RunVbScriptAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RunVbScriptAction.resx">
+      <DependentUpon>RunVbScriptAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShutdownAction.resx">
+      <DependentUpon>ShutdownAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartServiceAction.fr.resx">
+      <DependentUpon>StartServiceAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartServiceAction.resx">
+      <DependentUpon>StartServiceAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StopServiceAction.fr.resx">
+      <DependentUpon>StopServiceAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StopServiceAction.resx">
+      <DependentUpon>StopServiceAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UninstallMsiProductByGuidAction.fr.resx">
+      <DependentUpon>UninstallMsiProductByGuidAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UninstallMsiProductByGuidAction.resx">
+      <DependentUpon>UninstallMsiProductByGuidAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UninstallMsiProductByNameAction.fr.resx">
+      <DependentUpon>UninstallMsiProductByNameAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UninstallMsiProductByNameAction.resx">
+      <DependentUpon>UninstallMsiProductByNameAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnregisterDLLAction.fr.resx">
+      <DependentUpon>UnregisterDLLAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnregisterDLLAction.resx">
+      <DependentUpon>UnregisterDLLAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnregisterServiceAction.fr.resx">
+      <DependentUpon>UnregisterServiceAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnregisterServiceAction.resx">
+      <DependentUpon>UnregisterServiceAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitAction.fr.resx">
+      <DependentUpon>WaitAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitAction.resx">
+      <DependentUpon>WaitAction.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionMark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DefaultImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NOk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow_Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow_Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreateTextFileElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExecutableElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReturnCodeElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WaitElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyFileElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RenameFileElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteFileElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreateFolderElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteFolderElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RenameFolderElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PowershellElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VbScriptElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChangeServiceElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StartServicesElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopServicesElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnregisterServicesElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddRegistryKeyElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteRegistryKeyElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RenameRegistryKeyElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChangeRegistryValueElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteRegistryValueElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddRegistryValueElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChangeRegData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MergeRegFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reboot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shutdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KillProcess.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RegisterDLL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnRegisterDLL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserProfile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RenameRegistryValue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreateShortcutElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteTaskElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MsiInstallerElement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InstallMsi.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_BuildVersioningStyle="None.None.YearDecadeAndMonthStamp.DayStamp" BuildVersion_UseGlobalSettings="True" BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_IncrementBeforeBuild="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4C2A714-9BF7-40A3-AAE2-A72E1B37BDE9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Unit_Tests_CustomeUpdateEngine</RootNamespace>
+    <AssemblyName>Unit Tests-CustomeUpdateEngine</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="Actions\AddRegKeyAction.cs" />
+    <Compile Include="Actions\AddRegValueAction.cs" />
+    <Compile Include="Actions\ChangeRegDataAction.cs" />
+    <Compile Include="Actions\ChangeServiceAction.cs" />
+    <Compile Include="Actions\CopyFileAction.cs" />
+    <Compile Include="Actions\CreateFolderAction.cs" />
+    <Compile Include="Actions\CreateShortcutActioncs.cs" />
+    <Compile Include="Actions\CreateTextFileAction.cs" />
+    <Compile Include="Actions\DeleteFileAction.cs" />
+    <Compile Include="Actions\DeleteFolderAction.cs" />
+    <Compile Include="Actions\DeleteRegKeyAction.cs" />
+    <Compile Include="Actions\DeleteRegValueAction.cs" />
+    <Compile Include="Actions\DeleteTaskAction.cs" />
+    <Compile Include="Actions\ExecutableAction.cs" />
+    <Compile Include="Actions\ImportRegFileAction.cs" />
+    <Compile Include="Actions\InstallMsiAction.cs" />
+    <Compile Include="Actions\KillProcessAction.cs" />
+    <Compile Include="Actions\RebootAction.cs" />
+    <Compile Include="Actions\RegisterDLLAction.cs" />
+    <Compile Include="Actions\RenameFileAction.cs" />
+    <Compile Include="Actions\RenameFolderAction.cs" />
+    <Compile Include="Actions\RenameRegKeyAction.cs" />
+    <Compile Include="Actions\RenameRegValueAction.cs" />
+    <Compile Include="Actions\RunPowershellScriptAction.cs" />
+    <Compile Include="Actions\RunVbScriptAction.cs" />
+    <Compile Include="Actions\StartServiceAction.cs" />
+    <Compile Include="Actions\StopServiceAction.cs" />
+    <Compile Include="Actions\UninstallMsiProductByGuidAction.cs" />
+    <Compile Include="Actions\UninstallMsiProductByNameAction.cs" />
+    <Compile Include="Actions\UnregisterDLLAction.cs" />
+    <Compile Include="Actions\UnregisterServiceAction.cs" />
+    <Compile Include="Actions\WaitAction.cs" />
+    <Compile Include="CustomUpdateEngine.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Actions\ReturnCodeAction.cs" />
+    <Compile Include="Tools.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomUpdateEngine\CustomUpdateEngine.csproj">
+      <Project>{2f43b230-27ab-4588-b0ab-74019f761faa}</Project>
+      <Name>CustomUpdateEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

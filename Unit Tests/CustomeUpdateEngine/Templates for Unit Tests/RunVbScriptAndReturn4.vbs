@@ -1,0 +1,1 @@
+WScript.Quit 4

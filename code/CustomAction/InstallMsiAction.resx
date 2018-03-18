@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;cmbBxUiLevel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="extendedLabel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 13</value>
+  </data>
+  <data name="&gt;&gt;chkBxLogTo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="extendedLabel7.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="cmbBxRestartBehavior.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="extendedLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;nupKillProcess.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="chkBxLogTo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtBxMsiName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtBxLogTo.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="chkBxLogTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 156</value>
+  </data>
+  <data name="extendedLabel6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel5.Name" xml:space="preserve">
+    <value>extendedLabel5</value>
+  </data>
+  <data name="extendedLabel1.Text" xml:space="preserve">
+    <value>Msi Name : </value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtBxMsiName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtBxLogTo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="extendedLabel7.Text" xml:space="preserve">
+    <value>Restart Behavior : </value>
+  </data>
+  <data name="extendedLabel8.Text" xml:space="preserve">
+    <value>minutes, kill the process.</value>
+  </data>
+  <data name="&gt;&gt;chkBxStoreToVariable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="extendedLabel2.Text" xml:space="preserve">
+    <value>Example : MyMsi.msi</value>
+  </data>
+  <data name="extendedLabel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtBxLogTo.Name" xml:space="preserve">
+    <value>txtBxLogTo</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtBxLogTo.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="extendedLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Italic</value>
+  </data>
+  <data name="&gt;&gt;txtBxMsiName.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="extendedLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
+  </data>
+  <data name="&gt;&gt;nupKillProcess.Name" xml:space="preserve">
+    <value>nupKillProcess</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtBxLogTo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="chkBxStoreToVariable.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkBxKillProcess.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 269</value>
+  </data>
+  <data name="extendedLabel2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="extendedLabel5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;nupKillProcess.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="extendedLabel8.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="chkBxKillProcess.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel4.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;chkBxKillProcess.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel4.Type" xml:space="preserve">
+    <value>EasyCompany.Controls.ExtendedLabel, EasyCompany.Controls, Version=1.0.1410.17, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txtBxParameters.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="extendedLabel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 131</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel4.Name" xml:space="preserve">
+    <value>extendedLabel4</value>
+  </data>
+  <data name="chkBxStoreToVariable.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="chkBxKillProcess.Text" xml:space="preserve">
+    <value>If the installation takes more than </value>
+  </data>
+  <data name="&gt;&gt;extendedLabel3.Name" xml:space="preserve">
+    <value>extendedLabel3</value>
+  </data>
+  <data name="chkBxLogTo.Text" xml:space="preserve">
+    <value>Log to : </value>
+  </data>
+  <data name="nupKillProcess.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;cmbBxRestartBehavior.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;cmbBxUiLevel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtBxMsiName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 59</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>InstallMsiAction</value>
+  </data>
+  <data name="extendedLabel4.Text" xml:space="preserve">
+    <value>Example : PROPERTY=value</value>
+  </data>
+  <data name="chkBxLogTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 17</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel1.Type" xml:space="preserve">
+    <value>EasyCompany.Controls.ExtendedLabel, EasyCompany.Controls, Version=1.0.1410.17, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="extendedLabel4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtBxMsiName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="extendedLabel8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 13</value>
+  </data>
+  <data name="txtBxMsiName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>360, 20</value>
+  </data>
+  <data name="extendedLabel3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel7.Type" xml:space="preserve">
+    <value>EasyCompany.Controls.ExtendedLabel, EasyCompany.Controls, Version=1.0.1410.17, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="cmbBxUiLevel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="txtBxParameters.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel2.Name" xml:space="preserve">
+    <value>extendedLabel2</value>
+  </data>
+  <data name="&gt;&gt;chkBxKillProcess.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="nupKillProcess.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 268</value>
+  </data>
+  <data name="extendedLabel8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="chkBxStoreToVariable.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;cmbBxRestartBehavior.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtBxMsiName.Name" xml:space="preserve">
+    <value>txtBxMsiName</value>
+  </data>
+  <data name="txtBxLogTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>360, 20</value>
+  </data>
+  <data name="extendedLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
+  </data>
+  <data name="txtBxLogTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 154</value>
+  </data>
+  <data name="&gt;&gt;chkBxKillProcess.Name" xml:space="preserve">
+    <value>chkBxKillProcess</value>
+  </data>
+  <data name="&gt;&gt;chkBxLogTo.Name" xml:space="preserve">
+    <value>chkBxLogTo</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel8.Type" xml:space="preserve">
+    <value>EasyCompany.Controls.ExtendedLabel, EasyCompany.Controls, Version=1.0.1410.17, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="extendedLabel6.Text" xml:space="preserve">
+    <value>UI  Level : </value>
+  </data>
+  <data name="txtBxMsiName.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cmbBxRestartBehavior.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmbBxRestartBehavior.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 21</value>
+  </data>
+  <data name="extendedLabel6.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;txtBxParameters.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="extendedLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="extendedLabel7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel6.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel8.Name" xml:space="preserve">
+    <value>extendedLabel8</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>494, 55</value>
+  </data>
+  <data name="extendedLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="extendedLabel3.Text" xml:space="preserve">
+    <value>Parameters : </value>
+  </data>
+  <data name="&gt;&gt;cmbBxUiLevel.Name" xml:space="preserve">
+    <value>cmbBxUiLevel</value>
+  </data>
+  <data name="extendedLabel5.Text" xml:space="preserve">
+    <value>Example : C:\Windows\Temp\MyMsi.log</value>
+  </data>
+  <data name="extendedLabel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 13</value>
+  </data>
+  <data name="extendedLabel4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Italic</value>
+  </data>
+  <data name="txtBxParameters.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 108</value>
+  </data>
+  <data name="extendedLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 13</value>
+  </data>
+  <data name="chkBxStoreToVariable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 304</value>
+  </data>
+  <data name="txtBxParameters.Size" type="System.Drawing.Size, System.Drawing">
+    <value>360, 20</value>
+  </data>
+  <data name="&gt;&gt;chkBxStoreToVariable.Name" xml:space="preserve">
+    <value>chkBxStoreToVariable</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>CustomActions.GenericAction, CustomActions, Version=2.0.1803.14, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txtBxParameters.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="extendedLabel8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>248, 270</value>
+  </data>
+  <data name="extendedLabel6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;chkBxLogTo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel3.Type" xml:space="preserve">
+    <value>EasyCompany.Controls.ExtendedLabel, EasyCompany.Controls, Version=1.0.1410.17, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="extendedLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 13</value>
+  </data>
+  <data name="extendedLabel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 204</value>
+  </data>
+  <data name="txtBxLogTo.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="extendedLabel4.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel8.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chkBxStoreToVariable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 17</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtBxLogTo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="extendedLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="chkBxStoreToVariable.Text" xml:space="preserve">
+    <value>Store the return code into a variable</value>
+  </data>
+  <data name="nupKillProcess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 20</value>
+  </data>
+  <data name="chkBxKillProcess.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cmbBxUiLevel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 21</value>
+  </data>
+  <data name="extendedLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 62</value>
+  </data>
+  <data name="&gt;&gt;chkBxStoreToVariable.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel5.Type" xml:space="preserve">
+    <value>EasyCompany.Controls.ExtendedLabel, EasyCompany.Controls, Version=1.0.1410.17, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="chkBxLogTo.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="cmbBxUiLevel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 201</value>
+  </data>
+  <data name="chkBxKillProcess.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;chkBxLogTo.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;nupKillProcess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="extendedLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 82</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel7.Name" xml:space="preserve">
+    <value>extendedLabel7</value>
+  </data>
+  <data name="extendedLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 111</value>
+  </data>
+  <data name="extendedLabel1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtBxParameters.Name" xml:space="preserve">
+    <value>txtBxParameters</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="extendedLabel5.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;txtBxParameters.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkBxStoreToVariable.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmbBxRestartBehavior.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 228</value>
+  </data>
+  <data name="extendedLabel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 177</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel5.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;chkBxKillProcess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel6.Type" xml:space="preserve">
+    <value>EasyCompany.Controls.ExtendedLabel, EasyCompany.Controls, Version=1.0.1410.17, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel1.Name" xml:space="preserve">
+    <value>extendedLabel1</value>
+  </data>
+  <data name="extendedLabel7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="extendedLabel5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Italic</value>
+  </data>
+  <data name="nupKillProcess.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="chkBxKillProcess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 17</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel6.Name" xml:space="preserve">
+    <value>extendedLabel6</value>
+  </data>
+  <data name="&gt;&gt;cmbBxUiLevel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="extendedLabel7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 231</value>
+  </data>
+  <data name="&gt;&gt;extendedLabel2.Type" xml:space="preserve">
+    <value>EasyCompany.Controls.ExtendedLabel, EasyCompany.Controls, Version=1.0.1410.17, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbBxRestartBehavior.Name" xml:space="preserve">
+    <value>cmbBxRestartBehavior</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

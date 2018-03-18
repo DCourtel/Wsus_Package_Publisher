@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2221FBD9-4EAC-4311-93AC-C957CBB7E181}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Unit_Tests_CustomAction</RootNamespace>
+    <AssemblyName>Unit Tests-CustomAction</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EasyCompany.Controls, Version=1.0.1407.30, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Transitions, Version=1.2.1401.5, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddRegKeyActionTest.cs" />
+    <Compile Include="AddRegValueActionTest.cs" />
+    <Compile Include="AllCustomActionsTest.cs" />
+    <Compile Include="ChangeRegDataActionTest.cs" />
+    <Compile Include="ChangeServiceActionTest.cs" />
+    <Compile Include="CommonData.cs" />
+    <Compile Include="CopyFileActionTest.cs" />
+    <Compile Include="CreateFolderActionTest.cs" />
+    <Compile Include="CreateTextFileActionTest.cs" />
+    <Compile Include="DeleteFileActionTest.cs" />
+    <Compile Include="DeleteFolderActionTest.cs" />
+    <Compile Include="DeleteRegKeyActionTest.cs" />
+    <Compile Include="DeleteRegValueActionTest.cs" />
+    <Compile Include="ExecutableActionTest.cs" />
+    <Compile Include="GenericActionTest.cs" />
+    <Compile Include="ImportRegFileTest.cs" />
+    <Compile Include="KillProcessActionTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RebootActionTest.cs" />
+    <Compile Include="RegisterDLLActionTest.cs" />
+    <Compile Include="RenameFileActionTest.cs" />
+    <Compile Include="RenameFolderActionTest.cs" />
+    <Compile Include="RenameRegKeyActionTest.cs" />
+    <Compile Include="RenameRegValueActionTest.cs" />
+    <Compile Include="RunPowershellScriptActionTest.cs" />
+    <Compile Include="RunVbScriptActionTest.cs" />
+    <Compile Include="ShutdownActionTest.cs" />
+    <Compile Include="StartServiceActionTest.cs" />
+    <Compile Include="StopServiceActionTest.cs" />
+    <Compile Include="CreateShortcutActionTest.cs" />
+    <Compile Include="UnregisterDLLActionTest.cs" />
+    <Compile Include="UnregisterServiceActionTest.cs" />
+    <Compile Include="WaitActionTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomActions.csproj">
+      <Project>{EFD6A3B2-8243-4A8A-94AE-7A2ED5DC5901}</Project>
+      <Name>CustomActions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RegEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Références de test\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

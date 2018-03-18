@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddA" xml:space="preserve">
+    <value>Ajouter un </value>
+  </data>
+  <data name="AddThisRegKey" xml:space="preserve">
+    <value>Ajouter cette clé de registre : </value>
+  </data>
+  <data name="AndKillProcessIfItRunMoreThan" xml:space="preserve">
+    <value>et tue le processus s'il dure plus de </value>
+  </data>
+  <data name="AndStoreReturnCodeToVariable" xml:space="preserve">
+    <value>et stock le code de retour dans la variable.</value>
+  </data>
+  <data name="Automatic" xml:space="preserve">
+    <value>Automatique</value>
+  </data>
+  <data name="ChangeTheStartingModeOf" xml:space="preserve">
+    <value>Change le mode de démarrage de </value>
+  </data>
+  <data name="Configured" xml:space="preserve">
+    <value>configurée</value>
+  </data>
+  <data name="CopyTheFile" xml:space="preserve">
+    <value>Copie le fichier </value>
+  </data>
+  <data name="CreateTheFolder" xml:space="preserve">
+    <value>Créer le dossier </value>
+  </data>
+  <data name="CreateTheTextFile" xml:space="preserve">
+    <value>Créer le fichier texte </value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Supprimer </value>
+  </data>
+  <data name="DeleteTheFile" xml:space="preserve">
+    <value>Supprimer le fichier </value>
+  </data>
+  <data name="DeleteTheFolder" xml:space="preserve">
+    <value>Supprimer le dossier </value>
+  </data>
+  <data name="DeleteThisRegKey" xml:space="preserve">
+    <value>Supprime cette clé de registre : </value>
+  </data>
+  <data name="DescriptionAddRegKeyAction" xml:space="preserve">
+    <value>Permet d'ajouter une clé de registre.</value>
+  </data>
+  <data name="DescriptionAddRegValueAction" xml:space="preserve">
+    <value>Permet d'ajouter une valeur de registre.</value>
+  </data>
+  <data name="DescriptionChangeServiceAction" xml:space="preserve">
+    <value>Permet de changer le mode de démarrage d'un service.</value>
+  </data>
+  <data name="DescriptionCopyFileAction" xml:space="preserve">
+    <value>Permet de copie un fichier.</value>
+  </data>
+  <data name="DescriptionCreateFolderAction" xml:space="preserve">
+    <value>Permet de créer un répertoire.</value>
+  </data>
+  <data name="DescriptionCreateTextFileAction" xml:space="preserve">
+    <value>Permet de créer un fichier texte.</value>
+  </data>
+  <data name="DescriptionDeleteFileAction" xml:space="preserve">
+    <value>Permet de supprimer un fichier.</value>
+  </data>
+  <data name="DescriptionDeleteFolderAction" xml:space="preserve">
+    <value>Permet de supprimer un dossier.</value>
+  </data>
+  <data name="DescriptionDeleteRegKeyAction" xml:space="preserve">
+    <value>Permet de supprimer une clé de regitre.</value>
+  </data>
+  <data name="DescriptionDeleteRegValueAction" xml:space="preserve">
+    <value>Permet de supprimer une valeur de registre.</value>
+  </data>
+  <data name="DescriptionExecutableAction" xml:space="preserve">
+    <value>Permet d'éxécuter un fichier.</value>
+  </data>
+  <data name="DescriptionRenameFileAction" xml:space="preserve">
+    <value>Permet de renommer un fichier.</value>
+  </data>
+  <data name="DescriptionRenameFolderAction" xml:space="preserve">
+    <value>Permet de renommer un dossier.</value>
+  </data>
+  <data name="DescriptionRenameRegKeyAction" xml:space="preserve">
+    <value>Permet de renommer une clé de regitre.</value>
+  </data>
+  <data name="DescriptionRunPowershellScriptAction" xml:space="preserve">
+    <value>Permet d'exécuter un script Powershell.</value>
+  </data>
+  <data name="DescriptionRunVBScriptAction" xml:space="preserve">
+    <value>Permet d'exécuter un VbScript.</value>
+  </data>
+  <data name="DescriptionStartServiceAction" xml:space="preserve">
+    <value>Permet de démarrer un service.</value>
+  </data>
+  <data name="DescriptionStopServiceAction" xml:space="preserve">
+    <value>Permet d'arrêter un service.</value>
+  </data>
+  <data name="DescriptionUnregisterServiceAction" xml:space="preserve">
+    <value>Permet de désenregistrer un service.</value>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>Désactivé</value>
+  </data>
+  <data name="ExecuteTheFile" xml:space="preserve">
+    <value>Exécute le fichier </value>
+  </data>
+  <data name="ExecuteThePowershellScript" xml:space="preserve">
+    <value>Exécuter le script Powershell </value>
+  </data>
+  <data name="ExecuteTheVbScript" xml:space="preserve">
+    <value>Exécuter le script VB </value>
+  </data>
+  <data name="In" xml:space="preserve">
+    <value> dans </value>
+  </data>
+  <data name="Into" xml:space="preserve">
+    <value> en </value>
+  </data>
+  <data name="Manual" xml:space="preserve">
+    <value>Manuel</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>minutes</value>
+  </data>
+  <data name="Misconfigured" xml:space="preserve">
+    <value>mal configurée</value>
+  </data>
+  <data name="NoHelpAvailable" xml:space="preserve">
+    <value>Aucune aide disponible pour cette Action.</value>
+  </data>
+  <data name="NotConfigured" xml:space="preserve">
+    <value>non configurée</value>
+  </data>
+  <data name="RegValueNamed" xml:space="preserve">
+    <value> valeur de registre nommée </value>
+  </data>
+  <data name="RenameTheFile" xml:space="preserve">
+    <value>Renommer le fichier </value>
+  </data>
+  <data name="RenameTheFolder" xml:space="preserve">
+    <value>Rrenommer le dossier </value>
+  </data>
+  <data name="RenameThisRegKey" xml:space="preserve">
+    <value>Renomme cette clé de registre : </value>
+  </data>
+  <data name="StartTheService" xml:space="preserve">
+    <value>Démarrer le service : </value>
+  </data>
+  <data name="StopTheService" xml:space="preserve">
+    <value>Arrêter le service : </value>
+  </data>
+  <data name="ThisActionDoesNothing" xml:space="preserve">
+    <value>Cette Action ne fait rien.</value>
+  </data>
+  <data name="ThisActionIs" xml:space="preserve">
+    <value>Cette Action est</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value> vers </value>
+  </data>
+  <data name="UnregisterTheService" xml:space="preserve">
+    <value>Désenregistre le service : </value>
+  </data>
+  <data name="whichContent" xml:space="preserve">
+    <value> qui contient </value>
+  </data>
+  <data name="WithContent" xml:space="preserve">
+    <value> avec le contenu : </value>
+  </data>
+  <data name="WithParameters" xml:space="preserve">
+    <value>avec les paramètres </value>
+  </data>
+  <data name="DescriptionChangeRegDataAction" xml:space="preserve">
+    <value>Permet de modifier une données dans une valeur de registre.</value>
+  </data>
+  <data name="DescriptionRenameRegValueAction" xml:space="preserve">
+    <value>Permet de renommer une valeur de registre.</value>
+  </data>
+  <data name="ChangeRegData" xml:space="preserve">
+    <value>Modifie la donnée de registre : </value>
+  </data>
+  <data name="WithTheData" xml:space="preserve">
+    <value> avec la donnée : </value>
+  </data>
+  <data name="DescriptionImportRegFileAction" xml:space="preserve">
+    <value>Import un fichier *.reg</value>
+  </data>
+  <data name="ImportTheFile" xml:space="preserve">
+    <value>Importer le fichier : </value>
+  </data>
+  <data name="DescriptionShutdownAction" xml:space="preserve">
+    <value>Permet d'arrêter l'ordinateur.</value>
+  </data>
+  <data name="Shutdown" xml:space="preserve">
+    <value>Arrêter l'ordinateur.</value>
+  </data>
+  <data name="DescriptionRebootAction" xml:space="preserve">
+    <value>Permet de redémarrer l'ordinateur.</value>
+  </data>
+  <data name="Reboot" xml:space="preserve">
+    <value>Redémarrer l'ordinateur.</value>
+  </data>
+  <data name="DescriptionKillProcessAction" xml:space="preserve">
+    <value>Permet de tuer un processus.</value>
+  </data>
+  <data name="KillProcess" xml:space="preserve">
+    <value>Tuer le processus : </value>
+  </data>
+  <data name="DescriptionRegisterDLLAction" xml:space="preserve">
+    <value>Permet d'enregistrer une DLL.</value>
+  </data>
+  <data name="DescriptionUnregisterDLLAction" xml:space="preserve">
+    <value>Permet de désenregistrer une DLL.</value>
+  </data>
+  <data name="ThisActionRefersToUserProfile" xml:space="preserve">
+    <value>Cette Action se réfère à un profile utilisateur.</value>
+  </data>
+  <data name="DescriptionWaitAction" xml:space="preserve">
+    <value>Permet d'attendre un certain temps.</value>
+  </data>
+  <data name="Seconds" xml:space="preserve">
+    <value>secondes</value>
+  </data>
+  <data name="Wait" xml:space="preserve">
+    <value>Attendre</value>
+  </data>
+  <data name="DescriptionReturnCodeAction" xml:space="preserve">
+    <value>Permet de définir un code de retour à renvoyer lorsque c'est terminé.</value>
+  </data>
+  <data name="ReturnStaticCode" xml:space="preserve">
+    <value>Toujours renvoyer le code : </value>
+  </data>
+  <data name="ReturnVariable" xml:space="preserve">
+    <value>Renvoyer le code précédemment stocké dans la variable.</value>
+  </data>
+  <data name="TheXmlElementHasNotBeenMatchWithProperty" xml:space="preserve">
+    <value>L'élément XML '{0}' ne correspond à aucune propriétés de '{1}'</value>
+  </data>
+  <data name="RenameThisRegValue" xml:space="preserve">
+    <value>Renome cette valeur du registre : </value>
+  </data>
+  <data name="RegisterDLL" xml:space="preserve">
+    <value>Enregistre cette DLL : </value>
+  </data>
+  <data name="UnregisterThisDLL" xml:space="preserve">
+    <value>Désenregistre cette DLL : </value>
+  </data>
+  <data name="CreateThisShortcut" xml:space="preserve">
+    <value>Créer un raccourcis nommé </value>
+  </data>
+  <data name="DescriptionCreateShortcutAction" xml:space="preserve">
+    <value>Permet de créer un raccourcis</value>
+  </data>
+  <data name="WhichTarget" xml:space="preserve">
+    <value> qui cible </value>
+  </data>
+  <data name="DescriptionDeleteTask" xml:space="preserve">
+    <value>Permet de supprimer une tâche planifée.</value>
+  </data>
+  <data name="DeleteThisTask" xml:space="preserve">
+    <value>Supprimer la tâche planifiée : </value>
+  </data>
+  <data name="DescriptionUinstallMsiProductByGuid" xml:space="preserve">
+    <value>Permet de désinstaller un produit MSI en connaissant son GUID.</value>
+  </data>
+  <data name="DescriptionUninstallMsiProductByNameAction" xml:space="preserve">
+    <value>Permet de désinstaller des applications en connaissant leur nom.</value>
+  </data>
+  <data name="UninstallThisMsiApplication" xml:space="preserve">
+    <value>Désinstalle l'application {0} avec les paramètres {1}</value>
+  </data>
+  <data name="DescriptionInstallMsi" xml:space="preserve">
+    <value>Permet d'installer une application MSI</value>
+  </data>
+  <data name="RestartLevel_Force" xml:space="preserve">
+    <value>Toujours redémarrer</value>
+  </data>
+  <data name="RestartLevel_None" xml:space="preserve">
+    <value>Pas de redémarrage</value>
+  </data>
+  <data name="RestartLevel_Prompt" xml:space="preserve">
+    <value>Demander à l'utilisateur si nécessaire</value>
+  </data>
+  <data name="UILevel_Base" xml:space="preserve">
+    <value>UI de base</value>
+  </data>
+  <data name="UILevel_Full" xml:space="preserve">
+    <value>UI complète</value>
+  </data>
+  <data name="UILevel_None" xml:space="preserve">
+    <value>Pas d'UI</value>
+  </data>
+  <data name="UILevel_Reduced" xml:space="preserve">
+    <value>UI réduite</value>
+  </data>
+  <data name="Install" xml:space="preserve">
+    <value>Installe </value>
+  </data>
+</root>

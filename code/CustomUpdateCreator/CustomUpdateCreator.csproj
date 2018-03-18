@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{20EBAA12-E553-44EA-B30B-24721280E25A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CustomUpdateCreator</RootNamespace>
+    <AssemblyName>CustomUpdateCreator</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>..\..\output\debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DefineConstants>DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>..\..\output\release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.Ribbon35">
+      <HintPath>..\..\external dll\System.Windows.Forms.Ribbon35.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomUpdate.cs" />
+    <Compile Include="FrmCustomUpdateCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCustomUpdateCreator.Designer.cs">
+      <DependentUpon>FrmCustomUpdateCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\CustomUpdateCreatorStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomUpdateCreatorStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localizator.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCustomUpdateCreator.fr.resx">
+      <DependentUpon>FrmCustomUpdateCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCustomUpdateCreator.resx">
+      <DependentUpon>FrmCustomUpdateCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\CustomUpdateCreatorStrings.fr.resx" />
+    <EmbeddedResource Include="Localization\CustomUpdateCreatorStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomUpdateCreatorStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomAction\CustomActions.csproj">
+      <Project>{EFD6A3B2-8243-4A8A-94AE-7A2ED5DC5901}</Project>
+      <Name>CustomActions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnregisterServices32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnregisterServices48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopServices32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopServices48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StartServices32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StartServices48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChangeService32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChangeService48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RenameFolder32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RenameFolder48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteFolder32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteFolder48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyFile32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyFile48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteFile32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteFile48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExecutableAction48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RenameFile48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RenameFile32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAsTemplate32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAsTemplate48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenTemplate32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenTemplate48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveTemplate32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveTemplate48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextFileAction32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextFileAction48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScriptAction32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScriptAction48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExecutableAction32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\powershell32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\powershell48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteRegistryKey32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteRegistryKey48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RenameRegistryKey32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RenameRegistryKey48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChangeValue32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChangeValue48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteValue32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteValue48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddRegistryKey32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddRegistryKey48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shutdown32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shutdown48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reboot32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reboot48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KillProcess32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KillProcess48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wait32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wait48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReturnCode32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReturnCode48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAs32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAs48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreateFolder32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreateFolder48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddValue32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddValue48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Package Publisher-64.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MergeRegFile32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MergeRegFile48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChangeRegData32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChangeRegData48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RegisterDLL32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RegisterDLL48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnRegisterDLL32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnRegisterDLL48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoveDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoveUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreateShortcut32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreateShortcut48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scheduled48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scheduled32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MsiUninstall32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MsiUninstall48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InstallMsi_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InstallMsi_48x48.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_UseGlobalSettings="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
