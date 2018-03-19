@@ -22,7 +22,7 @@ namespace Unit_Tests_CustomeUpdateEngine.Actions
                 // Act
 
                 // Assert
-                Assert.AreEqual(action.FullPath, @"C:\Users\Courtel\Documents\Visual Studio 2013\Projects\Wsus Package Publisher2\Unit Tests-CustomeUpdateEngine\Templates for Unit Tests\RegFileToImport.reg");
+                Assert.AreEqual(action.FullPath, @"C:\Users\AdminSRV\source\repos\Wsus_Package_Publisher\Unit Tests\CustomeUpdateEngine\Templates for Unit Tests\RegFileToImport.reg");
             }
         }
 

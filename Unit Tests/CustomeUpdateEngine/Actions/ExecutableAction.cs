@@ -92,7 +92,7 @@ namespace Unit_Tests_CustomeUpdateEngine.Actions
                 chrono.Stop();
 
                 // Assert
-                Assert.AreEqual(60 * 1000, chrono.ElapsedMilliseconds, 50);
+                Assert.AreEqual(60 * 1000, chrono.ElapsedMilliseconds, 150);
             }
 
             [TestMethod]

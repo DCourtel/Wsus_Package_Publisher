@@ -47,13 +47,13 @@ namespace Unit_Tests_CustomeUpdateEngine.Actions
             {
                 List<global::CustomUpdateEngine.UninstallMsiProductByGuidAction.MsiProduct> installedProducts = global::CustomUpdateEngine.UninstallMsiProductByGuidAction.GetMsiProducts();
                 if (!Tools.ProductsContains(installedProducts, "26A24AE4-039D-4CA4-87B4-2F32180121F0"))
-                    Tools.InstallJava(@"C:\Users\Courtel\Downloads\Java\jre-8u121-windows-i586.exe");
+                    Tools.InstallJava(@"C:\Users\AdminSRV\source\repos\Wsus_Package_Publisher\Unit Tests\CustomeUpdateEngine\Templates for Unit Tests\jre-8u121-windows-i586.exe");
                 if (!Tools.ProductsContains(installedProducts, "26A24AE4-039D-4CA4-87B4-2F32180131F0"))
-                    Tools.InstallJava(@"C:\Users\Courtel\Downloads\Java\jre-8u131-windows-i586.exe");
+                    Tools.InstallJava(@"C:\Users\AdminSRV\source\repos\Wsus_Package_Publisher\Unit Tests\CustomeUpdateEngine\Templates for Unit Tests\jre-8u131-windows-i586.exe");
                 if (!Tools.ProductsContains(installedProducts, "26A24AE4-039D-4CA4-87B4-2F32180144F0"))
-                    Tools.InstallJava(@"C:\Users\Courtel\Downloads\Java\jre-8u144-windows-i586.exe");
+                    Tools.InstallJava(@"C:\Users\AdminSRV\source\repos\Wsus_Package_Publisher\Unit Tests\CustomeUpdateEngine\Templates for Unit Tests\jre-8u144-windows-i586.exe");
                 if (!Tools.ProductsContains(installedProducts, "26A24AE4-039D-4CA4-87B4-2F32180152F0"))
-                    Tools.InstallJava(@"C:\Users\Courtel\Downloads\Java\jre-8u152-windows-i586.exe");
+                    Tools.InstallJava(@"C:\Users\AdminSRV\source\repos\Wsus_Package_Publisher\Unit Tests\CustomeUpdateEngine\Templates for Unit Tests\jre-8u152-windows-i586.exe");
 
                 installedProducts = global::CustomUpdateEngine.UninstallMsiProductByGuidAction.GetMsiProducts();
                 Assert.IsTrue(Tools.ProductsContains(installedProducts, "26A24AE4-039D-4CA4-87B4-2F32180121F0"));

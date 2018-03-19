@@ -191,8 +191,11 @@ namespace Unit_Tests_CustomeUpdateEngine.Actions
                 object newValue = null;
 
                 // Act
-                targetKey.DeleteValue(action.ValueName, false);
+                if (targetKey != null)
+                    targetKey.DeleteValue(action.ValueName, false);
                 action.Run(ref finalResult);
+                if(targetKey == null)
+                    targetKey = hklm.OpenSubKey(action.RegKey, false);
                 newValue = targetKey.GetValue(action.ValueName, null);
 
                 // Assert

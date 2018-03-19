@@ -39,7 +39,7 @@ namespace Unit_Tests_CustomeUpdateEngine.Actions
                 // Act
                 if(!Tools.IsScheduledTaskExist("Adobe Acrobat Update Task"))
                 {
-                    Tools.ImportScheduledTask(@"C:\Users\Courtel\Documents\Visual Studio 2013\Projects\Wsus Package Publisher2\Unit Tests-CustomeUpdateEngine\Templates for Unit Tests\Adobe Acrobat Update Task.xml", "Adobe Acrobat Update Task");
+                    Tools.ImportScheduledTask(@"C:\Users\AdminSRV\source\repos\Wsus_Package_Publisher\Unit Tests\CustomeUpdateEngine\Templates for Unit Tests\Adobe Acrobat Update Task.xml", "Adobe Acrobat Update Task");
                     Assert.IsTrue(Tools.IsScheduledTaskExist("Adobe Acrobat Update Task"));
                 }
                 action.Run(ref finalResult);
