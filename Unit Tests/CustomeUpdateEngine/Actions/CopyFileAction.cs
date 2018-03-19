@@ -22,7 +22,7 @@ namespace Unit_Tests_CustomeUpdateEngine.Actions
                 // Act
 
                 // Assert
-                Assert.AreEqual(action.SourceFile, @"C:\Users\Courtel\Documents\WPP v2\Test Templates\FileToBeCopied.txt");
+                Assert.AreEqual(action.SourceFile, @"C:\Users\AdminSRV\source\repos\Wsus_Package_Publisher\Unit Tests\CustomeUpdateEngine\Templates for Unit Tests\FileToBeCopied.txt");
                 Assert.AreEqual(action.DestinationFolder, @"C:\Windows\temp\Wpp");
             }
         }

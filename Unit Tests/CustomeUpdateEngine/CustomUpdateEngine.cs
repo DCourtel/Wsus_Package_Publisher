@@ -7,7 +7,7 @@ using SUT = CustomUpdateEngine;
 
 namespace Unit_Tests_CustomeUpdateEngine
 {
-    class CustomUpdateEngine
+    public class CustomUpdateEngine
     {
         [TestClass]
         public class GetArguments_Should

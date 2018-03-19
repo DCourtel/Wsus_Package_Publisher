@@ -322,7 +322,8 @@ namespace Unit_Tests_CustomeUpdateEngine.Actions
                 RegistryValueKind kindOfNewValue;
 
                 // Act
-                targetKey.DeleteValue(action.ValueName, false);
+                if (targetKey != null)
+                    targetKey.DeleteValue(action.ValueName, false);
                 action.Run(ref finalResult);
                 newValue = targetKey.GetValue(action.ValueName, null);
                 kindOfNewValue = targetKey.GetValueKind(action.ValueName);

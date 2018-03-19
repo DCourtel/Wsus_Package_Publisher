@@ -12,7 +12,7 @@ namespace Unit_Tests_CustomeUpdateEngine
     {
         public static string GetXmlFragment(string filename)
         {
-            string templatePath = @"C:\Users\Courtel\Documents\Visual Studio 2013\Projects\Wsus Package Publisher2\Unit Tests-CustomeUpdateEngine\Templates for Unit Tests";
+            string templatePath = @"C:\Users\AdminSRV\source\repos\Wsus_Package_Publisher\Unit Tests\CustomeUpdateEngine\Templates for Unit Tests";
             System.IO.StreamReader reader = new System.IO.StreamReader(System.IO.Path.Combine(templatePath, filename));
             string xmlFragment = reader.ReadToEnd();
             reader.Close();

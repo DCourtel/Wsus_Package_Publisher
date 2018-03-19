@@ -7,7 +7,7 @@ namespace Unit_Tests_CustomUpdateCreator
     [TestClass]
     public class FrmCustomUpdateCreatorTest
     {
-        private string baseFolder = @"C:\Users\Courtel\Documents\Visual Studio 2013\Projects\Wsus Package Publisher2\Unit Tests-CustomUpdateCreator";
+        private string baseFolder = @"C:\Users\AdminSRV\source\repos\Wsus_Package_Publisher\Unit Tests\CustomUpdateCreator";
 
         [TestMethod]
         public void RefersToUserProfileTest()
