@@ -1,7 +1,7 @@
 ![WPP Logo](/images/Logo_WPP.png)
 # Wsus Package Publisher
 
-Publish third party applications into your Wsus.
+Publish third-party applications into your Wsus.
 ___
 ### _Description_
 
