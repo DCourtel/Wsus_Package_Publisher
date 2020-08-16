@@ -3,7 +3,7 @@
 
 Publish third-party applications into your Wsus.
 ___
-Latest Release: v1.4.2002.4 - 04 February 2020
+Latest Release: v1.4.2008.16 - 16 August 2020
 ### _Description_
 
 ##### *English*:
